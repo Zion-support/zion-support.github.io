@@ -4,7 +4,7 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 import Button from '../components/ui/Button',
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react',
 
-export default function MicroSaasPage() {
+export default function MicroSaasPage() : any {
   const [selectedCategory, setSelectedCategory] = useState('All'),
   
   const microSaasServices = [
@@ -2121,5 +2121,5 @@ export default function MicroSaasPage() {
 
       {/* CTA Section */}
     </>
-  ),
-}
+  );
+  }

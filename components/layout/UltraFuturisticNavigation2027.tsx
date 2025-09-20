@@ -14,7 +14,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -115,7 +115,7 @@ const companyLinks = [
   { name: '🔧 Solutions', href: '/solutions', icon: Layers },
   { name: '💼 Careers', href: '/careers', icon: Users },
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const technologyLinks = [
   { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
@@ -124,9 +124,9 @@ const technologyLinks = [
   { name: '🔒 Cybersecurity', href: '/cybersecurity', icon: Lock },
   { name: '📊 Analytics', href: '/analytics', icon: Database },
   { name: '🔄 Automation', href: '/automation', icon: Cpu }
-];
+],
 
-export default function UltraFuturisticNavigation2027() {
+export default function UltraFuturisticNavigation2027() : any {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -139,7 +139,7 @@ export default function UltraFuturisticNavigation2027() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDropdown = (category: string) => {
+  const toggleDropdown = (category: string) : any => {
     setActiveDropdown(activeDropdown === category ? null : category);
   };
 
@@ -407,7 +407,7 @@ export default function UltraFuturisticNavigation2027() {
               <div className="space-y-3 pt-4 border-t border-cyan-500/30">
                 <Link
                   href="/contact"
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl text-center hover: from-cyan-600 hover:to-purple-700 transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
@@ -426,4 +426,4 @@ export default function UltraFuturisticNavigation2027() {
       </AnimatePresence>
     </nav>
   );
-}
+  }

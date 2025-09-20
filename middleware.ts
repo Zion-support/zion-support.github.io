@@ -18,7 +18,7 @@ const publicRoutes = [
 ];
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname } = request.nextUrl,
 
   // Allow public routes
   if (publicRoutes.includes(pathname)) {
@@ -63,3 +63,4 @@ export const config = {
     "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };
+'

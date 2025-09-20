@@ -1,44 +1,44 @@
 import { ServiceVariant } from '../types/service-variants';
 
 export interface RealQ4Service {
-	id: string;
-	name: string;
-	tagline: string;
-	price: string;
-	period: string;
-	description: string;
-	features: string[];
-	popular: boolean;
-	icon: string;
-	color: string;
-	textColor: string;
-	link: string;
-	marketPosition: string;
-	targetAudience: string;
-	trialDays: number;
-	setupTime: string;
-	category: string;
-	realService: boolean;
-	technology: string[];
-	integrations: string[];
-	useCases: string[];
-	roi: string;
-	competitors: string[];
-	marketSize: string;
-	growthRate: string;
-	variant: ServiceVariant;
+	id: string,
+	name: string,
+	tagline: string,
+	price: string,
+	period: string,
+	description: string,
+	features: string[],
+	popular: boolean,
+	icon: string,
+	color: string,
+	textColor: string,
+	link: string,
+	marketPosition: string,
+	targetAudience: string,
+	trialDays: number,
+	setupTime: string,
+	category: string,
+	realService: boolean,
+	technology: string[],
+	integrations: string[],
+	useCases: string[],
+	roi: string,
+	competitors: string[],
+	marketSize: string,
+	growthRate: string,
+	variant: ServiceVariant,
 	contactInfo: {
-		mobile: string;
-		email: string;
-		address: string;
-		website: string;
+		mobile: string,
+		email: string,
+		address: string,
+		website: string,
 	};
-	realImplementation: boolean;
-	implementationDetails: string;
-	launchDate: string;
-	customers: number;
-	rating: number;
-	reviews: number;
+	realImplementation: boolean,
+	implementationDetails: string,
+	launchDate: string,
+	customers: number,
+	rating: number,
+	reviews: number,
 }
 
 const contact = {
@@ -46,7 +46,7 @@ const contact = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 export const realQ4Services2025: RealQ4Service[] = [
 	{
@@ -69,7 +69,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-violet-600 to-fuchsia-700',
 		textColor: 'text-fuchsia-400',
 		link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
-		marketPosition: 'Comparable to Refersion and LeadDyno; stronger fraud prevention and flexible payouts.',
+		marketPosition: 'Comparable to Refersion and LeadDyno, stronger fraud prevention and flexible payouts.',
 		targetAudience: 'E-commerce stores, marketplaces, media sites',
 		trialDays: 14,
 		setupTime: '1 day',
@@ -111,7 +111,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-cyan-600 to-blue-700',
 		textColor: 'text-cyan-400',
 		link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
-		marketPosition: 'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
+		marketPosition: 'Competitive with Otter and Descript, better show notes and SEO summary pipeline.',
 		targetAudience: 'Podcasters, media teams, agencies',
 		trialDays: 7,
 		setupTime: '10 minutes',
@@ -127,7 +127,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		variant: 'ai-futuristic',
 		contactInfo: contact,
 		realImplementation: true,
-		implementationDetails: 'Batch transcription queue with GPU support; diarization and summarization pipeline.',
+		implementationDetails: 'Batch transcription queue with GPU support, diarization and summarization pipeline.',
 		launchDate: '2025-09-15',
 		customers: 60,
 		rating: 4.6,
@@ -153,7 +153,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-emerald-600 to-teal-700',
 		textColor: 'text-emerald-400',
 		link: 'https://ziontechgroup.com/services/micro-crm-local-business',
-		marketPosition: 'Simpler than HubSpot/Zoho; fast and focused for local SMBs.',
+		marketPosition: 'Simpler than HubSpot/Zoho, fast and focused for local SMBs.',
 		targetAudience: 'Local businesses, consultants, freelancers',
 		trialDays: 14,
 		setupTime: '15 minutes',
@@ -195,7 +195,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-amber-600 to-orange-700',
 		textColor: 'text-amber-400',
 		link: 'https://ziontechgroup.com/services/returns-automation-saas',
-		marketPosition: 'Competes with Returnly/Loop; quick setup for SMBs.',
+		marketPosition: 'Competes with Returnly/Loop, quick setup for SMBs.',
 		targetAudience: 'DTC brands, Shopify/WooCommerce stores',
 		trialDays: 14,
 		setupTime: '2 hours',
@@ -211,7 +211,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		variant: 'ai-futuristic',
 		contactInfo: contact,
 		realImplementation: true,
-		implementationDetails: 'Webhook-driven order sync; label/provider adapters.',
+		implementationDetails: 'Webhook-driven order sync, label/provider adapters.',
 		launchDate: '2025-10-05',
 		customers: 95,
 		rating: 4.6,
@@ -237,7 +237,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		color: 'from-blue-600 to-indigo-700',
 		textColor: 'text-indigo-400',
 		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
-		marketPosition: 'Simpler than Zendesk/Freshdesk; MSP-first workflows and pricing.',
+		marketPosition: 'Simpler than Zendesk/Freshdesk, MSP-first workflows and pricing.',
 		targetAudience: 'Managed service providers, internal IT teams',
 		trialDays: 14,
 		setupTime: '1 day',
@@ -259,7 +259,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		rating: 4.5,
 		reviews: 28
 	}
-];
+],
 export const real2025Q4Additions = [
   {
     id: 'ai-governance-control-center',
@@ -350,7 +350,7 @@ export const real2025Q4Additions = [
     category: 'Quality & Monitoring',
     link: 'https://ziontechgroup.com/services/api-security-posture-monitor',
     marketPosition: 'Lightweight alternative that leverages existing logs and traces.',
-    roi: 'Reduce security incidents and audit risk; faster remediation cycles.',
+    roi: 'Reduce security incidents and audit risk, faster remediation cycles.',
     competitors: ['Salt', 'Noname Security', '42Crunch'],
     useCases: ['Shadow API control', 'PII exposure audits', 'Compliance'],
     integrations: ['OpenTelemetry', 'Datadog', 'Grafana Tempo/Loki', 'SIEM'],
@@ -398,7 +398,7 @@ export const real2025Q4Additions = [
     category: 'AI & Data',
     link: 'https://ziontechgroup.com/services/llm-eval-and-regression-lab',
     marketPosition: 'Practical eval tooling for product teams without heavy infra.',
-    roi: 'Reduce bad releases; improve answer quality and reliability.',
+    roi: 'Reduce bad releases, improve answer quality and reliability.',
     competitors: ['Promptfoo', 'Humanloop', 'Weights & Biases Evals'],
     useCases: ['RAG validation', 'Prompt quality gates', 'Model drift'],
     integrations: ['GitHub Actions', 'Vercel', 'OpenAI', 'Anthropic'],
@@ -446,7 +446,7 @@ export const real2025Q4Additions = [
     category: 'AI & Data',
     link: 'https://ziontechgroup.com/services/ai-sales-assistant-outreach',
     marketPosition: 'Balances AI autonomy with human-in-the-loop guardrails.',
-    roi: 'Increase SDR throughput and conversion; reduce manual data entry.',
+    roi: 'Increase SDR throughput and conversion, reduce manual data entry.',
     competitors: ['Apollo', 'Clay', 'Outreach'],
     useCases: ['Outbound sequences', 'Meeting booking', 'CRM hygiene'],
     integrations: ['HubSpot', 'Salesforce', 'Gmail', 'Outlook'],
@@ -518,7 +518,7 @@ export const real2025Q4Additions = [
 	category: 'Developer Tools',
 	link: 'https://ziontechgroup.com/services/api-changelog-sdk-publisher',
 	marketPosition: 'Bridges the gap between manual release notes and full API platforms.',
-	roi: 'Reduce API release toil; fewer integration regressions.',
+	roi: 'Reduce API release toil, fewer integration regressions.',
 	competitors: ['ReadMe', 'Stoplight', 'Postman'],
 	useCases: ['API versioning', 'SDK release automation', 'DevRel updates'],
 	integrations: ['GitHub', 'OpenAPI', 'npm', 'PyPI'],
@@ -541,7 +541,7 @@ export const real2025Q4Additions = [
 	],
 	category: 'Quality & Monitoring',
 	link: 'https://ziontechgroup.com/services/browser-performance-optimizer',
-	marketPosition: 'Simpler than SpeedCurve; focused on quick wins for teams.',
+	marketPosition: 'Simpler than SpeedCurve, focused on quick wins for teams.',
 	roi: 'Improve conversion rates by reducing load time.',
 	competitors: ['SpeedCurve', 'Calibre'],
 	useCases: ['E-commerce performance', 'Landing page optimization'],
@@ -565,7 +565,7 @@ export const real2025Q4Additions = [
     category: 'Developer Tools',
     link: 'https://ziontechgroup.com/services/api-changelog-sdk-publisher',
     marketPosition: 'Lightweight alternative to ReadMe.io and Stoplight.',
-    roi: 'Reduce support time; speed developer onboarding.',
+    roi: 'Reduce support time, speed developer onboarding.',
     competitors: ['ReadMe', 'Stoplight', 'SwaggerHub'],
     useCases: ['Public APIs', 'Partner integrations'],
     integrations: ['GitHub', 'npm', 'PyPI'],
@@ -610,7 +610,7 @@ export const real2025Q4Additions = [
     ],
     category: 'Analytics & Business Intelligence',
     link: 'https://ziontechgroup.com/services/saas-billing-anomaly-guard',
-    marketPosition: 'Focuses on anomaly alerts; complements full BI stacks.',
+    marketPosition: 'Focuses on anomaly alerts, complements full BI stacks.',
     roi: 'Save revenue by early intervention on at-risk accounts.',
     competitors: ['ChartMogul', 'ProfitWell'],
     useCases: ['SaaS finance ops', 'RevOps', 'Growth'],
@@ -687,4 +687,4 @@ export const real2025Q4Additions = [
     trialDays: 14,
     setupTime: '1-2 days'
   }
-];
+],

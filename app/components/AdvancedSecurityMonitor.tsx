@@ -1,5 +1,5 @@
 import React from 'react'
-const AdvancedSecurityMonitor: React.FC = () => {;
+const AdvancedSecurityMonitor: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">AdvancedSecurityMonitor</h3>

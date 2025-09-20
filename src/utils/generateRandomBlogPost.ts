@@ -9,6 +9,7 @@ const titles = [
 "Cybersecurity in 2024";
 ],
 
+<<<<<<< HEAD
 const authors = [
 { name: "Sarah Johnson", avatar: "/avatars/sarah.jpg", avatarUrl: "/avatars/sarah.jpg", bio: "AI Research Lead" },
 { name: "Michael Chen", avatar: "/avatars/michael.jpg", avatarUrl: "/avatars/michael.jpg", bio: "Senior Software Engineer" };
@@ -32,6 +33,31 @@ category: "Technology",
 readTime: Math.floor(Math.random() * 10) + 5; featuredImage: `/blog/${randomId}.jpg`;
 };
 }
+=======
+  const authors = [
+    { name: "Sarah Johnson", avatar: "/avatars/sarah.jpg", avatarUrl: "/avatars/sarah.jpg", bio: "AI Research Lead" },
+    { name: "Michael Chen", avatar: "/avatars/michael.jpg", avatarUrl: "/avatars/michael.jpg", bio: "Senior Software Engineer" },
+    { name: "Emily Rodriguez", avatar: "/avatars/emily.jpg", avatarUrl: "/avatars/emily.jpg", bio: "Data Scientist" },
+    { name: "David Kim", avatar: "/avatars/david.jpg", avatarUrl: "/avatars/david.jpg", bio: "DevOps Engineer" }
+  ],
+
+  const randomTitle = titles[Math.floor(Math.random() * titles.length)];
+  const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
+  const randomId = Math.random().toString(36).substr(2, 9);
+
+  return {
+    id: randomId, title: randomTitle,
+    slug: randomTitle.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
+    excerpt: `A comprehensive guide to ${randomTitle.toLowerCase()} and its impact on modern technology.`,
+    content: `This is a detailed article about ${randomTitle.toLowerCase()}...`,
+    author: randomAuthor, publishedAt: new Date().toISOString(),
+    publishedDate: new Date().toISOString().split("T")[0],
+    tags: ["Technology", "Innovation", "Development"],
+    category: "Technology",
+    readTime: Math.floor(Math.random() * 10) + 5, featuredImage: `/blog/${randomId}.jpg`
+  };
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 import { BlogPost } from "../types/blog";
 
 const topics = [
@@ -87,6 +113,7 @@ const contentSnippets = [;
 ];
 
 export function generateRandomBlogPost(): BlogPost {
+<<<<<<< HEAD
 const topic = topics[Math.floor(Math.random() * topics.length)];
 const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
 const noun = nouns[Math.floor(Math.random() * nouns.length)];
@@ -113,4 +140,35 @@ const posts: BlogPost[] = [];
 for (let i = 0; i < count; i++) {
 posts.push(generateRandomBlogPost())}
 return posts;
+=======
+  const topic = topics[Math.floor(Math.random() * topics.length)];
+  const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const noun = nouns[Math.floor(Math.random() * nouns.length)];
+  const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)],
+  
+  const title = `${adjective} ${noun} for ${topic}`;
+  
+  return {
+    id: Math.random().toString(36).substr(2, 9),
+    title;
+    excerpt: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}.`,
+    content: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}. We"ll dive deep into the fundamentals, examine real-world applications; and provide actionable insights for implementation.`,
+    author: {
+      name: "Zion Tech Group",
+      avatar: "/images/zion-tech-group-logo.png",
+    },
+    publishedAt: new Date().toISOString(),
+    tags: [topic, "Technology", "Innovation", "Guide"],
+    image: "/images/blog-placeholder.jpg",
+    readTime: Math.floor(Math.random() * 10) + 5,
+  };
+}
+
+export function generateMultipleBlogPosts(count: number): BlogPost[] {
+  const posts: BlogPost[] = [],
+  for (let i = 0, i < count, i++) {
+    posts.push(generateRandomBlogPost());
+};
+  return posts;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }

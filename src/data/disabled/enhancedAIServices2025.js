@@ -1,15 +1,15 @@
 // Enhanced AI Services for 2025;
 export const enhancedAIServices2025 = [
     {
-        id: 1;
-        name: "AI Vision Pro";
-        category: "Computer Vision";
-        pricing: "Usage-based";
+        id: 1,
+        name: "AI Vision Pro",
+        category: "Computer Vision",
+        pricing: "Usage-based",
         description: "Advanced computer vision platform with real-time object detection, facial recognition, and image analysis capabilities",
-        price: 0.05;
-        pricingModel: "per API call";
+        price: 0.05,
+        pricingModel: "per API call",
         features: [
-            "Real-time object detection";
+            "Real-time object detection",
             "Facial recognition",
             "Image classification",
             "OCR text extraction",
@@ -19,7 +19,7 @@ export const enhancedAIServices2025 = [
             "Batch processing"
         ],
         benefits: [
-            "99.5% accuracy";
+            "99.5% accuracy",
             "Real-time processing",
             "Cost-effective",
             "Scalable solution",
@@ -29,41 +29,59 @@ export const enhancedAIServices2025 = [
         targetAudience: ["Manufacturing", "Retail", "Security", "Healthcare", "Automotive"],
         tags: ["Computer Vision", "AI", "Machine Learning", "Image Processing", "Real-time"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-vision-pro";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$0.05-0.15 per API call";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-vision-pro",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$0.05-0.15 per API call",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["Google Vision AI", "AWS Rekognition", "Azure Computer Vision"],
         aiModels: ["YOLO v8", "ResNet", "EfficientNet", "Custom trained models"],
-        accuracy: "99.5%";
-        trainingData: "10M+ labeled images";
+        accuracy: "99.5%",
+        trainingData: "10M+ labeled images",
         compliance: ["GDPR", "CCPA", "SOC 2"],
-        aiScore: 97;
+        aiScore: 97,
         useCases: ["Quality Control", "Security Monitoring", "Retail Analytics", "Medical Imaging"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: true;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "30 days";
-        uptime: "99.9%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: true,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "30 days",
+        uptime: "99.9%",
         securityFeatures: ["Data encryption", "Access controls", "Audit logging"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "2-4 hours";
         scalability: "Millions of requests/day";
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true};
+=======
+        integrationTime: "2-4 hours",
+        scalability: "Millions of requests/day",
+        realTimeProcessing: true,
+        multilingualSupport: true,
+        industrySpecific: true,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
     {
-        id: 2;
-        name: "NLP Genius";
-        category: "Natural Language Processing";
-        pricing: "Tiered";
+        id: 2,
+        name: "NLP Genius",
+        category: "Natural Language Processing",
+        pricing: "Tiered",
         description: "Comprehensive NLP platform with text analysis, sentiment analysis, language translation, and chatbot capabilities",
-        price: 199;
-        pricingModel: "monthly";
+        price: 199,
+        pricingModel: "monthly",
         features: [
-            "Text analysis";
+            "Text analysis",
             "Sentiment analysis",
             "Language translation",
             "Chatbot development",
@@ -73,7 +91,7 @@ export const enhancedAIServices2025 = [
             "Multi-language support"
         ],
         benefits: [
-            "95% accuracy";
+            "95% accuracy",
             "Multi-language support",
             "Custom models",
             "Easy integration",
@@ -83,41 +101,59 @@ export const enhancedAIServices2025 = [
         targetAudience: ["Customer Service", "Marketing", "Content Creation", "Research", "Education"],
         tags: ["NLP", "AI", "Text Analysis", "Translation", "Chatbots"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/nlp-genius";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$199-599/month";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/nlp-genius",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$199-599/month",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["OpenAI GPT", "Google Cloud NLP", "AWS Comprehend"],
         aiModels: ["BERT", "GPT-4", "T5", "Custom trained models"],
-        accuracy: "95%";
-        trainingData: "100M+ text samples";
+        accuracy: "95%",
+        trainingData: "100M+ text samples",
         compliance: ["GDPR", "CCPA", "SOC 2"],
-        aiScore: 96;
+        aiScore: 96,
         useCases: ["Customer Support", "Content Analysis", "Market Research", "Document Processing"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: true;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "90 days";
-        uptime: "99.9%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: true,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "90 days",
+        uptime: "99.9%",
         securityFeatures: ["Data encryption", "Access controls", "Privacy protection"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "4-8 hours";
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true};
+=======
+        integrationTime: "4-8 hours",
+        scalability: "Unlimited requests",
+        realTimeProcessing: true,
+        multilingualSupport: true,
+        industrySpecific: true,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
     {
-        id: 3;
-        name: "Predictive Analytics Pro";
-        category: "Predictive Analytics";
-        pricing: "Enterprise";
-        description: "AI-powered predictive analytics platform with machine learning models for business forecasting and decision making";
-        price: 999;
-        pricingModel: "monthly";
+        id: 3,
+        name: "Predictive Analytics Pro",
+        category: "Predictive Analytics",
+        pricing: "Enterprise",
+        description: "AI-powered predictive analytics platform with machine learning models for business forecasting and decision making",
+        price: 999,
+        pricingModel: "monthly",
         features: [
-            "Predictive modeling";
+            "Predictive modeling",
             "Time series analysis",
             "Risk assessment",
             "Demand forecasting",
@@ -127,7 +163,7 @@ export const enhancedAIServices2025 = [
             "Dashboard analytics"
         ],
         benefits: [
-            "90% prediction accuracy";
+            "90% prediction accuracy",
             "Data-driven decisions",
             "Risk mitigation",
             "Cost optimization",
@@ -137,41 +173,59 @@ export const enhancedAIServices2025 = [
         targetAudience: ["Finance", "Retail", "Manufacturing", "Healthcare", "Logistics"],
         tags: ["Predictive Analytics", "Machine Learning", "AI", "Forecasting", "Business Intelligence"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/predictive-analytics-pro";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$999-2999/month";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/predictive-analytics-pro",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$999-2999/month",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["SAS", "IBM SPSS", "RapidMiner"],
         aiModels: ["Random Forest", "XGBoost", "Neural Networks", "Custom algorithms"],
-        accuracy: "90%";
-        trainingData: "Industry-specific datasets";
+        accuracy: "90%",
+        trainingData: "Industry-specific datasets",
         compliance: ["GDPR", "CCPA", "SOX", "SOC 2"],
-        aiScore: 98;
+        aiScore: 98,
         useCases: ["Financial Forecasting", "Demand Planning", "Risk Management", "Customer Analytics"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: true;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "Indefinite";
-        uptime: "99.9%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: true,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "Indefinite",
+        uptime: "99.9%",
         securityFeatures: ["End-to-end encryption", "Access controls", "Audit trails"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "2-4 weeks";
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
         industrySpecific: true};
+=======
+        integrationTime: "2-4 weeks",
+        scalability: "Enterprise-grade",
+        realTimeProcessing: true,
+        multilingualSupport: false,
+        industrySpecific: true,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
     {
-        id: 4;
-        name: "AI Chatbot Studio";
-        category: "Conversational AI";
-        pricing: "Freemium";
-        description: "No-code AI chatbot platform with natural language understanding and multi-channel deployment capabilities";
-        price: 49;
-        pricingModel: "monthly";
+        id: 4,
+        name: "AI Chatbot Studio",
+        category: "Conversational AI",
+        pricing: "Freemium",
+        description: "No-code AI chatbot platform with natural language understanding and multi-channel deployment capabilities",
+        price: 49,
+        pricingModel: "monthly",
         features: [
-            "No-code builder";
+            "No-code builder",
             "Natural language understanding",
             "Multi-channel deployment",
             "Custom integrations",
@@ -181,7 +235,7 @@ export const enhancedAIServices2025 = [
             "Multi-language"
         ],
         benefits: [
-            "90% customer satisfaction";
+            "90% customer satisfaction",
             "24/7 availability",
             "Cost reduction",
             "Scalable support",
@@ -191,41 +245,59 @@ export const enhancedAIServices2025 = [
         targetAudience: ["Customer Service", "E-commerce", "Healthcare", "Education", "Finance"],
         tags: ["Chatbots", "Conversational AI", "Customer Service", "Automation", "AI"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-chatbot-studio";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$49-199/month";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-chatbot-studio",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$49-199/month",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["Dialogflow", "IBM Watson", "Microsoft Bot Framework"],
         aiModels: ["GPT-4", "BERT", "Custom trained models"],
-        accuracy: "92%";
-        trainingData: "Industry-specific conversations";
+        accuracy: "92%",
+        trainingData: "Industry-specific conversations",
         compliance: ["GDPR", "CCPA", "SOC 2"],
-        aiScore: 94;
+        aiScore: 94,
         useCases: ["Customer Support", "Lead Generation", "Appointment Booking", "FAQ Automation"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: true;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "90 days";
-        uptime: "99.8%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: true,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "90 days",
+        uptime: "99.8%",
         securityFeatures: ["Data encryption", "Access controls", "Privacy protection"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "2-4 hours";
         scalability: "Unlimited conversations";
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true};
+=======
+        integrationTime: "2-4 hours",
+        scalability: "Unlimited conversations",
+        realTimeProcessing: true,
+        multilingualSupport: true,
+        industrySpecific: true,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
     {
-        id: 5;
-        name: "AI Content Creator";
-        category: "Content Generation";
-        pricing: "Usage-based";
+        id: 5,
+        name: "AI Content Creator",
+        category: "Content Generation",
+        pricing: "Usage-based",
         description: "AI-powered content creation platform for generating articles, marketing copy, and creative content",
-        price: 0.10;
-        pricingModel: "per word";
+        price: 0.10,
+        pricingModel: "per word",
         features: [
-            "Article generation";
+            "Article generation",
             "Marketing copy",
             "Creative writing",
             "SEO optimization",
@@ -235,7 +307,7 @@ export const enhancedAIServices2025 = [
             "Content templates"
         ],
         benefits: [
-            "10x content output";
+            "10x content output",
             "SEO optimized",
             "Unique content",
             "Cost-effective",
@@ -245,41 +317,59 @@ export const enhancedAIServices2025 = [
         targetAudience: ["Marketing", "Content Creators", "Agencies", "E-commerce", "Publishers"],
         tags: ["Content Generation", "AI", "Marketing", "SEO", "Creative Writing"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-content-creator";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$0.10-0.25 per word";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-content-creator",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$0.10-0.25 per word",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["Jasper", "Copy.ai", "Writesonic"],
         aiModels: ["GPT-4", "Claude", "Custom trained models"],
-        accuracy: "95%";
-        trainingData: "Billions of articles";
+        accuracy: "95%",
+        trainingData: "Billions of articles",
         compliance: ["GDPR", "CCPA", "Copyright compliance"],
-        aiScore: 95;
+        aiScore: 95,
         useCases: ["Blog Writing", "Marketing Copy", "Product Descriptions", "Social Media"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: true;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "30 days";
-        uptime: "99.9%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: true,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "30 days",
+        uptime: "99.9%",
         securityFeatures: ["Data encryption", "Access controls", "Content filtering"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "1-2 hours";
         scalability: "Unlimited words";
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true};
+=======
+        integrationTime: "1-2 hours",
+        scalability: "Unlimited words",
+        realTimeProcessing: true,
+        multilingualSupport: true,
+        industrySpecific: true,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
     {
-        id: 6;
-        name: "AI Data Scientist";
-        category: "Data Science";
-        pricing: "Enterprise";
+        id: 6,
+        name: "AI Data Scientist",
+        category: "Data Science",
+        pricing: "Enterprise",
         description: "Automated data science platform with AI model development, deployment, and monitoring capabilities",
-        price: 1499;
-        pricingModel: "monthly";
+        price: 1499,
+        pricingModel: "monthly",
         features: [
-            "AutoML";
+            "AutoML",
             "Model development",
             "Feature engineering",
             "Model deployment",
@@ -289,7 +379,7 @@ export const enhancedAIServices2025 = [
             "Team collaboration"
         ],
         benefits: [
-            "90% faster model development";
+            "90% faster model development",
             "Automated optimization",
             "Better accuracy",
             "Cost reduction",
@@ -299,41 +389,59 @@ export const enhancedAIServices2025 = [
         targetAudience: ["Data Scientists", "ML Engineers", "Enterprises", "Research", "Startups"],
         tags: ["Data Science", "Machine Learning", "AutoML", "AI", "Model Development"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-data-scientist";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1499-4999/month";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-data-scientist",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$1499-4999/month",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["DataRobot", "H2O.ai", "Google AutoML"],
         aiModels: ["AutoML", "Custom algorithms", "Pre-trained models"],
-        accuracy: "Variable based on data";
-        trainingData: "User-provided data";
+        accuracy: "Variable based on data",
+        trainingData: "User-provided data",
         compliance: ["GDPR", "CCPA", "SOC 2", "Industry specific"],
-        aiScore: 97;
+        aiScore: 97,
         useCases: ["Predictive Modeling", "Classification", "Regression", "Clustering"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: true;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "User-defined";
-        uptime: "99.9%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: true,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "User-defined",
+        uptime: "99.9%",
         securityFeatures: ["Data encryption", "Access controls", "Model security"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "1-2 weeks";
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
         industrySpecific: true};
+=======
+        integrationTime: "1-2 weeks",
+        scalability: "Enterprise-grade",
+        realTimeProcessing: true,
+        multilingualSupport: false,
+        industrySpecific: true,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
     {
-        id: 7;
-        name: "AI Voice Assistant";
-        category: "Voice AI";
-        pricing: "Tiered";
+        id: 7,
+        name: "AI Voice Assistant",
+        category: "Voice AI",
+        pricing: "Tiered",
         description: "Advanced voice AI platform with speech recognition, text-to-speech, and voice command capabilities",
-        price: 299;
-        pricingModel: "monthly";
+        price: 299,
+        pricingModel: "monthly",
         features: [
-            "Speech recognition";
+            "Speech recognition",
             "Text-to-speech",
             "Voice commands",
             "Multi-language",
@@ -343,7 +451,7 @@ export const enhancedAIServices2025 = [
             "Voice analytics"
         ],
         benefits: [
-            "99% accuracy";
+            "99% accuracy",
             "Multi-language support",
             "Custom voices",
             "Easy integration",
@@ -353,41 +461,59 @@ export const enhancedAIServices2025 = [
         targetAudience: ["Call Centers", "Healthcare", "Education", "Accessibility", "IoT"],
         tags: ["Voice AI", "Speech Recognition", "Text-to-Speech", "AI", "Voice Commands"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-voice-assistant";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$299-899/month";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-voice-assistant",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$299-899/month",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["Google Speech-to-Text", "AWS Polly", "Azure Speech"],
         aiModels: ["Whisper", "Tacotron", "Custom trained models"],
-        accuracy: "99%";
-        trainingData: "Millions of voice samples";
+        accuracy: "99%",
+        trainingData: "Millions of voice samples",
         compliance: ["GDPR", "CCPA", "Accessibility standards"],
-        aiScore: 96;
+        aiScore: 96,
         useCases: ["Call Center Automation", "Voice Commands", "Accessibility", "Voice Analytics"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: true;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "30 days";
-        uptime: "99.9%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: true,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "30 days",
+        uptime: "99.9%",
         securityFeatures: ["Voice encryption", "Access controls", "Privacy protection"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "4-8 hours";
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true};
+=======
+        integrationTime: "4-8 hours",
+        scalability: "Unlimited requests",
+        realTimeProcessing: true,
+        multilingualSupport: true,
+        industrySpecific: true,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
     {
-        id: 8;
-        name: "AI Recommendation Engine";
-        category: "Recommendation Systems";
-        pricing: "Usage-based";
+        id: 8,
+        name: "AI Recommendation Engine",
+        category: "Recommendation Systems",
+        pricing: "Usage-based",
         description: "Intelligent recommendation engine with personalized suggestions for products, content, and services",
-        price: 0.001;
-        pricingModel: "per recommendation";
+        price: 0.001,
+        pricingModel: "per recommendation",
         features: [
-            "Personalized recommendations";
+            "Personalized recommendations",
             "Real-time learning",
             "Multi-criteria filtering",
             "A/B testing",
@@ -397,7 +523,7 @@ export const enhancedAIServices2025 = [
             "Scalable architecture"
         ],
         benefits: [
-            "30% conversion increase";
+            "30% conversion increase",
             "Personalized experience",
             "Better engagement",
             "Revenue growth",
@@ -407,41 +533,59 @@ export const enhancedAIServices2025 = [
         targetAudience: ["E-commerce", "Streaming", "Social Media", "News", "Finance"],
         tags: ["Recommendations", "Personalization", "AI", "Machine Learning", "Analytics"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-recommendation-engine";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$0.001-0.005 per recommendation";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-recommendation-engine",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$0.001-0.005 per recommendation",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["Amazon Personalize", "Google Recommendations", "Azure Personalizer"],
         aiModels: ["Collaborative filtering", "Content-based", "Deep learning", "Custom algorithms"],
-        accuracy: "85%";
-        trainingData: "User behavior data";
+        accuracy: "85%",
+        trainingData: "User behavior data",
         compliance: ["GDPR", "CCPA", "Privacy regulations"],
-        aiScore: 93;
+        aiScore: 93,
         useCases: ["Product Recommendations", "Content Suggestions", "Friend Suggestions", "Investment Advice"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: true;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "User-defined";
-        uptime: "99.9%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: true,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "User-defined",
+        uptime: "99.9%",
         securityFeatures: ["Data encryption", "Privacy protection", "Access controls"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "1-2 weeks";
         scalability: "Millions of recommendations";
         realTimeProcessing: true;
         multilingualSupport: false;
         industrySpecific: true};
+=======
+        integrationTime: "1-2 weeks",
+        scalability: "Millions of recommendations",
+        realTimeProcessing: true,
+        multilingualSupport: false,
+        industrySpecific: true,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
     {
-        id: 9;
-        name: "AI Fraud Detection";
-        category: "Security AI";
-        pricing: "Enterprise";
-        description: "Advanced AI-powered fraud detection system with real-time monitoring and prevention capabilities";
-        price: 799;
-        pricingModel: "monthly";
+        id: 9,
+        name: "AI Fraud Detection",
+        category: "Security AI",
+        pricing: "Enterprise",
+        description: "Advanced AI-powered fraud detection system with real-time monitoring and prevention capabilities",
+        price: 799,
+        pricingModel: "monthly",
         features: [
-            "Real-time monitoring";
+            "Real-time monitoring",
             "Fraud detection",
             "Risk scoring",
             "Behavioral analysis",
@@ -451,7 +595,7 @@ export const enhancedAIServices2025 = [
             "Alert system"
         ],
         benefits: [
-            "99.9% detection rate";
+            "99.9% detection rate",
             "Real-time protection",
             "False positive reduction",
             "Cost savings",
@@ -461,41 +605,59 @@ export const enhancedAIServices2025 = [
         targetAudience: ["Banks", "E-commerce", "Insurance", "Gaming", "Healthcare"],
         tags: ["Fraud Detection", "Security", "AI", "Risk Management", "Compliance"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-fraud-detection";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$799-2499/month";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-fraud-detection",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$799-2499/month",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["Sift", "Signifyd", "Forter"],
         aiModels: ["Neural networks", "Random forest", "Custom algorithms"],
-        accuracy: "99.9%";
-        trainingData: "Industry-specific fraud patterns";
+        accuracy: "99.9%",
+        trainingData: "Industry-specific fraud patterns",
         compliance: ["PCI DSS", "SOC 2", "GDPR", "Industry regulations"],
-        aiScore: 99;
+        aiScore: 99,
         useCases: ["Payment Fraud", "Account Takeover", "Insurance Fraud", "Gaming Fraud"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: false;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "7 years";
-        uptime: "99.99%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: false,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "7 years",
+        uptime: "99.99%",
         securityFeatures: ["End-to-end encryption", "Access controls", "Audit trails"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "2-4 weeks";
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
         industrySpecific: true};
+=======
+        integrationTime: "2-4 weeks",
+        scalability: "Enterprise-grade",
+        realTimeProcessing: true,
+        multilingualSupport: false,
+        industrySpecific: true,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
     {
-        id: 10;
-        name: "AI Process Automation";
-        category: "Process Automation";
-        pricing: "Tiered";
-        description: "Intelligent process automation platform with AI-powered workflow optimization and decision making";
-        price: 399;
-        pricingModel: "monthly";
+        id: 10,
+        name: "AI Process Automation",
+        category: "Process Automation",
+        pricing: "Tiered",
+        description: "Intelligent process automation platform with AI-powered workflow optimization and decision making",
+        price: 399,
+        pricingModel: "monthly",
         features: [
-            "Workflow automation";
+            "Workflow automation",
             "AI decision making",
             "Process optimization",
             "Custom workflows",
@@ -505,7 +667,7 @@ export const enhancedAIServices2025 = [
             "Scalable architecture"
         ],
         benefits: [
-            "80% process efficiency";
+            "80% process efficiency",
             "Cost reduction",
             "Error elimination",
             "Compliance assurance",
@@ -515,30 +677,48 @@ export const enhancedAIServices2025 = [
         targetAudience: ["Manufacturing", "Finance", "Healthcare", "Logistics", "Retail"],
         tags: ["Process Automation", "Workflow", "AI", "Optimization", "Efficiency"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-process-automation";
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$399-1299/month";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-process-automation",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$399-1299/month",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
         competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
         aiModels: ["Decision trees", "Neural networks", "Custom algorithms"],
-        accuracy: "95%";
-        trainingData: "Process-specific data";
+        accuracy: "95%",
+        trainingData: "Process-specific data",
         compliance: ["SOC 2", "ISO 27001", "Industry specific"],
-        aiScore: 94;
+        aiScore: 94,
         useCases: ["Manufacturing Automation", "Financial Processes", "Healthcare Workflows", "Supply Chain"],
-        apiAccess: true;
-        customTraining: true;
-        whiteLabel: true;
-        prioritySupport: true;
-        trainingIncluded: true;
-        dataRetention: "Indefinite";
-        uptime: "99.9%";
+        apiAccess: true,
+        customTraining: true,
+        whiteLabel: true,
+        prioritySupport: true,
+        trainingIncluded: true,
+        dataRetention: "Indefinite",
+        uptime: "99.9%",
         securityFeatures: ["Process encryption", "Access controls", "Audit trails"],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices2025.js
         integrationTime: "2-4 weeks";
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
         industrySpecific: true}
+=======
+        integrationTime: "2-4 weeks",
+        scalability: "Enterprise-grade",
+        realTimeProcessing: true,
+        multilingualSupport: false,
+        industrySpecific: true,
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices2025.js
 ];
     export default enhancedAIServices2025;

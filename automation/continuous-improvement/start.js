@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 /**,
  * Zion App - Enhanced Continuous Improvement Startup Script,
@@ -52,18 +52,18 @@ class AutomationStartup {,
       await this.initializeAutomation(),
       // Start monitoring,
       if (this.config.enableMonitoring) {,
-        await this.startMonitoring(),
-      }
+        await this.startMonitoring();
+};
 ,
       // Start dashboard,
       if (this.config.enableDashboard) {,
-        await this.startDashboard(),
-      }
+        await this.startDashboard();
+};
 ,
       // Start Slack integration,
       if (this.config.enableSlack) {,
-        await this.startSlackIntegration(),
-      }
+        await this.startSlackIntegration();
+};
 ,
       // Set up graceful shutdown,
       this.setupGracefulShutdown(),
@@ -75,8 +75,8 @@ class AutomationStartup {,
       // Start periodic status updates,
       this.startStatusUpdates()
     } catch (error) {,
-      logger.error('❌ Failed to start automation system:', error),      process.exit(1),
-    }
+      logger.error('❌ Failed to start automation system:', error),      process.exit(1);
+};
   }
 ,
   /**,
@@ -103,8 +103,8 @@ const optionalEnvVars = [,
       package.json',next.config.js',tsconfig.json''    ],
     for (const file of requiredFiles) {,
       if (!fs.existsSync(file)) {,
-        throw new Error(`Required file not found: ${file}`),
-      }
+        throw new Error(`Required file not found: ${file}`);
+};
     }
 ,
     logger.info('✅ Environment validation completed')  }
@@ -186,8 +186,8 @@ const optionalEnvVars = [,
       logger.info(`\n🛑 Received ${signal}. Shutting down gracefully...`),
       this.isRunning = false,
       if (this.automation) {,
-        await this.automation.stop(),
-      }
+        await this.automation.stop();
+};
 ,
       logger.info('✅ Shutdown completed'),      process.exit(0),
     },
@@ -206,8 +206,8 @@ const optionalEnvVars = [,
       timestamp: new Date().toISOString()},
     logger.info('📊 Initial Status:', JSON.stringify(status, null, 2)),
     // Save status to file,
-    const statusPath = path.join(__dirname, ..', logsautomation-status.json'),    fs.writeFileSync(statusPath, JSON.stringify(status, null, 2)),
-  }
+    const statusPath = path.join(__dirname, ..', logsautomation-status.json'),    fs.writeFileSync(statusPath, JSON.stringify(status, null, 2));
+};
 ,
   /**,
    * Start periodic status updates,
@@ -215,8 +215,8 @@ const optionalEnvVars = [,
   startStatusUpdates() {,
     setInterval(() => {,
       if (this.isRunning) {,
-        this.logStatus(),
-      }
+        this.logStatus();
+};
     }, 5 * 60 * 1000), // Every 5 minutes
   }
 ,
@@ -242,8 +242,8 @@ const optionalEnvVars = [,
     logger.info('🛑 Stopping automation system...'),
     this.isRunning = false,
     if (this.automation) {,
-      await this.automation.stop(),
-    }
+      await this.automation.stop();
+};
 ,
     logger.info('✅ Automation system stopped')  }
 }
@@ -295,29 +295,29 @@ Examples:,
       process.exit(0),
     }).catch((error) => {,
       logger.error('❌ Error generating report:', error),      process.exit(1),
-    }),
-  }
+    });
+};
 ,
   if (args.includes('--status') || args.includes('-s')) {'    startup.start().then(() => {,
       const status = startup.automation.getStatus(),
       logger.info('📊 Current Status:', JSON.stringify(status, null, 2)),      process.exit(0),
     }).catch((error) => {,
       logger.error('❌ Error getting status:', error),      process.exit(1),
-    }),
-  }
+    });
+};
 ,
   if (args.includes('--stop')) {'    // Implementation for stopping would require process management,
-    logger.info('🛑 Stop command received. Use Ctrl+C to stop the running process.'),    process.exit(0),
-  }
+    logger.info('🛑 Stop command received. Use Ctrl+C to stop the running process.'),    process.exit(0);
+};
 ,
   if (args.includes('--restart')) {'    // Implementation for restarting would require process management,
-    logger.info('🔄 Restart command received. Please stop and start manually.'),    process.exit(0),
-  }
+    logger.info('🔄 Restart command received. Please stop and start manually.'),    process.exit(0);
+};
 ,
   // Default: start the automation system,
   startup.start().catch((error) => {,
     logger.error('❌ Failed to start automation system:', error),    process.exit(1),
-  }),
-}
+  });
+  }
 ,
 module.exports = AutomationStartup,

@@ -11,5 +11,5 @@ const function ContentSharingWidget({ titleurldescription }: ContentSharingWidge
     </div>,
   ),
 },
-export default function ContentSharingWidget({ titleurldescription }: ContentSharingWidgetProps) {,
-}}}
+export default function ContentSharingWidget({ titleurldescription }: ContentSharingWidgetProps) {;
+  }}}

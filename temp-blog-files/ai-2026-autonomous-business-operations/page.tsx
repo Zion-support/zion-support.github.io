@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Discover how autonomous AI agents will revolutionize business operations in 2026 with self-healing systems, intelligent automation, and predictive analytics.'
   keywords: ['AI 2026autonomous businessAI agentsbusiness automation', 'predictive analytics']
 }
-export default function AI2026AutonomousBusinessOperations() {
+export default function AI2026AutonomousBusinessOperations() : any {
   return (
     <div>
       <div>

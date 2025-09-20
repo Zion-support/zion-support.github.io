@@ -7,7 +7,7 @@ export, const, ThemeProvider = ({ children }) => {
         const root = window.document.documentElement;
         root.classList.remove('lightdark');
         if() {
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
     root.classList.add(systemTheme);
         };
         else {
@@ -15,10 +15,15 @@ export, const, ThemeProvider = ({ children }) => {
         };
     }, [theme]),return (<ThemeContext.Provider value={{ themesetTheme }}>;
       {children}
+<<<<<<< HEAD
     </ThemeContext.Provider>)};
+=======
+    </ThemeContext.Provider>);
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 export, const, useTheme = () => {
     const context = React.useContext(ThemeContext);
     if (context === undefined) {
         throw, new, Error('useTheme, must, be used, within, a ThemeProvider');
     };
-    return context,<//ThemeContext.Provider><///ThemeContext.Provider>
+    return context,<//ThemeContext.Provider><///ThemeContext.Provider>}

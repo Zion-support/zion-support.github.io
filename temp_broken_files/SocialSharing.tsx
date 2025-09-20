@@ -10,5 +10,5 @@ const function SocialSharing({  = () => {,
       </div>,
     </div>),
 },
-export default function SocialSharing({ ,
-}}})))
+export default function SocialSharing({ ;
+  }}})))

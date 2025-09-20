@@ -133,7 +133,12 @@ export function BenefitsSection() {
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
             backgroundImag, e: `radial-gradient(circle at 75% 75%, currentColo, r, 1p, x, transparent 1p, x)`,
+<<<<<<< HEAD
             backgroundSiz, e: '60px 60px'}}/>
+=======
+            backgroundSiz, e: '60px 60px';
+  }}/>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
       </div>
       
       {/* Floating decorative elements */}
@@ -227,8 +232,8 @@ export function BenefitsSection() {
               <p className="text-white text-lg mb-4">
                 Ready to experience the Zion difference?
               </p>
-              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-light hove, r:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-zion-cyan/25">
-                Get Started Today;
+              <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-light hove, r:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r: shadow-zion-cyan/25">
+                Get Started Today,
               </button>
             </div>
           </div>
@@ -263,4 +268,5 @@ export function BenefitsSection() {
     whileHove, r: { scal, e: 1.05 }, transitio, n: { duratio, n: 0.3 }, childre, n: [_js, x("di, v", { classNa, m, e: "tex, t-4x, l fon, t-bol, d tex, t-zio, n-blu, e m, b-2",
     childr, e, n: "9, 9%" }), _js, x("di,  v", { classNa, m, e: "tex, t-zio, n-slat, e-ligh, t",
     childr, e, n: "Satisfactio, n Rat, e" })] })] }) })] })] }));
+}
 }

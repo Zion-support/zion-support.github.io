@@ -14,7 +14,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -53,7 +53,7 @@ const serviceCategories = [
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -62,7 +62,7 @@ const companyLinks = [
   { name: 'Careers', href: '/careers', icon: TrendingUp },
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: ShieldCheck }
-];
+],
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
@@ -71,16 +71,16 @@ const resourceLinks = [
   { name: 'Mobile Apps', href: '/mobile', icon: Globe },
   { name: 'Cloud Services', href: '/cloud', icon: Cloud },
   { name: 'Security Center', href: '/security', icon: Shield }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
-];
+],
 
-export default function UltraFuturisticFooter2028() {
+export default function UltraFuturisticFooter2028() : any {
   return (
     <footer className="bg-black/95 backdrop-blur-xl border-t border-purple-500/30">
       {/* Main Footer Content */}
@@ -124,7 +124,7 @@ export default function UltraFuturisticFooter2028() {
               </div>
               <div className="flex items-center space-x-3 text-purple-200">
                 <Globe className="w-4 h-4 text-purple-400" />
-                <a href={contactInfo.website} className="text-sm hover:text-white transition-colors">
+                <a href={contactInfo.website} className="text-sm hover: text-white transition-colors">
                   {contactInfo.website}
                 </a>
               </div>
@@ -281,4 +281,4 @@ export default function UltraFuturisticFooter2028() {
       </div>
     </footer>
   );
-}
+  }

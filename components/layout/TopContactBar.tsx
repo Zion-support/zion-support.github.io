@@ -27,7 +27,7 @@ const TopContactBar: React.FC = () => {
       href: null,
       color: 'text-orange-400'
     }
-  ];
+  ],
 
   return (
     <div className="bg-black/80 backdrop-blur-sm border-b border-white/10">
@@ -42,7 +42,7 @@ const TopContactBar: React.FC = () => {
                     href={info.href} 
                     target={info.href.startsWith('http') ? '_blank' : undefined}
                     rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="text-white/70 hover: text-white transition-colors"
                   >
                     {info.text}
                   </a>
@@ -62,4 +62,4 @@ const TopContactBar: React.FC = () => {
       </div>
     </div>
   );
-};
+  };

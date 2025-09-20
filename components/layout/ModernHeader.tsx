@@ -251,7 +251,7 @@ const ModernHeader: React.FC = () => {
         )}
       </AnimatePresence>
     </motion.header>
-  ),
-},
+  );
+  },
 
 export default ModernHeader,

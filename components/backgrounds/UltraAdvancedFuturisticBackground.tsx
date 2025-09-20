@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-export default function UltraAdvancedFuturisticBackground() {
+export default function UltraAdvancedFuturisticBackground() : any {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -20,15 +20,15 @@ export default function UltraAdvancedFuturisticBackground() {
 
     // Particle system
     class Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-      life: number;
-      maxLife: number;
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      opacity: number,
+      color: string,
+      life: number,
+      maxLife: number,
 
       constructor() {
         this.x = Math.random() * canvas.width;
@@ -72,8 +72,8 @@ export default function UltraAdvancedFuturisticBackground() {
 
     // Grid system
     class Grid {
-      spacing: number;
-      offset: number;
+      spacing: number,
+      offset: number,
 
       constructor() {
         this.spacing = 50;
@@ -90,7 +90,7 @@ export default function UltraAdvancedFuturisticBackground() {
           ctx.lineWidth = 0.5;
 
           // Vertical lines
-          for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {
+          for (let x = this.offset % this.spacing, x < canvas.width, x += this.spacing) {
             ctx.beginPath();
             ctx.moveTo(x, 0);
             ctx.lineTo(x, canvas.height);
@@ -98,7 +98,7 @@ export default function UltraAdvancedFuturisticBackground() {
           }
 
           // Horizontal lines
-          for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {
+          for (let y = this.offset % this.spacing, y < canvas.height, y += this.spacing) {
             ctx.beginPath();
             ctx.moveTo(0, y);
             ctx.lineTo(canvas.width, y);
@@ -110,12 +110,12 @@ export default function UltraAdvancedFuturisticBackground() {
 
     // Energy waves
     class EnergyWave {
-      x: number;
-      y: number;
-      radius: number;
-      maxRadius: number;
-      speed: number;
-      opacity: number;
+      x: number,
+      y: number,
+      radius: number,
+      maxRadius: number,
+      speed: number,
+      opacity: number,
 
       constructor() {
         this.x = Math.random() * canvas.width;
@@ -157,7 +157,7 @@ export default function UltraAdvancedFuturisticBackground() {
     const energyWaves: EnergyWave[] = Array.from({ length: 5 }, () => new EnergyWave());
 
     // Animation loop
-    let animationId: number;
+    let animationId: number,
     const animate = () => {
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -182,7 +182,7 @@ export default function UltraAdvancedFuturisticBackground() {
       // Draw connections between nearby particles
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 0.5;
-      particles.forEach((p1, i) => {
+      particles.forEach((p1, i) : any => {
         particles.slice(i + 1).forEach(p2 => {
           const dx = p1.x - p2.x;
           const dy = p1.y - p2.y;
@@ -198,7 +198,7 @@ export default function UltraAdvancedFuturisticBackground() {
 
       // Add floating geometric shapes
       const time = Date.now() * 0.001;
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0, i < 3, i++) {
         const x = (Math.sin(time + i) * 100) + canvas.width / 2;
         const y = (Math.cos(time + i * 0.7) * 100) + canvas.height / 2;
         const size = Math.sin(time + i) * 20 + 30;
@@ -211,7 +211,7 @@ export default function UltraAdvancedFuturisticBackground() {
         
         // Draw hexagon
         ctx.beginPath();
-        for (let j = 0; j < 6; j++) {
+        for (let j = 0, j < 6, j++) {
           const angle = (j * Math.PI) / 3;
           const px = Math.cos(angle) * size;
           const py = Math.sin(angle) * size;

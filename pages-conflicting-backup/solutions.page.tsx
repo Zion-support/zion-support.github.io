@@ -233,7 +233,7 @@ const featuredSolutions = [
   }
 ],
 
-export default function Solutions() {
+export default function Solutions() : any {
   const [selectedCategory, setSelectedCategory] = useState('All'),
   const [selectedIndustry, setSelectedIndustry] = useState('All'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -339,7 +339,7 @@ export default function Solutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index) => {
+            {solutionCategories.map((category, index) : any => {
               const IconComponent = category.icon,
               return (
                 <motion.div
@@ -393,7 +393,7 @@ export default function Solutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index) => {
+            {industrySolutions.map((industry, index) : any => {
               const IconComponent = industry.icon,
               return (
                 <motion.div
@@ -426,8 +426,8 @@ export default function Solutions() {
                     </Link>
                   </div>
                 </motion.div>
-              ),
-            })}
+              );
+  })}
           </div>
         </div>
       </section>
@@ -447,7 +447,7 @@ export default function Solutions() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index) => {
+            {filteredSolutions.map((solution, index) : any => {
               const IconComponent = solution.icon,
               return (
                 <motion.div

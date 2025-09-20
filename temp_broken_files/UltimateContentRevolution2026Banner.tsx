@@ -138,6 +138,6 @@ const UltimateContentRevolution2026Banner = () => {,
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500">,
         <div className="h-full bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 animate-pulse"></div>,
       </div>,
-    </div>),
-},
+    </div>);
+  },
 export default UltimateContentRevolution2026Banner,

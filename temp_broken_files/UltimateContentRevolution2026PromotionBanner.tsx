@@ -161,7 +161,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {,
           </div>,
         </div>)}
     </div>,
-  ),
-},
+  );
+  },
 export default UltimateContentRevolution2026PromotionBanner,
 </div></div></div></div></div></div>,

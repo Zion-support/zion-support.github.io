@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Experience the revolutionary neural interface technology of 2025. Direct brain-computer communication, enhanced cognition, and seamless AI integration.'
   keywords: ['neural interface 2025brain-computer interfaceBCI technologyneural enhancement', 'AI integration']
 }
-export default function NeuralInterface2025BreakthroughPage() {
+export default function NeuralInterface2025BreakthroughPage() : any {
   return (
     <div>
       <SEO

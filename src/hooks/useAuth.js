@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export function useAuth() {
+<<<<<<< HEAD
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -14,6 +15,116 @@ export function useAuth() {
           name: 'Demo User',
           email: 'demo@example.com',
           avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+=======
+    const [user, setUser] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
+        // Check if user is logged in from localStorage or session;
+        const storedUser = localStorage.getItem('zion_user');
+        if (storedUser) {
+            try {
+                setUser(JSON.parse(storedUser));
+            }
+            catch (error) {
+                
+                localStorage.removeItem('zion_user');
+            }
+        }
+        setIsLoading(false);
+    }, []);
+
+  const login = async (email, password) => {
+        setIsLoading(true);
+        try {
+            // Simulate API call;
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            const mockUser = {
+                id: '1',
+                name: 'Demo User',
+                email,
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+            };
+    setUser(mockUser);
+            localStorage.setItem('zion_user', JSON.stringify(mockUser));
+        }
+        catch (error) {
+            
+            throw error;
+        }
+        finally {
+            setIsLoading(false);
+        }
+    };
+    const logout = async () => {
+        setIsLoading(true);
+        try {
+            // Simulate API call;
+            await new Promise(resolve => setTimeout(resolve, 500));
+            setUser(null);
+            localStorage.removeItem('zion_user');
+        }
+        catch (error) {
+            
+            throw error;
+        }
+        finally {
+            setIsLoading(false);
+        }
+    };
+    const signup = async (email, password, name) => {
+        setIsLoading(true);
+        try {
+            // Simulate API call;
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            const mockUser = {
+                id: '1',
+                name,
+                email,
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+            };
+    setUser(mockUser);
+            localStorage.setItem('zion_user', JSON.stringify(mockUser));
+        }
+        catch (error) {
+            
+            throw error;
+        }
+        finally {
+            setIsLoading(false);
+        }
+    };
+    return {
+        user,
+        login,
+        logout,
+        signup,
+        isLoading;
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+        const checkAuth = () => {
+            const storedUser = localStorage.getItem('zion_user');
+            if (storedUser) {
+                try {
+                    setUser(JSON.parse(storedUser));
+                }
+                catch (error) {
+                    
+                }
+            }
+            setLoading(false);
+        };
+        checkAuth();
+    }, []);
+
+  const login = async (email, password) => {
+        // Implement actual login logic here;
+        const mockUser = {
+            id: '1',
+            email,
+            name: 'User',
+            role: 'user',
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         };
         setUser(mockUser);
       } catch (error) {
@@ -22,6 +133,7 @@ export function useAuth() {
         setLoading(false);
       }
     };
+<<<<<<< HEAD
 
     initAuth();
   }, []);
@@ -57,4 +169,32 @@ export function useAuth() {
     login,
     logout,
   };
+=======
+    const logout = () => {
+        setUser(null);
+        localStorage.removeItem('zion_user');
+    };
+    const register = async (email, password, name) => {
+        // Implement actual registration logic here;
+        const mockUser = {
+            id: '1',
+            email,
+            name,
+            role: 'user',
+        };
+    setUser(mockUser);
+        localStorage.setItem('zion_user', JSON.stringify(mockUser));
+        return mockUser;
+    };
+    return {
+        user,
+        loading,
+        login,
+        logout,
+        register,
+        isAuthenticated: !!user,
+        isAdmin: user?.role === 'admin';
+  };
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }

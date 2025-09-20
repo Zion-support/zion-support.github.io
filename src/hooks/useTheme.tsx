@@ -5,4 +5,4 @@ import React from "react";
 // the ModeToggle and support components to correctly toggle between light and;
 // dark modes.;
 export { useTheme } from "@/components/ThemeProvider";
-export type { Theme; ThemeProviderState } from "@/components/ThemeProvider";
+export type { Theme, ThemeProviderState } from "@/components/ThemeProvider";

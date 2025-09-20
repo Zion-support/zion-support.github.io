@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -39,8 +39,8 @@ class EfficientImprovementSystem {,
       maxConcurrentImprovements: 3,
       autoCommit: true,
       autoPush: true},
-    this.projectRoot = process.cwd(),
-  }
+    this.projectRoot = process.cwd();
+};
 ,
   async start() {,
     logger.info('🚀 Starting Efficient Improvement System...'),
@@ -49,8 +49,8 @@ class EfficientImprovementSystem {,
     // Initial setup,
     await this.setup(),
     // Start the loop,
-    this.runLoop(),
-  }
+    this.runLoop();
+};
 ,
   async setup() {,
     logger.info('⚙️ Setting up efficient improvement environment...'),
@@ -59,8 +59,8 @@ class EfficientImprovementSystem {,
     for (const dir of dirs) {,
       const dirPath = path.join(this.projectRoot, dir),
       if (!fs.existsSync(dirPath)) {,
-        fs.mkdirSync(dirPath, { recursive: true }),
-      }
+        fs.mkdirSync(dirPath, { recursive: true });
+};
     }
 ,
     // Ensure git is initialized,
@@ -70,8 +70,8 @@ class EfficientImprovementSystem {,
       logger.info('📦 Initializing git repository...'),
       execSync('git init'),
       execSync('git add .'),
-      execSync('git commit -m "Initial commit before efficient improvement system"'),
-    }
+      execSync('git commit -m "Initial commit before efficient improvement system"');
+};
   }
 ,
   async runLoop() {,
@@ -84,8 +84,8 @@ class EfficientImprovementSystem {,
         const improvements = await this.generateImprovements(analysis),
         // Apply improvements,
         if (improvements.length > 0) {,
-          await this.applyImprovements(improvements),
-        }
+          await this.applyImprovements(improvements);
+};
 ,
         // Update statistics,
         this.updateStats(),
@@ -99,8 +99,8 @@ class EfficientImprovementSystem {,
           timestamp: new Date().toISOString()}),
         this.stats.errors++,
         // Wait before retrying,
-        await this.sleep(5000),
-      }
+        await this.sleep(5000);
+};
     }
   }
 ,
@@ -190,11 +190,11 @@ class EfficientImprovementSystem {,
             if (file.endsWith('.json')) {,
               JSON.parse(fs.readFileSync(file, 'utf8')),
             } else {,
-              execSync(`node -c "${file}"`, { stdio: 'pipe' }),
-            }
+              execSync(`node -c "${file}"`, { stdio: 'pipe' });
+};
           } catch (error) {,
-            syntaxIssues.push({ file, error: error.message }),
-          }
+            syntaxIssues.push({ file, error: error.message });
+};
         }
       }
 ,
@@ -215,24 +215,24 @@ class EfficientImprovementSystem {,
         type: 'build-errors',
         priority: 'critical',
         description: Fix build errors',
-        action: fix-build}),
-    }
+        action: fix-build});
+};
 ,
     if (!analysis.tests.success) {,
       improvements.push({,
         type: 'test-errors',
         priority: 'critical',
         description: Fix failing tests',
-        action: fix-tests}),
-    }
+        action: fix-tests});
+};
 ,
     if (analysis.syntax.issues && analysis.syntax.issues.length > 0) {,
       improvements.push({,
         type: 'syntax-errors',
         priority: 'critical',
         description: `Fix ${analysis.syntax.issues.length} syntax errors`,
-        action: fix-syntax}),
-    }
+        action: fix-syntax});
+};
 ,
     // Medium priority improvements,
     if (analysis.dependencies.outdated && Object.keys(analysis.dependencies.outdated).length > 0) {,
@@ -240,19 +240,19 @@ class EfficientImprovementSystem {,
         type: 'dependencies',
         priority: 'medium',
         description: Update outdated dependencies',
-        action: update-dependencies}),
-    }
+        action: update-dependencies});
+};
 ,
     if (analysis.security.vulnerabilities && analysis.security.vulnerabilities.vulnerabilities) {,
       improvements.push({,
         type: 'security',
         priority: 'high',
         description: Fix security vulnerabilities',
-        action: fix-security}),
-    }
+        action: fix-security});
+};
 ,
-    return improvements.slice(0, this.config.maxConcurrentImprovements),
-  }
+    return improvements.slice(0, this.config.maxConcurrentImprovements);
+};
 ,
   async applyImprovements(improvements) {,
     logger.info(`🔧 Applying ${improvements.length} improvements...`),
@@ -284,16 +284,15 @@ class EfficientImprovementSystem {,
         this.stats.improvements++,
         // Commit changes,
         if (this.config.autoCommit) {,
-          await this.commitChanges(improvement.description),
-        }
-
+          await this.commitChanges(improvement.description);
+};
       } catch (error) {,
         logger.error(`  ❌ Failed to apply improvement: ${error.message}`),
         this.errors.push({,
           improvement,
           error: error.message,
-          timestamp: new Date().toISOString()}),
-      }
+          timestamp: new Date().toISOString()});
+};
     }
   }
 ,
@@ -305,8 +304,8 @@ class EfficientImprovementSystem {,
       // Try to build again,
       execSync('npm run build', { stdio: 'pipe' }),
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix build errors: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix build errors: ${error.message}`);
+};
   }
 ,
   async fixTests() {,
@@ -314,17 +313,17 @@ class EfficientImprovementSystem {,
     try {,
       const testResult = execSync('npm test 2>&1', { stdio: 'pipe' }).toString(),
       if (testResult.includes('Cannot find module')) {,
-        execSync('npm install', { stdio: 'pipe' }),
-      }
+        execSync('npm install', { stdio: 'pipe' });
+};
 ,
       if (testResult.includes('SyntaxError')) {,
-        execSync('node automation/syntax-fixer.js', { stdio: 'pipe' }),
-      }
+        execSync('node automation/syntax-fixer.js', { stdio: 'pipe' });
+};
 ,
       execSync('npm test', { stdio: 'pipe' }),
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix tests: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix tests: ${error.message}`);
+};
   }
 ,
   async fixSyntaxErrors() {,
@@ -332,8 +331,8 @@ class EfficientImprovementSystem {,
     try {,
       execSync('node automation/syntax-fixer.js', { stdio: 'pipe' }),
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix syntax errors: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix syntax errors: ${error.message}`);
+};
   }
 ,
   async updateDependencies() {,
@@ -347,13 +346,13 @@ class EfficientImprovementSystem {,
           try {,
             execSync(`npm install ${pkg}@latest`, { stdio: 'pipe' }),
           } catch (error) {,
-            logger.info(`    ⚠️ Could not update ${pkg} to latest: ${error.message}`),
-          }
+            logger.info(`    ⚠️ Could not update ${pkg} to latest: ${error.message}`);
+};
         }
       }
     } catch (error) {,
-      logger.error(`    ❌ Failed to update dependencies: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to update dependencies: ${error.message}`);
+};
   }
 ,
   async fixSecurityIssues() {,
@@ -361,8 +360,8 @@ class EfficientImprovementSystem {,
     try {,
       execSync('npm audit fix', { stdio: 'pipe' }),
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix security issues: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix security issues: ${error.message}`);
+};
   }
 ,
   async commitChanges(message) {,
@@ -370,25 +369,25 @@ class EfficientImprovementSystem {,
       execSync('git add .', { stdio: 'pipe' }),
       execSync(`git commit -m "Efficient Improvement: ${message}"`, { stdio: 'pipe' }),
       if (this.config.autoPush) {,
-        execSync('git push', { stdio: 'pipe' }),
-      }
+        execSync('git push', { stdio: 'pipe' });
+};
 ,
       logger.info(`    ✅ Committed: ${message}`),
     } catch (error) {,
-      logger.error(`    ❌ Failed to commit changes: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to commit changes: ${error.message}`);
+};
   }
 ,
   updateStats() {,
     this.stats.cycles = this.cycleCount,
-    this.stats.lastCycle = new Date().toISOString(),
-  }
+    this.stats.lastCycle = new Date().toISOString();
+};
 ,
   async stop() {,
     logger.info('🛑 Stopping Efficient Improvement System...'),
     this.isRunning = false,
-    await this.generateFinalReport(),
-  }
+    await this.generateFinalReport();
+};
 ,
   async generateFinalReport() {,
     const report = {,
@@ -404,8 +403,8 @@ class EfficientImprovementSystem {,
     const reportPath = path.join(this.projectRoot, 'efficient-improvement-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📊 Efficient improvement report saved to: ${reportPath}`),
-    logger.info(`📈 Summary: ${report.summary.totalCycles} cycles, ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`),
-  }
+    logger.info(`📈 Summary: ${report.summary.totalCycles} cycles, ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`);
+};
 ,
   sleep(ms) {,
     return new Promise(resolve =>,
@@ -549,8 +548,8 @@ const timeoutId = setTimeout(resolve,                                           
 // Store timeoutId for cleanup if needed,
 ,
 // Store timeoutId for cleanup if needed,
-),
-  }
+);
+};
 ,
   getStatus() {,
     return {,
@@ -579,7 +578,7 @@ if (require.main === module) {,
   system.start().catch(error => {,
     logger.error('❌ Failed to start efficient improvement system:', error),
     process.exit(1),
-  }),
-}
+  });
+  }
 ,
 module.exports = EfficientImprovementSystem,

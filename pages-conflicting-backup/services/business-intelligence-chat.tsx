@@ -17,6 +17,6 @@ const BusinessIntelligenceChat: NextPage = () => {
       </main>
     </div>
   );
-};
+  };
 
 export default BusinessIntelligenceChat;

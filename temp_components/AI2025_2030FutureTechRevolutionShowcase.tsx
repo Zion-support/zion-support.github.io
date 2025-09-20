@@ -2,7 +2,7 @@ import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 
-export default function AI2025_2030FutureTechRevolutionShowcase() {
+export default function AI2025_2030FutureTechRevolutionShowcase() : any {
   const futureTechnologies = [
     {
       year: "2025",
@@ -87,4 +87,5 @@ const AI2025_2030FutureTechRevolutionShowcase: React.FC = () => {
   )
 },
 
-export default AI2025_2030FutureTechRevolutionShowcase,
+export default AI2025_2030FutureTechRevolutionShowcase;
+  }

@@ -642,7 +642,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
         complianceStandards: ['GDPR', 'CCPA', 'SOC2', 'Legal Ethics'],
         supportLevel: 'premium'
     }
-];
+],
 // Additional specialized service categories
 export const SERVICE_CATEGORIES = {
     'Micro SAAS': [

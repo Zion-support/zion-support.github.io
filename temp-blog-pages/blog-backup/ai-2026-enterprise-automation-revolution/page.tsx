@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Discover the revolutionary AI automation solutions that will transform enterprises in 2026. Advanced workflows, intelligent process automation, and autonomous business operations.',
   keywords: ['AI automation 2026enterprise automationintelligent workflowsautonomous business', 'AI transformation']
 }
-export default function AI2026EnterpriseAutomationRevolution() {
+export default function AI2026EnterpriseAutomationRevolution() : any {
   return (
     <div>
       <div>

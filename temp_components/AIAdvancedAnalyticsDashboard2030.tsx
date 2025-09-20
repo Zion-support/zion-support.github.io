@@ -254,8 +254,8 @@ const AIAdvancedAnalyticsDashboard2030 = () => {
           return prev + 2,
         }),
       }100),
-      return () => clearInterval(interval),
-    }
+      return () => clearInterval(interval);
+};
   }[isAnalyzing]),
 
   useEffect(() => {
@@ -279,4 +279,5 @@ const AIAdvancedAnalyticsDashboard2030: React.FC = () => {
   )
 },
 
-export default AIAdvancedAnalyticsDashboard2030,
+export default AIAdvancedAnalyticsDashboard2030;
+  }'

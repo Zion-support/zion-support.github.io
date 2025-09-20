@@ -4,7 +4,7 @@ export const metadata = {
   title: 'AI 2026: Foundational Models Cost Optimization Playbook'
   description: 'A practical playbook to reduce AI infra costs 30-70% via routing, caching, distillation, and preferred-model strategies.'
 }
-export default function FMConfigCostOptimizationPage() {
+export default function FMConfigCostOptimizationPage() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <p className="text-sm font-semibold text-emerald-700 mb-3">Playbook • September 2025</p>

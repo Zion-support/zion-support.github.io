@@ -1,7 +1,7 @@
 
 interface InteractiveSearchProps {
   placeholder?: string;
-  onSearch?: (query: string) => void;
+  onSearch?: (query: string) => void,
   className?: string;
 }
 
@@ -10,8 +10,8 @@ export default function InteractiveSearch({
   onSearch, 
   className = "w-full max-w-md" 
 }: InteractiveSearchProps) {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) : any => {
+    e.preventDefault(),
     const formData = new FormData(e.target as HTMLFormElement);
     const query = formData.get('search') as string;
     onSearch?.(query);
@@ -24,7 +24,7 @@ export default function InteractiveSearch({
           type="text"
           name="search"
           placeholder={placeholder}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         <button
           type="submit"
@@ -37,4 +37,4 @@ export default function InteractiveSearch({
       </div>
     </form>
   );
-}
+  }

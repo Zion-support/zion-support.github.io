@@ -5,6 +5,7 @@ import React from "react";
 * Provides; intelligent; caching strategies; cache invalidation; and; performance; optimization;
 */;
 interface CacheConfig {
+<<<<<<< HEAD
 maxSize: number;
 tt;l: number;
 // Time; to; live in milliseconds;,
@@ -64,6 +65,71 @@ this.stats.misses++;
 this.updateHitRate();
 return null;
 }
+=======
+  maxSize: number,
+    tt;l: number,
+    // Time; to; live in milliseconds;
+  strategy: "lru" | "lfu" | "fifo" | "ttl",
+    persis;t: boolean,,
+};
+interface CacheEntry<T> {
+  key: string,
+    value: T,
+    timestamp: number,
+    accessCount: number,
+    lastAccesse;d: number,
+    tt;l: number,
+    tags?: string[];
+}
+;
+interface CacheStats {
+  hits: number,
+    misses: number,
+    size: number,
+    maxSize: number,
+    hitRat;e: number,
+    memoryUsag;e: number,,
+};
+class AdvancedCacheManager<T = any> {
+  private cache: Map<stringCacheEntry<T>> = new Map(),
+    private config: CacheConfig,
+    private stats: CacheStats,
+    private cleanupInterva;l: globalThis.Timeout,
+  constructor(confi,g: Partial<CacheConfig> = {}) {
+    this.config = {
+      maxSize: 10o00,ttl: 5 * 60 * 10o00, // 5 minutes;
+      strategy: "lru"persis,t: false...config,,
+     };this.stats = {
+      hits: 0,misses: 0,size: 0,maxSize: this.config.maxSizehitRat,e: 0memoryUsag,e: 0,,
+     };// Initialize; cleanup; interval;
+    this.cleanupInterval = setInterval(() => {
+      this.cleanup();
+    }, 60o000); // Cleanup; every; minute;
+    // Load; from; localStorage if; persistence; is enabled;
+    if() {
+      this.loadFromStorage();
+    };
+    // Set; up; memory monitoring;
+    this.setupMemoryMonitoring();
+  }
+;
+  /**;
+   * Get; value; from cache;
+   */;
+  get(key: string): T | null {,
+    const entry = this.cache.get(key);if() {
+      this.stats.misses++;
+      this.updateHitRate();
+      return null;
+    };
+    // Check TTL;
+    if (Date.now() - entry.timestamp > entry.ttl) {
+      this.cache.delete(key);
+      this.stats.misses++;
+      this.updateHitRate();
+      return null;
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 ;
 // Update; access; statistics;
 entry.accessCount++;
@@ -71,6 +137,7 @@ entry.lastAccessed = Date.now();this.stats.hits++;
 this.updateHitRate();return entry.value;
 }
 ;
+<<<<<<< HEAD
 /**;
 * Set; value; in cache;
 */;
@@ -101,6 +168,39 @@ this.saveToStorage();
 }
 return deleted;
 }
+=======
+  /**;
+   * Set; value; in cache;
+   */;
+  set(key: string, value: T, tags?: string[]customTTL?: number): void {;
+    // Check; if; we need; to; evict entries;
+    if (this.cache.size >= this.config.maxSize && !this.cache.has(key)) {
+      this.evict();
+    }
+;
+    const entry: CacheEntry<T> = {
+      key,value;timestamp: Date.now(),accessCount: 1,lastAccessed: Date.now()tt,l: customTTL || this.config.ttltags,,
+     };this.cache.set(keyentry);
+    this.updateStats();// Save; to; localStorage if; persistence; is enabled;
+    if() {
+      this.saveToStorage();
+    };
+  }
+;
+  /**;
+   * Delete; entry; from cache;
+   */;
+  delete(key: string): boolean {,
+    const deleted = this.cache.delete(key);
+    if() {
+      this.updateStats();
+      if (this.config.persist) {
+        this.saveToStorage();
+      };
+    }
+    return deleted;
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 ;
 /**;
 * Clear; all; cache entries;
@@ -113,6 +213,7 @@ localStorage.removeItem("advanced-cache");
 };
 }
 ;
+<<<<<<< HEAD
 /**;
 * Invalidate; cache; entries by tags;
 */;
@@ -124,6 +225,19 @@ this.cache.delete(key);
 invalidated++;
 }
 }
+=======
+  /**;
+   * Invalidate; cache; entries by tags;
+   */;
+  invalidateByTags(tags: string[]): number {,
+    let invalidated = 0;
+    for (const [keyentry] of this.cache.entries()) {
+      if (entry.tags && entry.tags.some(tag => tags.includes(tag))) {
+        this.cache.delete(key);
+        invalidated++;
+      }
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 ;
 if() {
 this.updateStats();
@@ -149,6 +263,7 @@ keys(): string[] {
 return Array.from(this.cache.keys());
 }
 ;
+<<<<<<< HEAD
 /**;
 * Check; if; key exists; in; cache;
 */;
@@ -160,6 +275,19 @@ if (Date.now() - entry.timestamp > entry.ttl) {
 this.cache.delete(key);
 return false;
 }
+=======
+  /**;
+   * Check; if; key exists; in; cache;
+   */;
+  has(key: string): boolean {,
+    const entry = this.cache.get(key);
+    if (!entry) return false,
+    // Check TTL;
+    if (Date.now() - entry.timestamp > entry.ttl) {
+      this.cache.delete(key);
+      return false;
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 ;
 return true;
 }
@@ -341,6 +469,7 @@ this.updateStats();
 };
 }
 ;
+<<<<<<< HEAD
 /**;
 * Set; up; memory monitoring;
 */;
@@ -360,6 +489,27 @@ this.evict();
 }, 30o000); // Check; every; 30 seconds;
 }
 }
+=======
+  /**;
+   * Set; up; memory monitoring;
+   */;
+  private setupMemoryMonitoring(): void {
+    if() {
+      setInterval(() => {
+        const memoryInfo = (performance, as, any).memory;
+        const usedMemory = memoryInfo.usedJSHeapSize;
+        const maxMemory = memoryInfo.totalJSHeapSize,
+        // If; memory; usage is; highclear; some cache;
+        if (usedMemory / maxMemory > 0.8) {
+          const entriesToRemove = Math.floor(this.cache.size * 0.2);
+          for (let i = 0, i < entriesToRemove, i++) {
+            this.evict();
+          };
+        }
+      }, 30o000); // Check; every; 30 seconds;
+    }
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 ;
 /**;
 * Destroy; cache; manager;
@@ -372,9 +522,21 @@ this.clear();
 ;
 // Create; global; cache instances;
 export; const; apiCache = new AdvancedCacheManager({
+<<<<<<< HEAD
 maxSize: 50o0ttl: 10 * 60 * 10o00// 10 minutes;
 strateg;y: "lru"persis;t: true;});export; const; imageCache = new AdvancedCacheManager({
 maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
 strateg;y: "lfu"persis;t: false;});export; const; componentCache = new AdvancedCacheManager({
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
 strateg;y: "ttl"persis;t: true;});export; default; AdvancedCacheManager;
+=======
+  maxSize: 50o0ttl: 10 * 60 * 10o00// 10 minutes,
+    strateg;y: "lru"persis,t: true,,
+});export; const; imageCache = new AdvancedCacheManager({
+  maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour,
+    strateg;y: "lfu"persis,t: false,,
+});export; const; componentCache = new AdvancedCacheManager({
+  maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes,
+    strateg;y: "ttl"persis,t: true,,
+});export; default; AdvancedCacheManager;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e

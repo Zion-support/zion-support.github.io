@@ -60,6 +60,6 @@ exports.handler = async function(event, context) {
         timestamp: new Date().toISOString(),
         functionName: 'ultra-fast-automation-orchestrator'
       })
-    },
+    };
   }
 },

@@ -134,31 +134,31 @@ const InteractiveContentDiscoveryWidget = () => {,
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
     return matchesSearch && matchesCategory,
   }),
-  const toggleFavorite = (id) => {,
+  const toggleFavorite = (id) : any => {,
     setFavorites(prev => {,
       const newFavorites = new Set(prev),
       if (newFavorites.has(id)) {,
         newFavorites.delete(id),
       } else {,
-        newFavorites.add(id),
-      }
+        newFavorites.add(id);
+};
       return newFavorites,
     }),
   },
-  const addToRecentlyViewed = (item) => {,
+  const addToRecentlyViewed = (item) : any => {,
     setRecentlyViewed(prev => {,
       const filtered = prev.filter(i => i.id !== item.id),
       return [item, ...filtered].slice(0, 5),
-    }),
+    });
   },
-  const getTypeIcon = (type) => {,
+  const getTypeIcon = (type) : any => {,
     switch (type) {,
-      case 'video': return '🎥',
-      case 'article': return '📄',
-      case 'guide': return '📖',
-      case 'case-study': return '📊',
-      case 'research': return '🔬',
-      case 'course': return '🎓',
+      case 'video': return '🎥';
+      case 'article': return '📄';
+      case 'guide': return '📖';
+      case 'case-study': return '📊';
+      case 'research': return '🔬';
+      case 'course': return '🎓';
       default: return '📄'}
   },
   return (,
@@ -214,7 +214,7 @@ const InteractiveContentDiscoveryWidget = () => {,
                   <div className="mb-6">,
                     <h3 className="font-semibold text-gray-900 dark: text-white mb-3">Categories</h3>,
                     <div className="space-y-2">,
-                      {categories.map((category) => {,
+                      {categories.map((category) : any => {,
                         const Icon = category.icon,
                         return (,
                           <button,
@@ -351,7 +351,7 @@ const InteractiveContentDiscoveryWidget = () => {,
                               </div>,
                             </div>,
                             <button,
-                              onClick={(e) => {,
+                              onClick={(e) : any => {,
                                 e.stopPropagation(),
                                 toggleFavorite(item.id),
                               }}
@@ -385,5 +385,5 @@ const InteractiveContentDiscoveryWidget = () => {,
       </div>,
     </>,
   ),
-export default InteractiveContentDiscoveryWidget,
-}
+export default InteractiveContentDiscoveryWidget;
+  }

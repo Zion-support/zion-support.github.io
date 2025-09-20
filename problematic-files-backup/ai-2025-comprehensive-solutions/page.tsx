@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Discover our comprehensive AI 2025 solutions platform featuring quantum-neural fusion, autonomous operations, and transcendent intelligence for complete business transformation.',
   keywords: 'AI 2025 solutions, comprehensive AI platform, quantum neural fusion, autonomous operations, transcendent intelligence, business transformation'
 }
-export default function AI2025ComprehensiveSolutions() {
+export default function AI2025ComprehensiveSolutions() : any {
   return (
     <div>
       {/* Hero Section */}

@@ -1,4 +1,5 @@
 ,"}
+<<<<<<< HEAD
 )}),
 ),"})";
 }
@@ -14,3 +15,8 @@ listing: ProductListing;
 view?: 'grid' | 'list';
 onRequestQuote?: (id: string) => void;
 detailBasePath?: string;
+=======
+    )}),
+    ),"})"
+}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e

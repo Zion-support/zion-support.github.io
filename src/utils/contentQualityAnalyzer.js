@@ -29,7 +29,8 @@ export class ContentQualityAnalyzer {
             metaDescriptionLength,
             hasStructuredData;
         });
-        const issues = this.identifyIssues({
+
+  const issues = this.identifyIssues({
             title,
             wordCount,
             headingCount,
@@ -38,7 +39,8 @@ export class ContentQualityAnalyzer {
             metaDescriptionLength,
             hasStructuredData;
         });
-        const recommendations = this.generateRecommendations(issues);
+
+  const recommendations = this.generateRecommendations(issues);
         const overallScore = Math.round((readabilityScore + seoScore) / 2);
         const metrics = {
             pageUrl,
@@ -235,6 +237,7 @@ export class ContentQualityAnalyzer {
         const totalPages = pageMetrics.length;
         if (totalPages === 0) {
             return {
+<<<<<<< HEAD
                 totalPages: 0;
                 averageWordCount: 0;
                 averageSeoScore: 0;
@@ -242,6 +245,16 @@ export class ContentQualityAnalyzer {
                 topIssues: [];
                 pageMetrics: [];
                 summary: 'No pages analyzed yet'};
+=======
+                totalPages: 0,
+                averageWordCount: 0,
+                averageSeoScore: 0,
+                pagesWithIssues: 0,
+                topIssues: [],
+                pageMetrics: [],
+                summary: 'No pages analyzed yet';
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }
         const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages);
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages);
@@ -253,7 +266,8 @@ export class ContentQualityAnalyzer {
                 issueCounts[issue] = (issueCounts[issue] || 0) + 1;
             });
         });
-        const topIssues = Object.entries(issueCounts)
+
+  const topIssues = Object.entries(issueCounts)
             .sort(([, a], [, b]) => b - a)
             .slice(0, 5)
             .map(([issue]) => issue);

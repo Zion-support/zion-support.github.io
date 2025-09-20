@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface ContentItem {
+<<<<<<< HEAD
 id: string;
 title: string;
 type: 'blog' | 'page' | 'product' | 'service';
@@ -9,6 +10,16 @@ status: 'published' | 'draft' | 'scheduled';,
 publishDate: string;,
 views: number;,
 author: string;};
+=======
+  id: string,
+  title: string,
+  type: 'blog' | 'page' | 'product' | 'service',
+  status: 'published' | 'draft' | 'scheduled',
+  publishDate: string,
+  views: number,
+  author: string,,
+};
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 export const ContentManagement: React.FC = () => {
 const [content, setContent] = useState<ContentItem[]>([
 {
@@ -55,6 +66,7 @@ const statusMatch = selectedStatus === 'all' || item.status === selectedStatus;
 return typeMatch && statusMatch;
 });
 
+<<<<<<< HEAD
 const getStatusColor: any = (status: string) => {
 switch (status) {;
 case 'published': return 'text-green-400 bg-green-900';
@@ -71,6 +83,26 @@ case 'product': return '🛍️';
 case 'service': return '⚙️';,
 default: return '📄';}
 };
+=======
+  const getStatusColor = (status: string) : any => {
+    switch (status) {
+      case 'published': return 'text-green-400 bg-green-900';
+      case 'draft': return 'text-yellow-400 bg-yellow-900';
+      case 'scheduled': return 'text-blue-400 bg-blue-900';
+      default: return 'text-gray-400 bg-gray-900',;
+  }
+  };
+
+  const getTypeIcon = (type: string) : any => {
+    switch (type) {
+      case 'blog': return '📝';
+      case 'page': return '📄';
+      case 'product': return '🛍️';
+      case 'service': return '⚙️';
+      default: return '📄',;
+  }
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <div className="p-6 bg-gray-900 min-h-screen">
@@ -174,6 +206,7 @@ View;
 </div>
 </div>
 
+<<<<<<< HEAD
 {/* Quick Stats */}
 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
 {[
@@ -199,6 +232,33 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center"
 </div>
 );
 };
+=======
+        {/* Quick Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+          {[
+            { label: 'Total Content', value: content.length, icon: '📄' },
+            { label: 'Published', value: content.filter(c => c.status === 'published').length, icon: '✅' },
+            { label: 'Drafts', value: content.filter(c => c.status === 'draft').length, icon: '📝' },
+            { label: 'Total Views', value: content.reduce((sum, c) => sum + c.views, 0).toLocaleString(), icon: '👁️' }
+          ].map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center"
+            >
+              <div className="text-3xl mb-2">{stat.icon}</div>
+              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-gray-400 text-sm">{stat.label}</div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
+  );
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 export default ContentManagement;
 <//div><///div>

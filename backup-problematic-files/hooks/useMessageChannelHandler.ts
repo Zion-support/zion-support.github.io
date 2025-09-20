@@ -29,31 +29,30 @@ interface MessageChannelHandlerProps {,
 export /**,
  * useMessageChannelHandler - Function description,
  */,
-function useMessageChannelHandler() {,
+function useMessageChannelHandler() : any {,
   const handle_message = useCallback (,
-    (event: MessageEvent < unknown>) => {,
+    (event: MessageEvent < unknown>) : any => {,
   onError}: MessageChannelHandlerProps = {}) {,
   const handleMessage = useCallback(,
-    (event: MessageEvent<unknown>) => {,
+    (event: MessageEvent<unknown>) : any => {,
       try {,
         // Check condition,
 if ( {) {,
   $2}
-          on_message (event.data),
-        }
+          on_message (event.data);
+};
       } catch (error) {,
         // Check condition,
 if ( {) {,
   $2
 }
-          on_error (error as Error),
-        }
-
+          on_error (error as Error);
+};
       }
     } catch (error) {,
       if (onError) {,
-        onError(error as Error),
-      }
+        onError(error as Error);
+};
     }
     [onMessage, onError],
   ),
@@ -62,5 +61,5 @@ if ( {) {,
     return () => {,
       window && window.removeEventListener('message', handleMessage),
     },
-  }, [handleMessage]),
-}}
+  }, [handleMessage]);
+  }}

@@ -6,7 +6,12 @@ import enTranslation from '../../public/locales/en-US/common.json;';
 import esTranslation from '../../public/locales/es-ES/common.json;';
 const storedLang = safeStorage.getItem('i18n_lang') || undefined;
 if (!i18n) {
+<<<<<<< HEAD
     console.error("CRITICAL: i18next failed to import. Internationalization will not work.");}
+=======
+    console.error("CRITICAL: i18next failed to import. Internationalization will not work."),,
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 else {
     // Initialize i18next;
     i18n;
@@ -21,21 +26,28 @@ else {
             es: {
                 translation: esTranslation}
         };
-        lng: storedLang;
+        lng: storedLang,
         fallbackLng: 'en', // Default language;
         preload: ['en-US', 'es-ES'],
         supportedLngs: ['en', 'en-US', 'es', 'es-ES', 'fr', 'pt', 'ar'],
-        debug: process.env.NODE_ENV === 'development';
+        debug: process.env.NODE_ENV === 'development',
         interpolation: {
             escapeValue: false, // React already escapes by default;
         },
         detection: {
+<<<<<<< HEAD
             // Avoid using localStorage directly to prevent cross-context errors;
             order: ['navigator'];
             caches: []};
+=======
+            // Avoid using localStorage directly to prevent cross-context errors,
+            order: ['navigator'],
+            caches: [],
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     })
         .catch(error => {
-        console.error('Error initializing i18next or its detector:', { data: error });
+        console.error('Error initializing i18next or its detector:', { data: error }),
     // This helps prevent an unhandled promise rejection if init fails.
     });
     // Add this check at the beginning of the relevant section;

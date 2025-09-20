@@ -13,5 +13,5 @@ export const handler = async () => {
       message: 'Sentry DSN is configured',
       dsn: dsn.substring(0, 20) + '...', // Show partial DSN for verification
     })
+  };
   },
-},

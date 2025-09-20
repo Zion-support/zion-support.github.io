@@ -16,9 +16,8 @@ function renderWithStore(cartItems: any[]) {
         <PrimaryNav />
       </Provider>
     </MemoryRouterProvider>
-  ),
-}
-
+  );
+};
 describe('Cart badge count', () => {
   it('shows updated count', () => {
     const items = [
@@ -37,5 +36,5 @@ describe('Cart badge count', () => {
     renderWithStore(items),
     await user.hover(screen.getByLabelText(/Cart/i)),
     expect(screen.getByText('Subtotal')).toBeInTheDocument(),
+  });
   }),
-}),

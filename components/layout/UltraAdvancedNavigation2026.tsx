@@ -13,7 +13,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -102,7 +102,7 @@ const companyLinks = [
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
   { name: 'Careers', href: '/careers', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -172,13 +172,13 @@ const UltraAdvancedNavigation2026 = () => {
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
     }
-  ];
+  ],
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
   return (
     <>
@@ -369,7 +369,7 @@ const UltraAdvancedNavigation2026 = () => {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1"
+                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
@@ -440,6 +440,6 @@ const UltraAdvancedNavigation2026 = () => {
       <div className="h-20"></div>
     </>
   );
-}
+  }
 
 export default UltraAdvancedNavigation2026;

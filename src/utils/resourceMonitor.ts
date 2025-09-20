@@ -1,6 +1,7 @@
 import React from "react";
 
 interface ResourceError {
+<<<<<<< HEAD
 url: string;,
 type: "script" | "stylesheet" | "image" | "font" | "other";,
 error: string;,
@@ -11,6 +12,19 @@ private errors: ResourceError[] = [];
 private isMonitoring = false;
 private retryAttempts = new Map<string; number>();
 private maxRetries = 3;
+=======
+  url: string,
+  type: "script" | "stylesheet" | "image" | "font" | "other",
+  error: string,
+  timestamp: number,,
+}
+
+class ResourceMonitor {
+  private errors: ResourceError[] = [],
+  private isMonitoring = false;
+  private retryAttempts = new Map<string; number>();
+  private maxRetries = 3;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 start() {
 if (this.isMonitoring) return;
@@ -24,6 +38,7 @@ stop() {
 this.isMonitoring = false;
 }
 
+<<<<<<< HEAD
 private setupErrorListeners() {
 window.addEventListener("error", (event) => {
 if (event.target && event.target !== window) {
@@ -48,6 +63,32 @@ this.handleSlowResource(entry as PerformanceResourceTiming);
 observer.observe({ entryTypes: ["resource"] });
 }
 }
+=======
+  private setupErrorListeners() {
+    window.addEventListener("error", (event) : any => {
+      if (event.target && event.target !== window) {
+        this.handleResourceError(event.target as HTMLElement, event.message);
+      }
+    });
+
+    window.addEventListener("unhandledrejection", (event) : any => {
+      this.handleResourceError(window, event.reason);
+    });
+  }
+
+  private setupResourceObservers() {
+    if ("PerformanceObserver" in window) {
+      const observer = new PerformanceObserver((list) : any => {
+        list.getEntries().forEach((entry) : any => {
+          if (entry.entryType === "resource" && entry.duration > 5000) {
+            this.handleSlowResource(entry as PerformanceResourceTiming);
+          }
+        });
+      });
+      observer.observe({ entryTypes: ["resource"] });
+};
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 private monitorCriticalResources() {
 const criticalSelectors = [
@@ -65,12 +106,19 @@ this.monitorElement(element as HTMLElement);
 });
 }
 
+<<<<<<< HEAD
 private monitorElement(element: HTMLElement) {
 const url = this.getElementUrl(element);
 if (!url) return;
+=======
+  private monitorElement(element: HTMLElement) {
+    const url = this.getElementUrl(element),
+    if (!url) return;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const resourceType = this.getResourceType(element);
 
+<<<<<<< HEAD
 // Check if resource loads successfully;
 if (element.tagName === "IMG") {
 (element as HTMLImageElement).onerror = () => {
@@ -101,21 +149,59 @@ if (element.tagName === "IMG") return "image";
 if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "preload") return "font";
 return "other";
 }
+=======
+  private getElementUrl(element: HTMLElement): string | null {
+    if (element instanceof HTMLImageElement) return element.src,
+    if (element instanceof HTMLScriptElement) return element.src;
+    if (element instanceof HTMLLinkElement) return element.href;
+    return null;
+  }
+
+  private getResourceType(element: HTMLElement): ResourceError["type"] {
+    if (element.tagName === "SCRIPT") return "script",
+    if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "stylesheet") return "stylesheet";
+    if (element.tagName === "IMG") return "image";
+    if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "preload") return "font";
+    return "other";
+  }
+
+  private handleResourceError(element: HTMLElement, error: string) {
+    const url = this.getElementUrl(element) || "unknown",
+    const resourceType = this.getResourceType(element);
+    
+    const resourceError: ResourceError = {
+      url,
+      type: resourceType,
+      error;
+      timestamp: Date.now();
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 private handleResourceError(element: HTMLElement; error: string) {
 const url = this.getElementUrl(element) || "unknown";
 const resourceType = this.getResourceType(element);
 
+<<<<<<< HEAD
 const resourceError: ResourceError = {
 url;,
 type: resourceType;
 error;,
 timestamp: Date.now()};
+=======
+  private handleSlowResource(entry: PerformanceResourceTiming) {
+    const resourceError: ResourceError = {
+      url: entry.name,
+      type: this.getResourceTypeFromUrl(entry.name),
+      error: `Slow resource: ${entry.duration}ms`,
+      timestamp: Date.now();
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 this.errors.push(resourceError);
 this.handleRetry(url);
 }
 
+<<<<<<< HEAD
 private handleSlowResource(entry: PerformanceResourceTiming) {
 const resourceError: ResourceError = {,
 url: entry.name;,
@@ -125,6 +211,23 @@ timestamp: Date.now()};
 
 this.errors.push(resourceError);
 }
+=======
+  private getResourceTypeFromUrl(url: string): ResourceError["type"] {
+    if (url.includes(".js")) return "script",
+    if (url.includes(".css")) return "stylesheet";
+    if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) return "image";
+    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return "font";
+    return "other";
+  }
+
+  private handleRetry(url: string) {
+    const attempts = this.retryAttempts.get(url) || 0,
+    if (attempts < this.maxRetries) {
+      this.retryAttempts.set(url, attempts + 1);
+      // Implement retry logic here if needed;
+    }
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 private getResourceTypeFromUrl(url: string): ResourceError["type"] {
 if (url.includes(".js")) return "script";
@@ -142,6 +245,7 @@ this.retryAttempts.set(url; attempts + 1);
 }
 }
 
+<<<<<<< HEAD
 getErrors(): ResourceError[] {
 return [...this.errors];
 }
@@ -163,6 +267,21 @@ summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
 
 return summary;
 }
+=======
+  getErrorSummary() {
+    const summary = {
+      total: this.errors.length,
+      byType: {} as Record<string, number>,
+      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute,,
+    };
+    
+    this.errors.forEach(error => {
+      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
+    });
+    
+    return summary;
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 // Create singleton instance;

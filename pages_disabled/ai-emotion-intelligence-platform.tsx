@@ -17,7 +17,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const features = [
   {
@@ -50,7 +50,7 @@ const features = [
     title: 'Real-time Alerts',
     description: 'Get instant notifications for negative emotions requiring immediate attention'
   }
-];
+],
 
 const useCases = [
   {
@@ -73,7 +73,7 @@ const useCases = [
     description: 'Monitor employee emotional states to support mental health and productivity',
     icon: Heart
   }
-];
+],
 
 const pricing = [
   {
@@ -127,9 +127,9 @@ const pricing = [
     popular: false,
     cta: 'Contact Sales'
   }
-];
+],
 
-export default function AIEmotionIntelligencePlatform() {
+export default function AIEmotionIntelligencePlatform() : any {
   return (
     <>
       <Head>
@@ -219,7 +219,7 @@ export default function AIEmotionIntelligencePlatform() {
                 <div className="text-gray-400 text-sm">Accuracy Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">&lt;100ms</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">&lt,100ms</div>
                 <div className="text-gray-400 text-sm">Response Time</div>
               </div>
               <div className="text-center">

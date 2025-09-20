@@ -1,44 +1,44 @@
 import { ServiceVariant } from '../types/service-variants';
 
 export interface ComprehensiveService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string,
   };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
 }
 
 const contact = {
@@ -46,7 +46,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
@@ -162,7 +162,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-resistant-cryptography',
-    marketPosition: 'Early mover in post-quantum cryptography; specialized security solution.',
+    marketPosition: 'Early mover in post-quantum cryptography, specialized security solution.',
     targetAudience: 'Financial institutions, government agencies, healthcare',
     trialDays: 30,
     setupTime: '1-2 weeks',
@@ -171,7 +171,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     technology: ['Post-Quantum Cryptography, QKD, Hybrid Systems'],
     integrations: ['PKI systems, Cloud platforms, IoT devices'],
     useCases: ['Data protection, Secure communications, Compliance'],
-    roi: 'Future-proof security investment; avoid costly migrations later.',
+    roi: 'Future-proof security investment, avoid costly migrations later.',
     competitors: ['ISARA, PQShield, Quantum Xchange'],
     marketSize: '$2B quantum security',
     growthRate: '45% YoY',
@@ -207,7 +207,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/autonomous-devops-orchestrator',
-    marketPosition: 'Next-generation DevOps automation; competes with traditional CI/CD tools.',
+    marketPosition: 'Next-generation DevOps automation, competes with traditional CI/CD tools.',
     targetAudience: 'DevOps teams, Platform engineers, SREs',
     trialDays: 21,
     setupTime: '3-5 days',
@@ -252,7 +252,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/edge-ai-inference-platform',
-    marketPosition: 'Specialized edge AI platform; complements cloud AI services.',
+    marketPosition: 'Specialized edge AI platform, complements cloud AI services.',
     targetAudience: 'IoT developers, Edge computing teams, AI engineers',
     trialDays: 14,
     setupTime: '2-3 days',
@@ -297,7 +297,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/blockchain-governance-automation',
-    marketPosition: 'Specialized blockchain governance; addresses regulatory compliance needs.',
+    marketPosition: 'Specialized blockchain governance, addresses regulatory compliance needs.',
     targetAudience: 'DeFi protocols, Enterprise blockchain, Regulatory teams',
     trialDays: 21,
     setupTime: '1 week',
@@ -342,7 +342,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-customer-success-platform',
-    marketPosition: 'AI-enhanced customer success; competes with Gainsight, Totango.',
+    marketPosition: 'AI-enhanced customer success, competes with Gainsight, Totango.',
     targetAudience: 'Customer success teams, Account managers, Growth teams',
     trialDays: 14,
     setupTime: '1 week',
@@ -387,7 +387,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
-    marketPosition: 'Cutting-edge quantum ML; specialized for complex computational problems.',
+    marketPosition: 'Cutting-edge quantum ML, specialized for complex computational problems.',
     targetAudience: 'Research institutions, Pharmaceutical companies, Financial services',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -396,7 +396,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     technology: ['Quantum Computing, Machine Learning, Optimization'],
     integrations: ['IBM Quantum, Google Quantum, AWS Braket'],
     useCases: ['Drug discovery, Financial modeling, Scientific research'],
-    roi: 'Solve previously intractable problems; accelerate research and development.',
+    roi: 'Solve previously intractable problems, accelerate research and development.',
     competitors: ['IBM Quantum, Google Quantum, Rigetti'],
     marketSize: '$3B quantum computing',
     growthRate: '55% YoY',
@@ -432,7 +432,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizer',
-    marketPosition: 'AI-powered supply chain; competes with SAP, Oracle, Blue Yonder.',
+    marketPosition: 'AI-powered supply chain, competes with SAP, Oracle, Blue Yonder.',
     targetAudience: 'Manufacturing, Retail, Logistics companies',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -477,7 +477,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/cybersecurity-threat-intelligence',
-    marketPosition: 'Comprehensive threat intelligence; competes with CrowdStrike, Palo Alto Networks.',
+    marketPosition: 'Comprehensive threat intelligence, competes with CrowdStrike, Palo Alto Networks.',
     targetAudience: 'Security teams, CISOs, IT security professionals',
     trialDays: 14,
     setupTime: '1 week',
@@ -522,7 +522,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-content-creation-suite',
-    marketPosition: 'AI-powered content creation; competes with Jasper, Copy.ai, Grammarly.',
+    marketPosition: 'AI-powered content creation, competes with Jasper, Copy.ai, Grammarly.',
     targetAudience: 'Marketing teams, Content creators, Small businesses',
     trialDays: 7,
     setupTime: '1 day',
@@ -567,7 +567,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/intelligent-data-governance',
-    marketPosition: 'AI-powered data governance; competes with Collibra, Alation, Informatica.',
+    marketPosition: 'AI-powered data governance, competes with Collibra, Alation, Informatica.',
     targetAudience: 'Data teams, Compliance officers, Data stewards',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -612,7 +612,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading-engine',
-    marketPosition: 'Cutting-edge quantum trading; specialized for institutional investors.',
+    marketPosition: 'Cutting-edge quantum trading, specialized for institutional investors.',
     targetAudience: 'Hedge funds, Investment banks, Institutional investors',
     trialDays: 45,
     setupTime: '1 month',
@@ -657,7 +657,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-hr-automation-suite',
-    marketPosition: 'AI-enhanced HR automation; competes with Workday, BambooHR, Greenhouse.',
+    marketPosition: 'AI-enhanced HR automation, competes with Workday, BambooHR, Greenhouse.',
     targetAudience: 'HR teams, Recruiters, People operations',
     trialDays: 14,
     setupTime: '1-2 weeks',
@@ -702,7 +702,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/intelligent-iot-platform',
-    marketPosition: 'AI-powered IoT platform; competes with AWS IoT, Azure IoT, Google Cloud IoT.',
+    marketPosition: 'AI-powered IoT platform, competes with AWS IoT, Azure IoT, Google Cloud IoT.',
     targetAudience: 'IoT developers, Manufacturing, Smart cities',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -747,7 +747,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-cybersecurity-platform',
-    marketPosition: 'Future-proof quantum security; specialized for high-security environments.',
+    marketPosition: 'Future-proof quantum security, specialized for high-security environments.',
     targetAudience: 'Government agencies, Financial institutions, Healthcare organizations',
     trialDays: 30,
     setupTime: '1 month',
@@ -756,7 +756,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     technology: ['Quantum Computing, Post-Quantum Cryptography, QKD'],
     integrations: ['PKI systems, Security tools, Cloud platforms'],
     useCases: ['Data protection, Secure communications, Compliance'],
-    roi: 'Future-proof security investment; avoid costly migrations later.',
+    roi: 'Future-proof security investment, avoid costly migrations later.',
     competitors: ['ISARA, PQShield, Quantum Xchange, ID Quantique'],
     marketSize: '$4B quantum security',
     growthRate: '52% YoY',
@@ -792,7 +792,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
-    marketPosition: 'AI-enhanced sales intelligence; competes with Salesforce Einstein, HubSpot, Pipedrive.',
+    marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.',
     targetAudience: 'Sales teams, Sales managers, Revenue operations',
     trialDays: 14,
     setupTime: '1 week',
@@ -814,4 +814,4 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 178
   }
-];
+],

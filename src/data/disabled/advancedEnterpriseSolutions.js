@@ -1,16 +1,16 @@
 export const ADVANCED_ENTERPRISE_SOLUTIONS = [
     // AI-Powered Enterprise Platforms;
     {
-        id: "ai-enterprise-operating-system";
-        title: "AI Enterprise Operating System";
+        id: "ai-enterprise-operating-system",
+        title: "AI Enterprise Operating System",
         description: "Next-generation enterprise OS that integrates AI, automation, and real-time analytics across all business operations.",
-        category: "AI Enterprise Platforms";
-        subcategory: "Operating Systems";
-        price: 25000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI Enterprise Platforms",
+        subcategory: "Operating Systems",
+        price: 25000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "AI-powered process automation";
+            "AI-powered process automation",
             "Real-time business intelligence",
             "Predictive analytics engine",
             "Automated decision making",
@@ -20,53 +20,66 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
             "24/7 monitoring"
         ],
         benefits: [
-            "Reduce operational costs by 40%";
+            "Reduce operational costs by 40%",
             "Increase productivity by 60%",
             "Real-time decision making",
             "Seamless system integration",
             "Future-proof technology"
         ],
         useCases: [
-            "Large enterprises";
+            "Large enterprises",
             "Multi-national corporations",
             "Government agencies",
             "Financial institutions",
             "Healthcare systems"
         ],
         targetAudience: [
-            "CIOs";
+            "CIOs",
             "CTOs",
             "Enterprise architects",
             "Operations directors",
             "Digital transformation leaders"
         ],
         tags: ["AI", "Enterprise OS", "Automation", "Analytics", "Integration"],
-        estimatedDelivery: "8-12 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "8-12 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$25,000 - $100,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
         technology: ["AI/ML", "Cloud Native", "Microservices", "Kubernetes", "TensorFlow"],
         integrations: ["SAP", "Oracle", "Salesforce", "Microsoft", "AWS"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"],
-        roi: "400% within 12 months";
+        roi: "400% within 12 months",
         competitors: ["Microsoft", "Oracle", "SAP", "IBM"],
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
         innovationLevel: "Breakthrough";
         marketTrend: "Rapidly Growing"};
+=======
+        innovationLevel: "Breakthrough",
+        marketTrend: "Rapidly Growing",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
     // Quantum Enterprise Solutions;
     {
-        id: "quantum-enterprise-computing";
-        title: "Quantum Enterprise Computing Platform";
+        id: "quantum-enterprise-computing",
+        title: "Quantum Enterprise Computing Platform",
         description: "Enterprise-grade quantum computing platform for complex problem-solving, optimization, and advanced simulations.",
-        category: "Quantum Enterprise";
-        subcategory: "Computing Platforms";
-        price: 50000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "Quantum Enterprise",
+        subcategory: "Computing Platforms",
+        price: 50000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Quantum algorithm optimization";
+            "Quantum algorithm optimization",
             "Hybrid quantum-classical computing",
             "Enterprise security protocols",
             "Real-time quantum simulations",
@@ -76,53 +89,66 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
             "Multi-tenant architecture"
         ],
         benefits: [
-            "Solve previously impossible problems";
+            "Solve previously impossible problems",
             "Exponential performance gains",
             "Competitive advantage",
             "Future-proof investment",
             "Research leadership"
         ],
         useCases: [
-            "Financial modeling";
+            "Financial modeling",
             "Drug discovery",
             "Logistics optimization",
             "Climate modeling",
             "Cryptography"
         ],
         targetAudience: [
-            "Research institutions";
+            "Research institutions",
             "Financial services",
             "Pharmaceutical companies",
             "Government agencies",
             "Technology leaders"
         ],
         tags: ["Quantum Computing", "Enterprise", "Optimization", "Simulation", "Research"],
-        estimatedDelivery: "12-16 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "12-16 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$50,000 - $200,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
         technology: ["Quantum Algorithms", "Qiskit", "Cirq", "Hybrid Systems"],
         integrations: ["AWS Braket", "Azure Quantum", "IBM Quantum", "Google Quantum"],
         compliance: ["NIST", "ISO", "Enterprise Security"],
-        roi: "500% within 18 months";
+        roi: "500% within 18 months",
         competitors: ["IBM", "Google", "Microsoft", "Amazon"],
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
         innovationLevel: "Revolutionary";
         marketTrend: "Emerging"};
+=======
+        innovationLevel: "Revolutionary",
+        marketTrend: "Emerging",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
     // Autonomous Business Intelligence;
     {
-        id: "autonomous-business-intelligence";
-        title: "Autonomous Business Intelligence Platform";
+        id: "autonomous-business-intelligence",
+        title: "Autonomous Business Intelligence Platform",
         description: "Self-learning BI platform that automatically discovers insights, generates reports, and provides actionable recommendations.",
-        category: "Autonomous BI";
-        subcategory: "Intelligence Platforms";
-        price: 15000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "Autonomous BI",
+        subcategory: "Intelligence Platforms",
+        price: 15000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Self-learning algorithms";
+            "Self-learning algorithms",
             "Automated insight generation",
             "Natural language queries",
             "Predictive modeling",
@@ -132,53 +158,66 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
             "Recommendation engine"
         ],
         benefits: [
-            "Zero manual analysis required";
+            "Zero manual analysis required",
             "Instant insights discovery",
             "Proactive recommendations",
             "Scalable intelligence",
             "Continuous learning"
         ],
         useCases: [
-            "Financial analysis";
+            "Financial analysis",
             "Sales forecasting",
             "Market research",
             "Operational optimization",
             "Risk assessment"
         ],
         targetAudience: [
-            "Business analysts";
+            "Business analysts",
             "Data scientists",
             "Executives",
             "Operations managers",
             "Strategy teams"
         ],
         tags: ["Autonomous", "BI", "AI", "Analytics", "Automation"],
-        estimatedDelivery: "6-8 weeks";
-        supportLevel: "premium";
+        estimatedDelivery: "6-8 weeks",
+        supportLevel: "premium",
         marketPrice: "$15,000 - $60,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
         technology: ["Machine Learning", "NLP", "Deep Learning", "AutoML"],
         integrations: ["Tableau", "Power BI", "Salesforce", "SAP", "Oracle"],
         compliance: ["GDPR", "SOC 2", "ISO 27001"],
-        roi: "350% within 8 months";
+        roi: "350% within 8 months",
         competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
         innovationLevel: "Advanced";
         marketTrend: "Growing"};
+=======
+        innovationLevel: "Advanced",
+        marketTrend: "Growing",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
     // Next-Gen Cybersecurity Platform;
     {
-        id: "next-gen-cybersecurity";
-        title: "Next-Generation Cybersecurity Platform";
+        id: "next-gen-cybersecurity",
+        title: "Next-Generation Cybersecurity Platform",
         description: "AI-powered cybersecurity platform with autonomous threat detection, response, and prevention capabilities.",
-        category: "Cybersecurity";
-        subcategory: "AI-Powered Security";
-        price: 20000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "Cybersecurity",
+        subcategory: "AI-Powered Security",
+        price: 20000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "AI threat detection";
+            "AI threat detection",
             "Autonomous response",
             "Zero-day protection",
             "Behavioral analysis",
@@ -188,53 +227,66 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
             "Security orchestration"
         ],
         benefits: [
-            "99.9% threat detection rate";
+            "99.9% threat detection rate",
             "Zero false positives",
             "Automated incident response",
             "24/7 protection",
             "Compliance automation"
         ],
         useCases: [
-            "Enterprise security";
+            "Enterprise security",
             "Government agencies",
             "Financial services",
             "Healthcare",
             "Critical infrastructure"
         ],
         targetAudience: [
-            "CISOs";
+            "CISOs",
             "Security teams",
             "IT managers",
             "Compliance officers",
             "Risk managers"
         ],
         tags: ["Cybersecurity", "AI", "Threat Detection", "Automation", "Compliance"],
-        estimatedDelivery: "8-10 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "8-10 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$20,000 - $80,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
         technology: ["AI/ML", "Behavioral Analytics", "Threat Intelligence", "SOAR"],
         integrations: ["SIEM", "EDR", "Firewall", "Identity Management"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-        roi: "450% within 10 months";
+        roi: "450% within 10 months",
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto", "Cisco"],
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
         innovationLevel: "Advanced";
         marketTrend: "High Growth"};
+=======
+        innovationLevel: "Advanced",
+        marketTrend: "High Growth",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
     // Digital Twin Enterprise Platform;
     {
-        id: "digital-twin-enterprise";
-        title: "Digital Twin Enterprise Platform";
+        id: "digital-twin-enterprise",
+        title: "Digital Twin Enterprise Platform",
         description: "Comprehensive digital twin platform for simulating, monitoring, and optimizing enterprise operations in real-time.",
-        category: "Digital Twins";
-        subcategory: "Enterprise Platforms";
-        price: 30000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "Digital Twins",
+        subcategory: "Enterprise Platforms",
+        price: 30000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Real-time simulation";
+            "Real-time simulation",
             "Predictive modeling",
             "IoT integration",
             "3D visualization",
@@ -244,39 +296,52 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
             "API ecosystem"
         ],
         benefits: [
-            "Reduce operational risks";
+            "Reduce operational risks",
             "Optimize performance",
             "Predict maintenance needs",
             "Improve decision making",
             "Cost savings"
         ],
         useCases: [
-            "Manufacturing";
+            "Manufacturing",
             "Smart cities",
             "Energy management",
             "Transportation",
             "Healthcare"
         ],
         targetAudience: [
-            "Operations managers";
+            "Operations managers",
             "Engineering teams",
             "Facility managers",
             "Urban planners",
             "Healthcare administrators"
         ],
         tags: ["Digital Twin", "IoT", "Simulation", "Optimization", "Real-time"],
-        estimatedDelivery: "10-14 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "10-14 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$30,000 - $120,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
         technology: ["IoT", "3D Modeling", "Real-time Analytics", "AI/ML"],
         integrations: ["Siemens", "GE", "SAP", "Azure", "AWS"],
         compliance: ["ISO 27001", "Industry Standards"],
-        roi: "380% within 12 months";
+        roi: "380% within 12 months",
         competitors: ["Siemens", "GE", "PTC", "Dassault"],
+<<<<<<< HEAD:src/data/disabled/advancedEnterpriseSolutions.js
         innovationLevel: "Advanced";
         marketTrend: "Emerging"}
+=======
+        innovationLevel: "Advanced",
+        marketTrend: "Emerging",
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedEnterpriseSolutions.js
 ];

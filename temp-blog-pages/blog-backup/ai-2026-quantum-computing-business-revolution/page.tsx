@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Discover how quantum computing is revolutionizing business operations in 2026. Learn about quantum algorithms, optimization, and real-world applications transforming industries.',
   keywords: ['quantum computingbusiness revolutionquantum algorithmsoptimization', 'AI 2026']
 }
-export default function QuantumComputingBusinessRevolution() {
+export default function QuantumComputingBusinessRevolution() : any {
   return (
     <div>
       <SEO
@@ -265,4 +265,4 @@ export default function QuantumComputingBusinessRevolution() {
           </div>
         </section>
       </div>
-    </div>)}
+    </div>)}'

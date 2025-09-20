@@ -7,8 +7,13 @@ import { Toaster as Sonner } from "sonner";
 
 type ToasterProps = React.ComponentProps<typeof Sonner>
 
+<<<<<<< HEAD
 const Toaster: any = ({ ...props }: ToasterProps) => {;
 const { theme = "system" } = useTheme();
+=======
+const Toaster = ({ ...props }: ToasterProps) : any => {
+  const { theme = "system" } = useTheme();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <Sonner;

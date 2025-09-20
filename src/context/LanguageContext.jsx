@@ -7,6 +7,7 @@ export function LanguageProvider({ children }) {;
 
   const translations = {
     en: {
+<<<<<<< HEAD
       welcome: 'Welcome';
       get_started: 'Get Started';
       learn_more: 'Learn More';
@@ -16,6 +17,20 @@ export function LanguageProvider({ children }) {;
       get_started: 'Comenzar';
       learn_more: 'Saber Más';
       contact_us: 'Contáctanos';}};
+=======
+      welcome: 'Welcome',
+      get_started: 'Get Started',
+      learn_more: 'Learn More',
+      contact_us: 'Contact Us',,
+    },
+    es: {
+      welcome: 'Bienvenido',
+      get_started: 'Comenzar',
+      learn_more: 'Saber Más',
+      contact_us: 'Contáctanos',,
+    },
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
   const t = (key) => translations[language]?.[key] || key;
   const isRTL = language === 'ar' || language === 'he';

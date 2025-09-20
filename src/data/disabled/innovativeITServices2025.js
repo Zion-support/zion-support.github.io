@@ -1,14 +1,14 @@
 // Innovative IT Services for 2025;
 export const innovativeITServices2025 = [
     {
-        id: 1;
-        name: "Zero-Trust Network Architecture";
-        category: "Cybersecurity";
+        id: 1,
+        name: "Zero-Trust Network Architecture",
+        category: "Cybersecurity",
         description: "Implementation of zero-trust security architecture with continuous verification, micro-segmentation, and adaptive access controls",
-        hourlyRate: 150;
-        projectRate: 25000;
+        hourlyRate: 150,
+        projectRate: 25000,
         features: [
-            "Identity verification";
+            "Identity verification",
             "Micro-segmentation",
             "Continuous monitoring",
             "Adaptive access controls",
@@ -18,7 +18,7 @@ export const innovativeITServices2025 = [
             "Incident response"
         ],
         benefits: [
-            "Enhanced security posture";
+            "Enhanced security posture",
             "Reduced attack surface",
             "Compliance automation",
             "Cost savings",
@@ -28,6 +28,7 @@ export const innovativeITServices2025 = [
         targetAudience: ["Enterprises", "Financial institutions", "Healthcare", "Government"],
         tags: ["Zero-Trust", "Cybersecurity", "Network Security", "Compliance", "Identity Management"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeITServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/zero-trust-architecture";
@@ -38,15 +39,29 @@ export const innovativeITServices2025 = [
         certifications: ["CISSP", "CISM", "CCSP", "SANS"],
         deliveryTime: "4-6 weeks";
         support: "24/7 premium support"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/zero-trust-architecture",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$150-250/hour",
+        responseTime: "2 hours",
+        sla: "99.9% uptime",
+        certifications: ["CISSP", "CISM", "CCSP", "SANS"],
+        deliveryTime: "4-6 weeks",
+        support: "24/7 premium support",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeITServices2025.js
     {
-        id: 2;
-        name: "Quantum-Ready Infrastructure";
-        category: "Infrastructure";
-        description: "Design and implementation of quantum-ready IT infrastructure prepared for post-quantum cryptography and quantum computing integration";
-        hourlyRate: 200;
-        projectRate: 50000;
+        id: 2,
+        name: "Quantum-Ready Infrastructure",
+        category: "Infrastructure",
+        description: "Design and implementation of quantum-ready IT infrastructure prepared for post-quantum cryptography and quantum computing integration",
+        hourlyRate: 200,
+        projectRate: 50000,
         features: [
-            "Post-quantum cryptography";
+            "Post-quantum cryptography",
             "Quantum-resistant algorithms",
             "Hybrid encryption systems",
             "Future-proof architecture",
@@ -56,7 +71,7 @@ export const innovativeITServices2025 = [
             "Training and documentation"
         ],
         benefits: [
-            "Future-proof security";
+            "Future-proof security",
             "Competitive advantage",
             "Regulatory compliance",
             "Long-term cost savings",
@@ -66,6 +81,7 @@ export const innovativeITServices2025 = [
         targetAudience: ["Technology companies", "Research institutions", "Government agencies", "Financial services"],
         tags: ["Quantum Computing", "Infrastructure", "Cryptography", "Future-Proof", "Security"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeITServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/quantum-ready-infrastructure";
@@ -76,15 +92,29 @@ export const innovativeITServices2025 = [
         certifications: ["Quantum Computing", "Cryptography", "Infrastructure", "Security"],
         deliveryTime: "8-12 weeks";
         support: "24/7 enterprise support"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/quantum-ready-infrastructure",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$200-300/hour",
+        responseTime: "4 hours",
+        sla: "99.95% uptime",
+        certifications: ["Quantum Computing", "Cryptography", "Infrastructure", "Security"],
+        deliveryTime: "8-12 weeks",
+        support: "24/7 enterprise support",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeITServices2025.js
     {
-        id: 3;
-        name: "AI-Powered DevOps Automation";
-        category: "DevOps";
+        id: 3,
+        name: "AI-Powered DevOps Automation",
+        category: "DevOps",
         description: "Intelligent DevOps automation platform with AI-driven deployment, monitoring, and optimization capabilities",
-        hourlyRate: 125;
-        projectRate: 30000;
+        hourlyRate: 125,
+        projectRate: 30000,
         features: [
-            "AI deployment optimization";
+            "AI deployment optimization",
             "Intelligent monitoring",
             "Automated testing",
             "Performance optimization",
@@ -94,7 +124,7 @@ export const innovativeITServices2025 = [
             "Self-healing systems"
         ],
         benefits: [
-            "Faster deployments";
+            "Faster deployments",
             "Reduced errors",
             "Cost optimization",
             "Improved reliability",
@@ -104,6 +134,7 @@ export const innovativeITServices2025 = [
         targetAudience: ["Development teams", "DevOps engineers", "Startups", "Enterprises"],
         tags: ["DevOps", "AI", "Automation", "CI/CD", "Monitoring"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeITServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-devops-automation";
@@ -114,15 +145,29 @@ export const innovativeITServices2025 = [
         certifications: ["AWS", "Azure", "GCP", "DevOps", "Kubernetes"],
         deliveryTime: "3-4 weeks";
         support: "Business hours + emergency support"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-devops-automation",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$125-175/hour",
+        responseTime: "4 hours",
+        sla: "99.9% uptime",
+        certifications: ["AWS", "Azure", "GCP", "DevOps", "Kubernetes"],
+        deliveryTime: "3-4 weeks",
+        support: "Business hours + emergency support",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeITServices2025.js
     {
-        id: 4;
-        name: "Edge Computing Infrastructure";
-        category: "Infrastructure";
-        description: "Design and deployment of edge computing infrastructure for low-latency applications and IoT deployments";
-        hourlyRate: 140;
-        projectRate: 35000;
+        id: 4,
+        name: "Edge Computing Infrastructure",
+        category: "Infrastructure",
+        description: "Design and deployment of edge computing infrastructure for low-latency applications and IoT deployments",
+        hourlyRate: 140,
+        projectRate: 35000,
         features: [
-            "Edge node deployment";
+            "Edge node deployment",
             "Latency optimization",
             "IoT integration",
             "Data processing",
@@ -132,7 +177,7 @@ export const innovativeITServices2025 = [
             "Maintenance automation"
         ],
         benefits: [
-            "Reduced latency";
+            "Reduced latency",
             "Better performance",
             "Cost optimization",
             "Scalability",
@@ -142,6 +187,7 @@ export const innovativeITServices2025 = [
         targetAudience: ["Manufacturing", "Healthcare", "Smart cities", "Retail"],
         tags: ["Edge Computing", "IoT", "Infrastructure", "Low Latency", "Performance"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeITServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/edge-computing-infrastructure";
@@ -152,15 +198,29 @@ export const innovativeITServices2025 = [
         certifications: ["Edge Computing", "IoT", "Infrastructure", "Networking"],
         deliveryTime: "6-8 weeks";
         support: "Business hours + emergency support"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/edge-computing-infrastructure",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$140-200/hour",
+        responseTime: "6 hours",
+        sla: "99.9% uptime",
+        certifications: ["Edge Computing", "IoT", "Infrastructure", "Networking"],
+        deliveryTime: "6-8 weeks",
+        support: "Business hours + emergency support",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeITServices2025.js
     {
-        id: 5;
-        name: "Blockchain Infrastructure Services";
-        category: "Blockchain";
+        id: 5,
+        name: "Blockchain Infrastructure Services",
+        category: "Blockchain",
         description: "Enterprise blockchain infrastructure design, deployment, and management for secure decentralized applications",
-        hourlyRate: 175;
-        projectRate: 45000;
+        hourlyRate: 175,
+        projectRate: 45000,
         features: [
-            "Blockchain architecture design";
+            "Blockchain architecture design",
             "Smart contract development",
             "Node deployment",
             "Security implementation",
@@ -170,7 +230,7 @@ export const innovativeITServices2025 = [
             "Integration services"
         ],
         benefits: [
-            "Enhanced security";
+            "Enhanced security",
             "Transparency",
             "Cost reduction",
             "Automation",
@@ -180,6 +240,7 @@ export const innovativeITServices2025 = [
         targetAudience: ["Financial institutions", "Healthcare", "Supply chain", "Government"],
         tags: ["Blockchain", "Smart Contracts", "Decentralized", "Security", "Innovation"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeITServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/blockchain-infrastructure";
@@ -190,15 +251,29 @@ export const innovativeITServices2025 = [
         certifications: ["Blockchain", "Ethereum", "Hyperledger", "Security"],
         deliveryTime: "8-10 weeks";
         support: "24/7 premium support"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/blockchain-infrastructure",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$175-250/hour",
+        responseTime: "8 hours",
+        sla: "99.9% uptime",
+        certifications: ["Blockchain", "Ethereum", "Hyperledger", "Security"],
+        deliveryTime: "8-10 weeks",
+        support: "24/7 premium support",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeITServices2025.js
     {
-        id: 6;
-        name: "Green IT Infrastructure";
-        category: "Sustainability";
-        description: "Energy-efficient IT infrastructure design and implementation with carbon footprint reduction and sustainability optimization";
-        hourlyRate: 130;
-        projectRate: 32000;
+        id: 6,
+        name: "Green IT Infrastructure",
+        category: "Sustainability",
+        description: "Energy-efficient IT infrastructure design and implementation with carbon footprint reduction and sustainability optimization",
+        hourlyRate: 130,
+        projectRate: 32000,
         features: [
-            "Energy-efficient design";
+            "Energy-efficient design",
             "Carbon footprint analysis",
             "Renewable energy integration",
             "Cooling optimization",
@@ -208,7 +283,7 @@ export const innovativeITServices2025 = [
             "Compliance monitoring"
         ],
         benefits: [
-            "Cost savings";
+            "Cost savings",
             "Environmental impact",
             "Regulatory compliance",
             "Brand reputation",
@@ -218,6 +293,7 @@ export const innovativeITServices2025 = [
         targetAudience: ["Corporations", "Data centers", "Manufacturing", "Government"],
         tags: ["Green IT", "Sustainability", "Energy Efficiency", "Carbon Reduction", "Compliance"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeITServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/green-it-infrastructure";
@@ -228,15 +304,29 @@ export const innovativeITServices2025 = [
         certifications: ["LEED", "Energy Star", "Sustainability", "Green Building"],
         deliveryTime: "6-8 weeks";
         support: "Business hours + emergency support"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/green-it-infrastructure",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$130-180/hour",
+        responseTime: "6 hours",
+        sla: "99.9% uptime",
+        certifications: ["LEED", "Energy Star", "Sustainability", "Green Building"],
+        deliveryTime: "6-8 weeks",
+        support: "Business hours + emergency support",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeITServices2025.js
     {
-        id: 7;
-        name: "AI Infrastructure Optimization";
-        category: "AI Infrastructure";
+        id: 7,
+        name: "AI Infrastructure Optimization",
+        category: "AI Infrastructure",
         description: "Specialized infrastructure optimization for AI workloads, including GPU clusters, distributed training, and inference optimization",
-        hourlyRate: 180;
-        projectRate: 55000;
+        hourlyRate: 180,
+        projectRate: 55000,
         features: [
-            "GPU cluster design";
+            "GPU cluster design",
             "Distributed training setup",
             "Inference optimization",
             "Model deployment",
@@ -246,7 +336,7 @@ export const innovativeITServices2025 = [
             "Monitoring and alerting"
         ],
         benefits: [
-            "Faster AI training";
+            "Faster AI training",
             "Cost optimization",
             "Better performance",
             "Scalability",
@@ -256,6 +346,7 @@ export const innovativeITServices2025 = [
         targetAudience: ["AI companies", "Research institutions", "Enterprises", "Startups"],
         tags: ["AI Infrastructure", "GPU Clusters", "Machine Learning", "Performance", "Optimization"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeITServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-infrastructure-optimization";
@@ -266,15 +357,29 @@ export const innovativeITServices2025 = [
         certifications: ["AI/ML", "GPU Computing", "Distributed Systems", "Performance"],
         deliveryTime: "8-12 weeks";
         support: "24/7 premium support"};
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/ai-infrastructure-optimization",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$180-250/hour",
+        responseTime: "4 hours",
+        sla: "99.95% uptime",
+        certifications: ["AI/ML", "GPU Computing", "Distributed Systems", "Performance"],
+        deliveryTime: "8-12 weeks",
+        support: "24/7 premium support",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeITServices2025.js
     {
-        id: 8;
-        name: "Hybrid Cloud Architecture";
-        category: "Cloud";
-        description: "Design and implementation of hybrid cloud architectures with seamless integration between on-premises and cloud environments";
-        hourlyRate: 145;
-        projectRate: 38000;
+        id: 8,
+        name: "Hybrid Cloud Architecture",
+        category: "Cloud",
+        description: "Design and implementation of hybrid cloud architectures with seamless integration between on-premises and cloud environments",
+        hourlyRate: 145,
+        projectRate: 38000,
         features: [
-            "Hybrid architecture design";
+            "Hybrid architecture design",
             "Cloud migration strategy",
             "Integration services",
             "Security implementation",
@@ -284,7 +389,7 @@ export const innovativeITServices2025 = [
             "Compliance monitoring"
         ],
         benefits: [
-            "Flexibility";
+            "Flexibility",
             "Cost optimization",
             "Security control",
             "Scalability",
@@ -294,6 +399,7 @@ export const innovativeITServices2025 = [
         targetAudience: ["Enterprises", "Financial services", "Healthcare", "Government"],
         tags: ["Hybrid Cloud", "Cloud Migration", "Integration", "Security", "Compliance"],
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeITServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/hybrid-cloud-architecture";
@@ -304,4 +410,18 @@ export const innovativeITServices2025 = [
         certifications: ["AWS", "Azure", "GCP", "Cloud Architecture", "Security"],
         deliveryTime: "6-10 weeks";
         support: "Business hours + emergency support"}
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com/hybrid-cloud-architecture",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        };
+        marketPrice: "$145-200/hour",
+        responseTime: "6 hours",
+        sla: "99.9% uptime",
+        certifications: ["AWS", "Azure", "GCP", "Cloud Architecture", "Security"],
+        deliveryTime: "6-10 weeks",
+        support: "Business hours + emergency support",
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeITServices2025.js
 ];

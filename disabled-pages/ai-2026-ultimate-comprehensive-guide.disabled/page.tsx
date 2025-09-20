@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function AI2026UltimateGuide() {
+export default function AI2026UltimateGuide() : any {
   return (
     <div>
       <h1>AI 2026 Ultimate Comprehensive Guide</h1>

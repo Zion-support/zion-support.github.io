@@ -3,18 +3,18 @@
  */
 
 export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  totalBlockingTime: number;
-  speedIndex: number;
+  loadTime: number,
+  firstContentfulPaint: number,
+  largestContentfulPaint: number,
+  firstInputDelay: number,
+  cumulativeLayoutShift: number,
+  totalBlockingTime: number,
+  speedIndex: number,
 }
 
 export class PerformanceMonitor {
-  private metrics: Partial<PerformanceMetrics> = {};
-  private observers: PerformanceObserver[] = [];
+  private metrics: Partial<PerformanceMetrics> = {},
+  private observers: PerformanceObserver[] = [],
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -26,7 +26,7 @@ export class PerformanceMonitor {
     // Core Web Vitals observer
     if ('PerformanceObserver' in window) {
       try {
-        const observer = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver((list) : any => {
           for (const entry of list.getEntries()) {
             this.handlePerformanceEntry(entry);
           }
@@ -44,7 +44,7 @@ export class PerformanceMonitor {
     switch (entry.entryType) {
       case 'paint':
         if (entry.name === 'first-contentful-paint') {
-          this.metrics.firstContentfulPaint = entry.startTime;
+          this.metrics.firstContentfulPaint = entry.startTime,
         }
         break;
       case 'largest-contentful-paint':
@@ -124,8 +124,8 @@ export const performanceOptimizations = {
   optimizeImageLoading: () => {
     if (typeof window !== 'undefined') {
       // Lazy load images
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
+      const images = document.querySelectorAll('img[data-src]'),
+      const imageObserver = new IntersectionObserver((entries) : any => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
@@ -141,24 +141,24 @@ export const performanceOptimizations = {
   },
 
   // Resource hints
-  generateResourceHints: (urls: string[]) => {
+  generateResourceHints: (urls: string[]) : any => {
     return urls.map(url => `<link rel="preconnect" href="${url}" crossorigin />`).join('\n');
   },
 
   // Critical CSS injection
-  injectCriticalCSS: (css: string) => {
+  injectCriticalCSS: (css: string) : any => {
     if (typeof document !== 'undefined') {
-      const style = document.createElement('style');
+      const style = document.createElement('style'),
       style.textContent = css;
       document.head.appendChild(style);
     }
   },
 
   // Service Worker registration
-  registerServiceWorker: async (swPath: string) => {
+  registerServiceWorker: async (swPath: string) : any => {
     if ('serviceWorker' in navigator) {
       try {
-        const registration = await navigator.serviceWorker.register(swPath);
+        const registration = await navigator.serviceWorker.register(swPath),
         console.log('Service Worker registered successfully:', registration);
         return registration;
       } catch (error) {
@@ -172,13 +172,13 @@ export const performanceOptimizations = {
     // Dynamic imports for code splitting
     return {
       loadComponent: (componentPath: string) => import(componentPath),
-      loadPage: (pagePath: string) => import(pagePath),
-    };
+      loadPage: (pagePath: string) => import(pagePath);
+  };
   },
 };
 
-export const generatePerformanceReport = (metrics: Partial<PerformanceMetrics>) => {
-  const score = new PerformanceMonitor().getPerformanceScore();
+export const generatePerformanceReport = (metrics: Partial<PerformanceMetrics>) : any => {
+  const score = new PerformanceMonitor().getPerformanceScore(),
   
   return {
     timestamp: new Date().toISOString(),
@@ -190,12 +190,12 @@ export const generatePerformanceReport = (metrics: Partial<PerformanceMetrics>) 
       firstInputDelay: metrics.firstInputDelay,
       cumulativeLayoutShift: metrics.cumulativeLayoutShift,
     },
-    recommendations: generatePerformanceRecommendations(metrics),
+    recommendations: generatePerformanceRecommendations(metrics);
   };
 };
 
-export const generatePerformanceRecommendations = (metrics: Partial<PerformanceMetrics>): string[] => {
-  const recommendations: string[] = [];
+export const generatePerformanceRecommendations = (metrics: Partial<PerformanceMetrics>): string[] : any => {
+  const recommendations: string[] = [],
 
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 1800) {
     recommendations.push('Optimize critical rendering path and reduce server response time');

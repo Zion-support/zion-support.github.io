@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   title?: string;
   description?: string;
 }
@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({
   children, 
   title = 'Zion Tech Solutions',
   description = 'Leading technology solutions for modern businesses'
-}) => {
+}) : any => {
   return (
     <>
       <Head>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Latest quantum computing breakthroughs and business applications',
     type: 'website'}
 }
-export default function QuantumComputingBreakthroughs() {
+export default function QuantumComputingBreakthroughs() : any {
   return (
     <div>
       <div>
@@ -279,4 +279,4 @@ export default function QuantumComputingBreakthroughs() {
           </div>
         </div>
       </div>
-    </div>)}
+    </div>)}'

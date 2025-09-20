@@ -12,8 +12,8 @@ export function ReferralMiddleware("props": "any) {,
     const params = new URLSearchParams(window.location.search),
     const code = params.get('ref'),
     if(code) {,
-      localStorage.setItem('referralCode', code),
-    }
+      localStorage.setItem('referralCode', code);
+};
   }, []),
 ,
   useEffect(() => {,
@@ -29,10 +29,10 @@ export function ReferralMiddleware("props": "any) {,
     ),
         localStorage.removeItem('referralCode'),
       } catch(err) {,
-        console.error('Error tracking referral', err),
-      }
+        console.error('Error tracking referral', err);
+};
     }
     sendReferral(),
   }, [user?.id, user?.email]), // Added user?.email,
-  return <>{children}</>,
-}
+  return <>{children}</>;
+  }"

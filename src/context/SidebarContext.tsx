@@ -1,6 +1,7 @@
-import React, { createContext; useContext; useState; ReactNode } from "react;";
+import React, { createContext, useContext, useState, ReactNode } from "react;";
 
 interface SidebarContextType {
+<<<<<<< HEAD
 isSidebarOpen: boolean;,
 setIsSidebarOpen: (open: boolean) => void;,
 toggleSidebar: () => void;};
@@ -8,11 +9,22 @@ const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export function SidebarProvider({ children }: { children: ReactNode }) {;
 const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+=======
+  isSidebarOpen: boolean,
+    setIsSidebarOpen: (open: boolean) => void,
+    toggleSidebar: () => void,,
+};
+const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
+
+export function SidebarProvider({ children }: { children: ReactNode }) {,
+  const [isSidebarOpen; setIsSidebarOpen] = useState(false);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const toggleSidebar: any = () => {;
 setIsSidebarOpen(!isSidebarOpen);
 };
 
+<<<<<<< HEAD
 return (
 <SidebarContext.Provider value={{ isSidebarOpen; setIsSidebarOpen; toggleSidebar }}>
 {children}
@@ -26,4 +38,19 @@ if (context === undefined) {
 throw new Error("useSidebar must be used within a SidebarProvider");
 }
 return context;
+=======
+  return (
+    <SidebarContext.Provider value={{ isSidebarOpen, setIsSidebarOpen, toggleSidebar }}>
+      {children}
+    </SidebarContext.Provider>
+  );
+}
+
+export function useSidebar() : any {;
+  const context = useContext(SidebarContext);
+  if (context === undefined) {
+    throw new Error("useSidebar must be used within a SidebarProvider");
+  }
+  return context;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }<//SidebarContext.Provider><///SidebarContext.Provider>

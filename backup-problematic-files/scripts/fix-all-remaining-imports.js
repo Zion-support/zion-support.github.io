@@ -204,7 +204,7 @@ function processFile(filePath) {,
   const excludeDirs = ['node_modules.nextbuilddist',
     'scriptsautomationautomation_backupsrc && src.disabled',
     'pages && pages.disabledcomponents && components.disabled'
-  ],
+  ];
   }
   console && console.log("\n📊 Comprehensive Missing Imports Fix "Summary": "),
   console && console.log(`   Files processed: ${filesProcessed}`),

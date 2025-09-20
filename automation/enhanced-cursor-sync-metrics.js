@@ -11,13 +11,13 @@ class EnhancedCursorSyncMetrics {,
     this.metricsDir = path.join(__dirname, 'metrics'),
     this.logFile = path.join(__dirname, 'logsenhanced-cursor-sync-cron.log'),
     this.metricsFile = path.join(this.metricsDir, 'enhanced-sync-metrics.json'),
-    this.ensureMetricsDirectory(),
-  }
+    this.ensureMetricsDirectory();
+};
 ,
   ensureMetricsDirectory() {,
     if (!fs.existsSync(this.metricsDir)) {,
-      fs.mkdirSync(this.metricsDir, { recursive: true }),
-    }
+      fs.mkdirSync(this.metricsDir, { recursive: true });
+};
   }
 ,
   loadMetrics() {,
@@ -25,8 +25,8 @@ class EnhancedCursorSyncMetrics {,
       try {,
         return JSON.parse(fs.readFileSync(this.metricsFile, 'utf8')),
       } catch (error) {,
-        console.error('Error loading metrics:', error.message),
-      }
+        console.error('Error loading metrics:', error.message);
+};
     }
     return {,
       totalSyncs: 0,
@@ -50,8 +50,8 @@ class EnhancedCursorSyncMetrics {,
     try {,
       fs.writeFileSync(this.metricsFile, JSON.stringify(metrics, null, 2)),
     } catch (error) {,
-      console.error('Error saving metrics:', error.message),
-    }
+      console.error('Error saving metrics:', error.message);
+};
   }
 ,
   analyzeLogFile() {,
@@ -78,14 +78,14 @@ class EnhancedCursorSyncMetrics {,
           // Extract duration,
           const durationMatch = line.match(/(\d+)ms/),
           if (durationMatch) {,
-            durations.push(parseInt(durationMatch[1])),
-          }
+            durations.push(parseInt(durationMatch[1]));
+};
 ,
           // Extract file count,
           const fileMatch = line.match(/(\d+) files to sync/),
           if (fileMatch) {,
-            fileCounts.push(parseInt(fileMatch[1])),
-          }
+            fileCounts.push(parseInt(fileMatch[1]));
+};
         } else if (line.includes('ERROR') || line.includes('FAILED')) {,
           errors++,
         }
@@ -170,8 +170,8 @@ class EnhancedCursorSyncMetrics {,
     this.saveMetrics(metrics),
     console.log(`📊 Enhanced metrics updated: ${logAnalysis.syncs} syncs, ${logAnalysis.errors} errors`),
     console.log(`📈 Success rate: ${metrics.successRate}%`),
-    console.log(`⏱️ Average duration: ${metrics.averageDuration.toFixed(2)}ms`),
-  }
+    console.log(`⏱️ Average duration: ${metrics.averageDuration.toFixed(2)}ms`);
+};
 ,
   generateReport() {,
     const metrics = this.loadMetrics(),
@@ -195,30 +195,30 @@ class EnhancedCursorSyncMetrics {,
       recommendations: this.generateRecommendations(metrics)},
     const reportFile = path.join(this.metricsDir, `enhanced-sync-report-${new Date().toISOString().split('T')[0]}.json`),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
-    console.log(`📄 Enhanced report generated: ${reportFile}`),
-  }
+    console.log(`📄 Enhanced report generated: ${reportFile}`);
+};
 ,
   generateRecommendations(metrics) {,
     const recommendations = [],
     if (metrics.successRate < 90) {,
-      recommendations.push('Consider increasing retry attempts or adjusting sync interval'),
-    }
+      recommendations.push('Consider increasing retry attempts or adjusting sync interval');
+};
 ,
     if (metrics.failedSyncs > metrics.successfulSyncs * 0.1) {,
-      recommendations.push('High failure rate detected - check network connectivity and git configuration'),
-    }
+      recommendations.push('High failure rate detected - check network connectivity and git configuration');
+};
 ,
     if (!metrics.lastSync) {,
-      recommendations.push('No recent syncs detected - check if automation is running'),
-    }
+      recommendations.push('No recent syncs detected - check if automation is running');
+};
 ,
     if (metrics.averageDuration > 30000) {,
-      recommendations.push('Sync duration is high - consider optimizing file filtering or reducing sync frequency'),
-    }
+      recommendations.push('Sync duration is high - consider optimizing file filtering or reducing sync frequency');
+};
 ,
     if (metrics.performanceStats.averageFilesPerSync > 50) {,
-      recommendations.push('Large number of files per sync - consider more frequent smaller commits'),
-    }
+      recommendations.push('Large number of files per sync - consider more frequent smaller commits');
+};
 ,
     return recommendations,
   }
@@ -241,8 +241,8 @@ class EnhancedCursorSyncMetrics {,
     },
     const dashboardFile = path.join(this.metricsDir, 'enhanced-sync-dashboard.json'),
     fs.writeFileSync(dashboardFile, JSON.stringify(dashboard, null, 2)),
-    console.log(`📊 Enhanced dashboard generated: ${dashboardFile}`),
-  }
+    console.log(`📊 Enhanced dashboard generated: ${dashboardFile}`);
+};
 ,
   getRecentActivity() {,
     const logFile = path.join(__dirname, 'logsenhanced-cursor-sync.log'),
@@ -255,8 +255,8 @@ class EnhancedCursorSyncMetrics {,
       const lines = logContent.split('\n').slice(-20), // Last 20 lines,
       return lines.filter(line => line.trim().length > 0),
     } catch (error) {,
-      return [],
-    }
+      return [];
+  }
   }
 }
 ,

@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
-  budget: string;
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string,
+  budget: string,
 }
 
 const ContactForm: React.FC = () => {
@@ -22,10 +22,11 @@ const ContactForm: React.FC = () => {
     message: '',
     budget: ''
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) : any => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -33,8 +34,8 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) : any => {
+    e.preventDefault(),
     setIsSubmitting(true);
     
     // Simulate form submission
@@ -66,7 +67,7 @@ const ContactForm: React.FC = () => {
         </p>
         <button
           onClick={() => setSubmitStatus('idle')}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+          className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
         >
           Send Another Message
         </button>

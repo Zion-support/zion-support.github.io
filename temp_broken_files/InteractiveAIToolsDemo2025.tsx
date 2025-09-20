@@ -120,8 +120,8 @@ Recommendations:,
       a.href = url,
       a.download = `${currentTool.name}-output.txt`,
       a.click(),
-      URL.revokeObjectURL(url),
-    }
+      URL.revokeObjectURL(url);
+};
   },
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-20">,
@@ -152,8 +152,8 @@ Recommendations:,
                     key={tool.id}
                     onClick={() => {,
                       setSelectedTool(tool.id),
-                      setInputText(sampleInputs[tool.id as keyof typeof sampleInputs] || ),
-                    }}
+                      setInputText(sampleInputs[tool.id as keyof typeof sampleInputs] || );
+  }}
                     className={`w-full p-4 rounded-lg text-left transition-all duration-300 ${,
                       selectedTool === tool.id,
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg',

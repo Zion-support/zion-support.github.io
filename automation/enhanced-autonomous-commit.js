@@ -8,14 +8,14 @@ class EnhancedAutonomousCommit {,
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
     this.logFile = path.join(__dirname, 'logsautonomous-commit.log'),
-    this.ensureLogDirectory(),
-  }
+    this.ensureLogDirectory();
+};
 ,
   loadConfig() {,
     const configPath = path.join(__dirname, 'config.json'),
     if (fs.existsSync(configPath)) {,
-      return JSON.parse(fs.readFileSync(configPath, 'utf8')),
-    }
+      return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+};
     return {,
       maxCommitSize: 50,
       commitMessageTemplate: 'fix: {description}',
@@ -28,8 +28,8 @@ class EnhancedAutonomousCommit {,
   ensureLogDirectory() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true }),
-    }
+      fs.mkdirSync(logDir, { recursive: true });
+};
   }
 ,
   log(message, level = 'info') {,
@@ -39,16 +39,16 @@ class EnhancedAutonomousCommit {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message),
-    }
+      console.error('Failed to write to log file:', error.message);
+};
 ,
     if (level === 'error') {,
       console.error(message),
     } else if (level === 'warn') {,
       console.warn(message),
     } else {,
-      console.log(message),
-    }
+      console.log(message);
+};
   }
 ,
   async getGitStatus() {,
@@ -81,8 +81,8 @@ class EnhancedAutonomousCommit {,
     const fileTypes = this.analyzeFileTypes(files),
     const description = this.generateDescription(fileTypes),
     return this.config.commitMessageTemplate.replace('{description}',
-      description),
-  }
+      description);
+};
 ,
   analyzeFileTypes(files) {,
     const types = {},
@@ -107,11 +107,11 @@ class EnhancedAutonomousCommit {,
       } else {,
         descriptions.push(,
           `${count} ${ext.slice(1)} file${count > 1 ? 's' : ''}`,
-        ),
-      }
+        );
+};
     }
-    return descriptions.join(),
-  }
+    return descriptions.join();
+};
 ,
   async commit(message) {,
     try {,
@@ -175,16 +175,16 @@ class EnhancedAutonomousCommit {,
 ,
     // Push if enabled,
     if (this.config.autoPush) {,
-      await this.push(),
-    }
+      await this.push();
+};
 ,
-    this.log('✅ Enhanced autonomous commit completed successfully!'),
-  }
+    this.log('✅ Enhanced autonomous commit completed successfully!');
+};
 }
 ,
 // Run the script,
 const autonomousCommit = new EnhancedAutonomousCommit(),
 autonomousCommit.execute().catch((error) => {,
   console.error('Autonomous commit failed:', error.message),
-  process.exit(1),
-}),
+  process.exit(1);
+  }),

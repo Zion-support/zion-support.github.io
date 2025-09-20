@@ -8,12 +8,21 @@ import React from "react";
 
 import { BadgeDollarSign } from "lucide-react, ";
 import { useWallet } from "@/hooks/useWallet, ";
+<<<<<<< HEAD
 import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import Skeleton from "@/components/ui/skeleton";
 
 export function TokenDisplay() {;
 const { wallet; loading } = useWallet();
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Button } from "@/components/ui/button, ";
+import Skeleton from "@/components/ui/skeleton";
+
+export function TokenDisplay() : any {,
+  const { wallet, loading } = useWallet();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <Card>

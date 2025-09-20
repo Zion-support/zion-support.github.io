@@ -32,7 +32,7 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
   title = 'Revolutionary AI & Technology Services',
   subtitle = 'Discover the future of business with our cutting-edge solutions',
   showFilters = true
-}) => {
+}) : any => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -69,7 +69,7 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingCount }
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
     const categoryLower = (service.category || '').toLowerCase();
@@ -99,7 +99,7 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -110,7 +110,7 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <section className={`py-20 ${className}`}>
@@ -314,6 +314,6 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
       </div>
     </section>
   );
-};
+  };
 
 export default EnhancedServiceShowcase;

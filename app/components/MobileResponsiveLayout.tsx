@@ -1,5 +1,5 @@
 import React from 'react'
-const MobileResponsiveLayout: React.FC = () => {;
+const MobileResponsiveLayout: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">MobileResponsiveLayout</h3>

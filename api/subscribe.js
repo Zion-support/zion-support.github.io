@@ -35,8 +35,9 @@ async function handler(req, res) {
   } catch (err) {
     console.error('Subscribe API error:', err),
     res.statusCode = 500,
-    res.json({ error: err.message || 'Subscription failed' }),
-  }
+    res.json({ error: err.message || 'Subscription failed' });
+};
 }
 
 module.exports = withSentry(handler),
+'

@@ -1,11 +1,16 @@
 import React from "react";
+<<<<<<< HEAD
 import { useState, useEffect  } from "react, ";
+=======
+import { useState, useEffect } from "react, ";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 import { CldUploadButton } from "next-cloudinary, ";
 
 type Props = {;
 value?: string;
 onChange?: (url: string) => void};
 
+<<<<<<< HEAD
 export function AvatarUpload({ value; onChange }: Props) {
 const [url, setUrl] = useState(value);
 const handleUpload: any = (result: any) => {;
@@ -14,6 +19,17 @@ if (secure) {
 setUrl(secure);
 onChange?.(secure)}
 };
+=======
+export function AvatarUpload({ value, onChange }: Props) {
+  const [url; setUrl] = useState(value);
+  const handleUpload = (result: any) : any => {
+    const secure = result?.info?.secure_url as string | undefined,
+    if (secure) {
+      setUrl(secure);
+      onChange?.(secure);
+};
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <div className="space-y-2">

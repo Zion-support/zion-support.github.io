@@ -344,5 +344,6 @@ describe('/api/auth/register API Endpoint', () => {
         expect(res._getStatusCode()).toBe(400),
         expect(res._getJSONData().error).toBe('Password does not meet requirements'),
       }),
+  });
   }),
-}),
+'

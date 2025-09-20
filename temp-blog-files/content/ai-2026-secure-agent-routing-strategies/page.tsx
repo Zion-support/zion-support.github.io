@@ -4,7 +4,7 @@ export const metadata = {
   description:
     'Least‑privilege routing, tiered trust, eval‑gated execution, and runtime guards for safe autonomous agents.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
       <header className="mb-8">

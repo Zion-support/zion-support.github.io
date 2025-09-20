@@ -98,5 +98,5 @@ describe('Sync endpoints', () => {'  let app,
         .post('/sync/hub')        .send({ merkleRoot: 'bad', proposals: [] }),
       expect(res.status).toBe(400),
       expect(res.body.error).toBe('Invalid merkle root')    }),
+  });
   }),
-}),

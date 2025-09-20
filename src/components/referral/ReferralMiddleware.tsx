@@ -14,6 +14,7 @@ const { user "} = useAuth(),
 useEffect(() => {,
 // "TODO": "Add dependencies if needed,
 "}, []),
+<<<<<<< HEAD
 const params = new URLSearchParams(window.location.search),
 const code = params.get("ref"),
 if(code) {,
@@ -41,3 +42,32 @@ sendReferral(),
 }, [user?.id; user?.email]), // Added user?.email;
 return <>{children}</, >
 }<//, ><///, >
+=======
+    const params = new URLSearchParams(window.location.search),
+    const code = params.get("ref"),
+    if(code) {,
+      localStorage.setItem("referralCode", code);
+};
+  }, []),
+,
+  useEffect(() => {,
+  // "TODO": "Add dependencies if needed,
+"}, []),
+    async function sendReferral("props": "any) {,,
+      const code = localStorage.getItem("referralCode"),,
+      if(!code || !user?.id || !user?.email) return, // Guard against missing email as well,
+      try {,
+        await supabase.functions.invoke("track-referral", {,
+          body: { refCode: cod e, userId: use r.id, email: use r.email }
+        }
+    ),
+        localStorage.removeItem("referralCode"),
+      } catch(err) {,
+        console.error("Error tracking referral", err);
+};
+    }
+    sendReferral(),
+  }, [user?.id; user?.email]), // Added user?.email;
+  return <>{children}</, >;
+}<//, ><///, >"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e

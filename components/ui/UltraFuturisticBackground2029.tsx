@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 const UltraFuturisticBackground2029: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -20,14 +20,14 @@ const UltraFuturisticBackground2029: React.FC = () => {
 
     // Particle system
     class Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
-      maxLife: number;
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      life: number,
+      maxLife: number,
 
       constructor() {
         this.x = Math.random() * canvas.width;
@@ -72,27 +72,27 @@ const UltraFuturisticBackground2029: React.FC = () => {
     }
 
     // Create particles
-    const particles: Particle[] = [];
-    for (let i = 0; i < 100; i++) {
+    const particles: Particle[] = [],
+    for (let i = 0, i < 100, i++) {
       particles.push(new Particle());
     }
 
     // Grid system
     const gridSize = 50;
-    const gridPoints: { x: number; y: number; active: boolean }[] = [];
+    const gridPoints: { x: number, y: number, active: boolean }[] = [],
 
-    for (let x = 0; x <= canvas.width; x += gridSize) {
-      for (let y = 0; y <= canvas.height; y += gridSize) {
+    for (let x = 0, x <= canvas.width, x += gridSize) {
+      for (let y = 0, y <= canvas.height, y += gridSize) {
         gridPoints.push({
           x,
           y,
           active: Math.random() > 0.7
         });
-      }
+};
     }
 
     // Animation loop
-    let animationId: number;
+    let animationId: number,
     const animate = () => {
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
@@ -109,7 +109,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
       ctx.lineWidth = 1;
 
       // Vertical lines
-      for (let x = 0; x <= canvas.width; x += gridSize) {
+      for (let x = 0, x <= canvas.width, x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
@@ -117,7 +117,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
       }
 
       // Horizontal lines
-      for (let y = 0; y <= canvas.height; y += gridSize) {
+      for (let y = 0, y <= canvas.height, y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
@@ -167,7 +167,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
       ctx.restore();
 
       // Floating circles
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0, i < 5, i++) {
         const x = canvas.width * 0.5 + Math.sin(time + i) * 200;
         const y = canvas.height * 0.5 + Math.cos(time + i) * 150;
         const size = Math.sin(time * 2 + i) * 20 + 30;
@@ -180,7 +180,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
       }
 
       // Energy waves
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0, i < 3, i++) {
         const waveOffset = (time + i * 2) * 100;
         const waveHeight = Math.sin(time + i) * 50 + 100;
         
@@ -188,7 +188,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
         ctx.lineWidth = 3;
         ctx.beginPath();
         
-        for (let x = 0; x <= canvas.width; x += 5) {
+        for (let x = 0, x <= canvas.width, x += 5) {
           const y = canvas.height * 0.8 + Math.sin((x + waveOffset) * 0.01) * waveHeight;
           if (x === 0) {
             ctx.moveTo(x, y);
@@ -200,7 +200,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
       }
 
       // Quantum particles
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0, i < 20, i++) {
         const x = Math.sin(time * 0.5 + i) * canvas.width * 0.4 + canvas.width * 0.5;
         const y = Math.cos(time * 0.3 + i) * canvas.height * 0.4 + canvas.height * 0.5;
         const size = Math.sin(time + i) * 3 + 4;
@@ -218,12 +218,12 @@ const UltraFuturisticBackground2029: React.FC = () => {
         { x: canvas.width * 0.5, y: canvas.height * 0.3 },
         { x: canvas.width * 0.7, y: canvas.height * 0.5 },
         { x: canvas.width * 0.9, y: canvas.height * 0.8 }
-      ];
+      ],
 
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
       ctx.lineWidth = 1;
 
-      nodes.forEach((node, i) => {
+      nodes.forEach((node, i) : any => {
         nodes.slice(i + 1).forEach(targetNode => {
           const distance = Math.sqrt(
             Math.pow(node.x - targetNode.x, 2) + Math.pow(node.y - targetNode.y, 2)
@@ -317,10 +317,10 @@ const UltraFuturisticBackground2029: React.FC = () => {
         @keyframes scan {
           0% {
             transform: translateX(-100%);
-          }
+};
           100% {
             transform: translateX(100%);
-          }
+  }
         }
       `}</style>
     </div>

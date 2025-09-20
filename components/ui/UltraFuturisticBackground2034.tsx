@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground2034: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -21,15 +21,15 @@ const UltraFuturisticBackground2034: React.FC = () => {
 
     // Particle system
     class Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      alpha: number;
-      life: number;
-      maxLife: number;
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      alpha: number,
+      life: number,
+      maxLife: number,
 
       constructor() {
         this.x = Math.random() * canvas.width;
@@ -71,8 +71,8 @@ const UltraFuturisticBackground2034: React.FC = () => {
     }
 
     // Create particles
-    const particles: Particle[] = [];
-    for (let i = 0; i < 100; i++) {
+    const particles: Particle[] = [],
+    for (let i = 0, i < 100, i++) {
       particles.push(new Particle());
     }
 
@@ -97,8 +97,8 @@ const UltraFuturisticBackground2034: React.FC = () => {
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 0.5;
       
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -390,6 +390,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default UltraFuturisticBackground2034;

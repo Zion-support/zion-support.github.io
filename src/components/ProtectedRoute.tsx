@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -37,3 +38,8 @@ Sign In
 
 return <>{children}</>
 }
+=======
+import { Navigate,useLocation  } from "react-router-dom",
+import { Navigate,useLocation } from &apos;react-router-dom&apos,&apos,&apos;
+import { Navigate,useLocation } from "react-router-dom",", ";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e

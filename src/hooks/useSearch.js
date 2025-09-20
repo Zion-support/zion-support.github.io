@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react, ';
 export const useSearch = (data, options) => {
     const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options;
     const [searchState, setSearchState] = useState({
+<<<<<<< HEAD
         query: '';
         filters: {};
         sortBy: null;
@@ -10,6 +11,18 @@ export const useSearch = (data, options) => {
         isLoading: false;
         totalResults: data.length});
     const [debouncedQuery, setDebouncedQuery] = useState('');
+=======
+        query: '',
+        filters: {},
+        sortBy: null,
+        sortOrder: 'asc',
+        results: data,
+        isLoading: false,
+        totalResults: data.length,
+    });
+
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Debounce search query;
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -27,7 +40,7 @@ export const useSearch = (data, options) => {
             return searchText.includes(searchQuery);
         }
         let queryIndex = 0;
-        for (let i = 0; i < searchText.length && queryIndex < searchQuery.length; i++) {
+        for (let i = 0, i < searchText.length && queryIndex < searchQuery.length, i++) {
             if (searchText[i] === searchQuery[queryIndex]) {
                 queryIndex++;
             }
@@ -36,7 +49,7 @@ export const useSearch = (data, options) => {
     }, [fuzzySearch, caseSensitive]);
     // Search and filter data;
     const processedData = useMemo(() => {
-        setSearchState(prev => ({ ...prev, isLoading: true }));
+        setSearchState(prev => ({ ...prev, isLoading: true })),
     let results = data;
         // Apply search;
         if (debouncedQuery) {
@@ -91,8 +104,14 @@ export const useSearch = (data, options) => {
         setSearchState(prev => ({
             ...prev,
             results,
+<<<<<<< HEAD
             totalResults: results.length;
             isLoading: false}));
+=======
+            totalResults: results.length,
+            isLoading: false,
+        }));
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     return results;
     }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
     // Update search query;
@@ -108,23 +127,37 @@ export const useSearch = (data, options) => {
     }, []);
     // Clear all filters;
     const clearFilters = useCallback(() => {
-        setSearchState(prev => ({ ...prev, filters: {} }));
+        setSearchState(prev => ({ ...prev, filters: {} })),
      }, []);
     // Update sorting;
     const setSort = useCallback((field, order = 'asc') => {
         setSearchState(prev => ({
             ...prev,
+<<<<<<< HEAD
             sortBy: field;
             sortOrder: order}));
+=======
+            sortBy: field,
+            sortOrder: order,
+        }));
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }, []);
     // Clear search;
     const clearSearch = useCallback(() => {
         setSearchState(prev => ({
             ...prev,
+<<<<<<< HEAD
             query: '';
             filters: {};
             sortBy: null;
             sortOrder: 'asc'}));
+=======
+            query: '',
+            filters: {},
+            sortBy: null,
+            sortOrder: 'asc',
+        }));
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }, []);
     // Get search suggestions;
     const getSuggestions = useCallback((query, maxSuggestions = 5) => {
@@ -152,10 +185,18 @@ export const useSearch = (data, options) => {
         const endIndex = startIndex + pageSize;
         return {
             results: searchState.results.slice(startIndex, endIndex),
+<<<<<<< HEAD
             totalPages: Math.ceil(searchState.totalResults / pageSize);
             currentPage: page;
             hasNextPage: endIndex < searchState.totalResults;
             hasPrevPage: page > 1};
+=======
+            totalPages: Math.ceil(searchState.totalResults / pageSize),
+            currentPage: page,
+            hasNextPage: endIndex < searchState.totalResults,
+            hasPrevPage: page > 1;
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }, [searchState.results, searchState.totalResults]);
     return {
         ...searchState,

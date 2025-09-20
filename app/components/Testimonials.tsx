@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
       content: "As a startup, we needed cost-effective AI solutions. Zion Tech Group delivered exactly what we needed at a fraction of the cost of enterprise solutions.",
       rating: 5
     }
-  ];
+  ],
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

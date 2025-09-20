@@ -50,5 +50,5 @@ exports.handler = async () => {,
   step('netlify:auto-healer', () => runNode('automation/netlify-auto-healer.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
-},
-}
+};
+  }

@@ -3,19 +3,19 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 interface Message {
-  id: string;
-  text: string;
-  isUser: boolean;
-  timestamp: Date;
+  id: string,
+  text: string,
+  isUser: boolean,
+  timestamp: Date,
   typing?: boolean;
 }
 
 interface ChatbotProps {
-  isOpen: boolean;
-  onToggle: () => void;
+  isOpen: boolean,
+  onToggle: () => void,
 }
 
-const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
+const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) : any => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -24,6 +24,7 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
       timestamp: new Date()
     }
   ]);
+
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -64,7 +65,7 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
     }
     
     if (message.includes('help') || message.includes('support')) {
-      return 'I\'m here to help! I can assist you with:\n\n• Learning about our AI solutions\n• Calculating ROI for your business\n• Scheduling demos and consultations\n• Explaining our pricing and packages\n• Connecting you with our experts\n\nWhat would you like to know more about?';
+      return 'I\'m here to help! I can assist you with: \\n\\n• Learning about our AI solutions\\n• Calculating ROI for your business\\n• Scheduling demos and consultations\\n• Explaining our pricing and packages\\n• Connecting you with our experts\\n\\nWhat would you like to know more about?';
     }
     
     return 'That\'s a great question! Our AI experts would be the best people to give you a detailed answer. Would you like me to connect you with one of our specialists, or would you prefer to schedule a consultation to discuss this further?';
@@ -79,7 +80,6 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
       isUser: true,
       timestamp: new Date()
     };
-
     setMessages(prev => [...prev, userMessage]);
     setInputText('');
     setIsTyping(true);
@@ -92,15 +92,14 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
         isUser: false,
         timestamp: new Date()
       };
-
       setMessages(prev => [...prev, aiResponse]);
       setIsTyping(false);
     }, 1000 + Math.random() * 2000);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (e: React.KeyboardEvent) : any => {
     if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
+      e.preventDefault(),
       handleSendMessage();
     }
   };
@@ -112,8 +111,8 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
     'Learn about AI Automation'
   ];
 
-  const handleQuickAction = (action: string) => {
-    setInputText(action);
+  const handleQuickAction = (action: string) : any => {
+    setInputText(action),
     setTimeout(() => handleSendMessage(), 100);
   };
 
@@ -121,14 +120,14 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
     return (
       <button
         onClick={onToggle}
-        className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50"
+        className="fixed bottom-6 right-6 bg-blue-600 hover: bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
         </svg>
       </button>
     );
-  }
+  };
 
   return (
     <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col z-50">
@@ -199,7 +198,7 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
               <button
                 key={index}
                 onClick={() => handleQuickAction(action)}
-                className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                className="text-xs bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
               >
                 {action}
               </button>

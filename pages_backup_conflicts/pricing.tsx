@@ -8,6 +8,6 @@ export default function Pricing({ }: PricingProps) {,
     <div>,
       <h1>Pricing</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>);
+  }
 ,

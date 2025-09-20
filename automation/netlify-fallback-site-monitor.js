@@ -26,6 +26,6 @@ exports.handler = async (_event, _context) => {
                 error: 'Fallback execution failed',
                 message: error.message
             })
-        },
-    }
+        };
+  }
 },

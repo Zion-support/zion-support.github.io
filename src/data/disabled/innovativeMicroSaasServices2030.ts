@@ -1,9 +1,14 @@
 import { ProductListing } from "@/types/listings, ";export; const; INNOVATIVE_MICRO_SAAS_SERVICES_20;
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 o30: ProductListing[] = [;
+=======
+    o30: ProductListing[] = [,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 // AI-Powered; Micro; SAAS Solutions;
 {
-i;d: ",
+i,d: ",
 ai-content-creation-studio-pro",
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 title: ",
 AI; Content; Creation Studio Pro",description: ",
 Advanced AI-powered; content; creation platform; with; multi-language support; SEO optimization; and; brand; voice consistency. Generates high-quality; content; 10;
@@ -14,10 +19,23 @@ Content Creation",
 price: 29; 9;,
 currency: "$",
 tags: [",
+=======
+    title: ",
+AI, Content, Creation Studio Pro",description: ",
+Advanced AI-powered, content, creation platform, with, multi-language support, SEO optimization, and, brand, voice consistency. Generates high-quality, content, 10,
+x faster, than, traditional methods.",
+    category: ",
+AI & Content",subcategory: ",
+Content Creation",
+    price: 29, 9,
+    currency: "$",
+    tags: [",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 Content Creation", ",
 AI Writing", ",
 SEO Optimization", ",
 Multi-language"",
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 Brand; Voice"],
 author: { nam; e: ",
 Zion; Tech; Group", id: ",
@@ -27,12 +45,24 @@ http;s://ziontechgroup.com/logo.png" },
 images: [",
 http, s://ziontechgroup.com/images/ai-content-studio.jpg"],
 createdAt: ",
+=======
+Brand, Voice"],
+    author: { nam, e: ",
+Zion, Tech, Group", id: ",
+zion-tech-group"email: ",
+kleber@ziontechgroup.com"avatarUr,l: ",
+http,s://ziontechgroup.com/logo.png" },
+    images: [",
+http,, s://ziontechgroup.com/images/ai-content-studio.jpg"],
+    createdAt: ",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 20;
 o24-0;
 o1-0;
-o1T1;0: 0; 0: 0;
+o1T1;0: 0, 0: 0,
 o0.0;
 o00Z",
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 rating: 4.9; reviewCount: 15; 6;,
 featured: true; location: ",
 Global",
@@ -40,16 +70,31 @@ availability: ",
 Instant",aiScore: 9; 8;,
 contactInfo: {
 phon; e: "+1; 30;
+=======
+    rating: 4.9, reviewCount: 15, 6;
+    featured: true, location: ",
+Global",
+    availability: ",
+Instant",aiScore: 9, 8;
+    contactInfo: {
+phon, e: "+1, 30;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 o2; 46;
 4 0;
 o950",
 email: ",
 kleber@ziontechgroup.com"website: ",
-http;s: //ziontechgroup.com/ai-content-studio"addres; s: ",
+http;s: //ziontechgroup.com/ai-content-studio"addres, s: ",
 36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 o9"},
 marketPrice: "$20;
+=======
+o9",
+},
+    marketPrice: "$20,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 o0-50;
 o0/month",
 competitors: [",
@@ -69,6 +114,7 @@ Social; Media, Platforms"]},
 {
 id: ",
 ai-customer-support-automation-suite",
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 title: ",
 AI; Customer; Support Automation Suite",description: ",
 Intelligent; customer; support platform; with; 2; 4/7 availability; multilingual support; and; seamless; human handoff. Reduces; support; tickets by 7; 0% and; improves; customer satisfaction; by; 8; 5%.",
@@ -78,10 +124,22 @@ Support Automation",
 price: 19; 9;,
 currency: "$",
 tags: [",
+=======
+    title: ",
+AI, Customer, Support Automation Suite",description: ",
+Intelligent, customer, support platform, with, 2, 4/7 availability, multilingual support, and, seamless, human handoff. Reduces, support, tickets by 7, 0% and, improves, customer satisfaction, by, 8, 5%.",
+    category: ",
+AI & Customer Support",subcategory: ",
+Support Automation",
+    price: 19, 9,
+    currency: "$",
+    tags: [",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 Customer Support", ",
 Chatbot", ",
-2; 4/7 Support", ",
+2, 4/7 Support", ",
 Multilingual"",
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 AI; Automation"],
 author: { nam; e: ",
 Zion; Tech; Group", id: ",
@@ -91,12 +149,24 @@ http;s://ziontechgroup.com/logo.png" },
 images: [",
 http, s://ziontechgroup.com/images/ai-support-suite.jpg"],
 createdAt: ",
+=======
+AI, Automation"],
+    author: { nam, e: ",
+Zion, Tech, Group", id: ",
+zion-tech-group"email: ",
+kleber@ziontechgroup.com"avatarUr,l: ",
+http,s://ziontechgroup.com/logo.png" },
+    images: [",
+http,, s://ziontechgroup.com/images/ai-support-suite.jpg"],
+    createdAt: ",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 20;
 o24-0;
 o1-0;
-o2T1;0: 0; 0: 0;
+o2T1;0: 0, 0: 0,
 o0.0;
 o00Z",
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 rating: 4.8; reviewCount: 8; 9;,
 featured: true; location: ",
 Global",
@@ -104,16 +174,31 @@ availability: ",
 Instant",aiScore: 9; 7;,
 contactInfo: {
 phon; e: "+1; 30;
+=======
+    rating: 4.8, reviewCount: 8, 9;
+    featured: true, location: ",
+Global",
+    availability: ",
+Instant",aiScore: 9, 7;
+    contactInfo: {
+phon, e: "+1, 30;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 o2; 46;
 4 0;
 o950",
 email: ",
 kleber@ziontechgroup.com"website: ",
-http;s: //ziontechgroup.com/ai-support-suite"addres; s: ",
+http;s: //ziontechgroup.com/ai-support-suite"addres, s: ",
 36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 o9"},
 marketPrice: "$15; 0-40;
+=======
+o9",
+},
+    marketPrice: "$15, 0-40;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 o0/month",
 competitors: [",
 Intercom", ",
@@ -133,6 +218,7 @@ Live; Chat"];
 {
 id: ",
 ai-marketing-automation-platform",
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 title: ",
 AI; Marketing; Automation Platform",description: ",
 Comprehensive; marketing; automation with AI-driven; audience; segmentation; personalized campaigns; and; predictive; analytics. Increases; conversion; rates by 6; 0% and; reduces; marketing costs; by; 4; 0%.",
@@ -142,10 +228,22 @@ Marketing Automation",
 price: 39; 9;,
 currency: "$",
 tags: [",
+=======
+    title: ",
+AI, Marketing, Automation Platform",description: ",
+Comprehensive, marketing, automation with AI-driven, audience, segmentation, personalized campaigns, and, predictive, analytics. Increases, conversion, rates by 6, 0% and, reduces, marketing costs, by, 4, 0%.",
+    category: ",
+AI & Marketing",subcategory: ",
+Marketing Automation",
+    price: 39, 9,
+    currency: "$",
+    tags: [",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 Marketing Automation", ",
 AI Segmentation", ",
 Personalization", ",
 Predictive Analytics"",
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 Campaign; Management"],
 author: { nam; e: ",
 Zion; Tech; Group", id: ",
@@ -155,12 +253,24 @@ http;s://ziontechgroup.com/logo.png" },
 images: [",
 http, s://ziontechgroup.com/images/ai-marketing-platform.jpg"],
 createdAt: ",
+=======
+Campaign, Management"],
+    author: { nam, e: ",
+Zion, Tech, Group", id: ",
+zion-tech-group"email: ",
+kleber@ziontechgroup.com"avatarUr,l: ",
+http,s://ziontechgroup.com/logo.png" },
+    images: [",
+http,, s://ziontechgroup.com/images/ai-marketing-platform.jpg"],
+    createdAt: ",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 20;
 o24-0;
 o1-0;
-o3T1;0: 0; 0: 0;
+o3T1;0: 0, 0: 0,
 o0.0;
 o00Z",
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 rating: 4.9; reviewCount: 23; 4;,
 featured: true; location: ",
 Global",
@@ -168,16 +278,31 @@ availability: ",
 1-2 Days",aiScore: 9; 7;,
 contactInfo: {
 phon; e: "+1; 30;
+=======
+    rating: 4.9, reviewCount: 23, 4;
+    featured: true, location: ",
+Global",
+    availability: ",
+1-2 Days",aiScore: 9, 7;
+    contactInfo: {
+phon, e: "+1, 30;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 o2; 46;
 4 0;
 o950",
 email: ",
 kleber@ziontechgroup.com"website: ",
-http;s: //ziontechgroup.com/ai-marketing-platform"addres; s: ",
+http;s: //ziontechgroup.com/ai-marketing-platform"addres, s: ",
 36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
+<<<<<<< HEAD:src/data/disabled/innovativeMicroSaasServices2030.ts
 o9"},
 marketPrice: "$30;
+=======
+o9",
+},
+    marketPrice: "$30,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeMicroSaasServices2030.ts
 o0-80;
 o0/month",
 competitors: [",

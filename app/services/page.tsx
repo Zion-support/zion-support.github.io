@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function ServicesPage() {
+export default function ServicesPage() : any {
   const services = [
     {
       title: 'AI Solutions 2025',

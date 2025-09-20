@@ -26,10 +26,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
         window.addEventListener('scroll',  handleScroll);
         return () => window.removeEventListener('scroll',  handleScroll);
     }, []);
-    const scrollToTop = () => {
+
+  const scrollToTop = () => {
         window.scrollTo({ to,  p: 0,
     behavio, r: 'smooth' });
-    };
+  };
     const containerVariants = {
         hidde, n: { scal, e: 0,
     opacit, y: 0 },
@@ -105,7 +106,12 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 right-6';
             case 'top-left':
                 return 'top-6 left-6';
+<<<<<<< HEAD
             defaul,  t: return 'bottom-6 right-6';}
+=======
+            defaul,  t: return 'bottom-6 right-6',;
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     };
     const getExpandedPositionClasses = () => {
         switch (position) {
@@ -115,7 +121,12 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 right-6';
             case 'top-left':
                 return 'top-6 left-6';
+<<<<<<< HEAD
             defaul,  t: return 'bottom-6 right-6';}
+=======
+            defaul,  t: return 'bottom-6 right-6',;
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     };
     if (variant === 'minimal') {
         return (<AnimatePresence>
@@ -126,7 +137,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             <ArrowUp className="w-5 h-5"/>
           </motion.button>)}
       </AnimatePresence>);
-    }
+};
     if (variant === 'featured') {
         return (<div className={`fixed ${getPositionClasses()} z-4, 0`}>
         <AnimatePresence>
@@ -183,13 +194,13 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
               
               <div className="mt-4 pt-4 border-t border-gray-100">
                 <div className="text-xs text-gray-500 text-center">
-                  Need help? <span className="text-zion-cyan cursor-pointer hove, r:underline">Chat with us</span>
+                  Need help? <span className="text-zion-cyan cursor-pointer hove, r: underline">Chat with us</span>
                 </div>
               </div>
             </motion.div>)}
         </AnimatePresence>
       </div>);
-    }
+  }
     // Default variant;
     return (<div className={`fixed ${getPositionClasses()} z-4, 0`}>
       <AnimatePresence>
@@ -224,7 +235,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
               </Link>
               
               <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hove, r:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hove,  r:bg-zion-purple/20 transition-colors">
+                <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hove,  r: bg-zion-purple/20 transition-colors">
                   <MessageCircle className="w-5 h-5 text-zion-purple"/>
                 </div>
                 <div>
@@ -236,10 +247,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             
             <div className="mt-4 pt-4 border-t border-gray-100">
               <div className="text-xs text-gray-500 text-center">
-                Or start a conversation with our AI assistant;
+                Or start a conversation with our AI assistant,
               </div>
             </div>
           </motion.div>)}
       </AnimatePresence>
     </div>);
 }
+}}})

@@ -76,3 +76,4 @@ describe('LanguageSwitcher', () => {
     expect(screen.getByText('Hello, World!')).toBeInTheDocument(),
   }),
 }),
+'

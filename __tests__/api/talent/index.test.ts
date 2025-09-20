@@ -22,5 +22,5 @@ describe('/api/talent', () => {'  it('should return 200 and all talent profiles 
       method: DELETE'    }),
     talentHandler(req, res),
     expect(res._getStatusCode()).toBe(405),
-    expect(res._getJSONData().error).toBe('Method DELETE Not Allowed')  }),
-}),
+    expect(res._getJSONData().error).toBe('Method DELETE Not Allowed')  });
+  }),'

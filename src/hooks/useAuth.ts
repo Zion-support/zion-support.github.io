@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 
 interface User {
@@ -18,12 +19,42 @@ const storedUser = localStorage.getItem("zion_user");
 if (storedUser) {
 try {
 setUser(JSON.parse(storedUser))} catch (error) {
+=======
+import { useState, useEffect } from "react, ";
+
+interface User {
+  id: string, email: string, name: string,
+    role: "user" | "admin" | "moderator",
+    userType?: string;
+  displayName?: string;
+  avatarUrl?: string,
+}
+
+export function useAuth() : any {
+  const [user; setUser] = useState<User | null>(null);
+  const [loading; setLoading] = useState(true);
+
+  useEffect(() => {
+    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+    const checkAuth = () => {
+      const storedUser = localStorage.getItem("zion_user");
+      if (storedUser) {
+        try {
+          setUser(JSON.parse(storedUser)),
+        } catch (error) {
+          
+        }
+      }
+      setLoading(false);
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 }
 }
 setLoading(false);
 };
 
+<<<<<<< HEAD
 checkAuth();
 }, []);
 
@@ -63,6 +94,48 @@ logout;
 register;
 isAuthenticated: !!user;,
 isAdmin: user?.role === "admin"};
+=======
+  const login = async (email: string, password: string) : any => {
+    // Implement actual login logic here,
+    const mockUser: User = {
+      id: "1",
+      email;
+      name: "User",
+      role: "user",
+    };
+    setUser(mockUser);
+    localStorage.setItem("zion_user", JSON.stringify(mockUser));
+    return mockUser;
+  };
+
+  const logout = () => {
+    setUser(null);
+    localStorage.removeItem("zion_user");
+  };
+
+  const register = async (email: string, password: string, name: string) : any => {
+    // Implement actual registration logic here,
+    const mockUser: User = {
+      id: "1",
+      email;
+      name;
+      role: "user",
+    };
+    setUser(mockUser);
+    localStorage.setItem("zion_user", JSON.stringify(mockUser));
+    return mockUser;
+  };
+
+  return {
+    user;
+    loading;
+    login;
+    logout;
+    register;
+    isAuthenticated: !!user,
+    isAdmin: user?.role === "admin",
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 };
 }

@@ -1,16 +1,16 @@
 export const INNOVATIVE_AI_SERVICES_2025 = [
     // AI-Powered Autonomous Customer Service;
     {
-        id: "ai-autonomous-customer-service-2025";
-        title: "AI Autonomous Customer Service Platform";
+        id: "ai-autonomous-customer-service-2025",
+        title: "AI Autonomous Customer Service Platform",
         description: "Fully autonomous customer service platform that handles customer inquiries, resolves issues, and provides personalized support without human intervention.",
-        category: "AI & Customer Service";
-        subcategory: "Autonomous Support";
-        price: 6800;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI & Customer Service",
+        subcategory: "Autonomous Support",
+        price: 6800,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Natural language understanding";
+            "Natural language understanding",
             "Context-aware conversations",
             "Multi-language support",
             "Emotion detection",
@@ -22,7 +22,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "24/7 availability"
         ],
         benefits: [
-            "Reduce support costs by 70%";
+            "Reduce support costs by 70%",
             "Improve response time by 90%",
             "24/7 customer support",
             "Consistent service quality",
@@ -30,7 +30,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Enhanced customer satisfaction"
         ],
         useCases: [
-            "Customer support";
+            "Customer support",
             "Technical assistance",
             "Order inquiries",
             "Product information",
@@ -38,7 +38,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Appointment scheduling"
         ],
         targetAudience: [
-            "E-commerce companies";
+            "E-commerce companies",
             "SaaS businesses",
             "Retail chains",
             "Service providers",
@@ -46,14 +46,22 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Financial institutions"
         ],
         tags: ["AI", "Customer Service", "Chatbot", "Natural Language", "Automation"],
-        estimatedDelivery: "6-8 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "6-8 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$6,800 - $20,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+        websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeAIServices2025.js
         technologyStack: ["GPT-5", "Claude 3.5", "Natural Language Processing", "Machine Learning", "API Integration"],
         complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Data Privacy"],
         integrationCapabilities: ["CRM Systems", "Help Desk", "Knowledge Base", "Analytics Tools", "Communication Platforms"],
@@ -62,16 +70,16 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
     },
     // AI-Powered Predictive Maintenance;
     {
-        id: "ai-predictive-maintenance-2025";
-        title: "AI Predictive Maintenance Platform";
+        id: "ai-predictive-maintenance-2025",
+        title: "AI Predictive Maintenance Platform",
         description: "Intelligent predictive maintenance platform that uses AI to predict equipment failures, optimize maintenance schedules, and reduce downtime.",
-        category: "AI & Industrial IoT";
-        subcategory: "Predictive Maintenance";
-        price: 7200;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI & Industrial IoT",
+        subcategory: "Predictive Maintenance",
+        price: 7200,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Equipment failure prediction";
+            "Equipment failure prediction",
             "Maintenance optimization",
             "Real-time monitoring",
             "Anomaly detection",
@@ -83,7 +91,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Reporting and analytics"
         ],
         benefits: [
-            "Reduce downtime by 50%";
+            "Reduce downtime by 50%",
             "Lower maintenance costs by 30%",
             "Extend equipment lifespan",
             "Improve safety",
@@ -91,7 +99,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Data-driven decisions"
         ],
         useCases: [
-            "Manufacturing equipment";
+            "Manufacturing equipment",
             "Industrial machinery",
             "HVAC systems",
             "Transportation vehicles",
@@ -99,7 +107,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Building systems"
         ],
         targetAudience: [
-            "Manufacturing companies";
+            "Manufacturing companies",
             "Industrial facilities",
             "Transportation companies",
             "Energy companies",
@@ -107,14 +115,22 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Maintenance teams"
         ],
         tags: ["AI", "Predictive Maintenance", "IoT", "Industrial", "Analytics"],
-        estimatedDelivery: "8-12 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "8-12 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$7,200 - $22,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance-2025";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+        websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance-2025",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeAIServices2025.js
         technologyStack: ["Machine Learning", "IoT Sensors", "Data Analytics", "Cloud Computing", "Edge Computing"],
         complianceStandards: ["ISO 27001", "SOC2", "Industry Standards", "Data Security"],
         integrationCapabilities: ["IoT Devices", "SCADA Systems", "ERP Systems", "CMMS", "Analytics Platforms"],
@@ -123,16 +139,16 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
     },
     // AI-Powered Content Creation Studio;
     {
-        id: "ai-content-creation-studio-2025";
-        title: "AI Content Creation Studio";
+        id: "ai-content-creation-studio-2025",
+        title: "AI Content Creation Studio",
         description: "Comprehensive AI-powered content creation platform that generates high-quality text, images, videos, and multimedia content for marketing and communication.",
-        category: "AI & Content Creation";
-        subcategory: "Multimedia Content";
-        price: 4200;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI & Content Creation",
+        subcategory: "Multimedia Content",
+        price: 4200,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "AI text generation";
+            "AI text generation",
             "Image creation and editing",
             "Video generation",
             "Audio synthesis",
@@ -144,7 +160,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Performance analytics"
         ],
         benefits: [
-            "10x faster content creation";
+            "10x faster content creation",
             "Reduce content costs by 60%",
             "Maintain brand consistency",
             "Multi-language content",
@@ -152,7 +168,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Scalable content production"
         ],
         useCases: [
-            "Marketing content";
+            "Marketing content",
             "Social media posts",
             "Blog articles",
             "Product descriptions",
@@ -160,7 +176,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Advertising materials"
         ],
         targetAudience: [
-            "Marketing agencies";
+            "Marketing agencies",
             "E-commerce businesses",
             "Content creators",
             "Brand managers",
@@ -168,14 +184,22 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Small businesses"
         ],
         tags: ["AI", "Content Creation", "Multimedia", "Marketing", "Automation"],
-        estimatedDelivery: "4-6 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "4-6 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$4,200 - $15,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-content-creation-studio-2025";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+        websiteUrl: "https://ziontechgroup.com/ai-content-creation-studio-2025",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeAIServices2025.js
         technologyStack: ["GPT-5", "DALL-E 3", "Stable Diffusion", "Natural Language Processing", "Computer Vision"],
         complianceStandards: ["Copyright Compliance", "Content Guidelines", "Data Privacy", "Brand Safety"],
         integrationCapabilities: ["CMS Platforms", "Social Media", "Marketing Tools", "Analytics Platforms", "Design Tools"],
@@ -184,16 +208,16 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
     },
     // AI-Powered Financial Trading Platform;
     {
-        id: "ai-financial-trading-platform-2025";
-        title: "AI Financial Trading Platform";
+        id: "ai-financial-trading-platform-2025",
+        title: "AI Financial Trading Platform",
         description: "Advanced AI-powered financial trading platform that provides automated trading, risk management, and market analysis for institutional and retail investors.",
-        category: "AI & Financial Services";
-        subcategory: "Trading & Investment";
-        price: 15000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI & Financial Services",
+        subcategory: "Trading & Investment",
+        price: 15000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Algorithmic trading";
+            "Algorithmic trading",
             "Risk management",
             "Market analysis",
             "Portfolio optimization",
@@ -205,7 +229,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "API integration"
         ],
         benefits: [
-            "Improve trading performance";
+            "Improve trading performance",
             "Reduce trading costs",
             "Enhanced risk management",
             "24/7 market monitoring",
@@ -213,7 +237,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Compliance automation"
         ],
         useCases: [
-            "Stock trading";
+            "Stock trading",
             "Forex trading",
             "Cryptocurrency trading",
             "Options trading",
@@ -221,7 +245,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Risk assessment"
         ],
         targetAudience: [
-            "Investment firms";
+            "Investment firms",
             "Hedge funds",
             "Banks",
             "Retail investors",
@@ -229,14 +253,22 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Financial advisors"
         ],
         tags: ["AI", "Financial Trading", "Algorithmic Trading", "Risk Management", "Investment"],
-        estimatedDelivery: "12-16 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "12-16 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$15,000 - $50,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-financial-trading-platform-2025";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+        websiteUrl: "https://ziontechgroup.com/ai-financial-trading-platform-2025",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeAIServices2025.js
         technologyStack: ["Machine Learning", "Deep Learning", "Financial APIs", "Real-time Data", "Cloud Computing"],
         complianceStandards: ["SEC", "FINRA", "SOX", "GDPR", "Financial Regulations"],
         integrationCapabilities: ["Trading Platforms", "Market Data", "Risk Systems", "Portfolio Management", "Compliance Tools"],
@@ -245,16 +277,16 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
     },
     // AI-Powered Healthcare Research Platform;
     {
-        id: "ai-healthcare-research-platform-2025";
-        title: "AI Healthcare Research Platform";
+        id: "ai-healthcare-research-platform-2025",
+        title: "AI Healthcare Research Platform",
         description: "Comprehensive AI platform for healthcare research, drug discovery, clinical trial optimization, and medical literature analysis.",
-        category: "AI & Healthcare";
-        subcategory: "Research & Development";
-        price: 18000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI & Healthcare",
+        subcategory: "Research & Development",
+        price: 18000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Drug discovery algorithms";
+            "Drug discovery algorithms",
             "Clinical trial optimization",
             "Medical literature analysis",
             "Biomarker identification",
@@ -266,7 +298,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Security and privacy"
         ],
         benefits: [
-            "Accelerate drug discovery";
+            "Accelerate drug discovery",
             "Optimize clinical trials",
             "Improve research efficiency",
             "Reduce research costs",
@@ -274,7 +306,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Ensure compliance"
         ],
         useCases: [
-            "Drug discovery";
+            "Drug discovery",
             "Clinical trials",
             "Medical research",
             "Biomarker research",
@@ -282,7 +314,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Collaborative research"
         ],
         targetAudience: [
-            "Pharmaceutical companies";
+            "Pharmaceutical companies",
             "Research institutions",
             "Healthcare organizations",
             "Biotech companies",
@@ -290,14 +322,22 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Government agencies"
         ],
         tags: ["AI", "Healthcare", "Research", "Drug Discovery", "Clinical Trials"],
-        estimatedDelivery: "16-24 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "16-24 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$18,000 - $60,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-healthcare-research-platform-2025";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+        websiteUrl: "https://ziontechgroup.com/ai-healthcare-research-platform-2025",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeAIServices2025.js
         technologyStack: ["Deep Learning", "Natural Language Processing", "Bioinformatics", "Cloud Computing", "Data Analytics"],
         complianceStandards: ["HIPAA", "FDA", "GCP", "ISO 27001", "Research Ethics"],
         integrationCapabilities: ["Research Databases", "Clinical Systems", "Laboratory Equipment", "Collaboration Tools", "Analytics Platforms"],
@@ -306,16 +346,16 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
     },
     // AI-Powered Energy Optimization Platform;
     {
-        id: "ai-energy-optimization-platform-2025";
-        title: "AI Energy Optimization Platform";
+        id: "ai-energy-optimization-platform-2025",
+        title: "AI Energy Optimization Platform",
         description: "Intelligent energy optimization platform that uses AI to optimize energy consumption, reduce costs, and improve sustainability across various industries.",
-        category: "AI & Energy";
-        subcategory: "Energy Management";
-        price: 8500;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI & Energy",
+        subcategory: "Energy Management",
+        price: 8500,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Energy consumption optimization";
+            "Energy consumption optimization",
             "Demand forecasting",
             "Renewable energy integration",
             "Grid optimization",
@@ -327,7 +367,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Reporting and insights"
         ],
         benefits: [
-            "Reduce energy costs by 25%";
+            "Reduce energy costs by 25%",
             "Improve energy efficiency",
             "Enhance sustainability",
             "Optimize energy storage",
@@ -335,7 +375,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Compliance with regulations"
         ],
         useCases: [
-            "Commercial buildings";
+            "Commercial buildings",
             "Industrial facilities",
             "Data centers",
             "Smart cities",
@@ -343,7 +383,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Renewable energy"
         ],
         targetAudience: [
-            "Energy companies";
+            "Energy companies",
             "Commercial property owners",
             "Industrial companies",
             "Data center operators",
@@ -351,14 +391,22 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Utility companies"
         ],
         tags: ["AI", "Energy", "Optimization", "Sustainability", "Smart Grid"],
-        estimatedDelivery: "8-12 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "8-12 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$8,500 - $25,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-energy-optimization-platform-2025";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+        websiteUrl: "https://ziontechgroup.com/ai-energy-optimization-platform-2025",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeAIServices2025.js
         technologyStack: ["Machine Learning", "IoT Sensors", "Energy Management", "Cloud Computing", "Data Analytics"],
         complianceStandards: ["Energy Regulations", "Environmental Standards", "ISO 50001", "Data Security"],
         integrationCapabilities: ["Energy Systems", "IoT Devices", "Building Management", "Grid Systems", "Analytics Platforms"],
@@ -367,16 +415,16 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
     },
     // AI-Powered Supply Chain Risk Management;
     {
-        id: "ai-supply-chain-risk-management-2025";
-        title: "AI Supply Chain Risk Management Platform";
+        id: "ai-supply-chain-risk-management-2025",
+        title: "AI Supply Chain Risk Management Platform",
         description: "Intelligent supply chain risk management platform that identifies, assesses, and mitigates risks across global supply chains using AI and predictive analytics.",
-        category: "AI & Supply Chain";
-        subcategory: "Risk Management";
-        price: 7800;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI & Supply Chain",
+        subcategory: "Risk Management",
+        price: 7800,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Risk identification and assessment";
+            "Risk identification and assessment",
             "Predictive risk modeling",
             "Supplier risk monitoring",
             "Geopolitical risk analysis",
@@ -388,7 +436,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Performance analytics"
         ],
         benefits: [
-            "Reduce supply chain disruptions";
+            "Reduce supply chain disruptions",
             "Improve risk visibility",
             "Optimize supplier selection",
             "Enhance compliance",
@@ -396,7 +444,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Business continuity"
         ],
         useCases: [
-            "Global supply chains";
+            "Global supply chains",
             "Manufacturing",
             "Retail operations",
             "Healthcare supply chains",
@@ -404,7 +452,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Automotive industry"
         ],
         targetAudience: [
-            "Manufacturing companies";
+            "Manufacturing companies",
             "Retail chains",
             "Healthcare organizations",
             "Food companies",
@@ -412,14 +460,22 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Logistics providers"
         ],
         tags: ["AI", "Supply Chain", "Risk Management", "Predictive Analytics", "Compliance"],
-        estimatedDelivery: "10-14 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "10-14 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$7,800 - $22,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-supply-chain-risk-management-2025";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+        websiteUrl: "https://ziontechgroup.com/ai-supply-chain-risk-management-2025",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeAIServices2025.js
         technologyStack: ["Machine Learning", "Predictive Analytics", "Risk Modeling", "Data Analytics", "Cloud Computing"],
         complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "Industry Standards", "Risk Management"],
         integrationCapabilities: ["ERP Systems", "Supply Chain Platforms", "Risk Databases", "Analytics Tools", "Alert Systems"],
@@ -428,16 +484,16 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
     },
     // AI-Powered Legal Research & Analysis;
     {
-        id: "ai-legal-research-analysis-2025";
-        title: "AI Legal Research & Analysis Platform";
+        id: "ai-legal-research-analysis-2025",
+        title: "AI Legal Research & Analysis Platform",
         description: "Advanced AI platform for legal research, case analysis, contract review, and legal document generation with comprehensive legal knowledge base.",
-        category: "AI & Legal Tech";
-        subcategory: "Research & Analysis";
-        price: 5500;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI & Legal Tech",
+        subcategory: "Research & Analysis",
+        price: 5500,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Legal research automation";
+            "Legal research automation",
             "Case law analysis",
             "Contract review and analysis",
             "Legal document generation",
@@ -449,7 +505,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Performance tracking"
         ],
         benefits: [
-            "Reduce research time by 80%";
+            "Reduce research time by 80%",
             "Improve case analysis",
             "Enhance contract review",
             "Reduce legal costs",
@@ -457,7 +513,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Compliance automation"
         ],
         useCases: [
-            "Legal research";
+            "Legal research",
             "Case preparation",
             "Contract review",
             "Compliance monitoring",
@@ -465,7 +521,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Document generation"
         ],
         targetAudience: [
-            "Law firms";
+            "Law firms",
             "Corporate legal departments",
             "Legal researchers",
             "Compliance officers",
@@ -473,14 +529,22 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Legal consultants"
         ],
         tags: ["AI", "Legal Tech", "Research", "Contract Review", "Compliance"],
-        estimatedDelivery: "8-12 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "8-12 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$5,500 - $18,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-legal-research-analysis-2025";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+        websiteUrl: "https://ziontechgroup.com/ai-legal-research-analysis-2025",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeAIServices2025.js
         technologyStack: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Document AI", "Cloud Computing"],
         complianceStandards: ["Legal Standards", "Data Privacy", "Confidentiality", "Professional Ethics"],
         integrationCapabilities: ["Legal Databases", "Document Management", "Case Management", "Compliance Tools", "Analytics Platforms"],
@@ -489,16 +553,16 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
     },
     // AI-Powered Creative Design Studio;
     {
-        id: "ai-creative-design-studio-2025";
-        title: "AI Creative Design Studio";
+        id: "ai-creative-design-studio-2025",
+        title: "AI Creative Design Studio",
         description: "Revolutionary AI-powered creative design platform that generates logos, graphics, websites, and creative content with human-like creativity and style.",
-        category: "AI & Creative Design";
-        subcategory: "Design Automation";
-        price: 3800;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI & Creative Design",
+        subcategory: "Design Automation",
+        price: 3800,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Logo generation";
+            "Logo generation",
             "Graphic design creation",
             "Website design",
             "Brand identity development",
@@ -510,7 +574,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Export and delivery"
         ],
         benefits: [
-            "Generate designs in minutes";
+            "Generate designs in minutes",
             "Reduce design costs by 70%",
             "Maintain brand consistency",
             "Unlimited design variations",
@@ -518,7 +582,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Scalable design production"
         ],
         useCases: [
-            "Brand identity";
+            "Brand identity",
             "Marketing materials",
             "Website design",
             "Social media graphics",
@@ -526,7 +590,7 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Advertising campaigns"
         ],
         targetAudience: [
-            "Startups";
+            "Startups",
             "Small businesses",
             "Marketing agencies",
             "Brand managers",
@@ -534,14 +598,22 @@ export const INNOVATIVE_AI_SERVICES_2025 = [
             "Designers"
         ],
         tags: ["AI", "Creative Design", "Branding", "Automation", "Visual Content"],
-        estimatedDelivery: "4-6 weeks";
-        supportLevel: "enterprise";
+        estimatedDelivery: "4-6 weeks",
+        supportLevel: "enterprise",
         marketPrice: "$3,800 - $12,000/month",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/innovativeAIServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-creative-design-studio-2025";
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+        };
+        websiteUrl: "https://ziontechgroup.com/ai-creative-design-studio-2025",
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/innovativeAIServices2025.js
         technologyStack: ["Generative AI", "Computer Vision", "Design Algorithms", "Creative AI", "Cloud Computing"],
         complianceStandards: ["Copyright Compliance", "Design Standards", "Brand Guidelines", "Quality Assurance"],
         integrationCapabilities: ["Design Tools", "Brand Management", "Marketing Platforms", "E-commerce", "Social Media"],

@@ -1,5 +1,5 @@
 import React from 'react'
-const ContentSuccessMetrics2025: React.FC = () => {;
+const ContentSuccessMetrics2025: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">ContentSuccessMetrics2025</h3>

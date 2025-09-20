@@ -40,7 +40,7 @@ const EnhancedFooter: React.FC = () => {
 					</div>
 				</div>
 				<div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-					<p>&copy; 2024 Zion Tech Solutions. All rights reserved.</p>
+					<p>&copy, 2024 Zion Tech Solutions. All rights reserved.</p>
 				</div>
 			</div>
 		</footer>

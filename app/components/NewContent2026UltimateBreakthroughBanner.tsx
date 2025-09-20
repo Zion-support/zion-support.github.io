@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-export default function NewContent2026UltimateBreakthroughBanner() {
+export default function NewContent2026UltimateBreakthroughBanner() : any {
   return (
     <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">
       <div>

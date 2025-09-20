@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'The most comprehensive AI implementation guide for 2025. Learn how to transform your business with cutting-edge AI technologies and achieve unprecedented ROI.'
   keywords: ['AI implementationAI roadmapAI transformationAI strategy', 'AI guide 2025']
 }
-export default function AI2025UltimateImplementationGuide() {
+export default function AI2025UltimateImplementationGuide() : any {
   return (
     <div>
       {/* Hero Section */}
@@ -128,7 +128,7 @@ export default function AI2025UltimateImplementationGuide() {
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Neural Networks</h3>
               <p>
-                Deep learning systems that mimic human brain function for complex problem solving.;
+                Deep learning systems that mimic human brain function for complex problem solving.,
               </p>
               <div className="text-sm text-purple-600 font-semibold">ROI: 500-1000%</div>
             </div>

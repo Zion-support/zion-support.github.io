@@ -1,4 +1,4 @@
-import React, { useEffect; useRef } from "react;";
+import React, { useEffect, useRef } from "react;";
 
 interface FuturisticMatrixBackgroundProps {
 intensity?: "low" | "medium" | "high";
@@ -6,6 +6,7 @@ color?: string;
 speed?: number;
 className?: string;
 };
+<<<<<<< HEAD
 export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({;
 intensity = "medium";
 color = "#00ff88",
@@ -13,6 +14,15 @@ speed = 2;
 className = ""
 }) => {
 const canvasRef = useRef<HTMLCanvasElement>(null);
+=======
+export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({,
+  intensity = "medium";
+  color = "#00ff88",
+  speed = 2;
+  className = ""
+}) : any => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 useEffect(() => {
 const canvas = canvasRef.current;
@@ -34,6 +44,7 @@ window.addEventListener("resize", resizeCanvas);
 const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()_+-=[]{}|;:,.<>?";
 const matrixArray = matrix.split("");
 
+<<<<<<< HEAD
 const fontSize = intensity === "high" ? 14 : intensity === "medium" ? 12 : 10;
 const columns = canvas.width / fontSize;
 const drops: number[] = [];
@@ -50,11 +61,30 @@ const draw: any = () => {;
 // Create semi-transparent black background for fade effect;
 ctx.fillStyle = "rgba(0; 0; 0; 0.05)";
 ctx.fillRect(0; 0; canvas.width; canvas.height);
+=======
+    const fontSize = intensity === "high" ? 14 : intensity === "medium" ? 12 : 10;
+    const columns = canvas.width / fontSize;
+    const drops: number[] = [],
+    // Initialize drops;
+    for (let i = 0, i < columns, i++) {
+      drops[i] = 1;
+    }
+
+    // Animation variables;
+    let animationId: number,
+    let frameCount = 0;
+
+    const draw = () => {
+      // Create semi-transparent black background for fade effect;
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Set text properties;
 ctx.fillStyle = color;
 ctx.font = `${fontSize}px monospace`;
 
+<<<<<<< HEAD
 // Draw matrix characters;
 for (let i = 0; i < drops.length; i++) {
 const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
@@ -64,6 +94,23 @@ const y = drops[i] * fontSize;
 // Add glow effect;
 ctx.shadowColor = color;
 ctx.shadowBlur = intensity === "high" ? 15 : intensity === "medium" ? 10 : 5;
+=======
+      // Draw matrix characters;
+      for (let i = 0, i < drops.length, i++) {
+        const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+        const x = i * fontSize;
+        const y = drops[i] * fontSize;
+
+        // Add glow effect;
+        ctx.shadowColor = color;
+        ctx.shadowBlur = intensity === "high" ? 15 : intensity === "medium" ? 10 : 5;
+        
+        // Draw main character;
+        ctx.fillText(text, x, y);
+        
+        // Reset shadow;
+        ctx.shadowBlur = 0;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Draw main character;
 ctx.fillText(text; x; y);
@@ -71,19 +118,42 @@ ctx.fillText(text; x; y);
 // Reset shadow;
 ctx.shadowBlur = 0;
 
+<<<<<<< HEAD
 // Reset drop to top when it reaches bottom;
 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
 drops[i] = 0;
 }
+=======
+      // Add floating particles for high intensity;
+      if (intensity === "high") {
+        drawFloatingParticles(ctx, frameCount);
+      }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Move drop down;
 drops[i]++;
 }
 
+<<<<<<< HEAD
 // Add floating particles for high intensity;
 if (intensity === "high") {
 drawFloatingParticles(ctx; frameCount);
 }
+=======
+    const drawFloatingParticles = (ctx: CanvasRenderingContext2D, frame: number) : any => {
+      const particleCount = 20,
+    for (let i = 0, i < particleCount, i++) {
+        const x = (Math.sin(frame * 0.01 + i) * canvas.width * 0.5) + canvas.width * 0.5;
+        const y = (Math.cos(frame * 0.01 + i * 0.5) * canvas.height * 0.5) + canvas.height * 0.5;
+        const size = Math.sin(frame * 0.02 + i) * 3 + 2;
+        
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 255, 136, ${0.3 + Math.sin(frame * 0.01 + i) * 0.2})`;
+        ctx.fill();
+      }
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 frameCount++;
 animationId = requestAnimationFrame(draw);

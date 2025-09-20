@@ -1,18 +1,18 @@
 export const ENHANCED_IT_SERVICES = [
     {
-        id: "ai-development-integration";
-        title: "AI Development & Integration";
+        id: "ai-development-integration",
+        title: "AI Development & Integration",
         description: "Custom AI solution development, machine learning model training, and seamless integration with existing business systems.",
-        category: "AI & Machine Learning";
+        category: "AI & Machine Learning",
         pricing: {
-            hourly: 150;
-            project: 15000;
-            monthly: 5000;
-            currency: "$";
+            hourly: 150,
+            project: 15000,
+            monthly: 5000,
+            currency: "$",
             pricingModel: "Flexible - Hourly, Project-based, or Retainer"
         },
         features: [
-            "Custom AI model development";
+            "Custom AI model development",
             "Machine learning pipeline creation",
             "Data preprocessing & cleaning",
             "Model training & optimization",
@@ -20,20 +20,20 @@ export const ENHANCED_IT_SERVICES = [
             "Performance monitoring & maintenance"
         ],
         benefits: [
-            "Increase operational efficiency by 40-60%";
+            "Increase operational efficiency by 40-60%",
             "Reduce manual processing time by 80%",
             "Improve decision-making accuracy",
             "Gain competitive advantage through AI"
         ],
         deliverables: [
-            "Custom AI solution";
+            "Custom AI solution",
             "API documentation",
             "Integration guide",
             "Training materials",
             "Maintenance plan",
             "Performance reports"
         ],
-        timeline: "8-16 weeks depending on complexity";
+        timeline: "8-16 weeks depending on complexity",
         expertise: [
             "Python, TensorFlow, PyTorch",
             "Natural Language Processing",
@@ -46,27 +46,44 @@ export const ENHANCED_IT_SERVICES = [
             "AWS SageMaker", "Google Cloud AI", "Azure ML"
         ],
         certifications: [
-            "AWS Machine Learning Specialty";
+            "AWS Machine Learning Specialty",
             "Google Cloud Professional ML Engineer",
             "Microsoft Azure AI Engineer"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/ai-development-integration";
         badge: "Premium";
         icon: "🤖";
         image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-development-integration",
+        badge: "Premium",
+        icon: "🤖",
+        image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
     {
-        id: "cloud-migration-strategy";
-        title: "Cloud Migration Strategy & Implementation";
+        id: "cloud-migration-strategy",
+        title: "Cloud Migration Strategy & Implementation",
         description: "Comprehensive cloud migration planning, execution, and optimization for AWS, Azure, and Google Cloud platforms.",
-        category: "Cloud Services";
+        category: "Cloud Services",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
             hourly: 125;
             project: 25000;
             monthly: 8000;
             currency: "$";
             pricingModel: "Project-based with ongoing support options"};
+=======
+            hourly: 125,
+            project: 25000,
+            monthly: 8000,
+            currency: "$",
+            pricingModel: "Project-based with ongoing support options",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
         features: [
-            "Cloud readiness assessment";
+            "Cloud readiness assessment",
             "Migration strategy planning",
             "Data migration & synchronization",
             "Application refactoring",
@@ -74,20 +91,20 @@ export const ENHANCED_IT_SERVICES = [
             "Security & compliance setup"
         ],
         benefits: [
-            "Reduce infrastructure costs by 30-50%";
+            "Reduce infrastructure costs by 30-50%",
             "Improve scalability & flexibility",
             "Enhance disaster recovery",
             "Increase operational efficiency"
         ],
         deliverables: [
-            "Migration roadmap";
+            "Migration roadmap",
             "Cloud architecture design",
             "Migration execution plan",
             "Performance benchmarks",
             "Security assessment report",
             "Training & documentation"
         ],
-        timeline: "12-24 weeks depending on scope";
+        timeline: "12-24 weeks depending on scope",
         expertise: [
             "AWS, Azure, Google Cloud",
             "DevOps & CI/CD",
@@ -100,26 +117,42 @@ export const ENHANCED_IT_SERVICES = [
             "Docker", "Terraform", "Ansible", "Jenkins"
         ],
         certifications: [
-            "AWS Solutions Architect Professional";
+            "AWS Solutions Architect Professional",
             "Microsoft Azure Solutions Architect Expert",
             "Google Cloud Professional Cloud Architect"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/cloud-migration-strategy";
         icon: "☁️";
         image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/cloud-migration-strategy",
+        icon: "☁️",
+        image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
     {
-        id: "cybersecurity-audit-protection";
-        title: "Cybersecurity Audit & Protection";
+        id: "cybersecurity-audit-protection",
+        title: "Cybersecurity Audit & Protection",
         description: "Comprehensive security assessment, penetration testing, and implementation of robust protection systems.",
-        category: "Cybersecurity";
+        category: "Cybersecurity",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
             hourly: 175;
             project: 20000;
             monthly: 6000;
             currency: "$";
             pricingModel: "Project-based with ongoing monitoring options"};
+=======
+            hourly: 175,
+            project: 20000,
+            monthly: 6000,
+            currency: "$",
+            pricingModel: "Project-based with ongoing monitoring options",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
         features: [
-            "Security vulnerability assessment";
+            "Security vulnerability assessment",
             "Penetration testing",
             "Security architecture review",
             "Incident response planning",
@@ -127,22 +160,22 @@ export const ENHANCED_IT_SERVICES = [
             "Compliance audit support"
         ],
         benefits: [
-            "Identify and mitigate security risks";
+            "Identify and mitigate security risks",
             "Ensure compliance with regulations",
             "Protect sensitive data",
             "Build customer trust"
         ],
         deliverables: [
-            "Security assessment report";
+            "Security assessment report",
             "Vulnerability remediation plan",
             "Security policies & procedures",
             "Incident response playbook",
             "Compliance documentation",
             "Security training materials"
         ],
-        timeline: "6-12 weeks depending on scope";
+        timeline: "6-12 weeks depending on scope",
         expertise: [
-            "Penetration testing";
+            "Penetration testing",
             "Security architecture",
             "Compliance frameworks",
             "Incident response",
@@ -153,27 +186,44 @@ export const ENHANCED_IT_SERVICES = [
             "SIEM tools", "EDR solutions", "Firewall systems"
         ],
         certifications: [
-            "Certified Ethical Hacker (CEH)";
+            "Certified Ethical Hacker (CEH)",
             "Certified Information Systems Security Professional (CISSP)",
             "Offensive Security Certified Professional (OSCP)"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/cybersecurity-audit-protection";
         badge: "Popular";
         icon: "🔒";
         image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/cybersecurity-audit-protection",
+        badge: "Popular",
+        icon: "🔒",
+        image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
     {
-        id: "data-analytics-business-intelligence";
-        title: "Data Analytics & Business Intelligence";
+        id: "data-analytics-business-intelligence",
+        title: "Data Analytics & Business Intelligence",
         description: "Transform raw data into actionable insights with advanced analytics, visualization, and reporting solutions.",
-        category: "Data & Analytics";
+        category: "Data & Analytics",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
             hourly: 140;
             project: 18000;
             monthly: 5500;
             currency: "$";
             pricingModel: "Project-based with ongoing analytics support"};
+=======
+            hourly: 140,
+            project: 18000,
+            monthly: 5500,
+            currency: "$",
+            pricingModel: "Project-based with ongoing analytics support",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
         features: [
-            "Data warehouse design & implementation";
+            "Data warehouse design & implementation",
             "ETL pipeline development",
             "Advanced analytics & modeling",
             "Interactive dashboards",
@@ -181,22 +231,22 @@ export const ENHANCED_IT_SERVICES = [
             "Real-time reporting"
         ],
         benefits: [
-            "Make data-driven decisions";
+            "Make data-driven decisions",
             "Identify business opportunities",
             "Optimize operations",
             "Improve customer insights"
         ],
         deliverables: [
-            "Data architecture design";
+            "Data architecture design",
             "Analytics dashboards",
             "ETL pipelines",
             "Data models",
             "Analytics reports",
             "User training"
         ],
-        timeline: "10-18 weeks depending on complexity";
+        timeline: "10-18 weeks depending on complexity",
         expertise: [
-            "Data engineering";
+            "Data engineering",
             "Statistical analysis",
             "Machine learning",
             "Business intelligence",
@@ -207,26 +257,42 @@ export const ENHANCED_IT_SERVICES = [
             "Apache Spark", "Hadoop", "Snowflake"
         ],
         certifications: [
-            "Microsoft Power BI Data Analyst";
+            "Microsoft Power BI Data Analyst",
             "Tableau Desktop Specialist",
             "Google Data Analytics Professional"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/data-analytics-business-intelligence";
         icon: "📊";
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/data-analytics-business-intelligence",
+        icon: "📊",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
     {
-        id: "digital-transformation-consulting";
-        title: "Digital Transformation Consulting";
-        description: "Strategic guidance and implementation support for digital transformation initiatives across your organization.";
-        category: "Digital Transformation";
+        id: "digital-transformation-consulting",
+        title: "Digital Transformation Consulting",
+        description: "Strategic guidance and implementation support for digital transformation initiatives across your organization.",
+        category: "Digital Transformation",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
             hourly: 200;
             project: 35000;
             monthly: 12000;
             currency: "$";
             pricingModel: "Strategic consulting with implementation support"};
+=======
+            hourly: 200,
+            project: 35000,
+            monthly: 12000,
+            currency: "$",
+            pricingModel: "Strategic consulting with implementation support",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
         features: [
-            "Digital maturity assessment";
+            "Digital maturity assessment",
             "Transformation roadmap development",
             "Change management strategy",
             "Technology selection & implementation",
@@ -234,22 +300,22 @@ export const ENHANCED_IT_SERVICES = [
             "Performance measurement"
         ],
         benefits: [
-            "Accelerate digital adoption";
+            "Accelerate digital adoption",
             "Improve operational efficiency",
             "Enhance customer experience",
             "Increase competitive advantage"
         ],
         deliverables: [
-            "Digital transformation strategy";
+            "Digital transformation strategy",
             "Implementation roadmap",
             "Change management plan",
             "Technology recommendations",
             "Process documentation",
             "Success metrics & KPIs"
         ],
-        timeline: "16-32 weeks depending on scope";
+        timeline: "16-32 weeks depending on scope",
         expertise: [
-            "Strategic planning";
+            "Strategic planning",
             "Change management",
             "Process optimization",
             "Technology implementation",
@@ -260,27 +326,44 @@ export const ENHANCED_IT_SERVICES = [
             "Analytics platforms", "Integration tools"
         ],
         certifications: [
-            "Project Management Professional (PMP)";
+            "Project Management Professional (PMP)",
             "Change Management Professional",
             "Digital Transformation Specialist"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/digital-transformation-consulting";
         badge: "Featured";
         icon: "🚀";
         image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/digital-transformation-consulting",
+        badge: "Featured",
+        icon: "🚀",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
     {
-        id: "devops-automation";
-        title: "DevOps Automation & CI/CD";
+        id: "devops-automation",
+        title: "DevOps Automation & CI/CD",
         description: "Streamline software development with automated CI/CD pipelines, infrastructure as code, and monitoring solutions.",
-        category: "DevOps";
+        category: "DevOps",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
             hourly: 130;
             project: 15000;
             monthly: 4500;
             currency: "$";
             pricingModel: "Project-based with ongoing support"};
+=======
+            hourly: 130,
+            project: 15000,
+            monthly: 4500,
+            currency: "$",
+            pricingModel: "Project-based with ongoing support",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
         features: [
-            "CI/CD pipeline setup";
+            "CI/CD pipeline setup",
             "Infrastructure as Code",
             "Container orchestration",
             "Monitoring & alerting",
@@ -288,22 +371,22 @@ export const ENHANCED_IT_SERVICES = [
             "Performance optimization"
         ],
         benefits: [
-            "Accelerate software delivery";
+            "Accelerate software delivery",
             "Reduce deployment errors",
             "Improve system reliability",
             "Enhance team productivity"
         ],
         deliverables: [
-            "CI/CD pipeline configuration";
+            "CI/CD pipeline configuration",
             "Infrastructure code",
             "Monitoring setup",
             "Security policies",
             "Documentation",
             "Team training"
         ],
-        timeline: "8-16 weeks depending on complexity";
+        timeline: "8-16 weeks depending on complexity",
         expertise: [
-            "CI/CD tools";
+            "CI/CD tools",
             "Container technologies",
             "Infrastructure as Code",
             "Monitoring & observability",
@@ -314,26 +397,42 @@ export const ENHANCED_IT_SERVICES = [
             "Kubernetes", "Terraform", "Ansible", "Prometheus"
         ],
         certifications: [
-            "AWS DevOps Engineer Professional";
+            "AWS DevOps Engineer Professional",
             "Kubernetes Administrator (CKA)",
             "Terraform Associate"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/devops-automation";
         icon: "⚡";
         image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/devops-automation",
+        icon: "⚡",
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
     {
-        id: "network-infrastructure-design";
-        title: "Network Infrastructure Design & Implementation";
+        id: "network-infrastructure-design",
+        title: "Network Infrastructure Design & Implementation",
         description: "Design and implement robust, scalable network infrastructure with security, redundancy, and performance optimization.",
-        category: "Network Infrastructure";
+        category: "Network Infrastructure",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
             hourly: 120;
             project: 22000;
             monthly: 7000;
             currency: "$";
             pricingModel: "Project-based with ongoing maintenance"};
+=======
+            hourly: 120,
+            project: 22000,
+            monthly: 7000,
+            currency: "$",
+            pricingModel: "Project-based with ongoing maintenance",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
         features: [
-            "Network architecture design";
+            "Network architecture design",
             "Security implementation",
             "Performance optimization",
             "Disaster recovery setup",
@@ -341,22 +440,22 @@ export const ENHANCED_IT_SERVICES = [
             "Documentation & training"
         ],
         benefits: [
-            "Improve network performance";
+            "Improve network performance",
             "Enhance security posture",
             "Reduce downtime",
             "Simplify management"
         ],
         deliverables: [
-            "Network design documentation";
+            "Network design documentation",
             "Implementation plan",
             "Security configuration",
             "Monitoring setup",
             "Disaster recovery plan",
             "User training"
         ],
-        timeline: "12-20 weeks depending on scope";
+        timeline: "12-20 weeks depending on scope",
         expertise: [
-            "Network design";
+            "Network design",
             "Security implementation",
             "Performance optimization",
             "Disaster recovery",
@@ -367,26 +466,42 @@ export const ENHANCED_IT_SERVICES = [
             "VMware", "Hyper-V", "Monitoring tools"
         ],
         certifications: [
-            "Cisco Certified Network Professional (CCNP)";
+            "Cisco Certified Network Professional (CCNP)",
             "Juniper Networks Certified Professional (JNCIP)",
             "CompTIA Network+"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/network-infrastructure-design";
         icon: "🌐";
         image: "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/network-infrastructure-design",
+        icon: "🌐",
+        image: "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
     {
-        id: "mobile-app-development";
-        title: "Mobile App Development";
-        description: "Custom mobile application development for iOS and Android with modern frameworks and best practices.";
-        category: "Mobile Development";
+        id: "mobile-app-development",
+        title: "Mobile App Development",
+        description: "Custom mobile application development for iOS and Android with modern frameworks and best practices.",
+        category: "Mobile Development",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
             hourly: 110;
             project: 25000;
             monthly: 6000;
             currency: "$";
             pricingModel: "Project-based with maintenance options"};
+=======
+            hourly: 110,
+            project: 25000,
+            monthly: 6000,
+            currency: "$",
+            pricingModel: "Project-based with maintenance options",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
         features: [
-            "Native & cross-platform development";
+            "Native & cross-platform development",
             "UI/UX design",
             "Backend integration",
             "Testing & quality assurance",
@@ -394,22 +509,22 @@ export const ENHANCED_IT_SERVICES = [
             "Maintenance & updates"
         ],
         benefits: [
-            "Reach mobile users";
+            "Reach mobile users",
             "Improve customer engagement",
             "Increase brand visibility",
             "Generate new revenue streams"
         ],
         deliverables: [
-            "Mobile application";
+            "Mobile application",
             "Source code",
             "Documentation",
             "Testing reports",
             "Deployment guide",
             "Maintenance plan"
         ],
-        timeline: "16-24 weeks depending on complexity";
+        timeline: "16-24 weeks depending on complexity",
         expertise: [
-            "iOS development";
+            "iOS development",
             "Android development",
             "Cross-platform frameworks",
             "UI/UX design",
@@ -420,26 +535,42 @@ export const ENHANCED_IT_SERVICES = [
             "Node.js", "Firebase", "AWS Mobile"
         ],
         certifications: [
-            "Apple Developer Certification";
+            "Apple Developer Certification",
             "Google Developer Certification",
             "React Native Certification"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/mobile-app-development";
         icon: "📱";
         image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/mobile-app-development",
+        icon: "📱",
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
     {
-        id: "web-application-development";
-        title: "Web Application Development";
+        id: "web-application-development",
+        title: "Web Application Development",
         description: "Modern web application development with responsive design, performance optimization, and security best practices.",
-        category: "Web Development";
+        category: "Web Development",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
             hourly: 100;
             project: 20000;
             monthly: 5000;
             currency: "$";
             pricingModel: "Project-based with ongoing support"};
+=======
+            hourly: 100,
+            project: 20000,
+            monthly: 5000,
+            currency: "$",
+            pricingModel: "Project-based with ongoing support",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
         features: [
-            "Frontend & backend development";
+            "Frontend & backend development",
             "Responsive design",
             "Performance optimization",
             "Security implementation",
@@ -447,22 +578,22 @@ export const ENHANCED_IT_SERVICES = [
             "Deployment & maintenance"
         ],
         benefits: [
-            "Establish online presence";
+            "Establish online presence",
             "Improve customer experience",
             "Increase operational efficiency",
             "Generate leads & sales"
         ],
         deliverables: [
-            "Web application";
+            "Web application",
             "Source code",
             "Documentation",
             "Testing reports",
             "Deployment guide",
             "User training"
         ],
-        timeline: "12-20 weeks depending on complexity";
+        timeline: "12-20 weeks depending on complexity",
         expertise: [
-            "Frontend frameworks";
+            "Frontend frameworks",
             "Backend development",
             "Database design",
             "Security implementation",
@@ -473,26 +604,42 @@ export const ENHANCED_IT_SERVICES = [
             "Python", "PHP", "MySQL", "PostgreSQL"
         ],
         certifications: [
-            "Microsoft Certified: Azure Developer Associate";
+            "Microsoft Certified: Azure Developer Associate",
             "AWS Certified Developer Associate",
             "Google Cloud Professional Developer"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/web-application-development";
         icon: "💻";
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/web-application-development",
+        icon: "💻",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
     {
-        id: "it-consulting-advisory";
-        title: "IT Consulting & Advisory Services";
+        id: "it-consulting-advisory",
+        title: "IT Consulting & Advisory Services",
         description: "Strategic IT consulting to align technology with business goals, optimize operations, and drive innovation.",
-        category: "IT Consulting";
+        category: "IT Consulting",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
             hourly: 180;
             project: 30000;
             monthly: 10000;
             currency: "$";
             pricingModel: "Strategic consulting with implementation support"};
+=======
+            hourly: 180,
+            project: 30000,
+            monthly: 10000,
+            currency: "$",
+            pricingModel: "Strategic consulting with implementation support",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
         features: [
-            "IT strategy development";
+            "IT strategy development",
             "Technology assessment",
             "Vendor selection",
             "Project management",
@@ -500,22 +647,22 @@ export const ENHANCED_IT_SERVICES = [
             "Performance optimization"
         ],
         benefits: [
-            "Align IT with business goals";
+            "Align IT with business goals",
             "Optimize technology investments",
             "Improve operational efficiency",
             "Drive innovation"
         ],
         deliverables: [
-            "IT strategy document";
+            "IT strategy document",
             "Technology roadmap",
             "Vendor recommendations",
             "Implementation plan",
             "Change management plan",
             "Success metrics"
         ],
-        timeline: "20-40 weeks depending on scope";
+        timeline: "20-40 weeks depending on scope",
         expertise: [
-            "IT strategy";
+            "IT strategy",
             "Technology assessment",
             "Project management",
             "Change management",
@@ -526,14 +673,22 @@ export const ENHANCED_IT_SERVICES = [
             "Security solutions", "Integration platforms"
         ],
         certifications: [
-            "Project Management Professional (PMP)";
+            "Project Management Professional (PMP)",
             "ITIL Foundation",
             "Certified Information Systems Auditor (CISA)"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedITServices.js
         link: "https://ziontechgroup.com/it-consulting-advisory";
         badge: "Premium";
         icon: "🎯";
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"}
+=======
+        link: "https://ziontechgroup.com/it-consulting-advisory",
+        badge: "Premium",
+        icon: "🎯",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedITServices.js
 ];
     export const getITServiceById = (id) => {
     return ENHANCED_IT_SERVICES.find(service => service.id === id);

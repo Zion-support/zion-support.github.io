@@ -10,5 +10,5 @@ const function DivineTechnologyPlatform({  = () => {,
       </div>,
     </div>),
 },
-export default function DivineTechnologyPlatform({ ,
-}}})))
+export default function DivineTechnologyPlatform({ ;
+  }}})))

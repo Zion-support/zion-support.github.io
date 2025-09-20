@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useMachineLearning = (_initialConfig) => {
     const { trackEvent } = useAnalytics({
+<<<<<<< HEAD
         enableTracking: true;
         enableUserBehaviorTracking: true});
     const [models, setModels] = useState([]);
@@ -19,14 +20,41 @@ export const useMachineLearning = (_initialConfig) => {
             running: 0;
             completed: 0;
             failed: 0}
+=======
+        enableTracking: true,
+        enableUserBehaviorTracking: true,
     });
-    const [isTraining, setIsTraining] = useState(false);
+
+  const [models, setModels] = useState([]);
+
+  const [trainingJobs, setTrainingJobs] = useState([]);
+
+  const [predictions, setPredictions] = useState([]);
+
+  const [metrics, setMetrics] = useState({
+        totalModels: 0,
+        activeModels: 0,
+        averageAccuracy: 0,
+        totalPredictions: 0,
+        successfulPredictions: 0,
+        averageResponseTime: 0,
+        trainingJobs: {
+            total: 0,
+            running: 0,
+            completed: 0,
+            failed: 0,
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
+    });
+
+  const [isTraining, setIsTraining] = useState(false);
     const [isPredicting, setIsPredicting] = useState(false);
     const trainingIntervalsRef = useRef(new Map());
     const predictionTimeoutsRef = useRef(new Map());
     // Default models;
     const defaultModels = [
         {
+<<<<<<< HEAD
             id: 'sentiment-analysis-001';
             name: 'Sentiment Analysis Model';
             type: 'nlp';
@@ -65,6 +93,49 @@ export const useMachineLearning = (_initialConfig) => {
             trainingDataSize: 25000;
             lastTrained: new Date();
             status: 'ready'}
+=======
+            id: 'sentiment-analysis-001',
+            name: 'Sentiment Analysis Model',
+            type: 'nlp',
+            framework: 'tensorflow',
+            version: '1.0.0',
+            accuracy: 0.89,
+            precision: 0.87,
+            recall: 0.91,
+            f1Score: 0.89,
+            trainingDataSize: 10000,
+            lastTrained: new Date(),
+            status: 'ready',
+        };
+        {
+            id: 'customer-segmentation-001',
+            name: 'Customer Segmentation Model',
+            type: 'clustering',
+            framework: 'scikit-learn',
+            version: '1.0.0',
+            accuracy: 0.92,
+            precision: 0.90,
+            recall: 0.94,
+            f1Score: 0.92,
+            trainingDataSize: 50000,
+            lastTrained: new Date(),
+            status: 'deployed',
+        };
+        {
+            id: 'demand-forecasting-001',
+            name: 'Demand Forecasting Model',
+            type: 'regression',
+            framework: 'pytorch',
+            version: '1.0.0',
+            accuracy: 0.85,
+            precision: 0.83,
+            recall: 0.87,
+            f1Score: 0.85,
+            trainingDataSize: 25000,
+            lastTrained: new Date(),
+            status: 'ready',
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     ];
     // Initialize with default models;
     useEffect(() => {
@@ -92,15 +163,23 @@ export const useMachineLearning = (_initialConfig) => {
         setMetrics({
             totalModels,
             activeModels,
-            averageAccuracy: Math.round(averageAccuracy * 100) / 100;
+            averageAccuracy: Math.round(averageAccuracy * 100) / 100,
             totalPredictions,
             successfulPredictions,
-            averageResponseTime: Math.round(averageResponseTime * 100) / 100;
+            averageResponseTime: Math.round(averageResponseTime * 100) / 100,
             trainingJobs: {
+<<<<<<< HEAD
                 total: trainingJobsTotal;
                 running: trainingJobsRunning;
                 completed: trainingJobsCompleted;
                 failed: trainingJobsFailed}
+=======
+                total: trainingJobsTotal,
+                running: trainingJobsRunning,
+                completed: trainingJobsCompleted,
+                failed: trainingJobsFailed,
+            }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         });
      }, [models, predictions, trainingJobs]);
     // Update metrics when dependencies change;
@@ -112,6 +191,7 @@ export const useMachineLearning = (_initialConfig) => {
         const newModel = {
             ...model,
             id: `model-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+<<<<<<< HEAD
             version: '1.0.0';
             accuracy: 0;
             precision: 0;
@@ -120,8 +200,19 @@ export const useMachineLearning = (_initialConfig) => {
             trainingDataSize: 0;
             lastTrained: new Date();
             status: 'ready'};
+=======
+            version: '1.0.0',
+            accuracy: 0,
+            precision: 0,
+            recall: 0,
+            f1Score: 0,
+            trainingDataSize: 0,
+            lastTrained: new Date(),
+            status: 'ready',
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     setModels(prev => [...prev, newModel]);
-        trackEvent('ml', 'model', 'created', undefined, { modelType: model.type, framework: model.framework });
+        trackEvent('ml', 'model', 'created', undefined, { modelType: model.type, framework: model.framework }),
      }, [trackEvent]);
     // Update model metrics;
     const updateModelMetrics = useCallback((modelId, metrics) => {
@@ -137,19 +228,27 @@ export const useMachineLearning = (_initialConfig) => {
         const trainingJob = {
             id: `job-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
             modelId,
-            status: 'running';
-            progress: 0;
-            startTime: new Date();
+            status: 'running',
+            progress: 0,
+            startTime: new Date(),
             hyperparameters,
             metrics: {
+<<<<<<< HEAD
                 loss: [];
                 accuracy: [];
                 validationLoss: [];
                 validationAccuracy: []}
+=======
+                loss: [],
+                accuracy: [],
+                validationLoss: [],
+                validationAccuracy: [],
+            }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         };
     setTrainingJobs(prev => [...prev, trainingJob]);
         setIsTraining(true);
-        trackEvent('ml', 'training', 'started', undefined, { modelId, modelType: model.type });
+        trackEvent('ml', 'training', 'started', undefined, { modelId, modelType: model.type }),
     // Simulate training progress;
         const interval = setInterval(() => {
             setTrainingJobs(prev => prev.map(job => {
@@ -167,6 +266,7 @@ export const useMachineLearning = (_initialConfig) => {
                         const finalRecall = finalAccuracy * 1.05;
                         const finalF1Score = (2 * finalPrecision * finalRecall) / (finalPrecision + finalRecall);
                         updateModelMetrics(modelId, {
+<<<<<<< HEAD
                             accuracy: finalAccuracy;
                             precision: finalPrecision;
                             recall: finalRecall;
@@ -174,13 +274,23 @@ export const useMachineLearning = (_initialConfig) => {
                             trainingDataSize: Math.floor(Math.random() * 100000) + 10000;
                             lastTrained: new Date();
                             status: 'ready'});
+=======
+                            accuracy: finalAccuracy,
+                            precision: finalPrecision,
+                            recall: finalRecall,
+                            f1Score: finalF1Score,
+                            trainingDataSize: Math.floor(Math.random() * 100000) + 10000,
+                            lastTrained: new Date(),
+                            status: 'ready',
+                        });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     return {
                             ...job,
-                            status: 'completed';
-                            progress: 100;
-                            endTime: new Date();
+                            status: 'completed',
+                            progress: 100,
+                            endTime: new Date(),
                             metrics: {
-                                ...job.metrics;
+                                ...job.metrics,
                                 loss: [...job.metrics.loss, newLoss],
                                 accuracy: [...job.metrics.accuracy, finalAccuracy]
                             }
@@ -188,9 +298,9 @@ export const useMachineLearning = (_initialConfig) => {
                     }
                     return {
                         ...job,
-                        progress: newProgress;
+                        progress: newProgress,
                         metrics: {
-                            ...job.metrics;
+                            ...job.metrics,
                             loss: [...job.metrics.loss, newLoss],
                             accuracy: [...job.metrics.accuracy, newAccuracy]
                         }
@@ -210,7 +320,7 @@ export const useMachineLearning = (_initialConfig) => {
     }, [models, trackEvent, updateModelMetrics]);
     // Stop training job;
     const stopTraining = useCallback((jobId) => {
-        setTrainingJobs(prev => prev.map(job => job.id === jobId ? { ...job, status: 'failed', endTime: new Date() } : job));
+        setTrainingJobs(prev => prev.map(job => job.id === jobId ? { ...job, status: 'failed', endTime: new Date() } : job)),
     const interval = trainingIntervalsRef.current.get(jobId);
         if (interval) {
             clearInterval(interval);
@@ -220,12 +330,12 @@ export const useMachineLearning = (_initialConfig) => {
     }, [trackEvent]);
     // Deploy model;
     const deployModel = useCallback((modelId) => {
-        setModels(prev => prev.map(model => model.id === modelId ? { ...model, status: 'deployed' } : model));
+        setModels(prev => prev.map(model => model.id === modelId ? { ...model, status: 'deployed' } : model)),
     trackEvent('ml', 'model', 'deployed', undefined, { modelId });
     }, [trackEvent]);
     // Archive model;
     const archiveModel = useCallback((modelId) => {
-        setModels(prev => prev.map(model => model.id === modelId ? { ...model, status: 'archived' } : model));
+        setModels(prev => prev.map(model => model.id === modelId ? { ...model, status: 'archived' } : model)),
     trackEvent('ml', 'model', 'archived', undefined, { modelId });
     }, [trackEvent]);
     // Make prediction;
@@ -241,11 +351,17 @@ export const useMachineLearning = (_initialConfig) => {
             id: `pred-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
             modelId,
             input,
+<<<<<<< HEAD
             timestamp: new Date();
             status: 'pending'};
+=======
+            timestamp: new Date(),
+            status: 'pending',
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     setPredictions(prev => [predictionRequest, ...prev]);
         setIsPredicting(true);
-        trackEvent('ml', 'prediction', 'started', undefined, { modelId, modelType: model.type });
+        trackEvent('ml', 'prediction', 'started', undefined, { modelId, modelType: model.type }),
     // Simulate prediction processing;
         const startTime = Date.now();
         const processingTime = Math.random() * 1000 + 100; // 100-1100ms;
@@ -255,7 +371,7 @@ export const useMachineLearning = (_initialConfig) => {
                 const confidence = Math.random() * 0.3 + 0.7; // 70-100% confidence;
                 const completedRequest = {
                     ...predictionRequest,
-                    status: 'completed';
+                    status: 'completed',
                     result,
                     confidence,
                     processingTime: Date.now() - startTime};
@@ -263,7 +379,8 @@ export const useMachineLearning = (_initialConfig) => {
                 predictionTimeoutsRef.current.delete(predictionRequest.id);
                 setIsPredicting(false);
                 trackEvent('ml', 'prediction', 'completed', undefined, { modelId, processingTime });
-                resolve(result);
+
+    resolve(result);
             }, processingTime);
             predictionTimeoutsRef.current.set(predictionRequest.id, timeout);
         });
@@ -273,33 +390,50 @@ export const useMachineLearning = (_initialConfig) => {
         switch (model.type) {
             case 'classification':
                 return {
+<<<<<<< HEAD
                     class: Math.random() > 0.5 ? 'positive' : 'negative';
                     probability: Math.random()};
+=======
+                    class: Math.random() > 0.5 ? 'positive' : 'negative',
+                    probability: Math.random();
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     case 'regression':
                 return {
-                    value: Math.random() * 100;
+                    value: Math.random() * 100,
                     range: [Math.random() * 50, Math.random() * 50 + 50]
                 };
             case 'clustering':
                 return {
+<<<<<<< HEAD
                     cluster: Math.floor(Math.random() * 5);
                     distance: Math.random()};
+=======
+                    cluster: Math.floor(Math.random() * 5),
+                    distance: Math.random();
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     case 'nlp':
                 return {
-                    sentiment: Math.random() > 0.5 ? 'positive' : 'negative';
+                    sentiment: Math.random() > 0.5 ? 'positive' : 'negative',
                     keywords: ['keyword1', 'keyword2', 'keyword3'].slice(0, Math.floor(Math.random() * 3) + 1)
                 };
             case 'computer_vision':
                 return {
                     objects: ['object1', 'object2'].slice(0, Math.floor(Math.random() * 2) + 1),
+<<<<<<< HEAD
                     confidence: Math.random()};
+=======
+                    confidence: Math.random();
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     case 'recommendation':
                 return {
                     items: ['item1', 'item2', 'item3'].slice(0, Math.floor(Math.random() * 3) + 1),
                     scores: [Math.random(), Math.random(), Math.random()]
                 };
             default: return { result: 'unknown' };
-     }
+  }
     };
     // Get model performance;
     const getModelPerformance = useCallback((modelId) => {
@@ -313,8 +447,14 @@ export const useMachineLearning = (_initialConfig) => {
         }
         const exportData = {
             model,
+<<<<<<< HEAD
             exportTimestamp: new Date().toISOString();
             version: '1.0'};
+=======
+            exportTimestamp: new Date().toISOString(),
+            version: '1.0',
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     trackEvent('ml', 'model', 'exported', undefined, { modelId });
         return JSON.stringify(exportData, null, 2);
     }, [models, trackEvent]);
@@ -329,7 +469,7 @@ export const useMachineLearning = (_initialConfig) => {
                     status: 'ready'};
     setModels(prev => [...prev, importedModel]);
                 trackEvent('ml', 'model', 'imported', undefined, { modelType: importedModel.type });
-     }
+};
         }
         catch (error) {
             throw new Error('Invalid model data format');
@@ -337,7 +477,7 @@ export const useMachineLearning = (_initialConfig) => {
     }, [trackEvent]);
     // Configure ML settings;
     const configureML = useCallback((config) => {
-        trackEvent('ml', 'configuration', 'updated', undefined, { configKeys: Object.keys(config) });
+        trackEvent('ml', 'configuration', 'updated', undefined, { configKeys: Object.keys(config) }),
      }, [trackEvent]);
     // Cleanup on unmount;
     useEffect(() => {

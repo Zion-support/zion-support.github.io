@@ -2,7 +2,8 @@ import { useState, useEffect, useCallback, useRef } from 'react, ';
 export const useAnalytics = (config = {}) => {
     const { enableTracking = true, enablePerformanceTracking = true, enableUserBehaviorTracking = true, enableHeatmapTracking = false, sessionTimeout = 30, batchSize = 10, flushInterval = 5000 } = config;
     const [events, setEvents] = useState([]);
-    const [currentSession, setCurrentSession] = useState(null);
+
+  const [currentSession, setCurrentSession] = useState(null);
     const [isTracking, setIsTracking] = useState(false);
     const [performanceMetrics, setPerformanceMetrics] = useState(null);
     const sessionRef = useRef('');
@@ -24,6 +25,7 @@ export const useAnalytics = (config = {}) => {
         const sessionId = generateSessionId();
         sessionRef.current = sessionId;
         const session = {
+<<<<<<< HEAD
             id: sessionId;
             startTime: Date.now();
             lastActivity: Date.now();
@@ -32,6 +34,17 @@ export const useAnalytics = (config = {}) => {
             referrer: document.referrer;
             userAgent: navigator.userAgent;
             deviceInfo: getDeviceInfo()};
+=======
+            id: sessionId,
+            startTime: Date.now(),
+            lastActivity: Date.now(),
+            pageViews: 0,
+            interactions: 0,
+            referrer: document.referrer,
+            userAgent: navigator.userAgent,
+            deviceInfo: getDeviceInfo();
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     setCurrentSession(session);
         trackEvent('session', 'start', 'session_started');
     }, []);
@@ -71,14 +84,14 @@ export const useAnalytics = (config = {}) => {
         if (!isTracking || !currentSession)
             return;
         const event = {
-            id: generateEventId();
-            type: 'custom';
+            id: generateEventId(),
+            type: 'custom',
             category,
             action,
             label,
             value,
-            timestamp: Date.now();
-            sessionId: currentSession.id;
+            timestamp: Date.now(),
+            sessionId: currentSession.id,
             metadata;
         };
         setEvents(prev => [...prev, event]);
@@ -89,20 +102,27 @@ export const useAnalytics = (config = {}) => {
         if (!isTracking || !currentSession)
             return;
         const event = {
-            id: generateEventId();
-            type: 'pageview';
-            category: 'navigation';
-            action: 'page_view';
-            label: window.location.pathname;
-            timestamp: Date.now();
-            sessionId: currentSession.id;
+            id: generateEventId(),
+            type: 'pageview',
+            category: 'navigation',
+            action: 'page_view',
+            label: window.location.pathname,
+            timestamp: Date.now(),
+            sessionId: currentSession.id,
             metadata: {
+<<<<<<< HEAD
                 url: window.location.href;
                 title: document.title;
                 referrer: document.referrer}
+=======
+                url: window.location.href,
+                title: document.title,
+                referrer: document.referrer,
+            }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
         };
     setEvents(prev => [...prev, event]);
-        setCurrentSession(prev => prev ? { ...prev, pageViews: prev.pageViews + 1 } : null);
+        setCurrentSession(prev => prev ? { ...prev, pageViews: prev.pageViews + 1 } : null),
     updateSessionActivity();
     }, [isTracking, currentSession]);
     // Track performance metrics;
@@ -116,9 +136,9 @@ export const useAnalytics = (config = {}) => {
             const paintEntries = performance.getEntriesByType('paint');
             const layoutShiftEntries = performance.getEntriesByType('layout-shift');
             const metrics = {
-                pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-                timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0;
-                firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+                pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+                timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0,
+                firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
                 largestContentfulPaint: 0, // Will be updated by LCP observer;
                 cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + entry.value, 0),
                 firstInputDelay: 0 // Will be updated by FID observer};
@@ -143,8 +163,14 @@ export const useAnalytics = (config = {}) => {
                 className,
                 id,
                 text,
+<<<<<<< HEAD
                 x: event.clientX;
                 y: event.clientY});
+=======
+                x: event.clientX,
+                y: event.clientY,
+            });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      };
         // Scroll tracking;
         let scrollTimeout;
@@ -159,8 +185,8 @@ export const useAnalytics = (config = {}) => {
         const handleFormInteraction = (event) => {
             const target = event.target;
             trackEvent('interaction', 'form_input', 'form_field_interaction', undefined, {
-                fieldType: target.type;
-                fieldName: target.name;
+                fieldType: target.type,
+                fieldName: target.name,
                 fieldValue: target.value?.slice(0, 100)
             });
         };
@@ -186,9 +212,16 @@ export const useAnalytics = (config = {}) => {
             clearTimeout(moveTimeout);
             moveTimeout = setTimeout(() => {
                 trackEvent('heatmap', 'mouse_movement', 'mouse_position', undefined, {
+<<<<<<< HEAD
                     x: event.clientX;
                     y: event.clientY;
                     timestamp: Date.now()});
+=======
+                    x: event.clientX,
+                    y: event.clientY,
+                    timestamp: Date.now(),
+                });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }, 100);
         };
         document.addEventListener('mousemove', handleMouseMove);
@@ -223,7 +256,7 @@ export const useAnalytics = (config = {}) => {
     // Update session activity;
     const updateSessionActivity = useCallback(() => {
         lastActivityRef.current = Date.now();
-        setCurrentSession(prev => prev ? { ...prev, lastActivity: Date.now() } : null);
+        setCurrentSession(prev => prev ? { ...prev, lastActivity: Date.now() } : null),
      }, []);
     // Send events to server;
     const sendEventsToServer = useCallback(async (eventsToSend) => {
@@ -231,9 +264,16 @@ export const useAnalytics = (config = {}) => {
             // In a real implementation, this would send to your analytics server;
             // Simulate API call;
             await fetch('/api/analytics/events', {
+<<<<<<< HEAD
                 method: 'POST';
                 headers: { 'Content-Type': 'application/json' };
                 body: JSON.stringify(eventsToSend)});
+=======
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(eventsToSend),
+            });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
      }
         catch (error) {
             
@@ -256,10 +296,10 @@ export const useAnalytics = (config = {}) => {
             return acc;
         }, {});
         return {
-            sessionId: currentSession.id;
+            sessionId: currentSession.id,
             sessionDuration: Math.round(sessionDuration / 1000), // seconds;
-            pageViews: currentSession.pageViews;
-            totalEvents: events.length;
+            pageViews: currentSession.pageViews,
+            totalEvents: events.length,
             eventsByCategory,
             performanceMetrics;
         };
@@ -271,8 +311,8 @@ export const useAnalytics = (config = {}) => {
     // Track error;
     const trackError = useCallback((error, context, metadata) => {
         trackEvent('error', 'error_occurred', context, undefined, {
-            errorMessage: error.message;
-            errorStack: error.stack;
+            errorMessage: error.message,
+            errorStack: error.stack,
             ...metadata;
         });
     }, [trackEvent]);
@@ -310,12 +350,22 @@ const getDeviceInfo = () => {
         deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? 'tablet' : 'mobile';
     }
     return {
-        type: deviceType;
+        type: deviceType,
         screen: {
+<<<<<<< HEAD
             width: window.screen.width;
             height: window.screen.height};
         viewport: {
             width: window.innerWidth;
             height: window.innerHeight}
+=======
+            width: window.screen.width,
+            height: window.screen.height;
+  };
+        viewport: {
+            width: window.innerWidth,
+            height: window.innerHeight,
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     };
 };

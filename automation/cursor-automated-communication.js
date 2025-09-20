@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 /**,
  * Cursor Automated Communication System,
@@ -68,8 +68,8 @@ class CursorAutomatedCommunication {,
         }),
         logger.info('✅ Cursor API connection established'),
       } catch (error) {,
-        logger.warn('⚠️ Cursor API connection failed, running in local mode'),
-      }
+        logger.warn('⚠️ Cursor API connection failed, running in local mode');
+};
     }
   }
 ,
@@ -80,8 +80,8 @@ class CursorAutomatedCommunication {,
     // For now, we'll use a simple interval,
     setInterval(async () => {,
       if (this.isRunning) {,
-        await this.checkForImprovements(),
-      }
+        await this.checkForImprovements();
+};
     }, 300000), // Every 5 minutes
   }
 ,
@@ -90,8 +90,8 @@ class CursorAutomatedCommunication {,
     logger.info('🔄 Starting periodic improvements...'),
     setInterval(async () => {,
       if (this.isRunning) {,
-        await this.runPeriodicImprovements(),
-      }
+        await this.runPeriodicImprovements();
+};
     }, 3600000), // Every hour
   }
 ,
@@ -102,12 +102,12 @@ class CursorAutomatedCommunication {,
       if (improvements.length > 0) {,
         logger.info(`🔍 Found ${improvements.length} potential improvements`),
         for (const improvement of improvements) {,
-          await this.suggestImprovement(improvement),
-        }
+          await this.suggestImprovement(improvement);
+};
       }
     } catch (error) {,
-      logger.error('Error checking for improvements:', error),
-    }
+      logger.error('Error checking for improvements:', error);
+};
   }
 ,
   async analyzeCodebase() {,
@@ -122,12 +122,12 @@ class CursorAutomatedCommunication {,
           improvements.push({,
             file,
             issues,
-            type: code_quality}),
-        }
+            type: code_quality});
+};
       }
     } catch (error) {,
-      logger.error('Error analyzing codebase:', error),
-    }
+      logger.error('Error analyzing codebase:', error);
+};
 ,
     return improvements,
   }
@@ -150,8 +150,8 @@ class CursorAutomatedCommunication {,
       file.endsWith('.ts') ||,
       file.endsWith('.jsx') ||,
       file.endsWith('.tsx'),
-    ),
-  }
+    );
+};
 ,
   async walkDirectory(dirPath) {,
     const files = [],
@@ -163,8 +163,8 @@ class CursorAutomatedCommunication {,
           const subFiles = await this.walkDirectory(fullPath),
           files.push(...subFiles),
         } else {,
-          files.push(fullPath),
-        }
+          files.push(fullPath);
+};
       }
     } catch (error) {,
       // Directory doesn't exist or can't be read
@@ -180,22 +180,22 @@ class CursorAutomatedCommunication {,
       issues.push({,
         type: 'debug_code',
         message: Console.log statements found in production code',
-        severity: low}),
-    }
+        severity: low});
+};
 ,
     if (content.includes('TODO') || content.includes('FIXME')) {,
       issues.push({,
         type: 'todo_items',
         message: TODO/FIXME comments found',
-        severity: medium}),
-    }
+        severity: medium});
+};
 ,
     if (content.includes('var ) && !content.includes('var _')) {,
       issues.push({,
         type: 'var_usage',
         message: var keyword used instead of const/let',
-        severity: medium}),
-    }
+        severity: medium});
+};
 ,
     return issues,
   }
@@ -213,12 +213,11 @@ class CursorAutomatedCommunication {,
       logger.info(`   ${suggestion.suggestion}`),
       // If auto-commit is enabled, apply the improvement,
       if (this.config.autoCommit) {,
-        await this.applyImprovement(improvement),
-      }
-
+        await this.applyImprovement(improvement);
+};
     } catch (error) {,
-      logger.error('Error suggesting improvement:', error),
-    }
+      logger.error('Error suggesting improvement:', error);
+};
   }
 ,
   generateSuggestion(improvement) {,
@@ -227,8 +226,8 @@ class CursorAutomatedCommunication {,
       todo_items: Address TODO/FIXME comments to improve code quality',
       var_usage: Replace var with const or let for better scoping},
     return improvement.issues.map(issue =>,
-      suggestions[issue.type] || `Fix ${issue.type}: ${issue.message}`).join('),
-  }
+      suggestions[issue.type] || `Fix ${issue.type}: ${issue.message}`).join(');
+};
 ,
   async applyImprovement(improvement) {,
     try {,
@@ -256,13 +255,13 @@ class CursorAutomatedCommunication {,
       if (analysis.improvements.length > 0) {,
         logger.info(`📈 Found ${analysis.improvements.length} improvements to apply`),
         for (const improvement of analysis.improvements) {,
-          await this.applyImprovement(improvement),
-        }
+          await this.applyImprovement(improvement);
+};
       }
 
     } catch (error) {,
-      logger.error('Error running periodic improvements:', error),
-    }
+      logger.error('Error running periodic improvements:', error);
+};
   }
 ,
   async runComprehensiveAnalysis() {,
@@ -285,14 +284,14 @@ class CursorAutomatedCommunication {,
           analysis.improvements.push({,
             file,
             issues,
-            type: comprehensive}),
-        }
+            type: comprehensive});
+};
       }
 ,
       analysis.metrics.suggestionsGenerated = analysis.improvements.length,
     } catch (error) {,
-      logger.error('Error in comprehensive analysis:', error),
-    }
+      logger.error('Error in comprehensive analysis:', error);
+};
 ,
     return analysis,
   }
@@ -326,5 +325,5 @@ if (require.main === module) {,
     logger.info('\n🛑 Shutting down Cursor communication...'),
     communication.stop(),
     process.exit(0),
-  }),
-} ,)
+  });
+  } ,)

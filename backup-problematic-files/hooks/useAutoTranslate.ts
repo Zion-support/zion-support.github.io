@@ -36,8 +36,8 @@ export function useAutoTranslate(,
     }, debounceMs),
     return () => {,
       cancelled = true,
-      clearTimeout(timer),
-    }
+      clearTimeout(timer);
+  }
   }, [key, debounceMs]),
   return { translations, loading, error }
 ,

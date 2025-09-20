@@ -6,11 +6,23 @@ async function fetchTalentProfiles() {
 }
 export function useTalentData() {
     const { data, isLoading, error } = useQuery({
+<<<<<<< HEAD
         queryKey: ['talent-profiles'];
         queryFn: fetchTalentProfiles;
         initialData: [];});
+=======
+        queryKey: ['talent-profiles'],
+        queryFn: fetchTalentProfiles,
+        initialData: [],,
+    });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     return {
-        talents: data ?? [];
+        talents: data ?? [],
         isLoading,
+<<<<<<< HEAD
         error};
+=======
+        error;
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }

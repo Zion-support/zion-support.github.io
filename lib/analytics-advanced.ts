@@ -3,9 +3,9 @@
  */
 
 export interface AnalyticsEvent {
-  event: string;
-  category: string;
-  action: string;
+  event: string,
+  category: string,
+  action: string,
   label?: string;
   value?: number;
   customParameters?: Record<string, any>;
@@ -15,31 +15,31 @@ export interface AnalyticsEvent {
 }
 
 export interface UserMetrics {
-  pageViews: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number }>;
-  userFlow: Array<{ from: string; to: string; count: number }>;
+  pageViews: number,
+  sessionDuration: number,
+  bounceRate: number,
+  conversionRate: number,
+  topPages: Array<{ page: string, views: number }>,
+  userFlow: Array<{ from: string, to: string, count: number }>,
   deviceInfo: {
-    browser: string;
-    os: string;
-    device: string;
-    screen: string;
+    browser: string,
+    os: string,
+    device: string,
+    screen: string,
   };
   location: {
-    country: string;
-    region: string;
-    city: string;
+    country: string,
+    region: string,
+    city: string,
   };
 }
 
 export class AnalyticsManager {
-  private events: AnalyticsEvent[] = [];
-  private sessionId: string;
-  private userId: string;
-  private startTime: number;
-  private pageStartTime: number;
+  private events: AnalyticsEvent[] = [],
+  private sessionId: string,
+  private userId: string,
+  private startTime: number,
+  private pageStartTime: number,
 
   constructor() {
     this.sessionId = this.generateSessionId();
@@ -124,17 +124,16 @@ export class AnalyticsManager {
     };
 
     window.addEventListener('scroll', checkScrollDepth, { passive: true });
-  }
-
+};
   private trackClickEvents() {
-    document.addEventListener('click', (event) => {
+    document.addEventListener('click', (event) : any => {
       const target = event.target as HTMLElement;
       const link = target.closest('a');
       const button = target.closest('button');
       
       if (link) {
         const href = link.getAttribute('href');
-        const isExternal = href && (href.startsWith('http') || href.startsWith('mailto:'));
+        const isExternal = href && (href.startsWith('http') || href.startsWith('mailto: ')),
         
         this.trackEvent('link_click', 'engagement', 'link_click', href, undefined, {
           isExternal,
@@ -145,12 +144,12 @@ export class AnalyticsManager {
           buttonText: button.textContent?.substring(0, 100),
           buttonType: button.type || 'button'
         });
-      }
+};
     });
   }
 
   private trackFormSubmissions() {
-    document.addEventListener('submit', (event) => {
+    document.addEventListener('submit', (event) : any => {
       const form = event.target as HTMLFormElement;
       const formId = form.id || form.className || 'unnamed_form';
       
@@ -159,19 +158,19 @@ export class AnalyticsManager {
   }
 
   private trackErrors() {
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', (event) : any => {
       this.trackEvent('javascript_error', 'error', 'js_error', event.message, undefined, {
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
         stack: event.error?.stack
-      });
+      }),
     });
 
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', (event) : any => {
       this.trackEvent('promise_rejection', 'error', 'promise_error', event.reason?.toString(), undefined, {
         stack: event.reason?.stack
-      });
+      }),
     });
   }
 
@@ -193,7 +192,7 @@ export class AnalyticsManager {
       timestamp: Date.now(),
       userId: this.userId,
       sessionId: this.sessionId
-    };
+    },
 
     this.events.push(analyticsEvent);
 
@@ -218,7 +217,7 @@ export class AnalyticsManager {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(event)
-      // });
+      // }),
     } catch (error) {
       console.warn('Failed to send analytics event:', error);
     }
@@ -233,7 +232,7 @@ export class AnalyticsManager {
         value: value,
         currency: currency
       });
-    }
+};
   }
 
   private generateTransactionId(): string {
@@ -241,7 +240,7 @@ export class AnalyticsManager {
   }
 
   public trackPerformance(metrics: Record<string, number>) {
-    Object.entries(metrics).forEach(([metric, value]) => {
+    Object.entries(metrics).forEach(([metric, value]) : any => {
       this.trackEvent('performance', 'performance', metric, undefined, Math.round(value));
     });
   }
@@ -256,7 +255,7 @@ export class AnalyticsManager {
     // Get top pages
     const pageViewsByPage = this.events
       .filter(e => e.event === 'page_view')
-      .reduce((acc, e) => {
+      .reduce((acc, e) : any => {
         const page = e.label || 'unknown';
         acc[page] = (acc[page] || 0) + 1;
         return acc;
@@ -270,7 +269,7 @@ export class AnalyticsManager {
     // Get user flow
     const pageViewEvents = this.events.filter(e => e.event === 'page_view');
     const userFlow = [];
-    for (let i = 0; i < pageViewEvents.length - 1; i++) {
+    for (let i = 0, i < pageViewEvents.length - 1, i++) {
       const from = pageViewEvents[i].label || 'unknown';
       const to = pageViewEvents[i + 1].label || 'unknown';
       const existing = userFlow.find(f => f.from === from && f.to === to);
@@ -278,7 +277,7 @@ export class AnalyticsManager {
         existing.count++;
       } else {
         userFlow.push({ from, to, count: 1 });
-      }
+};
     }
 
     return {
@@ -290,13 +289,13 @@ export class AnalyticsManager {
       userFlow,
       deviceInfo: this.getDeviceInfo(),
       location: this.getLocationInfo()
-    };
+    },
   }
 
   private getDeviceInfo() {
     if (typeof window === 'undefined') {
       return { browser: 'unknown', os: 'unknown', device: 'unknown', screen: 'unknown' };
-    }
+  }
 
     const ua = navigator.userAgent;
     const browser = this.getBrowserInfo(ua);
@@ -308,7 +307,7 @@ export class AnalyticsManager {
   }
 
   private getBrowserInfo(ua: string): string {
-    if (ua.includes('Chrome')) return 'Chrome';
+    if (ua.includes('Chrome')) return 'Chrome',
     if (ua.includes('Firefox')) return 'Firefox';
     if (ua.includes('Safari')) return 'Safari';
     if (ua.includes('Edge')) return 'Edge';
@@ -316,7 +315,7 @@ export class AnalyticsManager {
   }
 
   private getOSInfo(ua: string): string {
-    if (ua.includes('Windows')) return 'Windows';
+    if (ua.includes('Windows')) return 'Windows',
     if (ua.includes('Mac')) return 'macOS';
     if (ua.includes('Linux')) return 'Linux';
     if (ua.includes('Android')) return 'Android';
@@ -325,7 +324,7 @@ export class AnalyticsManager {
   }
 
   private getDeviceInfo(ua: string): string {
-    if (ua.includes('Mobile')) return 'Mobile';
+    if (ua.includes('Mobile')) return 'Mobile',
     if (ua.includes('Tablet')) return 'Tablet';
     return 'Desktop';
   }
@@ -356,12 +355,12 @@ export class AnalyticsManager {
   }
 }
 
-export const generateAnalyticsReport = (events: AnalyticsEvent[]) => {
-  const totalEvents = events.length;
+export const generateAnalyticsReport = (events: AnalyticsEvent[]) : any => {
+  const totalEvents = events.length,
   const uniqueUsers = new Set(events.map(e => e.userId)).size;
   const uniqueSessions = new Set(events.map(e => e.sessionId)).size;
   
-  const eventTypes = events.reduce((acc, e) => {
+  const eventTypes = events.reduce((acc, e) : any => {
     acc[e.event] = (acc[e.event] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
@@ -390,10 +389,10 @@ export const generateAnalyticsReport = (events: AnalyticsEvent[]) => {
       errorRate: errorEvents.length / totalEvents
     }
   };
-};
+  };
 
-export const calculateEventsPerHour = (events: AnalyticsEvent[]) => {
-  if (events.length === 0) return 0;
+export const calculateEventsPerHour = (events: AnalyticsEvent[]) : any => {
+  if (events.length === 0) return 0,
   
   const firstEvent = Math.min(...events.map(e => e.timestamp || 0));
   const lastEvent = Math.max(...events.map(e => e.timestamp || 0));

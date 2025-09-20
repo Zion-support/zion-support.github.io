@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'The page you are looking for could not be found. Explore our AI and technology solutions.',
 }
 
-export default function NotFound() {
+export default function NotFound() : any {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
       <div className="text-center">

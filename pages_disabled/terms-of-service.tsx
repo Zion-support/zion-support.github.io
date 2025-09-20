@@ -20,11 +20,11 @@ const TermsOfService: NextPage = () => {
       <main className="container mx-auto px-4 py-16 pt-32">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
             Terms of Service
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            These terms and conditions govern your use of Zion Tech Group&apos;s services and website. 
+            These terms and conditions govern your use of Zion Tech Group&apos,s services and website. 
             By using our services, you agree to be bound by these terms.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
@@ -38,7 +38,7 @@ const TermsOfService: NextPage = () => {
         {/* Last Updated */}
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-12 text-center">
           <p className="text-blue-800">
-            <strong>Last Updated:</strong> {lastUpdated}
+            <strong>Last Updated: </strong> {lastUpdated}
           </p>
         </div>
 
@@ -73,7 +73,7 @@ const TermsOfService: NextPage = () => {
             
             <div className="space-y-4">
               <p className="text-gray-600">
-                By accessing and using Zion Tech Group&apos;s website and services, you accept and agree to be bound by the terms and provision of this agreement. 
+                By accessing and using Zion Tech Group&apos,s website and services, you accept and agree to be bound by the terms and provision of this agreement. 
                 If you do not agree to abide by the above, please do not use this service.
               </p>
               
@@ -222,8 +222,7 @@ const TermsOfService: NextPage = () => {
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">Payment Structure</h3>
                 <p className="text-gray-600 mb-3">
-                  Our payment terms vary by service type:
-                </p>
+                  Our payment terms vary by service type: </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">
                   <li><strong>Project Services:</strong> Milestone-based payments or monthly billing</li>
                   <li><strong>Consulting:</strong> Hourly rates with monthly invoicing</li>
@@ -300,7 +299,7 @@ const TermsOfService: NextPage = () => {
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">Liability Limits</h3>
                 <p className="text-gray-600 mb-3">
-                  Zion Tech Group&apos;s liability is limited as follows:
+                  Zion Tech Group&apos,s liability is limited as follows:
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 ml-4">
                   <li>Total liability limited to fees paid in the 12 months preceding the claim</li>
@@ -473,7 +472,7 @@ const TermsOfService: NextPage = () => {
               We&apos;re committed to transparency and clear communication. 
               If you have questions about these terms, don&apos;t hesitate to reach out.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
@@ -494,6 +493,6 @@ const TermsOfService: NextPage = () => {
       <Footer />
     </div>
   );
-};
+  };
 
 export default TermsOfService;

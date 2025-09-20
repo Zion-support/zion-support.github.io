@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface Service {
 id: string;,
 name: string;
@@ -23,6 +24,32 @@ items[,",
 initial = {,
 { "opacity": "0",
 "height": "0,
+=======
+import { import { motion, AnimatePresence   } from "framer-motion",
+,
+export default function Page("props": "any) {,
+    setExpandedSections(newExpanded)"},
+,
+  const navigationSections = [{,
+      "title": "Main Navigation",
+      "icon": "Hom e",
+      items[,",
+        { "name": "Home", "href": "/", "icon": "Hom e "},",
+        { "name": "Solutions", "href": "/solutions", "icon": "Targe t "},",
+        { "name": "Services", "href": "/services", "icon": "Za p "},",
+        { "name": "Case Studies", "href": "/case-studies", "icon": "FileTex t "},",
+        { "name": "Blog", "href": "/blog", "icon": "FileTex t "},",
+        { "name": "Partners", "href": "/partners", "icon": "Handshak e "},",
+        { "name": "About", "href": "/about", "icon": "User s "},",
+        { "name": "Contact", "href": "/contact", "icon": "MessageCircl e "},",
+        { "name": "Careers", "href": "/careers", "icon": "Briefcas e "},",
+        { "name": "Partners", "href": "/partners", "icon": "Handshak e "}              </button>,;
+              <AnimatePresence>,;
+                {expandedSections.has(section.title) && (<motion.div;
+                    initial = {,
+  { "opacity": "0",
+  "height": "0,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 "}}
 animate = {,
 { "opacity": "1",
@@ -96,4 +123,4 @@ transition = {,
 </aside>,) },
 '"`,
 </motion, >,
-</motion>]]<//motion><///motion>
+</motion>]]<//motion><///motion>'

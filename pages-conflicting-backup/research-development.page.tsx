@@ -339,7 +339,7 @@ const patents = [
   }
 ],
 
-export default function ResearchDevelopment() {
+export default function ResearchDevelopment() : any {
   const [selectedArea, setSelectedArea] = useState('All'),
   const [selectedStatus, setSelectedStatus] = useState('All'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -356,17 +356,17 @@ export default function ResearchDevelopment() {
     return matchesArea && matchesStatus && matchesSearch,
   }),
 
-  const getAreaIcon = (areaName: string) => {
+  const getAreaIcon = (areaName: string) : any => {
     const area = researchAreas.find(a => a.name === areaName),
     return area ? area.icon : FlaskConical
   },
 
-  const getAreaColor = (areaName: string) => {
+  const getAreaColor = (areaName: string) : any => {
     const area = researchAreas.find(a => a.name === areaName),
     return area ? area.color : 'from-gray-500 to-slate-600'
   },
 
-  const getStatusBadge = (status: string) => {
+  const getStatusBadge = (status: string) : any => {
     if (status === 'Active') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>
     } else if (status === 'Completed') {
@@ -466,7 +466,7 @@ export default function ResearchDevelopment() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index) => {
+            {researchAreas.map((area, index) : any => {
               const IconComponent = area.icon,
               return (
                 <motion.div
@@ -510,8 +510,8 @@ export default function ResearchDevelopment() {
                     </div>
                   </div>
                 </motion.div>
-              ),
-            })}
+              );
+  })}
           </div>
         </div>
       </section>
@@ -531,7 +531,7 @@ export default function ResearchDevelopment() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredProjects.map((project, index) => {
+            {filteredProjects.map((project, index) : any => {
               const IconComponent = getAreaIcon(project.area),
               const areaColor = getAreaColor(project.area),
               return (
@@ -804,4 +804,4 @@ export default function ResearchDevelopment() {
       </section>
     </div>
   )
-}
+}'

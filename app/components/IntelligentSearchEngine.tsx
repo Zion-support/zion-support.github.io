@@ -1,5 +1,5 @@
 import React from 'react'
-const IntelligentSearchEngine: React.FC = () => {;
+const IntelligentSearchEngine: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">IntelligentSearchEngine</h3>

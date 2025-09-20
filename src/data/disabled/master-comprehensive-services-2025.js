@@ -8,13 +8,20 @@ import { allCuttingEdgeServices2025, getCuttingEdgeServicesByCategory, getCuttin
 export const masterComprehensiveServices2025 = {
     // Original services;
     original: {
+<<<<<<< HEAD:src/data/disabled/master-comprehensive-services-2025.js
         microSaas: enhancedMicroSaasServices2025;
         itServices: enhancedITServices2025;
         aiServices: enhancedAIServices2025};
+=======
+        microSaas: enhancedMicroSaasServices2025,
+        itServices: enhancedITServices2025,
+        aiServices: enhancedAIServices2025,
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/master-comprehensive-services-2025.js
     // Expanded services;
-    expanded: allExpandedServices2025;
+    expanded: allExpandedServices2025,
     // Additional services;
-    additional: allAdditionalServices2025;
+    additional: allAdditionalServices2025,
     // Cutting-edge services;
     cuttingEdge: allCuttingEdgeServices2025};
     // Get all services as a flat array;
@@ -93,8 +100,9 @@ export const getMasterServicesByPricing = (pricing) => {
 export const getMasterServicesStats = () => {
     const allServices = getAllServices();
     const stats = {
-        totalServices: allServices.length;
+        totalServices: allServices.length,
         byType: {
+<<<<<<< HEAD:src/data/disabled/master-comprehensive-services-2025.js
             microSaas: allServices.filter(s => 'pricing' in s && 'userLimit' in s).length;
             itServices: allServices.filter(s => 'hourlyRate' in s && 'projectRate' in s).length;
             aiServices: allServices.filter(s => 'aiModels' in s && 'aiScore' in s).length};
@@ -103,24 +111,36 @@ export const getMasterServicesStats = () => {
             professional: allServices.filter(s => 'pricing' in s && s.pricing === 'Professional').length;
             enterprise: allServices.filter(s => 'pricing' in s && s.pricing === 'Enterprise').length};
         categories: [...new Set(allServices.map(s => s.category))].length;
+=======
+            microSaas: allServices.filter(s => 'pricing' in s && 'userLimit' in s).length,
+            itServices: allServices.filter(s => 'hourlyRate' in s && 'projectRate' in s).length,
+            aiServices: allServices.filter(s => 'aiModels' in s && 'aiScore' in s).length,
+        };
+        byPricing: {
+            freemium: allServices.filter(s => 'pricing' in s && s.pricing === 'Freemium').length,
+            professional: allServices.filter(s => 'pricing' in s && s.pricing === 'Professional').length,
+            enterprise: allServices.filter(s => 'pricing' in s && s.pricing === 'Enterprise').length,
+        };
+        categories: [...new Set(allServices.map(s => s.category))].length,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/master-comprehensive-services-2025.js
         priceRanges: {
             low: allServices.filter(s => {
                 if ('price' in s && typeof s.price === 'number')
-                    return s.price < 100;
+                    return s.price < 100,
     if ('hourlyRate' in s && typeof s.hourlyRate === 'number')
                     return s.hourlyRate < 100;
                 return false;
             }).length,
             medium: allServices.filter(s => {
                 if ('price' in s && typeof s.price === 'number')
-                    return s.price >= 100 && s.price < 1000;
+                    return s.price >= 100 && s.price < 1000,
     if ('hourlyRate' in s && typeof s.hourlyRate === 'number')
                     return s.hourlyRate >= 100 && s.hourlyRate < 200;
                 return false;
             }).length,
             high: allServices.filter(s => {
                 if ('price' in s && typeof s.price === 'number')
-                    return s.price >= 1000;
+                    return s.price >= 1000,
     if ('hourlyRate' in s && typeof s.hourlyRate === 'number')
                     return s.hourlyRate >= 200;
                 return false;

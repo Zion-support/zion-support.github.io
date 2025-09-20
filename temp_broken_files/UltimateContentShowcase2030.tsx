@@ -37,8 +37,8 @@ const UltimateContentShowcase2030: React.FC = () => {,
       const interval = setInterval(() => {,
         setCurrentSlide((prev) => (prev + 1) % contentSlides.length),
       }, 5000),
-      return () => clearInterval(interval),
-    }
+      return () => clearInterval(interval);
+  }
   }, [isAutoPlaying, contentSlides.length]),
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">,

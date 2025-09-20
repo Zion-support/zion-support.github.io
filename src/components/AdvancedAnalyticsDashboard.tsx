@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface AnalyticsData {
+<<<<<<< HEAD
 visitors: number;
 pageViews: number;
 conversionRate: number;,
@@ -43,6 +44,49 @@ trafficSources: [
 ];
 });
 }, []);
+=======
+  visitors: number,
+  pageViews: number,
+  conversionRate: number,
+  bounceRate: number,
+  avgSessionDuration: number,
+  topPages: Array<{ page: string, views: number }>,
+  trafficSources: Array<{ source: string, percentage: number }>,
+}
+
+export const AdvancedAnalyticsDashboard: React.FC = () => {
+  const [data, setData] = useState<AnalyticsData>({
+    visitors: 0,
+    pageViews: 0,
+    conversionRate: 0,
+    bounceRate: 0,
+    avgSessionDuration: 0,
+    topPages: [],;
+    trafficSources: [],,
+  });
+
+    useEffect(() => {
+    // Simulate data loading
+    setData({
+      visitors: 15420,
+      pageViews: 89230,
+      conversionRate: 3.2,
+      bounceRate: 45.8,
+      avgSessionDuration: 4.2,
+      topPages: [
+        { page: '/services', views: 12340 },
+        { page: '/about', views: 8920 },
+        { page: '/contact', views: 6780 }
+      ],
+      trafficSources: [
+        { source: 'Organic Search', percentage: 45 },
+        { source: 'Direct', percentage: 30 },
+        { source: 'Social Media', percentage: 15 },
+        { source: 'Referral', percentage: 10 }
+      ]
+    }),
+  }, []);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <div className="p-6 bg-gray-900 min-h-screen">

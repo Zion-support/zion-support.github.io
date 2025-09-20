@@ -134,5 +134,5 @@ describe('useSavedTalents', () => {'  beforeEach(() => {,
         expect(showApiError).not.toHaveBeenCalled(),
         expect(supabase.insert).toHaveBeenCalledTimes(1),
         expect(toast).toHaveBeenCalledWith(expect.objectContaining({ title: "Added to favorites" })),"    }),"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  });
   }),
-}),

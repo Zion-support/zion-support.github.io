@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function PricingPage() {
+export default function PricingPage() : any {
   const pricingTiers = [
     {
       name: 'Starter',
@@ -269,3 +269,4 @@ export default function PricingPage() {
     </>
   )
 }
+'

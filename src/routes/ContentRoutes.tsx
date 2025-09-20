@@ -6,7 +6,11 @@ name: string;
 import React from "react";
 
 import { Fragment } from "react, ";
+<<<<<<< HEAD
 import { Route; Routes, Navigate  } from "react-router-dom, ";
+=======
+import { Route, Routes, Navigate } from "react-router-dom, ";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";

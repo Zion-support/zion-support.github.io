@@ -1,5 +1,5 @@
 import React from 'react'
-const LatestContent2025PromotionBanner: React.FC = () => {;
+const LatestContent2025PromotionBanner: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">LatestContent2025PromotionBanner</h3>

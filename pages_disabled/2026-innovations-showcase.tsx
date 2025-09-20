@@ -8,13 +8,13 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
 import { innovative2026MicroSaasV2Services } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2028Services as emergingTech2026ServicesV2 } from '../data/2028-emerging-tech-services';
 
-export default function Innovations2026Showcase() {
+export default function Innovations2026Showcase() : any {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const allNewServices = [
     ...innovative2026MicroSaasV2Services,
@@ -32,7 +32,7 @@ export default function Innovations2026Showcase() {
     { name: 'Biotech & AI', icon: Cpu, color: 'from-teal-600 to-cyan-700' },
     { name: 'Blockchain & Web3', icon: Database, color: 'from-orange-600 to-red-700' },
     { name: 'AI & Manufacturing', icon: Sparkles, color: 'from-slate-600 to-gray-700' }
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground 
@@ -145,7 +145,7 @@ export default function Innovations2026Showcase() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {categories.map((category, index) => {
+              {categories.map((category, index) : any => {
                 const IconComponent = category.icon;
                 return (
                   <motion.div
@@ -165,7 +165,7 @@ export default function Innovations2026Showcase() {
                       </p>
                       <Link 
                         href={`/services#${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="inline-flex items-center gap-2 text-white hover:text-white/80 transition-colors duration-300"
+                        className="inline-flex items-center gap-2 text-white hover: text-white/80 transition-colors duration-300"
                       >
                         Explore Services
                         <ArrowRight className="w-4 h-4" />
@@ -173,7 +173,7 @@ export default function Innovations2026Showcase() {
                     </div>
                   </motion.div>
                 );
-              })}
+  })}
             </div>
           </div>
         </section>
@@ -276,7 +276,7 @@ export default function Innovations2026Showcase() {
                 { label: 'AI Services', value: allNewServices.filter(s => s.category.includes('AI')).length.toString(), icon: Brain, color: 'from-purple-500 to-pink-500' },
                 { label: 'Quantum Services', value: allNewServices.filter(s => s.category.includes('Quantum')).length.toString(), icon: Shield, color: 'from-green-500 to-emerald-500' },
                 { label: 'Enterprise Solutions', value: allNewServices.filter(s => s.category.includes('Enterprise')).length.toString(), icon: Database, color: 'from-orange-500 to-red-500' }
-              ].map((stat, index) => {
+              ].map((stat, index) : any => {
                 const IconComponent = stat.icon;
                 return (
                   <motion.div
@@ -290,7 +290,7 @@ export default function Innovations2026Showcase() {
                     <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
                     <div className="text-white/80">{stat.label}</div>
                   </motion.div>
-                );
+                ),
               })}
             </div>
           </div>
@@ -355,4 +355,4 @@ export default function Innovations2026Showcase() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
+  }'

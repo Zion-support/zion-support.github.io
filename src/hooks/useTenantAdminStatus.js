@@ -1,8 +1,15 @@
 import { useState, useEffect } from 'react, ';
 export const useTenantAdminStatus = (tenantId) => {
     const [_setStatus] = useState({
+<<<<<<< HEAD
         isAdmin: false;
         isLoading: true;});
+=======
+        isAdmin: false,
+        isLoading: true,,
+    });
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     useEffect(() => {
         const checkTenantAdminStatus = async (_tenantId) => {
             try {

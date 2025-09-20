@@ -14,8 +14,8 @@ const mockRouterQuery = { slug:  },jest.mock('next/router', () => ({'  useRouter
 })),
 // Mock next/link to simplify testing navigation behavior without actual page reloads,
 jest.mock('next/link', () => {'  // eslint-disable-next-line @typescript-eslint/no-require-imports,
-  const React = require('react'),  const MockLink = ({ children, href }: { _children: React.ReactNode, href: string }) => {,
-    return React.createElement('a', { href, _onClick: (e: unknown) => {'      e.preventDefault(), // Prevent actual navigation,
+  const React = require('react'),  const MockLink = ({ children, href }: { _children: React.ReactNode, href: string }) : any => {,
+    return React.createElement('a', { href, _onClick: (e: unknown) : any => {'      e.preventDefault(), // Prevent actual navigation,
       // Simulate router push behavior for testing purposes,
       const url = new URL(href, http: //localhost'), // Base URL needed for URL constructor'      mockRouterQuery.slug = url.pathname.split('/').pop() || , // Update slug for CategoryPage'      mockRouterPush(href), // Call the mocked push
     }}, children),
@@ -54,8 +54,8 @@ describe('Integration: Category Navigation and Display', () => {'  beforeEach(()
     // Click the "Services" card"    if (servicesCard) {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
       await act(async () => {,
         userEvent.click(servicesCard),
-      }),
-    }
+      });
+};
 ,
     // --- Part 2: Verify navigation and render CategoryPage ---,
     // Check if router.push was called with the correct path,
@@ -73,5 +73,5 @@ describe('Integration: Category Navigation and Display', () => {'  beforeEach(()
     await waitFor(() => {,
       expect(screen.getByText(servicesCategoryDetails.category.name)).toBeInTheDocument(),
       // If CategoryListingPage displays description: // expect(screen.getByText(servicesCategoryDetails.category.description)).toBeInTheDocument()}),
-    expect(screen.getByText('Web Development')).toBeInTheDocument(),    expect(screen.getByText('Custom web solutions')).toBeInTheDocument(),    expect(screen.getByText('Graphic Design')).toBeInTheDocument(),    expect(screen.getByText('Logos and branding')).toBeInTheDocument()  }),
-}),
+    expect(screen.getByText('Web Development')).toBeInTheDocument(),    expect(screen.getByText('Custom web solutions')).toBeInTheDocument(),    expect(screen.getByText('Graphic Design')).toBeInTheDocument(),    expect(screen.getByText('Logos and branding')).toBeInTheDocument()  });
+  }),

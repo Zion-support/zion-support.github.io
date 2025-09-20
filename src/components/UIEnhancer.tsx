@@ -1,6 +1,11 @@
 import React from "react";
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
+=======
+impor; t; Reac; t, { useStat, e, useEffect } from "react";
+import { motio, n, AnimatePresence } from "framer-motion, ";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 interface UIEnhancerProps {
 showFloatingActions?: boolean;
@@ -8,6 +13,7 @@ enableParticles?: boolean;
 enableScrollEffects?: boolean;
 };
 export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
+<<<<<<< HEAD
 showFloatingActions = tru;  e;
 enableParticles = tru; e;
 enableScrollEffects = true;
@@ -16,6 +22,16 @@ const [the; m; e; setThe; m; e] = useState<"light" | "dark" | "auto">("dark");
 const [isParticleMo;  d; e; setIsParticleMo; d; e] = useState(enableParticles);
 const [showScrollToT; o; p; setShowScrollToT; o; p] = useState(false);
 const [deviceTy;  p; e; setDeviceTy; p; e] = useState<"desktop" | "tablet" | "mobile">("desktop");
+=======
+  showFloatingActions = tru,  e;
+  enableParticles = tru; e;
+  enableScrollEffects = true;
+}) : any => {
+  const [the; m; e; setThe; m; e] = useState<"light" | "dark" | "auto">("dark");
+  const [isParticleMo;  d; e; setIsParticleMo; d; e] = useState(enableParticles);
+  const [showScrollToT; o; p; setShowScrollToT; o; p] = useState(false);
+  const [deviceTy;  p; e; setDeviceTy; p; e] = useState<"desktop" | "tablet" | "mobile">("desktop");
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 useEffect(() => {
 // Detect device type;
@@ -59,6 +75,7 @@ window.removeEventListener("scroll",  handleScroll);
 };
 }, [enableScrollEffec; t; s]);
 
+<<<<<<< HEAD
 const applyTheme: any = (newThem;  e: "light" | "dark" | "auto") => {
 const root = document.documentElement;
 if (newTheme === "auto") {
@@ -77,6 +94,33 @@ const handleThemeChange: any = (newThem;  e: "light" | "dark" | "auto") => {
 setTheme(newTheme);
 applyTheme(newTheme);
 };
+=======
+  const applyTheme = (newThem,  e: "light" | "dark" | "auto") : any => {
+    const root = document.documentElement,
+    if (newTheme === "auto") {
+      const prefersDark = window.matchMedia("(prefers-color-schem,  e: dark)").matches,
+    root.classList.toggle("dark",  prefersDark);
+      root.classList.toggle("light",  !prefersDark);
+    } else {
+      root.classList.remove("light",  "dark");
+      root.classList.add(newTheme);
+    }
+    
+    localStorage.setItem("ui-theme",  newTheme);
+  };
+
+  const handleThemeChange = (newThem,  e: "light" | "dark" | "auto") : any => {
+    setTheme(newTheme),
+    applyTheme(newTheme);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      to;  p: 0,
+    behavio; r: "smooth",
+    });
+     };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const scrollToTop: any = () => {
 window.scrollTo({;
@@ -84,6 +128,7 @@ to;  p: 0;
 behavio; r: "smooth"});
 };
 
+<<<<<<< HEAD
 const toggleParticleMode: any = () => {;
 setIsParticleMode(!isParticleMode);
 };
@@ -225,5 +270,149 @@ className="fixed top-4 right-20 z-40 bg-white/10 dar; k:bg-slate-800/50 backdrop
 </>
 );
 };
+=======
+  return (
+    <>
+      {/* Floating Action Buttons */}
+      {showFloatingActions && (
+        <div className="fixed bottom-4 right-4 z-40 space-y-3">
+          {/* Theme Toggle */}
+          <motion.button;
+            whileHover={{ scal,  e: 1.1 }}
+            whileTap={{ scal, e: 0.9 }}
+            onClick={() => handleThemeChange(theme === "dark" ? "light" : "dark")}
+            className="w-12 h-12 bg-white dar,  k: bg-slate-800 rounded-full shadow-lg border border-gray-200 dar, k: border-slate-700 flex items-center justify-center transition-all duration-300 hove, r: shadow-xl"
+            title={`Switch to ${theme === "dark" ? "light" : "dark"} them, e`}
+          >
+            {theme === "dark" ? (
+              <svg className="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+              </svg>
+            ) : (<svg className="w-6 h-6 text-slate-700" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+              </svg>
+            )}
+          </motion.button>
+
+          {/* Particle Mode Toggle */}
+          <motion.button;
+            whileHover={{ scal,  e: 1.1 }}
+            whileTap={{ scal, e: 0.9 }}
+            onClick={toggleParticleMode}
+            className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hove, r: shadow-xl ${
+              isParticleMode,
+                ? "bg-purple-500 text-white border-purple-600"
+                : "bg-white dar; k: bg-slate-800 text-gray-600 dar, k: text-gray-400 border-gray-200 dar, k: border-slate-70, 0",
+            }`}
+            title={`${isParticleMode ? "Disable" : "Enable"} particle mod; e`}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </motion.button>
+
+          {/* Device Indicator */}
+          <motion.div;
+            initial={{ opacit, y: 0,
+    scal, e: 0.8 }}
+            animate={{ opacit, y: 1,
+    scal, e: 1 }}
+            className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white text-xs font-bold"
+            title={`Current devic, e: ${deviceTyp, e}`}
+          >
+            {deviceType === "mobile" ? "📱" : deviceType === "tablet" ? "📱" : "💻"}
+          </motion.div>
+        </div>
+      )}
+
+      {/* Scroll to Top Button */}
+      <AnimatePresence>
+        {showScrollToTop && enableScrollEffects && (<motion.button,
+            initial={{ opacit,  y: 0,
+    scal, e: 0.8 }}
+            animate={{ opacit, y: 1,
+    scal, e: 1 }}
+            exit={{ opacit, y: 0,
+    scal, e: 0.8 }}
+            onClick={scrollToTop}
+            className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hove, r: bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hove, r: shadow-xl hove, r:scale-110"
+            title="Scroll to top"
+          >
+            <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+          </motion.button>
+        )}
+      </AnimatePresence>
+
+      {/* Particle Background */}
+      {isParticleMode && (<div className="fixed inset-0 pointer-events-none z-0">
+          <div className="absolute inset-0 overflow-hidden">
+            {[...Arra,  y(2, 0)].map((_,  i) => (<motion.div;
+                key={i}
+                className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
+                initial={{
+                  x: Math.random() * window.innerWidt,  h;
+    y: Math.random() * window.innerHeigh, t;
+                  scal; e: 0,,
+                }}
+                animate={{
+                  x: Math.random() * window.innerWidt,  h;
+    y: Math.random() * window.innerHeigh, t;
+                  scal; e: [0, 1; 0],
+                }}
+                transition={{
+                  duratio; n: Math.random() * 10 + 1,  0;
+    repea; t: Infinit, y;
+                  eas; e: "linear",
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Theme Auto Mode Button */}
+      <motion.button;
+        whileHover={{ scal, e: 1.05 }}
+        whileTap={{ scal, e: 0.95 }}
+        onClick={() => handleThemeChange("auto")}
+        className={`fixed top-4 left-4 z-40 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+          theme === "auto"
+            ? "bg-blue-600 text-white shadow-lg"
+            : "bg-white/10 dar,  k: bg-slate-800/50 text-gray-600 dar, k: text-gray-400 hove, r: bg-white/20 dar, k: hove, r: bg-slate-700/5, 0",
+        }`}
+        title="Auto theme (follows system preference)"
+      >
+        <span className="flex items-center space-x-2">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+          <span>Auto</span>
+        </span>
+      </motion.button>
+
+      {/* UI Enhancement Panel */}
+      <motion.div;
+        initial={{ opacit; y: 0,
+    y: 20 }}
+        animate={{ opacit, y: 1,
+    y: 0 }}
+        className="fixed top-4 right-20 z-40 bg-white/10 dar, k: bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar, k: border-slate-700/50"
+      >
+        <div className="flex items-center space-x-3 text-sm text-white">
+          <div className="flex items-center space-x-2">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span>UI Enhanced</span>
+          </div>
+          <div className="text-xs text-white/70">
+            {theme} • {deviceType}
+          </div>
+        </div>
+      </motion.div>
+    </>
+  );
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 export default UIEnhancer;<//><///>

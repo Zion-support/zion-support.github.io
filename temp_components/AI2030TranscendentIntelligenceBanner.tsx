@@ -1,6 +1,6 @@
 import React from 'react',
 import Link from 'next/link',
-export default function AI2030TranscendentIntelligenceBanner() {,
+export default function AI2030TranscendentIntelligenceBanner() : any {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-indigo-900 py-16">,
       {/* Animated background elements */}
@@ -67,5 +67,5 @@ export default function AI2030TranscendentIntelligenceBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>);
+  }

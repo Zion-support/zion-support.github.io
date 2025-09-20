@@ -110,6 +110,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {,
         </div>,
       </div>,
     </section>,
-  ),
-},
+  );
+  },
 export default EnhancedCaseStudiesShowcase,

@@ -10,5 +10,5 @@ const function LazyComponent({  = () => {,
       </div>,
     </div>),
 },
-export default function LazyComponent({ ,
-}}})))
+export default function LazyComponent({ ;
+  }}})))

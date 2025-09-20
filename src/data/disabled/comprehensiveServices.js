@@ -1,15 +1,16 @@
 export const COMPREHENSIVE_SERVICES = [
     // AI & Machine Learning Services;
     {
-        id: "ai-chatbot-enterprise";
-        title: "Enterprise AI Chatbot Development";
+        id: "ai-chatbot-enterprise",
+        title: "Enterprise AI Chatbot Development",
         description: "Custom AI-powered chatbots for customer service, sales, and support. Integrates with CRM, knowledge bases, and existing systems. Includes training, deployment, and ongoing optimization.",
-        category: "AI Services";
-        subcategory: "Chatbots & Virtual Assistants";
-        price: 8999;
-        currency: "$";
+        category: "AI Services",
+        subcategory: "Chatbots & Virtual Assistants",
+        price: 8999,
+        currency: "$",
         tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Natural Language Processing"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -22,16 +23,33 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "2-3 Weeks";
         aiScore: 95;
         pricingTier: "Professional"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.9,
+        reviewCount: 156,
+        featured: true,
+        location: "Global",
+        availability: "2-3 Weeks",
+        aiScore: 95,
+        pricingTier: "Professional",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     {
-        id: "ai-content-generation";
-        title: "AI Content Generation Suite Pro";
+        id: "ai-content-generation",
+        title: "AI Content Generation Suite Pro",
         description: "AI-powered content creation for blogs, social media, and marketing campaigns. Generate engaging, SEO-optimized content at scale.",
-        category: "AI Services";
-        subcategory: "Content Generation";
-        price: 800;
-        currency: "$";
+        category: "AI Services",
+        subcategory: "Content Generation",
+        price: 800,
+        currency: "$",
         tags: ["AI", "Content Creation", "Marketing", "SEO", "Automation"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"};
@@ -44,16 +62,33 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "1-2 Weeks";
         aiScore: 96;
         pricingTier: "Starter"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.8,
+        reviewCount: 89,
+        featured: true,
+        location: "Global",
+        availability: "1-2 Weeks",
+        aiScore: 96,
+        pricingTier: "Starter",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     {
-        id: "ai-business-intelligence";
-        title: "AI-Powered Business Intelligence Platform";
+        id: "ai-business-intelligence",
+        title: "AI-Powered Business Intelligence Platform",
         description: "Advanced analytics and business intelligence platform with AI-driven insights, predictive analytics, and real-time dashboards.",
-        category: "AI Services";
-        subcategory: "Business Intelligence";
-        price: 4500;
-        currency: "$";
+        category: "AI Services",
+        subcategory: "Business Intelligence",
+        price: 4500,
+        currency: "$",
         tags: ["AI", "Business Intelligence", "Analytics", "Predictive", "Dashboard"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -66,17 +101,34 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "4-6 Weeks";
         aiScore: 98;
         pricingTier: "Enterprise"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.9,
+        reviewCount: 234,
+        featured: true,
+        location: "Global",
+        availability: "4-6 Weeks",
+        aiScore: 98,
+        pricingTier: "Enterprise",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     // IT Infrastructure & Cloud Services;
     {
-        id: "cloud-migration-expert";
-        title: "Cloud Migration & Optimization Expert";
+        id: "cloud-migration-expert",
+        title: "Cloud Migration & Optimization Expert",
         description: "Complete cloud migration services with cost optimization, security implementation, and performance tuning for AWS, Azure, and Google Cloud.",
-        category: "IT Services";
-        subcategory: "Cloud Services";
-        price: 3500;
-        currency: "$";
+        category: "IT Services",
+        subcategory: "Cloud Services",
+        price: 3500,
+        currency: "$",
         tags: ["Cloud Migration", "AWS", "Azure", "Optimization", "Security"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -89,16 +141,33 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "3-5 Weeks";
         aiScore: 92;
         pricingTier: "Professional"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.7,
+        reviewCount: 156,
+        featured: true,
+        location: "Global",
+        availability: "3-5 Weeks",
+        aiScore: 92,
+        pricingTier: "Professional",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     {
-        id: "cybersecurity-audit";
-        title: "Complete Cybersecurity Audit & Implementation";
+        id: "cybersecurity-audit",
+        title: "Complete Cybersecurity Audit & Implementation",
         description: "Comprehensive security assessment, penetration testing, and security infrastructure implementation with compliance reporting.",
-        category: "IT Services";
-        subcategory: "Cybersecurity";
-        price: 6000;
-        currency: "$";
+        category: "IT Services",
+        subcategory: "Cybersecurity",
+        price: 6000,
+        currency: "$",
         tags: ["Cybersecurity", "Audit", "Penetration Testing", "Compliance", "Security"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -111,16 +180,33 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "4-8 Weeks";
         aiScore: 97;
         pricingTier: "Enterprise"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.9,
+        reviewCount: 189,
+        featured: true,
+        location: "Global",
+        availability: "4-8 Weeks",
+        aiScore: 97,
+        pricingTier: "Enterprise",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     {
-        id: "devops-automation";
-        title: "DevOps Automation & CI/CD Suite";
+        id: "devops-automation",
+        title: "DevOps Automation & CI/CD Suite",
         description: "Complete DevOps automation with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation.",
-        category: "IT Services";
-        subcategory: "DevOps";
-        price: 2800;
-        currency: "$";
+        category: "IT Services",
+        subcategory: "DevOps",
+        price: 2800,
+        currency: "$",
         tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -133,17 +219,34 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "3-4 Weeks";
         aiScore: 94;
         pricingTier: "Professional"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.8,
+        reviewCount: 134,
+        featured: true,
+        location: "Global",
+        availability: "3-4 Weeks",
+        aiScore: 94,
+        pricingTier: "Professional",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     // Business Process Automation;
     {
-        id: "workflow-automation";
-        title: "Business Workflow Automation Platform";
+        id: "workflow-automation",
+        title: "Business Workflow Automation Platform",
         description: "Custom workflow automation solution to streamline business processes, reduce manual work, and improve efficiency.",
-        category: "Business Solutions";
-        subcategory: "Automation";
-        price: 2200;
-        currency: "$";
+        category: "Business Solutions",
+        subcategory: "Automation",
+        price: 2200,
+        currency: "$",
         tags: ["Workflow", "Automation", "Business Process", "Efficiency", "Productivity"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -156,16 +259,33 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "2-4 Weeks";
         aiScore: 93;
         pricingTier: "Professional"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.7,
+        reviewCount: 98,
+        featured: true,
+        location: "Global",
+        availability: "2-4 Weeks",
+        aiScore: 93,
+        pricingTier: "Professional",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     {
-        id: "customer-support-ai";
-        title: "AI-Powered Customer Support Automation";
+        id: "customer-support-ai",
+        title: "AI-Powered Customer Support Automation",
         description: "Intelligent customer support system with ticket routing, automated responses, and customer satisfaction tracking.",
-        category: "Business Solutions";
-        subcategory: "Customer Support";
-        price: 1800;
-        currency: "$";
+        category: "Business Solutions",
+        subcategory: "Customer Support",
+        price: 1800,
+        currency: "$",
         tags: ["Customer Support", "AI", "Automation", "Ticket Management", "Analytics"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -178,17 +298,34 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "2-3 Weeks";
         aiScore: 91;
         pricingTier: "Starter"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.6,
+        reviewCount: 76,
+        featured: true,
+        location: "Global",
+        availability: "2-3 Weeks",
+        aiScore: 91,
+        pricingTier: "Starter",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     // E-commerce & Digital Marketing;
     {
-        id: "ecommerce-ai-optimization";
-        title: "E-commerce AI Optimization Suite";
+        id: "ecommerce-ai-optimization",
+        title: "E-commerce AI Optimization Suite",
         description: "AI-powered e-commerce optimization including product recommendations, pricing optimization, and customer behavior analysis.",
-        category: "E-commerce";
-        subcategory: "AI Optimization";
-        price: 3200;
-        currency: "$";
+        category: "E-commerce",
+        subcategory: "AI Optimization",
+        price: 3200,
+        currency: "$",
         tags: ["E-commerce", "AI", "Optimization", "Recommendations", "Analytics"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -201,16 +338,33 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "3-5 Weeks";
         aiScore: 95;
         pricingTier: "Professional"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.8,
+        reviewCount: 145,
+        featured: true,
+        location: "Global",
+        availability: "3-5 Weeks",
+        aiScore: 95,
+        pricingTier: "Professional",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     {
-        id: "digital-marketing-automation";
-        title: "Digital Marketing Automation Platform";
+        id: "digital-marketing-automation",
+        title: "Digital Marketing Automation Platform",
         description: "Comprehensive marketing automation platform with email campaigns, social media management, and lead nurturing.",
-        category: "Digital Marketing";
-        subcategory: "Automation";
-        price: 1500;
-        currency: "$";
+        category: "Digital Marketing",
+        subcategory: "Automation",
+        price: 1500,
+        currency: "$",
         tags: ["Marketing", "Automation", "Email", "Social Media", "Lead Generation"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -223,17 +377,34 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "2-3 Weeks";
         aiScore: 92;
         pricingTier: "Starter"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.7,
+        reviewCount: 112,
+        featured: true,
+        location: "Global",
+        availability: "2-3 Weeks",
+        aiScore: 92,
+        pricingTier: "Starter",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     // Healthcare & FinTech Solutions;
     {
-        id: "healthcare-ai-diagnostics";
-        title: "Healthcare AI Diagnostic Platform";
+        id: "healthcare-ai-diagnostics",
+        title: "Healthcare AI Diagnostic Platform",
         description: "AI-powered medical diagnostic platform with image analysis, patient data management, and clinical decision support.",
-        category: "Healthcare";
-        subcategory: "AI Diagnostics";
-        price: 8500;
-        currency: "$";
+        category: "Healthcare",
+        subcategory: "AI Diagnostics",
+        price: 8500,
+        currency: "$",
         tags: ["Healthcare", "AI", "Diagnostics", "Medical", "Image Analysis"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -246,16 +417,33 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "8-12 Weeks";
         aiScore: 99;
         pricingTier: "Enterprise"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.9,
+        reviewCount: 67,
+        featured: true,
+        location: "Global",
+        availability: "8-12 Weeks",
+        aiScore: 99,
+        pricingTier: "Enterprise",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     {
-        id: "fintech-compliance-security";
-        title: "FinTech Compliance & Security Suite";
+        id: "fintech-compliance-security",
+        title: "FinTech Compliance & Security Suite",
         description: "Complete financial technology compliance solution with security protocols, regulatory reporting, and audit trails.",
-        category: "FinTech";
-        subcategory: "Compliance & Security";
-        price: 7200;
-        currency: "$";
+        category: "FinTech",
+        subcategory: "Compliance & Security",
+        price: 7200,
+        currency: "$",
         tags: ["FinTech", "Compliance", "Security", "Regulatory", "Audit"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -268,17 +456,34 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "6-10 Weeks";
         aiScore: 96;
         pricingTier: "Enterprise"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.8,
+        reviewCount: 89,
+        featured: true,
+        location: "Global",
+        availability: "6-10 Weeks",
+        aiScore: 96,
+        pricingTier: "Enterprise",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     // IoT & Smart Solutions;
     {
-        id: "iot-management-platform";
-        title: "Enterprise IoT Management Platform";
+        id: "iot-management-platform",
+        title: "Enterprise IoT Management Platform",
         description: "Comprehensive IoT platform for device management, data collection, and real-time monitoring across multiple locations.",
-        category: "IoT Solutions";
-        subcategory: "Management Platform";
-        price: 5500;
-        currency: "$";
+        category: "IoT Solutions",
+        subcategory: "Management Platform",
+        price: 5500,
+        currency: "$",
         tags: ["IoT", "Device Management", "Monitoring", "Real-time", "Enterprise"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -291,16 +496,33 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "5-8 Weeks";
         aiScore: 94;
         pricingTier: "Professional"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.7,
+        reviewCount: 123,
+        featured: true,
+        location: "Global",
+        availability: "5-8 Weeks",
+        aiScore: 94,
+        pricingTier: "Professional",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     {
-        id: "smart-building-automation";
-        title: "Smart Building Automation System";
+        id: "smart-building-automation",
+        title: "Smart Building Automation System",
         description: "Intelligent building management system with energy optimization, security monitoring, and automated controls.",
-        category: "IoT Solutions";
-        subcategory: "Building Automation";
-        price: 4200;
-        currency: "$";
+        category: "IoT Solutions",
+        subcategory: "Building Automation",
+        price: 4200,
+        currency: "$",
         tags: ["Smart Building", "Automation", "Energy", "Security", "IoT"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
@@ -313,17 +535,34 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "4-6 Weeks";
         aiScore: 93;
         pricingTier: "Professional"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+        };
+        images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.6,
+        reviewCount: 87,
+        featured: true,
+        location: "Global",
+        availability: "4-6 Weeks",
+        aiScore: 93,
+        pricingTier: "Professional",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     // Education & Training Solutions;
     {
-        id: "ai-learning-management";
-        title: "AI-Powered Learning Management System";
+        id: "ai-learning-management",
+        title: "AI-Powered Learning Management System",
         description: "Intelligent LMS with personalized learning paths, adaptive assessments, and progress tracking for educational institutions.",
-        category: "Education";
-        subcategory: "Learning Management";
-        price: 3800;
-        currency: "$";
+        category: "Education",
+        subcategory: "Learning Management",
+        price: 3800,
+        currency: "$",
         tags: ["Education", "AI", "LMS", "Personalized Learning", "Assessment"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             email: "kleber@ziontechgroup.com";
@@ -337,16 +576,34 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "4-7 Weeks";
         aiScore: 95;
         pricingTier: "Professional"};
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            email: "kleber@ziontechgroup.com",
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",,
+        },
+        images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.8,
+        reviewCount: 156,
+        featured: true,
+        location: "Global",
+        availability: "4-7 Weeks",
+        aiScore: 95,
+        pricingTier: "Professional",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
     {
-        id: "vr-ar-training";
-        title: "VR/AR Training & Simulation Platform";
+        id: "vr-ar-training",
+        title: "VR/AR Training & Simulation Platform",
         description: "Immersive virtual and augmented reality training platform for corporate training, skill development, and simulation.",
-        category: "Education";
-        subcategory: "VR/AR Training";
-        price: 6500;
-        currency: "$";
+        category: "Education",
+        subcategory: "VR/AR Training",
+        price: 6500,
+        currency: "$",
         tags: ["VR", "AR", "Training", "Simulation", "Immersive"],
         author: {
+<<<<<<< HEAD:src/data/disabled/comprehensiveServices.js
             name: "Zion Tech Group";
             id: "zion-tech-group";
             email: "kleber@ziontechgroup.com";},
@@ -359,6 +616,22 @@ export const COMPREHENSIVE_SERVICES = [
         availability: "6-10 Weeks";
         aiScore: 97;
         pricingTier: "Enterprise"}
+=======
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            email: "kleber@ziontechgroup.com",,
+        },
+        images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2024-01-15T10:00:00.000Z",
+        rating: 4.9,
+        reviewCount: 78,
+        featured: true,
+        location: "Global",
+        availability: "6-10 Weeks",
+        aiScore: 97,
+        pricingTier: "Enterprise",
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/comprehensiveServices.js
 ];
     export const SERVICE_CATEGORIES = [
     "AI Services",

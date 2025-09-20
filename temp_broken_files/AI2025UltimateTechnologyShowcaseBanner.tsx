@@ -129,7 +129,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {,
                 </div>,
               </div>,
               {/* Orbiting Elements */}
-              {features.map((featureindex) => {,
+              {features.map((featureindex) : any => {,
                 const angle = (index * 90) * (Math.PI / 180),
                 const radius = 120,
                 const x = Math.cos(angle) * radius,
@@ -155,7 +155,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {,
               })}
               {/* Connection Lines */}
               <svg className="absolute inset-0 w-full h-full">,
-                {features.map((_index) => {,
+                {features.map((_index) : any => {,
                   const angle = (index * 90) * (Math.PI / 180),
                   const radius = 120,
                   const x1 = 160, // Center x,
@@ -173,8 +173,8 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {,
                       strokeWidth="2",
                       opacity="0.3",
                     />,
-                  ),
-                })}
+                  );
+  })}
                 <defs>,
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">,
                     <stop offset="0%" stopColor="#8b5cf6" />,

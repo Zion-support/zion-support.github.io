@@ -12,6 +12,11 @@ function withAuth() {
         }, [isLoggedInnavigate]),if (!isLoggedIn) {
             return null;
         };
+<<<<<<< HEAD
         return <Component {...props}/>},return Wrapped;
+=======
+        return <Component {...props}/>;
+  },return Wrapped;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };
 export, default, withAuth,</Component {...props}/><//Component {...props}/>

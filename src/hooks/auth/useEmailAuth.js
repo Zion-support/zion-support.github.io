@@ -13,9 +13,16 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             
             if (error) {
                 toast({
+<<<<<<< HEAD
                     title: "Login failed";
                     description: error.message;
                     variant: "destructive";});
+=======
+                    title: "Login failed",
+                    description: error.message,
+                    variant: "destructive",,
+                });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
                 return { error };
             }
             return { data };
@@ -23,9 +30,16 @@ export const useEmailAuth = (setUser, setIsLoading) => {
         catch (error) {
             
             toast({
+<<<<<<< HEAD
                 title: "Login failed";
                 description: error.message || "An unexpected error occurred";
                 variant: "destructive";});
+=======
+                title: "Login failed",
+                description: error.message || "An unexpected error occurred",
+                variant: "destructive",,
+            });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             return { error };
         }
         finally {
@@ -40,7 +54,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             // Attempt to sign out any existing session first to prevent conflicts;
             try {
                 await supabase.auth.signOut({ scope: 'global' });
-     }
+};
             catch (err) {
                 // Continue even if signout fails;
             }
@@ -49,13 +63,14 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                 email,
                 password,
                 options: {
-                    // Only store a simple display name in the profile data;
+                    // Only store a simple display name in the profile data,
                     data: {
                         display_name: userData?.displayName ?? userData?.name ?? ""};
                 }});
             
             if (error) {
                 toast({
+<<<<<<< HEAD
                     title: "Signup failed";
                     description: error.message;
                     variant: "destructive";});
@@ -64,14 +79,33 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             toast({
                 title: "Signup successful";
                 description: "Check your email for verification instructions.";});
+=======
+                    title: "Signup failed",
+                    description: error.message,
+                    variant: "destructive",,
+                });
+                return { error };
+            }
+            toast({
+                title: "Signup successful",
+                description: "Check your email for verification instructions.",,
+            });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             return { data };
         }
         catch (error) {
             
             toast({
+<<<<<<< HEAD
                 title: "Signup failed";
                 description: error.message || "An unexpected error occurred";
                 variant: "destructive";});
+=======
+                title: "Signup failed",
+                description: error.message || "An unexpected error occurred",
+                variant: "destructive",,
+            });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             return { error };
         }
         finally {
@@ -82,10 +116,11 @@ export const useEmailAuth = (setUser, setIsLoading) => {
         try {
             setIsLoading(true);
             const { error } = await supabase.auth.resetPasswordForEmail(email, {
-                redirectTo: `${window.location.origin}/update-password`;
+                redirectTo: `${window.location.origin}/update-password`,
             });
             if (error) {
                 toast({
+<<<<<<< HEAD
                     title: "Password reset failed";
                     description: error.message;
                     variant: "destructive";});
@@ -94,14 +129,33 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             toast({
                 title: "Password reset email sent";
                 description: "Check your email for password reset instructions.";});
+=======
+                    title: "Password reset failed",
+                    description: error.message,
+                    variant: "destructive",,
+                });
+                return { error };
+            }
+            toast({
+                title: "Password reset email sent",
+                description: "Check your email for password reset instructions.",,
+            });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             return {};
         }
         catch (error) {
             
             toast({
+<<<<<<< HEAD
                 title: "Password reset failed";
                 description: error.message || "An unexpected error occurred";
                 variant: "destructive";});
+=======
+                title: "Password reset failed",
+                description: error.message || "An unexpected error occurred",
+                variant: "destructive",,
+            });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             return { error };
         }
         finally {

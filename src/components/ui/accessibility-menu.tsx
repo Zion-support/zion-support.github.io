@@ -1,9 +1,10 @@
-import React, { useState; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
-import { Settings; FileText; Eye; Zap; Volume2; VolumeX } from "lucide-react, ";
+import React, { useState, useEffect } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
+import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
+<<<<<<< HEAD
 fontSize: "small" | "medium" | "large";,
 highContrast: boolean;,
 reducedMotion: boolean;,
@@ -24,6 +25,29 @@ if (savedSettings) {
 setSettings(JSON.parse(savedSettings));
 }
 }, []);
+=======
+  fontSize: "small" | "medium" | "large",
+    highContrast: boolean,
+    reducedMotion: boolean,
+    soundEnabled: boolean,,
+};
+export function AccessibilityMenu() : any {;
+  const [isOpen; setIsOpen] = useState(false);
+  const [settings; setSettings] = useState<AccessibilitySettings>({
+    fontSize: "medium",
+    highContrast: false,
+    reducedMotion: false,
+    soundEnabled: true,,
+  });
+
+    useEffect(() => {
+    // Load settings from localStorage;
+    const savedSettings = localStorage.getItem("accessibility-settings");
+    if (savedSettings) {
+      setSettings(JSON.parse(savedSettings));
+    }
+  }, []);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 useEffect(() => {
 // Apply settings to document;
@@ -32,6 +56,7 @@ applySettings(settings);
 localStorage.setItem("accessibility-settings", JSON.stringify(settings));
 }, [settings]);
 
+<<<<<<< HEAD
 const applySettings: any = (newSettings: AccessibilitySettings) => {;
 const root = document.documentElement;
 // Font size;
@@ -61,11 +86,57 @@ setSettings(prev => ({;
 [key]: !prev[key];
 }));
 };
+=======
+  const applySettings = (newSettings: AccessibilitySettings) : any => {
+    const root = document.documentElement,
+    // Font size;
+    root.style.setProperty("--font-size-multiplier", 
+      newSettings.fontSize === "small" ? "0.875" : 
+      newSettings.fontSize === "large" ? "1.125" : "1"
+    );
+    
+    // High contrast;
+    if (newSettings.highContrast) {
+      root.classList.add("high-contrast");
+    } else {
+      root.classList.remove("high-contrast");
+    }
+    
+    // Reduced motion;
+    if (newSettings.reducedMotion) {
+      root.classList.add("reduced-motion");
+    } else {
+      root.classList.remove("reduced-motion");
+    }
+  };
+
+  const toggleSetting = (key: keyof AccessibilitySettings) : any => {
+    setSettings(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
+  const updateFontSize = (size: "small" | "medium" | "large") : any => {
+    setSettings(prev => ({ ...prev, fontSize: size }));
+  };
+
+  const resetSettings = () => {
+    const defaultSettings: AccessibilitySettings = {
+      fontSize: "medium",
+      highContrast: false,
+      reducedMotion: false,
+      soundEnabled: true,,
+    };
+    setSettings(defaultSettings);
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const updateFontSize: any = (size: "small" | "medium" | "large") => {;
 setSettings(prev => ({ ...prev; fontSize: size }));
 };
 
+<<<<<<< HEAD
 const resetSettings: any = () => {
 const defaultSettings: AccessibilitySettings = {;
 fontSize: "medium";,
@@ -75,6 +146,30 @@ soundEnabled: true;,
 };
 setSettings(defaultSettings);
 };
+=======
+      {/* Menu Panel */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div,
+            className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl"
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          >
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-semibold text-white">Accessibility</h3>
+                <Button,
+                  variant="ghost"
+                  size="sm"
+                  onClick={resetSettings}
+                  className="text-zion-cyan hover: text-zion-cyan-light text-sm"
+                >
+                  Reset,
+                </Button>
+              </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <>
@@ -178,6 +273,7 @@ settings.reducedMotion;
 </Button>
 </div>
 
+<<<<<<< HEAD
 {/* Sound Toggle */}
 <div className="mb-6">
 <label className="flex items-center gap-3 text-white mb-3">
@@ -225,4 +321,20 @@ onClick={() => setIsOpen(false)}
 </AnimatePresence>
 </>
 );
+=======
+      {/* Backdrop */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div;
+            className="fixed inset-0 z-40 bg-black/20"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+    </>
+  ),
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }<//><///>

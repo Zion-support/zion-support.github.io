@@ -43,8 +43,8 @@ export async function resetPassword(token, password) {}
     ),'',
   const data = await res.json().catch(() => ({})),''',
   if (!res.ok) throw new Error(data.message || 'Failed to reset password'),
-  return data,
-}
+  return data;
+  }
 ",
 ",
     "method": 'PUT',",

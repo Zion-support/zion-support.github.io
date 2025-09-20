@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 import { render;screen  } from "@testing-library/reactimport ComprehensivePricingGuide2026 from ./ComprehensivePricingGuide2026describe(ComprehensivePricingGuide2026,() => {" it(renders without crashing",() => {" render(<ComprehensivePricingGuide2026 />) expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()}) it("displays expected content, ",() => { render(<ComprehensivePricingGuide2026 />);
+=======
+import { render,screen  } from "@testing-library/reactimport ComprehensivePricingGuide2026 from ./ComprehensivePricingGuide2026describe(ComprehensivePricingGuide2026,() => {" it(renders without crashing",() => {" render(<ComprehensivePricingGuide2026 />) expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument()});
+
+    it("displays expected content, ",() => { render(<ComprehensivePricingGuide2026 />)
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }}))</ComprehensivePricingGuide2026 /><//ComprehensivePricingGuide2026 />

@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Transform your enterprise with AI 2025 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.',
   keywords: ['AI enterprise transformation 2025digital transformationenterprise AIbusiness automation', 'AI consulting']
 }
-export default function AI2025EnterpriseTransformationPage() {
+export default function AI2025EnterpriseTransformationPage() : any {
   return (
     <div>
       <SEO

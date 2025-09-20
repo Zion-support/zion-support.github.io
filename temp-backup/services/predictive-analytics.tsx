@@ -8,6 +8,6 @@ export default function Predictiveanalytics({ }: PredictiveanalyticsProps) {,
     <div>,
       <h1>Predictiveanalytics</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>);
+  }
 ,

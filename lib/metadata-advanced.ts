@@ -3,14 +3,14 @@
  */
 
 export interface MetadataConfig {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  author: string;
+  title: string,
+  description: string,
+  keywords: string[],
+  canonicalUrl: string,
+  ogImage: string,
+  ogType: string,
+  twitterCard: string,
+  author: string,
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
@@ -20,16 +20,16 @@ export interface MetadataConfig {
 }
 
 export interface StructuredDataConfig {
-  type: 'article' | 'product' | 'organization' | 'website' | 'breadcrumb' | 'faq' | 'howto';
+  type: 'article' | 'product' | 'organization' | 'website' | 'breadcrumb' | 'faq' | 'howto',
   data: Record<string, any>;
 }
 
 export class MetadataOptimizer {
-  private config: MetadataConfig;
-  private structuredData: StructuredDataConfig[] = [];
+  private config: MetadataConfig,
+  private structuredData: StructuredDataConfig[] = [],
 
   constructor(config: MetadataConfig) {
-    this.config = config;
+    this.config = config,
   }
 
   public generateOptimizedMetadata() {
@@ -42,8 +42,8 @@ export class MetadataOptimizer {
       openGraph: this.generateOpenGraphMeta(),
       twitter: this.generateTwitterMeta(),
       article: this.generateArticleMeta(),
-      other: this.generateAdditionalMeta(),
-    };
+      other: this.generateAdditionalMeta();
+  };
   }
 
   private optimizeTitle(): string {
@@ -131,8 +131,8 @@ export class MetadataOptimizer {
       ...(this.config.modifiedTime && { modifiedTime: this.config.modifiedTime }),
       ...(this.config.section && { section: this.config.section }),
       ...(this.config.tags && { tags: this.config.tags }),
-      ...(this.config.author && { authors: [this.config.author] }),
-    };
+      ...(this.config.author && { authors: [this.config.author] });
+  };
   }
 
   private generateTwitterMeta() {
@@ -142,8 +142,8 @@ export class MetadataOptimizer {
       description: this.config.description,
       images: [this.config.ogImage],
       creator: '@ZionHoldings',
-      site: '@ZionHoldings',
-    };
+      site: '@ZionHoldings';
+  };
   }
 
   private generateArticleMeta() {
@@ -156,8 +156,8 @@ export class MetadataOptimizer {
       tags: this.config.tags,
       authors: [this.config.author],
       ...(this.config.readingTime && { readingTime: this.config.readingTime }),
-      ...(this.config.wordCount && { wordCount: this.config.wordCount }),
-    };
+      ...(this.config.wordCount && { wordCount: this.config.wordCount });
+  };
   }
 
   private generateAdditionalMeta() {
@@ -168,14 +168,13 @@ export class MetadataOptimizer {
       'color-scheme': 'light dark',
       'viewport': 'width=device-width, initial-scale=1.0',
       'format-detection': 'telephone=no',
-      'referrer': 'strict-origin-when-cross-origin',
-    };
+      'referrer': 'strict-origin-when-cross-origin';
+  };
   }
 
   public addStructuredData(config: StructuredDataConfig) {
     this.structuredData.push(config);
-  }
-
+};
   public generateStructuredDataScript(): string {
     const structuredDataArray = this.structuredData.map(config => {
       const baseStructure = {
@@ -228,7 +227,7 @@ export class MetadataOptimizer {
     return typeMap[type] || 'WebPage';
   }
 
-  public generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string; url: string }>) {
+  public generateBreadcrumbStructuredData(breadcrumbs: Array<{ name: string, url: string }>) {
     this.addStructuredData({
       type: 'breadcrumb',
       data: {
@@ -242,7 +241,7 @@ export class MetadataOptimizer {
     });
   }
 
-  public generateFAQStructuredData(faqs: Array<{ question: string; answer: string }>) {
+  public generateFAQStructuredData(faqs: Array<{ question: string, answer: string }>) {
     this.addStructuredData({
       type: 'faq',
       data: {
@@ -258,7 +257,7 @@ export class MetadataOptimizer {
     });
   }
 
-  public generateHowToStructuredData(steps: Array<{ name: string; text: string; image?: string }>) {
+  public generateHowToStructuredData(steps: Array<{ name: string, text: string, image?: string }>) {
     this.addStructuredData({
       type: 'howto',
       data: {
@@ -281,8 +280,8 @@ export class MetadataOptimizer {
   }
 
   public generateProductStructuredData(productData: {
-    name: string;
-    description: string;
+    name: string,
+    description: string,
     price?: number;
     currency?: string;
     availability?: string;
@@ -362,24 +361,24 @@ export class MetadataOptimizer {
   }
 
   public generateSitemapEntries(): Array<{
-    url: string;
-    lastmod: string;
-    changefreq: string;
-    priority: number;
+    url: string,
+    lastmod: string,
+    changefreq: string,
+    priority: number,
   }> {
     return [
       {
         url: this.config.canonicalUrl,
         lastmod: this.config.modifiedTime || new Date().toISOString().split('T')[0],
         changefreq: this.config.ogType === 'article' ? 'monthly' : 'weekly',
-        priority: this.config.ogType === 'article' ? 0.8 : 1.0,
-      },
+        priority: this.config.ogType === 'article' ? 0.8 : 1.0;
+  },
     ];
   }
 
   public generateMetaTags(): string {
     const metadata = this.generateOptimizedMetadata();
-    const tags: string[] = [];
+    const tags: string[] = [],
 
     // Basic meta tags
     tags.push(`<title>${metadata.title}</title>`);
@@ -394,27 +393,25 @@ export class MetadataOptimizer {
 
     // Open Graph tags
     if (metadata.openGraph) {
-      tags.push(`<meta property="og:title" content="${metadata.openGraph.title}" />`);
-      tags.push(`<meta property="og:description" content="${metadata.openGraph.description}" />`);
-      tags.push(`<meta property="og:url" content="${metadata.openGraph.url}" />`);
-      tags.push(`<meta property="og:type" content="${metadata.openGraph.type}" />`);
-      tags.push(`<meta property="og:site_name" content="${metadata.openGraph.siteName}" />`);
-      tags.push(`<meta property="og:image" content="${metadata.openGraph.images[0].url}" />`);
-      tags.push(`<meta property="og:image:width" content="${metadata.openGraph.images[0].width}" />`);
-      tags.push(`<meta property="og:image:height" content="${metadata.openGraph.images[0].height}" />`);
-    }
-
+      tags.push(`<meta property="og: title" content="${metadata.openGraph.title}" />`),
+      tags.push(`<meta property="og: description" content="${metadata.openGraph.description}" />`),
+      tags.push(`<meta property="og: url" content="${metadata.openGraph.url}" />`),
+      tags.push(`<meta property="og: type" content="${metadata.openGraph.type}" />`),
+      tags.push(`<meta property="og: site_name" content="${metadata.openGraph.siteName}" />`),
+      tags.push(`<meta property="og: image" content="${metadata.openGraph.images[0].url}" />`),
+      tags.push(`<meta property="og: image:width" content="${metadata.openGraph.images[0].width}" />`),
+      tags.push(`<meta property="og: image:height" content="${metadata.openGraph.images[0].height}" />`);
+};
     // Twitter Card tags
     if (metadata.twitter) {
-      tags.push(`<meta name="twitter:card" content="${metadata.twitter.card}" />`);
-      tags.push(`<meta name="twitter:title" content="${metadata.twitter.title}" />`);
-      tags.push(`<meta name="twitter:description" content="${metadata.twitter.description}" />`);
-      tags.push(`<meta name="twitter:image" content="${metadata.twitter.images[0]}" />`);
-    }
-
+      tags.push(`<meta name="twitter: card" content="${metadata.twitter.card}" />`),
+      tags.push(`<meta name="twitter: title" content="${metadata.twitter.title}" />`),
+      tags.push(`<meta name="twitter: description" content="${metadata.twitter.description}" />`),
+      tags.push(`<meta name="twitter: image" content="${metadata.twitter.images[0]}" />`);
+};
     // Additional meta tags
     if (metadata.other) {
-      Object.entries(metadata.other).forEach(([key, value]) => {
+      Object.entries(metadata.other).forEach(([key, value]) : any => {
         tags.push(`<meta name="${key}" content="${value}" />`);
       });
     }

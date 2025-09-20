@@ -38,7 +38,7 @@ const UltimateSuccess2025Banner: React.FC = () => {
         <div className="text-center mt-12">
           <Link
             href="/case-studies"
-            className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
           >
             Read More Success Stories
           </Link>
@@ -46,6 +46,6 @@ const UltimateSuccess2025Banner: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default UltimateSuccess2025Banner;

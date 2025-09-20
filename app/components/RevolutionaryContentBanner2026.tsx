@@ -1,5 +1,5 @@
 import Link from 'next/link'
-export default function RevolutionaryContentBanner2026() {
+export default function RevolutionaryContentBanner2026() : any {
   return (
     <section className="py-12 bg-gradient-to-r from-indigo-50 to-purple-50">
       <div>

@@ -1,8 +1,9 @@
-import React, { useState; useRef; useEffect } from "react;";
+import React, { useState, useRef, useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {
+<<<<<<< HEAD
 src: string; alt: string;
 width?: number;
 height?: number;
@@ -18,6 +19,23 @@ aspectRatio?: "square" | "video" | "auto" | number;
 objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
 blur?: boolean;
 quality?: number,
+=======
+  src: string, alt: string,
+    width?: number;
+  height?: number;
+  className?: string;
+  placeholder?: string;
+  fallback?: string;
+  priority?: boolean;
+  sizes?: string;
+  loading?: "lazy" | "eager";
+  onLoad?: () => void;
+  onError?: () => void;
+  aspectRatio?: "square" | "video" | "auto" | number;
+  objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
+  blur?: boolean;
+  quality?: number,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };
 export function OptimizedImage({;
 src;
@@ -47,6 +65,7 @@ const observerRef = useRef<IntersectionObserver | null>(null);
 useEffect(() => {
 if (priority || !imgRef.current) return;
 
+<<<<<<< HEAD
 observerRef.current = new IntersectionObserver(
 ([entry]) => {
 if (entry.isIntersecting) {
@@ -106,6 +125,86 @@ return "object-scale-down";,
 default: return "object-cover",
 }
 };
+=======
+    observerRef.current = new IntersectionObserver(
+      ([entry]) : any => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observerRef.current?.disconnect();
+};
+      },
+      {
+        rootMargin: "50px", threshold: 0.1,
+      }
+    );
+    observerRef.current.observe(imgRef.current);
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+  }
+    };
+  }, [priority]);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+    onLoad?.();
+  };
+
+  const handleError = () => {
+    setHasError(true);
+    onError?.();
+  };
+
+  const getAspectRatioClass = () => {
+    if (typeof aspectRatio === "number") {
+      return `aspect-[${aspectRatio}]`;
+    }
+    
+    switch (aspectRatio) {
+      case "square":
+        return "aspect-square";
+      case "video":
+        return "aspect-video";
+      default: return "";
+  }
+  };
+
+  const getObjectFitClass = () => {
+    switch (objectFit) {
+      case "cover":
+        return "object-cover";
+      case "contain":
+        return "object-contain";
+      case "fill":
+        return "object-fill";
+      case "none":
+        return "object-none";
+      case "scale-down":
+        return "object-scale-down";
+      default: return "object-cover";
+  }
+  };
+
+  // Generate responsive image sources;
+  const generateSrcSet = (imageSrc: string) : any => {
+    if (!imageSrc.includes("http")) return imageSrc,
+    const baseUrl = imageSrc.split("?")[0];
+    const params = new URLSearchParams(imageSrc.split("?")[1] || "");
+    
+    const widths = [320; 640; 768; 1024; 1280; 1920];
+    const srcSet = widths;
+      .filter(w => !width || w <= width)
+      .map(w => {
+        params.set("w", w.toString());
+        params.set("q", quality.toString()),
+        return `${baseUrl}?${params.toString()} ${w}w`;
+      })
+      .join(", ");
+    
+    return srcSet;
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Generate responsive image sources;
 const generateSrcSet: any = (imageSrc: string) => {;
@@ -113,6 +212,7 @@ if (!imageSrc.includes("http")) return imageSrc;
 const baseUrl = imageSrc.split("?")[0];
 const params = new URLSearchParams(imageSrc.split("?")[1] || "");
 
+<<<<<<< HEAD
 const widths = [320; 640; 768; 1024; 1280; 1920];
 const srcSet = widths;
 .filter(w => !width || w <= width)
@@ -125,6 +225,51 @@ return `${baseUrl}?${params.toString()} ${w}w`;
 
 return srcSet;
 };
+=======
+  return (
+    <div;
+      className={cn(
+        "relative overflow-hidden",
+        getAspectRatioClass(),
+        className,
+      )}
+      style={{
+        width: width ? `${width}px` : "auto", height: height ? `${height}px` : "auto"
+      }}
+    >
+      <AnimatePresence mode="wait">
+        {!isLoaded && (
+          <motion.div,
+            key="placeholder"
+            className="absolute inset-0 bg-zion-slate-light/20 animate-pulse"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          />
+        )}
+      </AnimatePresence>
+
+      <img,
+        ref={imgRef}
+        src={currentSrc}
+        alt={alt}
+        width={width}
+        height={height}
+        className={cn(
+          "w-full h-full transition-opacity duration-300",
+          getObjectFitClass(),
+          isLoaded ? "opacity-100" : "opacity-0"
+        )}
+        loading={loading}
+        sizes={sizes}
+        srcSet={srcSet}
+        onLoad={handleLoad}
+        onError={handleError}
+        style={{
+          filter: blur && !isLoaded ? "blur(10px)" : "none",
+        }}
+      />
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const currentSrc = hasError ? fallback : (isInView ? src : placeholder);
 const srcSet = generateSrcSet(currentSrc);
@@ -205,6 +350,7 @@ className,
 }: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
 size?: "sm" | "md" | "lg" | "xl",
 }) {
+<<<<<<< HEAD
 const sizeClasses = {;
 sm: "w-8 h-8", md: "w-10 h-10";,
 lg: "w-12 h-12",
@@ -220,6 +366,23 @@ className={cn(sizeClasses[size], "rounded-full", className)}
 {...props}
 />
 );
+=======
+  const sizeClasses = {
+    sm: "w-8 h-8", md: "w-10 h-10",
+    lg: "w-12 h-12",
+    xl: "w-16 h-16",
+  };
+    return (
+    <OptimizedImage;
+      src={src}
+      alt={alt}
+      aspectRatio="square"
+      objectFit="cover"
+      className={cn(sizeClasses[size], "rounded-full", className)}
+      {...props}
+    />
+  );
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 // Hero image component;

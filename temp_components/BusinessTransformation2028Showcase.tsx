@@ -175,4 +175,5 @@ const BusinessTransformation2028Showcase: React.FC = () => {
   )
 },
 
-export default BusinessTransformation2028Showcase,
+export default BusinessTransformation2028Showcase;
+  }

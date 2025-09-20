@@ -1,17 +1,26 @@
 export const ENHANCED_AI_SERVICES = [
     {
-        id: "ai-chatbot-platform";
-        title: "AI Chatbot Platform";
+        id: "ai-chatbot-platform",
+        title: "AI Chatbot Platform",
         description: "Intelligent conversational AI platform for customer service, lead generation, and business automation.",
-        category: "Conversational AI";
+        category: "Conversational AI",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 299;
             yearly: 2990;
             custom: "Enterprise pricing available";
             currency: "$";
             pricingModel: "Monthly subscription with usage-based pricing"};
+=======
+            monthly: 299,
+            yearly: 2990,
+            custom: "Enterprise pricing available",
+            currency: "$",
+            pricingModel: "Monthly subscription with usage-based pricing",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "Natural language processing";
+            "Natural language processing",
             "Multi-language support",
             "Integration with CRM systems",
             "Analytics and reporting",
@@ -19,13 +28,13 @@ export const ENHANCED_AI_SERVICES = [
             "Voice and text support"
         ],
         benefits: [
-            "Reduce customer service costs by 60%";
+            "Reduce customer service costs by 60%",
             "Improve response time by 90%",
             "Handle 70% of queries automatically",
             "Increase customer satisfaction by 45%"
         ],
         useCases: [
-            "Customer support automation";
+            "Customer support automation",
             "Lead qualification",
             "FAQ handling",
             "Appointment scheduling",
@@ -41,28 +50,45 @@ export const ENHANCED_AI_SERVICES = [
             "Zendesk", "Intercom", "Slack", "Microsoft Teams"
         ],
         support: [
-            "24/7 technical support";
+            "24/7 technical support",
             "Custom training",
             "API documentation",
             "Implementation assistance"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-chatbot-platform";
         badge: "Popular";
         icon: "💬";
         image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-chatbot-platform",
+        badge: "Popular",
+        icon: "💬",
+        image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
     {
-        id: "ai-content-generation-suite";
-        title: "AI Content Generation Suite";
+        id: "ai-content-generation-suite",
+        title: "AI Content Generation Suite",
         description: "Comprehensive AI-powered content creation platform for marketing, SEO, and creative writing.",
-        category: "Content Generation";
+        category: "Content Generation",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 199;
             yearly: 1990;
             custom: "Agency and enterprise plans";
             currency: "$";
             pricingModel: "Monthly subscription with content volume tiers"};
+=======
+            monthly: 199,
+            yearly: 1990,
+            custom: "Agency and enterprise plans",
+            currency: "$",
+            pricingModel: "Monthly subscription with content volume tiers",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "Blog post generation";
+            "Blog post generation",
             "Social media content",
             "Email marketing copy",
             "Product descriptions",
@@ -70,13 +96,13 @@ export const ENHANCED_AI_SERVICES = [
             "Multi-language support"
         ],
         benefits: [
-            "Save 20+ hours weekly on content creation";
+            "Save 20+ hours weekly on content creation",
             "Improve SEO rankings by 40%",
             "Increase engagement rates by 60%",
             "Reduce content costs by 70%"
         ],
         useCases: [
-            "Blog content creation";
+            "Blog content creation",
             "Social media marketing",
             "Email campaigns",
             "E-commerce content",
@@ -92,27 +118,43 @@ export const ENHANCED_AI_SERVICES = [
             "Hootsuite", "HubSpot", "Salesforce"
         ],
         support: [
-            "Content strategy consultation";
+            "Content strategy consultation",
             "SEO optimization guidance",
             "Training and workshops",
             "Priority support"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-content-generation-suite";
         icon: "✍️";
         image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-content-generation-suite",
+        icon: "✍️",
+        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
     {
-        id: "ai-image-generation-platform";
-        title: "AI Image Generation Platform";
+        id: "ai-image-generation-platform",
+        title: "AI Image Generation Platform",
         description: "Advanced AI-powered image creation platform for marketing, design, and creative projects.",
-        category: "Computer Vision";
+        category: "Computer Vision",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 149;
             yearly: 1490;
             custom: "Custom enterprise solutions";
             currency: "$";
             pricingModel: "Monthly subscription with image generation credits"};
+=======
+            monthly: 149,
+            yearly: 1490,
+            custom: "Custom enterprise solutions",
+            currency: "$",
+            pricingModel: "Monthly subscription with image generation credits",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "Text-to-image generation";
+            "Text-to-image generation",
             "Image editing and manipulation",
             "Style transfer capabilities",
             "Batch processing",
@@ -120,13 +162,13 @@ export const ENHANCED_AI_SERVICES = [
             "Commercial licensing"
         ],
         benefits: [
-            "Reduce design costs by 80%";
+            "Reduce design costs by 80%",
             "Accelerate creative workflows",
             "Generate unlimited variations",
             "Maintain brand consistency"
         ],
         useCases: [
-            "Marketing materials";
+            "Marketing materials",
             "Product photography",
             "Social media graphics",
             "Website design",
@@ -142,27 +184,43 @@ export const ENHANCED_AI_SERVICES = [
             "WordPress", "Social media platforms"
         ],
         support: [
-            "Design consultation";
+            "Design consultation",
             "Technical support",
             "Training resources",
             "Custom model training"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-image-generation-platform";
         icon: "🎨";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-image-generation-platform",
+        icon: "🎨",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
     {
-        id: "ai-predictive-analytics";
-        title: "AI Predictive Analytics Platform";
-        description: "Advanced predictive analytics and forecasting platform powered by machine learning algorithms.";
-        category: "Predictive Analytics";
+        id: "ai-predictive-analytics",
+        title: "AI Predictive Analytics Platform",
+        description: "Advanced predictive analytics and forecasting platform powered by machine learning algorithms.",
+        category: "Predictive Analytics",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 399;
             yearly: 3990;
             custom: "Enterprise and custom solutions";
             currency: "$";
             pricingModel: "Monthly subscription with data volume tiers"};
+=======
+            monthly: 399,
+            yearly: 3990,
+            custom: "Enterprise and custom solutions",
+            currency: "$",
+            pricingModel: "Monthly subscription with data volume tiers",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "Time series forecasting";
+            "Time series forecasting",
             "Predictive modeling",
             "Anomaly detection",
             "Risk assessment",
@@ -170,13 +228,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom algorithm training"
         ],
         benefits: [
-            "Improve decision-making accuracy by 65%";
+            "Improve decision-making accuracy by 65%",
             "Reduce operational risks by 40%",
             "Optimize resource allocation",
             "Identify new business opportunities"
         ],
         useCases: [
-            "Sales forecasting";
+            "Sales forecasting",
             "Demand planning",
             "Risk management",
             "Customer behavior prediction",
@@ -192,28 +250,45 @@ export const ENHANCED_AI_SERVICES = [
             "SQL databases", "Cloud platforms"
         ],
         support: [
-            "Data science consultation";
+            "Data science consultation",
             "Model optimization",
             "Implementation support",
             "Training and certification"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-predictive-analytics";
         badge: "Featured";
         icon: "🔮";
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-predictive-analytics",
+        badge: "Featured",
+        icon: "🔮",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
     {
-        id: "ai-process-automation";
-        title: "AI Process Automation Platform";
-        description: "Intelligent process automation platform that combines RPA with AI for end-to-end business process optimization.";
-        category: "Process Automation";
+        id: "ai-process-automation",
+        title: "AI Process Automation Platform",
+        description: "Intelligent process automation platform that combines RPA with AI for end-to-end business process optimization.",
+        category: "Process Automation",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 249;
             yearly: 2490;
             custom: "Enterprise automation solutions";
             currency: "$";
             pricingModel: "Monthly subscription with process complexity tiers"};
+=======
+            monthly: 249,
+            yearly: 2490,
+            custom: "Enterprise automation solutions",
+            currency: "$",
+            pricingModel: "Monthly subscription with process complexity tiers",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "Intelligent document processing";
+            "Intelligent document processing",
             "Workflow automation",
             "Decision automation",
             "Process optimization",
@@ -221,13 +296,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom workflow builder"
         ],
         benefits: [
-            "Reduce manual processing by 85%";
+            "Reduce manual processing by 85%",
             "Improve process efficiency by 60%",
             "Reduce errors by 90%",
             "Accelerate process completion by 70%"
         ],
         useCases: [
-            "Invoice processing";
+            "Invoice processing",
             "Customer onboarding",
             "Claims processing",
             "HR automation",
@@ -243,27 +318,43 @@ export const ENHANCED_AI_SERVICES = [
             "Microsoft Office", "Google Workspace"
         ],
         support: [
-            "Process analysis";
+            "Process analysis",
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-process-automation";
         icon: "⚙️";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-process-automation",
+        icon: "⚙️",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
     {
-        id: "ai-customer-insights-platform";
-        title: "AI Customer Insights Platform";
-        description: "Advanced customer analytics platform that uses AI to uncover deep insights and predict customer behavior.";
-        category: "Customer Analytics";
+        id: "ai-customer-insights-platform",
+        title: "AI Customer Insights Platform",
+        description: "Advanced customer analytics platform that uses AI to uncover deep insights and predict customer behavior.",
+        category: "Customer Analytics",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 299;
             yearly: 2990;
             custom: "Enterprise customer intelligence";
             currency: "$";
             pricingModel: "Monthly subscription with customer data volume tiers"};
+=======
+            monthly: 299,
+            yearly: 2990,
+            custom: "Enterprise customer intelligence",
+            currency: "$",
+            pricingModel: "Monthly subscription with customer data volume tiers",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "Customer segmentation";
+            "Customer segmentation",
             "Behavioral analysis",
             "Churn prediction",
             "Lifetime value calculation",
@@ -271,13 +362,13 @@ export const ENHANCED_AI_SERVICES = [
             "Real-time insights"
         ],
         benefits: [
-            "Increase customer retention by 35%";
+            "Increase customer retention by 35%",
             "Improve customer lifetime value by 45%",
             "Reduce churn by 50%",
             "Enhance personalization effectiveness"
         ],
         useCases: [
-            "Customer retention";
+            "Customer retention",
             "Marketing personalization",
             "Product recommendations",
             "Customer service optimization",
@@ -293,27 +384,43 @@ export const ENHANCED_AI_SERVICES = [
             "Google Analytics", "Facebook Pixel"
         ],
         support: [
-            "Customer analytics consultation";
+            "Customer analytics consultation",
             "Implementation support",
             "Training and workshops",
             "Ongoing optimization"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-customer-insights-platform";
         icon: "👥";
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-customer-insights-platform",
+        icon: "👥",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
     {
-        id: "ai-voice-assistant-platform";
-        title: "AI Voice Assistant Platform";
+        id: "ai-voice-assistant-platform",
+        title: "AI Voice Assistant Platform",
         description: "Enterprise-grade voice assistant platform for customer service, internal operations, and accessibility.",
-        category: "Voice AI";
+        category: "Voice AI",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 199;
             yearly: 1990;
             custom: "Custom voice solutions";
             currency: "$";
             pricingModel: "Monthly subscription with usage-based pricing"};
+=======
+            monthly: 199,
+            yearly: 1990,
+            custom: "Custom voice solutions",
+            currency: "$",
+            pricingModel: "Monthly subscription with usage-based pricing",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "Natural language understanding";
+            "Natural language understanding",
             "Multi-language support",
             "Voice biometrics",
             "Custom voice training",
@@ -321,13 +428,13 @@ export const ENHANCED_AI_SERVICES = [
             "Analytics dashboard"
         ],
         benefits: [
-            "Improve accessibility for all users";
+            "Improve accessibility for all users",
             "Reduce call center costs by 40%",
             "Enhance customer experience",
             "Increase operational efficiency"
         ],
         useCases: [
-            "Customer service calls";
+            "Customer service calls",
             "Internal operations",
             "Accessibility solutions",
             "Smart home integration",
@@ -343,27 +450,43 @@ export const ENHANCED_AI_SERVICES = [
             "Mobile apps", "Web applications"
         ],
         support: [
-            "Voice design consultation";
+            "Voice design consultation",
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-voice-assistant-platform";
         icon: "🎤";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-voice-assistant-platform",
+        icon: "🎤",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
     {
-        id: "ai-data-quality-platform";
-        title: "AI Data Quality Platform";
+        id: "ai-data-quality-platform",
+        title: "AI Data Quality Platform",
         description: "Intelligent data quality management platform that automatically detects, cleans, and validates data.",
-        category: "Data Quality";
+        category: "Data Quality",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 179;
             yearly: 1790;
             custom: "Enterprise data solutions";
             currency: "$";
             pricingModel: "Monthly subscription with data volume tiers"};
+=======
+            monthly: 179,
+            yearly: 1790,
+            custom: "Enterprise data solutions",
+            currency: "$",
+            pricingModel: "Monthly subscription with data volume tiers",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "Automated data cleaning";
+            "Automated data cleaning",
             "Quality scoring",
             "Duplicate detection",
             "Data validation rules",
@@ -371,13 +494,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom quality metrics"
         ],
         benefits: [
-            "Improve data accuracy by 90%";
+            "Improve data accuracy by 90%",
             "Reduce data processing time by 70%",
             "Eliminate duplicate records",
             "Ensure compliance requirements"
         ],
         useCases: [
-            "Data migration";
+            "Data migration",
             "CRM data cleaning",
             "Financial data validation",
             "Healthcare data quality",
@@ -393,27 +516,43 @@ export const ENHANCED_AI_SERVICES = [
             "ETL tools", "Data warehouses"
         ],
         support: [
-            "Data quality assessment";
+            "Data quality assessment",
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-data-quality-platform";
         icon: "🧹";
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-data-quality-platform",
+        icon: "🧹",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
     {
-        id: "ai-translation-platform";
-        title: "AI Translation Platform";
-        description: "Advanced AI-powered translation platform supporting 100+ languages with industry-specific terminology.";
-        category: "Language AI";
+        id: "ai-translation-platform",
+        title: "AI Translation Platform",
+        description: "Advanced AI-powered translation platform supporting 100+ languages with industry-specific terminology.",
+        category: "Language AI",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 129;
             yearly: 1290;
             custom: "Enterprise translation solutions";
             currency: "$";
             pricingModel: "Monthly subscription with translation volume tiers"};
+=======
+            monthly: 129,
+            yearly: 1290,
+            custom: "Enterprise translation solutions",
+            currency: "$",
+            pricingModel: "Monthly subscription with translation volume tiers",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "100+ language support";
+            "100+ language support",
             "Industry-specific terminology",
             "Real-time translation",
             "Document translation",
@@ -421,13 +560,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom training"
         ],
         benefits: [
-            "Reduce translation costs by 60%";
+            "Reduce translation costs by 60%",
             "Accelerate global expansion",
             "Improve communication accuracy",
             "Maintain brand consistency"
         ],
         useCases: [
-            "Website localization";
+            "Website localization",
             "Document translation",
             "Customer support",
             "Marketing campaigns",
@@ -443,27 +582,43 @@ export const ENHANCED_AI_SERVICES = [
             "Microsoft Office", "Google Workspace"
         ],
         support: [
-            "Localization consultation";
+            "Localization consultation",
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-translation-platform";
         icon: "🌍";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"};
+=======
+        link: "https://ziontechgroup.com/ai-translation-platform",
+        icon: "🌍",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
     {
-        id: "ai-recommendation-engine";
-        title: "AI Recommendation Engine";
-        description: "Intelligent recommendation system that personalizes user experiences and increases conversion rates.";
-        category: "Recommendation Systems";
+        id: "ai-recommendation-engine",
+        title: "AI Recommendation Engine",
+        description: "Intelligent recommendation system that personalizes user experiences and increases conversion rates.",
+        category: "Recommendation Systems",
         pricing: {
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
             monthly: 349;
             yearly: 3490;
             custom: "Custom recommendation solutions";
             currency: "$";
             pricingModel: "Monthly subscription with recommendation volume tiers"};
+=======
+            monthly: 349,
+            yearly: 3490,
+            custom: "Custom recommendation solutions",
+            currency: "$",
+            pricingModel: "Monthly subscription with recommendation volume tiers",
+        };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
         features: [
-            "Collaborative filtering";
+            "Collaborative filtering",
             "Content-based filtering",
             "Real-time recommendations",
             "A/B testing",
@@ -471,13 +626,13 @@ export const ENHANCED_AI_SERVICES = [
             "Custom algorithms"
         ],
         benefits: [
-            "Increase conversion rates by 35%";
+            "Increase conversion rates by 35%",
             "Improve user engagement by 50%",
             "Reduce bounce rates by 40%",
             "Enhance customer satisfaction"
         ],
         useCases: [
-            "E-commerce recommendations";
+            "E-commerce recommendations",
             "Content personalization",
             "Product suggestions",
             "Service recommendations",
@@ -493,15 +648,23 @@ export const ENHANCED_AI_SERVICES = [
             "Custom platforms", "Mobile apps"
         ],
         support: [
-            "Recommendation strategy";
+            "Recommendation strategy",
             "Implementation support",
             "Training and certification",
             "Ongoing optimization"
         ],
+<<<<<<< HEAD:src/data/disabled/enhancedAIServices.js
         link: "https://ziontechgroup.com/ai-recommendation-engine";
         badge: "Premium";
         icon: "🎯";
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"}
+=======
+        link: "https://ziontechgroup.com/ai-recommendation-engine",
+        badge: "Premium",
+        icon: "🎯",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/enhancedAIServices.js
 ];
     export const getAIServiceById = (id) => {
     return ENHANCED_AI_SERVICES.find(service => service.id === id);

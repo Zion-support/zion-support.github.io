@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react, ';
 export const useAccessibility = () => {
     const [preferences, setPreferences] = useState({
+<<<<<<< HEAD
         highContrast: false;
         largeText: false;
         reducedMotion: false;
@@ -12,6 +13,22 @@ export const useAccessibility = () => {
         colorScheme: 'default';
         motionPreference: 'no-preference';
         focusStyle: 'default'});
+=======
+        highContrast: false,
+        largeText: false,
+        reducedMotion: false,
+        focusIndicator: true,
+        screenReader: false,
+        keyboardNavigation: true,
+    });
+
+  const [settings, setSettings] = useState({
+        fontSize: 'medium',
+        colorScheme: 'default',
+        motionPreference: 'no-preference',
+        focusStyle: 'default',
+    });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     // Load preferences from localStorage;
     useEffect(() => {
         const savedPreferences = localStorage.getItem('zion-accessibility-preferences');
@@ -39,7 +56,8 @@ export const useAccessibility = () => {
         setPreferences(updatedPreferences);
         localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences));
     }, [preferences]);
-    const saveSettings = useCallback((newSettings) => {
+
+  const saveSettings = useCallback((newSettings) => {
         const updatedSettings = { ...settings, ...newSettings };
         setSettings(updatedSettings);
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings));
@@ -130,7 +148,8 @@ export const useAccessibility = () => {
             focusableElements[0].focus();
         }
     }, []);
-    const trapFocus = useCallback((container) => {
+
+  const trapFocus = useCallback((container) => {
         const focusableElements = Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => {
             const element = el;
             return !element.disabled;

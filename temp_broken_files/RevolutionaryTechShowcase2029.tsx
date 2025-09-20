@@ -332,5 +332,5 @@ const RevolutionaryTechShowcase2029: React.FC = () => {,
         </div>,
       </div>,
     </div>)},
-export default RevolutionaryTechShowcase2029,
-})
+export default RevolutionaryTechShowcase2029;
+  })

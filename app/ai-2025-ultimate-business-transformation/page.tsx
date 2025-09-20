@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: ['AI transformation', 'business AI', 'AI implementation', 'digital transformation', 'AI ROI', '2025 AI trends']
 }
 
-export default function AI2025UltimateBusinessTransformationPage() {
+export default function AI2025UltimateBusinessTransformationPage() : any {
   return (
     <div>
       <div className="min-h-screen bg-gray-900 text-white">

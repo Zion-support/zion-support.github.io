@@ -17,7 +17,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
   canonical = 'https://ziontechgroup.com'
-}) => {
+}) : any => {
   return (
     <>
       <Head>
@@ -97,7 +97,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <ModernFooter />
       </div>
     </>
-  ),
-},
+  );
+  },
 
 export default ModernLayout,

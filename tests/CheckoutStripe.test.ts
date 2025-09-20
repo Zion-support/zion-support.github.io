@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test',
 
 // Basic e2e test to ensure checkout redirects to Stripe test page
 
-test('checkout redirects to stripe', async ({ page }) => {
+test('checkout redirects to stripe', async ({ page }) : any => {
   await page.addInitScript(() => {
     localStorage.setItem('cart', JSON.stringify([{ id: 'prod_mock', name: 'Test', price: 10, quantity: 1 }])),
   }),

@@ -172,4 +172,4 @@ export const dynamicPaths = {
         { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 },
         { path: '/marketplace/services', title: 'Tech Services', priority: 0.8 }
     ]
-};
+},'

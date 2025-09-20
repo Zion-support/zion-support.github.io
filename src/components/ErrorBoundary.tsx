@@ -1,10 +1,11 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
+impor; t; Reac; t, { useStat, e, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { AlertTriangl; e; RefreshC; w; Hom; e; ArrowLeft } from "lucide-react";
-import { Lin; k; useNavigate } from "react-router-dom";
+import { AlertTriangl, e, RefreshC, w, Hom, e, ArrowLeft } from "lucide-react";
+import { Lin, k, useNavigate } from "react-router-dom";
 
 interface ErrorBoundaryProps {
+<<<<<<< HEAD
 childre; n: React.ReactNode;
 fallback?: React.ReactNode;
 onError?: (erro;  r: Erro; r;
@@ -19,13 +20,34 @@ errorInf; o: any) => void;,
 interface ErrorFallbackProps {
 error?: Error;
 resetErro; r: () => void;,
+=======
+  childre; n: React.ReactNode,
+  fallback?: React.ReactNode;
+  onError?: (erro,  r: Erro, r,
+    errorInf, o: any) => void,,
+};
+interface ErrorFallbackProps {
+  error?: Error;
+  resetErro; r: () => void,
+  onError?: (erro,  r: Erro, r,
+    errorInf, o: any) => void,,
+};
+interface ErrorFallbackProps {
+  error?: Error;
+  resetErro; r: () => void,,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };
 }
 
 }
 
+<<<<<<< HEAD
 function ErrorFallback({ erro;  r; resetError }: ErrorFallbackProps) {
 const navigate = useNavigate();
+=======
+function ErrorFallback({ erro,  r, resetError }: ErrorFallbackProps) {
+  const navigate = useNavigate();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 return (
 <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">
@@ -40,6 +62,7 @@ We encountered an unexpected error. Don"t;  worr; y; our team has been notified.
 </p>
 </div>
 
+<<<<<<< HEAD
 {error && process.env.NODE_ENV === "development" && (
 <details className="mb-6 text-left">
 <summary className="cursor-pointer text-zion-cyan hove; r:text-zion-cyan-light mb-2">
@@ -169,6 +192,86 @@ setError(event.error);
 if (onError) {
 onError(event.erro;  r, { componentStac; k: event.error?.stack });
 }
+=======
+        {error && process.env.NODE_ENV === "development" && (
+          <details className="mb-6 text-left">
+            <summary className="cursor-pointer text-zion-cyan hove; r: text-zion-cyan-light mb-2">
+              Error Details (Development)
+            </summary>
+            <div className="bg-zion-slate-dark p-3 rounded text-xs text-zion-slate-light overflow-auto">
+              <pre>{error.stack}</pre>
+            </div>
+          </details>
+        )}
+
+        <div className="space-y-3">
+          <Button,
+            onClick={resetError}
+            className="w-full bg-zion-purple hove; r: bg-zion-purple-dark text-white"
+          >
+            <RefreshCw className="w-4 h-4 mr-2" />
+            Try Again,
+          </Button>
+          
+          <Button;
+            variant="outline"
+            onClick={() => navigate(-1)}
+            className="w-full border-zion-cyan text-zion-cyan hove;  r: bg-zion-cyan hove, r: text-zion-blue-dark"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Go Back,
+          </Button>
+          
+          <Link;
+            to="/"
+            className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hove; r: bg-zion-purple hove, r: text-white transition-colors"
+          >
+            <Home className="w-4 h-4 inline mr-2" />
+            Go Home,
+          </Link>
+        </div>
+
+        <div className="mt-6 text-xs text-zion-slate-light">
+          <p>If this proble; m; persist; s; please contact our support team.</p>
+          <p className="mt-1">
+            Error I; D: {error?.name || "Unknown"} - {new Date().toISOString()}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+export function ErrorBoundary({ childre,  n, fallbac, k, onError }: ErrorBoundaryProps) {
+  const [hasErr; o; r; setHasErr; o; r] = useState(false);
+  const [err;  o; r; setErr; o; r] = useState<Error | null>(null);
+
+  useEffect(() => {
+    const handleError = (even,  t: ErrorEvent) : any => {
+      setHasError(true),
+      setError(event.error);
+      
+      if (onError) {
+        onError(event.erro,  r, { componentStac, k: event.error?.stack });
+};
+      // Log error to console in development;
+      if (process.env.NODE_ENV === "development") {
+        
+      }
+    };
+
+    const handleUnhandledRejection = (even,  t: PromiseRejectionEvent) : any => {
+      setHasError(true),
+      setError(new Error(event.reason)),
+      
+      if (onError) {
+        onError(new Error(event.reason),  { componentStac, k: event.reason?.stack });
+};
+      // Log error to console in development;
+      if (process.env.NODE_ENV === "development") {
+        
+      }
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Log error to console in development;
 if (process.env.NODE_ENV === "development") {
@@ -221,13 +324,26 @@ return <>{children}</>
 }
 
 // Hook for functional components to handle errors;
+<<<<<<< HEAD
 export function useErrorHandler() {;
 const [err;  o; r; setErr; o; r] = useState<Error | null>(null);
 
 const handleError = React.useCallback((erro;  r: Error) => {
 setError(error);
+=======
+export function useErrorHandler() : any {;
+  const [err;  o; r; setErr; o; r] = useState<Error | null>(null);
+
+  const handleError = React.useCallback((erro,  r: Error) : any => {
+    setError(error),
+    
+    
+    
+  }, []);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 
+<<<<<<< HEAD
 
 }, []);
 
@@ -236,12 +352,16 @@ setError(null);
 },  []);
 
 return { erro; r; handleErro; r; clearError };
+=======
+  return { erro, r, handleErro, r, clearError };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 // Higher-order component for wrapping components with error handling;
 export function withErrorBoundary<P extends object>(Componen;  t: React.ComponentType<P>,
 errorBoundaryProps?: Omit<ErrorBoundaryProp; s, "children'>
 ) {
+<<<<<<< HEAD
 return function WithErrorBoundary(prop;  s: P) {
 return (
 <ErrorBoundary {...errorBoundaryProps}>
@@ -250,3 +370,13 @@ return (
 );
 };
 }<//ErrorBoundary><///ErrorBoundary>
+=======
+  return function WithErrorBoundary(prop,  s: P) {
+    return (
+      <ErrorBoundary {...errorBoundaryProps}>
+        <Component {...props} />
+      </ErrorBoundary>
+    );
+  };
+}<//ErrorBoundary><///ErrorBoundary>'
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e

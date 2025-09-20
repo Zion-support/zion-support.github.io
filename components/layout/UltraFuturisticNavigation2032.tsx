@@ -24,7 +24,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -110,7 +110,7 @@ const mainNavigation = [
   { name: 'Case Studies', href: '/case-studies', icon: TrendingUp },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -119,9 +119,9 @@ const companyLinks = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-];
+],
 
-export default function UltraFuturisticNavigation2032() {
+export default function UltraFuturisticNavigation2032() : any {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -343,7 +343,7 @@ export default function UltraFuturisticNavigation2032() {
                                 key={serviceIndex}
                                 href={service.href}
                                 onClick={closeMenu}
-                                className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1"
+                                className="block text-sm text-gray-400 hover: text-cyan-400 transition-colors py-1"
                               >
                                 {service.name}
                               </Link>
@@ -409,4 +409,4 @@ export default function UltraFuturisticNavigation2032() {
       <div className="h-20" />
     </>
   );
-}
+  }

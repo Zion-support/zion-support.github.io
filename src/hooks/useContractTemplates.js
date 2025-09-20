@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react, ';
 export const useContractTemplates = () => {
     const [templates, setTemplates] = useState([]);
-    const [loading, setLoading] = useState(true);
+
+  const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
         const fetchTemplates = async () => {
@@ -12,13 +13,14 @@ export const useContractTemplates = () => {
                 // Mock data - in real app, this would come from API;
                 const mockTemplates = [
                     {
-                        id: '1';
-                        name: 'Freelance Service Agreement';
-                        description: 'Standard agreement for freelance services';
-                        category: 'Freelance';
-                        content: 'This agreement is made between...';
+                        id: '1',
+                        name: 'Freelance Service Agreement',
+                        description: 'Standard agreement for freelance services',
+                        category: 'Freelance',
+                        content: 'This agreement is made between...',
                         variables: [
                             {
+<<<<<<< HEAD
                                 name: 'clientName';
                                 type: 'string';
                                 description: 'Name of the client';
@@ -42,14 +44,44 @@ export const useContractTemplates = () => {
                         usageCount: 1250;
                         rating: 4.8;
                         tags: ['freelance', 'agreement', 'services']},
+=======
+                                name: 'clientName',
+                                type: 'string',
+                                description: 'Name of the client',
+                                required: true,,
+                            },
+                            {
+                                name: 'serviceDescription',
+                                type: 'string',
+                                description: 'Description of services to be provided',
+                                required: true,,
+                            },
+                            {
+                                name: 'rate',
+                                type: 'number',
+                                description: 'Hourly rate for services',
+                                required: true,,
+                            },
+                        ],
+                        isPublic: true,
+                        createdAt: '2024-01-01T00:00:00Z',
+                        updatedAt: '2024-01-01T00:00:00Z',
+                        authorId: 'admin',
+                        authorName: 'Admin',
+                        usageCount: 1250,
+                        rating: 4.8,
+                        tags: ['freelance', 'agreement', 'services'],
+                    },
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
                     {
-                        id: '2';
-                        name: 'Non-Disclosure Agreement';
-                        description: 'Confidentiality agreement template';
-                        category: 'Legal';
-                        content: 'This Non-Disclosure Agreement...';
+                        id: '2',
+                        name: 'Non-Disclosure Agreement',
+                        description: 'Confidentiality agreement template',
+                        category: 'Legal',
+                        content: 'This Non-Disclosure Agreement...',
                         variables: [
                             {
+<<<<<<< HEAD
                                 name: 'companyName';
                                 type: 'string';
                                 description: 'Name of the company';
@@ -69,6 +101,30 @@ export const useContractTemplates = () => {
                         usageCount: 890;
                         rating: 4.6;
                         tags: ['nda', 'confidentiality', 'legal']},
+=======
+                                name: 'companyName',
+                                type: 'string',
+                                description: 'Name of the company',
+                                required: true,,
+                            },
+                            {
+                                name: 'confidentialityPeriod',
+                                type: 'number',
+                                description: 'Period of confidentiality in years',
+                                required: true,
+                                defaultValue: 2,,
+                            },
+                        ],
+                        isPublic: true,
+                        createdAt: '2024-01-01T00:00:00Z',
+                        updatedAt: '2024-01-01T00:00:00Z',
+                        authorId: 'admin',
+                        authorName: 'Admin',
+                        usageCount: 890,
+                        rating: 4.6,
+                        tags: ['nda', 'confidentiality', 'legal'],
+                    },
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
                 ];
                 setTemplates(mockTemplates);
                 setError(null);
@@ -82,7 +138,8 @@ export const useContractTemplates = () => {
         };
         fetchTemplates();
     }, []);
-    const getTemplateById = (id) => {
+
+  const getTemplateById = (id) => {
         return templates.find(template => template.id === id);
     };
     const getTemplatesByCategory = (category) => {
@@ -100,5 +157,10 @@ export const useContractTemplates = () => {
         error,
         getTemplateById,
         getTemplatesByCategory,
+<<<<<<< HEAD
         searchTemplates};
+=======
+        searchTemplates;
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };

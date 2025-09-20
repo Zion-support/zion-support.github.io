@@ -8,7 +8,7 @@ import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro
 import { emergingTech2028Services as emergingTech2026ServicesV4 } from '../data/2028-emerging-tech-services';
 import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
 
-export default function ServicesShowcase2026V4() {
+export default function ServicesShowcase2026V4() : any {
   const allServices = [
     ...innovative2026MicroSaasServicesV4,
     ...emergingTech2026ServicesV4,
@@ -20,7 +20,7 @@ export default function ServicesShowcase2026V4() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <UltraFuturisticBackground2026>
@@ -33,7 +33,7 @@ export default function ServicesShowcase2026V4() {
           <meta name="robots" content="index, follow" />
           <meta property="og:title" content="2026 Revolutionary Services V4 - Zion Tech Group" />
           <meta property="og:description" content="Cutting-edge AI, quantum computing, and emerging technology services for 2026" />
-          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-v4" />
+          <meta property="og: url" content="https://ziontechgroup.com/2026-services-showcase-v4" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase-v4" />
         </Head>
@@ -44,4 +44,4 @@ export default function ServicesShowcase2026V4() {
       </div>
     </UltraFuturisticBackground2026>
   );
-}
+  }

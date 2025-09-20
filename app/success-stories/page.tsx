@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function SuccessStoriesPage() {
+export default function SuccessStoriesPage() : any {
   const stories = [
     {
       id: 1,

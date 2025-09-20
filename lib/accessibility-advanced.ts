@@ -3,17 +3,17 @@
  */
 
 export interface AccessibilityConfig {
-  enableScreenReader: boolean;
-  enableKeyboardNavigation: boolean;
-  enableHighContrast: boolean;
-  enableReducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large' | 'extra-large';
-  colorScheme: 'light' | 'dark' | 'auto';
+  enableScreenReader: boolean,
+  enableKeyboardNavigation: boolean,
+  enableHighContrast: boolean,
+  enableReducedMotion: boolean,
+  fontSize: 'small' | 'medium' | 'large' | 'extra-large',
+  colorScheme: 'light' | 'dark' | 'auto',
 }
 
 export class AccessibilityManager {
-  private config: AccessibilityConfig;
-  private announcementElement: HTMLElement | null = null;
+  private config: AccessibilityConfig,
+  private announcementElement: HTMLElement | null = null,
 
   constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
@@ -56,7 +56,7 @@ export class AccessibilityManager {
   private setupKeyboardNavigation() {
     if (!this.config.enableKeyboardNavigation) return;
 
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', (event) : any => {
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey === false && event.target === document.body) {
         const mainContent = document.querySelector('main, [role="main"]');
@@ -78,7 +78,7 @@ export class AccessibilityManager {
 
   private setupFocusManagement() {
     // Focus trap for modals
-    document.addEventListener('focusin', (event) => {
+    document.addEventListener('focusin', (event) : any => {
       const modal = (event.target as Element).closest('[role="dialog"]');
       if (modal && !modal.hasAttribute('aria-hidden')) {
         this.trapFocus(modal as HTMLElement);
@@ -88,10 +88,10 @@ export class AccessibilityManager {
 
   private setupColorScheme() {
     if (this.config.colorScheme === 'auto') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)'),
       this.applyColorScheme(mediaQuery.matches ? 'dark' : 'light');
       
-      mediaQuery.addEventListener('change', (e) => {
+      mediaQuery.addEventListener('change', (e) : any => {
         this.applyColorScheme(e.matches ? 'dark' : 'light');
       });
     } else {
@@ -100,10 +100,10 @@ export class AccessibilityManager {
   }
 
   private setupMotionPreferences() {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
     this.applyMotionPreferences(mediaQuery.matches);
     
-    mediaQuery.addEventListener('change', (e) => {
+    mediaQuery.addEventListener('change', (e) : any => {
       this.applyMotionPreferences(e.matches);
     });
   }
@@ -143,7 +143,7 @@ export class AccessibilityManager {
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    element.addEventListener('keydown', (event) => {
+    element.addEventListener('keydown', (event) : any => {
       if (event.key === 'Tab') {
         if (event.shiftKey) {
           if (document.activeElement === firstElement) {
@@ -190,9 +190,9 @@ export class AccessibilityManager {
 
 export const accessibilityUtils = {
   // Generate accessible color contrast
-  generateColorContrast: (foreground: string, background: string): number => {
-    const getLuminance = (color: string): number => {
-      const rgb = color.match(/\d+/g);
+  generateColorContrast: (foreground: string, background: string): number : any => {
+    const getLuminance = (color: string): number : any => {
+      const rgb = color.match(/\d+/g),
       if (!rgb) return 0;
       
       const [r, g, b] = rgb.map(c => {
@@ -217,14 +217,14 @@ export const accessibilityUtils = {
   }),
 
   // Generate skip links
-  generateSkipLinks: (targets: Array<{ label: string; href: string }>) => {
+  generateSkipLinks: (targets: Array<{ label: string, href: string }>) : any => {
     return targets.map(target => 
       `<a href="${target.href}" class="skip-link" tabindex="1">${target.label}</a>`
     ).join('\n');
   },
 
   // Generate accessible form labels
-  generateFormLabels: (fields: Array<{ id: string; label: string; required?: boolean; description?: string }>) => {
+  generateFormLabels: (fields: Array<{ id: string, label: string, required?: boolean, description?: string }>) : any => {
     return fields.map(field => `
       <label for="${field.id}" class="form-label">
         ${field.label}${field.required ? ' <span aria-label="required">*</span>' : ''}
@@ -234,8 +234,8 @@ export const accessibilityUtils = {
   },
 
   // Generate accessible table markup
-  generateAccessibleTable: (headers: string[], rows: string[][]) => {
-    const headerRow = `<tr>${headers.map(header => `<th scope="col">${header}</th>`).join('')}</tr>`;
+  generateAccessibleTable: (headers: string[], rows: string[][]) : any => {
+    const headerRow = `<tr>${headers.map(header => `<th scope="col">${header}</th>`).join('')}</tr>`,
     const dataRows = rows.map(row => 
       `<tr>${row.map((cell, index) => `<td>${cell}</td>`).join('')}</tr>`
     ).join('');
@@ -250,13 +250,13 @@ export const accessibilityUtils = {
 
   // Generate accessible button markup
   generateAccessibleButton: (text: string, options: {
-    variant?: 'primary' | 'secondary' | 'danger';
+    variant?: 'primary' | 'secondary' | 'danger',
     size?: 'small' | 'medium' | 'large';
     disabled?: boolean;
     loading?: boolean;
     ariaLabel?: string;
     ariaDescribedBy?: string;
-  } = {}) => {
+  } = {}) : any => {
     const {
       variant = 'primary',
       size = 'medium',
@@ -290,15 +290,15 @@ export const accessibilityUtils = {
   },
 };
 
-export const generateAccessibilityReport = (element: HTMLElement) => {
-  const issues: string[] = [];
+export const generateAccessibilityReport = (element: HTMLElement) : any => {
+  const issues: string[] = [],
 
   // Check for missing alt text
   const images = element.querySelectorAll('img');
   images.forEach(img => {
     if (!img.alt && !img.getAttribute('aria-label')) {
       issues.push(`Image missing alt text: ${img.src}`);
-    }
+};
   });
 
   // Check for missing labels
@@ -308,7 +308,7 @@ export const generateAccessibilityReport = (element: HTMLElement) => {
     const label = id ? document.querySelector(`label[for="${id}"]`) : null;
     if (!label && !input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
       issues.push(`Form control missing label: ${input.tagName}`);
-    }
+};
   });
 
   // Check for heading hierarchy
@@ -318,7 +318,7 @@ export const generateAccessibilityReport = (element: HTMLElement) => {
     const level = parseInt(heading.tagName.charAt(1));
     if (level > lastLevel + 1) {
       issues.push(`Heading hierarchy skip: ${heading.tagName} follows h${lastLevel}`);
-    }
+};
     lastLevel = level;
   });
 

@@ -27,22 +27,22 @@ class PerformanceEngine {,
       loadTime: 3000, // 3 seconds,
       renderTime: 1000 // 1 second},
     // // // // // // console.log('⚡ Performance Engine Starting...'),
-    this.startEngine(),
-  }
+    this.startEngine();
+};
 ,
   ensureLogsDirectory() {,
     const logsDir = path.dirname(this.logFile),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true }),
-    }
+      fs.mkdirSync(logsDir, { recursive: true });
+};
   }
 ,
   log(message, level = 'INFO') {,
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level}] ${message}\n`,
     // // // // // // console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logEntry),
-  }
+    fs.appendFileSync(this.logFile, logEntry);
+};
 ,
   loadPerformanceData() {,
     try {,
@@ -99,8 +99,8 @@ class PerformanceEngine {,
       }, 24 * 60 * 60 * 1000), // Daily
     }
 ,
-    this.log('Performance Engine started successfully'),
-  }
+    this.log('Performance Engine started successfully');
+};
 ,
   async performPerformanceAnalysis() {,
     this.log('Performing performance analysis...'),
@@ -120,8 +120,8 @@ class PerformanceEngine {,
       this.performanceData.metrics.push(analysis),
       // Keep only last 50 metrics,
       if (this.performanceData.metrics.length > 50) {,
-        this.performanceData.metrics = this.performanceData.metrics.slice(-50),
-      }
+        this.performanceData.metrics = this.performanceData.metrics.slice(-50);
+};
 ,
       // Update trends,
       this.updatePerformanceTrends(),
@@ -129,15 +129,15 @@ class PerformanceEngine {,
       const issues = this.detectPerformanceIssues(analysis),
       if (issues.length > 0) {,
         this.log(`Detected ${issues.length} performance issues`, 'WARN'),
-        await this.handlePerformanceIssues(issues),
-      }
+        await this.handlePerformanceIssues(issues);
+};
 ,
       this.log(`Performance analysis completed. Score: ${performanceScore.toFixed(2)}/100`),
       // Save performance data,
       this.savePerformanceData(),
     } catch (error) {,
-      this.log(`Performance analysis failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Performance analysis failed: ${error.message}`, 'ERROR');
+};
   }
 ,
   async analyzeBundle() {,
@@ -171,8 +171,8 @@ class PerformanceEngine {,
       this.log(`Build completed in ${buildTime}ms`),
       return buildTime,
     } catch (error) {,
-      throw new Error(`Build failed: ${error.message}`),
-    }
+      throw new Error(`Build failed: ${error.message}`);
+};
   }
 ,
   async getBundleSize() {,
@@ -205,8 +205,8 @@ class PerformanceEngine {,
       if (stat.isDirectory()) {,
         files.push(...this.getAllFiles(fullPath)),
       } else {,
-        files.push(fullPath),
-      }
+        files.push(fullPath);
+};
     }
 ,
     return files,
@@ -255,8 +255,8 @@ class PerformanceEngine {,
           chunks.push({,
             name: relativePath,
             size: size,
-            type: path.extname(file).substring(1)}),
-        }
+            type: path.extname(file).substring(1)});
+};
       }
 ,
       return chunks.sort((a, b) => b.size - a.size),
@@ -297,8 +297,8 @@ class PerformanceEngine {,
   async getBuildTimes() {,
     // Get build times from logs or performance data,
     const recentMetrics = this.performanceData.metrics.slice(-10),
-    return recentMetrics.map(m => m.buildPerformance?.averageTime || 0).filter(t => t > 0),
-  }
+    return recentMetrics.map(m => m.buildPerformance?.averageTime || 0).filter(t => t > 0);
+};
 ,
   calculateAverage(values) {,
     if (values.length === 0) return 0,
@@ -372,8 +372,8 @@ class PerformanceEngine {,
       score -= 20,
     }
 ,
-    return Math.max(0, score),
-  }
+    return Math.max(0, score);
+};
 ,
   async analyzeMemoryUsage() {,
     try {,
@@ -424,8 +424,8 @@ class PerformanceEngine {,
     if (metrics.errorRate > 0.1) score -= 30,
     if (metrics.errorRate > 0.05) score -= 15,
     if (metrics.cacheHitRate < 0.7) score -= 20,
-    return Math.max(0, score),
-  }
+    return Math.max(0, score);
+};
 ,
   calculatePerformanceScore(analysis) {,
     const weights = {,
@@ -480,8 +480,8 @@ class PerformanceEngine {,
     const categories = ['bundleAnalysisbuildPerformanceruntimePerformancememoryUsage', 'networkPerformance'],
     for (const category of categories) {,
       const scores = recentMetrics.map(m => m[category]?.score || 0),
-      trends[category] = this.calculateTrend(scores),
-    }
+      trends[category] = this.calculateTrend(scores);
+};
 ,
     this.performanceData.trends = trends,
   }
@@ -507,8 +507,8 @@ class PerformanceEngine {,
         type: 'LARGE_BUNDLE',
         severity: 'MEDIUM',
         description: `Bundle size (${(analysis.bundleAnalysis.size / (1024 * 1024)).toFixed(2)}MB) exceeds threshold`,
-        category: 'bundle'}),
-    }
+        category: 'bundle'});
+};
 ,
     // Check build time,
     if (analysis.buildPerformance && !analysis.buildPerformance.optimized) {,
@@ -516,8 +516,8 @@ class PerformanceEngine {,
         type: 'SLOW_BUILD',
         severity: 'MEDIUM',
         description: `Build time (${analysis.buildPerformance.averageTime}ms) exceeds threshold`,
-        category: 'build'}),
-    }
+        category: 'build'});
+};
 ,
     // Check runtime performance,
     if (analysis.runtimePerformance && !analysis.runtimePerformance.optimized) {,
@@ -525,8 +525,8 @@ class PerformanceEngine {,
         type: 'SLOW_RUNTIME',
         severity: 'HIGH',
         description: 'Runtime performance below threshold',
-        category: 'runtime'}),
-    }
+        category: 'runtime'});
+};
 ,
     // Check memory usage,
     if (analysis.memoryUsage && !analysis.memoryUsage.optimized) {,
@@ -534,8 +534,8 @@ class PerformanceEngine {,
         type: 'HIGH_MEMORY',
         severity: 'MEDIUM',
         description: 'Memory usage above threshold',
-        category: 'memory'}),
-    }
+        category: 'memory'});
+};
 ,
     return issues,
   }
@@ -546,8 +546,8 @@ class PerformanceEngine {,
       try {,
         await this.applyOptimization(issue),
       } catch (error) {,
-        this.log(`Failed to handle issue ${issue.type}: ${error.message}`, 'ERROR'),
-      }
+        this.log(`Failed to handle issue ${issue.type}: ${error.message}`, 'ERROR');
+};
     }
   }
 ,
@@ -574,12 +574,11 @@ class PerformanceEngine {,
       }
 ,
       if (optimization) {,
-        this.recordOptimization(issue, optimization),
-      }
-
+        this.recordOptimization(issue, optimization);
+};
     } catch (error) {,
-      throw new Error(`Optimization failed: ${error.message}`),
-    }
+      throw new Error(`Optimization failed: ${error.message}`);
+};
   }
 ,
   async optimizeBundle() {,
@@ -612,8 +611,8 @@ class PerformanceEngine {,
   }`,
           config = config.replace('export default defineConfig({', `export default defineConfig({${optimizations}`),
           fs.writeFileSync(viteConfigPath, config),
-          this.log('Added bundle optimizations to Vite config'),
-        }
+          this.log('Added bundle optimizations to Vite config');
+};
       }
 ,
       return {,
@@ -622,8 +621,8 @@ class PerformanceEngine {,
         impact: 'MEDIUM',
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Bundle optimization failed: ${error.message}`),
-    }
+      throw new Error(`Bundle optimization failed: ${error.message}`);
+};
   }
 ,
   async optimizeBuild() {,
@@ -639,8 +638,8 @@ class PerformanceEngine {,
         impact: 'MEDIUM',
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Build optimization failed: ${error.message}`),
-    }
+      throw new Error(`Build optimization failed: ${error.message}`);
+};
   }
 ,
   async optimizeRuntime() {,
@@ -654,8 +653,8 @@ class PerformanceEngine {,
         impact: 'HIGH',
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Runtime optimization failed: ${error.message}`),
-    }
+      throw new Error(`Runtime optimization failed: ${error.message}`);
+};
   }
 ,
   async optimizeMemory() {,
@@ -669,8 +668,8 @@ class PerformanceEngine {,
         impact: 'MEDIUM',
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Memory optimization failed: ${error.message}`),
-    }
+      throw new Error(`Memory optimization failed: ${error.message}`);
+};
   }
 ,
   async clearBuildCache() {,
@@ -682,26 +681,26 @@ class PerformanceEngine {,
           fs.rmSync(cachePath, { recursive: true, force: true }),
           this.log(`Cleared cache: ${dir}`),
         } catch (error) {,
-          this.log(`Failed to clear cache ${dir}: ${error.message}`, 'WARN'),
-        }
+          this.log(`Failed to clear cache ${dir}: ${error.message}`, 'WARN');
+};
       }
     }
   }
 ,
   async optimizeBuildConfig() {,
     // Optimize build configuration,
-    this.log('Optimizing build configuration...'),
-  }
+    this.log('Optimizing build configuration...');
+};
 ,
   async applyRuntimeOptimizations() {,
     // Apply runtime optimizations,
-    this.log('Applying runtime optimizations...'),
-  }
+    this.log('Applying runtime optimizations...');
+};
 ,
   async applyMemoryOptimizations() {,
     // Apply memory optimizations,
-    this.log('Applying memory optimizations...'),
-  }
+    this.log('Applying memory optimizations...');
+};
 ,
   recordOptimization(issue, optimization) {,
     this.optimizationHistory.optimizations.push({,
@@ -710,11 +709,11 @@ class PerformanceEngine {,
       timestamp: new Date().toISOString()}),
     // Keep only last 100 optimizations,
     if (this.optimizationHistory.optimizations.length > 100) {,
-      this.optimizationHistory.optimizations = this.optimizationHistory.optimizations.slice(-100),
-    }
+      this.optimizationHistory.optimizations = this.optimizationHistory.optimizations.slice(-100);
+};
 ,
-    this.saveOptimizationHistory(),
-  }
+    this.saveOptimizationHistory();
+};
 ,
   async runOptimizations() {,
     if (!this.autoOptimizationEnabled) return,
@@ -728,24 +727,24 @@ class PerformanceEngine {,
       await this.optimizeRuntime(),
       this.log('Scheduled optimizations completed'),
     } catch (error) {,
-      this.log(`Scheduled optimizations failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Scheduled optimizations failed: ${error.message}`, 'ERROR');
+};
   }
 ,
   savePerformanceData() {,
     try {,
       fs.writeFileSync(this.performanceDataFile, JSON.stringify(this.performanceData, null, 2)),
     } catch (error) {,
-      this.log(`Failed to save performance data: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Failed to save performance data: ${error.message}`, 'ERROR');
+};
   }
 ,
   saveOptimizationHistory() {,
     try {,
       fs.writeFileSync(this.optimizationHistoryFile, JSON.stringify(this.optimizationHistory, null, 2)),
     } catch (error) {,
-      this.log(`Failed to save optimization history: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Failed to save optimization history: ${error.message}`, 'ERROR');
+};
   }
 }
 ,
@@ -759,5 +758,5 @@ process.on('SIGINT', () => {,
 process.on('SIGTERM', () => {,
   engine.log('Shutting down Performance Engine...INFO'),
   process.exit(0),
-}),
-}}))
+});
+  }}))

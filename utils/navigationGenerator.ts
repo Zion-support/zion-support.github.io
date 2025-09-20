@@ -12,9 +12,8 @@ export class NavigationGenerator {
   private async initializeNavigation() {
     await this.discoverServices(),
     await this.discoverPages(),
-    await this.generateCategories(),
-  }
-
+    await this.generateCategories();
+};
   // Auto-discover services from data and generate navigation
   async discoverServices(): Promise<NavigationItem[]> {
     // Comprehensive services list based on website analysis
@@ -610,10 +609,10 @@ export class NavigationGenerator {
     this.services.forEach(service => {
       if (service.category) {
         if (!categoryMap.has(service.category)) {
-          categoryMap.set(service.category, []),
-        }
-        categoryMap.get(service.category)!.push(service),
-      }
+          categoryMap.set(service.category, []);
+};
+        categoryMap.get(service.category)!.push(service);
+};
     }),
 
     // Create category objects
@@ -909,9 +908,8 @@ export class NavigationGenerator {
   // Auto-update navigation when new services are added
   async updateNavigation(): Promise<void> {
     await this.discoverServices(),
-    await this.generateCategories(),
-  }
-
+    await this.generateCategories();
+};
   // Get complete navigation configuration
   async getNavigationConfig(): Promise<NavigationConfig> {
     return {
@@ -937,6 +935,6 @@ export class NavigationGenerator {
           priority: 2
         }
       ]
-    },
+    };
   }
 }

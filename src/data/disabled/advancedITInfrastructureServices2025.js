@@ -1,16 +1,16 @@
 export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
     // Edge Computing & 5G Integration;
     {
-        id: "intelligent-edge-computing-platform";
-        title: "Intelligent Edge Computing Platform";
+        id: "intelligent-edge-computing-platform",
+        title: "Intelligent Edge Computing Platform",
         description: "Next-generation edge computing infrastructure that processes data at the source with AI acceleration, 5G integration, and real-time decision-making capabilities.",
-        category: "Edge Computing";
-        subcategory: "AI-Powered Infrastructure";
-        price: 15000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "Edge Computing",
+        subcategory: "AI-Powered Infrastructure",
+        price: 15000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "AI-accelerated edge processors";
+            "AI-accelerated edge processors",
             "5G network integration",
             "Real-time data processing",
             "Edge-to-cloud orchestration",
@@ -20,7 +20,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Multi-tenant isolation"
         ],
         benefits: [
-            "99.99% uptime guarantee";
+            "99.99% uptime guarantee",
             "Reduce latency by 95%",
             "Process data 10x faster",
             "50% cost reduction vs cloud-only",
@@ -28,7 +28,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Real-time insights"
         ],
         useCases: [
-            "Autonomous vehicles";
+            "Autonomous vehicles",
             "Smart manufacturing",
             "AR/VR applications",
             "IoT sensor networks",
@@ -36,35 +36,43 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Critical infrastructure"
         ],
         targetAudience: [
-            "Manufacturing companies";
+            "Manufacturing companies",
             "Telecommunications providers",
             "Automotive industry",
             "Smart city projects",
             "Healthcare systems"
         ],
         tags: ["Edge Computing", "5G", "AI", "Real-time", "IoT"],
-        estimatedDelivery: "6-8 weeks";
-        supportLevel: "24/7 Premium Support";
+        estimatedDelivery: "6-8 weeks",
+        supportLevel: "24/7 Premium Support",
         marketPrice: "Starting from $15,000/month",
-        implementation: "Turnkey deployment with dedicated engineers";
-        sla: "99.99% uptime with performance guarantees";
+        implementation: "Turnkey deployment with dedicated engineers",
+        sla: "99.99% uptime with performance guarantees",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedITInfrastructureServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedITInfrastructureServices2025.js
     };
     {
-        id: "quantum-secure-cloud-infrastructure";
-        title: "Quantum-Secure Cloud Infrastructure";
-        description: "Revolutionary cloud infrastructure protected by quantum-resistant encryption and quantum key distribution for ultimate security against future quantum attacks.";
-        category: "Cloud Security";
-        subcategory: "Quantum Protection";
-        price: 25000;
-        currency: "$";
-        pricingModel: "monthly";
+        id: "quantum-secure-cloud-infrastructure",
+        title: "Quantum-Secure Cloud Infrastructure",
+        description: "Revolutionary cloud infrastructure protected by quantum-resistant encryption and quantum key distribution for ultimate security against future quantum attacks.",
+        category: "Cloud Security",
+        subcategory: "Quantum Protection",
+        price: 25000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Post-quantum cryptography";
+            "Post-quantum cryptography",
             "Quantum key distribution",
             "Hybrid cloud architecture",
             "Zero-trust security model",
@@ -74,7 +82,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Global quantum network"
         ],
         benefits: [
-            "Future-proof security";
+            "Future-proof security",
             "Quantum-resistant protection",
             "Regulatory compliance",
             "100% data integrity",
@@ -82,7 +90,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Global scalability"
         ],
         useCases: [
-            "Financial institutions";
+            "Financial institutions",
             "Government agencies",
             "Healthcare systems",
             "Defense contractors",
@@ -90,35 +98,43 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Research institutions"
         ],
         targetAudience: [
-            "CISOs";
+            "CISOs",
             "Government agencies",
             "Financial services",
             "Healthcare organizations",
             "Defense contractors"
         ],
         tags: ["Quantum Security", "Cloud", "Encryption", "Zero Trust"],
-        estimatedDelivery: "8-12 weeks";
-        supportLevel: "24/7 Quantum Expert Support";
+        estimatedDelivery: "8-12 weeks",
+        supportLevel: "24/7 Quantum Expert Support",
         marketPrice: "Starting from $25,000/month",
-        implementation: "Phased migration with quantum security specialists";
-        sla: "99.999% availability with quantum-grade security";
+        implementation: "Phased migration with quantum security specialists",
+        sla: "99.999% availability with quantum-grade security",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedITInfrastructureServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedITInfrastructureServices2025.js
     };
     {
-        id: "autonomous-infrastructure-management";
-        title: "Autonomous Infrastructure Management System";
+        id: "autonomous-infrastructure-management",
+        title: "Autonomous Infrastructure Management System",
         description: "Self-managing IT infrastructure powered by AI that automatically optimizes performance, predicts failures, and resolves issues without human intervention.",
-        category: "Infrastructure Automation";
-        subcategory: "AI Operations";
-        price: 12000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "Infrastructure Automation",
+        subcategory: "AI Operations",
+        price: 12000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Autonomous healing systems";
+            "Autonomous healing systems",
             "Predictive failure analysis",
             "Performance optimization AI",
             "Resource auto-scaling",
@@ -128,7 +144,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "24/7 automated operations"
         ],
         benefits: [
-            "99.9% problem prevention";
+            "99.9% problem prevention",
             "Reduce operational costs by 60%",
             "Zero-downtime operations",
             "Proactive issue resolution",
@@ -136,7 +152,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Simplified management"
         ],
         useCases: [
-            "Enterprise data centers";
+            "Enterprise data centers",
             "Cloud infrastructure",
             "Multi-cloud environments",
             "Hybrid architectures",
@@ -144,35 +160,43 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "DevOps pipelines"
         ],
         targetAudience: [
-            "IT operations teams";
+            "IT operations teams",
             "Cloud architects",
             "DevOps engineers",
             "Infrastructure managers",
             "CTOs"
         ],
         tags: ["AI Operations", "Automation", "Predictive", "Self-Healing"],
-        estimatedDelivery: "4-6 weeks";
-        supportLevel: "24/7 AI Operations Support";
+        estimatedDelivery: "4-6 weeks",
+        supportLevel: "24/7 AI Operations Support",
         marketPrice: "Starting from $12,000/month",
-        implementation: "Gradual rollout with AI training period";
-        sla: "99.9% automated resolution rate";
+        implementation: "Gradual rollout with AI training period",
+        sla: "99.9% automated resolution rate",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedITInfrastructureServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedITInfrastructureServices2025.js
     };
     {
-        id: "immersive-collaboration-infrastructure";
-        title: "Immersive Collaboration Infrastructure";
+        id: "immersive-collaboration-infrastructure",
+        title: "Immersive Collaboration Infrastructure",
         description: "Advanced infrastructure supporting virtual and augmented reality collaboration with spatial computing, haptic feedback, and real-time 3D rendering capabilities.",
-        category: "Collaboration Technology";
-        subcategory: "Immersive Computing";
-        price: 18000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "Collaboration Technology",
+        subcategory: "Immersive Computing",
+        price: 18000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Spatial computing platform";
+            "Spatial computing platform",
             "Real-time 3D rendering",
             "Haptic feedback systems",
             "Multi-user VR/AR spaces",
@@ -182,7 +206,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Cross-platform compatibility"
         ],
         benefits: [
-            "Enhanced collaboration experience";
+            "Enhanced collaboration experience",
             "Reduce travel costs by 80%",
             "Improve productivity by 45%",
             "Global team connectivity",
@@ -190,7 +214,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Revolutionary meeting experiences"
         ],
         useCases: [
-            "Remote team collaboration";
+            "Remote team collaboration",
             "Design and engineering",
             "Training and education",
             "Product visualization",
@@ -198,35 +222,43 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "3D modeling sessions"
         ],
         targetAudience: [
-            "Architecture firms";
+            "Architecture firms",
             "Engineering companies",
             "Design agencies",
             "Educational institutions",
             "Technology companies"
         ],
         tags: ["VR/AR", "Collaboration", "Spatial Computing", "3D Rendering"],
-        estimatedDelivery: "6-8 weeks";
-        supportLevel: "Specialized VR/AR Support";
+        estimatedDelivery: "6-8 weeks",
+        supportLevel: "Specialized VR/AR Support",
         marketPrice: "Starting from $18,000/month",
-        implementation: "Custom setup with immersive technology specialists";
-        sla: "99.5% availability with performance optimization";
+        implementation: "Custom setup with immersive technology specialists",
+        sla: "99.5% availability with performance optimization",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedITInfrastructureServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedITInfrastructureServices2025.js
     };
     {
-        id: "green-computing-optimization-platform";
-        title: "Green Computing Optimization Platform";
+        id: "green-computing-optimization-platform",
+        title: "Green Computing Optimization Platform",
         description: "Sustainable IT infrastructure solution that optimizes energy consumption, reduces carbon footprint, and maximizes renewable energy usage through AI-driven efficiency.",
-        category: "Sustainable Computing";
-        subcategory: "Green Technology";
-        price: 8000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "Sustainable Computing",
+        subcategory: "Green Technology",
+        price: 8000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Energy consumption optimization";
+            "Energy consumption optimization",
             "Carbon footprint tracking",
             "Renewable energy integration",
             "Efficient cooling systems",
@@ -236,7 +268,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Cost-benefit analysis"
         ],
         benefits: [
-            "Reduce energy costs by 40%";
+            "Reduce energy costs by 40%",
             "Lower carbon footprint by 60%",
             "ESG compliance achievement",
             "Enhanced brand reputation",
@@ -244,7 +276,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Regulatory compliance"
         ],
         useCases: [
-            "Data center optimization";
+            "Data center optimization",
             "Corporate sustainability",
             "Green cloud computing",
             "ESG reporting",
@@ -252,35 +284,43 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Sustainable operations"
         ],
         targetAudience: [
-            "Sustainability officers";
+            "Sustainability officers",
             "Data center managers",
             "IT operations teams",
             "Environmental consultants",
             "Corporate executives"
         ],
         tags: ["Sustainability", "Green Computing", "Energy Efficiency", "ESG"],
-        estimatedDelivery: "3-4 weeks";
-        supportLevel: "Green Technology Support";
+        estimatedDelivery: "3-4 weeks",
+        supportLevel: "Green Technology Support",
         marketPrice: "Starting from $8,000/month",
-        implementation: "Sustainability assessment and gradual optimization";
-        sla: "Guaranteed energy savings with monitoring";
+        implementation: "Sustainability assessment and gradual optimization",
+        sla: "Guaranteed energy savings with monitoring",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedITInfrastructureServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedITInfrastructureServices2025.js
     };
     {
-        id: "blockchain-infrastructure-as-a-service";
-        title: "Enterprise Blockchain Infrastructure as a Service";
+        id: "blockchain-infrastructure-as-a-service",
+        title: "Enterprise Blockchain Infrastructure as a Service",
         description: "Complete blockchain infrastructure platform supporting multiple protocols, smart contracts, DeFi applications, and enterprise-grade security for Web3 transformation.",
-        category: "Blockchain Infrastructure";
-        subcategory: "Web3 Platform";
-        price: 20000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "Blockchain Infrastructure",
+        subcategory: "Web3 Platform",
+        price: 20000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Multi-protocol blockchain support";
+            "Multi-protocol blockchain support",
             "Smart contract deployment",
             "DeFi integration platform",
             "NFT marketplace infrastructure",
@@ -290,7 +330,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Performance optimization"
         ],
         benefits: [
-            "Accelerate Web3 adoption";
+            "Accelerate Web3 adoption",
             "Reduce blockchain complexity",
             "Enterprise-grade security",
             "Multi-chain compatibility",
@@ -298,7 +338,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Scalable architecture"
         ],
         useCases: [
-            "DeFi applications";
+            "DeFi applications",
             "NFT marketplaces",
             "Supply chain tracking",
             "Digital identity systems",
@@ -306,35 +346,43 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Cryptocurrency integration"
         ],
         targetAudience: [
-            "Blockchain developers";
+            "Blockchain developers",
             "Financial institutions",
             "Technology companies",
             "Government agencies",
             "Web3 startups"
         ],
         tags: ["Blockchain", "Web3", "DeFi", "Smart Contracts", "Enterprise"],
-        estimatedDelivery: "8-10 weeks";
-        supportLevel: "24/7 Blockchain Expert Support";
+        estimatedDelivery: "8-10 weeks",
+        supportLevel: "24/7 Blockchain Expert Support",
         marketPrice: "Starting from $20,000/month",
-        implementation: "Blockchain architecture design and deployment";
-        sla: "99.9% network availability with security guarantees";
+        implementation: "Blockchain architecture design and deployment",
+        sla: "99.9% network availability with security guarantees",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedITInfrastructureServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedITInfrastructureServices2025.js
     };
     {
-        id: "hyper-converged-ai-infrastructure";
-        title: "Hyper-Converged AI Infrastructure Platform";
+        id: "hyper-converged-ai-infrastructure",
+        title: "Hyper-Converged AI Infrastructure Platform",
         description: "Integrated infrastructure combining compute, storage, networking, and AI acceleration in a single platform optimized for machine learning workloads and AI applications.",
-        category: "AI Infrastructure";
-        subcategory: "Hyper-Converged Systems";
-        price: 30000;
-        currency: "$";
-        pricingModel: "monthly";
+        category: "AI Infrastructure",
+        subcategory: "Hyper-Converged Systems",
+        price: 30000,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "GPU acceleration clusters";
+            "GPU acceleration clusters",
             "AI-optimized storage",
             "High-speed networking",
             "Distributed computing",
@@ -344,7 +392,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Performance monitoring"
         ],
         benefits: [
-            "10x faster AI training";
+            "10x faster AI training",
             "Simplified AI deployment",
             "Cost-effective scaling",
             "Optimized performance",
@@ -352,7 +400,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Enterprise reliability"
         ],
         useCases: [
-            "Machine learning training";
+            "Machine learning training",
             "AI model deployment",
             "Deep learning research",
             "Computer vision applications",
@@ -360,22 +408,30 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Predictive analytics"
         ],
         targetAudience: [
-            "AI researchers";
+            "AI researchers",
             "Data scientists",
             "Machine learning engineers",
             "Technology companies",
             "Research institutions"
         ],
         tags: ["AI Infrastructure", "GPU Computing", "Machine Learning", "HCI"],
-        estimatedDelivery: "10-12 weeks";
-        supportLevel: "24/7 AI Infrastructure Support";
+        estimatedDelivery: "10-12 weeks",
+        supportLevel: "24/7 AI Infrastructure Support",
         marketPrice: "Starting from $30,000/month",
-        implementation: "Custom AI infrastructure design and optimization";
-        sla: "99.95% availability with performance guarantees";
+        implementation: "Custom AI infrastructure design and optimization",
+        sla: "99.95% availability with performance guarantees",
         contactInfo: {
+<<<<<<< HEAD:src/data/disabled/advancedITInfrastructureServices2025.js
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
             address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+            phone: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            website: "https://ziontechgroup.com",
+            address: "364 E Main St STE 1008 Middletown DE 19709",
+        }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e:src/data/advancedITInfrastructureServices2025.js
     }
 ];

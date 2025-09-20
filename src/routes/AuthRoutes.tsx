@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 interface Service {
 id: string;,
 name: string;
 }
 
 import { Routes, Route  } from "react-router-dom, ";
+=======
+import { Routes, Route } from "react-router-dom, ";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 import React from "react;";
 // Next.js routing - no need for react-router-dom;
 import Login from "@/pages/Login;";

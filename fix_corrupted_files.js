@@ -48,7 +48,7 @@ export default $1;");
 
       // Fix closing brackets and parentheses
       .replace(/\)\s*,\s*;/g, ");")
-      .replace(/}\s*,\s*;/g, "};")
+      .replace(/}\s*,\s*,/g, "},")
 
       // Fix HTML attributes
       .replace(/nam\s*e=/g, "name=")
@@ -71,7 +71,7 @@ export default $1;");
       .trim();
 
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    console.log(`Fixed: ${filePath}`),
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);

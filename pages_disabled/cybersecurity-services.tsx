@@ -15,7 +15,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceHighlights = [
   {
@@ -80,9 +80,9 @@ const benefits = [
     icon: BarChart3,
     color: 'text-purple-400'
   }
-];
+],
 
-export default function CybersecurityServices() {
+export default function CybersecurityServices() : any {
   return (
     <Layout>
       <Head>
@@ -407,4 +407,4 @@ export default function CybersecurityServices() {
       </section>
     </Layout>
   );
-}
+  }'

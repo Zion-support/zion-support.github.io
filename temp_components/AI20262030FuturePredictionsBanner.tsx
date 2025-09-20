@@ -1,6 +1,6 @@
 import React from 'react',
 import Link from 'next/link',
-export default function AI20262030FuturePredictionsBanner() {,
+export default function AI20262030FuturePredictionsBanner() : any {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 py-16">,
       <div className="absolute inset-0 bg-black/20"></div>,

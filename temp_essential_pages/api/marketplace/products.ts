@@ -45,13 +45,12 @@ async function handler(
   // This check ensures the service is not attempting to run without proper configuration.
   if (!process.env.DATABASE_URL) {
     console.error("DATABASE_URL is not set or empty."),
-    return res.status(503).json({ error: 'Service Unavailable: Database configuration is missing.' }),
-  }
+    return res.status(503).json({ error: 'Service Unavailable: Database configuration is missing.' });
+};
   if (req.method !== 'GET') {
     res.setHeader('AllowGET'),
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` }),
-  }
-
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
+};
   res.setHeader('Access-Control-Allow-Origin*'),
 
   try {
@@ -148,7 +147,7 @@ async function handler(
       stats.map((s) => [s.productId, { avg: s._avg.rating, count: s._count.id }])
     ),
 
-    const result: ProductWithStats[] = products.map((p) => {
+    const result: ProductWithStats[] = products.map((p) : any => {
       const productStats = statsMap.get(p.id),
       return {
         ...p,
@@ -188,8 +187,9 @@ async function handler(
     // Ensures Prisma client is disconnected after the request is handled,
     // whether it succeeded or failed, to prevent resource leaks.
     console.log('Marketplace products API handler finished.'),
-    await prisma.$disconnect(),
+    await prisma.$disconnect();
   }
 }
 
 export default withErrorLogging(handler),
+'

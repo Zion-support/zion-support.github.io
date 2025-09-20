@@ -122,7 +122,7 @@ const Testimonials: NextPage = () => {
       featured: false,
       date: '2023-12-28'
     }
-  ];
+  ],
 
   const ratings = ['All', '5 Stars', '4 Stars', '3 Stars'];
   const industries = ['All', 'Financial Services', 'Healthcare', 'E-commerce', 'Manufacturing', 'Technology', 'Logistics', 'Marketing'];
@@ -141,7 +141,7 @@ const Testimonials: NextPage = () => {
   const featuredTestimonials = testimonials.filter(t => t.featured);
   const averageRating = testimonials.reduce((acc, t) => acc + t.rating, 0) / testimonials.length;
 
-  const renderStars = (rating: number) => {
+  const renderStars = (rating: number) : any => {
     return Array.from({ length: 5 }, (_, i) => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
@@ -162,11 +162,11 @@ const Testimonials: NextPage = () => {
       <main className="container mx-auto px-4 py-16 pt-32">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
             What Our Clients Say
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Don&apos;t just take our word for it. Hear from the businesses we&apos;ve helped transform 
+            Don&apos,t just take our word for it. Hear from the businesses we&apos;ve helped transform 
             with innovative technology solutions and exceptional service delivery.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
@@ -180,7 +180,7 @@ const Testimonials: NextPage = () => {
         {/* Overall Statistics */}
         <section className="mb-16">
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div className="grid md: grid-cols-4 gap-8 text-center">
               <div>
                 <div className="text-3xl font-bold text-blue-600 mb-2">{testimonials.length}+</div>
                 <div className="text-gray-600">Happy Clients</div>
@@ -227,7 +227,7 @@ const Testimonials: NextPage = () => {
                 </div>
 
                 <blockquote className="text-gray-700 text-lg italic mb-6">
-                  &quot;{testimonial.quote}&quot;
+                  &quot,{testimonial.quote}&quot;
                 </blockquote>
 
                 <div className="mb-6">
@@ -253,7 +253,7 @@ const Testimonials: NextPage = () => {
         {/* Filters */}
         <section className="mb-12">
           <div className="bg-white rounded-2xl shadow-lg p-6">
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md: grid-cols-2 gap-6">
               {/* Rating Filter */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Filter by Rating</label>
@@ -317,7 +317,7 @@ const Testimonials: NextPage = () => {
                 <div className="text-sm text-gray-500 mb-4">{testimonial.company}</div>
 
                 <blockquote className="text-gray-700 text-sm italic mb-4 line-clamp-4">
-                  &quot;{testimonial.quote}&quot;
+                  &quot,{testimonial.quote}&quot;
                 </blockquote>
 
                 <div className="text-xs text-gray-500 mb-3">
@@ -378,7 +378,7 @@ const Testimonials: NextPage = () => {
               Let&apos;s discuss how we can help you achieve similar results and become 
               another satisfied Zion Tech Group client.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
@@ -399,6 +399,6 @@ const Testimonials: NextPage = () => {
       <Footer />
     </div>
   );
-};
+  };
 
 export default Testimonials;

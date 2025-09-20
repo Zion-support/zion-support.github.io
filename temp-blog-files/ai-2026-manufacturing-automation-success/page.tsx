@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'How a Fortune 500 manufacturer achieved $50M in annual savings through AI-driven automation, predictive maintenance, and intelligent quality control.'
   keywords: ['manufacturing AIpredictive maintenancequality controlautomation', 'AI case studymanufacturing 2026']
 }
-export default function AI2026ManufacturingAutomationSuccess() {
+export default function AI2026ManufacturingAutomationSuccess() : any {
   return (
     <div>
       <div>

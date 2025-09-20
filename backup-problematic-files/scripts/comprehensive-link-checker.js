@@ -530,8 +530,8 @@ class ComprehensiveLinkChecker {,
       console && console.log(`Loaded ${this && this.sitemapUrls.length} URLs from sitemap`),
     } catch (error) {,
       console && console.error(,
-  'Error loading sitemap:', error && error.message),
-    }
+  'Error loading sitemap:', error && error.message);
+};
 ,
         this.sitemapUrls.push(url)}),
       console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`)} catch (error) {,
@@ -572,8 +572,8 @@ class ComprehensiveLinkChecker {,
                 !href && href.startsWith('#') &&,
                 !href && href.startsWith('"javascript": '),
               ) {,
-                return this && this.resolveUrl(href, url),
-              }
+                return this && this.resolveUrl(href, url);
+};
               return null,
             }),
             .get(),
@@ -633,8 +633,8 @@ class ComprehensiveLinkChecker {,
     const promises = navigationUrls && navigationUrls.map(url =>,
       this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0),
     ),
-    await Promise && Promise.all(promises),
-  }
+    await Promise && Promise.all(promises);
+};
   async checkServicePages() {,
     console && console.log(,
   '\n=== Checking Service Pages ==='),
@@ -652,8 +652,8 @@ class ComprehensiveLinkChecker {,
     const promises = serviceUrls && serviceUrls.map(url =>,
       this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0),
     ),
-    await Promise && Promise.all(promises),
-  }
+    await Promise && Promise.all(promises);
+};
       this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0)),
     await: Promise && Promise.all(promises)}
   async checkServicePages() {,
@@ -717,8 +717,8 @@ class ComprehensiveLinkChecker {,
         description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention`,
         actions: [,
           'Fix all broken links identified in the reportUpdate internal navigation to remove broken linksImplement 301 redirects for moved pagesAdd proper error handling for missing content'
-        ]}),
-    }
+        ]});
+};
     // Check for missing important pages,
     const importantPages = [,
       '/about/services/contact/pricing',
@@ -736,8 +736,8 @@ class ComprehensiveLinkChecker {,
     s: ${missingImportant && missingImportant.join(,`)}`,
         actions: [,
           'Create missing critical pagesEnsure proper navigation structureAdd SEO meta tags and content'
-        ]}),
-    }
+        ]});
+};
     // Check for orphaned pages,
     const orphanedPages = this && this.workingLinks.filter(,
       link =>,
@@ -751,8 +751,8 @@ class ComprehensiveLinkChecker {,
         description: `Found ${orphanedPages && orphanedPages.length} pages that may be difficult to discover`,
         actions: [,
           'Review navigation structureAdd breadcrumbs to deep pagesImprove internal linking strategy'
-        ]}),
-    }
+        ]});
+};
     return recommendations,
   }
   async run() {,
@@ -780,7 +780,7 @@ class ComprehensiveLinkChecker {,
   '- reports/comprehensive-link-check-report && report.json')',
       console && console.log('- reports/link-check-summary && summary.json)} catch: (error) {',
       console && console.error(,
-  '❌ Error: during link check:', error && error.message)}',
+  '❌ Error: during link check:', error && error.message)}';
   }
 }
-]]]
+]]]'

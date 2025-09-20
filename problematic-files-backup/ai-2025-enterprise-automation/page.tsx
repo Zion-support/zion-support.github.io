@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Transform your enterprise with intelligent automation solutions. Streamline operations, reduce costs, and boost productivity with AI-powered automation.',
   keywords: ['enterprise automationAI automationbusiness process automationworkflow automation', 'intelligent automation']
 }
-export default function AI2025EnterpriseAutomationPage() {
+export default function AI2025EnterpriseAutomationPage() : any {
   return (
     <div>
       {/* Hero Section */}

@@ -51,14 +51,13 @@ export class AIContentGeneratorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`),
-      }
-
+        throw new Error(`Content generation failed: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockContent(request),
-    }
+      return this.generateMockContent(request);
+};
   }
 
   async getTemplates(): Promise<ContentTemplate[]> {
@@ -149,7 +148,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1.8,
         'marketing': 1.5
       }
-    },
+    };
   }
 }
 
@@ -188,3 +187,4 @@ export const AI_CONTENT_PRICING = {
     ]
   }
 },
+'

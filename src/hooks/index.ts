@@ -4,6 +4,7 @@ name: string;
 }
 
 import React from "react;";
+<<<<<<< HEAD
 export function useScrollToTop() {
 // Simple hook to scroll to top;
 React.useEffect(() => {
@@ -16,6 +17,20 @@ export function useAuth() {
 return {
 user: null; isAuthenticated: false,
 };
+=======
+export function useScrollToTop() : any {
+  // Simple hook to scroll to top;
+  React.useEffect(() => {
+    window.scrollTo(0, 0),
+  }, []);
+}
+
+export function useAuth() : any {
+  // Simple auth hook;
+  return {
+    user: null, isAuthenticated: false;
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 // Export all hooks from messaging directory;

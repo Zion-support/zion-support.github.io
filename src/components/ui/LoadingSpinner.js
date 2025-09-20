@@ -13,8 +13,14 @@ export function LoadingSpinner({ size = 'md', className, text }) {
     return (_jsxs("div", { className: cn('flex flex-col items-center justify-center', className), children: [_jsx(motion.div, { className: cn('border-2 border-zion-blue-light border-t-zion-cyan rounded-full', sizeClasses[size]), animate: { rotate: 360 }, transition: {
                     duration: 1,
                     repeat: Infinity,
+<<<<<<< HEAD
                     ease: 'linear'} }), text && (_jsx(motion.p, { className: cn('mt-3 text-zion-slate-light', textSizes[size]), initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay: 0.3 }, children: text }))] }));
 }
+=======
+                    ease: 'linear',
+                } }), text && (_jsx(motion.p, { className: cn('mt-3 text-zion-slate-light', textSizes[size]), initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay: 0.3 }, children: text }))] }));
+};
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 export function LoadingDots({ className }) {
     return (_jsx("div", { className: cn('flex space-x-2', className), children: [0, 1, 2].map((index) => (_jsx(motion.div, { className: "w-2 h-2 bg-zion-cyan rounded-full", animate: {
                 scale: [1, 1.5, 1],
@@ -22,7 +28,12 @@ export function LoadingDots({ className }) {
             }, transition: {
                 duration: 1.5,
                 repeat: Infinity,
+<<<<<<< HEAD
                 delay: index * 0.2} }, index))) }));
+=======
+                delay: index * 0.2;
+  } }, index))) }));
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 export function LoadingPulse({ className }) {
     return (_jsx(motion.div, { className: cn('w-4 h-4 bg-zion-purple rounded-full', className), animate: {
@@ -31,7 +42,12 @@ export function LoadingPulse({ className }) {
         }, transition: {
             duration: 1.5,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut'} }));
+=======
+            ease: 'easeInOut';
+  } }));
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
@@ -57,13 +73,13 @@ export function LoadingSpinner({ size = 'md', color = 'primary', customColor, cl
           {text}
         </motion.p>)}
     </div>);
-}
+  }
 // Skeleton loading component for content;
 export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
     return (<div className={cn('space-y-3', className)}>
       {Array.from({ length: lines }).map((_, index) => (<motion.div key={index} className={cn('bg-zion-slate-light/20 rounded animate-pulse', height)} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: index * 0.1 }}/>))}
     </div>);
-}
+  }
 // Page loading component;
 export function PageLoader({ text = 'Loading page...', className }) {
     return (<div className={cn('min-h-screen flex items-center justify-center', className)}>
@@ -78,4 +94,5 @@ export function ButtonLoader({ size = 'sm', className }) {
       <LoadingSpinner size={size} color="white"/>
       <span className="ml-2">Loading...</span>
     </div>);
+}
 }

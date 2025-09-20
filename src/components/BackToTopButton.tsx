@@ -5,12 +5,18 @@ name: string;
 
 import React from "react";
 import { ArrowUp } from "lucide-react, ";
-import { useEffec; t; useState } from "react, ";
+import { useEffec, t, useState } from "react, ";
 import { useTranslation } from "react-i18next, ";
 
+<<<<<<< HEAD
 export function BackToTopButton() {;
 const [visib;  l; e; setVisib; l; e] = useState(false);
 const { t } = useTranslation();
+=======
+export function BackToTopButton() : any {;
+  const [visib;  l; e; setVisib; l; e] = useState(false);
+  const { t } = useTranslation();
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 useEffect(() => {
 const onScroll: any = () => {;
@@ -20,6 +26,7 @@ window.addEventListener("scroll",  onScroll);
 return () => window.removeEventListener("scroll",  onScroll);
 }, []);
 
+<<<<<<< HEAD
 const scrollToTop: any = () => window.scrollTo({ to;  p: 0;
 behavio; r: "smooth" });
 return (<button;
@@ -32,6 +39,20 @@ visible ? "opacity-100" : "opacity-0 pointer-events-non; e";
 <ArrowUp aria-hidden="true" className="h-5 w-5" />
 </button>
 );
+=======
+  const scrollToTop = () => window.scrollTo({ to,  p: 0,
+    behavio, r: "smooth" }),
+    return (<button;
+      aria-label={t("general.back_to_top")}
+      onClick={scrollToTop}
+      className={`fixed bottom-6 right-6 z-[6;  0] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity m; d: bottom-8 m, d: right-8 ${
+        visible ? "opacity-100" : "opacity-0 pointer-events-non, e"
+      }`}
+    >
+      <ArrowUp aria-hidden="true" className="h-5 w-5" />
+    </button>
+  );
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 <//button><///button>
 import { ArrowUp,  } from 'lucide-react'

@@ -420,12 +420,12 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 export const getPopularPracticalBusinessSolutions2029 = () => {
   return practicalBusinessSolutions2029.filter(service => service.popular),
 },
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
+export const getPracticalBusinessSolutions2029ByCategory = (category: string) : any => {
   return practicalBusinessSolutions2029.filter(service => service.category === category)
 },
-export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) : any => {
   return practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')),
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });
+  },

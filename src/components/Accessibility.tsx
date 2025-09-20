@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 impor; t; Reac; t, { useStat; e; useEffec; t; createContex; t; useContext } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion";
 import { Ey; e;
@@ -12,11 +13,29 @@ Monito; r;
 Accessibilit; y;
 Setting; s;
 X} from "lucide-react";
+=======
+impor; t; Reac; t, { useStat, e, useEffec, t, createContex, t, useContext } from "react";
+import { motio, n, AnimatePresence } from "framer-motion";
+import { 
+  Ey; e; 
+  EyeOf; f; 
+  Volume; 2; 
+  Volume; X; 
+  Keyboar; d; 
+  Su; n; 
+  Moo; n; 
+  Monito; r;
+  Accessibilit; y;
+  Setting; s;
+  X;
+} from "lucide-react";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 import { Button } from "@/components/ui/button";
 import { Button } from "../ui/button";
 
 // Accessibility Context;
 interface AccessibilityContextType {
+<<<<<<< HEAD
 highContras; t: boolean;
 reducedMotio; n: boolean;
 fontSiz; e: "small" | "medium" | "large";
@@ -25,6 +44,17 @@ toggleHighContras; t: () => void;
 toggleReducedMotio;  n: () => void;
 setFontSiz; e: (siz;  e: "small" | "medium" | "large") => void;
 setColorBlindMod; e: (mod;  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void;};
+=======
+  highContras; t: boolean,
+  reducedMotio; n: boolean,
+  fontSiz; e: "small" | "medium" | "large",
+  colorBlindMod; e: "none" | "protanopia" | "deuteranopia" | "tritanopia",
+  toggleHighContras; t: () => void,
+  toggleReducedMotio;  n: () => void,
+  setFontSiz; e: (siz,  e: "small" | "medium" | "large") => void,
+  setColorBlindMod; e: (mod,  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void,,
+};
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility: any = () => {;
@@ -36,11 +66,19 @@ return context;
 };
 
 // Accessibility Provider Component;
+<<<<<<< HEAD
 export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }> = ({ children }) => {
 const [highContra; s; t; setHighContra; s; t] = useState(false);
 const [reducedMoti;  o; n; setReducedMoti; o; n] = useState(false);
 const [fontSi; z; e; setFontSi; z; e] = useState<"small" | "medium" | "large">("medium");
 const [colorBlindMo;  d; e; setColorBlindMo; d; e] = useState<"none" | "protanopia" | "deuteranopia" | "tritanopia">("none");
+=======
+export const AccessibilityProvide;  r: React.FC<{ childre, n: React.ReactNode }> = ({ children }) : any => {
+  const [highContra, s; t; setHighContra; s; t] = useState(false);
+  const [reducedMoti;  o; n; setReducedMoti; o; n] = useState(false);
+  const [fontSi; z; e; setFontSi; z; e] = useState<"small" | "medium" | "large">("medium");
+  const [colorBlindMo;  d; e; setColorBlindMo; d; e] = useState<"none" | "protanopia" | "deuteranopia" | "tritanopia">("none");
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Load settings from localStorage;
 useEffect(() => {
@@ -93,8 +131,21 @@ colorBlindMode === "deuteranopia" ? "url(#deuteranopia)" :
 "url(#tritanopia)";
 },  [highContra; s; t; reducedMoti; o; n; fontSi; z; e; colorBlindMo; d; e]);
 
+<<<<<<< HEAD
 const toggleHighContrast: any = () => setHighContrast(!highContrast);
 const toggleReducedMotion: any = () => setReducedMotion(!reducedMotion);
+=======
+  const valu;  e: AccessibilityContextType = {
+    highContras, t;
+    reducedMotio; n;
+    fontSiz; e;
+    colorBlindMod; e;
+    toggleHighContras; t;
+    toggleReducedMotio; n;
+    setFontSiz; e;
+    setColorBlindMode;
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const valu;  e: AccessibilityContextType = {
 highContras; t;
@@ -116,6 +167,7 @@ return (
 
 // Accessibility Panel Component;
 export const AccessibilityPane; l: React.FC = () => {
+<<<<<<< HEAD
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const {
 highContras; t;
@@ -136,6 +188,41 @@ if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "A") {
 event.preventDefault();
 setIsOpen(!isOpen);
 }
+=======
+  const [isOp,  e; n; setIsOp; e; n] = useState(false);
+  const {
+    highContras; t;
+    reducedMotio; n;
+    fontSiz; e;
+    colorBlindMod; e;
+    toggleHighContras; t;
+    toggleReducedMotio; n;
+    setFontSiz; e;
+    setColorBlindMode;
+  } = useAccessibility();
+
+  // Keyboard shortcuts;
+  useEffect(() => {
+    const handleKeyDown = (even,  t: KeyboardEvent) : any => {
+      // Ctrl/Cmd + Shift + A to open accessibility panel,
+      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "A") {
+        event.preventDefault();
+        setIsOpen(!isOpen);
+      }
+      
+      // Ctrl/Cmd + Shift + H to toggle high contrast;
+      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "H") {
+        event.preventDefault();
+        toggleHighContrast();
+      }
+      
+      // Ctrl/Cmd + Shift + M to toggle reduced motion;
+      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "M") {
+        event.preventDefault();
+        toggleReducedMotion();
+      }
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 // Ctrl/Cmd + Shift + H to toggle high contrast;
 if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "H") {
@@ -143,6 +230,7 @@ event.preventDefault();
 toggleHighContrast();
 }
 
+<<<<<<< HEAD
 // Ctrl/Cmd + Shift + M to toggle reduced motion;
 if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "M") {
 event.preventDefault();
@@ -165,6 +253,73 @@ aria-label="Open Accessibility Settings";
 >;
 <Accessibility className="w-6 h-6" />
 </motion.button>
+=======
+  return (<>
+      {/* Floating Accessibility Button */}
+      <motion.button;
+        whileHover={{ scal,  e: 1.1 }}
+        whileTap={{ scal, e: 0.9 }}
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hove,  r: shadow-2xl hove, r:shadow-zion-cyan/40 transition-all duration-300"
+        aria-label="Open Accessibility Settings"
+      >
+        <Accessibility className="w-6 h-6" />
+      </motion.button>
+
+      {/* Accessibility Panel */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div,
+            initial={{ opacit, y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setIsOpen(false)}
+          >
+            <motion.div,
+              initial={{ scal,  e: 0.9,
+    opacit, y: 0 }}
+              animate={{ scal, e: 1,
+    opacit, y: 1 }}
+              exit={{ scal, e: 0.9,
+    opacit, y: 0 }}
+              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90, v; h] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                  <Accessibility className="w-5 h-5 text-zion-cyan" />
+                  Accessibility Settings;
+                </h2>
+                <Button;
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setIsOpen(false)}
+                  className="text-zion-slate-light hove;  r: text-white"
+                >
+                  <X className="w-4 h-4" />
+                </Button>
+              </div>
+
+              {/* Settings */}
+              <div className="space-y-6">
+                {/* High Contrast */}
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-white font-medium mb-1">High Contrast</h3>
+                    <p className="text-sm text-zion-slate-light">Increase contrast for better visibility</p>
+                  </div>
+                  <Button,
+                    variant={highContrast ? "default" : "outline"}
+                    size="sm"
+                    onClick={toggleHighContrast}
+                    className={highContrast ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
+                  >
+                    {highContrast ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
+                  </Button>
+                </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 {/* Accessibility Panel */}
 <AnimatePresence>
@@ -202,6 +357,7 @@ className="text-zion-slate-light hove;  r:text-white"
 </Button>
 </div>
 
+<<<<<<< HEAD
 {/* Settings */}
 <div className="space-y-6">
 {/* High Contrast */}
@@ -326,12 +482,124 @@ if (!isActive) return;
 
 const focusableElements = "butto;  n, [hr; e; f], inpu; t; selec; t; textare; a, [tabind; e; x]:not([tabinde; x="-1"])";
 const container = document.activeElement?.closest("[dat;  a-focu; s-tr; a; p]");
+=======
+                {/* Font Size */}
+                <div>
+                  <h3 className="text-white font-medium mb-3">Font Size</h3>
+                  <div className="flex gap-2">
+                    {(["smal, l", "mediu, m", "larg, e"] as const).map((size) => (
+                      <Button;
+                        key={size}
+                        variant={fontSize === size ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setFontSize(size)}
+                        className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
+                      >
+                        {size.charAt(0).toUpperCase() + size.slice(1)}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Color Blind Mode */}
+                <div>
+                  <h3 className="text-white font-medium mb-3">Color Blind Support</h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {(["non,  e", "protanopi, a", "deuteranopi, a", "tritanopi, a"] as const).map((mode) => (
+                      <Button;
+                        key={mode}
+                        variant={colorBlindMode === mode ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setColorBlindMode(mode)}
+                        className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
+                      >
+                        {mode.charAt(0).toUpperCase() + mode.slice(1)}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Keyboard Shortcuts */}
+                <div className="bg-zion-blue-dark/50 rounded-lg p-4">
+                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">
+                    <Keyboard className="w-4 h-4 text-zion-cyan" />
+                    Keyboard Shortcuts;
+                  </h3>
+                  <div className="space-y-2 text-sm text-zion-slate-light">
+                    <div className="flex justify-between">
+                      <span>Open Pane;  l: </span>
+                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + A</kbd>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>High Contras, t: </span>
+                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + H</kbd>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Reduced Motio, n: </span>
+                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="mt-6 pt-4 border-t border-zion-cyan/20">
+                <p className="text-xs text-zion-slate-light text-center">
+                  These settings are saved locally and will persist across sessions.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+  };
+
+// Skip to Content Link;
+export const SkipToConten; t: React.FC = () => (
+  <a,
+    href="#main-content"
+    className="sr-only focu;  s: not-sr-only focu, s: absolute focu, s: top-4 focu, s: left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hove, r: bg-zion-cyan-light transition-colors duration-300"
+  >
+    Skip to main content,
+  </a>
+);
+
+// Focus Trap Hook;
+export const useFocusTrap = (isActiv,  e: boolean) : any => {
+  useEffect(() => {
+    if (!isActive) return,
+
+    const focusableElements = "butto;  n, [hr; e; f], inpu; t; selec; t; textare; a, [tabind; e; x]:not([tabinde, x="-1"])";
+    const container = document.activeElement?.closest("[dat,  a-focu, s-tr, a, p]");
+    
+    if (!container) return;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 if (!container) return;
 
+<<<<<<< HEAD
 const focusableContent = container.querySelectorAll(focusableElements);
 const firstFocusableElement = focusableContent[0] as HTMLElement;
 const lastFocusableElement = focusableContent[focusableConten;  t.lengt; h - 1] as HTMLElement;
+=======
+    const handleTabKey = (e: KeyboardEvent) : any => {
+      if (e.key === "Tab") {
+        if (e.shiftKey) {
+          if (document.activeElement === firstFocusableElement) {
+            e.preventDefault(),
+            lastFocusableElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastFocusableElement) {
+            e.preventDefault();
+            firstFocusableElement.focus();
+          }
+        }
+      }
+    };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const handleTabKey: any = (e: KeyboardEvent) => {
 if (e.key === "Tab") {
@@ -355,8 +623,14 @@ return () => document.removeEventListener("keydown",  handleTabKey);
 };
 
 // Screen Reader Only Text;
+<<<<<<< HEAD
 export const SrOnl; y: React.FC<{ childre; n: React.ReactNode }> = ({ children }) => (
 <span className="sr-only">{children}</span>
 );
+=======
+export const SrOnl; y: React.FC<{ childre, n: React.ReactNode }> = ({ children }) => (
+  <span className="sr-only">{children}</span>
+),
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 export default AccessibilityPanel;<//span><///span>

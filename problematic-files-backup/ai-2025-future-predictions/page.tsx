@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Explore AI predictions for 2025 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.',
   keywords: ['AI predictions 2025future AI trendsartificial intelligence futureAI technology trends', 'future technology']
 }
-export default function AI2025FuturePredictions() {
+export default function AI2025FuturePredictions() : any {
   return (
     <div>
       <SEO

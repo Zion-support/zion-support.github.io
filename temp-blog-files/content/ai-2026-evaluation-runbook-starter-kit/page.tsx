@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Standardized procedures, checklists, and templates to operate evals for autonomous agents.'
   keywords: ['evaluationsrunbookSOPchecklist', 'autonomous agents']
 }
-export default function EvaluationRunbookStarterKitPage() {
+export default function EvaluationRunbookStarterKitPage() : any {
   return (
     <main className="min-h-screen bg-white">
       <SEO

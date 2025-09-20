@@ -7,7 +7,7 @@ export const metadata = {
   description: 'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.'
   keywords: ['hyperautomationAI automationbusiness transformationenterprise AI']
 }
-export default function AI2026HyperautomationPlaybook() {
+export default function AI2026HyperautomationPlaybook() : any {
   return (
     <ErrorBoundary>
       <SEO

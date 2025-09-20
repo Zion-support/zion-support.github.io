@@ -25,9 +25,19 @@ import { ViewModeProvider } from './context/ViewModeContext, ';
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
+<<<<<<< HEAD
             retry: 1;
             refetchOnWindowFocus: false;}}});
 const rootElement = document.getElementById('root');
+=======
+            retry: 1,
+            refetchOnWindowFocus: false,,
+        },
+    },
+});
+
+  const rootElement = document.getElementById('root');
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 function renderApp() {
     const app = (<React.StrictMode>
       <HelmetProvider>
@@ -52,7 +62,7 @@ function renderApp() {
           </WhitelabelProvider>
         </QueryClientProvider>
       </HelmetProvider>
-    </React.StrictMode>);
+    </React.StrictMode>),
     if (rootElement?.hasChildNodes()) {
         hydrateRoot(rootElement, app);
     }
@@ -63,9 +73,9 @@ function renderApp() {
 function displayFatalError(message) {
     if (rootElement) {
         rootElement.innerHTML = `
-      <div style="padding: 20px;
-    text-align: center;
-    font-family: sans-serif;
+      <div style="padding: 20px,
+    text-align: center,
+    font-family: sans-serif,
     ">
         <h1>Application Error</h1>
         <p>${message}</p>
@@ -105,4 +115,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
         </WhitelabelProvider>
       </QueryClientProvider>
     </HelmetProvider>
-  </React.StrictMode>);<//React.StrictMode><///React.StrictMode>
+  </React.StrictMode>),<//React.StrictMode><///React.StrictMode>

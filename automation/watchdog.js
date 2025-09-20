@@ -24,8 +24,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const { execSync, spawn } = require('child_process'),
 const path = require('path'),
@@ -69,8 +69,8 @@ const proc = spawn(cmd, {,
     stdio: 'ignore',
     detached: true}),
   if (onExit) {,
-    proc.on('exit', onExit),
-  }
+    proc.on('exit', onExit);
+};
   return proc,
 }
 ,
@@ -270,8 +270,8 @@ const timeoutId = setTimeout(startCursorChat,                                   
 // Store timeoutId for cleanup if needed, // Start new chat after 1s
     },
   ),
-  logger.info('[Watchdog] Cursor chat session started.'),
-}
+  logger.info('[Watchdog] Cursor chat session started.');
+};
 ,
 function killAllCursorChats()  {,
   try {,
@@ -286,27 +286,27 @@ function watchdogLoop()  {,
   setInterval(() => {,
     // Ensure port is not blocked,
     if (isPortInUse(PORT)) {,
-      killPort(PORT),
-    }
+      killPort(PORT);
+};
 ,
     // Ensure dev server is running,
     if (!isProcessRunning('next dev')) {,
-      startProcess(DEV_CMD, path.join(__dirname, ..')),
-    }
+      startProcess(DEV_CMD, path.join(__dirname, ..'));
+};
 ,
     // Ensure automation is running,
     if (!isProcessRunning('netlify-build-automation.js')) {,
-      startProcess(AUTOMATION_CMD, path.join(__dirname, ..')),
-    }
+      startProcess(AUTOMATION_CMD, path.join(__dirname, ..'));
+};
 ,
     // Kill any completed Cursor chat processes,
     killAllCursorChats(),
     // Ensure Cursor chat is running and always create a new one if the previous is done,
     if (!cursorChatActive) {,
-      startCursorChat(),
-    }
-  }, CHECK_INTERVAL),
-}
+      startCursorChat();
+};
+  }, CHECK_INTERVAL);
+};
 ,
 logger.info([Watchdog] Starting watchdog for dev server, automation, and Cursor chat lifecycle...'),
 watchdogLoop(),
@@ -318,8 +318,8 @@ watchdogLoop(),
 ,
   stop() {,
     this.isRunning = false,
-    console.log('Stopping Script...'),
-  }
+    console.log('Stopping Script...');
+};
 }
 ,
 // Start the script,
@@ -328,8 +328,8 @@ if (require.main === module) {,
   script.start().catch(error => {,
     console.error('Failed to start Script:', error),
     process.exit(1),
-  }),
-}
+  });
+};
 ,
 module.exports = Script,
 // Graceful shutdown handling,
@@ -341,5 +341,5 @@ process.on('SIGINT', () => {,
 process.on('SIGTERM', () => {,
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0),
-}),
+  process.exit(0);
+  }),

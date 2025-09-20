@@ -4,12 +4,17 @@ export function useGetOrderQuery(orderId) {
         queryKey: ['order', orderId],
         queryFn: async () => {
             if (!orderId)
-                return null;
+                return null,
     const res = await fetch(`/api/orders/${orderId}`);
             if (!res.ok) {
                 throw new Error('Failed to fetch order');
             }
             return (await res.json());
         },
+<<<<<<< HEAD
         enabled: !!orderId;});
+=======
+        enabled: !!orderId,,
+    });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }

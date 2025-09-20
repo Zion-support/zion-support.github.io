@@ -1,12 +1,18 @@
-import React, { createContext; useContext; useState; ReactNode } from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface DialogContextType {
+<<<<<<< HEAD
 isOpen: boolean;,
 setIsOpen: (open: boolean) => void;,
+=======
+  isOpen: boolean,
+  setIsOpen: (open: boolean) => void,,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 };
 const DialogContext = createContext<DialogContextType | undefined>(undefined);
 
 export function Dialog({ ;
+<<<<<<< HEAD
 children;
 open;
 onOpenChange;
@@ -14,11 +20,21 @@ onOpenChange;
 children: ReactNode;
 open?: boolean;
 onOpenChange?: (open: boolean) => void;,
+=======
+  children; 
+  open; 
+  onOpenChange; 
+}: { 
+  children: ReactNode,
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void,,
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }) {
 const [internalOpen; setInternalOpen] = useState(false);
 const isControlled = open !== undefined;
 const isOpen = isControlled ? open : internalOpen;
 
+<<<<<<< HEAD
 const setIsOpen: any = (newOpen: boolean) => {
 if (!isControlled) {;
 setInternalOpen(newOpen);
@@ -31,10 +47,25 @@ onOpenChange(newOpen);
 return (
 <DialogContext.Provider value={{ isOpen; setIsOpen }}>
 <div className="relative">
+=======
+  const setIsOpen = (newOpen: boolean) : any => {
+    if (!isControlled) {
+      setInternalOpen(newOpen);
+};
+    if (onOpenChange) {
+      onOpenChange(newOpen);
+    }
+  };
+
+  return (
+    <DialogContext.Provider value={{ isOpen, setIsOpen }}>
+      <div className="relative">
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 import React from "react";
 import { cn } from "@/lib/utils";
 
 export interface DialogProps extends React.HTMLAttributes<HTMLDivElement> {;
+<<<<<<< HEAD
 open?: boolean;
 onOpenChange?: (open: boolean) => void;,
 }
@@ -76,11 +107,55 @@ className,
 ...props;
 }) => {
 const [isOpen; setIsOpen] = React.useState(open);
+=======
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void,,
+}
+
+export interface DialogTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {;
+  children: React.ReactNode,,
+}
+
+export interface DialogContentProps extends React.HTMLAttributes<HTMLDivElement> {;
+  children: React.ReactNode,,
+}
+
+export interface DialogHeaderProps extends React.HTMLAttributes<HTMLDivElement> {;
+  children: React.ReactNode,,
+}
+
+export interface DialogTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {;
+  children: React.ReactNode,,
+}
+
+export interface DialogDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {;
+  children: React.ReactNode,,
+}
+
+export interface DialogFooterProps extends React.HTMLAttributes<HTMLDivElement> {;
+  children: React.ReactNode,,
+}
+
+const DialogContext = React.createContext<{
+  open: boolean,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>,,
+} | undefined>(undefined);
+
+export const Dialog: React.FC<DialogProps> = ({,
+  open = false;
+  onOpenChange;
+  children;
+  className,
+  ...props;
+}) : any => {
+  const [isOpen; setIsOpen] = React.useState(open);
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 React.useEffect(() => {
 setIsOpen(open);
 }, [open]);
 
+<<<<<<< HEAD
 const handleOpenChange: any = (newOpen: boolean) => {;
 setIsOpen(newOpen);
 onOpenChange?.(newOpen);
@@ -104,6 +179,31 @@ setIsOpen(value);
 export function DialogTrigger({ children; asChild = false }: { children: ReactNode; asChild?: boolean }) {
 const context = useContext(DialogContext);
 if (!context) throw new Error("DialogTrigger must be used within Dialog");
+=======
+  const handleOpenChange = (newOpen: boolean) : any => {
+    setIsOpen(newOpen),
+    onOpenChange?.(newOpen);
+  };
+
+  return (
+    <DialogContext.Provider value={{ open: isOpen, setOpen: (value: boolean | ((prev: boolean) => boolean)) : any => {
+      if (typeof value === "function") {
+        setIsOpen(value);
+  } else {
+        setIsOpen(value);
+      }
+    }}}>
+      <div className={cn("relative", className)} {...props}>
+        {children}
+      </div>
+    </DialogContext.Provider>
+  );
+}
+
+export function DialogTrigger({ children, asChild = false }: { children: ReactNode, asChild?: boolean }) {
+  const context = useContext(DialogContext);
+  if (!context) throw new Error("DialogTrigger must be used within Dialog");
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 if (asChild) {
 return (
@@ -120,9 +220,15 @@ return (
 );
 }
 
+<<<<<<< HEAD
 export function DialogContent({ children; className = "" }: { children: ReactNode; className?: string }) {
 const context = useContext(DialogContext);
 if (!context) throw new Error("DialogContent must be used within Dialog");
+=======
+export function DialogContent({ children, className = "" }: { children: ReactNode, className?: string }) {
+  const context = useContext(DialogContext);
+  if (!context) throw new Error("DialogContent must be used within Dialog");
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 if (!context.isOpen) return null;
 
@@ -132,6 +238,7 @@ return (
 <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
 };
 
+<<<<<<< HEAD
 export const DialogTrigger: React.FC<DialogTriggerProps> = ({;
 children;
 className,
@@ -141,6 +248,17 @@ const context = React.useContext(DialogContext);
 if (!context) {
 throw new Error("DialogTrigger must be used within Dialog");
 }
+=======
+export const DialogTrigger: React.FC<DialogTriggerProps> = ({,
+  children;
+  className,
+  ...props;
+}) : any => {
+  const context = React.useContext(DialogContext);
+  if (!context) {
+    throw new Error("DialogTrigger must be used within Dialog");
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const { setOpen } = context;
 
@@ -155,6 +273,7 @@ onClick={() => setOpen(true)}
 );
 };
 
+<<<<<<< HEAD
 export const DialogContent: React.FC<DialogContentProps> = ({;
 children;
 className,
@@ -166,6 +285,19 @@ throw new Error("DialogContent must be used within Dialog");
 }
 
 const { open; setOpen } = context;
+=======
+export const DialogContent: React.FC<DialogContentProps> = ({,
+  children;
+  className,
+  ...props;
+}) : any => {
+  const context = React.useContext(DialogContext);
+  if (!context) {
+    throw new Error("DialogContent must be used within Dialog");
+  }
+
+  const { open, setOpen } = context;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 if (!open) return null;
 
@@ -188,6 +320,7 @@ className;
 );
 }
 
+<<<<<<< HEAD
 export function DialogHeader({ children; className = "" }: { children: ReactNode; className?: string }) {
 return <div className={`mb-4 ${className}`}>{children}</div>
 }
@@ -361,3 +494,70 @@ DialogFooter;
 DialogTitle,
 DialogDescription,
 };
+=======
+export function DialogHeader({ children, className = "" }: { children: ReactNode, className?: string }) {
+  return <div className={`mb-4 ${className}`}>{children}</div>;
+}
+
+export function DialogTitle({ children, className = "" }: { children: ReactNode, className?: string }) {
+  return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>;
+}
+
+export function DialogDescription({ children, className = "" }: { children: ReactNode, className?: string }) {
+  return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>;
+}
+
+export function DialogFooter({ children, className = "" }: { children: ReactNode, className?: string }) {
+  return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;
+}
+};
+
+export const DialogHeader: React.FC<DialogHeaderProps> = ({,
+  children;
+  className,
+  ...props;
+}) : any => {
+  return (
+    <div className={cn("mb-4", className)} {...props}>
+      {children}
+    </div>
+  );
+};
+
+export const DialogTitle: React.FC<DialogTitleProps> = ({,
+  children;
+  className,
+  ...props;
+}) : any => {
+  return (
+    <h2 className={cn("text-lg font-semibold", className)} {...props}>
+      {children}
+    </h2>
+  );
+};
+
+export const DialogDescription: React.FC<DialogDescriptionProps> = ({,
+  children;
+  className,
+  ...props;
+}) : any => {
+  return (
+    <p className={cn("text-sm text-gray-600", className)} {...props}>
+      {children}
+    </p>
+  );
+};
+
+export const DialogFooter: React.FC<DialogFooterProps> = ({,
+  children;
+  className,
+  ...props;
+}) : any => {
+  return (
+    <div className={cn("flex justify-end gap-2 mt-4", className)} {...props}>
+      {children}
+    </div>
+  );
+};
+<//div><///div>))
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e

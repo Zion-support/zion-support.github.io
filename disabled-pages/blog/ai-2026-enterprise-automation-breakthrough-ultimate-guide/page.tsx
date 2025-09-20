@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     publishedTime: '2024-12-27T00:00:00.000Z',
     authors: ['Zion Tech Group']}
 }
-export default function AI2026EnterpriseAutomationUltimateGuide() {
+export default function AI2026EnterpriseAutomationUltimateGuide() : any {
   return (
     <div>
       <SEO

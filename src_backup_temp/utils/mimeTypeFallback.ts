@@ -59,8 +59,8 @@ class MimeTypeFallback {,
       ,
     } catch (error) {,
       console.error(`Error checking MIME type for ${url}: "`", error),
-      return await this.tryFallbackUrl(url),
-    }
+      return await this.tryFallbackUrl(url);
+};
   }
   private async tryFallbackUrl("originalUrl": "string): Promise<any> {,
     const fallbackUrl = this.fallbackUrls.get(originalUrl),
@@ -83,8 +83,8 @@ class MimeTypeFallback {,
           }
         }
       } catch (error) {,
-        console.error(`Fallback URL "failed": "${fallbackUrl"}`, error),
-      }
+        console.error(`Fallback URL "failed": "${fallbackUrl"}`, error);
+};
     }
     return false,
   }
@@ -104,10 +104,10 @@ class MimeTypeFallback {,
     links.forEach(link => {,
       (link as HTMLLinkElement).href = fallbackUrl,
       ,
-    }),
-    }
-    ),
-  }
+    });
+};
+    );
+};
   async preloadCriticalResources(): "Promise<any> {,
     const criticalResources = [,
       '/css/index-RK9lga5l.css/js/index-C64WnLOI.js/js/react-vendor-ClxMxoJB.js/js/router-vendor-9KcRWrrL.js',
@@ -122,8 +122,8 @@ class MimeTypeFallback {,
         if (!isValid) {,
         "}
       } catch (error) {,
-        console.error(`Error preloading "resource": "${resource"}`, error),
-      }
+        console.error(`Error preloading "resource": "${resource"}`, error);
+};
     }
   }
   createResourceElement("url": "string", "type": 'script' | 'stylesheet'): "HTMLElement {,
@@ -142,7 +142,7 @@ class MimeTypeFallback {,
     }
   }
   injectResource("url": "unknownstring", "type": 'script' | 'stylesheet'): "Promise<any> {,
-    return new Promise((resolve", reject)  => {,
+    return new Promise((resolve", reject)  : any => {,
       const element = this.createResourceElement(url, type),
       ,
       element.onload = () => {,
@@ -157,14 +157,14 @@ class MimeTypeFallback {,
       if (type === 'script') {,
         document.head.appendChild(element),
       } else {,
-        document.head.appendChild(element),
-      }
+        document.head.appendChild(element);
+};
     }
-    ),
-  }
+    );
+};
 }
 // Create singleton instance,
 const mimeTypeFallback = new MimeTypeFallback(),
 ,
-export default mimeTypeFallback,
-}}}
+export default mimeTypeFallback;
+  }}}

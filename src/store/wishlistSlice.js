@@ -1,6 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit, ';
 const initialState = {
+<<<<<<< HEAD
     items: [];};
+=======
+    items: [],,
+};
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 export const getApiUrl = () => {
     var _a, _b;
     const env = (_b = (_a = import.meta) === null || _a === void 0 ? void 0 : _a.env) !== null && _b !== void 0 ? _b : process.env;
@@ -12,8 +17,9 @@ export const loadWishlistFromDB = createAsyncThunk('wishlist/loadFromDB', async 
         throw new Error('Failed to load');
     return (await res.json());
 });
-const wishlistSlice = createSlice({
-    name: 'wishlist';
+
+  const wishlistSlice = createSlice({
+    name: 'wishlist',
     initialState,
     reducers: {
         addToWishlist(state, action) {

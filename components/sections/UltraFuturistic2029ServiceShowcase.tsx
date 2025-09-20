@@ -7,7 +7,7 @@ import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovati
 type Service = CuttingEdgeInnovation2029 | any;
 
 interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[];
+  services: Service[],
   title?: string;
   subtitle?: string;
   maxServices?: number;
@@ -42,7 +42,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   title = "2029 Ultra-Futuristic Innovations",
   subtitle = "Experience the future of technology with our revolutionary services",
   maxServices = 12
-}) => {
+}) : any => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
 
@@ -52,7 +52,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   // Filter and sort services
   const filteredServices = services
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-    .sort((a, b) => {
+    .sort((a, b) : any => {
       switch (sortBy) {
         case 'innovation':
           // Default to 'Advanced' if innovationLevel is not available
@@ -64,9 +64,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
           return b.rating - a.rating;
-        default:
-          return 0;
-      }
+        default: return 0;
+  }
     })
     .slice(0, maxServices);
 
@@ -78,7 +77,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -90,7 +89,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -255,6 +254,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       </div>
     </section>
   );
-};
+  };
 
 export default UltraFuturistic2029ServiceShowcase;

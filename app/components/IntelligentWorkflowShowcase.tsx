@@ -1,5 +1,5 @@
 import React from 'react'
-const IntelligentWorkflowShowcase: React.FC = () => {;
+const IntelligentWorkflowShowcase: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">IntelligentWorkflowShowcase</h3>

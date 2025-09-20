@@ -104,20 +104,20 @@ const UltimateContentHub2026 = () => {,
       thumbnail: "/api/placeholder/400/250",
       featured: true}
   ],
-  const getTypeIcon = (type: string) => {,
+  const getTypeIcon = (type: string) : any => {,
     switch (type) {,
-      case 'video': return Video,
-      case 'guide': return BookOpen,
-      case 'case-study': return FileText,
-      case 'tutorial': return Headphones,
+      case 'video': return Video;
+      case 'guide': return BookOpen;
+      case 'case-study': return FileText;
+      case 'tutorial': return Headphones;
       default: return FileText}
   },
-  const getDifficultyColor = (difficulty: string) => {,
+  const getDifficultyColor = (difficulty: string) : any => {,
     switch (difficulty) {,
-      case 'Beginner': return 'bg-green-100 text-green-800',
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-800',
-      case 'Advanced': return 'bg-orange-100 text-orange-800',
-      case 'Expert': return 'bg-red-100 text-red-800',
+      case 'Beginner': return 'bg-green-100 text-green-800';
+      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
+      case 'Advanced': return 'bg-orange-100 text-orange-800';
+      case 'Expert': return 'bg-red-100 text-red-800';
       default: return 'bg-gray-100 text-gray-800'}
   },
   const filteredContent = contentItems.filter(item => {,
@@ -208,7 +208,7 @@ const UltimateContentHub2026 = () => {,
               : 'grid-cols-1'}`}
         >,
           <div>,
-            {filteredContent.map((itemindex) => {,
+            {filteredContent.map((itemindex) : any => {,
               const TypeIcon = getTypeIcon(item.type),
               return (,
                 <div,
@@ -285,5 +285,5 @@ const UltimateContentHub2026 = () => {,
       </div>,
     </section>,
   ),
-export default UltimateContentHub2026,
-}
+export default UltimateContentHub2026;
+  }

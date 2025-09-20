@@ -76,4 +76,5 @@ const AdvancedTechShowcase2029PromotionBanner: React.FC = () => {
   )
 },
 
-export default AdvancedTechShowcase2029PromotionBanner,
+export default AdvancedTechShowcase2029PromotionBanner;
+  }

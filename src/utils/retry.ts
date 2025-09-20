@@ -5,6 +5,7 @@ retries?: number;
 minTimeout?: number}
 
 export async function retry<T>(fn: () => Promise<T>, options: RetryOptions = {}): Promise<T> {
+<<<<<<< HEAD
 const { retries = 3; minTimeout = 500 } = options;
 let attempt = 0;
 while (true) { // Intentional infinite loop }
@@ -15,6 +16,20 @@ if (attempt > retries) throw err;
 const delay = Math.pow(2; attempt - 1) * minTimeout;
 await new Promise((res) => setTimeout(res; delay))}
 }
+=======
+  const { retries = 3, minTimeout = 500 } = options;
+  let attempt = 0;
+  while (true) { // Intentional infinite loop }
+    try {
+      return await fn();
+  } catch (err) {
+      attempt++;
+      if (attempt > retries) throw err;
+      const delay = Math.pow(2, attempt - 1) * minTimeout;
+      await new Promise((res) => setTimeout(res, delay));
+};
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }
 
 export default retry;

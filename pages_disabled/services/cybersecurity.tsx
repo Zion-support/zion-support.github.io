@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function CybersecurityPage() {
+export default function CybersecurityPage() : any {
   const services = [
     {
       title: "Advanced Threat Detection",
@@ -46,7 +46,7 @@ export default function CybersecurityPage() {
       price: "$699/month",
       icon: Shield
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function CybersecurityPage() {
       title: "Compliance Ready",
       description: "Meet all industry standards and regulatory requirements"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -251,4 +251,4 @@ export default function CybersecurityPage() {
       <EnhancedFooter />
     </div>
   );
-}
+  }'

@@ -11,5 +11,5 @@ const function AgencyDashboardPage({ vendor }: Props) { = () => {,
     </div>,
   ),
 },
-export default function AgencyDashboardPage({ vendor }: Props) {,
-}}}
+export default function AgencyDashboardPage({ vendor }: Props) {;
+  }}}

@@ -7,4 +7,4 @@ export default function UltraFuturisticBackground2035({ children }: Props) {
       {children}
     </div>
   );
-}
+  }

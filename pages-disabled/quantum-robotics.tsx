@@ -5,7 +5,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button',
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
 
-export default function AutonomousVehicleAIPage() {
+export default function AutonomousVehicleAIPage() : any {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-vehicle-ai-platform')),
   if (!service) return null,
 
@@ -51,5 +51,5 @@ export default function AutonomousVehicleAIPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
-}
+  );
+  }

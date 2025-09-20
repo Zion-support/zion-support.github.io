@@ -376,11 +376,11 @@ export const industryCategories2025: string[] = Array.from(
       .filter((v): v is string => Boolean(v))
   )
 ).sort(),
-export const getSolutionsByIndustry = (industry: string) => {
+export const getSolutionsByIndustry = (industry: string) : any => {
   if (!industry || industry === 'All') return specializedIndustrySolutions2025,
   return specializedIndustrySolutions2025.filter((s) => s.industry === industry)
 },
-export const getSolutionsByCategory = (category: string) => {
+export const getSolutionsByCategory = (category: string) : any => {
   if (!category || category === 'All') return specializedIndustrySolutions2025,
   return specializedIndustrySolutions2025.filter((s) => s.category === category)
 },

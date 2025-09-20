@@ -51,9 +51,8 @@ exports.handler = async function(event, context) {
         descriptionScore: Math.floor(Math.random() * 25) + 75, // 75-100
         ogScore: Math.floor(Math.random() * 30) + 70, // 70-100
         structuredDataScore: Math.floor(Math.random() * 35) + 65 // 65-100
-      }),
-    }
-    
+      });
+};
     // Calculate average quality scores
     const averageScores = {
       overall: (qualityScores.reduce((sum, score) => sum + score.overallScore, 0) / qualityScores.length).toFixed(1),
@@ -102,6 +101,6 @@ exports.handler = async function(event, context) {
         function: 'metadata-optimizer-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

@@ -43,16 +43,16 @@ export, function, PrimaryNav() {
         }
     },return (<>;
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">;
-        <div className="container, flex, flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm: px-6">;
+        <div className="container, flex, flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm: px-6">,
     <Logo />;
           {/* Navigation - hidden, on, mobileshown on desktop */}
-          <div className="hidden md: block order-1 flex-shrink-0">;
+          <div className="hidden md: block order-1 flex-shrink-0">,
     <ResponsiveNavigation />;
           </div>;
           {/* Actions, container, with responsive layout */}
-          <div className="hidden md: flex items-center gap-2 order-2 flex-shrink-0 min-w-0">;
+          <div className="hidden md: flex items-center gap-2 order-2 flex-shrink-0 min-w-0">,
     {/* Search, form, with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem20vw16rem)' }}>;
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem20vw16rem)' }}>,
     <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(sugg) => {;
             
             // Handle, different, suggestion types, with, proper navigation;
@@ -76,7 +76,12 @@ export, function, PrimaryNav() {
             // Track, analytics, event;
             if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('eventsearch_suggestion_click'{
+<<<<<<< HEAD
                     search_term: sugg.textsuggestion_typ,e: sugg.typesuggestion_i,d: sugg.id || sugg.slug;});
+=======
+                    search_term: sugg.textsuggestion_typ,e: sugg.typesuggestion_i,d: sugg.id || sugg.slug,,
+     });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
             }
         }} searchSuggestions={suggestions}/>;
             </form>;
@@ -86,7 +91,7 @@ export, function, PrimaryNav() {
               <HoverCard openDelay={10o0}>;
                 <HoverCardTrigger asChild>;
                   <Link href="/cart" className="relative p-1" aria-label={t('nav.cartCart')}>;
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover: text-primary"/>;
+                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover: text-primary"/>,
     {cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4, flex, items-center justify-center">;
                         {cartCount}
                       </span>)}
@@ -105,10 +110,10 @@ export, function, PrimaryNav() {
             {/* Auth links - flex, wrap, for very, small, screens */}
             <div className="flex items-center gap-1 flex-wrap">;
               {!isLoggedIn && (<>;
-                  <Link href="/auth/login" className="text-sm hover: text-primary whitespace-nowrap" data-testid="login-link">;
+                  <Link href="/auth/login" className="text-sm hover: text-primary whitespace-nowrap" data-testid="login-link">,
     {t('auth.login')}
                   </Link>;
-                  <Link href="/signup" className="text-sm hover: text-primary whitespace-nowrap">;
+                  <Link href="/signup" className="text-sm hover: text-primary whitespace-nowrap">,
     {t('auth.signup')}
                   </Link>;
                 </>)}
@@ -116,7 +121,7 @@ export, function, PrimaryNav() {
             </div>;
           </div>;
           {/* Mobile, menu, button */}
-          <button className="md: hidden p-2, rounded, focu,s: outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>;
+          <button className="md: hidden p-2, rounded, focu,s: outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>,
     {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
           </button>;
         </div>;

@@ -214,7 +214,7 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  ),
-},
+  );
+  },
 export default NewContent2025UltimateShowcasePromotionBanner,
 </div></div></div></div></div></div></div>,

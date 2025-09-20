@@ -25,8 +25,8 @@ exports.handler = async function () {,
         path: 'public/sitemap-autogen.xml',
         content: xml,
         message: 'chore(automation): weekly sitemap refresh',
-        token}),
-    }
+        token});
+};
     return {,
       statusCode: 200,
       body: JSON.stringify({ ok: true, pages: pages.length })

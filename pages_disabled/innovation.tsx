@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Footer from '../components/Footer';
 
-export default function InnovationPage() {
+export default function InnovationPage() : any {
   return (
     <>
       <Head>
@@ -176,7 +176,7 @@ export default function InnovationPage() {
               <p className="text-lg text-white/80 mb-6 max-w-2xl mx-auto">
                 Be part of the future of technology. Partner with us to explore the next generation of autonomous AI and breakthrough innovations.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
                   Partner With Us
                 </a>
@@ -191,4 +191,4 @@ export default function InnovationPage() {
       </div>
     </>
   );
-}
+  }

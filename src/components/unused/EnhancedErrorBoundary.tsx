@@ -1,4 +1,4 @@
-import React, { Component; ErrorInfo; ReactNode } from "react;";
+import React, { Component, ErrorInfo, ReactNode } from "react;";
 import { motion } from "framer-motion, ";
 import { ExclamationTriangleIcon;
 ArrowPathIcon;
@@ -7,6 +7,7 @@ DocumentTextIcon;
 BugAntIcon} from "@heroicons/react/24/outline, ";
 
 interface Props {
+<<<<<<< HEAD
 children: ReactNode;
 fallback?: ReactNode;
 onError?: (error: Error; errorInfo: ErrorInfo) => void;
@@ -57,6 +58,100 @@ return `error_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`;
 private reportError(error: Error; errorInfo: ErrorInfo) {
 // In a real application; you would send this to your error reporting service;
 // For example: Sentry; LogRocket; Bugsnag; etc.;
+=======
+  children: ReactNode,
+    fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void,
+    showDetails?: boolean;
+};
+interface State {
+  hasError: boolean,
+    error: Error | null,
+    errorInfo: ErrorInfo | null,
+    errorId: string | null,
+    showStackTrace: boolean,,
+};
+class EnhancedErrorBoundary extends Component<Props; State> {
+  constructor(props: Props) {
+    super(props),
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      showStackTrace: false,,
+    };
+     }
+
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error;
+      errorId: this.generateErrorId();
+  };
+     }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ errorInfo }),
+    // Log error to console;
+    
+    
+    // Call custom error handler if provided;
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Send error to error reporting service (if available)
+    this.reportError(error, errorInfo);
+  }
+
+  private static generateErrorId(): string {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
+
+  private reportError(error: Error, errorInfo: ErrorInfo) {
+    // In a real application, you would send this to your error reporting service;
+    // For example: Sentry, LogRocket; Bugsnag; etc.
+    
+    const errorReport = {
+      id: this.state.errorId,
+      timestamp: new Date().toISOString(),
+      error: {
+        name: error.name,
+        message: error.message,
+        stack: error.stack,,
+      };
+      errorInfo: {
+        componentStack: errorInfo.componentStack,,
+      };
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      viewport: {
+        width: window.innerWidth,
+        height: window.innerHeight,,
+      }
+    };
+    // Log to console for development;
+    if (process.env.NODE_ENV === "development") {
+      console.group("Error Report");
+      
+      
+      console.groupEnd();
+    }
+
+    // In production; you would send this to your error reporting service;
+    // Example: Sentry.captureException(error, { extra: errorReport });
+};
+  private handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      showStackTrace: false,,
+    });
+     };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 const errorReport = {;
 id: this.state.errorId;
@@ -124,10 +219,17 @@ ${errorInfo.componentStack}
 **User Agent:** ${navigator.userAgent}
 **Timestamp:** ${new Date().toISOString()}
 
+<<<<<<< HEAD
 ## Steps to Reproduce;
 1.;
 2.;
 3.;
+=======
+## Steps to Reproduce,
+1. 
+2. 
+3. 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 ## Expected Behavior;
 
@@ -137,6 +239,7 @@ ${errorInfo.componentStack}
 
 ## Additional Context;
 
+<<<<<<< HEAD
 `.trim();
 const issueUrl = `https: //github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
 window.open(issueUrl, "_blank");
@@ -146,6 +249,17 @@ window.open(issueUrl, "_blank");
 private toggleStackTrace = () => {
 this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
 };
+=======
+      `.trim();
+    const issueUrl = `https: //github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`,
+    window.open(issueUrl, "_blank");
+    }
+  };
+
+  private toggleStackTrace = () => {
+    this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 render() {
 if (this.state.hasError) {
@@ -154,6 +268,7 @@ if (this.props.fallback) {
 return this.props.fallback;
 }
 
+<<<<<<< HEAD
 // Default error UI;
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
@@ -172,6 +287,26 @@ className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl bo
 </div>
 </div>
 </div>
+=======
+      // Default error UI;
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark: from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
+          <motion.div,
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden"
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">
+              <div className="flex items-center space-x-3">
+                <ExclamationTriangleIcon className="w-8 h-8" />
+                <div>
+                  <h1 className="text-2xl font-bold">Something went wrong</h1>
+                  <p className="text-red-100">We"ve encountered an unexpected error</p>
+                </div>
+              </div>
+            </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 {/* Content */}
 <div className="p-6 space-y-6">
@@ -195,6 +330,7 @@ Error ID: {this.state.errorId}
 </div>
 </div>
 
+<<<<<<< HEAD
 {/* Stack Trace (Collapsible) */}
 {this.state.error?.stack && (
 <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
@@ -254,6 +390,91 @@ className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-
 <span>Go Home</span>
 </button>
 </div>
+=======
+              {/* Stack Trace (Collapsible) */}
+              {this.state.error?.stack && (
+                <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
+                  <button,
+                    onClick={this.toggleStackTrace}
+                    className="w-full px-4 py-3 bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors flex items-center justify-between text-left"
+                  >
+                    <span className="font-medium text-slate-700 dark:text-slate-300">
+                      Technical Details,
+                    </span>
+                    <DocumentTextIcon className={`w-5 h-5 text-slate-500 transition-transform ${
+                      this.state.showStackTrace ? "rotate-180" : "'
+                    }`} />
+                  </button>
+                  
+                  {this.state.showStackTrace && (
+                    <div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">
+                      <pre className="whitespace-pre-wrap break-words">
+                        {this.state.error.stack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Component Stack (if available) */}
+              {this.state.errorInfo?.componentStack && (
+                <div className="border border-slate-200 dark: border-slate-700 rounded-lg overflow-hidden">
+                  <div className="px-4 py-3 bg-slate-50 dark:bg-slate-700 border-b border-slate-200 dark:border-slate-700">
+                    <span className="font-medium text-slate-700 dark:text-slate-300">
+                      Component Stack,
+                    </span>
+                  </div>
+                  <div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">
+                    <pre className="whitespace-pre-wrap break-words">
+                      {this.state.errorInfo.componentStack}
+                    </pre>
+                  </div>
+                </div>
+              )}
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm: flex-row gap-3">
+                <button,
+                  onClick={this.handleRetry}
+                  className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 hover: bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                >
+                  <ArrowPathIcon className="w-5 h-5" />
+                  <span>Try Again</span>
+                </button>
+                
+                <button,
+                  onClick={this.handleGoHome}
+                  className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-600 hover: bg-slate-700 text-white font-medium rounded-lg transition-colors"
+                >
+                  <HomeIcon className="w-5 h-5" />
+                  <span>Go Home</span>
+                </button>
+              </div>
+
+              {/* Report Issue */}
+              <div className="text-center">
+                <button,
+                  onClick={this.handleReportIssue}
+                  className="inline-flex items-center space-x-2 text-sm text-slate-600 dark: text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
+                >
+                  <BugAntIcon className="w-4 h-4" />
+                  <span>Report this issue</span>
+                </button>
+              </div>
+
+              {/* Help Text */}
+              <div className="text-center text-sm text-slate-500 dark:text-slate-400">
+                <p>If this problem persists, please contact our support team.</p>
+                <p className="mt-1">
+                  Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">kleber@ziontechgroup.com</a>
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      );
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 
 {/* Report Issue */}
 <div className="text-center">
@@ -283,4 +504,4 @@ return this.props.children;
 }
 }
 
-export default EnhancedErrorBoundary;<//div><///div>
+export default EnhancedErrorBoundary;<//div><///div>'

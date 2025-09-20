@@ -32,9 +32,8 @@ async function handler(req, res) {
     const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey,
 
     if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {
-      throw new Error('Refusing to use live Stripe key on non-production domain'),
-    }
-
+      throw new Error('Refusing to use live Stripe key on non-production domain');
+};
     const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
       apiVersion: '2023-10-16'
     }),
@@ -48,7 +47,7 @@ async function handler(req, res) {
   } catch (err) {
     console.error('Create payment intent error:', err),
     res.statusCode = 500,
-    res.json({ error: err.message }),
+    res.json({ error: err.message });
   }
 }
 

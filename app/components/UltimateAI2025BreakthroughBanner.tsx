@@ -11,7 +11,7 @@ const UltimateAI2025BreakthroughBanner: React.FC = () => {
           Discover the revolutionary AI technologies that will transform your business in 2025. 
           Experience unprecedented automation, intelligence, and growth.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mt-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h3 className="text-2xl font-bold mb-4">Quantum AI</h3>
             <p className="text-gray-300">
@@ -34,6 +34,6 @@ const UltimateAI2025BreakthroughBanner: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default UltimateAI2025BreakthroughBanner;

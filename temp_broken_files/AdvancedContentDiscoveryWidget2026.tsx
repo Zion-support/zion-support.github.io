@@ -144,7 +144,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {,
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
     return matchesSearch && matchesCategory,
   }),
-  const sortedContent = [...filteredContent].sort((ab) => {,
+  const sortedContent = [...filteredContent].sort((ab) : any => {,
     switch (sortBy) {,
       case 'trending':,
         return b.views - a.views,
@@ -156,33 +156,33 @@ const AdvancedContentDiscoveryWidget2026 = () => {,
         return b.likes - a.likes,
       default: return 0}
   }),
-  const toggleFavorite = (id) => {,
+  const toggleFavorite = (id) : any => {,
     const newFavorites = new Set(favorites),
     if (newFavorites.has(id)) {,
       newFavorites.delete(id),
     } else {,
-      newFavorites.add(id),
-    }
-    setFavorites(newFavorites),
+      newFavorites.add(id);
+};
+    setFavorites(newFavorites);
   },
-  const getTypeIcon = (type) => {,
+  const getTypeIcon = (type) : any => {,
     switch (type) {,
-      case 'video': return Play,
-      case 'article': return BookOpen,
-      case 'guide': return Target,
-      case 'report': return TrendingUp,
-      case 'case-study': return Users,
-      case 'tutorial': return Play,
+      case 'video': return Play;
+      case 'article': return BookOpen;
+      case 'guide': return Target;
+      case 'report': return TrendingUp;
+      case 'case-study': return Users;
+      case 'tutorial': return Play;
       default: return BookOpen}
   },
-  const getTypeColor = (type) => {,
+  const getTypeColor = (type) : any => {,
     switch (type) {,
-      case 'video': return 'from-red-500 to-pink-500',
-      case 'article': return 'from-blue-500 to-cyan-500',
-      case 'guide': return 'from-green-500 to-emerald-500',
-      case 'report': return 'from-purple-500 to-indigo-500',
-      case 'case-study': return 'from-orange-500 to-yellow-500',
-      case 'tutorial': return 'from-teal-500 to-cyan-500',
+      case 'video': return 'from-red-500 to-pink-500';
+      case 'article': return 'from-blue-500 to-cyan-500';
+      case 'guide': return 'from-green-500 to-emerald-500';
+      case 'report': return 'from-purple-500 to-indigo-500';
+      case 'case-study': return 'from-orange-500 to-yellow-500';
+      case 'tutorial': return 'from-teal-500 to-cyan-500';
       default: return 'from-gray-500 to-slate-500'}
   },
   return (,
@@ -243,7 +243,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {,
           </div>,
           {/* Category Filters */}
           <div className="flex flex-wrap gap-3">,
-            {categories.map((category) => {,
+            {categories.map((category) : any => {,
               const Icon = category.icon,
               return (,
                 <button,
@@ -264,7 +264,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {,
         {/* Content Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
           <div>,
-            {sortedContent.map((itemindex) => {,
+            {sortedContent.map((itemindex) : any => {,
               const TypeIcon = getTypeIcon(item.type),
               return (,
                 <div,
@@ -383,5 +383,5 @@ const AdvancedContentDiscoveryWidget2026 = () => {,
       </div>,
     </div>,
   ),
-export default AdvancedContentDiscoveryWidget2026,
-}
+export default AdvancedContentDiscoveryWidget2026;
+  }

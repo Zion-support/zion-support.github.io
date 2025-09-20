@@ -7,7 +7,7 @@ import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
 import { innovative2030Services } from '../data/2030-innovative-services',
 
-export default function Revolutionary2030ServicesPage() {
+export default function Revolutionary2030ServicesPage() : any {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -24,4 +24,5 @@ const 2030-revolutionary-services: React.FC = () => {
   )
 },
 
-export default 2030-revolutionary-services,
+export default 2030-revolutionary-services;
+  }

@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Define, measure, and enforce multi-dimensional trust for autonomous agents across safety, security, reliability, and compliance.'
 }
-export default function TrustGridForAgentsPage() {
+export default function TrustGridForAgentsPage() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Trust Grid for Autonomous Agents</h1>

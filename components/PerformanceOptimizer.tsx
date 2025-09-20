@@ -3,19 +3,19 @@ import { motion } from 'framer-motion';
 import { Zap, Clock, TrendingUp, Shield, Eye, Download, Wifi, Cpu } from 'lucide-react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  timeToInteractive: number;
+  loadTime: number,
+  firstContentfulPaint: number,
+  largestContentfulPaint: number,
+  cumulativeLayoutShift: number,
+  firstInputDelay: number,
+  timeToInteractive: number,
 }
 
 interface PerformanceOptimizerProps {
   className?: string;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) : any => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizationComplete, setOptimizationComplete] = useState(false);
@@ -36,7 +36,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
         cumulativeLayoutShift: 0, // Would need to use PerformanceObserver
         firstInputDelay: 0, // Would need to use PerformanceObserver
         timeToInteractive: navigation.domInteractive - navigation.domContentLoadedEventStart
-      };
+      },
 
       setMetrics(metrics);
     }
@@ -45,8 +45,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
   // Image optimization
   const optimizeImages = useCallback(async () => {
     const images = document.querySelectorAll('img');
-    const promises = Array.from(images).map((img) => {
-      return new Promise<void>((resolve) => {
+    const promises = Array.from(images).map((img) : any => {
+      return new Promise<void>((resolve) : any => {
         if (img.complete) {
           resolve();
         } else {
@@ -62,8 +62,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
   // Lazy loading implementation
   const implementLazyLoading = useCallback(() => {
     const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
+    const imageObserver = new IntersectionObserver((entries, observer) : any => {
+      entries.forEach((entry) : any => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
@@ -108,7 +108,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
         '/css/critical.css'
       ];
       
-      criticalResources.forEach((resource) => {
+      criticalResources.forEach((resource) : any => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
@@ -116,8 +116,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
         link.crossOrigin = resource.endsWith('.woff2') ? 'anonymous' : '';
         document.head.appendChild(link);
       });
-      
-      setOptimizationComplete(true);
+
+    setOptimizationComplete(true);
     } catch (error) {
       console.error('Performance optimization failed:', error);
     } finally {
@@ -136,8 +136,8 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
     registerServiceWorker();
   }, [measurePerformance, implementLazyLoading, registerServiceWorker]);
 
-  const getPerformanceScore = (metrics: PerformanceMetrics) => {
-    let score = 100;
+  const getPerformanceScore = (metrics: PerformanceMetrics) : any => {
+    let score = 100,
     
     if (metrics.loadTime > 3000) score -= 20;
     if (metrics.firstContentfulPaint > 1500) score -= 20;
@@ -146,11 +146,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
     return Math.max(0, score);
   };
 
-  const getPerformanceGrade = (score: number) => {
-    if (score >= 90) return { grade: 'A', color: 'text-green-600', bg: 'bg-green-100' };
-    if (score >= 80) return { grade: 'B', color: 'text-blue-600', bg: 'bg-blue-100' };
-    if (score >= 70) return { grade: 'C', color: 'text-yellow-600', bg: 'bg-yellow-100' };
-    if (score >= 60) return { grade: 'D', color: 'text-orange-600', bg: 'bg-orange-100' };
+  const getPerformanceGrade = (score: number) : any => {
+    if (score >= 90) return { grade: 'A', color: 'text-green-600', bg: 'bg-green-100' },
+    if (score >= 80) return { grade: 'B', color: 'text-blue-600', bg: 'bg-blue-100' },
+    if (score >= 70) return { grade: 'C', color: 'text-yellow-600', bg: 'bg-yellow-100' },
+    if (score >= 60) return { grade: 'D', color: 'text-orange-600', bg: 'bg-orange-100' },
     return { grade: 'F', color: 'text-red-600', bg: 'bg-red-100' };
   };
 
@@ -326,6 +326,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
       </motion.div>
     </div>
   );
-};
+  };
 
 export default PerformanceOptimizer;

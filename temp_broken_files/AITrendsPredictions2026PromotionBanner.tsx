@@ -128,6 +128,6 @@ const AITrendsPredictions2026PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  ),
-},
+  );
+  },
 export default AITrendsPredictions2026PromotionBanner,

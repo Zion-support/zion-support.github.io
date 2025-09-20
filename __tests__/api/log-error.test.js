@@ -85,11 +85,11 @@ describe('/api/log-error Endpoint', () => {
       const apiModule = await import('../../pages/api/log-error.ts'),
       logErrorApiHandler = apiModule.default,
       if (typeof logErrorApiHandler !== 'function') {
-        throw new Error("Failed to load API handler. Ensure pages/api/log-error.ts exports its handler function as default."),
-      }
+        throw new Error("Failed to load API handler. Ensure pages/api/log-error.ts exports its handler function as default.");
+};
     } catch (e) {
-      console.error("Error loading API handler for tests:", e),
-    }
+      console.error("Error loading API handler for tests:", e);
+};
   }),
 
   beforeEach(() => {
@@ -262,5 +262,6 @@ describe('/api/log-error Endpoint', () => {
       expect.any(Error)
     ),
     consoleErrorSpy.mockRestore(),
+  });
   }),
-}),
+'

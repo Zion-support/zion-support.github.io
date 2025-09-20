@@ -8,7 +8,7 @@ export function useFraudPreventionSignup() {
     // Get the user's IP address (in a real app, you'd do this server-side)
     const getIP = async () => {
         try {
-            const response = await apiClient('https: //api.ipify.org?format=json');
+            const response = await apiClient('https: //api.ipify.org?format=json'),
     const data = await response.json();
             return data.ip;
         }
@@ -28,16 +28,23 @@ export function useFraudPreventionSignup() {
                 
                 // Create a fraud flag for admin review;
                 const { error } = await supabase.from('fraud_flags').insert({
-                    user_email: email;
-                    content_type: 'signup';
+                    user_email: email,
+                    content_type: 'signup',
                     content_id: email, // Using email as content ID for signup attempts;
-                    content_excerpt: `Signup attempt for ${email}`;
-                    severity: 'suspicious';
-                    reason: fraudCheck.reasons.join(';
+                    content_excerpt: `Signup attempt for ${email}`,
+                    severity: 'suspicious',
+                    reason: fraudCheck.reasons.join(',
     '),
+<<<<<<< HEAD
                     ip_address: ipAddress;
                     timestamp: new Date().toISOString();
                     status: 'pending'});
+=======
+                    ip_address: ipAddress,
+                    timestamp: new Date().toISOString(),
+                    status: 'pending',
+                });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
     if (error) {
                     
                 }
@@ -46,9 +53,16 @@ export function useFraudPreventionSignup() {
                 if (fraudCheck.reasons.some(r => r.includes('Multiple accounts') ||
                     r.includes('suspicious email domain'))) {
                     toast({
+<<<<<<< HEAD
                         title: "Signup blocked";
                         description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.";
                         variant: "destructive";});
+=======
+                        title: "Signup blocked",
+                        description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
+                        variant: "destructive",,
+                    });
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
                     return false;
                 }
                 // Otherwise, allow but flag for review;
@@ -68,5 +82,10 @@ export function useFraudPreventionSignup() {
     }, []);
     return {
         isCheckingFraud,
+<<<<<<< HEAD
         checkFraudBeforeSignup};
+=======
+        checkFraudBeforeSignup;
+  };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a97e
 }

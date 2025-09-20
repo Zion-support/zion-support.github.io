@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function QuantumComputing() {,
+export default function QuantumComputing() : any {,
   const site = 'https: //ziontechgroup.com',
   const phone = '+1 302 464 0950',
   return (,
@@ -18,5 +18,5 @@ export default function QuantumComputing() {,
         </div>,
       </section>,
     </>,
-  ),
-}
+  );
+  }
