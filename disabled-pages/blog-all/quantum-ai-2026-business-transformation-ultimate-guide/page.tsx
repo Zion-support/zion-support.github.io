@@ -16,7 +16,7 @@ export default function QuantumAI2026BusinessTransformation() {
             <span className="text-sm font-medium text-purple-800">🚀 BREAKTHROUGH CONTENT 2026</span>
           </div>
           <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">
-            Quantum AI 2026 Business Transformation: Ultimate Guide,
+            Quantum AI 2026 Business Transformation: Ultimate Guide
           </h1>
           <p>
             The convergence of quantum computing and artificial intelligence is creating unprecedented,

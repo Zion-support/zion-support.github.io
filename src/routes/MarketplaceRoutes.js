@@ -84,4 +84,3 @@ const MarketplaceRoutes = () => {
     </Routes>);
 };
 export default MarketplaceRoutes;
-=======

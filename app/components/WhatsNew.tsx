@@ -14,7 +14,7 @@ const WhatsNew: React.FC = () => {;
             <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026 Content Hub</h3>
             <p className="text-gray-600 mb-4">Discover the latest AI insights and breakthroughs for 2026.</p>
             <Link href="/blog" className="text-blue-600 font-semibold hover:text-blue-800">
-              Explore →,
+              Explore →
             </Link>
           </div>
           <div>
@@ -22,7 +22,7 @@ const WhatsNew: React.FC = () => {;
             <h3 className="text-xl font-bold text-gray-900 mb-2">Enhanced Analytics</h3>
             <p className="text-gray-600 mb-4">New analytics dashboard with real-time insights and reporting.</p>
             <Link href="/analytics" className="text-purple-600 font-semibold hover:text-purple-800">
-              Learn More →,
+              Learn More →
             </Link>
           </div>
           <div>
@@ -30,7 +30,7 @@ const WhatsNew: React.FC = () => {;
             <h3 className="text-xl font-bold text-gray-900 mb-2">Success Stories</h3>
             <p className="text-gray-600 mb-4">Read how our clients achieved 500%+ ROI with our solutions.</p>
             <Link href="/case-studies" className="text-green-600 font-semibold hover:text-green-800">
-              View Stories →,
+              View Stories →
             </Link>
           </div>
         </div>

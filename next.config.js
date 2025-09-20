@@ -11,6 +11,7 @@ const nextConfig = {
 	},
 	// metadataBase is now handled in layout.tsx
 	eslint: {
+		// Allow builds to pass even if there are ESLint errors
 		ignoreDuringBuilds: true,
 		dirs: []
 	},
