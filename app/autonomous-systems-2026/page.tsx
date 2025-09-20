@@ -1,13 +1,15 @@
-import React from 'react';
-import SEO from '@/components/SEO';
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: "Autonomous Systems 2026 - Zion Holdings",
+  description: "Next-generation autonomous systems and AI technologies for 2026"
+}
+
+
 
 export default function AutonomousSystems2026Page() {
   return (
     <div>
-      <SEO
-        title="Autonomous Systems 2026 - Zion Holdings"
-        description="Next-generation autonomous systems for 2026"
-      />
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold mb-8">Autonomous Systems 2026</h1>
@@ -17,5 +19,5 @@ export default function AutonomousSystems2026Page() {
         </div>
       </div>
     </div>
-  );
+  )
 }
