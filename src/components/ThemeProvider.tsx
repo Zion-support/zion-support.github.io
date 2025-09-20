@@ -12,7 +12,7 @@ interface ThemeProviderProps {
 }
 
   export const ThemeProvider: React.FC<ThemeProviderProps> = ({ 
-    children;
+    children,
     defaultTheme = 'dark' 
   }) => {
   const [theme, setTheme] = React.useState<Theme>(defaultTheme);

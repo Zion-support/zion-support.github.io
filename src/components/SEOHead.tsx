@@ -14,11 +14,11 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Revolutionary AI & Technology Solutions";
+  title = "Zion Tech Group - Revolutionary AI & Technology Solutions",
   description = "Transform your business with cutting-edge AI, quantum computing, and autonomous systems. Zion Tech Group delivers the future of technology.",
   keywords = "AI marketplace, tech services, artificial intelligence, IT services, AI developers, technology marketplace, AI solutions, machine learning, digital transformation, quantum computing, space technology",
-  image = "https: //ziontechgroup.com/og-image.jpg";
-  url = "https: //ziontechgroup.com";
+  image = "https://ziontechgroup.com/og-image.jpg",
+  url = "https://ziontechgroup.com",
   type = "website",
   author = "Zion Tech Group",
   publishedTime,

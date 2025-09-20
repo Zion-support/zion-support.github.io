@@ -47,7 +47,10 @@ export default function PerformanceMonitor() {
     ));
 
       setMetrics({
-        loadTime: Math.round(loadTime),renderTime: Math.round(renderTime),memoryUsage: Math.round(memoryUsage * 100) / 100,networkLatency: Math.round(networkLatency);
+        loadTime: Math.round(loadTime),
+        renderTime: Math.round(renderTime),
+        memoryUsage: Math.round(memoryUsage * 100) / 100,
+        networkLatency: Math.round(networkLatency),
         fps,
         lighthouseScore: Math.round(lighthouseScore)
       });
