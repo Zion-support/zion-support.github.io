@@ -47,7 +47,7 @@ export function useAISearch() {
             setLoading(false);
         }
         finally { }
-        ;
+        
         return { results, loading, search };
     };
 }

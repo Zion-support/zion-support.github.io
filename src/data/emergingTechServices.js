@@ -1192,5 +1192,5 @@ export const getServicesByInnovationScore = (minScore) => {
         uniqueValue;
     "First comprehensive platform for creating and distributing holographic content across multiple display types";
 };
-;
+
 export default EMERGING_TECH_SERVICES;
