@@ -109,7 +109,56 @@ zion-website/
 *.py
 *.sh
 *.cjs
+<<<<<<< HEAD
+*.js
+!src/**/*.ts
+!src/**/*.tsx
+!src/**/*.js
+!src/**/*.jsx
+=======
+!*.js
+!*.jsx
+!*.ts
+!*.tsx
+!src/
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1c48
+!App.tsx
+!index.html
+!main.jsx
+!main.tsx
+!main.js
 
-# Disabled components and utils
-components-disabled/
-utils-disabled/
+# Exclude problematic directories and files
+quantum-ai-*/
+out/
+public/
+sdk/
+extension/
+src-corrupted/
+node_modules/
+dist/
+build/
+recovered/
+recovered-branches/
+backup*/
+temp*/
+*_backup*/
+*.backup*
+broken_*/
+test_build/
+zion-*/
+automation*/
+ci-cd-reports/
+cache/
+chain-config/
+components/
+deployments/
+deployment/
+netlify/
+server/
+ai_core/
+ai-services/
+ai-solutions/
+ai-optimization-backups/
+automation_logs/
+automation-reports/

@@ -5,6 +5,18 @@ interface NotificationOptions {
   closable?: boolean;
 }
 
+<<<<<<< HEAD
+interface NotificationManager {
+  add: (message: string, options?: NotificationOptions) => void;
+}
+
+// Mock notification manager for now
+const notificationManager: NotificationManager = {
+  add: (message: string, options?: NotificationOptions) => {
+    console.log('Notification:', message, options);
+  }
+};
+=======
 class NotificationManager {
   add(message: string, options?: NotificationOptions) {
     // Implementation for adding notifications
@@ -13,6 +25,7 @@ class NotificationManager {
 }
 
 const notificationManager = new NotificationManager();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-35d7
 
 // Convenience functions
 export const notify = {
@@ -27,3 +40,4 @@ export const notify = {
   
   info: (message: string, options?: Omit<NotificationOptions, 'type'>) =>
     notificationManager.add(message, { ...options, type: 'info' }),
+};

@@ -20,7 +20,7 @@
     "start:backend": "cd server && npm start",
     "start:hybrid": "cd server && npm start",
     "postbuild": "echo 'Build completed successfully'",
-    "lint": "eslint src --ignore-pattern \"**/components-disabled/**\" --ignore-pattern \"**/utils-disabled/**\"",
+    "lint": "eslint . --ignore-pattern \"**/components-disabled/**\" --ignore-pattern \"**/utils-disabled/**\"",
     "lint:backend": "cd server && npm run lint",
     "lint:all": "npm run lint && npm run lint:backend",
     "type-check": "tsc --noEmit",
@@ -163,7 +163,11 @@
     "rollup-plugin-visualizer": "^6.0.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.9.2",
+<<<<<<< HEAD
     "vitest": "^3.2.4"
+=======
+    "vitest": "^0.34.1"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0c16
   },
   "resolutions": {
     "motion-utils": "^12.23.6"

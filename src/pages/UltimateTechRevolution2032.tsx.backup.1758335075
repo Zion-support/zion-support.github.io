@@ -124,7 +124,6 @@ const UltimateTechRevolution2032: React.FC = () => {
                 <div className="space-y-2">
                   {innovation.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-2 text-purple-300">
-                      <Zap className="w-4 h-4" />
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
@@ -136,28 +135,27 @@ const UltimateTechRevolution2032: React.FC = () => {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Success Stories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real-world applications transforming industries
+          <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
+              See how our revolutionary technologies have transformed businesses and societies worldwide
             </p>
-          </motion.div>
+=======
+          <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
+            See how our revolutionary technologies have transformed businesses and societies worldwide
+          </p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2732
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="text-6xl mb-4">📈</div>
-              <h3 className="text-2xl font-bold mb-4">Global Productivity Increase</h3>
-              <p className="text-4xl font-bold text-purple-400 mb-2">+5000%</p>
-              <p className="text-gray-300">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+                <div className="text-6xl mb-4">📈</div>
+                <h3 className="text-2xl font-bold mb-4">Global Productivity Increase</h3>
+                <p className="text-4xl font-bold text-purple-400 mb-2">+5000%</p>
+                <p className="text-gray-300">
                 Average productivity increase across all industries using our conscious AI systems
               </p>
             </div>
@@ -198,7 +196,8 @@ const UltimateTechRevolution2032: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

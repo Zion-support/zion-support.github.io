@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Merge Existing Branches Script
-# This script will merge branches that actually exist and can be fetched
+# Merge Unmerged Branches Script
+# This script will merge branches that are actually not merged into main
 
 set -e
 
-echo "🚀 Starting Merge Process for Existing Branches..."
+echo "🚀 Starting Merge Process for Unmerged Branches..."
 echo "⏰ Started at: $(date)"
 
 # Colors for output
@@ -61,25 +61,12 @@ TOTAL_BRANCHES=0
 print_status "Fetching all remote branches..."
 git fetch --all
 
-# Get list of branches that actually exist (first 30 for manageable processing)
-EXISTING_BRANCHES=""
-ALL_BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | head -50 | sed 's/origin\///' | tr -d ' ')
+# Get list of unmerged branches
+print_status "Finding unmerged branches..."
+UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep -E "(origin/cursor|origin/codex)" | head -20 | sed 's/origin\///' | tr -d ' ')
+TOTAL_BRANCHES=$(echo "$UNMERGED_BRANCHES" | wc -l)
 
-print_status "Checking which branches actually exist..."
-
-for branch in $ALL_BRANCHES; do
-    if git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-        EXISTING_BRANCHES="$EXISTING_BRANCHES $branch"
-        TOTAL_BRANCHES=$((TOTAL_BRANCHES + 1))
-        
-        # Limit to 30 branches for manageable processing
-        if [ $TOTAL_BRANCHES -ge 30 ]; then
-            break
-        fi
-    fi
-done
-
-print_status "Found $TOTAL_BRANCHES existing branches to process"
+print_status "Found $TOTAL_BRANCHES unmerged branches to process"
 
 # Function to resolve conflicts intelligently
 resolve_conflicts() {
@@ -206,7 +193,7 @@ print_status "Starting branch processing..."
 echo "---"
 
 CURRENT=0
-for branch in $EXISTING_BRANCHES; do
+for branch in $UNMERGED_BRANCHES; do
     CURRENT=$((CURRENT + 1))
     print_status "[$CURRENT/$TOTAL_BRANCHES] Processing branch: $branch"
     

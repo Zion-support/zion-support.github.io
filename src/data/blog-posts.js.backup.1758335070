@@ -40,7 +40,11 @@ const blogPosts = [
     publishDate: "2025-09-15",
     readTime: "8 min read",
     category: "AI Operations",
-    tags: ["Routing", "Evals", "SLOs", "Governance"]
+    tags: ["Routing", "Evals", "SLOs", "Governance"],
+    featured: true,
+<<<<<<< HEAD
+    imageUrl: "/images/blog/ai-agent-benchmark-suite-2026.jpg",
+    slug: "ai-2026-agent-benchmark-suite-scenario-packs-quality-gates"
   },
   {
     id: 1006,
@@ -52,11 +56,17 @@ const blogPosts = [
     publishDate: "2025-09-15",
     readTime: "8 min read",
     category: "Evaluation",
-    tags: ["Evals", "Benchmarking", "Quality Gates"],
+    tags: ["Benchmarking", "Evals", "Quality Gates", "CI/CD"],
     featured: true,
-    imageUrl: "/images/blog/agent-benchmark-suite-2026.jpg",
-    slug: "ai-2026-agent-benchmark-suite-scenario-packs"
+    imageUrl: "/images/blog/ai-agent-benchmark-suite-2026.jpg",
+    slug: "ai-2026-agent-benchmark-suite-scenario-packs-quality-gates"
   },
+=======
+    imageUrl: "/images/blog/agent-benchmark-suite-2026.jpg",
+    slug: "ai-2026-agent-benchmark-suite-scenario-packs-quality-gates"
+  }
+  ,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-19e8
   {
     id: 10,
     title: "Enterprise AI Governance Blueprint (2026)",
