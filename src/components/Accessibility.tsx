@@ -15,13 +15,21 @@ import {
   Settings
 } from "lucide-react";
 interface AccessibilitySettings {
-  fontSize: number,highContrast: boolean,reducedMotion: boolean,soundEnabled: boolean,theme: 'light' | 'dark' | 'auto'
-};
+  fontSize: number;
+  highContrast: boolean;
+  reducedMotion: boolean;
+  soundEnabled: boolean;
+  theme: 'light' | 'dark' | 'auto';
+}
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
+    fontSize: 16,
+    highContrast: false,
+    reducedMotion: false,
+    soundEnabled: true,
+    theme: 'auto'
   });
   useEffect(() => {
     // Load settings from localStorage
@@ -84,37 +92,41 @@ export function Accessibility() {
       root.classList.add('dark-theme');
       root.classList.remove('light-theme');
     } else {
-      root.classList.remove('light-themedark-theme');
+      root.classList.remove('light-theme', 'dark-theme');
     }
-  },
+  };
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value },
+    const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
-  },
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  };
 
   const increaseFontSize = () => {
     if (settings.fontSize < 24) {
       updateSetting('fontSize', settings.fontSize + 2);
     }
-  },
+  };
 
   const decreaseFontSize = () => {
     if (settings.fontSize > 12) {
       updateSetting('fontSize', settings.fontSize - 2);
     }
-  },
+  };
 
   const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {,
-      fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
+    const defaultSettings: AccessibilitySettings = {
+      fontSize: 16,
+      highContrast: false,
+      reducedMotion: false,
+      soundEnabled: true,
+      theme: 'auto'
     };
     setSettings(defaultSettings);
     applySettings(defaultSettings);
     localStorage.removeItem('accessibility-settings');
-  },
+  };
 
   return (
     <>
@@ -236,7 +248,7 @@ export function Accessibility() {
                   Theme
                 </label>
                 <div className="grid grid-cols-3 gap-2">
-                  {(['autolight', 'dark'] as const).map((theme) => (
+                  {(['auto', 'light', 'dark'] as const).map((theme) => (
                     <button
                       key={theme}
                       onClick={() => updateSetting('theme', theme)}
