@@ -1,4 +1,5 @@
 <<<<<<< HEAD:temp_broken_pages_all/Dashboard.tsx
+<<<<<<< HEAD:temp_broken_pages_all/Dashboard.tsx
                         }
                       }}
                     >
@@ -280,4 +281,17 @@ export default function Dashboard() {
     </div>
   );
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Dashboard.tsx
+=======
+import React from 'react';
+
+export default function Dashboard() {
+  return (
+    <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Dashboard</h1>
+        <p className="text-gray-300">Your personal dashboard coming soon...</p>
+      </div>
+    </div>
+  );
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Dashboard.tsx
 }

@@ -1,23 +1,27 @@
 import React from 'react';
 <<<<<<< HEAD:temp_broken_pages_all/Services.tsx
+<<<<<<< HEAD:temp_broken_pages_all/Services.tsx
 import { Link } from "react-router-dom";
 const Services: React.FC = () => {
+=======
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+
+export default function Services() {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Services.tsx
   const services = [
     {
       title: "AI & Machine Learning",
-description: "Transform your business with cutting-edge AI solutions including natural language processing computer vision and predictive analytics."
-      features: ["Custom AI Models", "Data Analytics", "Automation", "Predictive Insights"]
-      icon: "🤖",
-color: "from-blue-500 to-purple-600"
-    }
+      description: "Advanced AI solutions and machine learning services to transform your business operations.",
+      icon: "🧠"
+    },
     {
-      title: "Cloud Infrastructure",
-description: "Scalable secure and reliable cloud solutions that grow with your business needs."
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Auto-scaling"]
-      icon: "☁️",
-color: "from-green-500 to-blue-600"
-    }
+      title: "Technology Solutions",
+      description: "Cutting-edge technology solutions and innovations for modern businesses.",
+      icon: "💻"
+    },
     {
+<<<<<<< HEAD:temp_broken_pages_all/Services.tsx
       title: "Web Development",
 description: "Modern responsive web applications built with the latest technologies and best practices."
       features: ["React/Next.js", "TypeScript", "Mobile-First", "SEO Optimized"]
@@ -45,58 +49,49 @@ description: "Turn your data into actionable insights with advanced analytics an
       icon: "📊",;
 color: "from-indigo-500 to-purple-600";
     };
+=======
+      title: "Business Consulting",
+      description: "Strategic consulting services to help you navigate the digital transformation journey.",
+      icon: "🏢"
+    }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Services.tsx
   ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
-          </p>
-        </div>
-      </div>
-      {/* Services Grid */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <SEO
+        title="Services | Zion AI - AI Solutions and Technology Services"
+        description="Explore our comprehensive range of AI solutions, machine learning services, and technology consulting."
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="container mx-auto px-4 py-12">
+          <div className="text-center mb-16">
+            <GradientHeading
+              level="h1"
+              className="text-4xl md:text-5xl font-bold mb-4"
+            >
+              Our Services
+            </GradientHeading>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI and technology solutions designed to accelerate your business growth.
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                <div className={`h-2 bg-gradient-to-r ${service.color} rounded-t-2xl`}></div>
-                <div className="p-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
+                <div className="text-center">
                   <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-to="/contact"
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-                  >
-                    Learn More
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
+                  <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-300">{service.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+<<<<<<< HEAD:temp_broken_pages_all/Services.tsx
       {/* Process Section */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -166,5 +161,8 @@ export default function Services() {
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Services.tsx
       </div>
     </div>
+=======
+    </>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/Services.tsx
   );
 }

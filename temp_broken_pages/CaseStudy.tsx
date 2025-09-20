@@ -1,14 +1,19 @@
 <<<<<<< HEAD:temp_broken_pages/CaseStudy.tsx
+<<<<<<< HEAD:temp_broken_pages/CaseStudy.tsx
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import { CASE_STUDIES } from "@/data/case-studies";
 import { SEO } from "@/components/SEO";
+=======
+import React from 'react';
+import { SEO } from '@/components/SEO';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/CaseStudy.tsx
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-if (!study) {
-    return (
-      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
+import Link from 'next/link';
+
 export default function CaseStudy() {
+<<<<<<< HEAD:temp_broken_pages/CaseStudy.tsx
   return (
   return (
   return (
@@ -23,74 +28,24 @@ const study = CASE_STUDIES.find((s) => s.slug === slug)
       </div>
     )
   }
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/CaseStudy.tsx
   return (
     <>
-      <SEO title={study.title} description={study.excerpt} />
-      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
-        <div className='container mx-auto max-w-3xl'>
-          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
-          <Breadcrumb className='mb-4 text-sm text-muted-foreground'>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href='/'>Home</Link>                </BreadcrumbLink>          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
-          <Breadcrumb className="mb-4 text-sm text-muted-foreground">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="/">Home</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href='/case-studies'>Case Studies</Link>                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild aria-current='page'>                  <span>{study.title}</span>                  <Link href="/case-studies">Case Studies</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild aria-current='page'>                <BreadcrumbLink asChild aria-current="page">
-                  <span>{study.title}</span>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-          <Button
-variant='outline'
-            className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-            asChild
-          >
-            <Link href='/case-studies'>
-              <ArrowLeft className='mr-2 h-4 w-4' /> Back to Case Studies            </Link>            variant="outline"
-            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-            asChild
-          >
-            <Link href="/case-studies">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
-          </Button>
-          <img
-src = {study.companyLogo}
-            alt={`${study.company} logo`}
-            className='h-12 mb-4'
-            loading='lazy'
-          />
-          <h1 className='text-3xl font-bold text-white mb-4'>{study.title}</h1>
-          <p className='text-zion-slate-light mb-8'>{study.excerpt}</p>
-          {study.pdf && (
-            <Button variant='secondary' className='mb-6' asChild>
-              <a href={study.pdf} target='_blank' rel='noopener noreferrer'>                Download PDF          />
-          <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
-          <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
-          {study.pdf && (
-            <Button variant="secondary" className="mb-6" asChild>
-              <a href={study.pdf} target="_blank" rel="noopener noreferrer">
-                Download PDF
-              </a>
+      <SEO
+        title="Case Studies | Zion AI"
+        description="Explore real-world case studies and success stories from our AI solutions."
+      />
+      <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Case Studies</h1>
+          <p className="text-gray-300 mb-8">Real-world success stories with our AI solutions.</p>
+          <Link href="/">
+            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
             </Button>
+<<<<<<< HEAD:temp_broken_pages/CaseStudy.tsx
           )}
           <div
 className='prose prose-invert'
@@ -119,3 +74,11 @@ export default function CaseStudy() {
   );
 }
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/CaseStudy.tsx
+=======
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-b211:src/pages/CaseStudy.tsx
