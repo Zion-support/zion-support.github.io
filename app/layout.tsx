@@ -1,15 +1,12 @@
-import React from 'react'
-import Link from 'next/link'
-import Script from 'next/script'
-import { Inter } from 'next/font/google'
-import type { Metadata } from 'next'
-import { ThemeProvider } from 'next-themes'
-import { ToastContainer } from 'react-toastify'
-import { Toaster as SonnerToaster } from 'sonner'
-import Header from '../src/components/Header'
-import Footer from '../src/components/Footer'
-// import './globals.css'
-import '../src/app/globals.css'
+import React from "react";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as SonnerToaster } from "@/components/ui/sonner";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +31,11 @@ export const metadata: Metadata = {
     title: "Zion Tech Group - Innovative Technology Solutions",
     description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions.",
   },
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#0ea5e9",
 };
 
@@ -54,7 +55,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-          <ToastContainer />
+          <Toaster />
           <SonnerToaster />
         </ThemeProvider>
       </body>
