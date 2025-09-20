@@ -3,8 +3,12 @@ import './App.css';
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LazyImage from './components/LazyImage';
+// import VirtualList from './components/VirtualList';
+// import MemoizedComponent from './components/MemoizedComponent';
 import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+// import LoadingSpinner from './components/LoadingSpinner';
+// import SkeletonLoader from './components/SkeletonLoader';
 import { useTheme } from './context/ThemeContext';
 
 // Service data with more details
