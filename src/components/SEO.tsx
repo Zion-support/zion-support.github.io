@@ -43,3 +43,5 @@ export function SEO({ title, description, keywords, canonical }: SEOProps) {
     </>
   );
 }
+
+export default SEO;
