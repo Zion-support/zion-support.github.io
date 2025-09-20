@@ -1,9 +1,9 @@
-import React from 'react';
-import { ForumReply } from '@/types/community';
+import React from 'react;';
+import { ForumReply } from '@/types/community, ';
 
 interface ReplyCardProps {
   reply: ForumReply;
-  className?: string;
+    className?: string;
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
 }
@@ -31,7 +31,7 @@ export default function ReplyCard({ reply, className = '', onMarkAnswer, canMark
           </div>
           <p className="text-zion-slate-light text-sm">{reply.content}</p>
           <div className="flex items-center space-x-4 mt-2 text-xs text-zion-slate-light">
-            <button className="hover:text-zion-cyan">Like ({reply.likes})</button>
+            <button className="hover: text-zion-cyan">Like ({reply.likes})</button>
             <button className="hover:text-zion-cyan">Reply</button>
             {canMarkAnswer && onMarkAnswer && (
               <button 

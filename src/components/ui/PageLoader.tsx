@@ -1,5 +1,5 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import React from 'react;';
+import { cn } from '@/lib/utils, ';
 
 interface PageLoaderProps {
   text?: string;
@@ -7,7 +7,7 @@ interface PageLoaderProps {
 }
 
 export const PageLoader: React.FC<PageLoaderProps> = ({ 
-  text = "Loading...", 
+  text = "Loading...";
   className 
 }) => {
   return (

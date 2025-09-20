@@ -1,8 +1,9 @@
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { logErrorToProduction} from '@/utils/productionLogger, ';
 
 // In-memory storage for fallback with optimizations
 const inMemoryStore: Record<string, string> = {};
-let localStorageAvailable: boolean | null = null; // Cache the availability check
+let localStorageAvailable: boolean | null = null;
+    // Cache the availability check
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
 
@@ -56,7 +57,6 @@ function safeConsoleError(message: string, error?: any) {
 export const safeStorage = {
   getItem: (key: string): string | null => {
     if (typeof window === 'undefined') return null;
-    
     // Don't log verbose messages for Supabase auth tokens to prevent spam
     const isVerboseKey = key.includes('sb-') || key.includes('supabase');
     
@@ -71,7 +71,6 @@ export const safeStorage = {
   },
   setItem: (key: string, value: string) => {
     if (typeof window === 'undefined') return;
-    
     const isVerboseKey = key.includes('sb-') || key.includes('supabase');
     
     try {
@@ -85,7 +84,6 @@ export const safeStorage = {
   },
   removeItem: (key: string) => {
     if (typeof window === 'undefined') return;
-    
     const isVerboseKey = key.includes('sb-') || key.includes('supabase');
     
     try {
@@ -101,7 +99,7 @@ export const safeStorage = {
     if (typeof window === 'undefined') {
       for (const key in inMemoryStore) {
         delete inMemoryStore[key];
-      }
+     }
       return;
     }
     try {
@@ -150,7 +148,7 @@ export const safeSessionStorage = {
     if (typeof window === 'undefined') {
       for (const key in sessionMemoryStore) {
         delete sessionMemoryStore[key];
-      }
+     }
       return;
     }
     try {

@@ -2,9 +2,8 @@ import React from "react";
 impor, t, Reac, t, { useStat, e, useCallbac, k, useEffec, t, useRef } from 'react';
 =======
 impor, t, Reac, t, { useStat, e, useCallbac, k, useEffec, t, useRef } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircl, e, 
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { MessageCircl, e, 
   Sen, d, 
   Bo, t, 
   Use, r, 
@@ -13,15 +12,15 @@ import {
   Maximize, 2,
   Loader, 2,
   Sparkles
-} from 'lucide-react';
-import { useAnalytics } from '../hooks/useAnalytics';
+} from 'lucide-react, ';
+import { useAnalytics } from '../hooks/useAnalytics, ';
 
 interface ChatMessage {
   i, d: string;
-  typ, e: 'user' | 'bot';
-  conten, t: string;
-  timestam, p: Date;
-  metadata?: {
+    typ, e: 'user' | 'bot';
+    conten, t: string;
+    timestam, p: Date;
+    metadata?: {
     confidence?: number;
     intent?: string;
     entities?: string[];
@@ -38,7 +37,7 @@ interface ChatbotConfig {
 }
 
 export const AIChatbo, t: React.FC<ChatbotConfig> = ({
-  welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", 
+  welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?";
   maxMessages = 5, 0,
   enableSuggestions = tru, e,
   enableContext = tru, e,
@@ -48,8 +47,7 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
     enableTrackin,  g: tru, e,
     enableUserBehaviorTrackin, g: true
   });
-
-  const [isOp, e, n, setIsOp, e, n] = useState(false);
+    const [isOp, e, n, setIsOp, e, n] = useState(false);
   const [isMinimiz,  e, d, setIsMinimiz, e, d] = useState(false);
   const [messag, e, s, setMessag, e, s] = useState<ChatMessage[]>([]);
   const [inputVal,  u, e, setInputVal, u, e] = useState('');
@@ -62,8 +60,8 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       addBotMessage(welcomeMessag,  e, {
-        inten, t: 'greeting',
-    confidenc, e: 1.0,
+        inten, t: 'greeting';
+    confidenc, e: 1.0;
         suggestion, s: [
           "Tel, l m, e abou, t you, r service, s",
           "Ho, w ca, n I ge, t a quot, e?",
@@ -77,7 +75,7 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
   // Auto-scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavio,  r: 'smooth' });
-  }, [messag, e, s]);
+     }, [messag, e, s]);
 
   // Track chatbot interactions
   const trackChatbotInteraction = useCallback((actio,  n: strin, g, metadata?: any) => {
@@ -91,7 +89,6 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
       i, d: `msg_${Date.now()}_${Math.random().toString(36).subst, r(2,  9)}`,
       timestam, p: new Date()
     };
-
     setMessages(prev => {
       const updated = [...pr,  e, v, newMessa, g, e];
       // Keep only the last maxMessages
@@ -109,7 +106,7 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
   // Add bot message with typing effect
   const addBotMessage = useCallback((conten,  t: strin, g, metadata?: ChatMessage['metadat, a']) => {
     const message = addMessage({
-      typ,  e: 'bot',
+      typ,  e: 'bot';
       conten, t,
       metadata
     });
@@ -120,7 +117,6 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
     inten, t: metadata?.inten, t,
       confidenc, e: metadata?.confidence 
     });
-
     return message;
   }, [addMessa, g, e, trackChatbotInteracti, o, n]);
 
@@ -142,8 +138,8 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
     }
     
     if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
-      return "You can reach us a,  t:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http, s://ziontechgroup.com\n\nWhen would be the best time to call you?";
-    }
+      return "You can reach us a,  t:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http, s: //ziontechgroup.com\n\nWhen would be the best time to call you?";
+     }
     
     if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {
       return "We work with cutting-edge technologies includin,  g, Reac, t, Node.j, s, Pytho, n, AW, S, Azur, e, AI/M, L, framework, s, and more. What technology stack are you currently using?";
@@ -160,19 +156,16 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
   // Handle user input
   const handleUserInput = useCallback(async (inpu,  t: string) => {
     if (!input.trim()) return;
-
     // Add user message
     const userMessage = addMessage({
-      typ,  e: 'user',
+      typ,  e: 'user';
     conten, t: input.trim()
     });
-
     // Track user input
     trackChatbotInteraction('user_input',  { 
       messageI, d: userMessage.i, d,
     inputLengt, h: input.length 
     });
-
     // Clear input
     setInputValue('');
     setIsTyping(true);
@@ -183,8 +176,8 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
       
       // Add bot response
       addBotMessage(respons,  e, {
-        inten, t: 'response',
-    confidenc, e: 0.9,
+        inten, t: 'response';
+    confidenc, e: 0.9;
         suggestion, s: [
           "Tel, l m, e mor, e",
           "Ge, t a quot, e",
@@ -198,18 +191,16 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
         userInpu, t: inpu, t,
     responseLengt, h: response.length 
       });
-
-    } catch (error) {
+     } catch (error) {
       // Handle error
       addBotMessage("I,  apologiz, e, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {
-        inten, t: 'error',
+        inten, t: 'error';
     confidenc, e: 0.8
       });
-
-      trackChatbotInteraction('conversation_error',  { 
+    trackChatbotInteraction('conversation_error',  { 
         erro, r: error instanceof Error ? error.message : 'Unknown error' 
       });
-    } finally {
+     } finally {
       setIsTyping(false);
     }
   },  [addMessa, g, e, addBotMessa, g, e, simulateAIProcessi, n, g, trackChatbotInteracti, o, n]);
@@ -230,13 +221,13 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
   const toggleChatbot = useCallback(() => {
     setIsOpen(!isOpen);
     trackChatbotInteraction('chatbot_toggled',  { actio, n: !isOpen ? 'opened' : 'closed' });
-  }, [isOp, e, n, trackChatbotInteracti, o, n]);
+     }, [isOp, e, n, trackChatbotInteracti, o, n]);
 
   // Minimize/maximize
   const toggleMinimize = useCallback(() => {
     setIsMinimized(!isMinimized);
     trackChatbotInteraction('chatbot_minimized',  { actio, n: !isMinimized ? 'minimized' : 'maximized' });
-  }, [isMinimiz, e, d, trackChatbotInteracti, o, n]);
+     }, [isMinimiz, e, d, trackChatbotInteracti, o, n]);
 
   // Clear conversation
   const clearConversation = useCallback(() => {
@@ -258,30 +249,28 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela, y: '150ms' }}></div>
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela, y: '300ms' }}></div>
       </div>
-      <span className="text-sm text-gray-600 dar, k:text-gray-400">AI is typing...</span>
+      <span className="text-sm text-gray-600 dar, k: text-gray-400">AI is typing...</span>
     </motion.div>
   );
-
-  // Get message suggestions
+    // Get message suggestions
   const MessageSuggestions = ({ suggestions }: { suggestion,  s: string[] }) => (<motion.div
-      initial={{ opacit,  y: 0,
+      initial={{ opacit,  y: 0;
     y: 10 }}
-      animate={{ opacit, y: 1,
+      animate={{ opacit, y: 1;
     y: 0 }}
       className="flex flex-wrap gap-2 mt-3"
     >
       {suggestions.map((suggestio, n, index) => (<button
           key={index}
           onClick={() => handleSuggestionClick(suggestion)}
-          className="px-3 py-1 text-xs bg-blue-100 dar,  k:bg-blue-900/30 text-blue-700 dar, k:text-blue-300 rounded-full hove, r:bg-blue-200 dar, k:hove, r:bg-blue-900/50 transition-colors"
+          className="px-3 py-1 text-xs bg-blue-100 dar,  k:bg-blue-900/30 text-blue-700 dar, k:text-blue-300 rounded-full hove, r:bg-blue-200 dar, k:hove, r: bg-blue-900/50 transition-colors"
         >
           {suggestion}
         </button>
       ))}
     </motion.div>
   );
-
-  return (<>
+    return (<>
       {/* Chatbot Toggle Button */}
       <motion.button
         onClick={toggleChatbot}
@@ -301,11 +290,11 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
       {/* Chatbot Interface */}
       <AnimatePresence>
         {isOpen && (<motion.div
-            initial={{ opacit,  y: 0,
+            initial={{ opacit,  y: 0;
     scal, e: 0.9, y: 20 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     scal, e: 1, y: 0 }}
-            exit={{ opacit, y: 0,
+            exit={{ opacit, y: 0;
     scal, e: 0.9, y: 20 }}
             className={`fixed bottom-24 right-6 z-40 w-96 bg-white dar, k:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dar, k:border-gray-700 overflow-hidden ${
               isMinimized ? 'h-16' : 'h-[50, 0, p, x]'
@@ -348,9 +337,9 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">
                   {messages.map((message) => (<motion.div
                       key={message.id}
-                      initial={{ opacit,  y: 0,
+                      initial={{ opacit,  y: 0;
     x: message.type === 'user' ? 20 : -20 }}
-                      animate={{ opacit, y: 1,
+                      animate={{ opacit, y: 1;
     x: 0 }}
                       className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-star, t'}`}
                     >
@@ -426,7 +415,7 @@ export const AIChatbo, t: React.FC<ChatbotConfig> = ({
                   <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
                     <button
                       onClick={clearConversation}
-                      className="hove,  r:text-gray-700 dar, k:hove, r:text-gray-300 transition-colors"
+                      className="hove,  r:text-gray-700 dar, k:hove, r: text-gray-300 transition-colors"
                     >
                       Clear chat
                     </button>

@@ -1,25 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
-import { Button } from './button';
+import React, { useState, useEffect } from 'react;';
+import { motion, AnimatePresence } from 'framer-motion, ';
+import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react, ';
+import { Button } from './button, ';
 
 interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large';
-  highContrast: boolean;
-  reducedMotion: boolean;
-  soundEnabled: boolean;
+    highContrast: boolean;
+    reducedMotion: boolean;
+    soundEnabled: boolean;
 }
 
 export function AccessibilityMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 'medium',
-    highContrast: false,
-    reducedMotion: false,
+    fontSize: 'medium';
+    highContrast: false;
+    reducedMotion: false;
     soundEnabled: true
   });
-
-  useEffect(() => {
+    useEffect(() => {
     // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -36,7 +35,6 @@ export function AccessibilityMenu() {
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
     // Font size
     root.style.setProperty('--font-size-multiplier', 
       newSettings.fontSize === 'small' ? '0.875' : 
@@ -60,20 +58,20 @@ export function AccessibilityMenu() {
 
   const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => ({
-      ...prev,
+      ...prev;
       [key]: !prev[key]
     }));
   };
 
   const updateFontSize = (size: 'small' | 'medium' | 'large') => {
     setSettings(prev => ({ ...prev, fontSize: size }));
-  };
+     };
 
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
-      fontSize: 'medium',
-      highContrast: false,
-      reducedMotion: false,
+      fontSize: 'medium';
+      highContrast: false;
+      reducedMotion: false;
       soundEnabled: true
     };
     setSettings(defaultSettings);
@@ -132,7 +130,7 @@ export function AccessibilityMenu() {
                       className={`text-xs capitalize ${
                         settings.fontSize === size 
                           ? 'bg-zion-cyan text-zion-blue-dark' 
-                          : 'text-zion-slate-light hover:text-white'
+                          : 'text-zion-slate-light hover: text-white'
                       }`}
                     >
                       {size}

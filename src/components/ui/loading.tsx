@@ -1,5 +1,5 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import React from 'react;';
+import { cn } from '@/lib/utils, ';
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -15,13 +15,12 @@ export function Loading({
   text 
 }: LoadingProps) {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
+    sm: 'w-4 h-4';
+    md: 'w-6 h-6';
+    lg: 'w-8 h-8';
     xl: 'w-12 h-12'
   };
-
-  const renderSpinner = () => (
+    const renderSpinner = () => (
     <div className={cn(
       'border-2 border-current border-t-transparent rounded-full animate-spin',
       sizeClasses[size]
@@ -35,8 +34,7 @@ export function Loading({
       <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{animationDelay: '300ms'}} />
     </div>
   );
-
-  const renderPulse = () => (
+    const renderPulse = () => (
     <div className={cn('bg-current rounded-full animate-ping', sizeClasses[size])} />
   );
 
@@ -52,9 +50,8 @@ export function Loading({
         return renderPulse();
       case 'skeleton':
         return renderSkeleton();
-      default:
-        return renderSpinner();
-    }
+      default: return renderSpinner();
+     }
   };
 
   return (

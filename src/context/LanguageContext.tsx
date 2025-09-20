@@ -1,15 +1,15 @@
-import * as React from 'react';
+import * as React from 'react;';
 =======
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react;';
 =======
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react;';
 
 interface LanguageContextType {
   language: string;
-  setLanguage: (lang: string) => void;
-=======
+    setLanguage: (lang: string) => void;
+    =======
   t: (key: string) => string;
-  isRTL: boolean;
+    isRTL: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -23,13 +23,13 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 
   const translations: Record<string, Record<string, string>> = {
     en: {
-      'welcome': 'Welcome',
+      'welcome': 'Welcome';
       'get_started': 'Get Started',
       'learn_more': 'Learn More',
       'contact_us': 'Contact Us'
     },
     es: {
-      'welcome': 'Bienvenido',
+      'welcome': 'Bienvenido';
       'get_started': 'Comenzar',
       'learn_more': 'Saber Más',
       'contact_us': 'Contáctanos'
@@ -38,7 +38,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 
   const t = (key: string): string => {
     return translations[language]?.[key] || key;
-  };
+     };
 
   const isRTL = language === 'ar' || language === 'he';
 

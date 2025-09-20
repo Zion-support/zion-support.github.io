@@ -1,15 +1,13 @@
 =======
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
+import React from 'react;';
+import { Button } from "@/components/ui/button, ";
+import { Link } from "react-router-dom, ";
+import { ArrowRight, 
+import React from 'react, ';
+import { Button } from '@/components/ui/button, ';
+import { Badge } from '@/components/ui/badge, ';
+import { Link } from 'react-router-dom, ';
+import { ArrowRight, 
 =======
   Play, 
   Sparkles, 
@@ -27,7 +25,7 @@ import {
   Star,
   Users,
   TrendingUp
-} from "lucide-react";
+} from "lucide-react, ";
 
 export function EnhancedHeroSection() {
   return (
@@ -180,7 +178,7 @@ export function EnhancedHeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-1/4 left-8 hidden lg:block">
+      <div className="absolute bottom-1/4 left-8 hidden lg: block">
         <div className="glass-effect p-4 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
           <div className="flex items-center gap-3">
             <Star className="h-4 w-4 text-zion-purple" />
@@ -191,12 +189,12 @@ export function EnhancedHeroSection() {
       </div>
     </section>
 =======
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
+import React from 'react;
+    ';
+import { Button } from "@/components/ui/button, ";
+import { Badge } from "@/components/ui/badge, ";
+import { Link } from "react-router-dom, ";
+import { ArrowRight, 
   Play, 
   Star, 
   Users, 
@@ -208,18 +206,17 @@ import {
   TrendingUp,
   CheckCircle,
   ExternalLink
-} from "lucide-react";
-import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground";
+} from "lucide-react, ";
+import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground, ";
 
 export function EnhancedHeroSection() {
   const stats = [
-    { label: 'Active Users', value: '50K+', icon: <Users className="h-5 w-5" /> },
-    { label: 'Services Delivered', value: '10K+', icon: <Zap className="h-5 w-5" /> },
-    { label: 'Success Rate', value: '99.9%', icon: <Shield className="h-5 w-5" /> },
+    { label: 'Active Users', value: '50K+', icon: <Users className="h-5 w-5" /> };
+    { label: 'Services Delivered', value: '10K+', icon: <Zap className="h-5 w-5" /> };
+    { label: 'Success Rate', value: '99.9%', icon: <Shield className="h-5 w-5" /> };
     { label: 'Global Reach', value: '150+', icon: <TrendingUp className="h-5 w-5" /> }
   ];
-
-  const features = [
+    const features = [
     'AI-Powered Matching',
     '24/7 Global Support',
     'Enterprise Security',

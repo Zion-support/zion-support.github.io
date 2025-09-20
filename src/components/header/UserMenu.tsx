@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
-import { useAuth } from '../../hooks/useAuth';
+import React, { useState, useRef, useEffect } from 'react;';
+import { Link } from 'react-router-dom, ';
+import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react, ';
+import { useAuth } from '../../hooks/useAuth, ';
 
 export const UserMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ export const UserMenu: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
-      }
+     }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -36,7 +36,7 @@ export const UserMenu: React.FC = () => {
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer"
+        className="flex items-center gap-2 px-3 py-2 text-white hover: text-zion-cyan transition-colors cursor-pointer"
       >
         <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
           <User className="w-4 h-4 text-black" />

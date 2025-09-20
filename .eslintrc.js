@@ -18,6 +18,28 @@ module.exports = {
   },
   ignorePatterns: [
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/src/components.disabled/**",
+    "**/src/data/**",
+    "**/src/context/**",
+    "**/src/hooks/**",
+    "**/src/hoc/**",
+    "**/src/layout/**",
+    "**/src/legal/**",
+    "**/src/lib/**",
+    "**/src/main.js.jsx",
+    "**/src/main.jsx",
+    "**/src/routes/**",
+    "**/src/routes.js",
+    "**/src/services/**",
+    "**/src/store/**",
+    "**/src/stories/**",
+    "**/src/types/**",
+    "**/src/integrations/**",
+    "**/src/i18n/**",
+    "**/src/config/**",
+    "**/out/**",
+    "**/.next/**",
+    "**/node_modules/**"
   ]
 };

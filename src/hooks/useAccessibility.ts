@@ -1,39 +1,37 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react, ';
 
 interface AccessibilityPreferences {
   highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  focusIndicator: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
+    largeText: boolean;
+    reducedMotion: boolean;
+    focusIndicator: boolean;
+    screenReader: boolean;
+    keyboardNavigation: boolean;
 }
 
 interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large' | 'xlarge';
-  colorScheme: 'default' | 'high-contrast' | 'dark' | 'light';
-  motionPreference: 'reduce' | 'no-preference';
-  focusStyle: 'default' | 'high-visibility' | 'minimal';
+    colorScheme: 'default' | 'high-contrast' | 'dark' | 'light';
+    motionPreference: 'reduce' | 'no-preference';
+    focusStyle: 'default' | 'high-visibility' | 'minimal';
 }
 
 export const useAccessibility = () => {
   const [preferences, setPreferences] = useState<AccessibilityPreferences>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    focusIndicator: true,
-    screenReader: false,
+    highContrast: false;
+    largeText: false;
+    reducedMotion: false;
+    focusIndicator: true;
+    screenReader: false;
     keyboardNavigation: true
   });
-
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 'medium',
-    colorScheme: 'default',
-    motionPreference: 'no-preference',
+    const [settings, setSettings] = useState<AccessibilitySettings>({
+    fontSize: 'medium';
+    colorScheme: 'default';
+    motionPreference: 'no-preference';
     focusStyle: 'default'
   });
-
-  // Load preferences from localStorage
+    // Load preferences from localStorage
   useEffect(() => {
     const savedPreferences = localStorage.getItem('zion-accessibility-preferences');
     const savedSettings = localStorage.getItem('zion-accessibility-settings');
@@ -115,7 +113,7 @@ export const useAccessibility = () => {
       // Skip to main content
       if (event.key === 'Tab' && event.altKey) {
         event.preventDefault();
-        const mainContent = document.querySelector('main');
+    const mainContent = document.querySelector('main');
         if (mainContent) {
           (mainContent as HTMLElement).focus();
         }
@@ -141,7 +139,7 @@ export const useAccessibility = () => {
   const announceToScreenReader = useCallback((message: string) => {
     if (preferences.screenReader) {
       const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = message;
@@ -185,7 +183,7 @@ export const useAccessibility = () => {
         if (event.shiftKey) {
           if (document.activeElement === firstElement) {
             event.preventDefault();
-            lastElement.focus();
+    lastElement.focus();
           }
         } else {
           if (document.activeElement === lastElement) {

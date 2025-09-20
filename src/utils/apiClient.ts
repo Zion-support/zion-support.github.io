@@ -1,7 +1,7 @@
 interface RequestInfo {}; interface RequestInit {};
 export class ApiError extends Error {
   status: number;
-  data?: unknown;
+    data?: unknown;
 
   constructor(message: string, status: number, data?: unknown) {
     super(message);
@@ -11,17 +11,17 @@ export class ApiError extends Error {
 }
 
 export async function apiClient(
-  input: RequestInfo | URL,
+  input: RequestInfo | URL;
   init?: RequestInit,
   retries = 3
 ): Promise<Response> {
   let lastError: unknown;
-  for (let attempt = 0; attempt < retries; attempt++) {
+    for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const response = await fetch(input, init);
       if (!response.ok) {
         let data: any;
-        try {
+    try {
           data = await response.clone().json();
         } catch {
           data = undefined;

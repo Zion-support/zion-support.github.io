@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react, ';
 export function useFilterTalents(talents = []) {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedSkills, setSelectedSkills] = useState([]);
@@ -78,10 +78,9 @@ export function useFilterTalents(talents = []) {
             case 'experience':
                 result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
                 break;
-            default:
-                // Default sorting by relevance (no specific order)
+            default: // Default sorting by relevance (no specific order)
                 break;
-        }
+     }
         return result;
     }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
     return {

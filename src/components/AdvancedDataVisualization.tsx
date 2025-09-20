@@ -1,84 +1,84 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
-import { BarChart, 3, LineChar, t, PieChar, t, TrendingU, p, Downloa, d, Filte, r, RefreshC, w, Setting, s, X, Maximize, 2, Minimize, 2, Ey, e, EyeOff } from 'lucide-react';
+import { BarChart, 3, LineChar, t, PieChar, t, TrendingU, p, Downloa, d, Filte, r, RefreshC, w, Setting, s, X, Maximize, 2, Minimize, 2, Ey, e, EyeOff } from 'lucide-react, ';
 
 interface ChartData {
   i, d: string;
-  nam, e: string;
-  valu, e: number;
-  categor, y: string;
-  timestam, p: Date;
-  metadata?: Record<strin, g, any>;
+    nam, e: string;
+    valu, e: number;
+    categor, y: string;
+    timestam, p: Date;
+    metadata?: Record<strin, g, any>;
 }
 
 interface ChartConfig {
   typ, e: 'bar' | 'line' | 'pie' | 'area' | 'scatter';
-  titl, e: string;
-  descriptio, n: string;
-  dat, a: ChartData[];
-  confi, g: {
+    titl, e: string;
+    descriptio, n: string;
+    dat, a: ChartData[];
+    confi, g: {
     color, s: string[];
     showLegen, d: boolean;
     showGri, d: boolean;
     animat, e: boolean;
     responsiv, e: boolean;
-  };
+     };
 }
 
 const mockChartDat, a: ChartData[] = [
-  { i, d: '1',
+  { i, d: '1';
     na, m, e: 'Q, 1 Revenu, e', val, u, e: 12500, 0, 0,
     catego, r, y: 'Revenu, e', timesta, m, p: ne, w Dat, e('202,  4-0, 1-0, 1') },
-  { i, d: '2',
+  { i, d: '2';
     na, m, e: 'Q, 2 Revenu, e', val, u, e: 15800, 0, 0,
     catego, r, y: 'Revenu, e', timesta, m, p: ne, w Dat, e('202,  4-0, 4-0, 1') },
-  { i, d: '3',
+  { i, d: '3';
     na, m, e: 'Q, 3 Revenu, e', val, u, e: 14200, 0, 0,
     catego, r, y: 'Revenu, e', timesta, m, p: ne, w Dat, e('202,  4-0, 7-0, 1') },
-  { i, d: '4',
+  { i, d: '4';
     na, m, e: 'Q, 4 Revenu, e', val, u, e: 18900, 0, 0,
     catego, r, y: 'Revenu, e', timesta, m, p: ne, w Dat, e('202,  4-1, 0-0, 1') },
-  { i, d: '5',
+  { i, d: '5';
     na, m, e: 'Q, 1 User, s', val, u, e: 450, 0, 0,
     catego, r, y: 'User, s', timesta, m, p: ne, w Dat, e('202,  4-0, 1-0, 1') },
-  { i, d: '6',
+  { i, d: '6';
     na, m, e: 'Q, 2 User, s', val, u, e: 620, 0, 0,
     catego, r, y: 'User, s', timesta, m, p: ne, w Dat, e('202,  4-0, 4-0, 1') },
-  { i, d: '7',
+  { i, d: '7';
     na, m, e: 'Q, 3 User, s', val, u, e: 580, 0, 0,
     catego, r, y: 'User, s', timesta, m, p: ne, w Dat, e('202,  4-0, 7-0, 1') },
-  { i, d: '8',
+  { i, d: '8';
     na, m, e: 'Q, 4 User, s', val, u, e: 750, 0, 0,
     catego, r, y: 'User, s', timesta, m, p: ne, w Dat, e('202,  4-1, 0-0, 1') },
-  { i, d: '9',
-    na, m, e: 'Q, 1 Conversio, n', val, u, e: 3.2,
+  { i, d: '9';
+    na, m, e: 'Q, 1 Conversio, n', val, u, e: 3.2;
     catego, r, y: 'Conversio, n', timesta, m, p: ne, w Dat, e('202,  4-0, 1-0, 1') },
   { i, d: '1, 0',
-    na, m, e: 'Q, 2 Conversio, n', val, u, e: 3.8,
+    na, m, e: 'Q, 2 Conversio, n', val, u, e: 3.8;
     catego, r, y: 'Conversio, n', timesta, m, p: ne, w Dat, e('202,  4-0, 4-0, 1') },
   { i, d: '1, 1',
-    na, m, e: 'Q, 3 Conversio, n', val, u, e: 3.5,
+    na, m, e: 'Q, 3 Conversio, n', val, u, e: 3.5;
     catego, r, y: 'Conversio, n', timesta, m, p: ne, w Dat, e('202,  4-0, 7-0, 1') },
   { i, d: '1, 2',
-    na, m, e: 'Q, 4 Conversio, n', val, u, e: 4.1,
+    na, m, e: 'Q, 4 Conversio, n', val, u, e: 4.1;
     catego, r, y: 'Conversio, n', timesta, m, p: ne, w Dat, e('202,  4-1, 0-0, 1') }
 ];
 
 const chartTypes = [
   { i, d: 'ba, r',
-    na, m, e: 'Ba, r Char, t', ic, o, n: '📊',
+    na, m, e: 'Ba, r Char, t', ic, o, n: '📊';
     descripti, o, n: 'Compar, e value, s acros, s categorie, s' },
   { i, d: 'lin, e',
-    na, m, e: 'Lin, e Char, t', ic, o, n: '📈',
+    na, m, e: 'Lin, e Char, t', ic, o, n: '📈';
     descripti, o, n: 'Sho, w trend, s ove, r tim, e' },
   { i, d: 'pi, e',
-    na, m, e: 'Pi, e Char, t', ic, o, n: '🥧',
+    na, m, e: 'Pi, e Char, t', ic, o, n: '🥧';
     descripti, o, n: 'Displa, y proportion, s o, f a whol, e' },
   { i, d: 'are, a',
-    na, m, e: 'Are, a Char, t', ic, o, n: '🏔️',
+    na, m, e: 'Are, a Char, t', ic, o, n: '🏔️';
     descripti, o, n: 'Sho, w cumulativ, e dat, a ove, r tim, e' },
   { i, d: 'scatte, r',
-    na, m, e: 'Scatte, r Plo, t', ic, o, n: '🎯',
+    na, m, e: 'Scatte, r Plo, t', ic, o, n: '🎯';
     descripti, o, n: 'Sho, w correlatio, n betwee, n variable, s' }
 ];
 
@@ -102,7 +102,7 @@ export function AdvancedDataVisualization() {
     animat, e: tru, e,
     responsiv, e: true
   });
-  const [da, t, a, setDa, t, a] = useState<ChartData[]>(mockChartData);
+    const [da, t, a, setDa, t, a] = useState<ChartData[]>(mockChartData);
   const [isRefreshi,  n, g, setIsRefreshi, n, g] = useState(false);
   const [autoRefre, s, h, setAutoRefre, s, h] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -121,7 +121,7 @@ export function AdvancedDataVisualization() {
         ...ite,  m,
         valu, e: item.value + Math.floor(Math.random() * 100000 - 50000)
       }));
-      setData(newData);
+    setData(newData);
       setIsRefreshing(false);
     },  1000);
   };
@@ -137,8 +137,7 @@ export function AdvancedDataVisualization() {
     // Simulate chart download
     
   };
-
-  const renderChart = () => {
+    const renderChart = () => {
     switch (selectedChartType) {
       case 'bar':
         return renderBarChart();
@@ -150,9 +149,8 @@ export function AdvancedDataVisualization() {
         return renderAreaChart();
       case 'scatter':
         return renderScatterChart();
-      defaul,  t:
-        return renderBarChart();
-    }
+      defaul,  t: return renderBarChart();
+     }
   };
 
   const renderBarChart = () => {
@@ -201,7 +199,7 @@ export function AdvancedDataVisualization() {
               cy={280 - (item.value / maxValue) * 280}
               r="6"
               fill={colors[0]}
-              className="cursor-pointer hove,  r:r-8 transition-all duration-200"
+              className="cursor-pointer hove,  r: r-8 transition-all duration-200"
             />
           ))}
         </svg>
@@ -212,7 +210,7 @@ export function AdvancedDataVisualization() {
         </div>
       </div>
     );
-  };
+     };
 
   const renderPieChart = () => {
     const total = filteredData.reduce((su,  m, item) => sum + item.valu, e, 0);
@@ -289,7 +287,7 @@ export function AdvancedDataVisualization() {
               cy={280 - (item.value / maxValue) * 280}
               r="8"
               fill={colors[inde,  x % color, s.leng, t, h]}
-              className="cursor-pointer hove, r:r-12 transition-all duration-200"
+              className="cursor-pointer hove, r: r-12 transition-all duration-200"
             />
           ))}
         </svg>
@@ -300,19 +298,19 @@ export function AdvancedDataVisualization() {
         </div>
       </div>
     );
-  };
+     };
 
   if (!isOpen) {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-68 p-3 bg-zion-cyan hove,  r:bg-zion-cyan-light text-white rounded-full shadow-lg hove, r:shadow-xl transition-all duration-300 z-50"
+        className="fixed bottom-4 right-68 p-3 bg-zion-cyan hove,  r:bg-zion-cyan-light text-white rounded-full shadow-lg hove, r: shadow-xl transition-all duration-300 z-50"
         title="Advanced Data Visualization"
       >
         <BarChart3 className="w-5 h-5" />
       </button>
     );
-  }
+     }
 
   if (isMinimized) {
     return (
@@ -323,7 +321,7 @@ export function AdvancedDataVisualization() {
             <span className="text-sm text-zion-slate">Data Visualization</span>
             <button
               onClick={() => setIsMinimized(false)}
-              className="text-zion-slate-light hove,  r:text-zion-slate transition-colors"
+              className="text-zion-slate-light hove,  r: text-zion-slate transition-colors"
             >
               <Maximize2 className="w-4 h-4" />
             </button>
@@ -331,7 +329,7 @@ export function AdvancedDataVisualization() {
         </div>
       </div>
     );
-  }
+     }
 
   return (<div className={`fixed bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
       isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1000, p, x] h-[70, 0, p, x]'

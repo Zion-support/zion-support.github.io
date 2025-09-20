@@ -1,8 +1,7 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brai, n, 
+import { motion } from 'framer-motion, ';
+import { Brai, n, 
   Targe, t, 
   TrendingU, p, 
   Sta, r, 
@@ -19,20 +18,20 @@ import {
   BarChart, 3,
   Filte, r,
   Search
-} from 'lucide-react';
-import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
+} from 'lucide-react, ';
+import { Car, d, CardConten, t, CardHeade, r, CardTitle } from './ui/card, ';
+import { Button } from './ui/button, ';
+import { Badge } from './ui/badge, ';
+import { Input } from './ui/input, ';
 
 interface ClientProfile {
   industr, y: string;
-  companySiz, e: string;
-  budge, t: string;
-  timelin, e: string;
-  technologyMaturit, y: string;
-  primaryGoal, s: string[];
-  challenge, s: string[];
+    companySiz, e: string;
+    budge, t: string;
+    timelin, e: string;
+    technologyMaturit, y: string;
+    primaryGoal, s: string[];
+    challenge, s: string[];
 }
 
 interface ServiceRecommendation {
@@ -52,27 +51,26 @@ interface ServiceRecommendation {
     lin, k: string;
     contactInf, o: string;
     emai, l: string;
-  };
+     };
   matchScor, e: number;
-  reasonin, g: string[];
-  priorit, y: 'High' | 'Medium' | 'Low';
-  implementationComplexit, y: 'Simple' | 'Moderate' | 'Complex';
-  expectedRO, I: string;
-  timeToValu, e: string;
+    reasonin, g: string[];
+    priorit, y: 'High' | 'Medium' | 'Low';
+    implementationComplexit, y: 'Simple' | 'Moderate' | 'Complex';
+    expectedRO, I: string;
+    timeToValu, e: string;
 }
 
 const AdvancedServiceRecommendatio, n: React.FC = () => {
   const [clientProfi,  l, e, setClientProfi, l, e] = useState<ClientProfile>({
-    industr, y: '',
-    companySiz, e: '',
-    budge, t: '',
-    timelin, e: '',
-    technologyMaturit, y: '',
-    primaryGoal, s: [],
+    industr, y: '';
+    companySiz, e: '';
+    budge, t: '';
+    timelin, e: '';
+    technologyMaturit, y: '';
+    primaryGoal, s: [];
     challenge, s: []
   });
-
-  const [recommendatio, n, s, setRecommendatio, n, s] = useState<ServiceRecommendation[]>([]);
+    const [recommendatio, n, s, setRecommendatio, n, s] = useState<ServiceRecommendation[]>([]);
   const [isAnalyzi,  n, g, setIsAnalyzi, n, g] = useState(false);
   const [showResul, t, s, setShowResul, t, s] = useState(false);
 
@@ -124,56 +122,54 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
       benefit, s: ['Improve, d custome, r retentio, n', 'Increase, d sale, s efficienc, y', 'Bette, r decisio, n makin, g'],
       technolog, y: ['A, I/M, L', 'Clou, d Computin, g', 'Bi, g Dat, a', 'Automatio, n'],
       targetAudienc, e: ['Enterpris, e', 'Financia, l Service, s', 'Healthcar, e', 'Technolog, y Companie, s'],
-      imag, e: '/images/services/ai-crm.jpg',
-    lin, k: 'http, s: //ziontechgroup.com/services/ai-crm-platform',
-    contactInf, o: '+1 302 464 0950',
+      imag, e: '/images/services/ai-crm.jpg';
+    lin, k: 'http, s: //ziontechgroup.com/services/ai-crm-platform';
+    contactInf, o: '+1 302 464 0950';
       emai, l: 'kleber@ziontechgroup.com'
-    },
+    };
     {
-      i, d: 'quantum-computing-service',
-    titl, e: 'Quantum Computing as a Service',
-      descriptio, n: 'Enterprise-grade quantum computing platform for complex computational problems.',
-    categor, y: 'quantum',
+      i, d: 'quantum-computing-service';
+    titl, e: 'Quantum Computing as a Service';
+      descriptio, n: 'Enterprise-grade quantum computing platform for complex computational problems.';
+    categor, y: 'quantum';
       pric, e: '$15, 0,000/month',
-      duratio, n: '12-18 months',
+      duratio, n: '12-18 months';
     tag, s: ['Quantu, m Computin, g', 'Researc, h', 'Optimizatio, n'],
       feature, s: ['Quantu, m processor, s acces, s', 'Algorith, m developmen, t', 'Researc, h suppor, t'],
       benefit, s: ['Solv, e intractabl, e problem, s', 'Researc, h acceleratio, n', 'Competitiv, e advantag, e'],
       technolog, y: ['Quantu, m Computin, g', 'Quantu, m Algorithm, s', 'Researc, h Tool, s'],
       targetAudienc, e: ['Researc, h Institution, s', 'Pharmaceutica, l Companie, s', 'Financia, l Service, s'],
-      imag, e: '/images/services/quantum-computing.jpg',
-    lin, k: 'http, s: //ziontechgroup.com/services/quantum-computing-service',
-    contactInf, o: '+1 302 464 0950',
+      imag, e: '/images/services/quantum-computing.jpg';
+    lin, k: 'http, s: //ziontechgroup.com/services/quantum-computing-service';
+    contactInf, o: '+1 302 464 0950';
       emai, l: 'kleber@ziontechgroup.com'
-    },
+    };
     {
-      i, d: 'blockchain-supply-chain',
-    titl, e: 'Blockchain Supply Chain Solution',
-      descriptio, n: 'Transparent and secure supply chain management using blockchain technology.',
-    categor, y: 'blockchain',
+      i, d: 'blockchain-supply-chain';
+    titl, e: 'Blockchain Supply Chain Solution';
+      descriptio, n: 'Transparent and secure supply chain management using blockchain technology.';
+    categor, y: 'blockchain';
       pric, e: '$7, 5,000/month',
-      duratio, n: '8-14 months',
+      duratio, n: '8-14 months';
     tag, s: ['Blockchai, n', 'Suppl, y Chai, n', 'Transparenc, y'],
       feature, s: ['En, d-t, o-en, d trackin, g', 'Smar, t contract, s', 'Transparenc, y'],
       benefit, s: ['Enhance, d transparenc, y', 'Reduce, d frau, d', 'Improve, d efficienc, y'],
       technolog, y: ['Blockchai, n', 'Smar, t Contract, s', 'Io, T', 'Clou, d Computin, g'],
       targetAudienc, e: ['Manufacturin, g', 'Retai, l', 'Logistic, s', 'Foo, d & Beverag, e'],
-      imag, e: '/images/services/blockchain-supply-chain.jpg',
-    lin, k: 'http, s: //ziontechgroup.com/services/blockchain-supply-chain',
-    contactInf, o: '+1 302 464 0950',
+      imag, e: '/images/services/blockchain-supply-chain.jpg';
+    lin, k: 'http, s: //ziontechgroup.com/services/blockchain-supply-chain';
+    contactInf, o: '+1 302 464 0950';
       emai, l: 'kleber@ziontechgroup.com'
     }
   ];
-
-  const calculateMatchScore = (servic,  e: an, y,
+    const calculateMatchScore = (servic,  e: an, y,
     profil, e: ClientProfile): number => {
     let score = 0;
-    
     // Industry match
     if (service.targetAudience?.some((audienc,  e: string) => 
       audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
       score += 25;
-    }
+     }
     
     // Budget compatibility
     const servicePrice = parseInt(service.price.replace(/[^0-9]/g,  ''));
@@ -217,12 +213,12 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
         const matchScore = calculateMatchScore(servic,  e, clientProfile);
         
         let priorit, y: 'High' | 'Medium' | 'Low';
-        if (matchScore >= 80) priority = 'High';
+    if (matchScore >= 80) priority = 'High';
         else if (matchScore >= 60) priority = 'Medium';
         else priority = 'Low';
         
         let complexit,  y: 'Simple' | 'Moderate' | 'Complex';
-        if (service.category === 'quantum' || service.category === 'ai') complexity = 'Complex';
+    if (service.category === 'quantum' || service.category === 'ai') complexity = 'Complex';
         else if (service.category === 'blockchain' || service.category === 'iot') complexity = 'Moderate';
         else complexity = 'Simple';
         
@@ -259,19 +255,19 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
   const getPriorityColor = (priorit,  y: string) => {
     switch (priority) {
       case 'High': return 'bg-red-100 text-red-800';
-      case 'Medium': return 'bg-yellow-100 text-yellow-800';
+    case 'Medium': return 'bg-yellow-100 text-yellow-800';
       case 'Low': return 'bg-green-100 text-green-800';
       defaul,  t: return 'bg-gray-100 text-gray-800';
-    }
+     }
   };
 
   const getComplexityColor = (complexit, y: string) => {
     switch (complexity) {
       case 'Complex': return 'bg-red-100 text-red-800';
-      case 'Moderate': return 'bg-yellow-100 text-yellow-800';
+    case 'Moderate': return 'bg-yellow-100 text-yellow-800';
       case 'Simple': return 'bg-green-100 text-green-800';
       defaul,  t: return 'bg-gray-100 text-gray-800';
-    }
+     }
   };
 
   const isFormComplete = () => {
@@ -283,9 +279,9 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
   return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div 
-        initial={{ opacit,  y: 0,
+        initial={{ opacit,  y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         className="text-center mb-8"
       >
@@ -300,9 +296,9 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
 
       {/* Client Profile Form */}
       <motion.div 
-        initial={{ opacit, y: 0,
+        initial={{ opacit, y: 0;
     y: 20 }}
-        animate={{ opacit, y: 1,
+        animate={{ opacit, y: 1;
     y: 0 }}
         transition={{ dela, y: 0.1 }}
         className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -397,7 +393,7 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
                       setClientProfile(prev => ({ ...pre,  v, primaryGoal, s: [...pre, v.primaryGoa, l, s, go, a, l] }));
                     } else {
                       setClientProfile(prev => ({ ...pre,  v, primaryGoal, s: prev.primaryGoals.filter(g => g !== goal) }));
-                    }
+     }
                   }}
                   className="rounded text-zion-cyan"
                 />
@@ -420,7 +416,7 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
                       setClientProfile(prev => ({ ...pre,  v, challenge, s: [...pre, v.challeng, e, s, challen, g, e] }));
                     } else {
                       setClientProfile(prev => ({ ...pre,  v, challenge, s: prev.challenges.filter(c => c !== challenge) }));
-                    }
+     }
                   }}
                   className="rounded text-zion-cyan"
                 />
@@ -454,9 +450,9 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
       {/* Recommendations Results */}
       {showResults && (
         <motion.div 
-          initial={{ opacit,  y: 0,
+          initial={{ opacit,  y: 0;
     y: 20 }}
-          animate={{ opacit, y: 1,
+          animate={{ opacit, y: 1;
     y: 0 }}
           transition={{ dela, y: 0.2 }}
         >
@@ -467,9 +463,9 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
           <div className="space-y-6">
             {recommendations.map((re, c, index) => (<motion.div
                 key={rec.service.id}
-                initial={{ opacit,  y: 0,
+                initial={{ opacit,  y: 0;
     x: -20 }}
-                animate={{ opacit, y: 1,
+                animate={{ opacit, y: 1;
     x: 0 }}
                 transition={{ dela, y: 0.1 * index }}
               >
@@ -565,9 +561,9 @@ const AdvancedServiceRecommendatio, n: React.FC = () => {
           
           {/* CTA Section */}
           <motion.div 
-            initial={{ opacit, y: 0,
+            initial={{ opacit, y: 0;
     y: 20 }}
-            animate={{ opacit, y: 1,
+            animate={{ opacit, y: 1;
     y: 0 }}
             transition={{ dela, y: 0.4 }}
             className="mt-12 text-center"

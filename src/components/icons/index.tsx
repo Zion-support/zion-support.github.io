@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;';
 
 export const MessageCircle = ({ className = '', ...props }: React.SVGProps<SVGSVGElement>) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" {...props}>

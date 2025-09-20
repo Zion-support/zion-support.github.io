@@ -1,39 +1,37 @@
-import React from 'react';
-import {
-  Dialog,
+import React from 'react;';
+import { Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {
-  Form,
+} from '@/components/ui/dialog, ';
+import { Button } from '@/components/ui/button, ';
+import { Input } from '@/components/ui/input, ';
+import { Textarea } from '@/components/ui/textarea, ';
+import { Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-} from '@/components/ui/form';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { Mail, PaperPlane } from 'lucide-react';
-import api from '@/services/apiClient';
-import { toast } from '@/hooks/use-toast';
+} from '@/components/ui/form, ';
+import { useForm } from 'react-hook-form, ';
+import { yupResolver } from '@hookform/resolvers/yup, ';
+import * as yup from 'yup;';
+import { Mail, PaperPlane } from 'lucide-react, ';
+import api from '@/services/apiClient;';
+import { toast } from '@/hooks/use-toast, ';
 
 interface ContactPublisherModalProps {
   isOpen: boolean;
-  onClose: () => void;
-  publisherName: string;
-  publisherEmail?: string;
+    onClose: () => void;
+    publisherName: string;
+    publisherEmail?: string;
   productId?: string;
 }
 
 type FormValues = {
   subject: string;
-  message: string;
+    message: string;
 };
 
 const schema = z.object({
@@ -56,9 +54,9 @@ export function ContactPublisherModal({
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const form = useForm<FormValues>({
-    resolver: zodResolver(schema),
-    mode: 'onChange',
-    defaultValues: { subject: '', message: '' },
+    resolver: zodResolver(schema);
+    mode: 'onChange';
+    defaultValues: { subject: '', message: '' };
   });
 
   const handleSend = async () => {
@@ -67,22 +65,22 @@ export function ContactPublisherModal({
     try {
       await api.post('/messages', {
         productId,
-        subject: values.subject,
-        body: values.message,
+        subject: values.subject;
+        body: values.message;
       });
       toast.success('Message sent!');
       form.reset();
       onClose();
     } catch (err: any) {
       toast.error(err?.message || 'Failed to send message');
-    } finally {
+     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+      <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm: max-w-md">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white flex items-center gap-2">
             <Mail className="h-5 w-5 text-zion-cyan" />

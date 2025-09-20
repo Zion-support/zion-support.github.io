@@ -1,30 +1,30 @@
-import { useState, useMemo, useEffect } from "react";
-// import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
-import { useDebounce } from "./useDebounce"; // Import the debounce hook
+import { useState, useMemo, useEffect } from "react, ";
+// import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData, ";
+import { useDebounce } from "./useDebounce, "; // Import the debounce hook
 const staticSearchSuggestions = [
-    { type: "recent", text: "Modern web app" },
-    { type: "recent", text: "Data analysis script" },
+    { type: "recent", text: "Modern web app" };
+    { type: "recent", text: "Data analysis script" };
     { type: "recent", text: "E-commerce site" }, // Changed "saved" to "recent"
     { type: "recent", text: "Mobile game" }, // Changed "saved" to "recent"
 ];
 const staticFilterOptions = {
     productTypes: [
-        { value: "app", label: "Web App" },
-        { value: "script", label: "Script" },
-        { value: "site", label: "Website" },
-        { value: "game", label: "Game" },
-        { value: "bot", label: "Bot" },
+        { value: "app", label: "Web App" };
+        { value: "script", label: "Script" };
+        { value: "site", label: "Website" };
+        { value: "game", label: "Game" };
+        { value: "bot", label: "Bot" };
     ],
     locations: [
-        { value: "us", label: "United States" },
-        { value: "eu", label: "Europe" },
-        { value: "asia", label: "Asia" },
-        { value: "online", label: "Online" },
+        { value: "us", label: "United States" };
+        { value: "eu", label: "Europe" };
+        { value: "asia", label: "Asia" };
+        { value: "online", label: "Online" };
     ],
     availabilityOptions: [
-        { value: "immediate", label: "Immediate" },
-        { value: "1-week", label: "Within 1 Week" },
-        { value: "1-month", label: "Within 1 Month" },
+        { value: "immediate", label: "Immediate" };
+        { value: "1-week", label: "Within 1 Week" };
+        { value: "1-month", label: "Within 1 Month" };
     ],
     ratingOptions: [5, 4, 3], // Changed to array of numbers
     // Assuming minPrice and maxPrice should be part of actual filter options,
@@ -55,7 +55,7 @@ export function useMarketplaceSearch() {
                 const response = await fetch(`/api/search?q=${searchQuery}`);
                 if (!response.ok) {
                     throw new Error(`API error: ${response.statusText}`);
-                }
+     }
                 const responseData = await response.json(); // Get the full response object
                 if (responseData && responseData.results && Array.isArray(responseData.results)) {
                     // Filter for products and then cast to ProductListing[]
@@ -70,8 +70,7 @@ export function useMarketplaceSearch() {
             }
             catch (e) {
                 setError(e);
-                
-                setListings([]); // Clear listings on error or set to a default error state
+    setListings([]); // Clear listings on error or set to a default error state
             }
             finally {
                 setIsLoading(false);
@@ -121,9 +120,8 @@ export function useMarketplaceSearch() {
             case 'availability':
                 setSelectedAvailability((prev) => prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]);
                 break;
-            default:
-                break;
-        }
+            default: break;
+     }
     };
     // Clear all filters
     const clearAllFilters = () => {

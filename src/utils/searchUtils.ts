@@ -1,11 +1,11 @@
-import { SearchSuggestion } from '@/types/search';
+import { SearchSuggestion } from '@/types/search, ';
 
 export interface SearchResult {
   id: string;
-  title: string;
-  description: string;
-  type: 'product' | 'talent' | 'blog' | 'service' | 'doc';
-  category?: string;
+    title: string;
+    description: string;
+    type: 'product' | 'talent' | 'blog' | 'service' | 'doc';
+    category?: string;
   url?: string;
   image?: string;
   price?: number;
@@ -17,19 +17,20 @@ export interface SearchResult {
 
 export interface SearchFilters {
   types: string[];
-  category: string;
-  minPrice: number;
-  maxPrice: number;
-  minRating: number;
-  sort: string;
+    category: string;
+    minPrice: number;
+    maxPrice: number;
+    minRating: number;
+    sort: string;
 }
 
 export interface SearchMetrics {
   totalResults: number;
-  searchTime: number;
-  topCategories: Array<{ category: string; count: number }>;
-  averagePrice: number;
-  averageRating: number;
+    searchTime: number;
+    topCategories: Array<{ category: string;
+    count: number }>;
+    averagePrice: number;
+    averageRating: number;
 }
 
 /**
@@ -37,8 +38,7 @@ export interface SearchMetrics {
  */
 export const highlightSearchTerms = (text: string, searchTerm: string): string => {
   if (!searchTerm.trim()) return text;
-  
-  const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const regex = new RegExp(`(${escaped})`, 'gi');
   
   return text.replace(regex, '<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>');
@@ -49,7 +49,7 @@ export const highlightSearchTerms = (text: string, searchTerm: string): string =
  */
 export const matchesSearchTerm = (text: string | undefined, searchTerm: string): boolean => {
   if (!text || !searchTerm.trim()) return false;
-  return text.toLowerCase().includes(searchTerm.toLowerCase());
+    return text.toLowerCase().includes(searchTerm.toLowerCase());
 };
 
 /**
@@ -57,7 +57,7 @@ export const matchesSearchTerm = (text: string | undefined, searchTerm: string):
  */
 export const calculateRelevanceScore = (result: SearchResult, searchTerm: string): number => {
   let score = 0;
-  const term = searchTerm.toLowerCase();
+    const term = searchTerm.toLowerCase();
   const title = result.title.toLowerCase();
   const description = result.description.toLowerCase();
 
@@ -102,8 +102,7 @@ export const calculateRelevanceScore = (result: SearchResult, searchTerm: string
  */
 export const sortSearchResults = (results: SearchResult[], sortBy: string, searchTerm: string): SearchResult[] => {
   const sortedResults = [...results];
-  
-  switch (sortBy) {
+    switch (sortBy) {
     case 'price_asc':
       return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
       
@@ -138,8 +137,7 @@ export const sortSearchResults = (results: SearchResult[], sortBy: string, searc
  */
 export const filterSearchResults = (results: SearchResult[], filters: SearchFilters): SearchResult[] => {
   let filteredResults = [...results];
-
-  // Filter by type
+    // Filter by type
   if (filters.types.length > 0) {
     filteredResults = filteredResults.filter(result => 
       filters.types.includes(result.type)
@@ -175,22 +173,22 @@ export const filterSearchResults = (results: SearchResult[], filters: SearchFilt
  * Generate search suggestions based on query
  */
 export const generateDynamicSuggestions = (
-  query: string, 
-  recentSearches: string[] = [],
-  availableCategories: string[] = [],
+  query: string;
+  recentSearches: string[] = [];
+  availableCategories: string[] = [];
   availableTags: string[] = []
 ): SearchSuggestion[] => {
   const suggestions: SearchSuggestion[] = [];
-  const lowerQuery = query.toLowerCase();
+    const lowerQuery = query.toLowerCase();
 
   // Add exact query as first suggestion
   if (query.trim()) {
     suggestions.push({
-      text: query,
-      type: 'recent',
+      text: query;
+      type: 'recent';
       id: `query-${query}`
     });
-  }
+     }
 
   // Add matching categories
   availableCategories
@@ -198,11 +196,11 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(category => {
       suggestions.push({
-        text: category,
-        type: 'category',
+        text: category;
+        type: 'category';
         id: `category-${category}`
       });
-    });
+     });
 
   // Add matching tags
   availableTags
@@ -210,11 +208,11 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(tag => {
       suggestions.push({
-        text: tag,
-        type: 'tag',
+        text: tag;
+        type: 'tag';
         id: `tag-${tag}`
       });
-    });
+     });
 
   // Add recent searches that match
   recentSearches
@@ -222,11 +220,11 @@ export const generateDynamicSuggestions = (
     .slice(0, 3)
     .forEach(search => {
       suggestions.push({
-        text: search,
-        type: 'recent',
+        text: search;
+        type: 'recent';
         id: `recent-${search}`
       });
-    });
+     });
 
   return suggestions.slice(0, 8); // Limit to 8 suggestions
 };
@@ -236,8 +234,7 @@ export const generateDynamicSuggestions = (
  */
 export const calculateSearchMetrics = (results: SearchResult[], searchTime: number): SearchMetrics => {
   const totalResults = results.length;
-  
-  // Calculate top categories
+    // Calculate top categories
   const categoryCount = new Map<string, number>();
   results.forEach(result => {
     if (result.category) {
@@ -275,12 +272,11 @@ export const calculateSearchMetrics = (results: SearchResult[], searchTime: numb
  * Debounce function for search input
  */
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
+  func: T;
   wait: number
 ): ((...args: Parameters<T>) => void) => {
   let timeout: ReturnType<typeof setTimeout>;
-  
-  return (...args: Parameters<T>) => {
+    return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
@@ -323,8 +319,7 @@ export const hasActiveFilters = (filters: SearchFilters): boolean => {
  */
 export const getActiveFilterCount = (filters: SearchFilters): number => {
   let count = 0;
-  
-  if (filters.types.length > 0) count += filters.types.length;
+    if (filters.types.length > 0) count += filters.types.length;
   if (filters.category) count += 1;
   if (filters.minPrice > 0 || filters.maxPrice < 10000) count += 1;
   if (filters.minRating > 0) count += 1;
@@ -337,15 +332,14 @@ export const getActiveFilterCount = (filters: SearchFilters): number => {
  * Reset filters to default values
  */
 export const getDefaultFilters = (): SearchFilters => ({
-  types: [],
-  category: '',
-  minPrice: 0,
-  maxPrice: 10000,
-  minRating: 0,
+  types: [];
+  category: '';
+  minPrice: 0;
+  maxPrice: 10000;
+  minRating: 0;
   sort: 'relevance'
 });
-
-export default {
+    export default {
   highlightSearchTerms,
   matchesSearchTerm,
   calculateRelevanceScore,

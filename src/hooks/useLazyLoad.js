@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react, ';
 export const useLazyLoad = (options = {}) => {
     const { threshold = 0.1, rootMargin = '50px', preload = true, preloadDistance = 100 } = options;
     const [isVisible, setIsVisible] = useState(false);
@@ -24,7 +24,7 @@ export const useLazyLoad = (options = {}) => {
             threshold,
             rootMargin: preload ? `${preloadDistance}px` : rootMargin
         });
-        observer.observe(element);
+    observer.observe(element);
         return () => {
             observer.unobserve(element);
         };

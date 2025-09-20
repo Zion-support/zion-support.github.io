@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { showApiError } from '@/utils/apiErrorHandler';
+import axios from 'axios;';
+import { showApiError } from '@/utils/apiErrorHandler, ';
 
 const api = axios.create();
 

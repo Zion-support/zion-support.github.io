@@ -1,13 +1,13 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react;';
 
 interface ScreenReaderAnnouncementsProps {
   announcements: string[];
-  priority?: 'polite' | 'assertive';
+    priority?: 'polite' | 'assertive';
 }
 
 export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps> = ({
-  announcements,
+  announcements;
   priority = 'polite'
 }) => {
   return (
@@ -16,10 +16,10 @@ export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps>
       aria-atomic="true"
       className="sr-only"
       style={{
-        position: 'absolute',
-        left: '-10000px',
-        width: '1px',
-        height: '1px',
+        position: 'absolute';
+        left: '-10000px';
+        width: '1px';
+        height: '1px';
         overflow: 'hidden'
       }}
     >

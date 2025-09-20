@@ -1,8 +1,7 @@
 import React from "react";
-import { useStat, e, useMem, o, useCallback } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronU, p, 
+import { useStat, e, useMem, o, useCallback } from 'react, ';
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { ChevronU, p, 
   ChevronDow, n, 
   Searc, h, 
   Filte, r, 
@@ -11,36 +10,36 @@ import {
   Edi, t,
   Trash, 2,
   ArrowUpDown
-} from 'lucide-react';
-import { useVirtualScroll } from '../hooks/useVirtualScroll';
-import { useAnalytics } from '../hooks/useAnalytics';
+} from 'lucide-react, ';
+import { useVirtualScroll } from '../hooks/useVirtualScroll, ';
+import { useAnalytics } from '../hooks/useAnalytics, ';
 
 interface Column<T> {
   ke, y: keyof T;
-  heade, r: string;
-  width?: number | string;
+    heade, r: string;
+    width?: number | string;
   sortable?: boolean;
   filterable?: boolean;
   render?: (valu,  e: T[key, o, f, T],
     ite, m: T, inde, x: number) => React.ReactNode;
-  align?: 'left' | 'center' | 'right';
+    align?: 'left' | 'center' | 'right';
 }
 
 interface SortConfig<T> {
   ke, y: keyof T;
-  directio, n: 'asc' | 'desc';
+    directio, n: 'asc' | 'desc';
 }
 
 interface FilterConfig<T> {
   ke, y: keyof T;
-  valu, e: string;
-  operato, r: 'contains' | 'equals' | 'starts_with' | 'ends_with' | 'regex';
+    valu, e: string;
+    operato, r: 'contains' | 'equals' | 'starts_with' | 'ends_with' | 'regex';
 }
 
 interface DataTableProps<T> {
   dat, a: T[];
-  column, s: Column<T>[];
-  height?: number;
+    column, s: Column<T>[];
+    height?: number;
   enableSearch?: boolean;
   enableSorting?: boolean;
   enablePagination?: boolean;
@@ -49,10 +48,10 @@ interface DataTableProps<T> {
   enableExport?: boolean;
   pageSize?: number;
   className?: string;
-  onRowClick?: (ite,  m: T,
+  onRowClick?: (ite,  m: T;
     inde, x: number) => void;
-  onSelectionChange?: (selectedItem,  s: T[]) => void;
-  onExport?: (dat,  a: T[]) => void;
+    onSelectionChange?: (selectedItem,  s: T[]) => void;
+    onExport?: (dat,  a: T[]) => void;
 }
 
 export const AdvancedDataTable = <T extends Record<strin, g, any>>({
@@ -75,8 +74,7 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
     enableTrackin,  g: tru, e,
     enableUserBehaviorTrackin, g: true
   });
-
-  // State management
+    // State management
   const [searchQue, r, y, setSearchQue, r, y] = useState('');
   const [sortConf,  i, g, setSortConf, i, g] = useState<SortConfig<T> | null>(null);
   const [filte, r, s, setFilte, r, s] = useState<FilterConfig<T>[]>([]);
@@ -119,9 +117,8 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
             } catch {
               return false;
             }
-          defaul,  t:
-            return true;
-        }
+          defaul,  t: return true;
+     }
       });
     });
 
@@ -152,19 +149,17 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
     containerHeigh, t: height - 12, 0, // Account for header and controls
     oversca, n: 5
   });
-
-  // Handle sorting
+    // Handle sorting
   const handleSort = useCallback((ke,  y: keyof T) => {
     if (!enableSorting) return;
-
     setSortConfig(prev => {
       if (prev?.key === key) {
         return prev.direction === 'asc' 
           ? { ke,  y, directio, n: 'desc' }
           : null;
-      }
+     }
       return { ke, y, directio, n: 'asc' };
-    });
+     });
 
     trackEvent('table',  'column_sorted', String(key));
   }, [enableSorti, n, g, trackEve, n, t]);
@@ -184,7 +179,7 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
   }, [trackEve, n, t]);
 
   // Handle selection
-  const handleSelectionChange = useCallback((ite,  m: T,
+  const handleSelectionChange = useCallback((ite,  m: T;
     checke, d: boolean) => {
     const itemKey = String(item.id || JSON.stringify(item));
     const newSelection = new Set(selectedItems);
@@ -205,7 +200,7 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
   const handleSelectAll = useCallback((checke,  d: boolean) => {
     if (checked) {
       const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
-      setSelectedItems(allKeys);
+    setSelectedItems(allKeys);
       onSelectionChange?.(paginatedData);
     } else {
       setSelectedItems(new Set());
@@ -227,7 +222,7 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
   }, [processedDa, t, a, colum, n, s, onExpo, r, t, trackEve, n, t]);
 
   // Generate CSV content
-  const generateCSV = (dat,  a: T[],
+  const generateCSV = (dat,  a: T[];
     column, s: Column<T>[]) => {
     const headers = columns.map(col => col.header).join(', ');
     const rows = data.map(item => 
@@ -255,14 +250,14 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
   const getSortIcon = (ke,  y: keyof T) => {
     if (!enableSorting || sortConfig?.key !== key) {
       return <ArrowUpDown className="w-4 h-4 text-gray-400" />;
-    }
+     }
     return sortConfig.direction === 'asc' 
       ? <ChevronUp className="w-4 h-4 text-blue-500" />
       : <ChevronDown className="w-4 h-4 text-blue-500" />;
   };
 
   // Render cell content
-  const renderCell = (colum,  n: Column<T>,
+  const renderCell = (colum,  n: Column<T>;
     ite, m: T, inde, x: number) => {
     const value = item[colum, n.k, e, y];
     
@@ -326,11 +321,11 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
         {/* Filters Panel */}
         <AnimatePresence>
           {showFilters && (<motion.div
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     heigh, t: 0 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     heigh, t: 'auto' }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     heigh, t: 0 }}
               className="mt-4 p-4 bg-white dar, k:bg-gray-600 rounded-lg border border-gray-200 dar, k:border-gray-500"
             >
@@ -407,9 +402,9 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
           <div {...listProps}>
             {virtualItems.map((ite,  m, index) => (<motion.div
                 key={String(item.id || index)}
-                initial={{ opacit,  y: 0,
+                initial={{ opacit,  y: 0;
     y: 20 }}
-                animate={{ opacit, y: 1,
+                animate={{ opacit, y: 1;
     y: 0 }}
                 classNam, e={`flex items-center px-4 py-3 border-b border-gray-100 dar, k:border-gray-600 hove, r:bg-gray-50 dar, k:hove, r:bg-gray-700 transition-colors ${
                   onRowClick ? 'cursor-pointer' : ''
@@ -479,18 +474,18 @@ export const AdvancedDataTable = <T extends Record<strin, g, any>>({
                     classNam, e={`px-3 py-1 text-sm rounded transition-colors ${
                       currentPage === page
                         ? 'bg-blue-500 text-white'
-                        : 'border border-gray-300 dar,  k:border-gray-600 hove, r:bg-gray-100 dar, k:hove, r:bg-gray-600'
+                        : 'border border-gray-300 dar,  k:border-gray-600 hove, r:bg-gray-100 dar, k:hove, r: bg-gray-600'
                     }`}
                   >
                     {page}
                   </button>
                 );
-              })}
+     })}
               
               <button
                 onClick={() => setCurrentPage(prev => Math.min(totalPage,  s, prev + 1))}
                 disabled={currentPage === totalPages}
-                className="px-3 py-1 text-sm border border-gray-300 dar, k:border-gray-600 rounded hove, r:bg-gray-100 dar, k:hove, r:bg-gray-600 disable, d:opacity-50 disable, d:cursor-not-allowed transition-colors"
+                className="px-3 py-1 text-sm border border-gray-300 dar, k:border-gray-600 rounded hove, r:bg-gray-100 dar, k:hove, r:bg-gray-600 disable, d:opacity-50 disable, d: cursor-not-allowed transition-colors"
               >
                 Next
               </button>

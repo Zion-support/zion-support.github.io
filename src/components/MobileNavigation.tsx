@@ -1,12 +1,12 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
-import { Lin, k, useLocation } from 'react-router-dom';
-import { motio, n, AnimatePresenc, e, Variants } from 'framer-motion';
-import { Men, u, X, ChevronDow, n, Searc, h, Use, r, Bell } from 'lucide-react';
+import { Lin, k, useLocation } from 'react-router-dom, ';
+import { motio, n, AnimatePresenc, e, Variants } from 'framer-motion, ';
+import { Men, u, X, ChevronDow, n, Searc, h, Use, r, Bell } from 'lucide-react, ';
 
 interface MobileNavigationProps {
   isOpe, n: boolean;
-  onToggl, e: () => void;
+    onToggl, e: () => void;
 }
 
 const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onToggle }) => {
@@ -25,7 +25,7 @@ const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onTogg
     const handleClickOutside = (even,  t: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         onToggle();
-      }
+     }
     };
 
     if (isOpen) {
@@ -59,8 +59,8 @@ const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onTogg
       ]
     },
     {
-      labe, l: 'Solutions',
-    hre, f: '/solutions',
+      labe, l: 'Solutions';
+    hre, f: '/solutions';
       childre, n: [
         { lab, e, l: 'Enterpris, e Solution, s',
     hr, e, f: '/solution, s/enterpris, e' },
@@ -73,8 +73,8 @@ const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onTogg
       ]
     },
     {
-      labe, l: 'Industries',
-    hre, f: '/industries',
+      labe, l: 'Industries';
+    hre, f: '/industries';
       childre, n: [
         { lab, e, l: 'Technolog, y',
     hr, e, f: '/industrie, s/technolog, y' },
@@ -89,8 +89,8 @@ const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onTogg
       ]
     },
     {
-      labe, l: 'Company',
-    hre, f: '/about',
+      labe, l: 'Company';
+    hre, f: '/about';
       childre, n: [
         { lab, e, l: 'Abou, t U, s',
     hr, e, f: '/abou, t' },
@@ -108,7 +108,7 @@ const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onTogg
 
   const toggleDropdown = (labe,  l: string) => {
     setActiveDropdown(activeDropdown === label ? null : label);
-  };
+     };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -118,43 +118,41 @@ const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onTogg
 
   const menuVariant, s: Variants = {
     close, d: {
-      x: '100%',
-    opacit, y: 0,
+      x: '100%';
+    opacit, y: 0;
       transitio, n: {
-        duratio, n: 0.3,
+        duratio, n: 0.3;
     eas, e: 'easeInOut'
       }
-    },
+    };
     ope, n: {
-      x: 0,
-    opacit, y: 1,
+      x: 0;
+    opacit, y: 1;
       transitio, n: {
-        duratio, n: 0.3,
+        duratio, n: 0.3;
     eas, e: 'easeInOut'
       }
     }
   };
-
-  const dropdownVariant, s: Variants = {
+    const dropdownVariant, s: Variants = {
     close, d: {
-      heigh, t: 0,
-    opacit, y: 0,
+      heigh, t: 0;
+    opacit, y: 0;
       transitio, n: {
-        duratio, n: 0.2,
+        duratio, n: 0.2;
     eas, e: 'easeInOut'
       }
-    },
+    };
     ope, n: {
-      heigh, t: 'auto',
-    opacit, y: 1,
+      heigh, t: 'auto';
+    opacit, y: 1;
       transitio, n: {
-        duratio, n: 0.2,
+        duratio, n: 0.2;
     eas, e: 'easeInOut'
       }
     }
   };
-
-  return (<AnimatePresence>
+    return (<AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
@@ -301,7 +299,7 @@ const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onTogg
               <div className="flex items-center justify-center gap-4 text-zion-slate-light">
                 <a href="#" className="hove, r:text-zion-cyan transition-colors">Privacy</a>
                 <a href="#" className="hove, r:text-zion-cyan transition-colors">Terms</a>
-                <a href="#" className="hove, r:text-zion-cyan transition-colors">Support</a>
+                <a href="#" className="hove, r: text-zion-cyan transition-colors">Support</a>
               </div>
             </div>
           </motion.div>

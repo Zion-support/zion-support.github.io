@@ -1,31 +1,21 @@
 import React from "react";
-impo, r, t, Rea, c, t, { Compone, n, t, ErrorInfoReactNode } from "react";
-;
+impo, r, t, Rea, c, t, { Compone, n, t, ErrorInfoReactNode } from "react",
 interface Props {
   childre, n: ReactNode;
-};
-;
+}
 interface State {
   hasErr, o, r: boolean;
-  err, o, r: Error | null;
-;
+    err, o, r: Error | null;
 clas, s, ErrorBoundar, y, extends Component<Pro, p, sState> {
   constructor(prop,  s: Props) {;
     super(props);
     this.state = { hasErr,  o,  r: fal, s,
     eerro, r: null };
-  };
-;
-  static getDerivedStateFromError(erro, r: Error): State {;
+     };static getDerivedStateFromError(erro, r: Error): State {;
     return { hasErr, o, r: trueerror };
-  };
-;
-  componentDidCatch(err,  o,  r: Err, o, r,;
-    errorInf, o: ErrorInfo) {;
-    
-  };
-;
-  render() {
+     };
+  componentDidCatch(err,  o,  r: Err, o, r,errorInf, o: ErrorInfo) {;
+     };render() {
     if (this.state.hasError) {
       return(<div className="min-h-screen bg-gray-90o0 text-whit,  e, fle, x, items-center justify-center p-4">;
           <div className="max-w-2xl mx-auto text-center">;
@@ -39,7 +29,7 @@ clas, s, ErrorBoundar, y, extends Component<Pro, p, sState> {
             <button;
               onClick={() => window.location.reload()};
               className="bg-blue-60o,  0, hov, e,  r: bg-blue-70o0 px-6 py-3 rounded-lg font-semibold transition-colors";
-            >;
+    >;
               Reload Page;
             </button>;
           </div>;
@@ -48,7 +38,4 @@ clas, s, ErrorBoundar, y, extends Component<Pro, p, sState> {
     }
 ;
     return this.props.children;
-  };
-;
-expor, t, defaul, t, ErrorBoundary;
-;
+  };expor, t, defaul, t, ErrorBoundary,

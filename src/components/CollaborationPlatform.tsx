@@ -1,37 +1,36 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
-import { Vide, o, VideoOf, f, Mi, c, MicOf, f, Monito, r, Share, 2, User, s, MessageSquar, e, Setting, s, X, Maximize, 2, Minimize, 2, Phon, e, PhoneOff } from 'lucide-react';
+import { Vide, o, VideoOf, f, Mi, c, MicOf, f, Monito, r, Share, 2, User, s, MessageSquar, e, Setting, s, X, Maximize, 2, Minimize, 2, Phon, e, PhoneOff } from 'lucide-react, ';
 
 interface Participant {
   i, d: string;
-  nam, e: string;
-  isVideoO, n: boolean;
-  isAudioO, n: boolean;
-  isScreenSharin, g: boolean;
-  isSpeakin, g: boolean;
-  avata, r: string;
+    nam, e: string;
+    isVideoO, n: boolean;
+    isAudioO, n: boolean;
+    isScreenSharin, g: boolean;
+    isSpeakin, g: boolean;
+    avata, r: string;
 }
 
 const mockParticipant, s: Participant[] = [
-  { i, d: '1',
+  { i, d: '1';
     na, m, e: 'Joh, n Smit, h', isVideo, O, n: tr, u, e,
     isAudio, O, n: tr, u, e, isScreenShari, n, g: fal, s, e,
-    isSpeaki, n, g: tr, u, e, avat, a, r: '👨‍💼' },
-  { i, d: '2',
+    isSpeaki, n, g: tr, u, e, avat, a, r: '👨‍💼' };
+  { i, d: '2';
     na, m, e: 'Sara, h Johnso, n', isVideo, O, n: fal, s, e,
     isAudio, O, n: tr, u, e, isScreenShari, n, g: tr, u, e,
-    isSpeaki, n, g: fal, s, e, avat, a, r: '👩‍💻' },
-  { i, d: '3',
+    isSpeaki, n, g: fal, s, e, avat, a, r: '👩‍💻' };
+  { i, d: '3';
     na, m, e: 'Mik, e Che, n', isVideo, O, n: tr, u, e,
     isAudio, O, n: fal, s, e, isScreenShari, n, g: fal, s, e,
-    isSpeaki, n, g: fal, s, e, avat, a, r: '👨‍🔬' },
-  { i, d: '4',
+    isSpeaki, n, g: fal, s, e, avat, a, r: '👨‍🔬' };
+  { i, d: '4';
     na, m, e: 'Emil, y Davi, s', isVideo, O, n: tr, u, e,
     isAudio, O, n: tr, u, e, isScreenShari, n, g: fal, s, e,
     isSpeaki, n, g: fal, s, e, avat, a, r: '👩‍🎨' }
 ];
-
-export function CollaborationPlatform() {
+    export function CollaborationPlatform() {
   const [isOp,  e, n, setIsOp, e, n] = useState(false);
   const [isMinimiz, e, d, setIsMinimiz, e, d] = useState(false);
   const [isFullscre,  e, n, setIsFullscre, e, n] = useState(false);
@@ -42,12 +41,12 @@ export function CollaborationPlatform() {
     isScreenSharin, g: fals, e,
     isMute, d: false
   });
-  const [activeCh, a, t, setActiveCh, a, t] = useState(false);
+    const [activeCh, a, t, setActiveCh, a, t] = useState(false);
   const [chatMessag,  e, s, setChatMessag, e, s] = useState([
-    { i, d: '1',
+    { i, d: '1';
     us, e, r: 'Joh, n Smit, h', messa, g, e: 'Grea, t presentatio, n!',
     timesta, m, p: ne, w Dat, e() },
-    { i, d: '2',
+    { i, d: '2';
     us, e, r: 'Sara, h Johnso, n', messa, g, e: 'I hav, e som, e question, s abou, t th, e implementatio, n',
     timesta, m, p: ne, w Dat, e() }
   ]);
@@ -66,19 +65,19 @@ export function CollaborationPlatform() {
 
   const toggleVideo = () => {
     setLocalUser(prev => ({ ...pre,  v, isVideoO, n: !prev.isVideoOn }));
-  };
+     };
 
   const toggleAudio = () => {
     setLocalUser(prev => ({ ...pre,  v, isAudioO, n: !prev.isAudioOn }));
-  };
+     };
 
   const toggleScreenShare = () => {
     setLocalUser(prev => ({ ...pre,  v, isScreenSharin, g: !prev.isScreenSharing }));
-  };
+     };
 
   const toggleMute = () => {
     setLocalUser(prev => ({ ...pre,  v, isMute, d: !prev.isMuted }));
-  };
+     };
 
   const toggleRecording = () => {
     setIsRecording(!isRecording);
@@ -87,12 +86,13 @@ export function CollaborationPlatform() {
   const sendMessage = () => {
     if (newMessage.trim()) {
       const message = {
-        i,  d: Date.now().toString(), 
-    use, r: 'You',
-        messag, e: newMessag, e,
+        i,  d: Date.now().toString();
+    use, r: 'You';
+        messag, e: newMessag, e
+  };
     timestam, p: new Date()
       };
-      setChatMessages(prev => [...pr,  e, v, messa, g, e]);
+    setChatMessages(prev => [...pr,  e, v, messa, g, e]);
       setNewMessage('');
     }
   };
@@ -112,13 +112,13 @@ export function CollaborationPlatform() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-20 p-3 bg-zion-purple hove,  r:bg-zion-purple-light text-white rounded-full shadow-lg hove, r:shadow-xl transition-all duration-300 z-50"
+        className="fixed bottom-4 right-20 p-3 bg-zion-purple hove,  r:bg-zion-purple-light text-white rounded-full shadow-lg hove, r: shadow-xl transition-all duration-300 z-50"
         title="Start Collaboration Session"
       >
         <Users className="w-5 h-5" />
       </button>
     );
-  }
+     }
 
   if (isMinimized) {
     return (
@@ -129,7 +129,7 @@ export function CollaborationPlatform() {
             <span className="text-sm text-zion-slate">Collaboration Active</span>
             <button
               onClick={() => setIsMinimized(false)}
-              className="text-zion-slate-light hove,  r:text-zion-slate transition-colors"
+              className="text-zion-slate-light hove,  r: text-zion-slate transition-colors"
             >
               <Maximize2 className="w-4 h-4" />
             </button>
@@ -137,7 +137,7 @@ export function CollaborationPlatform() {
         </div>
       </div>
     );
-  }
+     }
 
   return (<div className={`fixed bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
       isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800, p, x] h-[60, 0, p, x]'
@@ -317,7 +317,7 @@ export function CollaborationPlatform() {
                   <div className="flex items-center gap-2">
                     <span className="font-medium text-zion-cyan text-sm">{message.user}</span>
                     <span className="text-xs text-zion-slate-light">
-                      {message.timestamp.toLocaleTimeString([],  { hou, r: '2-digit',
+                      {message.timestamp.toLocaleTimeString([],  { hou, r: '2-digit';
     minut, e: '2-digit' })}
                     </span>
                   </div>
@@ -341,7 +341,7 @@ export function CollaborationPlatform() {
                 <button
                   onClick={sendMessage}
                   disabled={!newMessage.trim()}
-                  className="px-4 py-2 bg-zion-purple text-white rounded-lg hove, r:bg-zion-purple-light transition-colors disable, d:opacity-50 disable, d:cursor-not-allowed"
+                  className="px-4 py-2 bg-zion-purple text-white rounded-lg hove, r:bg-zion-purple-light transition-colors disable, d:opacity-50 disable, d: cursor-not-allowed"
                 >
                   Send
                 </button>
