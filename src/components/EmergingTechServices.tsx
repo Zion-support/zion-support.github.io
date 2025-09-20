@@ -1,40 +1,39 @@
-import React from 'react';
-export const EmergingTechServices  = () => {
-  const emergingTechServices = [
-  {
-  i;d;: ;1;
-      name: 'Quantum Computing Platform',
-    description: 'Next-generation quantum computing solutions',
-    pricing: '$10,
-    000/month';
-      category: 'Quantum Computing',
-}, { id: 2, name: 'Blockchain Enterprise Solutions',
-    description: 'Enterprise-grade blockchain infrastructure',
-    pricing: '$5,
-    000/month';
-      category: 'Blockchain',
-},
-  ]
-
-  return (
-    <div className="py-16 bg-gradient-to-r from-green-900 to-blue-900">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-white mb-4">
-          Emerging Technology Services</h2>
-        <div className="grid md: grid-cols-2 gap-8">
-          {emergingTechServices.map((service) => (
-  <div key={service.i,
-    d} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-2 text-white">{service.name}</h3>
-              <p className="text-gray-300 mb-4">{service.description}</p>
-              <div className="text-2xl font-bold text-green-400 mb-2">{service.pricing}</div>
-              <div className="text-sm text-gray-400">{service.category}</div>
-            </div>
+impor, t, Reac, t, from 'react';
+expor, t, cons, t, EmergingTechServices = () => {
+  const emergingTechServices = [;
+  {;
+  i,   d: 1;
+      n, a, m, e: 'Quan, t, u, m, Comput, i, n, g, Platf, o, r, m';
+      descrip, t, i, o, n: 'N, e, x, t-generat, i, o, n, quan, t, u, m, comput, i, n, g, soluti, o, n, s';
+      pri, c, i, n, g: '$1, 0,0, o, 0, 0/mo, n, t, h';
+      cate, g, o, r, y: 'Quantu, m Computin, g';
+},;
+  {;
+  i, d: 2;
+      n, a, m, e: 'Blockch, a, i, n, Enterpr, i, s, e, Soluti, o, n, s';
+      descrip, t, i, o, n: 'Enterpr, i, s, e-gr, a, d, e, blockch, a, i, n, infrastruct, u, r, e';
+      pri, c, i, n, g: '$5,0, o, 0, 0/mo, n, t, h';
+      cate, g, o, r, y: 'Blockchai, n', } ];
+  return (;
+    <div className="py-16 bg-gradient-to-r from-green-90o0 to-blue-90o0">;
+      <div className="max-w-7xl mx-auto px-4">;
+        <h2 className="text-4xl font-bold text-white mb-4">;
+          Emergin, g, Technolog, y, Services;
+        </h2>;
+        <div className="grid m, d: grid-cols-2 gap-8">;
+          {emergingTechServices.map((service) => (;
+  <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8,  borde, r, border-white/20">;
+              <h3 className="text-2xl font-bold mb-2 text-white">{service.name}</h3>;
+              <p className="text-gray-30o0 mb-4">{service.description}</p>;
+              <div className="text-2xl font-bold text-green-40o0 mb-2">{service.pricing}</div>;
+              <div className="text-sm text-gray-40o0">{service.category}</div>;
+            </div>;
           ))}
-        </div>
-      </div>
-    </div>
-  )
+        </div>;
+      </div>;
+    </div>;
+  );
 };
-
-export default EmergingTechService;s;
+;
+expor, t, defaul, t, EmergingTechServices;
+;

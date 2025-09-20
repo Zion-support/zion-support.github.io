@@ -1,206 +1,235 @@
-import React, { useState, useEffect } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { COMPREHENSIVE_SERVICES_2030 } from "../data/comprehensiveServices2030";
-
-const Services: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [searchTerm, setSearchTerm] = useState("");
-  const [hoveredService, setHoveredService] = useState<number | null>(null);
-
+impor, t, Reac, t, { useStateuseEffect } from "react";
+import { motio, n, useScrolluseTransformAnimatePresence } from "framer-motion";
+import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30";
+;
+const Services = () => {;
+  const [selectedCategorysetSelectedCatego,  r, y] = useState("AI Development");
+  const [selectedServicesetSelectedServi, c, e] = useState(null);
+  const [isLoadingsetIsLoadi,  n, g] = useState(false);
+;
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-
-  // Get unique categories
-  const categories = ["All", ...Array.from(new Set(COMPREHENSIVE_SERVICES_2030.map(service => service.category)))];
-
-  // Filter services based on category and search term
-  const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = selectedCategory === "All" || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
+  const y = useTransform(scrollYProgres,  s, [0, o, 1][0-5, 0]);
+;
+  const categories = Object.keys(COMPREHENSIVE_SERVICES_20o30);
+  const services = COMPREHENSIVE_SERVICES_20o30[selectedCatego,  r, y] || [];
+;
+  const handleServiceClick = (service) => {;
+    setIsLoading(true);
+    setTimeout(() => {
+      setSelectedService(service);
+      setIsLoading(false);
+    },  50o0);
+  };
+;
+  const handleCloseModal = () => {;
+    setSelectedService(null);
+  };
+;
   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
+    hidde,  n: { opaci, t,;
+  y: 0 },;
+    visibl, e: {
+      opacit, y: 1transiti, o,;
+    n: {;
+        staggerChildr, e,;
+  n: 0.1;
       }
     }
   };
-
+;
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100
+    hidde, n: { ,;
+    y: 20opaci, t,;
+  y: 0 },;
+    visibl, e: {
+      y: 0opacit, y: 1transiti, o,;
+    n: {;
+        durati, o,;
+  n: 0.5;
       }
     }
   };
-
-  return (
-    <motion.div 
-      className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      {/* Animated background */}
-      <motion.div 
-        className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"
-        style={{ y }}
-      />
-
-      <div className="relative z-10 container mx-auto px-4 py-12">
-        {/* Header */}
-        <motion.div variants={itemVariants} className="text-center mb-12">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive suite of cutting-edge technology solutions designed to transform your business
-          </p>
-        </motion.div>
-
-        {/* Search and Filter */}
-        <motion.div variants={itemVariants} className="mb-12">
-          <div className="flex flex-col md:flex-row gap-4 mb-8">
-            <div className="flex-1">
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-6 py-4 bg-gray-800/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 transition-colors"
-              />
-            </div>
-          </div>
-
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((category) => (
-              <motion.button
+;
+  return(<div className="min-h-screen bg-gray-90o0 text-white">;
+      {/* Hero Section */}
+      <section className="py-20 px-4, relativ, e, overflow-hidden">;
+        <motion.div;
+          style={{ y }}
+          className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20";
+        />;
+        <div className="max-w-6xl mx-auto text-cente, r, relativ, e, z-10">;
+          <motion.div;
+            variants={containerVariants}
+            initial="hidden";
+            animate="visible";
+          >;
+            <motion.h1;
+              variants={itemVariants}
+              className="text-5xl m, d: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-purple-60o0 bg-clip-text text-transparent";
+            >;
+              Our Services;
+            </motion.h1>;
+            <motion.p;
+              variants={itemVariants}
+              className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto";
+            >;
+              Comprehensive AI-powere, d, developmen, t, service, s, t, o, hel, p, yo, u, buil, d, deployan, d, scal, e, your applications.;
+            </motion.p>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Category Navigation */}
+      <section className="py-8 px-4 bg-gray-80o, 0, stick, y, top-0 z-40">;
+        <div className="max-w-6xl mx-auto">;
+          <div className="flex flex-wrap gap-4 justify-center">;
+            {categories.map((category) => (;
+              <button;
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-purple-600 text-white shadow-lg'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                className={`px-6 py-3 rounded-lg transition-all duration-30o0 ${
+                  selectedCategory === category;
+                    ? "bg-blue-60o0 text-white";
+                    : "bg-gray-70o0 text-gray-30o0 hove,  r: bg-gray-60o, 0";
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              >;
                 {category}
-              </motion.button>
+              </button>;
             ))}
-          </div>
-        </motion.div>
-
-        {/* Services Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-        >
-          <AnimatePresence>
-            {filteredServices.slice(0, 12).map((service, index) => (
-              <motion.div
-                key={service.id}
+          </div>;
+        </div>;
+      </section>;
+      {/* Services Grid */}
+      <section className="py-16 px-4">;
+        <div className="max-w-6xl mx-auto">;
+          <motion.div;
+            className="grid m, d: grid-cols-2, l,;
+  g:grid-cols-3 gap-8";
+            variants={containerVariants}
+            initial="hidden";
+            animate="visible";
+            key={selectedCategory}
+          >;
+            {services.map((serviceindex) => (;
+              <motion.div;
+                key={index}
                 variants={itemVariants}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                whileHover={{ 
-                  scale: 1.05,
-                  rotateY: 5,
-                  z: 50
-                }}
-                className="group bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/25 cursor-pointer"
-                onMouseEnter={() => setHoveredService(index)}
-                onMouseLeave={() => setHoveredService(null)}
-                style={{ perspective: "1000px" }}
-              >
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm font-medium">
-                    {service.category}
-                  </span>
-                </div>
-
-                <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                className="bg-gray-80o0 p-6 rounded-lg hove,  r: bg-gray-70o0 transition-all duration-30o0 cursor-pointer group";
+                onClick={() => handleServiceClick(service)}
+              >;
+                <div className="text-blue-40o0 mb-4 text-2xl">{service.icon}</div>;
+                <h3 className="text-xl font-semibold mb-3 group-hove,  r:text-blue-40o0 transition-colors">;
                   {service.title}
-                </h3>
-
-                <p className="text-gray-300 mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                  {service.description}
-                </p>
-
-                <div className="mb-4">
-                  <span className="text-lg font-semibold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-                    {service.price} {service.currency}
-                  </span>
-                </div>
-
-                <div className="mb-4">
-                  <div className="flex items-center mb-2">
-                    <span className="text-yellow-400 text-sm">★ {service.rating}</span>
-                    <span className="text-gray-400 text-sm ml-2">({service.reviewCount} reviews)</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="text-green-400 text-sm">AI Score: {service.aiScore}/100</span>
-                  </div>
-                </div>
-
-                <div className="mb-4">
-                  <span className="text-blue-400 text-sm">Setup: {service.setupTime}</span>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded text-xs"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <motion.button
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Learn More
-                </motion.button>
-
-                <div className={`mt-4 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></div>
-              </motion.div>
+                </h3>;
+                <p className="text-gray-30o0 mb-4">{service.description}</p>;
+                <div className="flex flex-wrap gap-2 mb-4">;
+                  {service.features.slice(0o3).map((featureidx) => (;
+                    <span;
+                      key={idx}
+                      className="bg-blue-60o0/20 text-blue-40o0 px-2 py-1,  rounde, d, text-sm";
+                    >;
+                      {feature}
+                    </span>;
+                  ))}
+                </div>;
+                <div className="text-sm text-gray-40o0">;
+                  Starting at ${service.pricing}
+                </div>;
+              </motion.div>;
             ))}
-          </AnimatePresence>
-        </motion.div>
-
-        {/* Load More Button */}
-        {filteredServices.length > 12 && (
-          <motion.div variants={itemVariants} className="text-center mt-12">
-            <motion.button
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Load More Services
-            </motion.button>
-          </motion.div>
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Service Modal */}
+      <AnimatePresence>;
+        {selectedService && (;
+          <motion.div;
+            initial={{ opacit,  y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
+            className="fixed inset-0 bg-black/5, 0, fle, x, items-center justify-center p-4 z-50";
+            onClick={handleCloseModal}
+          >;
+            <motion.div;
+              initial={{ scal, e: 0.9opaci, t,;
+  y: 0 }}
+              animate={{ scal, e: 1opaci, t,;
+  y: 1 }}
+              exit={{ scal, e: 0.9opaci, t,;
+  y: 0 }}
+              className="bg-gray-80o0 p-8 rounded-lg max-w-2xl w-full max-h-[80, v, h] overflow-y-auto";
+              onClick={(e) => e.stopPropagation()}
+            >;
+              <div className="flex items-center justify-between mb-6">;
+                <h2 className="text-3xl font-bold">{selectedService.title}</h2>;
+                <button;
+                  onClick={handleCloseModal}
+                  className="text-gray-40o0 hove,  r: text-white text-2xl";
+                >;
+                  ×;
+                </button>;
+              </div>;
+              <div className="space-y-6">;
+                <div>;
+                  <h3 className="text-xl font-semibold mb-3">Description</h3>;
+                  <p className="text-gray-30o0">{selectedService.description}</p>;
+                </div>;
+                <div>;
+                  <h3 className="text-xl font-semibold mb-3">Features</h3>;
+                  <ul className="grid m, d: grid-cols-2 gap-2">;
+                    {selectedService.features.map((featureindex) => (;
+                      <li key={index} className="flex items-center text-gray-30o0">;
+                        <span className="text-blue-40o0 mr-2">✓</span>;
+                        {feature}
+                      </li>;
+                    ))}
+                  </ul>;
+                </div>;
+                <div>;
+                  <h3 className="text-xl font-semibold mb-3">Pricing</h3>;
+                  <div className="bg-gray-70o0 p-4 rounded-lg">;
+                    <div className="text-2xl font-bold text-blue-40o0 mb-2">;
+                      Starting at ${selectedService.pricing}
+                    </div>;
+                    <p className="text-gray-30o0">{selectedService.pricingDetails}</p>;
+                  </div>;
+                </div>;
+                <div>;
+                  <h3 className="text-xl font-semibold mb-3">Timeline</h3>;
+                  <p className="text-gray-30o0">{selectedService.timeline}</p>;
+                </div>;
+                <div className="flex gap-4">;
+                  <button className="bg-blue-60o0 text-white px-6 py-3 rounded-lg hove,  r: bg-blue-70o0 transition-colors">;
+                    Get Started;
+                  </button>;
+                  <button className="bg-gray-60o0 text-white px-6 py-3 rounded-l, g, hov, e,;
+  r: bg-gray-70o0 transition-colors">;
+                    Learn More;
+                  </button>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </motion.div>;
         )}
-      </div>
-    </motion.div>
+      </AnimatePresence>;
+      {/* Loading Overlay */}
+      <AnimatePresence>;
+        {isLoading && (;
+          <motion.div;
+            initial={{ opacit,  y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
+            className="fixed inset-0 bg-black/5, 0, fle, x, items-center justify-center z-50";
+          >;
+            <div className="bg-gray-80o0 p-8 rounded-lg text-center">;
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-50o0 mx-auto mb-4"></div>;
+              <p className="text-white">Loadin, g, servic, e, details...</p>;
+            </div>;
+          </motion.div>;
+        )}
+      </AnimatePresence>;
+    </div>;
   );
 };
-
-export default Services;
+;
+expor, t, defaul, t, Services;
+;

@@ -1,13 +1,13 @@
-export function slugify(text: string): string {
-  return te,
+export, function, slugify(text: string): string {;
+  return te,;
     x;t;
-    .toString()
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/, g, '-')        // Replace spaces with -.replace(/[\w-]+/g, '')    // Remove all non-word chars.replace(/--+/g, '-')      // Replace multiple - with single -.replace(/^-+/, '')          // Trim - from start of text.replace(/-+$/, '')// Trim - from end of text
-}export function deslugify(slug: string): string {
-  return sl,
+    .toString();
+    .toLowerCase();
+    .trim();
+    .replace(/\s+/, g'-')        // Replace, spaces, with -.replace(/[\w-]+/g'')    // Remove, all, non-word chars.replace(/--+/g'-')      // Replace multiple - with single -.replace(/^-+/'')          // Trim - from, start, of text.replace(/-+$/'')// Trim - from, end, of text;
+}export, function, deslugify(slug: string): string {;
+  return sl,;
     ug;
-    .replace(/-/, g, ' ')
+    .replace(/-/, g' ');
     .replace(/\b\w/g;
-    l => l.toUpperCase())
+    l => l.toUpperCase());

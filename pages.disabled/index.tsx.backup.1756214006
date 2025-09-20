@@ -1,0 +1,111 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Home: NextPage = () => {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+			<Head>
+				<title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
+				<meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+				<meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
+				<meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
+				<link rel="canonical" href="https://ziontechgroup.com" />
+				<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform","url":"https://ziontechgroup.com/","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script>
+			</Head>
+			
+			<main className="container mx-auto px-6 py-12">
+				{/* Hero Section */}
+				<section className="text-center mb-16">
+					<h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+						Zion Tech Group
+					</h1>
+					<p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+						Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
+					</p>
+					
+					{/* Navigation Links */}
+					<div className="flex flex-wrap justify-center gap-4">
+						<a href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+							About Us
+						</a>
+						<a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
+							Our Services
+						</a>
+						<a href="/revolutionary-2026-services-showcase" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 border border-purple-400/50 rounded-lg transition-all duration-200">
+							🚀 2026 Services
+						</a>
+						<a href="/revolutionary-2025-pricing" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+							Pricing
+						</a>
+						<a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+							Contact
+						</a>
+					</div>
+				</section>
+=======
+        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
+        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
+        <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+      
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform","url":"https://ziontechgroup.com/","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script>
+      </Head>
+      
+      <main className="container mx-auto px-6 py-12">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            Zion Tech Group
+          </h1>
+          <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+            Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
+          </p>
+          
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+              About Us
+            </a>
+            <a href="/comprehensive-services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
+              Our Services
+            </a>
+            <a href="/innovative-services-showcase-2026" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 border border-purple-400/50 rounded-lg transition-all duration-200">
+              🚀 2026 Services
+            </a>
+            <a href="/comprehensive-pricing-2026" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+              Pricing
+            </a>
+            <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+              Contact
+            </a>
+          </div>
+        </section>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-167a
+
+				{/* Services Overview (truncated for brevity) */}
+				<section className="mb-16">
+					<h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+						Innovative Technology Solutions 2026
+					</h2>
+				</section>
+			</main>
+		</div>
+	);
+};
+
+export default Home;
+<<<<<<< HEAD
+=======
+import Home from '../src/pages/Home';
+
+export default function Index() {
+  return <Home />;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-167a

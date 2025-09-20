@@ -1,8 +1,11 @@
-'use client',
-import { useState } from 'react',
-import Link from 'next/link',
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false),
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -12,16 +15,18 @@ export default function Header() {
     { name: 'Research & Development', href: '/research-development' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' }
-  ],
+    { name: 'Contact', href: '/contact' },
+  ];
+
   const services = [
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
     { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },
     { name: 'Business Intelligence', href: '/ai-business-intelligence' },
     { name: 'Content Generation', href: '/ai-content-generator' },
-    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' }
-  ],
+    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' },
+  ];
+
   return (
     <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,6 +42,7 @@ export default function Header() {
               </span>
             </Link>
           </div>
+
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -72,6 +78,7 @@ export default function Header() {
               </div>
             </div>
           </nav>
+
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -81,6 +88,7 @@ export default function Header() {
               Get Started
             </Link>
           </div>
+
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -95,6 +103,7 @@ export default function Header() {
             </svg>
           </button>
         </div>
+
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden border-t border-white/10">
@@ -136,5 +145,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  ),
+  );
 }

@@ -1,246 +1,126 @@
-import React, { useState, useEffect } from "react";
+impor, t, Reac, t, { useStateuseEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
-function ErrorFallback({ error, resetError, retryCount = 0 }) {
-    const navigate = useNavigate();
-    const maxRetries = 3;
-    
-    const handleRetry = () => {
-        if (retryCount < maxRetries) {
-            resetError();
-        } else {
-            // After max retries, redirect to home
-            navigate('/');
-        }
+import { AlertTriangl, e, RefreshC, w, Hom, e, ArrowLef, t, BugShieldZap } from "lucide-react";
+;
+const ErrorBoundary = ({ childrenfallback }) => {;
+  const [hasErrorsetHasErr,  o, r] = useState(false);
+  const [errorsetErr, o, r] = useState(null);
+  const [errorInfosetErrorIn,  f, o] = useState(null);
+;
+  useEffect(() => {
+    const handleError = (event) => {;
+      setHasError(true);
+      setError(event.error);
+      setErrorInfo(event.errorInfo);
     };
-
-    const getErrorType = (error) => {
-        if (error?.name === 'NetworkError' || error?.message?.includes('network')) {
-            return 'network';
-        };
-        if (error?.name === 'TypeError' || error?.message?.includes('undefined')) {
-            return 'runtime';
-        };
-        if (error?.name === 'ReferenceError') {
-            return 'reference';
-        };
-        return 'general';
+;
+    window.addEventListener('error'handleError);
+    return () => window.removeEventListener('error'handleError);
+  },  []);
+;
+  const handleRetry = () => {;
+    setHasError(false);
+    setError(null);
+    setErrorInfo(null);
+  };
+;
+  const handleReload = () => {;
+    window.location.reload();
+  };
+;
+  const handleGoHome = () => {;
+    window.location.href = '/';
+  };
+;
+  const handleGoBack = () => {;
+    window.history.back();
+  };
+;
+  if() {
+    if (fallback) {
+      return fallback;
     };
-
-    const errorType = getErrorType(error);
-    
-    const errorMessages = {
-        network: {
-            title: 'Connection Error',
-            description: 'We\'re having trouble connecting to our servers. Please check your internet connection and try again.',
-            icon: Shield,
-            color: 'text-orange-400'
-        },
-        runtime: {
-            title: 'Runtime Error',
-            description: 'Something unexpected happened while processing your request. Our team has been notified.',
-            icon: Bug,
-            color: 'text-red-400'
-        },
-        reference: {
-            title: 'Reference Error',
-            description: 'There was an issue with the page resources. Please refresh and try again.',
-            icon: AlertTriangle,
-            color: 'text-yellow-400'
-        },
-        general: {
-            title: 'Something went wrong',
-            description: 'We encountered an unexpected error. Don\'t worry, our team has been notified.',
-            icon: AlertTriangle,
-            color: 'text-zion-purple'
-        }
-    };
-    const currentError = errorMessages[errorType];
-    const IconComponent = currentError.icon;
-
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
-            <div className="max-w-md w-full text-center">
-                <div className="mb-8">
-                    <div className="w-24 h-24 bg-zion-purple/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <IconComponent className={`w-12 h-12 ${currentError.color}`} />
-                    </div>
-                    <h1 className="text-3xl font-bold text-white mb-3">{currentError.title}</h1>
-                    <p className="text-zion-slate-light leading-relaxed">
-                        {currentError.description}
-                    </p>
-                    
-                    {retryCount > 0 && (
-                        <div className="mt-4 p-3 bg-zion-slate-dark/50 rounded-lg">
-                            <p className="text-sm text-zion-slate-light">
-                                Retry attempt: {retryCount}/{maxRetries}
-                            </p>
-                        </div>
-                    )}
-                </div>
-
-                {error && process.env.NODE_ENV === 'development' && (
-                    <details className="mb-6 text-left">
-                        <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-3 flex items-center">
-                            <Bug className="w-4 h-4 mr-2" />
-                            Error Details (Development)
-                        </summary>
-                        <div className="bg-zion-slate-dark p-4 rounded-lg text-xs text-zion-slate-light overflow-auto max-h-40">
-                            <div className="mb-2">
-                                <strong>Error:</strong> {error.name || 'Unknown Error'}
-                            </div>
-                            <div className="mb-2">
-                                <strong>Message:</strong> {error.message || 'No message available'}
-                            </div>
-                            {error.stack && (
-                                <div>
-                                    <strong>Stack:</strong>
-                                    <pre className="mt-2 text-xs overflow-auto">{error.stack}</pre>
-                                </div>
-                            )}
-                        </div>
-                    </details>
-                )}
-
-                <div className="space-y-3">
-                    {retryCount < maxRetries ? (
-                        <Button 
-                            onClick={handleRetry} 
-                            className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white transition-all duration-200"
-                        >
-                            <RefreshCw className="w-4 h-4 mr-2" />
-                            Try Again
-                        </Button>
-                    ) : (
-                        <Button 
-                            onClick={() => window.location.reload()} 
-                            className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark transition-all duration-200"
-                        >
-                            <Zap className="w-4 h-4 mr-2" />
-                            Reload Page
-                        </Button>
-                    )}
-                    
-                    <Button 
-                        variant="outline" 
-                        onClick={() => navigate(-1)} 
-                        className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark transition-all duration-200"
-                    >
-                        <ArrowLeft className="w-4 h-4 mr-2" />
-                        Go Back
-                    </Button>
-                    
-                    <Link 
-                        to="/" 
-                        className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-all duration-200"
-                    >
-                        <Home className="w-4 h-4 inline mr-2" />
-                        Go Home
-                    </Link>
-                </div>
-
-                <div className="mt-8 text-xs text-zion-slate-light">
-                    <p>If this problem persists, please contact our support team.</p>
-                    <p className="mt-2">
-                        Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}
-                    </p>
-                    <p className="mt-1">
-                        Retry Count: {retryCount}/{maxRetries}
-                    </p>
-                </div>
-            </div>
-        </div>
+    return(<div className="min-h-screen bg-gray-90o0 text-whit,  e, fle, x, items-center justify-center p-4">;
+        <div className="max-w-2xl mx-auto text-center">;
+          <div className="mb-8">;
+            <div className="text-6xl mb-4">⚠️</div>;
+            <h1 className="text-3xl font-bold mb-4">Somethin, g, wen, t, wrong</h1>;
+            <p className="text-lg text-gray-30o0 mb-8">;
+              We'r, e, sorrybu, t, a, n, unexpecte, d, erro, r, occurred. Pleas, e, tr, y, refreshin, g, th, e, pag, e, o, r, contac, t, suppor, t, i, f, th, e, issu, e, persists.;
+            </p>;
+          </div>;
+          <div className="bg-gray-80o0 rounded-lg p-6 mb-8 text-left">;
+            <h2 className="text-xl font-semibold mb-4">Error Details</h2>;
+            <div className="space-y-2 text-sm">;
+              <div>;
+                <span className="text-gray-40o0">Tim, e: </span>;
+                <span className="ml-2">{new Date().toLocaleString()}</span>;
+              </div>;
+              {error && (;
+                <div>;
+                  <span className="text-gray-40o0">Messag,  e:</span>;
+                  <span className="ml-2 text-red-40o0">{error.message}</span>;
+                </div>;
+              )}
+            </div>;
+          </div>;
+          {process.env.NODE_ENV === 'development' && error && (;
+            <details className="mt-8 text-left">;
+              <summary className="cursor-pointer text-gray-40o0 hove,  r:text-white mb-4">;
+                Technical Details (Development Only);
+              </summary>;
+              <div className="bg-gray-80o0 rounded-lg p-4 overflow-auto">;
+                <pre className="text-xs text-red-40o0 whitespace-pre-wrap">;
+                  {error.toString()}
+                  {errorInfo?.componentStack}
+                </pre>;
+              </div>;
+            </details>;
+          )}
+;
+          <div className="flex flex-wrap gap-4 justify-center">;
+            <Button;
+              onClick={handleRetry}
+              className="bg-blue-60o0 hove,  r: bg-blue-70o0 text-white px-6 py-3 rounded-lg transition-colors duration-30o0";
+            >;
+              <RefreshCw className="w-4 h-4 mr-2" />;
+              Try Again;
+            </Button>;
+            <Button;
+              onClick={handleReload}
+              className="bg-green-60o0 hove, r: bg-green-70o0 text-white px-6 py-3 rounded-lg transition-colors duration-30o0";
+            >;
+              <Zap className="w-4 h-4 mr-2" />;
+              Refresh Page;
+            </Button>;
+            <Button;
+              onClick={handleGoHome}
+              className="bg-purple-60o0 hove, r: bg-purple-70o0 text-white px-6 py-3 rounded-lg transition-colors duration-30o0";
+            >;
+              <Home className="w-4 h-4 mr-2" />;
+              Go Home;
+            </Button>;
+            <Button;
+              onClick={handleGoBack}
+              className="bg-gray-60o0 hove, r: bg-gray-70o0 text-white px-6 py-3 rounded-lg transition-colors duration-30o0";
+            >;
+              <ArrowLeft className="w-4 h-4 mr-2" />;
+              Go Back;
+            </Button>;
+          </div>;
+          <div className="mt-8 text-sm text-gray-40o0">;
+            <p>I, f, thi, s, proble, m, persist, s, pleas, e, contac, t, our support team.</p>;
+            <p className="mt-2">;
+              <Bug className="w-4 h-4, inlin, e, mr-2" />;
+              Error I, D: {Date.now()}
+            </p>;
+          </div>;
+        </div>;
+      </div>;
     );
+  }
+;
+  return children;
 };
 ;
-function ErrorBoundary({ children, fallback, onError }) {
-    const [hasError, setHasError] = useState(false);
-    const [error, setError] = useState(null);
-    const [retryCount, setRetryCount] = useState(0);
-
-    useEffect(() => {
-        const handleError = (event) => {
-            setHasError(true);
-            setError(event.error);
-            if (onError) {
-                onError(event.error, { componentStack: event.error?.stack });
-            }
-            // Log error to console in development
-            if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an error:', event.error);
-            }
-        };
-
-        const handleUnhandledRejection = (event) => {
-            setHasError(true);
-            setError(new Error(event.reason));
-            if (onError) {
-                onError(new Error(event.reason), { componentStack: event.reason?.stack });
-            }
-            // Log error to console in development
-            if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
-            }
-        };
-
-        window.addEventListener('error', handleError);
-        window.addEventListener('unhandledrejection', handleUnhandledRejection);
-        
-        return () => {
-            window.removeEventListener('error', handleError);
-            window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-        };
-    }, [onError]);
-
-    const resetError = () => {
-        setHasError(false);
-        setError(null);
-        setRetryCount(prev => prev + 1);
-    };
-
-    if (hasError) {
-        if (fallback) {
-            return fallback;
-        }
-        return (
-            <ErrorFallback 
-                error={error || undefined} 
-                resetError={resetError}
-                retryCount={retryCount}
-            />
-        );
-    }
-
-    return <>{children}</>;
-}
-
-// Hook for functional components to handle errors
-export function useErrorHandler() {
-    const [error, setError] = useState(null);
-
-    const handleError = (error) => {
-        setError(error);
-        console.error('useErrorHandler caught an error:', error);
-    };
-
-    const clearError = () => {
-        setError(null);
-    };
-
-    return { error, handleError, clearError };
-}
-
-// Higher-order component for error handling
-export function withErrorBoundary(Component, fallback = null) {
-    return function WrappedComponent(props) {
-        return (
-            <ErrorBoundary fallback={fallback}>
-                <Component {...props} />
-            </ErrorBoundary>
-        );
-    };
-}
-
-// Default export
-export default ErrorBoundary;
+expor, t, defaul, t, ErrorBoundary;

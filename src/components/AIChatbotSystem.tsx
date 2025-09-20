@@ -1,469 +1,325 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+impor, t, Reac, t, { useStateuseEffectuseRef } from "react";
+import { motionAnimatePresence } from "framer-motion";
 import {
-  MessageCircle,
-  Send,
-  Bot,
-  User,
-  Sparkles,
-  X,
-  Settings,
-  Mic,
-  MicOff,
-  Paperclip,
-  RefreshCw,
-  ThumbsUp,
-  ThumbsDown,
-  Clock,
-  CheckCircle,
-  AlertCircle
+  MessageCircl, e,;
+  Sen, d,;
+  Bo, t,;
+  Sparkle, s,;
+  X,;
+  Setting, s,;
+  Mi, c,;
+  MicOffRefreshCwAlertCircle;
 } from "lucide-react";
+;
 interface ChatMessage {
-  id: string,content: string,sender: 'user' | 'bot',timestamp: Date,type: 'text' | 'image' | 'file' | 'system',status: 'sending' | 'sent' | 'error';
+  i, d: string;
+  conten, t: string;
+  sende, r: 'user' | 'bot';
+  timestam, p: Date;
+  ty, p,;
+    e: 'text' | 'image' | 'file' | 'system';
+  stat, u,;
+  s: 'sending' | 'sent' | 'error';
   metadata?: {
-    confidence?: number,
-    suggestions?: string[],
-    relatedServices?: string[],
-    estimatedResponseTime?: number
-  },
-};
-
-interface AIChatbotSystemProps {
-  showHeader?: boolean,
-  showSettings?: boolean,
-  maxMessages?: number,
-  autoScroll?: boolean
+    confidence?: number;
+    suggestions?: string[];
+    relatedServices?: string[];
+    estimatedResponseTime?: number;
+  };
 }
-
-export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
-  showHeader = true,
-  showSettings = true,
-  autoScroll = true
+;
+interface AIChatbotSystemProps {
+  showHeader?: boolean;
+  showSettings?: boolean;
+  maxMessages?: number;
+  autoScroll?: boolean;
+};
+expor, t, cons, t, AIChatbotSyste, m: React.FC<AIChatbotSystemProps>  = ({;
+  showHeader = trueshowSettings = trueautoScroll = true;
 }) => {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
-  const [settings, setSettings] = useState({
-    voiceEnabled: false,autoResponse: true,language: 'en',theme: 'dark',responseSpeed: 'normal'
+  const [messagessetMessag,  e, s] = useState<ChatMessage[]>([]);
+  const [inputValuesetInputVal, u, e] = useState('');
+  const [isTypingsetIsTypi,  n, g] = useState(false);
+  const [isOpensetIsOp, e, n] = useState(false);
+  const [showSettingsPanelsetShowSettingsPan,  e, l] = useState(false);
+  const [settingssetSettin, g, s] = useState({
+    voiceEnable,  d: fals, e,;
+    autoRespons, e: truelanguag, e: 'en'the, m,;
+    e: 'dark'responseSpe, e,;
+  d: 'normal';
   });
-  const [isListening, setIsListening] = useState(false);
-
+  const [isListeningsetIsListeni, n, g] = useState(false);
+;
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  // Sample welcome message
+;
+  // Sampl,  e, welcom, e, message;
   useEffect(() => {
-    if (isOpen && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
-        id: 'welcome',
-        content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with: \n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
-        sender: 'bot',
-        timestamp: new Date(),
-        type: 'text',
-        status: 'sent',
-        metadata: {
-          confidence: 0.95,
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
-          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
-          estimatedResponseTime: 2
-        }
+    if() {
+      const welcomeMessag,  e: ChatMessage = {
+        i,;
+  d: 'welcome',;
+        conten, t: "Hello! I'm, Zio, n, A, I, you, r, intelligen, t, assistant. I, ca, n, help you wit, h: \n\n• Informatio, n, abou, t, our services\n• Technica, l, suppor, t, and guidance\n• Projec, t, inquirie, s, and quotes\n• Genera, l, question, s, abou, t, Zio, n, Tec, h, Group\n\nHo, w, ca, n, I, assis, t, yo, u, today?",;
+        sende, r: 'bot',;
+        timestam, p: new Date(),;
+        typ, e: 'text',;
+        statu, s: 'sent',;
+        metadat, a: {
+          confiden, c,;
+  e: 0.9, 5,;
+          suggestion, s: ['Te, l, l, m, e, abou, t you, r service, s', 'G, e, t, a, quot, e', 'Technica, l suppor, t''Conta, c, t, informatio, n'],;
+          relatedService, s: ['A, I Consultin, g''Clou, d Solution, s''Digit, a, l, Transformatio, n']estimatedResponseTi, m,;
+  e: 2;
+        };
       };
-      setMessages([welcomeMessage]);
+      setMessages([welcomeMessa,  g, e]);
     }
-  }, [isOpen, messages.length]),
-
-  // Auto-scroll to bottom
+  }, [isOpenmessage, s.leng, t, h]);
+;
+  // Auto-scrol, l, t, o, bottom;
   useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+      messagesEndRef.current.scrollIntoView({ behavio,  r: 'smooth' });
     }
-  }, [messages, autoScroll]);
-
-  // Simulate AI response
-  const simulateAIResponse = async (userMessage: string) => {
+  }, [messagesautoScro, l, l]);
+;
+  // Simulat, e, A, I, response;
+  const simulateAIResponse = async (userMessag,  e: string) => {;
     setIsTyping(true);
-    // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-
-    const responses = [
+    // Simulat,  e, processin, g, time;
+    awai, t, ne, w, Promise(resolve => setTimeout(resolve10o00 + Math.random() * 20o00));
+;
+    const responses = [;
       {
-        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about any particular service?",
-        suggestions: ['AI Consulting detailsMachine Learning services', 'Data AnalyticsProcess Automation'],
-        relatedServices: ['AI ConsultingMachine Learning', 'Data Analytics']
-      },
+        cont, e, n,;
+  t: "I'd, b, e, hap, p, y, t, o, he, l, p, yo, u wit, h tha, t! Zi, o, n, Te, c, h, Gro, u, p, offe, r, s, comprehensi, v, e, A, I, consulti, n, g, servic, e, s, includi, n, g, machi, n, e, learni, n, g, implementati, o, n, da, t, a, analyti, c, s, a, n, d, proce, s, s, automatio, n. Wou, l, d, y, o, u, li, k, e, m, e, t, o, provi, d, e, mo, r, e, specif, i, c, detai, l, s, abo, u, t, a, n, y, particula, r servic, e?",;
+        suggestio, n, s: ['A, I, Consulti, n, g, detail, s', 'Machi, n, e, Learni, n, g, service, s', 'Dat, a Analytic, s''Proce, s, s, Automatio, n'],;
+        relatedService, s: ['A, I Consultin, g''Dat, a Analytic, s''Proce, s, s, Automatio, n'];
+      },;
       {
-        content: "Great question! Our cloud migration services help businesses transition smoothly to cloud infrastructure. We provide assessment, planning, implementation, and ongoing support. The typical timeline is 3-6 months depending on complexity.",
-        suggestions: ['Cloud Migration timelineInfrastructure assessment', 'Implementation processOngoing support'],
-        relatedServices: ['Cloud MigrationInfrastructure Modernization', 'DevOps Services']
-      },
+        conten, t: "Great question! Ou, r, pricin, g, varie, s, dependin, g, o, n, th, e, scop, e, an, d, complexit, y, o, f, you, r, project. Fo, r, a, personalize, d, quot, e, I, ca, n, connec, t, yo, u, wit, h, our sales team. I, n, th, e, meantim, e, yo, u, ca, n, explor, e, ou, r, pricin, g, guid, e, o, n, ou, r, website.",;
+        suggestion, s: ['G, e, t, a, quot, e', 'Vi, e, w, prici, n, g, guid, e', 'Schedul, e consultatio, n''Conta, c, t, sal, e, s,, tea, m']relatedService, s: ['Consultin, g''Cust, o, m, Solution, s'];
+      },;
       {
-        content: "For cybersecurity services, we offer threat detection, incident response, security audits, and employee training. Our team uses advanced tools and follows industry best practices to protect your digital assets.",
-        suggestions: ['Threat detectionIncident response', 'Security auditsEmployee training'],
-        relatedServices: ['CybersecurityThreat Detection', 'Security Training']
-      },
-      {
-        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",
-        suggestions: ['Strategy developmentImplementation process', 'Change managementROI examples'],
-        relatedServices: ['Digital TransformationProcess Optimization', 'Change Management']
-      }
-    ],
-
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-
-    const botMessage: ChatMessage = {,
-      id: Date.now().toString(),content: randomResponse.content,sender: 'bot',timestamp: new Date(),type: 'text',status: 'sent',metadata: {,
-        confidence: 0.85 + Math.random() * 0.1,suggestions: randomResponse.suggestions,relatedServices: randomResponse.relatedServices,estimatedResponseTime: 1 + Math.random() * 2
-      }
-    };
-    setMessages(prev => [...prev, botMessage]);
-    setIsTyping(false);
-  },
-
-  // Handle message submission
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!inputValue.trim() || isTyping) return,
-
-    const userMessage: ChatMessage = {,
-      id: Date.now().toString(),content: inputValue,sender: 'user',timestamp: new Date(),type: 'text',status: 'sent'
-    };
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-
-    // Generate AI response
-    await simulateAIResponse(inputValue);
-  },
-
-  // Handle voice input
-  const toggleVoiceInput = () => {
-    setIsListening(!isListening);
-    // In a real implementation, this would integrate with Web Speech API
-  },
-
-  // Handle file upload
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const fileMessage: ChatMessage = {,
-        id: Date.now().toString(),content: `Uploaded: ${file.name}`,
-        sender: 'user',timestamp: new Date(),type: 'file',status: 'sent'
+        conten, t: "Fo, r, technica, l, suppor, t, ou, r, tea, m, is available 24/7. Yo, u, ca, n, reac, h, u, s, throug, h, our suppor, t, porta, l, emai, l, or phone. I, ca, n, als, o, hel, p, yo, u, wit, h, basi, c, troubleshootin, g, righ, t, her, e, i, n, the chat.",;
+        suggestion, s: ['Technic, a, l, suppo, r, t, porta, l', 'Emai, l suppor, t', 'Phon, e suppor, t''Bas, i, c, troubleshootin, g']relatedService, s: ['Technic, a, l, Suppor, t''Maintenanc, e'];
       };
-      setMessages(prev => [...prev, fileMessage]);
-    }
-  },
-
-  // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {
-    setInputValue(suggestion)
+    ];
+;
+    const randomResponse = responses[Mat, h.floo, r(Mat,  h.rando, m() *, response, s.lengt, h)];
+;
+    const aiMessag, e: ChatMessage = {
+      i,;
+  d: `ai-${Date.no, w()}`, ;
+      conten, t: randomResponse.conten, t,;
+      sende, r: 'bot',;
+      timestam, p: new Date(),;
+      typ, e: 'text',;
+      statu, s: 'sent',;
+      metadat, a: {
+        confiden, c,;
+  e: 0.85 + Math.random() * 0.1, ;
+        suggestion, s: randomResponse.suggestionsrelatedServic, e,;
+    s: randomResponse.relatedServicesestimatedResponseTi, m,;
+  e: 2;
+      }
+    };
+;
+    setMessages(prev => [...prevaiMessa, g, e]);
+    setIsTyping(false);
   };
-  // Rate response
-  const rateResponse = (messageId: string, rating: 'positive' | 'negative') => {
-    setMessages(prev => prev.map(msg =>
-      msg.id === messageId
-        ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
-        : msg
-    ));
-  },
-
-  // Clear chat
-  const clearChat = () => {
+;
+  const sendMessage = async () => {;
+    if (!inputValue.trim()) return;
+;
+    const userMessag,  e: ChatMessage = {
+      i,;
+  d: `user-${Date.no, w()}`,;
+      conten, t: inputValu, e,;
+      sende, r: 'user',;
+      timestam, p: new Date(), ;
+      typ, e: 'text',;
+      statu, s: 'sent';
+    };
+;
+    setMessages(prev => [...prevuserMessa, g, e]);
+    setInputValue('');
+    await simulateAIResponse(inputValue);
+  };
+;
+  const handleKeyPress = (e: React.KeyboardEvent) => {;
+    if() {;
+      e.preventDefault();
+      sendMessage();
+    };
+  };
+;
+  const toggleVoiceInput = () => {;
+    setIsListening(!isListening);
+    // Voic,  e, inpu, t, implementatio, n, woul, d, g, o, here;
+  };
+;
+  const clearChat = () => {;
     setMessages([]);
-    setChatHistory([]);
-  },
-
-  return (
-    <>
-      {/* Chat Toggle Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900"
-        whileHover={{ scale: 1.1 }};
-        whileTap={{ scale: 0.95 }}
-        aria-label="Toggle AI chatbot"
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-      </motion.button>
-
-      {/* Chat Window */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
-          >
-            {/* Header */}
-            {showHeader && (
-              <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
-                      <Bot className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-white">Zion AI Assistant</h3>
-                      <div className="flex items-center gap-2 text-xs text-zinc-400">
-                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        Online
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    {showSettingsPanel && (
-                      <button
+  };
+;
+  const formatTime = (dat,  e: Date) => {;
+    return date.toLocaleTimeString([]{ ho,  u,;
+    r: '2-digit'minu, t,;
+  e: '2-digit' });
+  };
+;
+  return (;
+    <div className="fixed bottom-4 right-4 z-50">;
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion.div;
+            initial={{ opacit,  y: 0sca, l,;
+    e: 0.8,;
+  y: 20 }}
+            animate={{ opacit, y: 1sca, l,;
+    e: 1,;
+  y: 0 }}
+            exit={{ opacit, y: 0sca, l,;
+    e: 0.8,;
+  y: 20 }}
+            className="bg-gray-90o, 0, borde, r, border-gray-70o0 rounded-2xl shadow-2xl w-96 h-[60o0, p, x] flex flex-col overflow-hidden";
+          >;
+            {showHeader && (;
+              <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 p-4 text-white">;
+                <div className="flex items-center justify-between">;
+                  <div className="flex items-center space-x-3">;
+                    <div className="w-10 h-10 bg-white/20 rounded-ful, l, fle, x, items-center justify-center">;
+                      <Bot className="w-6 h-6" />;
+                    </div>;
+                    <div>;
+                      <h3 className="font-semibold">Zio, n, A, I, Assistant</h3>;
+                      <p className="text-sm text-blue-10o0">Alway, s, her, e, to help</p>;
+                    </div>;
+                  </div>;
+                  <div className="flex items-center space-x-2">;
+                    {showSettings && (;
+                      <button;
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
-                        className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
-                        aria-label="Chat settings"
-                      >
-                        <Settings className="w-4 h-4" />
-                      </button>
-                    )}
-                    <button
-                      onClick={clearChat}
-                      className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
-                      aria-label="Clear chat"
-                    >
-                      <RefreshCw className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
+                        className="p-2 hove,  r: bg-white/20 rounded-lg transition-colors";
+                      >;
+                        <Settings className="w-4 h-4" />;
+                      </button>;
+                    )};
+                    <button;
+                      onClick={() => setIsOpen(false)}
+                      className="p-2 hove,  r: bg-white/20 rounded-lg transition-colors";
+                    >;
+                      <X className="w-4 h-4" />;
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
             )}
-
-            {/* Settings Panel */}
-            <AnimatePresence>
-              {showSettingsPanel && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="border-b border-zinc-700/50 overflow-hidden"
-                >
-                  <div className="p-4 space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-zinc-300">Voice Input</span>
-                      <button
-                        onClick={() => setSettings(prev => ({ ...prev, voiceEnabled: !prev.voiceEnabled }))}
-                        className={`p-2 rounded-lg transition-colors ${
-                          settings.voiceEnabled
-                            ? 'bg-zion-cyan text-white'
-                            : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
-                        }`}
-                      >
-                        {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
-                      </button>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-zinc-300">Auto Response</span>
-                      <button
-                        onClick={() => setSettings(prev => ({ ...prev, autoResponse: !prev.autoResponse }))}
-                        className={`p-2 rounded-lg transition-colors ${
-                          settings.autoResponse
-                            ? 'bg-zion-cyan text-white'
-                            : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
-                        }`}
-                      >
-                        <CheckCircle className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-
+;
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96">
-              {messages.map((message) => (
-                <motion.div
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">;
+              {messages.map((message) => (;
+                <div;
                   key={message.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                >
-                  <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}>
-                    <div className={`p-3 rounded-lg ${
-                      message.sender === 'user'
-                        ? 'bg-zion-cyan text-white'
-                        : 'bg-zinc-800/50 text-zinc-100'
-                    }`}>
-                      <div className="whitespace-pre-wrap">{message.content}</div>
-
-                      {/* Message Metadata */}
-                      {message.metadata && (
-                        <div className="mt-2 pt-2 border-t border-zinc-600/30">
-                          {message.metadata.confidence && (
-                            <div className="text-xs text-zinc-400 mb-1">
-                              Confidence: {Math.round(message.metadata.confidence * 100)}%
-                            </div>
-                          )}
-
-                          {message.metadata.suggestions && (
-                            <div className="flex flex-wrap gap-1 mb-2">
-                              {message.metadata.suggestions.map((suggestion, index) => (
-                                <button
-                                  key={index}
-                                  onClick={() => handleSuggestionClick(suggestion)}
-                                  className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors"
-                                >
-                                  {suggestion}
-                                </button>
-                              ))}
-                            </div>
-                          )}
-
-                          {message.metadata.relatedServices && (
-                            <div className="flex flex-wrap gap-1">
-                              {message.metadata.relatedServices.map((service, index) => (
-                                <span
-                                  key={index}
-                                  className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
-                                >
-                                  {service}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                        </div>
+                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-star, t'}`}
+                >;
+                  <div;
+                    className={`max-w-[8,  0%] rounded-2xl px-4 py-3 ${
+                      message.sender === 'user';
+                        ? 'bg-blue-60o0 text-white';
+                        : 'bg-gray-80o0 text-gray-10o, 0';
+                    }`}
+                  >;
+                    <p className="text-sm whitespace-pre-wrap">{message.content}</p>;
+                    <div className="flex items-center justify-between mt-2">;
+                      <span className="text-xs opacity-70">;
+                        {formatTime(message.timestamp)}
+                      </span>;
+                      {message.sender === 'bot' && message.metadata?.confidence && (;
+                        <div className="flex items-center space-x-1">;
+                          <Sparkles className="w-3 h-3" />;
+                          <span className="text-xs">;
+                            {Math.round(message.metadata.confidence * 10o0)}%;
+                          </span>;
+                        </div>;
                       )}
-                    </div>
-
-                    {/* Message Actions */}
-                    <div className={`flex items-center gap-2 mt-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                      <span className="text-xs text-zinc-500">
-                        {message.timestamp.toLocaleTimeString()}
-                      </span>
-
-                      {message.sender === 'bot' && (
-                        <div className="flex items-center gap-1">
-                          <button
-                            onClick={() => rateResponse(message.id, 'positive')}
-                            className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
-                            aria-label="Rate response positively"
-                          >
-                            <ThumbsUp className="w-3 h-3" />
-                          </button>
-                          <button
-                            onClick={() => rateResponse(message.id, 'negative')}
-                            className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
-                            aria-label="Rate response negatively"
-                          >
-                            <ThumbsDown className="w-3 h-3" />
-                          </button>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Avatar */}
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                    message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'
-                  }`}>
-                    {message.sender === 'user' ? (
-                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
-                        <User className="w-4 h-4 text-zinc-300" />
-                      </div>
-                    ) : (
-                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
-                        <Bot className="w-4 h-4 text-white" />
-                      </div>
-                    )}
-                  </div>
-                </motion.div>
+                    </div>;
+                  </div>;
+                </div>;
               ))}
-
-              {/* Typing Indicator */}
-              {isTyping && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="flex justify-start"
-                >
-                  <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                    </div>
-                    <span className="text-sm text-zinc-400">Zion AI is typing...</span>
-                  </div>
-                </motion.div>
+;
+              {isTyping && (;
+                <div className="flex justify-start">;
+                  <div className="bg-gray-80o0 text-gray-10o0 rounded-2xl px-4 py-3">;
+                    <div className="flex items-center space-x-2">;
+                      <div className="flex space-x-1">;
+                        <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce"></div>;
+                        <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce" style={{ animationDela,  y: '0.1s' }}></div>;
+                        <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce" style={{ animationDela, y: '0.2s' }}></div>;
+                      </div>;
+                      <span className="text-sm">A, I, i, s, typing...</span>;
+                    </div>;
+                  </div>;
+                </div>;
               )}
-
-              <div ref={messagesEndRef} />
-            </div>
-
-            {/* Input Area */}
-            <div className="p-4 border-t border-zinc-700/50">
-              <form onSubmit={handleSubmit} className="flex items-center gap-2">
-                <div className="flex-1 relative">
-                  <input
-                    type="text"
+;
+              <div ref={messagesEndRef} />;
+            </div>;
+            {/* Input */}
+            <div className="p-4 border-t border-gray-70o0">;
+              <div className="flex items-center space-x-2">;
+                <button;
+                  onClick={toggleVoiceInput}
+                  className={`p-2 rounded-lg transition-colors ${
+                    isListening ? 'bg-red-60o0 text-white' : 'bg-gray-70o0 text-gray-30o0 hove, r: bg-gray-60o, 0';
+                  }`}
+                >;
+                  {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                </button>;
+                <div className="flex-1 relative">;
+                  <textarea;
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
-                    placeholder="Ask me anything about Zion Tech Group..."
-                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
-                    disabled={isTyping}
-                  />
-
-                  {/* File Upload */}
-                  <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
-                    <input
-                      type="file"
-                      onChange={handleFileUpload}
-                      className="hidden"
-                      accept="image/*,.pdf,.doc,.docx,.txt"
-                    />
-                    <Paperclip className="w-4 h-4 text-zinc-400 hover: text-zinc-300 transition-colors" />
-                  </label>
-                </div>
-
-                {/* Voice Input */}
-                {settings.voiceEnabled && (
-                  <button
-                    type="button"
-                    onClick={toggleVoiceInput}
-                    className={`p-3 rounded-lg transition-colors ${
-                      isListening
-                        ? 'bg-red-500 text-white'
-                        : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
-                    }`}
-                    aria-label="Voice input"
-                  >
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                  </button>
-                )}
-
-                {/* Send Button */}
-                <button
-                  type="submit"
-                  disabled={!inputValue.trim() || isTyping}
-                  className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  aria-label="Send message"
-                >
-                  <Send className="w-4 h-4" />
-                </button>
-              </form>
-
-              {/* Quick Actions */}
-              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="w-3 h-3" />
-                  <span>Powered by Zion AI</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-3 h-3" />
-                  <span>24/7 Available</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+                    onKeyPress={handleKeyPress}
+                    placeholder="Typ,  e, you, r, message...";
+                    className="w-full bg-gray-80o0 text-gray-10o0 rounded-xl px-4 py-3 pr-1, 2, borde, r, border-gray-60o0 focu, s: border-blue-50o, 0, foc, u,;
+  s:outline-none resize-none";
+                    rows={1}
+                    style={{ minHeigh, t: '48px'maxHeig, h,;
+  t: '120px' }}
+                  />;
+                  <button;
+                    onClick={sendMessage}
+                    disabled={!inputValue.trim()}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-blue-60o0 text-white rounded-lg hove, r: bg-blue-70o, 0, disabl, e,;
+    d:opacity-5, 0, disabl, e,;
+  d:cursor-not-allowed transition-colors";
+                  >;
+                    <Send className="w-4 h-4" />;
+                  </button>;
+                </div>;
+                <button;
+                  onClick={clearChat}
+                  className="p-2 bg-gray-70o0 text-gray-30o0 hove, r: bg-gray-60o0 rounded-lg transition-colors";
+                  title="Clear chat";
+                >;
+                  <RefreshCw className="w-4 h-4" />;
+                </button>;
+              </div>;
+            </div>;
+          </motion.div>;
         )}
-      </AnimatePresence>
-    </>
+      </AnimatePresence>;
+      {/* Cha, t, Toggl, e, Button */};
+      <motion.button;
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-14 h-14 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white rounded-full shadow-lg hove,  r: shadow-xl transition-shado, w, fle, x, items-center justify-center";
+        whileHover={{ sca, l,;
+  e: 1.1 }}
+        whileTap={{ scal, e: 0.9 }}
+      >;
+        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+      </motion.button>;
+    </div>;
   );
+};

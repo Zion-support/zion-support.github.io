@@ -1,142 +1,116 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { VitePWA } from 'vite-plugin-pwa';
-import path from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'node:path'
 
+// https://vitejs.dev/config/
 export default defineConfig({
+  // Keep project root
+  publicDir: false,
   plugins: [
-    react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Optimize JSX runtime
-      jsxRuntime: 'automatic'
-    }),
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
-      manifest: {
-        name: 'Zion - Tech & AI Marketplace',
-        short_name: 'Zion',
-        description: 'Discover top AI and tech talent, services, and equipment in one place.',
-        theme_color: '#8B5CF6',
-        background_color: '#0F172A',
-        display: 'standalone',
-        orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
-        icons: [
-          {
-            src: 'pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable'
-          }
-        ]
-      },
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB limit
-        globIgnores: [
-          '**/reports.backup/****/*.backup.*',
-          '**/node_modules/****/dist/**',
-          '**/build/****/.git/**'
-        ],
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
-              },
-              cacheableResponse: {
-                statuses: [0, 200]
-              }
-            }
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'gstatic-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
-              }
-            }
-          },
-          {
-            urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'images-cache',
-              expiration: {
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 days
-              }
-            }
-          }
-        ]
-      }
-    })
+    react(),
   ],
-  esbuild: {
-    // Skip TypeScript checking during build
-    logOverride: { 'this-is-undefined-in-esm': 'silent' }
-  },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': resolve(__dirname, './src')
     }
   },
   build: {
-    target: 'esnext',
-    outDir: 'dist',
-    // Performance optimizations
-    minify: 'esbuild',
-    // Chunk size warnings
-    chunkSizeWarningLimit: 2000,
-    // Code splitting optimizations
     rollupOptions: {
+      input: path.resolve(__dirname, 'public/index.html'),
       output: {
-        manualChunks: (id) => {
-          // Simplified chunking for better build performance
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'react-vendor'
-            }
-            return 'vendor';
-          }
-        }
-      }
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'ui-vendor': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-aspect-ratio',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-context-menu',
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-label',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-progress',
+            '@radix-ui/react-radio-group',
+            '@radix-ui/react-scroll-area',
+            '@radix-ui/react-select',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-slider',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-switch',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-toast',
+            '@radix-ui/react-tooltip',
+          ],
+          'animation-vendor': ['framer-motion'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          'icons-vendor': ['lucide-react'],
+          'charts-vendor': ['recharts'],
+          'date-vendor': ['date-fns', 'react-day-picker'],
+        },
+        chunkFileNames: `js/[name]-[hash].js`,
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const name = assetInfo.name || ''
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]'
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]'
+          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]'
+          return 'assets/[name]-[hash].[ext]'
+        },
+      },
+      external: [],
     },
-    // Source maps for production debugging
-    sourcemap: false
+    outDir: path.resolve(__dirname, 'dist'),
+    emptyOutDir: true,
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+      },
+      mangle: { safari10: true },
+    },
+    chunkSizeWarningLimit: 1000,
   },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      'clsx',
+      'tailwind-merge',
+    ],
+    exclude: ['@radix-ui/react-icons'],
+  },
+  css: { devSourcemap: false },
   server: {
     port: 3000,
     host: true,
-    // Enable HMR
-    hmr: true
+    open: true,
+    cors: true,
+    hmr: { overlay: false },
   },
-  // Optimize dependencies
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'axios', 'js-cookie']
+  preview: {
+    port: 4173,
+    host: true,
+    open: true,
   },
-  // CSS optimizations
-  css: {
-    devSourcemap: true
-  }
-});
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+  },
+  esbuild: {
+    loader: 'tsx',
+    jsx: 'automatic',
+    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+  },
+  worker: { format: 'es' },
+  envPrefix: ['VITE_', 'ZION_'],
+})

@@ -1,19 +1,29 @@
-import React from 'react',
-import EnhancedNavigation2025 from './layout/EnhancedNavigation2025',
-import EnhancedFooter from './layout/EnhancedFooter',
+import React from 'react';
+import Head from 'next/head';
 
 interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
 }
 
-export default function Layout({ children }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ 
+  children, 
+  title = 'Zion Tech Solutions',
+  description = 'Leading technology solutions for modern businesses'
+}) => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <EnhancedNavigation2025 />
-      <main className="flex-grow">
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <main>
         {children}
       </main>
-      <EnhancedFooter />
-    </div>
-  ),
-}
+    </>
+  );
+};
+
+export default Layout;
