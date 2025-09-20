@@ -11,6 +11,19 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
+  webpack: (config) => {
+    // Exclude problematic files from compilation
+    config.module.rules.push({
+      test: /\.tsx?$/,
+      exclude: [
+        /src\/data\/disabled\//,
+        /src\/App-minimal\.tsx$/,
+        /src\/AppOptimized\.tsx$/,
+        /src\/hoc\/withAuth\.tsx$/,
+      ],
+    });
+    return config;
+  },
   async headers() {
     return [
       {

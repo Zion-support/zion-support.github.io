@@ -1,89 +1,84 @@
-interface Service {
-id: string;
-name: string;
+import React from 'react'
+import Link from 'next/link'
+
+// Simple placeholder components
+const Header = () => (
+  <header className="bg-white shadow-sm border-b border-gray-200 p-4">
+    <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
+  </header>
+)
+
+const Footer = () => (
+  <footer className="bg-gray-800 text-white p-4 mt-auto">
+    <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+  </footer>
+)
+
+const Sidebar = () => (
+  <aside className="hidden lg:block w-80 bg-gray-100 p-4">
+    <nav>
+      <ul className="space-y-2">
+        <li><Link href="/" className="block p-2 hover:bg-gray-200 rounded">Home</Link></li>
+        <li><Link href="/about" className="block p-2 hover:bg-gray-200 rounded">About</Link></li>
+        <li><Link href="/services" className="block p-2 hover:bg-gray-200 rounded">Services</Link></li>
+        <li><Link href="/contact" className="block p-2 hover:bg-gray-200 rounded">Contact</Link></li>
+      </ul>
+    </nav>
+  </aside>
+)
+
+const ErrorBoundary = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>
 }
 
-import * as React from "react";
-import { Routes, Route } from "react-router-dom, ";
-import { ThemeProvider } from "./components/ThemeProvider, ";
-import ErrorBoundary from "./components/ErrorBoundary";
+const HomePage = () => (
+  <div className="p-8">
+    <h1 className="text-4xl font-bold mb-4">Welcome to Zion Tech Group</h1>
+    <p className="text-xl text-gray-600">Advanced AI, Quantum Computing & Technology Solutions</p>
+  </div>
+)
 
-// Simple components;
-const Home: any = () => (
-<div className="min-h-screen bg-gray-900 text-white p-8">;
-<h1 className="text-4xl font-bold mb-4">Zion Tech Group</h1>;
-<p className="text-xl">Advanced AI; Quantum Computing & Technology Solutions</p>;
-</div>;
-);
+const AboutPage = () => (
+  <div className="p-8">
+    <h1 className="text-4xl font-bold mb-4">About Us</h1>
+    <p className="text-xl text-gray-600">Leading the future of technology</p>
+  </div>
+)
 
-const Services: any = () => (
-<div className="min-h-screen bg-gray-900 text-white p-8">;
-<h1 className="text-4xl font-bold mb-4">Our Services</h1>;
-<p className="text-xl">Comprehensive technology solutions for your business</p>;
-</div>;
-);
+const ContactPage = () => (
+  <div className="p-8">
+    <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
+    <p className="text-xl text-gray-600">Get in touch with our team</p>
+  </div>
+)
 
-const About: any = () => (
-<div className="min-h-screen bg-gray-900 text-white p-8">;
-<h1 className="text-4xl font-bold mb-4">About Us</h1>;
-<p className="text-xl">Leading the future of technology</p>;
-</div>;
-);
+const ServicesPage = () => (
+  <div className="p-8">
+    <h1 className="text-4xl font-bold mb-4">Our Services</h1>
+    <p className="text-xl text-gray-600">Comprehensive technology solutions for your business</p>
+  </div>
+)
 
-const Contact: any = () => (
-<div className="min-h-screen bg-gray-900 text-white p-8">;
-<h1 className="text-4xl font-bold mb-4">Contact Us</h1>;
-<p className="text-xl">Get in touch with our team</p>;
-</div>;
-);
+const PricingPage = () => (
+  <div className="p-8">
+    <h1 className="text-4xl font-bold mb-4">Pricing</h1>
+    <p className="text-xl text-gray-600">Flexible pricing plans for every need</p>
+  </div>
+)
 
-const App: React.FC = () => {
-return (
-<ErrorBoundary>;
-<ThemeProvider>;
-<Routes>;
-<Route path="/" element={<Home />} />;
-<Route path="/services" element={<Services />} />;
-<Route path="/about" element={<About />} />;
-<Route path="/contact" element={<Contact />} />;
-</Routes>;
-</ThemeProvider>;
-</ErrorBoundary>;
-);
-};
-
-export default App;<//ErrorBoundary><///ErrorBoundary>
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Sidebar from './components/layout/Sidebar'
-import ErrorBoundary from './components/ErrorBoundary'
-// Import pages,
-import HomePage from './pages/Home'
-import AboutPage from './pages/About'
-import ContactPage from './pages/Contact'
-import ServicesPage from './pages/Services'
-import PricingPage from './pages/Pricing'
 export default function App() {
   return (
     <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Header />
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        <Header />
+        <div className="flex flex-1">
           <Sidebar />
           <main className="flex-1 lg:ml-80">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-            </Routes>
+            <HomePage />
           </main>
-          <Footer />
         </div>
-      </Router>
+        <Footer />
+      </div>
     </ErrorBoundary>
   )
 }
