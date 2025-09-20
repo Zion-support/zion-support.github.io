@@ -28,6 +28,11 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   
+  // Force static export
+  generateBuildId: async () => {
+    return 'build-' + Date.now()
+  },
+  
   // Force disable TypeScript checking
   webpack: (config, { dev, isServer }) => {
     // Configure webpack extensions
@@ -61,7 +66,6 @@ const nextConfig = {
 
     return config;
   },
-  
 };
 
 module.exports = nextConfig;
