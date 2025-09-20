@@ -1,14 +1,13 @@
 import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
 
 export interface Benefit {
   title: string;
   description: string;
   icon?: React.ReactNode;
 }
+
 export interface Testimonial {
   name: string;
   role?: string;
@@ -27,20 +26,3 @@ interface ServiceLandingTemplateProps {
   ctaLink: string;
 }
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-  title,
-  subtitle,
-  heroImage,
-  description,
-  benefits,
-  testimonials,
-  ctaText,
-  ctaLink
-}) => {
-  return (
-    <div>
-      <h1>{title}</h1>
-      <p>{subtitle}</p>
-      <p>{description}</p>
-    </div>
-  );
-};
