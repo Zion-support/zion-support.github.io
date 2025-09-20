@@ -26,4 +26,4 @@ export default function About() {
       </div>
     </div>
   );
-}origin/main
+}

@@ -1,4 +1,3 @@
-import React from 'react';origin/main
 
 export default function TranslationManager() {
   return (

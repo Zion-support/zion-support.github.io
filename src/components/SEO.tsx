@@ -7,7 +7,7 @@ interface SEOProps {
   canonical?: string;
 }
 
-export default function SEO({ title, description, keywords, canonical }: SEOProps) {
+export function SEO({ title, description, keywords, canonical }: SEOProps) {
   return (
     <>
       {title && <title>{title}</title>}
@@ -17,3 +17,5 @@ export default function SEO({ title, description, keywords, canonical }: SEOProp
     </>
   );
 }
+
+export default SEO;

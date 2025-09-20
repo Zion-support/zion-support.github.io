@@ -9,4 +9,4 @@ export default function TalentsPage() {
       </div>
     </div>
   );
-}origin/main
+};

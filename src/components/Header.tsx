@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

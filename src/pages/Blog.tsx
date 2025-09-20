@@ -1,125 +1,127 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { BLOG_POSTS } from '@/data/blog-posts';
-import { fetchWithRetry, logInfo, logErrorToProduction } from '@/utils/retry';
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [filteredPosts, setFilteredPosts] = useState(BLOG_POSTS);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const loadPosts = async () => {
-      try {
-        setLoading(true);
-        // Simulate API call with retry
-        const data = await fetchWithRetry(() => Promise.resolve(BLOG_POSTS), 3, 1000);
-        setFilteredPosts(data);
-        logInfo('Blog posts loaded successfully.');
-      } catch (err) {
-        logErrorToProduction('Failed to load blog posts', err);
-        setError('Failed to load blog posts. Please try again later.');
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadPosts();
+    // Simulate loading
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    let tempPosts = BLOG_POSTS;
+    let filtered = BLOG_POSTS;
 
     if (searchTerm) {
-      tempPosts = tempPosts.filter(post =>
+      filtered = filtered.filter(post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
     if (selectedCategories.length > 0) {
-      tempPosts = tempPosts.filter(post =>
-        post.tags.some(tag => selectedCategories.includes(tag))
+      filtered = filtered.filter(post =>
+        selectedCategories.some(category => post.categories.includes(category))
       );
     }
 
-    setFilteredPosts(tempPosts);
+    setFilteredPosts(filtered);
   }, [searchTerm, selectedCategories]);
 
-  const handleCategoryChange = (category: string, checked: boolean) => {
-    setSelectedCategories(prev =>
-      checked ? [...prev, category] : prev.filter(c => c !== category)
-    );
-  };
-
-  if (loading) {
-    return (
-      <>
-        <Header />
-        <main className='min-h-screen bg-gray-900 text-white flex items-center justify-center'>
-          <p>Loading blog posts...</p>
-        </main>
-      </>
-    );
-  }
-
-  if (error) {
-    return (
-      <>
-        <Header />
-        <main className='min-h-screen bg-gray-900 text-white flex items-center justify-center'>
-          <p className='text-red-500'>{error}</p>
-        </main>
-      </>
-    );
-  }
+  const categories = Array.from(new Set(BLOG_POSTS.flatMap(post => post.categories)));
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
       <Header />
-      <main className='min-h-screen bg-gray-900 text-white'>
-        <div className='container mx-auto px-4 py-8'>
-          <h1 className='text-4xl font-bold mb-8'>Blog</h1>
+      <main className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
           
-          {/* Search and Filter */}
-          <div className='mb-8'>
-            <input
-              type="text"
-              placeholder="Search posts..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full max-w-md px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400"
-            />
-          </div>
-
-          {/* Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPosts.map((post) => (
-              <div key={post.id} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
-                <h2 className="text-xl font-semibold mb-3">{post.title}</h2>
-                <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {post.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-1 bg-blue-600 text-xs rounded">
-                      {tag}
-                    </span>
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+              <p className="mt-4 text-gray-600">Loading posts...</p>
+            </div>
+          ) : (
+            <>
+              {/* Search and Filter */}
+              <div className="mb-8 space-y-4">
+                <input
+                  type="text"
+                  placeholder="Search posts..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                
+                <div className="flex flex-wrap gap-2">
+                  {categories.map(category => (
+                    <button
+                      key={category}
+                      onClick={() => {
+                        setSelectedCategories(prev =>
+                          prev.includes(category)
+                            ? prev.filter(c => c !== category)
+                            : [...prev, category]
+                        );
+                      }}
+                      className={`px-3 py-1 rounded-full text-sm ${
+                        selectedCategories.includes(category)
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                      }`}
+                    >
+                      {category}
+                    </button>
                   ))}
                 </div>
-                <div className="text-sm text-gray-400">
-                  {post.publishedAt} • {post.readTime} min read
-                </div>
               </div>
-            ))}
-          </div>
 
-          {filteredPosts.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-400">No posts found matching your criteria.</p>
-            </div>
+              {/* Posts */}
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {filteredPosts.map(post => (
+                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div className="p-6">
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {post.categories.map(category => (
+                          <span key={category} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                            {category}
+                          </span>
+                        ))}
+                      </div>
+                      <h2 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
+                        {post.title}
+                      </h2>
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between text-sm text-gray-500">
+                        <span>{new Date(post.publishedAt).toLocaleDateString()}</span>
+                        <span className="text-blue-600 hover:text-blue-800 cursor-pointer">
+                          Read more →
+                        </span>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+
+              {filteredPosts.length === 0 && (
+                <div className="text-center py-12">
+                  <p className="text-gray-600">No posts found matching your criteria.</p>
+                </div>
+              )}
+            </>
           )}
         </div>
       </main>
-    </>
+    </div>
   );
 }

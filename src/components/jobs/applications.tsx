@@ -13,6 +13,15 @@ interface Application {
   appliedDate: string;
 }
 
+export function ApplicationsTracker() {
+  return (
+    <div className="space-y-4">
+      <h2 className="text-xl font-semibold">Application Tracker</h2>
+      <p>Track your job applications here.</p>
+    </div>
+  );
+}
+
 export default function Applications() {
   const applications: Application[] = [
     {
