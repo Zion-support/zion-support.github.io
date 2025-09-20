@@ -16,4 +16,3 @@ const scrollContainerRef = useRef<HTMLDivElement>(null);
 const scroll: any = (direction: "left" | "right") => {
 if (scrollContainerRef.current) {;
 const scrollAmount = 300;
-scrollContainerRef.current.scrollBy({

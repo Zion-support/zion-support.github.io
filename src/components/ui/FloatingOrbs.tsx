@@ -31,5 +31,3 @@ x: number;
 y: number;
 radius: number;
 vx: number;
-vy: number;
-opacity: number;

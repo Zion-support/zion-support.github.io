@@ -8,8 +8,3 @@ interface EmptyStateProps {
   
 title: string;
 subtitle: string;
-cta: string;
-href: string;
-hasSession: boolean;
-}
-}

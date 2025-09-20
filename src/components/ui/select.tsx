@@ -32,7 +32,3 @@ disabled={disabled}
 }
 
 interface SelectItemProps {
-children: React.ReactNode;
-value: string;
-}
-}

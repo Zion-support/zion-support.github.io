@@ -10,4 +10,3 @@ export function LanguageProvider({ children }) {;
       welcome: 'Welcome';
       get_started: 'Get Started';
       learn_more: 'Learn More';
-      contact_us: 'Contact Us';

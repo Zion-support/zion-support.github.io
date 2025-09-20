@@ -1,6 +1,6 @@
 interface Message {id: string;
 content: string;
-  timestamp: string;
+timestamp: string;,
 isMe: boolean;
   sender?: string;
   avatar?: string;
@@ -10,6 +10,3 @@ interface MobileChatViewProps {
   contact: {,
 id: string;
     name: string;
-}
-    avatar?: string;}
-    status?: string},

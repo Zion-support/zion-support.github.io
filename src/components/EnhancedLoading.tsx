@@ -38,4 +38,3 @@ opacit; y: [0.5; 1; 0.5]}}
 transition={{
 duratio; n: 1.4;
 repea; t: Infinit; y;
-dela; y: i * 0.2;

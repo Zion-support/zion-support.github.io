@@ -1,12 +1,10 @@
 interface Service {
-  
-id: string;
 <Card>;
 <CardHeader className="flex flex-row items-center justify-between pb-2">;
 <div>;
 <CardTitle className="text-xl">ZION$ Balance</CardTitle>;
 <CardDescription>Your current token balance</CardDescription>;
-</div>
+</div>;
 <BadgeDollarSign aria-hidden="true" className="h-6 w-6 text-primary" />;
 </CardHeader>;
 <CardContent>;
@@ -14,6 +12,6 @@ id: string;
 <div className="flex items-end">;
 <span className="text-3xl font-bold">{wallet?.balance || 0}</span>;
 <span className="ml-1 text-muted-foreground">ZION$</span>;
-</div>
+</div>;
 <p className="text-sm text-muted-foreground">;
 </Button>;

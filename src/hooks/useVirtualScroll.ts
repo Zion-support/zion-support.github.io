@@ -16,13 +16,3 @@ startIndex: number;
 endIndex: number;
 visibleItems: T[];
 scrollTop: number;
-containerHeight: number;
-totalHeight: number;
-isScrolling: boolean;
-style: React.CSSProperties;
-onScroll: (event: React.UIEvent<HTMLDivElement>) => void;
-};
-listProps: {,
-style: React.CSSProperties;
-default: scrollTop = index * itemHeight;
-if (enableSmoothScrolling) {containerRef.current.scrollTo({

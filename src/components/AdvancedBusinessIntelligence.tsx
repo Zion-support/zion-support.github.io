@@ -34,6 +34,3 @@ tren; d: "up" | "down" | "stable";
 chang; e: number;
 categor; y: string;
 priorit; y: "high" | "medium" | "low";
-lastUpdate; d: string;
-}
-}

@@ -8,4 +8,3 @@ image?: string;
 url?: string;
 type?: "website" | "article" | "service";
 publishedTime?: string;
-}

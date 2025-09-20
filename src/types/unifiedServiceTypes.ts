@@ -9,4 +9,3 @@ subcategory?: string;
 price?: number | {
 monthly?: number;
 yearly?: number;
-}

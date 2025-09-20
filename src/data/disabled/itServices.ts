@@ -10,7 +10,3 @@ subcategory: string;
 pricing: {
 hourly: number;
 daily: number;
-monthly: number;
-currency: string;
-features: string[];
-}

@@ -7,6 +7,3 @@ interface HeroStats {
 numbe; r: string;
 labe; l: string;
 ico; n: string;
-colo; r: string;
-}
-}

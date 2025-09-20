@@ -7,11 +7,3 @@ import { AppPlatform } from "./MetadataManager, ";
 import { toast } from "sonner, ";
 
 interface ScreenshotManagerProps {
-platform: AppPlatform;
-}
-}
-};
-type Screenshot = {;
-id: string;
-url: string;
-file: File;

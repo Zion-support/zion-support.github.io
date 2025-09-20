@@ -29,6 +29,3 @@ lastExecute; d: Date;
 nextExecutio; n: Date;
 executionHistor; y: ProcessExecution[];
 rule; s: AutomationRule[];
-dependencie; s: string[];
-}
-}

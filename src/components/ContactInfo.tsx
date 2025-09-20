@@ -7,4 +7,3 @@ import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } fr
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import {;

@@ -19,4 +19,3 @@ export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
     "Churn prediction","Automated retention","Customer, health, scoring","Personalized engagement","Success, metrics, tracking""Integration APIs";
   ],benefits: [;
     "Reduce, churn, by 30%","Automated retention","Improved, customer, satisfaction""Data-driven insights";
-  ],link: "/services/ai-customer-success",image: "/images/ai-customer-success.jpg",technology: "AI + ML + Analytics",marketSize: "$2.8B, by, 20o25",targetIndustry: "SaaSE-commerceServices";

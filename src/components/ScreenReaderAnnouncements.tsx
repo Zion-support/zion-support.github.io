@@ -1,15 +1,15 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 interface ScreenReaderAnnouncementsProps {
   
 announcements: string[];
 }
-priority?: 'polite' | 'assertive';}
+priority?: "polite" | "assertive";}
 };
 export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps> = ({
-announcements,
-priority = 'polite';
+announcements;
+priority = "polite";
 }) => {
 return (
 <div;
@@ -21,12 +21,12 @@ position: 'absolute',
 left: '-10000px',
 width: '1px',
 height: '1px',
-overflow: 'hidden'}}
+overflow: 'hidden'}}origin/main
 >;
-{announcements.map((announcement, index) => (
-<div key={index}>{announcement}</div>
+{announcements.map((announcement; index) => (
+<div key={index}>{announcement}</div>;
 ))};
-</div>
+</div>;
 );
 };
 

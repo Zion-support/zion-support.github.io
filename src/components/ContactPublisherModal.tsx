@@ -10,6 +10,3 @@ interface ContactPublisherModalProps {
 isOpe; n: boolean;
 onClos; e: () => void;
 productI;  d: string;
-sellerI; d: string;
-}
-}

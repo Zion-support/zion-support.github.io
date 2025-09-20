@@ -15,6 +15,3 @@ endDat; e: string;
 tea; m: string[];
 budge; t: number;
 spen; t: number;
-task; s: Task[];
-}
-}

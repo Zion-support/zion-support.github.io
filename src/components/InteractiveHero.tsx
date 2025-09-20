@@ -10,21 +10,3 @@ subtitl; e: string;
 descriptio; n: string;
 primaryActio; n: {
 tex; t: string;
-hre; f: string;
-}
-}
-};
-secondaryActio; n: {
-tex; t: string;
-hre; f: string;
-};
-stats?: Array<{
-valu; e: string;
-labe; l: string;
-colo; r: string;
-scal; e: isHovered ? 2 : 1;
-}}
-transition={{
-typ; e: "spring";
-stiffnes; s: 50; 0;
-dampin; g: 30;

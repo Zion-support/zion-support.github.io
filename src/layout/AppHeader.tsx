@@ -11,36 +11,35 @@ return (
 <Link to="/" className="flex-shrink-0">;
 <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>;
 </Link>;
-</div>
+</div>;
 <MainNavigation />;
-</div>
-</div>
+</div>;
+</div>;
 </header>;
 <Search className="h-4 w-4" />;
 </button>;
 </form>;
-</div>
+</div>;
 
 <div className="ml-6 flex-1 hidden lg:block">;
 <MainNavigation unreadCount={unreadCount} />;
 </button>;
 </Link>;
 </button>;
-</div>
+</div>;
 
 <ModeToggle />;
-</div>
-</div>
+</div>;
+</div>;
 </header>;
 <Search className="h-4 w-4" />;
 </button>;
 </form>;
-/>;
                 }}
               >
                 {t('auth.login')}
               </Link>
-              <Link
+              <Link,
 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
                 aria-label = {t('auth.signup')}
@@ -59,10 +58,7 @@ href="/signup"
         </div>
       </header>
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (<div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-60 pt-16">
+          <div,
 className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick = {() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">

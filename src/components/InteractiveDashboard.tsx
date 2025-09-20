@@ -66,4 +66,3 @@ setSelectedService(null);
 };const containerVariants = {;
 hidde;  n: { opaci; t;y: 0 },visibl; e: {
 opacit; y: 1transiti; o;n: {;
-staggerChildr; e;n: 0.1;

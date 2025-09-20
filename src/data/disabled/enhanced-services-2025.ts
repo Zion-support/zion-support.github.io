@@ -9,6 +9,3 @@ description: string;
 category: "micro-saas" | "it-services" | "ai-services" | "emerging-tech";
 pricing: {
 monthly: string;
-yearly: string;
-enterprise: string;
-setup: string;

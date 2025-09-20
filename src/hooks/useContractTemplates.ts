@@ -23,18 +23,3 @@ content: "This agreement is made between...";
 variables: [
 {
 name: "clientName";
-type: "string";
-description: "Name of the client";
-required: true;
-},
-{
-name: "serviceDescription";
-type: "string";
-description: "Description of services to be provided";
-required: true;
-},
-{
-name: "rate";
-type: "number";
-description: "Hourly rate for services";
-required: true;

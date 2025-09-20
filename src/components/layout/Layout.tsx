@@ -1,3 +1,1 @@
 interface Service {
-  
-id: string;

@@ -10,6 +10,3 @@ maxSize: number;
 tt;l: number;
 // Time; to; live in milliseconds;,
 strategy: "lru" | "lfu" | "fifo" | "ttl";
-persis;t: boolean;
-}
-}

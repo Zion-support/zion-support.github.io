@@ -12,6 +12,3 @@ metaDescriptionLength: number;
 hasStructuredData: boolean;
 readabilityScore: number;
 seoScore: number;
-overallScore: number;
-issues: string[];
-recommendations: string[];

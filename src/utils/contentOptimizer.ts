@@ -6,7 +6,3 @@ headingCount: number;
 imageCount: number;
 linkCount: number;
 readabilityScore: number;
-seoScore: number;
-issues: ContentIssue[];
-suggestions: ContentSuggestion[];
-}

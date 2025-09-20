@@ -31,6 +31,3 @@ glowIntensity = "medium";
 }) => {
 const getVariantStyles: any = () => {
 const intensityMultiplier = {;
-low: 0.3;
-medium: 0.5;
-high: 0.8;

@@ -24,4 +24,3 @@ href;
 
 const variantClasses = {;
 default: "bg-zion-blue-dark border border-zion-blue-light";
-elevated: "bg-zion-blue-dark shadow-lg shadow-zion-purple/10";

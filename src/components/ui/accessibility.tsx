@@ -17,26 +17,3 @@ interface AccessibilitySettings {
 highContrast: boolean;
 largeText: boolean;
 reducedMotion: boolean;
-screenReader: boolean;
-fontSize: number;
-colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";
-}
-}
-};
-onSettingsChange?: (settings: AccessibilitySettings) => void;
-}
-}
---zion-purple-light: #cc33ff;
-}
-[data-color-blind="deuteranopia"] {
-filter: url("#deuteranopia-filter");
-}
-
-[data-color-blind="tritanopia"] {
-filter: url("#tritanopia-filter");
-}
---reduced-motion: no-preference;
-}
-
-* {
-font-size: var(--font-size);

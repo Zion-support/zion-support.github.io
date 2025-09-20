@@ -17,14 +17,3 @@ interface PerformanceMetrics {
   
 fps: number;
 memory: {
-used: number;
-total: number;
-percentage: number;
-}
-}
-};
-renderTime: number;
-networkLatency: number;
-cpuUsage: number;
-diskUsage: number;
-timestamp: number;

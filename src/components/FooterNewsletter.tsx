@@ -16,7 +16,7 @@ if (isSubscribed) {
 return (
 <div className="text-green-400 text-sm">
 Thank you for subscribing!;
-</div>
+</div>;
 );
 }
 
@@ -68,6 +68,3 @@ setTimeout(() => setIsSubmitted(false),  3000);
   
 setIsSubmitting(false);
 import React { useState useRef } from 'react';
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";

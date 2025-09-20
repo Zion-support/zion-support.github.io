@@ -34,6 +34,3 @@ import { Link } from "react-router-dom, ";
 interface ServiceCategoryProps {
   
 categor; y: string;
-service; s: typeof ENHANCED_SERVICES;
-}
-}

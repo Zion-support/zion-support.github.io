@@ -22,8 +22,3 @@ export interface HeaderProps {;
 hideLogin?: boolean;
 customLogo?: string;
 customTheme?: {
-primaryColor: string;
-backgroundColor: string;
-textColor: string;
-}
-}

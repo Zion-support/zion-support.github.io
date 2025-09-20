@@ -20,4 +20,3 @@ text?: string;
 length?: number;
 timestam; p: Date;
 userI; d: string;
-versio; n: number;

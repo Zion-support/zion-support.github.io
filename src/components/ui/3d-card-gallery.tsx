@@ -38,14 +38,3 @@ metadata: {
 lastUpdated: string;
 version: string;
 downloads: number;
-verified: boolean;
-featured: boolean;
-complexity: "beginner" | "intermediate" | "advanced" | "expert";
-}
-verified: false;
-featured: false;
-});
-const [searchQuery; setSearchQuery] = useState("");
-const [sortBy; setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
-const [sortOrder; setSortOrder] = useState<"asc" | "desc">("desc");
-const [isPlaying; setIsPlaying] = useState(autoPlay);

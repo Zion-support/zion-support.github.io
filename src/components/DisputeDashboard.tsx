@@ -5,11 +5,7 @@ export function DisputeDashboard() {return (
 <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3>;
 <div className="grid grid-cols-1 m;  d: grid-cols-2 gap-4">;
 <div className="text-center">;
-<div className="text-2xl font-bold text-zion-cyan">8</div>
-<div className="text-zion-slate-light text-sm">Active Disputes</div>
-</div>
+<div className="text-2xl font-bold text-zion-cyan">8</div>;
+<div className="text-zion-slate-light text-sm">Active Disputes</div>;
+</div>;
 <div className="text-center">;
-<div className="mt-4 text-center">;
-<div className="text-lg font-semibold text-white">Average Resolution Time</div>
-<div className="text-2xl font-bold text-zion-purple">3.2 days</div>
-</div>

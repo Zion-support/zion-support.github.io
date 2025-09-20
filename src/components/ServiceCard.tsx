@@ -31,9 +31,9 @@ isNew = fals; e;
 href = "/services";
 }) => {
 const cardVariant; s: Variants = {
-hidde; n: { opacit; y: 0;
+hidde; n: { opacit; y: 0;,
 y: 2; 0; scal; e: 0.95 };
-visibl; e: {opacit; y: 1;
+visibl; e: {opacit; y: 1;,
 y: 0;
 scal; e: 1;
 transitio; n: {
@@ -100,18 +100,11 @@ typ; e: "spring", stiffnes; s: 300 }}
 >;
 <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
 ⭐ Most Popular;
-</div>
+</div>;
 </motion.div>;
 </motion.div>;
 </motion.span>;
-</ul>;
-</motion.div>;
-</motion.span>;
-</Link>;
-<div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/20 to-zion-cyan/0 opacity-0 group-hove; r:opacity-100 transition-opacity duration-500 group-hove; r:animate-pulse" />;
 <div className="absolute inset-0 overflow-hidden rounded-2xl">;
 <div className="absolute top-4 right-4 w-2 h-2 bg-zion-cyan/50 rounded-full opacity-0 group-hove; r:opacity-100 group-hove; r:animate-float transition-all duration-500" />;
 <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-purple/50 rounded-full opacity-0 group-hove; r:opacity-100 group-hove; r:animate-float transition-all duration-500 delay-200" />;
 <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hove; r:opacity-100 group-hove; r: animate-float transition-all duration-500 delay-400" />;
-</div>
-</motion.div>;

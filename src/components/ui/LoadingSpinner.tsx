@@ -7,7 +7,3 @@ interface LoadingSpinnerProps {size?: "sm" | "md" | "lg" | "xl";
 color?: "primary" | "secondary" | "white" | "custom";
 customColor?: string;
 className?: string;
-}
-text?: string;}
-showText?: boolean};
-export function LoadingSpinner({size = "md";

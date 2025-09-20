@@ -20,31 +20,3 @@ interface PerformanceMetrics {
 loadTime: number;
 firstContentfulPaint: number;
 largestContentfulPaint: number;
-cumulativeLayoutShift: number;
-firstInputDelay: number;
-timeToInteractive: number;
-}
-}
-ogTags: boolean;
-twitterTags: boolean;
-}
-}
-criticalIssues: number;
-warnings: number;
-}
-}
-impact: "High";
-effort: "Medium"};
-{priority: "High";
-title: "Optimize Core Web Vitals";
-description: "Improve page load performance";
-impact: "High";
-effort: "High"};
-{priority: "Medium";
-title: "Enhance SEO Meta Tags";
-description: "Add missing meta descriptions and titles";
-impact: "Medium";
-effort: "Low"};
-{priority: "Medium";
-title: "Improve Image Optimization";
-description: "Add alt text and compress images";

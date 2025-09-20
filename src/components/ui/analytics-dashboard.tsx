@@ -6,4 +6,3 @@ Download;
 RefreshCw;
 BarChart3;
 Eye;
-EyeOff;

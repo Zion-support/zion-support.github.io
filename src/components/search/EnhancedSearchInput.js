@@ -45,4 +45,3 @@ export function EnhancedSearchInput({ value, onChange, onSelectSuggestion, searc
                 return '💻';
             case 'category':
                 return '📁';
-            default: return '🔍';

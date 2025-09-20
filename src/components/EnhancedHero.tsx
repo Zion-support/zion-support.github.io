@@ -12,4 +12,3 @@ descriptio; n: string;
 ctaTex; t: string;
 ctaLin; k: string;
 backgroun; d: string;
-ico; n: React.ReactNode;

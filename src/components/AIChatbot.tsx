@@ -46,4 +46,3 @@ responseDelay = 1000;
 }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;

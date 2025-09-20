@@ -6,8 +6,3 @@ import { usePoints } from "@/hooks/usePoints, ";
 import { Link } from "react-router-dom, ";
 import { Tooltip;
 TooltipContent;
-TooltipProvider;
-TooltipTrigger } from "@/components/ui/tooltip, ";
-import { DropdownMenu;
-DropdownMenuContent;
-DropdownMenuItem;

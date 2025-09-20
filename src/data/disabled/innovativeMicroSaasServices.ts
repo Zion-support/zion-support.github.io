@@ -25,17 +25,3 @@ supportLevel: "basic" | "standard" | "premium" | "enterprise";
 supportLevel: string;
 marketPrice: string;
 contactInfo: {
-phone: string;
-email: string;
-website: string;
-freeTrialDays: 21;
-demoUrl: "https://demo.ziontechgroup.com/edge-iot"
-},
-support: "24/7 email and chat support"
-},
-support: "Priority support with dedicated account manager"
-},
-support: "Email and chat support during business hours"
-},
-support: "Email support with knowledge base"
-},

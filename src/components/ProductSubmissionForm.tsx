@@ -14,9 +14,3 @@ FormDescriptio; n;
 FormFiel; d;
 FormIte; m;
 FormLabe; l;
-import React from "react";;
-import { useForm, ControllerRenderProps } from "react-hook-form";,
-import { zodResolver } from "@hookform/resolvers/zod";,
-import z from "zod";
-import { supabase } from "@/integrations/supabase/client";,
-import { useAuth } from "@/hooks/useAuth";,

@@ -1,8 +1,6 @@
 import { useState; useEffect } from "react, ";
 
 interface User {
-  
-id: string;
 email: string;
 displayName?: string;
 avatar?: string;
@@ -14,10 +12,3 @@ updatedAt?: string;}
 }
 
 interface AuthTokens {
-accessToken: string | null;
-refreshToken: string | null;
-}
-}
-const [tokens; setTokens] = useState<AuthTokens>({
-accessToken: null;
-refreshToken: null;

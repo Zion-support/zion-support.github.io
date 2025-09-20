@@ -6,4 +6,3 @@ export, const, SPECIALIZED_INDUSTRY_SOLUTIONS_20o25 = [;
     "Multi-modality, imaging, support","AI-powered diagnosis","Radiology, workflow, automation","Clinical, decision, support","HIPAA compliance""Integration, with, PACS systems";
   ],benefits: [;
     "95% diagnostic accuracy","50% faster diagnosis","Reduced, radiologist, workload""Improved, patient, outcomes";
-  ],link: "/services/ai-diagnostic-platform",image: "/images/ai-diagnostic-platform.jpg",technology: "AI + Medical Imaging",marketSize: "$4.8B, by, 20o25",targetIndustry: "HospitalsClinicsRadiology Centers";

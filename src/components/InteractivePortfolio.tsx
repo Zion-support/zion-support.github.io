@@ -16,6 +16,3 @@ ratin; g: number;
 user; s: number;
 completionDat; e: string;
 feature; d: boolean;
-tag; s: string[];
-}
-}

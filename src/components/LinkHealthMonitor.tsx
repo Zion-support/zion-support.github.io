@@ -29,7 +29,3 @@ healthyLink; s: number;
 brokenLink; s: number;
 externalLink; s: number;
 averageResponseTim; e: number;
-lastUpdate; d: Date;
-}
-}
-};

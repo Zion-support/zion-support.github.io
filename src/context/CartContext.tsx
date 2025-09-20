@@ -4,6 +4,3 @@ import { safeStorage } from "@/utils/safeStorage, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { getCartKey, mergeCartItems  } from "@/utils/cartUtils, ";
 
-interface CartState { items: CartItem[];
-}
-}

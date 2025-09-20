@@ -16,4 +16,3 @@ isArchive; d: boolean;
 actions?: Array<{
 labe; l: string;
 actio; n: () => void;
-varian;  t: "primary" | "secondary" | "danger";

@@ -126,4 +126,3 @@ case "good":
 return page.overallScore >= 60 && page.overallScore < 80;
 case "poor":
 return page.overallScore < 40;
-defaul;  t: return true;

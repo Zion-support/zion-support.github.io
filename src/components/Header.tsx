@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -7,7 +6,7 @@ import Link from "next/link";
   }, []);
 
     </header>
-  );
+  );origin/main
 };
 
 export default Header;

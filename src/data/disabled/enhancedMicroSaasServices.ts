@@ -1,14 +1,9 @@
 import React from "react";
 
-export interface EnhancedMicroSaasService {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
-benefits: string[], useCases: string[];
-targetAudience: string[], tags: string[];
+export interface EnhancedMicroSaasService {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
+benefits: string[], useCases: string[];,
+targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
-}
-contactInfo: {}
-phone: string; email: string; website: string};
-technology: string[], integrations: string[];
-compliance: string[], roi: string;
 };
 roi: "250% within 8 months"
 };

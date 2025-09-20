@@ -17,4 +17,3 @@ setInputText("");
 // Simulate AI response;
 setTimeout(() => {
 const aiResponse = { ;
-id: Date.now() + 1;

@@ -8,4 +8,3 @@ color?: "blue" | "white" | "gray";
 text?: string;
 size?: "sm" | "md" | "lg";
 color?: "blue" | "white" | "gray";
-}

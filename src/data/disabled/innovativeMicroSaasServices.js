@@ -16,10 +16,3 @@ price: number;
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
-            website"https: //ziontechgroup.com";
-     }
-    competitors: string[];
-    deployment: string;
-    customization: string;
-    support: string;

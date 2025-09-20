@@ -1,8 +1,6 @@
-import React from 'react';
-import type { BlogAuthor } from '@/types/blog';
+import React from "react";
+import type { BlogAuthor } from "@/types/blog";
 interface AuthorBioProps {
-  
-  author: BlogAuthor;
   if (!author.bio) return null;
   return (
     <div className;
@@ -16,6 +14,3 @@ interface AuthorBioProps {
       </div>
     </div>
   )
-}/> <div> <p className="font-medium text-lg" > {author.name}</p> {"
-  author.title && <p className="text-sm text-muted-foreground mb-2" > {
-  author.title}</p>

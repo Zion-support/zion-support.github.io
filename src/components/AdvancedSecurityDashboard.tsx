@@ -43,6 +43,3 @@ timestam; p: string;
 sourc; e: string;
 statu; s: "open" | "investigating" | "resolved" | "false_positive";
 assignedTo?: string;
-priorit; y: "immediate" | "high" | "normal" | "low";
-}
-}

@@ -52,4 +52,3 @@ Allo,w: /,Allow: /services/;
     Allo,w: /contact/,Allow: /blog/;
     Allo,w: /careers/;
     # Crawl delay (optional);
-Crawl-dela,y: 1`;

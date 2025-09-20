@@ -7,11 +7,3 @@ id: string;
 title: string;
 value: string;
 change: string;
-trend: "up" | "down" | "stable";
-icon: string;
-color: string;
-}
-backgroundColor: string;
-tension: number;
-}
-}

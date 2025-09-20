@@ -1,5 +1,6 @@
 
-return (<div className="space-y-4">
+return (
+    <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
       <div className="space-y-2">
         <Label htmlFor="experience">Experience Level</Label>
@@ -34,7 +35,3 @@ return (<div className="space-y-4">
       <div className="space-y-2">
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">
-          <Input
-value = {newSkill}
-            onChange = {(e) => setNewSkill(e.target.value)}
-            placeholder="Add a skill"

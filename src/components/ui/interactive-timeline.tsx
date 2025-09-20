@@ -41,11 +41,3 @@ tags: string[];
 metadata: {
 progress: number;
 dependencies: string[];
-impact: "low" | "medium" | "high";
-verified: boolean;
-featured: boolean;
-}
-priority: [] as TimelineEvent["priority"][];
-progress: 0;
-});
-const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");

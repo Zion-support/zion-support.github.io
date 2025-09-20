@@ -17,6 +17,3 @@ targetAudience: string[];
 tags: string[];
 contactInfo: {
 phone: string;
-email: string;
-website: string;
-address: string;

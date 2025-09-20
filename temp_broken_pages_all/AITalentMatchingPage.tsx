@@ -1,7 +1,5 @@
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-<<<<<<< HEAD:temp_broken_pages_all/AITalentMatchingPage.tsx
-import { Bot, Users, TrendingUp } from 'lucide-react'
 import { Bot, Users, TrendingUp } from 'lucide-react';
 import Header from "@/components/Header";
 
@@ -34,16 +32,10 @@ const stats = [
   { label: "Successful Matches", value: "95%" },
   { label: "Client Satisfaction", value: "98%" },
   { label: "Time Saved", value: "70%" }
-];
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/AITalentMatchingPage.tsx
 
 export default function AITalentMatchingPage() {
   return (
     <ServiceLandingTemplate
-<<<<<<< HEAD:temp_broken_pages_all/AITalentMatchingPage.tsx
-title="AI Talent Matching"
-      title="AI Talent Matching"
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/AITalentMatchingPage.tsx
       subtitle="Find the perfect talent with our AI-powered matching system"
       description="Our advanced AI technology analyzes skills experience and cultural fit to match the right candidates with the right opportunities ensuring successful placements and satisfied clients."
       benefits={benefits}
@@ -53,7 +45,3 @@ title="AI Talent Matching"
       ctaLink="/contact"
     />
   );
-<<<<<<< HEAD:temp_broken_pages_all/AITalentMatchingPage.tsx
-};
-}
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/AITalentMatchingPage.tsx

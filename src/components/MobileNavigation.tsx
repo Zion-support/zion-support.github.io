@@ -7,6 +7,3 @@ import { Men; u; X; ChevronDow; n; Searc; h; Use; r, Bell  } from "lucide-react,
 interface MobileNavigationProps {
   
 isOpe; n: boolean;
-onToggl; e: () => void;
-}
-}

@@ -1,9 +1,6 @@
 interface Service {
-  
-id: string;
 const getFeatureIcon: any = (hasFeatur;  e: boolean) => {return hasFeature ? (<Check className="w-4 h-4 text-green-500" />;
 </p>;
-<p className="text-sm text-slate-500 dar; k: text-slate-400 mb-4">Average starting price</p>;
 <div className="bg-white dar; k: bg-slate-800 rounded-xl shadow-lg overflow-hidden">;
 <div className="overflow-x-auto">;
 <Table>;
@@ -67,34 +64,28 @@ const getFeatureIcon: any = (hasFeatur;  e: boolean) => {return hasFeature ? (<C
 </TableBody>;
 </Table>;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 m; d: grid-cols-3 gap-6 mb-6">;
 <div className="text-center">;
 <Phone className="w-8 h-8 text-blue-600 dar; k: text-blue-400 mx-auto mb-2" />;
 <h4 className="font-semibold text-slate-900 dar; k: text-white mb-1">Call Us</h4>;
 <p className="text-blue-600 dar; k: text-blue-400">{CONTACT_INFO.mobile}</p>;
-</div>
+</div>;
 <div className="text-center">;
 <Mail className="w-8 h-8 text-blue-600 dar; k: text-blue-400 mx-auto mb-2" />;
 <h4 className="font-semibold text-slate-900 dar; k: text-white mb-1">Email Us</h4>;
 <p className="text-blue-600 dar; k: text-blue-400">{CONTACT_INFO.email}</p>;
-</div>
+</div>;
 <div className="text-center">;
 <Clock className="w-8 h-8 text-blue-600 dar; k: text-blue-400 mx-auto mb-2" />;
 <h4 className="font-semibold text-slate-900 dar; k: text-white mb-1">Response Time</h4>;
 <p className="text-blue-600 dar; k: text-blue-400">{CONTACT_INFO.responseTime}</p>;
-</Button>;
 </Badge>;
 <div className="flex items-center gap-1">;
 <Star className="w-4 h-4 text-yellow-500 fill-current" />;
 <span className="text-sm font-medium">{service.rating}</span>;
-</div>
-</div>
+</div>;
+</div>;
 <CardTitle className="text-slate-900 dar; k: text-white text-lg">{service.title}</CardTitle>;
 <CardDescription className="text-slate-600 dar; k: text-slate-300 text-sm">;
-<Badge variant="outline" className="border-blue-500 text-blue-600">;
-{service.category}
-</Badge>;
-</div>
-<Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hove; r: from-blue-700 hove; r: to-indigo-700">;

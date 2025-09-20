@@ -9,8 +9,3 @@ category: "Infrastructure" | "Networking" | "Security" | "Cloud" | "Data Center"
 subcategory: string;
 price: {
 monthly: number;
-yearly: number;
-enterprise: number;
-currency: string;
-}
-}

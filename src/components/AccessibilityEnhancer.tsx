@@ -19,6 +19,3 @@ largeTex; t: boolean;
 reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
-focusIndicato; r: boolean;
-}
-}

@@ -2,9 +2,9 @@ import React from "react";
 
 }
 export function AIEnhancementButton({if (showActions) {
-    return (
-      <div className="flex gap-2 items-center">
-        <Button
+return (
+<div className="flex gap-2 items-center">;
+<Button;
 type="button"
           variant="ghost"
           size="sm"
@@ -14,7 +14,7 @@ type="button"
           <Check className="h-4 w-4 mr-1" />
           Apply
         </Button>
-        <Button
+        <Button,
 type="button"
           variant="ghost"
           size="sm"
@@ -29,7 +29,7 @@ type="button"
           )}
           Regenerate
         </Button>
-        <Button
+        <Button,
 type="button"
           variant="ghost"
           size="sm"
@@ -43,4 +43,3 @@ type="button"
     )
   }
   return (
-    <Button

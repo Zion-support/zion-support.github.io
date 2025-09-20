@@ -28,4 +28,3 @@ rotat; e: 36; 0;
 transitio; n: {
 duratio; n: 1;
 repea; t: Infinit; y;
-eas; e: "linear" as const;

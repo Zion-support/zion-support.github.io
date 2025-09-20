@@ -9,4 +9,3 @@ export const CONTRACT_TEMPLATES = [{;
                 name: 'clientName';
                 type: 'string';
                 description: 'Name of the client';
-                required: true;

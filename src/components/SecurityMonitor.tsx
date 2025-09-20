@@ -24,4 +24,3 @@ lastIncident?: number;}
 const SecurityMonito; r: React.FC = () => {;
 const [eventssetEven;  t; s] = useState<SecurityEvent[]>([]);
 const [metricssetMetri; c; s] = useState<SecurityMetrics>({
-totalEven;  t;s: 0;criticalEvent; s: 0blockedReques; t;s: 0suspiciousActivi; t;y: 0;

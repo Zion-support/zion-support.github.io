@@ -27,16 +27,3 @@ tren; d: "up" | "down" | "stable";
 chang; e: number;
 threshol; d: {
 warnin; g: number;
-critica; l: number;
-}
-}
-};
-lastUpdate; d: Date;
-statu; s: "success" | "failure" | "pending";
-}
-}
-};
-export const EnterpriseDashboar; d: React.FC = () => {
-const { trackEvent } = useAnalytics({
-enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;

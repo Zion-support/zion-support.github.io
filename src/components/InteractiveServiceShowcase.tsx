@@ -15,7 +15,3 @@ feature; s: string[];
 isPopular?: boolean;
 isNew?: boolean;
 colo; r: string;
-hre; f: string;
-}
-}
-};

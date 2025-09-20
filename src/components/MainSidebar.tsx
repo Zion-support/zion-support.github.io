@@ -15,4 +15,3 @@ Leaf;
 Building;
 Mail;
 Calendar;
-Globe;

@@ -8,7 +8,3 @@ interface ServiceContact {
 mobil; e: string;
 emai; l: string;
 addres; s: string;
-websit; e: string;
-}
-}
-};

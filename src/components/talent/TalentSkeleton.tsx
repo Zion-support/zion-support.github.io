@@ -14,6 +14,3 @@ className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded
 <div className="flex-1 space-y-2">;
 <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />;
 <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" />;
-</div>
-</div>
-<Skeleton className="h-24 w-full bg-zion-blue-light/20" />;

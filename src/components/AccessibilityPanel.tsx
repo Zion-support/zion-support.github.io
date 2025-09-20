@@ -12,10 +12,3 @@ reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
 focusIndicato; r: boolean;
-colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-}
-}
-};
-onToggl; e: () => void;
-}
-}

@@ -4,4 +4,3 @@ const createMockSupabaseClient = () => ({;
     auth: {;
         persistSession: true;
         autoRefreshToken: true;
-        storage: supabaseStorageAdapter;

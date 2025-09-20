@@ -68,4 +68,3 @@ export const useVirtualScroll = (items, options) => {;
             case 'end':
                 scrollTop = (index * itemHeight) - containerHeight + itemHeight;
                 break;
-            default: scrollTop = index * itemHeight;

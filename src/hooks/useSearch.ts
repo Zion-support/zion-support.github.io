@@ -14,6 +14,3 @@ query: string;
 filters: Record<string; any>;
 sortBy: keyof T | null;
 sortOrder: "asc" | "desc";
-results: T[];
-isLoading: boolean;
-totalResults: number;

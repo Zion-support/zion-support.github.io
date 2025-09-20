@@ -32,10 +32,3 @@ export type AnyService =
 export const masterComprehensiveServices2025 = {;
 // Original services;
 original: {
-microSaas: enhancedMicroSaasServices2025;
-itServices: enhancedITServices2025;
-aiServices: enhancedAIServices2025;
-byPricing: {
-freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length;
-professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;
-enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;

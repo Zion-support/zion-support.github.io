@@ -9,11 +9,3 @@ interface ErrorBoundaryProps {
 childre; n: React.ReactNode;
 fallback?: React.ReactNode;
 onError?: (erro;  r: Erro; r;
-errorInf; o: any) => void;
-}
-}
-errorInf; o: any) => void;
-}
-}
-};
-resetErro; r: () => void;

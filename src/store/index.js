@@ -7,4 +7,3 @@ export const store = configureStore({;
     reducer: {;
         cart: cartReducer;
         wishlist: wishlistReducer;
-        auth: authReducer;

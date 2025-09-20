@@ -44,4 +44,3 @@ variant={loadingVariant}
 text={loadingText}
 size={loadingSize}
 />;
-/>;

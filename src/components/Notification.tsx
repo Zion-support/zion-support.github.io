@@ -8,6 +8,3 @@ typ; e: "success" | "error" | "info" | "warning";
 titl; e: string;
 messag; e: string;
 duration?: number;
-onClos; e: (i;  d: string) => void;
-}
-}

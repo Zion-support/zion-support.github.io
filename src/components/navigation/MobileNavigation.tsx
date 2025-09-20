@@ -58,16 +58,14 @@ className="p-2 text-white hover:bg-zion-blue"
 >;
 <X className="w-6 h-6" />;
 </Button>;
-/>;
 <span className="font-medium">{item.name}</span>;
 </Link>;
 </li>;
 </Link>;
 </Button>;
-</div>
+</div>;
 
 {/* Footer */}
 <div className="p-6 border-t border-zion-blue-light">;
 <div className="text-center text-zion-slate-light text-sm">;
 <p>© 2024 Zion Tech Group</p>;
-<p className="mt-1">All rights reserved</p>;

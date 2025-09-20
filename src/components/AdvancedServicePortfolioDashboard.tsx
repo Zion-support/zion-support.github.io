@@ -43,6 +43,3 @@ revenu; e: number;
 growt; h: number;
 complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 marketDeman; d: "Low" | "Medium" | "High" | "Exploding";
-technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";
-}
-}

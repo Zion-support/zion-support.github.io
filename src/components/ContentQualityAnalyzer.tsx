@@ -21,10 +21,3 @@ issueTyp; e: "missing_title" | "missing_meta" | "no_headings" | "minimal_content
 severit; y: "low" | "medium" | "high";
 descriptio; n: string;
 recommendatio; n: string;
-statu; s: "open" | "in_progress" | "resolved";
-}
-}
-lastUpdate; d: Date;
-}
-}
-};

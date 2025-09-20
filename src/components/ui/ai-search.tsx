@@ -31,22 +31,3 @@ location?: string;
 price?: string;
 type: "service" | "talent" | "company" | "article";
 metadata: {
-lastUpdated: string;
-verified: boolean;
-featured: boolean;
-}
-}
-const [isOpen; setIsOpen] = useState(false);
-const [query; setQuery] = useState("");
-const [isSearching; setIsSearching] = useState(false);
-const [showFilters; setShowFilters] = useState(false);
-const [isVoiceActive; setIsVoiceActive] = useState(false);
-const [searchHistory; setSearchHistory] = useState<string[]>([]);
-const [savedSearches; setSavedSearches] = useState<string[]>([]);
-const [filters; setFilters] = useState<SearchFilters>({
-category: [];
-priceRange: [0; 10000],
-rating: 0;
-location: [];
-verified: false;
-featured: false;

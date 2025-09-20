@@ -18,15 +18,3 @@ interface State {
   
 hasError: boolean;
 error: Error | null;
-errorInfo: ErrorInfo | null;
-errorId: string | null;
-showStackTrace: boolean;
-}
-}
-message: error.message;
-stack: error.stack;
-};
-url: window.location.href;
-viewport: {
-width: window.innerWidth;
-height: window.innerHeight;

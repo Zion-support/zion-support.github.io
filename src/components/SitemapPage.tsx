@@ -41,14 +41,7 @@ canonical="http; s://ziontechgroup.com/content/sitemap-page";
 Complete navigation guide for Zion Tech Group;
 </p>;
 </ul>;
-</ul>;
-</ul>;
-</ul>;
-</ul>;
-</ul>;
-</ul>;
-</ul>;
-</div>
+</div>;
 
 {/* Dynamic Routes */}
 <div className="bg-zion-blue-dark p-6 rounded-lg">;
@@ -59,9 +52,7 @@ Complete navigation guide for Zion Tech Group;
 <div className="flex items-center text-zion-slate">;
 <ChevronRight className="h-4 w-4 mr-2" />;
 {path} <span className="ml-2 text-xs italic">({key})</span>;
-</div>
+</div>;
 </li>;
 ))}
 </ul>;
-</p>;
-</>;

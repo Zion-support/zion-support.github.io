@@ -9,10 +9,7 @@ id: string;
 name: string;
 description: string;
 icon: React.ReactNode;
-color: string;
-price: string;
 icon: <Brain className="w-8 h-8" />;
-color: "from-purple-500 to-pink-500";
-price: "$199/month";
+color: "from-purple-500 to-pink-500";,
+price: "$199/month";,
 features: ["AI Code Review", "Testing Automation", "DevOps Intelligence", "Security Automation"],
-popular: true;

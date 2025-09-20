@@ -19,28 +19,3 @@ estimatedDelivery: string;
 supportLevel: "basic" | "standard" | "premium" | "enterprise";
 marketPrice: string;
 contactInfo: {
-phone: string;
-email: string;
-website: string;
-}
-}
-onsiteSupport: true;
-globalCoverage: true;
-};
-{id: "cybersecurity-managed-services";
-onsiteSupport: true;
-globalCoverage: true;
-};
-{id: "devops-automation-platform";
-onsiteSupport: true;
-globalCoverage: true;
-};
-{id: "data-center-optimization";
-onsiteSupport: true;
-globalCoverage: true;
-};
-{id: "network-security-architecture";
-onsiteSupport: true;
-globalCoverage: true;
-};
-{id: "disaster-recovery-solutions";

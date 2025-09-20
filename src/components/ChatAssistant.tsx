@@ -11,5 +11,3 @@ recipient?: {
 i;  d: string;
 nam; e: string;
 avatarUr; l: string;
-rol; e: string;
-onSendMessage?: (messag; e: string) => Promise<void>;

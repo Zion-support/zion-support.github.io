@@ -13,8 +13,3 @@ class; ErrorBoundary; extends Component<PropsState> {
 constructor(props: Props) {;
 super(props);
 this.state = {
-hasErro;r: falseretryCoun;t: 0;
-}
-}
-};
-errorretryCoun;t: 0;

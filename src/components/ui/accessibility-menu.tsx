@@ -6,6 +6,3 @@ import { Button } from "./button, ";
 interface AccessibilitySettings {
   
 fontSize: "small" | "medium" | "large";
-highContrast: boolean;
-reducedMotion: boolean;
-soundEnabled: boolean;

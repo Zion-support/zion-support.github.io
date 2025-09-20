@@ -9,8 +9,3 @@ import { Edit; Trash2; Github; Link; FileText } from "lucide-react, ";
 import { PortfolioProject } from "@/types/resume, ";
 
 interface ProjectCardProps {
-  
-project: PortfolioProject;
-onEdit: (project: PortfolioProject) => void;
-onDelete: (projectId: string) => void;
-}

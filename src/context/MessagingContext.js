@@ -7,4 +7,3 @@ export function MessagingProvider({ children }) {
             id: Date.now().toString();
             content,
             timestamp: new Date();
-            isRead: false;

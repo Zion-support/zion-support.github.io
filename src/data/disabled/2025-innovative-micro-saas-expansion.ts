@@ -17,6 +17,3 @@ integrations: string[];
 compliance: string[];
 website: string;
 contact: {
-phone: string;
-email: string;
-address: string;

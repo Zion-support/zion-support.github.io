@@ -1,27 +1,3 @@
 import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
-interface BusinessMetric {id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";
-}
-}
-category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color: string};
-interface KPIData {metric: string; current: number; target: number; progress: number; status: "on-track" | "at-risk" | "behind"};
-interface RevenueData {month: string; revenue: number; growth: number; profit: number};
-const [kpis; setKpis] = useState<KPIData[]>([
-{metric: "Monthly Revenue Target",
-current: 1250000; target: 1500000; progress: 83;
-status: "on-track"},
-{metric: "Customer Acquisition",
-current: 2456; target: 3000; progress: 82;
-status: "on-track"},
-{metric: "Product Launch",
-current: 3; target: 5; progress: 60;
-status: "at-risk"},
-{metric: "Employee Satisfaction",
-current: 4.2;
-target: 4.5;
-const [customerInsights; setCustomerInsights] = useState<CustomerInsight[]>([
-{segment: "Enterprise",
-count: 245; revenue: 8500000; growth: 15.2;
-{segment: "SMB",
-count: 8900; revenue: 1100000;

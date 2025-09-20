@@ -38,4 +38,3 @@ fetchData();
 };
 }, [immediatefetchData]),return {;
 dataloadingerror;
-refetch: fetchData;

@@ -29,5 +29,3 @@ growthRate: string;
 variant: string;
 contactInfo: {
 mobile: string;
-email: string;
-address: string;

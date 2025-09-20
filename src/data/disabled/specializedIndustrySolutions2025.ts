@@ -20,8 +20,3 @@ marketPrice: string;
 roi: string;
 innovationLevel: string;
 contactInfo: {
-phone: string;
-email: string;
-website: string;
-}
-}

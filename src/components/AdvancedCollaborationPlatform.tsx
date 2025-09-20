@@ -41,5 +41,3 @@ isVideoOf; f: boolean;
 isScreenSharin; g: boolean;
 hasRaisedHan; d: boolean;
 statu; s: "online" | "away" | "busy";
-joinTim; e: string;
-}

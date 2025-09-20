@@ -19,13 +19,3 @@ estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
 contactInfo: {
-phone: string;
-email: string;
-website: string;
-}
-}
-};
-technology: string[];
-integrations: string[];
-compliance: string[];
-roi: string;

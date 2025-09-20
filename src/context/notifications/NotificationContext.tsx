@@ -22,4 +22,3 @@ export; const; NotificationProvide;r: React.FC<NotificationProviderProps>  = ({ 
 const [ notificationssetNotifications] = useState<Notification[]>([]),
 const addNotification: any = (notification: Omit<Notification"id">) => {;
 const id = Math.random().toString(36).substr(29);
-const newNotification = { ...notificationid },setNotifications(prev => [ ...prevnewNotification]),;

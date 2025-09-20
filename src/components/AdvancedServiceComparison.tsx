@@ -40,6 +40,3 @@ complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 popularit; y: "Low" | "Medium" | "High" | "Trending";
 contactInf; o: string;
 emai; l: string;
-lin; k: string;
-}
-}

@@ -36,9 +36,3 @@ x: number;
 y: number;
 vx: number;
 vy: number;
-size: number;
-opacity: number;
-color: string;
-}}
-animation: "shimmer 3s ease-in-out infinite"
-}}

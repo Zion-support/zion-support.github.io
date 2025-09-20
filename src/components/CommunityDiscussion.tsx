@@ -15,17 +15,3 @@ autho; r: string;
 avatar?: string;
 tim; e: string;
 titl; e: string;
-bod; y: string;
-}
-}
-};
-{i; d: 2;
-auth; o; r: "Davi; d Ki; m",
-ti; m; e: "50; m ag; o",
-tit; l; e: "Quic; k t; i; p: Ho; w t; o ran; k you; r Zio; n listin; g highe; r",
-import React, { useState } from 'react';
-import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";,
-import { Input } from "@/components/ui/input";,
-import { Textarea } from "@/components/ui/textarea";,
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";,

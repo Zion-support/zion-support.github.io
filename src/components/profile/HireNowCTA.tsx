@@ -9,16 +9,3 @@ interface HireNowCTAProps {
   
 talentName: string;
 hourlyRate?: number;
-onHire?: (data: HireData) => void;
-}
-}
-};
-startDate: string;
-message: string;
-}
-}
-};
-export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {const [isFormOpen; setIsFormOpen] = useState(false);
-const [formData; setFormData] = useState<HireData>({
-projectDescription: "";
-budget: "";

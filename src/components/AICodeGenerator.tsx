@@ -33,11 +33,3 @@ includeTest; s: boolean;
 includeDoc; s: boolean;
 includeErrorHandlin; g: boolean;
 includeLoggin; g: boolean;
-includeMetric; s: boolean;
-}
-}
-};
-export const AICodeGenerato; r: React.FC = () => {
-const { trackEvent } = useAnalytics({
-enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;

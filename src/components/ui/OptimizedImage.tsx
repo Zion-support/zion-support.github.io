@@ -15,8 +15,3 @@ onLoad?: () => void;
 onError?: () => void;
 aspectRatio?: "square" | "video" | "auto" | number;
 objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
-}
-{rootMargin: "50px", threshold: 0.1}
-);
-observerRef.current.observe(imgRef.current);
-

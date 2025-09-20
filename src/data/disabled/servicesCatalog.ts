@@ -8,8 +8,3 @@ category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Dat
 price: string;
 // average market starting price;
 billing: "month" | "project" | "hour";
-features: string[];
-ctaLabel: string;
-name: string;
-slug: string;
-items: ServiceItem[];

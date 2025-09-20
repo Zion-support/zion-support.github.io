@@ -43,6 +43,3 @@ adoptio; n: number;
 investmen; t: string;
 keyPlayer; s: string[];
 technologie; s: string[];
-statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
-}
-}

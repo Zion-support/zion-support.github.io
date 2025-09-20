@@ -25,6 +25,3 @@ validation?: {
 pattern?: RegExp;
 minLength?: number;
 maxLength?: number;
-custom?: (valu;  e: string) => string | null;
-}
-}

@@ -19,17 +19,3 @@ BriefcaseIcon;
 } from "lucide-react, ";
 import { DropdownMenu;
 DropdownMenuContent;
-DropdownMenuItem;
-application: JobApplication;
-index: number;
-}
-}
-};
-export function CandidateCard({ application; index }: CandidateCardProps) {const [showNotes; setShowNotes] = useState(false);
-const [notes; setNotes] = useState(application.notes || "");
-import { useState } from "react";
-// Local stub is used in place of the @hello-pangea/dnd package which isn't
-// available in this environment.
-import { Avatar, as, AvatarPrimitive } from "@/components/ui/avatar";, // Renamed to avoid conflict,
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";

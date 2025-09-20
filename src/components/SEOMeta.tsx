@@ -6,6 +6,3 @@ descriptio; n: string;
 keywords?: string;
 image?: string;
 url?: string;
-}
-type?: "website" | "article" | "product";}
-structuredData?: object};

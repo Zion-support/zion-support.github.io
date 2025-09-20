@@ -18,8 +18,3 @@ largeText: boolean;
 fontSize: number;
 colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia";
 reducedMotion: boolean;
-screenReader: boolean;
-focusIndicator: boolean;
-keyboardNavigation: boolean;
-}
-}

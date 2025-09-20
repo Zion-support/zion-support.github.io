@@ -9,7 +9,7 @@ title: "Enterprise AI Chatbot Development",
 description: "Custom AI-powered chatbots for customer service; sales; and support. Integrates with CRM; knowledge bases; and existing systems. Includes training; deployment; and ongoing optimization.",
 category: "AI Services",
 subcategory: "Chatbots & Virtual Assistants",
-price: 8999;
+price: 8999;,
 currency: "$",
 tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Natural Language Processing"],
 author: {,
@@ -22,31 +22,3 @@ images: ["https://images.unsplash.com/photo-1633412802999-5ea7c61b2107?auto=form
 avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
 },
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-aiScore: 95;
-pricingTier: "Professional"
-},
-aiScore: 96;
-pricingTier: "Starter"
-},
-aiScore: 92;
-pricingTier: "Professional"
-},
-aiScore: 97;
-pricingTier: "Enterprise"
-},
-aiScore: 93;
-pricingTier: "Professional"
-},
-aiScore: 95;
-pricingTier: "Professional"
-},
-aiScore: 99;
-pricingTier: "Enterprise"
-},
-aiScore: 94;
-pricingTier: "Professional"
-},
-name: "Micro SAAS",
-description: "Specialized software-as-a-service solutions for business needs",;
-icon: "🚀",;
-color: "from-emerald-500 to-green-600",;

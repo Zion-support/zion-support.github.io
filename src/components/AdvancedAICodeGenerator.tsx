@@ -16,5 +16,3 @@ tag; s: string[];
 complexit; y: "low" | "medium" | "high";
 ratin; g: number;
 usageCoun; t: number;
-createdA; t: string;
-}

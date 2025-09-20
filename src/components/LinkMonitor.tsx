@@ -111,4 +111,3 @@ const exportReport: any = () => {const report = {;
 scanTim;  e: lastScanTime?.toISOString();
 totalBrokenLink; s: brokenLinks.lengt; h;
 brokenLink; s: brokenLink; s;};
-fixedLink; s: fixedLinks;

@@ -67,30 +67,3 @@ Allow: /blog/
 Allow: /careers/
 
 # Crawl delay (optional)
-Crawl-delay: 1`;
-    line-height: 1.6;
-     }
-        .container { max-width: 1200px;
-    margin: 0 auto;
-     }
-        h1 { color: #00e5ff;
-    border-bottom: 2px solid #00e5ff;
-    padding-bottom: 10px;
-     }
-        .sitemap-section { margin: 30px 0;
-     }
-        .sitemap-section h2 { color: #333;
-    margin-bottom: 15px;
-     }
-        .sitemap-links { display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
-    color: #333;
-     }
-        .sitemap-link: hover { background-color: #f5f5f5;
-    border-color: #00e5ff;
-     }
-        .priority-high { border-left: 4px solid #00e5ff;
-     }
-        .priority-medium { border-left: 4px solid #ff9800;
-     }
-        .priority-low { border-left: 4px solid #4caf50;

@@ -22,6 +22,3 @@ demoUrl?: string;
 documentationUrl?: string;
 contactInfo: {
 phone: string;
-email: string;
-website: string;
-address: string;

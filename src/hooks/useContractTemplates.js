@@ -25,4 +25,3 @@ export const useContractTemplates = () => {;
                                 name: 'clientName';
                                 type: 'string';
                                 description: 'Name of the client';
-                                required: true;

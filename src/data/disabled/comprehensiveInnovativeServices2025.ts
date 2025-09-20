@@ -19,8 +19,3 @@ estimatedDelivery: string;
 supportLevel: "basic" | "standard" | "premium" | "enterprise";
 marketPrice: string;
 contactInfo: {
-phone: string;
-email: string;
-website: string;
-}
-}

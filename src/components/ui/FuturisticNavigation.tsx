@@ -4,12 +4,3 @@ import { Menu; X; Home; Briefcase; Users; Phone; Globe;
 Zap; Brain; Shield; Rocket; Star; ChevronDown} from "lucide-react, ";
 
 interface NavigationItem {
-  
-name: string;
-href: string;
-{name: "Home";
-href: "/";
-icon: <Users className="w-5 h-5" />;
-description: "Our mission and vision"};
-{name: "Contact";
-href: "/contact";

@@ -36,6 +36,3 @@ phone: "";
 company: "";
 projectType: "";
 budget: "";
-timeline: "";
-description: "";
-urgency: "medium"});

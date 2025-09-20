@@ -34,4 +34,3 @@ maxPrice: 10000, // Default value;
 };
 
 
-export function useMarketplaceSearch() {// Immediate search query from input;

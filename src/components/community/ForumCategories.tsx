@@ -6,6 +6,3 @@ export default function ForumCategories() {const categories: ForumCategoryInfo[]
 id: "1",
 name: "General Discussion",;
 description: "General topics and discussions",;
-postCount: 150; adminOnly: false;
-postCount: 89;
-adminOnly: false;

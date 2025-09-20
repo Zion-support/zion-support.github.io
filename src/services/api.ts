@@ -22,4 +22,3 @@ methodheader;s: {;
 ...headers;
 }
 },if (body) { config.body = body },
-try { const response = await fetch(endpointconfig),;

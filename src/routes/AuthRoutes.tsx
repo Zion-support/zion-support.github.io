@@ -1,12 +1,8 @@
 interface Service {
-  
-id: string;
 <ProtectedRoute>;
-<div>Profile Page</div>
+<div>Profile Page</div>;
 </ProtectedRoute>;
 <ProtectedRoute>;
-<div>Dashboard</div>
+<div>Dashboard</div>;
 </ProtectedRoute>;
 <ProtectedRoute>;
-<div>Settings</div>
-</ProtectedRoute>;

@@ -29,4 +29,3 @@ className?: string;}
 export const MachineLearningDashboar; d: React.FC<MLDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;

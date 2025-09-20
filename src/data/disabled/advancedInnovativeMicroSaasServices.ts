@@ -19,12 +19,3 @@ estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
 contactInfo: {
-phone: string;
-email: string;
-website: string;
-}
-}
-email: "kleber@ziontechgroup.com";
-sla: "99.9% portfolio accuracy";
-email: "kleber@ziontechgroup.com";
-sla: "99.95% threat detection";

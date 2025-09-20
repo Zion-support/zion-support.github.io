@@ -39,14 +39,13 @@ className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 
 >;
 {isGenerating ? "Generating..." : "Generate Content"}
 </button>;
-</div>
+</div>;
 
 {generatedContent && (
 <div className="bg-gray-800 p-6 rounded-lg">;
 <h2 className="text-xl font-semibold text-white mb-4">Generated Content</h2>;
 <div className="bg-gray-900 p-4 rounded-lg">;
 <pre className="text-gray-300 whitespace-pre-wrap">{generatedContent}</pre>;
-</div>
-</div>
+</div>;
+</div>;
 )}
-</motion.div>;

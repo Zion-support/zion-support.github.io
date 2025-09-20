@@ -50,4 +50,3 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error fetching webhooks";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';

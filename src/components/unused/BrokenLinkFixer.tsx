@@ -12,8 +12,3 @@ GlobeAltIcon;
 DocumentTextIcon} from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {
-  
-url: string;
-transition: all 0.3s ease !important;
-}
-50% { opacity: 0.7;

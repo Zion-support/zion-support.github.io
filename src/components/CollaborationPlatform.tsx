@@ -10,6 +10,3 @@ isVideoO; n: boolean;
 isAudioO; n: boolean;
 isScreenSharin; g: boolean;
 isSpeakin; g: boolean;
-avata; r: string;
-}
-}

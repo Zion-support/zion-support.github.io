@@ -88,4 +88,3 @@ export, class, ContentOptimizer {
         // Check, for, missing headings;
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
-                type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';
