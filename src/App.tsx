@@ -13,10 +13,16 @@ import SEOOptimizer from './utils/seoOptimizer';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
+<<<<<<< HEAD
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { ScrollToTop } from "./components/ui/ScrollToTop";
 import { PerformanceMonitor } from "./components/PerformanceMonitor";
+=======
+import { ToasterProvider } from "./components/Toaster";
+import { Sonner } from "./components/Sonner";
+import { Sidebar } from "./components/Sidebar";
+>>>>>>> origin/zion-enhancements-v5
 
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
@@ -305,6 +311,7 @@ function App() {
 
   return (
     <ErrorBoundary>
+<<<<<<< HEAD
       <AccessibilityEnhancer>
         <SEOOptimizer
           title="Zion Tech Group - Revolutionary AI & Technology Solutions"
@@ -613,6 +620,27 @@ function App() {
       </main>
         </div>
       </AccessibilityEnhancer>
+=======
+      <WhitelabelProvider>
+        <ThemeProvider>
+          <Router>
+            <Sidebar />
+            <div className="ml-64">
+              <Suspense fallback={<EnhancedSuspenseFallback />}>
+                <Routes>
+                  {baseRoutes.map(({ path, element }) => (
+                    <Route key={path} path={path} element={element} />
+                  ))}
+                </Routes>
+              </Suspense>
+            </div>
+            <ToasterProvider>
+              <Sonner />
+            </ToasterProvider>
+          </Router>
+        </ThemeProvider>
+      </WhitelabelProvider>
+>>>>>>> origin/zion-enhancements-v5
     </ErrorBoundary>
 =======
 import { ThemeProvider } from "./components/ThemeProvider";

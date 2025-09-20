@@ -1,6 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
+=======
+
+import React, { useState, useEffect } from 'react';
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HeroSection } from "@/components/HeroSection";
+import { SEO } from "@/components/SEO";
+import { FloatingActionButton } from "@/components/ui/floating-action-button";
+import { MessageCircle, Phone, Mail, HelpCircle, ArrowRight } from "lucide-react";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+
+import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
+>>>>>>> origin/zion-enhancements-v5
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
@@ -21,6 +36,7 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { FloatingCTA } from "@/components/FloatingCTA";
 
 export default function Home() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -75,6 +91,25 @@ import {
   BarChart,
   ZapIcon
 } from 'lucide-react';
+=======
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentProgress = (window.scrollY / totalHeight) * 100;
+      setScrollProgress(Math.min(currentProgress, 100));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleChatSupport = () => {
+    // Implement chat support functionality
+    console.log("Chat support clicked");
+  };
+>>>>>>> origin/zion-enhancements-v5
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -258,7 +293,11 @@ export default function Home() {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-background">
+=======
+    <div className="min-h-screen bg-background" id="main-content">
+>>>>>>> origin/zion-enhancements-v5
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-zion-blue-dark z-50">
         <div 
@@ -299,7 +338,10 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
 >>>>>>> origin/zion-enhancements-v6
+=======
+>>>>>>> origin/zion-enhancements-v5
       <SEO 
         title="Zion - The Tech & AI Marketplace" 
         description="Discover top AI and tech talent, services, and equipment in one place."
@@ -334,6 +376,7 @@ export default function Home() {
 =======
       <Header />
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
@@ -654,6 +697,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+=======
+      {/* Floating Action Button for Support */}
+      <FloatingActionButton
+        actions={[
+          {
+            icon: <MessageCircle className="w-5 h-5" />,
+            label: "Chat Support",
+            onClick: handleChatSupport,
+            color: "bg-zion-blue hover:bg-zion-blue-dark"
+          },
+          {
+            icon: <Phone className="w-5 h-5" />,
+            label: "Call Support",
+            onClick: handleCallSupport,
+            color: "bg-zion-purple hover:bg-zion-purple-dark"
+          },
+          {
+            icon: <Mail className="w-5 h-5" />,
+            label: "Email Support",
+            onClick: handleEmailSupport,
+            color: "bg-zion-cyan hover:bg-zion-cyan-dark"
+          },
+          {
+            icon: <HelpCircle className="w-5 h-5" />,
+            label: "Help",
+            onClick: handleHelp,
+            color: "bg-zion-slate hover:bg-zion-slate-dark"
+          }
+        ]}
+      />
+>>>>>>> origin/zion-enhancements-v5
 
       {/* Enhanced Floating Action Buttons */}
       <div className="fixed bottom-8 right-8 z-50">
@@ -675,9 +749,12 @@ export default function Home() {
           </a>
         </div>
       </div>
+<<<<<<< HEAD
 
       <Footer />
 >>>>>>> origin/zion-enhancements-v6
+=======
+>>>>>>> origin/zion-enhancements-v5
     </div>
   );
 }
