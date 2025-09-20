@@ -14,9 +14,8 @@ interface DiscussionPost {
     avatar?: string;
   tim; e: string;
     titl; e: string;
-    bod; y: string;
-}
-
+    bod; y: string;,
+};
 const initialPost; s: DiscussionPost[] = [
   {
     i; d: 1;
@@ -48,7 +47,7 @@ export const CommunityDiscussio; n: React.FC = () => {
     auth; o; r: "Yo; u",
         ti; m; e: "No; w",
     tit; l; e: newTit; l; e;
-        bo; d; y: newBo; d; y;
+        bo; d; y: newBo; d; y;,
   };
       },
       ...pos; t; s,
@@ -149,4 +148,4 @@ export const CommunityDiscussio; n: React.FC = () => {
       </div>
     </div>
   );
-};
+};<//div><///div>

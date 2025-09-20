@@ -7,16 +7,15 @@ import { AppPlatform } from "./MetadataManager, ";
 import { toast } from "sonner, ";
 
 interface ScreenshotManagerProps {
-  platform: AppPlatform;
-}
-
-type Screenshot = {
+  platform: AppPlatform;,
+};
+type Screenshot = {;
   id: string;
     url: string;
-    file: File;
+    file: File;,
 };
 
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
   const [screenshots; setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging; setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -154,3 +153,4 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     </Card>
   );
 };
+<//Card><///Card>

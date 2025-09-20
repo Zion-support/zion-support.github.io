@@ -27,6 +27,6 @@ export const QuickAccess = () => {
           </div>
         </div>
       </div>
-    </div>
-  ),
-};
+    </div>;
+  ),;
+};<//div><///div>

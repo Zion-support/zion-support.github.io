@@ -1,1 +1,2 @@
-export default InteractiveTestimonials,
+export default InteractiveTestimonials,;
+;

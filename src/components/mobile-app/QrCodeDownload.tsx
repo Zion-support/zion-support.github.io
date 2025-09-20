@@ -4,7 +4,7 @@ import React from "react";
 import { QrCode } from "lucide-react, ";
 import { AppStoreButtons } from "./AppStoreButtons, ";
 
-export const QrCodeDownload: React.FC = () => {
+export const QrCodeDownload: React.FC = () => {;
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#";
     // Replace with actual App Store URL;
@@ -52,3 +52,4 @@ export const QrCodeDownload: React.FC = () => {
     </section>
   );
 };
+<//section><///section>

@@ -12,8 +12,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-export function AboutSection() {
-  const achievements = [
+export function AboutSection() {;
+  const achievements = [;
     { numb;  e; r: "1; 0+",
     lab; e; l: "Year; s o; f Experienc; e", ic; o; n: <Awar; d classNam; e="w-6 h-6" /> },
     { numb; e; r: "50; 0+",
@@ -28,22 +28,22 @@ export function AboutSection() {
     {
       tit; l; e: "Innovatio; n Firs; t",
     descripti; o; n: "W; e pus; h th; e boundarie; s o; f wha; t's; possib; l; e; constantl; y explorin; g emergin; g technologie; s an; d nove; l approache; s.",
-      ic; o; n: <TrendingU; p classNam; e="w-8 h-8" />
+      ic; o; n: <TrendingU; p classNam; e="w-8 h-8" />,
     },
     {
       tit; l; e: "Clien; t Succes; s",
     descripti; o; n: "You; r succes; s i; s ou; r succes; s. W; e measur; e ou; r achievement; s b; y th; e impac; t w; e creat; e fo; r you; r busines; s.",
-      ic; o; n: <Targe; t classNam; e="w-8 h-8" />
+      ic; o; n: <Targe; t classNam; e="w-8 h-8" />,
     },
     {
       tit; l; e: "Excellenc; e",
     descripti; o; n: "W; e maintai; n th; e highes; t standard; s i; n everythin; g w; e; d; o; fro; m cod; e qualit; y t; o clien; t communicatio; n.",
-      ic; o; n: <Awar; d classNam; e="w-8 h-8" />
+      ic; o; n: <Awar; d classNam; e="w-8 h-8" />,
     },
     {
       tit; l; e: "Trus; t & Securit; y",
     descripti; o; n: "You; r dat; a an; d system; s ar; e protecte; d wit; h enterpris; e-grad; e securit; y an; d complianc; e standard; s.",
-      ic; o; n: <Shiel; d classNam; e="w-8 h-8" />
+      ic; o; n: <Shiel; d classNam; e="w-8 h-8" />,
     }
   ];
 
@@ -180,4 +180,4 @@ export function AboutSection() {
       </div>
     </section>
   );
-}
+}<//section><///section>

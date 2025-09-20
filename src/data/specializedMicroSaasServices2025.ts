@@ -18,7 +18,7 @@ export interface SpecializedMicroSaasService2025 {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -28,7 +28,7 @@ export interface SpecializedMicroSaasService2025 {
     integrationCapabilities: string[];
     freeTier?: {
     features: string[];
-    limitations: string[];
+    limitations: string[];,
      };
 }
 
@@ -81,7 +81,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-content-generation-suite-2025";
     technologyStack: ["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],
@@ -141,7 +141,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/smart-invoice-management-system";
     technologyStack: ["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],
@@ -201,7 +201,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-customer-support-platform";
     technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "WebSocket"],
@@ -261,7 +261,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/smart-project-management-tool";
     technologyStack: ["AI/ML", "React", "Node.js", "Real-time Analytics", "Cloud Computing"],
@@ -321,7 +321,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-email-marketing-platform";
     technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Email APIs"],
@@ -381,7 +381,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/smart-inventory-management-system";
     technologyStack: ["Machine Learning", "Predictive Analytics", "React", "Node.js", "IoT Integration"],
@@ -441,7 +441,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-social-media-manager";
     technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "Social Media APIs"],
@@ -501,7 +501,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/smart-time-tracking-solution";
     technologyStack: ["Machine Learning", "Computer Vision", "React", "Node.js", "Mobile Apps"],
@@ -561,7 +561,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-lead-generation-platform";
     technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Data Analytics"],
@@ -621,7 +621,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/smart-document-management-system";
     technologyStack: ["OCR", "Machine Learning", "React", "Node.js", "Cloud Storage"],

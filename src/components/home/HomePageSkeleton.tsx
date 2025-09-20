@@ -23,8 +23,8 @@ export function HomePageSkeleton() {
           <div className="text-center mb-8">
             <Skeleton className="h-8 w-48 mx-auto mb-2 bg-white/20" />
             <Skeleton className="h-6 w-64 mx-auto bg-white/20" />
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+          </div>;
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
             {Array.from({ length: 6 }).map((_; index) => (
               <div key={index} className="bg-zion-blue border border-zion-blue-light rounded-lg p-4">
                 <Skeleton className="w-12 h-12 rounded-full mx-auto mb-3 bg-white/20" />
@@ -110,4 +110,4 @@ export function HomePageSkeleton() {
       </section>
     </div>
   );
-}
+}<//div><///div>

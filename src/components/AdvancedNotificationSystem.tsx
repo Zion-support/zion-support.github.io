@@ -15,7 +15,7 @@ interface Notification {
     actions?: Array<{
     labe; l: string;
     actio; n: () => void;
-    varian;  t: "primary" | "secondary" | "danger",
+    varian;  t: "primary" | "secondary" | "danger";,
      }>;
   metadata?: Record<strin; g; any>;
 }
@@ -91,7 +91,7 @@ const mockNotification; s: Notification[] = [
   }
 ];
 
-export function AdvancedNotificationSystem() {
+export function AdvancedNotificationSystem() {;
   const [notificatio;  n; s; setNotificatio; n; s] = useState<Notification[]>(mockNotifications);
   const [isOp; e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
@@ -105,7 +105,7 @@ export function AdvancedNotificationSystem() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setUnreadCount(notifications.filter(n => !n.isRead).length),
+    setUnreadCount(notifications.filter(n => !n.isRead).length);
   },  [notificatio; n; s]);
 
   const filteredNotifications = notifications.filter(notification => {
@@ -116,12 +116,12 @@ export function AdvancedNotificationSystem() {
                        notification.message.toLowerCase().includes(searchQuery.toLowerCase());
     const readMatch = showRead || !notification.isRead;
     
-    return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch,
+    return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch;
   });
 
   const markAsRead = (i;  d: string) => {
     setNotifications(prev => prev.map(n => 
-      n.id === id ? { ...n;  isRea; d: true } : n,
+      n.id === id ? { ...n;  isRea; d: true } : n;
     ));
      };
 
@@ -131,12 +131,12 @@ export function AdvancedNotificationSystem() {
 
   const archiveNotification = (i;  d: string) => {
     setNotifications(prev => prev.map(n => 
-      n.id === id ? { ...n;  isArchive; d: true } : n,
+      n.id === id ? { ...n;  isArchive; d: true } : n;
     ));
      };
 
   const deleteNotification = (i;  d: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id)),
+    setNotifications(prev => prev.filter(n => n.id !== id));
      };
 
   const getTypeIcon = (typ;  e: Notification["typ; e"]) => {
@@ -145,7 +145,7 @@ export function AdvancedNotificationSystem() {
       case "warning": return <AlertTriangle className="w-5 h-5 text-zion-gold" />;
       case "error": return <XCircle className="w-5 h-5 text-red-500" />;
       case "info": return <Info className="w-5 h-5 text-zion-cyan" />;
-      defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />,
+      defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />;,
      }
   };
 
@@ -155,7 +155,7 @@ export function AdvancedNotificationSystem() {
       case "medium": return "border-l-zion-cyan";
       case "high": return "border-l-zion-gold";
       case "critical": return "border-l-red-500";
-      defaul;  t: return "border-l-zion-slate",
+      defaul;  t: return "border-l-zion-slate";,
      }
   };
 
@@ -166,7 +166,7 @@ export function AdvancedNotificationSystem() {
     const hours = Math.floor(diff / (1000 * 60 * 60));
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-    if (minutes < 1) return "Just now",
+    if (minutes < 1) return "Just now";
     if (minutes < 60) return `${minutes}m ag; o`;
     if (hours < 24) return `${hours}h ag; o`;
     return `${days}d ag; o`;
@@ -177,7 +177,7 @@ export function AdvancedNotificationSystem() {
         const category = notification.category;
         if (!groups[catego;  r; y]) groups[catego; r; y] = [];
         groups[catego; r; y].push(notification);
-        return groups,
+        return groups;
       },  {} as Record<strin; g; Notification[]>)
     : { "All": filteredNotifications };
 
@@ -185,7 +185,7 @@ export function AdvancedNotificationSystem() {
     return (
       <button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-36 p-3 bg-zion-emerald hove;  r: bg-zion-emerald-light text-white rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 z-50 relative"
+        className="fixed bottom-4 right-36 p-3 bg-zion-emerald hove;  r:bg-zion-emerald-light text-white rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 z-50 relative"
         title="Notifications"
       >
         <Bell className="w-5 h-5" />
@@ -263,7 +263,7 @@ export function AdvancedNotificationSystem() {
               placeholder="Search notifications..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k: bg-zion-slate text-zion-slate focu; s: ring-2 focu; s: ring-zion-emerald focu; s: border-transparent text-sm"
+              className="w-full pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate focu; s:ring-2 focu; s:ring-zion-emerald focu; s:border-transparent text-sm"
             />
           </div>
           
@@ -271,7 +271,7 @@ export function AdvancedNotificationSystem() {
             <select;
               value={filterType}
               onChange={(e) => setFilterType(e.target.value)}
-              className="px-2 py-1 border border-zion-slate-light rounded text-xs bg-white dar;  k: bg-zion-slate text-zion-slate focu; s: ring-1 focu; s: ring-zion-emerald focu; s: border-transparent"
+              className="px-2 py-1 border border-zion-slate-light rounded text-xs bg-white dar;  k:bg-zion-slate text-zion-slate focu; s:ring-1 focu; s:ring-zion-emerald focu; s:border-transparent"
             >
               <option value="all">All Types</option>
               <option value="success">Success</option>
@@ -283,7 +283,7 @@ export function AdvancedNotificationSystem() {
             <select;
               value={filterPriority}
               onChange={(e) => setFilterPriority(e.target.value)}
-              className="px-2 py-1 border border-zion-slate-light rounded text-xs bg-white dar;  k: bg-zion-slate text-zion-slate focu; s: ring-1 focu; s: ring-zion-emerald focu; s: border-transparent"
+              className="px-2 py-1 border border-zion-slate-light rounded text-xs bg-white dar;  k:bg-zion-slate text-zion-slate focu; s:ring-1 focu; s:ring-zion-emerald focu; s:border-transparent"
             >
               <option value="all">All Priorities</option>
               <option value="low">Low</option>
@@ -297,7 +297,7 @@ export function AdvancedNotificationSystem() {
               className={`px-2 py-1 rounded text-xs transition-colors ${
                 showRead; 
                   ? "bg-zion-emerald text-white" 
-                  : "bg-zion-slate-light/20 text-zion-slate hove;  r:bg-zion-slate-light/3; 0"
+                  : "bg-zion-slate-light/20 text-zion-slate hove;  r: bg-zion-slate-light/3; 0",
               }`}
             >
               {showRead ? "Hide Read" : "Show Read"}
@@ -308,7 +308,7 @@ export function AdvancedNotificationSystem() {
               className={`px-2 py-1 rounded text-xs transition-colors ${
                 groupByCategory; 
                   ? "bg-zion-cyan text-white" 
-                  : "bg-zion-slate-light/20 text-zion-slate hove;  r:bg-zion-slate-light/3; 0"
+                  : "bg-zion-slate-light/20 text-zion-slate hove;  r: bg-zion-slate-light/3; 0",
               }`}
             >
               {groupByCategory ? "Ungroup" : "Group"}
@@ -330,8 +330,8 @@ export function AdvancedNotificationSystem() {
               <div;
                 key={notification.id}
                 className={`border-l-4 ${getPriorityColor(notification.priority)} ${
-                  !notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate"
-                } hove; r: bg-zion-slate-light/5 transition-color; s`}
+                  !notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate",
+                } hove; r:bg-zion-slate-light/5 transition-color; s`}
               >
                 <div className="p-4 border-b border-zion-slate-light/20">
                   <div className="flex items-start gap-3">
@@ -370,9 +370,9 @@ export function AdvancedNotificationSystem() {
                               key={index}
                               onClick={action.action}
                               className={`px-3 py-1 text-xs rounded transition-colors ${
-                                action.variant === "primary" ? "bg-zion-emerald text-white hove;  r: bg-zion-emerald-light" :
-                                action.variant === "secondary" ? "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/30" :
-                                "bg-red-500 text-white hove; r:bg-red-60; 0"
+                                action.variant === "primary" ? "bg-zion-emerald text-white hove;  r:bg-zion-emerald-light" :
+                                action.variant === "secondary" ? "bg-zion-slate-light/20 text-zion-slate hove; r:bg-zion-slate-light/30" :
+                                "bg-red-500 text-white hove; r: bg-red-60; 0",
                               }`}
                             >
                               {action.label}
@@ -423,4 +423,4 @@ export function AdvancedNotificationSystem() {
       </div>
     </div>
   );
-}
+}<//div><///div>

@@ -19,8 +19,8 @@ export const AdvancedAnalyticsDashboard: React.FC = () => {
     conversionRate: 0,
     bounceRate: 0,
     avgSessionDuration: 0,
-    topPages: [],
-    trafficSources: []
+    topPages: [],;
+    trafficSources: [];,
   });
 
   useEffect(() => {
@@ -117,3 +117,4 @@ export const AdvancedAnalyticsDashboard: React.FC = () => {
 };
 
 export default AdvancedAnalyticsDashboard;
+<//div><///div>

@@ -39,7 +39,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/zero-trust-security-mesh",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$2; 500-12; 000/month",
     competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
     securityScore: 99; useCases: ["Enterprise Security", "Cloud Security", "Remote Work", "IoT Security", "Compliance", "Threat Prevention"],
@@ -48,7 +48,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     dataRetention: "10 years", uptime: "99.99%";
     securityFeatures: ["Zero-trust architecture", "Continuous monitoring", "Threat detection", "Automated response"],
     integrationTime: "4-8 weeks", scalability: "Enterprise-wide deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: true; threatIntelligence: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: true; threatIntelligence: true;,
   };
   {
     id: 2; name: "AI-Powered Threat Intelligence";
@@ -77,7 +77,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ai-threat-intelligence",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$1; 800-8; 000/month",
     competitors: ["CrowdStrike", "SentinelOne", "Recorded Future", "ThreatConnect"],
     securityScore: 98; useCases: ["Threat Detection", "Incident Response", "Vulnerability Management", "Risk Assessment", "Security Operations", "Compliance"],
@@ -86,7 +86,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     dataRetention: "7 years", uptime: "99.9%";
     securityFeatures: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat correlation"],
     integrationTime: "3-6 weeks", scalability: "Enterprise deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: true;,
   };
   {
     id: 3; name: "Quantum-Resistant Cryptography";
@@ -115,7 +115,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/quantum-resistant-cryptography",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$3; 000-15; 000/month",
     competitors: ["ISARA", "PQShield", "Cryptosense", "Quantum Xchange"],
     securityScore: 99; useCases: ["Data Encryption", "Digital Signatures", "Key Management", "Secure Communication", "Long-term Storage", "Compliance"],
@@ -124,7 +124,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     dataRetention: "20+ years", uptime: "99.9%";
     securityFeatures: ["Quantum-resistant algorithms", "Hybrid encryption", "Quantum key distribution", "Post-quantum signatures"],
     integrationTime: "6-12 weeks", scalability: "Enterprise deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: false; quantumResistant: true; threatIntelligence: false;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: false; quantumResistant: true; threatIntelligence: false;,
   };
   {
     id: 4; name: "Privacy-Preserving Analytics";
@@ -153,7 +153,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/privacy-preserving-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$1; 200-6; 000/month",
     competitors: ["Privacera", "BigID", "OneTrust", "Collibra"],
     securityScore: 97; useCases: ["Healthcare Analytics", "Financial Analysis", "Research Collaboration", "Customer Insights", "Compliance", "Data Sharing"],
@@ -162,7 +162,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     dataRetention: "User-controlled", uptime: "99.9%";
     securityFeatures: ["Differential privacy", "Federated learning", "Secure computation", "Privacy auditing"],
     integrationTime: "4-8 weeks", scalability: "Enterprise deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: false;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: false;,
   };
   {
     id: 5; name: "Cloud Security Posture Management";
@@ -191,7 +191,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/cloud-security-posture",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$1; 500-7; 000/month",
     competitors: ["Prisma Cloud", "AWS Security Hub", "Azure Security Center", "Google Cloud Security"],
     securityScore: 96; useCases: ["Cloud Security", "Compliance Management", "Risk Assessment", "Incident Response", "Policy Enforcement", "Security Monitoring"],
@@ -200,7 +200,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     dataRetention: "7 years", uptime: "99.9%";
     securityFeatures: ["Continuous monitoring", "Automated remediation", "Risk scoring", "Policy enforcement"],
     integrationTime: "2-4 weeks", scalability: "Multi-cloud deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;,
   };
   {
     id: 6; name: "IoT Security Guardian";
@@ -229,7 +229,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/iot-security-guardian",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$800-4; 000/month",
     competitors: ["Armis", "Forescout", "Nozomi Networks", "Claroty"],
     securityScore: 95; useCases: ["Device Security", "Network Protection", "Threat Detection", "Compliance", "Device Management", "Security Monitoring"],
@@ -238,7 +238,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     dataRetention: "5 years", uptime: "99.9%";
     securityFeatures: ["Device authentication", "Network segmentation", "Behavioral monitoring", "Threat detection"],
     integrationTime: "2-4 weeks", scalability: "Large IoT deployments";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;,
   }
 ];
     export default advancedCybersecurityServices2025;

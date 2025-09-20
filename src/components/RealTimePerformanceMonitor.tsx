@@ -7,10 +7,9 @@ interface PerformanceMetrics {
     memory: number;
     cpu: number;
     fps: number;
-    network: number;
-}
-
-export const RealTimePerformanceMonitor: React.FC = () => {
+    network: number;,
+};
+export const RealTimePerformanceMonitor: React.FC = () => {;
     const [metrics; setMetrics] = useState<PerformanceMetrics[]>([]);
   const [isVisible; setIsVisible] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout>();
@@ -150,3 +149,4 @@ export const RealTimePerformanceMonitor: React.FC = () => {
 };
 
 export default RealTimePerformanceMonitor;
+<//motion.div><///motion.div>

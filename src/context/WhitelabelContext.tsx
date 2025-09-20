@@ -12,7 +12,7 @@ const defaultConfig: WhitelabelConfig = {
   domain: "https://ziontechgroup.com", isWhitelabel: false;
   contactInfo: {
     phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709"
+    address: "364 E Main St STE 1008 Middletown DE 19709",
   }
 };
     const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
@@ -22,9 +22,8 @@ export const useWhitelabel = () => useContext(WhitelabelContext);
 interface WhitelabelProviderProps {
   children: ReactNode;
     config?: Partial<WhitelabelConfig>,
-}
-
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
+};
+export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ ;
   children;
   config = {} 
 }) => {
@@ -36,3 +35,4 @@ export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({
     </WhitelabelContext.Provider>
   );
 };
+<//WhitelabelContext.Provider><///WhitelabelContext.Provider>

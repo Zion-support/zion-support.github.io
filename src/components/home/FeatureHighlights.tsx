@@ -32,6 +32,6 @@ export const FeatureHighlights = () => {
           </div>
         </div>
       </div>
-    </div>
-  ),
-};
+    </div>;
+  ),;
+};<//div><///div>

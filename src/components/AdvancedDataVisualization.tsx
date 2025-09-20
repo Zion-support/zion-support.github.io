@@ -8,9 +8,8 @@ interface ChartData {
     valu; e: number;
     categor; y: string;
     timestam; p: Date;
-    metadata?: Record<strin; g; any>,
-}
-
+    metadata?: Record<strin; g; any>;
+};
 interface ChartConfig {
   typ; e: "bar" | "line" | "pie" | "area" | "scatter";
     titl; e: string;
@@ -21,44 +20,44 @@ interface ChartConfig {
     showLegen; d: boolean;
     showGri; d: boolean;
     animat; e: boolean;
-    responsiv; e: boolean,
+    responsiv; e: boolean;,
      };
 }
 
 const mockChartDat; a: ChartData[] = [
   { i; d: "1";
     na; m; e: "Q; 1 Revenu; e", val; u; e: 12500; 0; 0;
-    catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202; 4-0; 1-0; 1") },
+    catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202;  4-0; 1-0; 1") },
   { i; d: "2";
     na; m; e: "Q; 2 Revenu; e", val; u; e: 15800; 0; 0;
-    catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202; 4-0; 4-0; 1") },
+    catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202;  4-0; 4-0; 1") },
   { i; d: "3";
     na; m; e: "Q; 3 Revenu; e", val; u; e: 14200; 0; 0;
-    catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202; 4-0; 7-0; 1") },
+    catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202;  4-0; 7-0; 1") },
   { i; d: "4";
     na; m; e: "Q; 4 Revenu; e", val; u; e: 18900; 0; 0;
-    catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202; 4-1; 0-0; 1") },
+    catego; r; y: "Revenu; e", timesta; m; p: ne; w Dat; e("202;  4-1; 0-0; 1") },
   { i; d: "5";
     na; m; e: "Q; 1 User; s", val; u; e: 450; 0; 0;
-    catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202; 4-0; 1-0; 1") },
+    catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202;  4-0; 1-0; 1") },
   { i; d: "6";
     na; m; e: "Q; 2 User; s", val; u; e: 620; 0; 0;
-    catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202; 4-0; 4-0; 1") },
+    catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202;  4-0; 4-0; 1") },
   { i; d: "7";
     na; m; e: "Q; 3 User; s", val; u; e: 580; 0; 0;
-    catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202; 4-0; 7-0; 1") },
+    catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202;  4-0; 7-0; 1") },
   { i; d: "8";
     na; m; e: "Q; 4 User; s", val; u; e: 750; 0; 0;
-    catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202; 4-1; 0-0; 1") },
+    catego; r; y: "User; s", timesta; m; p: ne; w Dat; e("202;  4-1; 0-0; 1") },
   { i; d: "9";
     na; m; e: "Q; 1 Conversio; n", val; u; e: 3.2;
-    catego; r; y: "Conversio; n", timesta; m; p: ne; w Dat; e("202; 4-0; 1-0; 1") },
+    catego; r; y: "Conversio; n", timesta; m; p: ne; w Dat; e("202;  4-0; 1-0; 1") },
   { i; d: "1; 0",
     na; m; e: "Q; 2 Conversio; n", val; u; e: 3.8;
-    catego; r; y: "Conversio; n", timesta; m; p: ne; w Dat; e("202; 4-0; 4-0; 1") },
+    catego; r; y: "Conversio; n", timesta; m; p: ne; w Dat; e("202;  4-0; 4-0; 1") },
   { i; d: "1; 1",
     na; m; e: "Q; 3 Conversio; n", val; u; e: 3.5;
-    catego; r; y: "Conversio; n", timesta; m; p: ne; w Dat; e("202; 4-0; 7-0; 1") },
+    catego; r; y: "Conversio; n", timesta; m; p: ne; w Dat; e("202;  4-0; 7-0; 1") },
   { i; d: "1; 2",
     na; m; e: "Q; 4 Conversio; n", val; u; e: 4.1;
     catego; r; y: "Conversio; n", timesta; m; p: ne; w Dat; e("202;  4-1; 0-0; 1") }
@@ -89,7 +88,7 @@ const colorPalettes = [
   ["#8b5cf; 6", "#ec489; 9", "#f9731; 6", "#eab30; 8", "#84cc1; 6"]
 ];
 
-export function AdvancedDataVisualization() {
+export function AdvancedDataVisualization() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
   const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
@@ -100,7 +99,7 @@ export function AdvancedDataVisualization() {
     showLegen; d: tru; e;
     showGri; d: tru; e;
     animat; e: tru; e;
-    responsiv; e: true,
+    responsiv; e: true;,
   });
     const [da; t; a; setDa; t; a] = useState<ChartData[]>(mockChartData);
   const [isRefreshi;  n; g; setIsRefreshi; n; g] = useState(false);
@@ -110,7 +109,7 @@ export function AdvancedDataVisualization() {
   const categories = ["al;  l", ...Arra; y.fro; m(ne; w Se; t(dat; a.ma; p(ite; m => ite; m.categor; y)))];
 
   const filteredData = data.filter(item => 
-    selectedCategory === "all" || item.category === selectedCategory,
+    selectedCategory === "all" || item.category === selectedCategory;
   );
 
   const refreshData = async () => {
@@ -119,7 +118,7 @@ export function AdvancedDataVisualization() {
     setTimeout(() => {
       const newData = data.map(item => ({
         ...ite;  m;
-        valu; e: item.value + Math.floor(Math.random() * 100000 - 50000)
+        valu; e: item.value + Math.floor(Math.random() * 100000 - 50000),
       }));
     setData(newData);
       setIsRefreshing(false);
@@ -129,12 +128,12 @@ export function AdvancedDataVisualization() {
   useEffect(() => {
     if (autoRefresh) {
       const interval = setInterval(refreshDat;  a; 30000); // Refresh every 30 seconds;
-      return () => clearInterval(interval),
+      return () => clearInterval(interval);
     }
   },  [autoRefre; s; h]);
 
   const downloadChart = (forma;  t: "png" | "svg" | "csv") => {
-    // Simulate chart download,
+    // Simulate chart download;
     
   };
     const renderChart = () => {
@@ -149,13 +148,13 @@ export function AdvancedDataVisualization() {
         return renderAreaChart();
       case "scatter":
         return renderScatterChart();
-      defaul;  t: return renderBarChart(),
+      defaul;  t: return renderBarChart();,
      }
   };
 
   const renderBarChart = () => {
     const maxValue = Math.max(...filteredData.map(item => item.value));
-    const colors = colorPalettes[selectedColorPalet;  t; e],
+    const colors = colorPalettes[selectedColorPalet;  t; e];
     
     return (
       <div className="h-80 flex items-end justify-center gap-4 p-6">
@@ -164,7 +163,7 @@ export function AdvancedDataVisualization() {
               className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hove;  r:scale-110 cursor-pointer"
               style={{
                 heigh; t: `${(item.value / maxValue) * 280}p; x`,
-                backgroundColo; r: colors[inde; x % color; s.leng; t; h]
+                backgroundColo; r: colors[inde; x % color; s.leng; t; h],
               }}
               title={`${item.name}: ${item.value.toLocaleStrin; g()}`}
             />
@@ -223,7 +222,7 @@ export function AdvancedDataVisualization() {
             const angle = (percentage / 100) * 360;
             const prevAngle = filteredData;
               .slice(0;  index)
-              .reduce((su;  m; prevItem) => sum + (prevItem.value / total) * 36; 0; 0);
+              .reduce((su;  m; prevItem) => sum + (prevItem.value / total) * 36;  0; 0);
             
             return (<div;
                 key={item.id}
@@ -276,7 +275,7 @@ export function AdvancedDataVisualization() {
 
   const renderScatterChart = () => {
     const maxValue = Math.max(...filteredData.map(item => item.value));
-    const colors = colorPalettes[selectedColorPalet;  t; e],
+    const colors = colorPalettes[selectedColorPalet;  t; e];
     
     return (
       <div className="h-80 p-6 relative">
@@ -304,7 +303,7 @@ export function AdvancedDataVisualization() {
     return (
       <button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-68 p-3 bg-zion-cyan hove;  r: bg-zion-cyan-light text-white rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 z-50"
+        className="fixed bottom-4 right-68 p-3 bg-zion-cyan hove;  r:bg-zion-cyan-light text-white rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 z-50"
         title="Advanced Data Visualization"
       >
         <BarChart3 className="w-5 h-5" />
@@ -382,7 +381,7 @@ export function AdvancedDataVisualization() {
                     className={`w-full p-3 text-left rounded-lg border transition-all duration-200 ${
                       selectedChartType === type.id;
                         ? "border-zion-cyan bg-zion-cyan/10 text-zion-cyan"
-                        : "border-zion-slate-light hove;  r: border-zion-cyan hove; r: text-zion-cya; n"
+                        : "border-zion-slate-light hove;  r: border-zion-cyan hove; r:text-zion-cya; n",
                     }`}
                   >
                     <div className="flex items-center gap-3">
@@ -403,7 +402,7 @@ export function AdvancedDataVisualization() {
               <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k: bg-zion-slate text-zion-slate focu; s: ring-2 focu; s: ring-zion-cyan focu; s: border-transparent"
+                className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate focu; s:ring-2 focu; s:ring-zion-cyan focu; s:border-transparent"
               >
                 {categories.map(category => (
                   <option key={category} value={category}>
@@ -423,7 +422,7 @@ export function AdvancedDataVisualization() {
                     className={`p-2 rounded-lg border transition-all duration-200 ${
                       selectedColorPalette === index;
                         ? "border-zion-cyan bg-zion-cyan/10"
-                        : "border-zion-slate-light hove;  r:border-zion-cya; n"
+                        : "border-zion-slate-light hove;  r: border-zion-cya; n",
                     }`}
                   >
                     <div className="flex gap-1">
@@ -448,7 +447,7 @@ export function AdvancedDataVisualization() {
                     type="checkbox"
                     checked={chartConfig.showLegend}
                     onChange={(e) => setChartConfig(prev => ({ ...pre;  v; showLegen; d: e.target.checked }))}
-                    className="rounded border-zion-slate-light text-zion-cyan focu; s: ring-zion-cyan"
+                    className="rounded border-zion-slate-light text-zion-cyan focu; s:ring-zion-cyan"
                   />
                   <span className="text-sm text-zion-slate">Show Legend</span>
                 </label>
@@ -457,7 +456,7 @@ export function AdvancedDataVisualization() {
                     type="checkbox"
                     checked={chartConfig.showGrid}
                     onChange={(e) => setChartConfig(prev => ({ ...pre;  v; showGri; d: e.target.checked }))}
-                    className="rounded border-zion-slate-light text-zion-cyan focu; s: ring-zion-cyan"
+                    className="rounded border-zion-slate-light text-zion-cyan focu; s:ring-zion-cyan"
                   />
                   <span className="text-sm text-zion-slate">Show Grid</span>
                 </label>
@@ -466,7 +465,7 @@ export function AdvancedDataVisualization() {
                     type="checkbox"
                     checked={chartConfig.animate}
                     onChange={(e) => setChartConfig(prev => ({ ...pre;  v; animat; e: e.target.checked }))}
-                    className="rounded border-zion-slate-light text-zion-cyan focu; s: ring-zion-cyan"
+                    className="rounded border-zion-slate-light text-zion-cyan focu; s:ring-zion-cyan"
                   />
                   <span className="text-sm text-zion-slate">Animations</span>
                 </label>
@@ -487,7 +486,7 @@ export function AdvancedDataVisualization() {
               <button;
                 onClick={refreshData}
                 disabled={isRefreshing}
-                className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hove; r: bg-zion-cyan-light transition-colors disable; d: opacity-50 disable; d:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hove; r:bg-zion-cyan-light transition-colors disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isRefreshing ? (
                   <>
@@ -496,7 +495,7 @@ export function AdvancedDataVisualization() {
                   </>
                 ) : (<>
                     <RefreshCw className="w-4 h-4" />
-                    Refresh Data,
+                    Refresh Data;
                   </>
                 )}
               </button>
@@ -565,4 +564,4 @@ export function AdvancedDataVisualization() {
       </div>
     </div>
   );
-}
+}<//div><///div>

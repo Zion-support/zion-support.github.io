@@ -7,4 +7,4 @@ const ErrorModal: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ErrorModal,
+export default ErrorModal,;<//div><///div>

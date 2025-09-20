@@ -26,19 +26,19 @@ export const useContractTemplates = () => {
                 name: "clientName";
                 type: "string";
                 description: "Name of the client";
-                required: true;
+                required: true;,
               },
               {
                 name: "serviceDescription";
                 type: "string";
                 description: "Description of services to be provided";
-                required: true;
+                required: true;,
               },
               {
                 name: "rate";
                 type: "number";
                 description: "Hourly rate for services";
-                required: true;
+                required: true;,
               },
             ],
             isPublic: true;
@@ -61,14 +61,14 @@ export const useContractTemplates = () => {
                 name: "companyName";
                 type: "string";
                 description: "Name of the company";
-                required: true;
+                required: true;,
               },
               {
                 name: "confidentialityPeriod";
                 type: "number";
                 description: "Period of confidentiality in years";
                 required: true;
-                defaultValue: 2;
+                defaultValue: 2;,
               },
             ],
             isPublic: true;

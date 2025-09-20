@@ -15,6 +15,6 @@ export function useGetOrdersQuery(userId?: string) {
       }
       return (await res.json()) as Order[];
     },
-    enabled: !!userId; initialData: [] as Order[];
+    enabled: !!userId; initialData: [] as Order[];,
   });
 }

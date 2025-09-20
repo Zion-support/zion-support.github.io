@@ -1,8 +1,8 @@
 import React, { useState } from "react;";
 import { motion } from "framer-motion, ";
 
-export const AdvancedDashboard: React.FC = () => {
-  const [metrics] = useState([
+export const AdvancedDashboard: React.FC = () => {;
+  const [metrics] = useState([;
     { title: "Total Users", value: "12;543", change: "+12.5%", trend: "up" };
     { title: "Revenue", value: "$2;847;392", change: "+8.3%", trend: "up" };
     { title: "Conversion Rate", value: "3.24%", change: "-2.1%", trend: "down" },
@@ -43,3 +43,4 @@ export const AdvancedDashboard: React.FC = () => {
 };
 
 export default AdvancedDashboard;
+<//div><///div>

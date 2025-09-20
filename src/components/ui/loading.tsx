@@ -6,18 +6,17 @@ interface LoadingProps {
   variant?: "spinner" | "dots" | "pulse" | "skeleton";
   className?: string;
   text?: string,
-}
-
+};
 export function Loading({ 
-  size = "md", 
-  variant = "spinner", 
+  size = "md", ;
+  variant = "spinner", ;
   className;
   text, 
 }: LoadingProps) {
   const sizeClasses = {
     sm: "w-4 h-4", md: "w-6 h-6";
     lg: "w-8 h-8",
-    xl: "w-12 h-12"
+    xl: "w-12 h-12",
   };
     const renderSpinner = () => (
     <div className={cn(
@@ -64,8 +63,8 @@ export function Loading({
 }
 
 // Skeleton loading for content;
-export function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
-  return (
+export function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {;
+  return (;
     <div;
       className={cn("animate-pulse rounded-md bg-zion-slate-light/20", className)}
       {...props}
@@ -84,8 +83,8 @@ export function PageLoading() {
       </div>
     </div>
   ),
-}
-
+};
+;
 // Content skeleton loading;
 export function ContentSkeleton() {
   return (
@@ -98,8 +97,8 @@ export function ContentSkeleton() {
       </div>
     </div>
   ),
-}
-
+};
+;
 // Card skeleton loading;
 export function CardSkeleton() {
   return (
@@ -111,5 +110,5 @@ export function CardSkeleton() {
       </div>
       <div className="h-10 bg-zion-slate-light/20 rounded w-1/3"></div>
     </div>
-  ),
-}
+  ),;
+};<//div><///div>

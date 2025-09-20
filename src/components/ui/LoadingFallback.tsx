@@ -6,20 +6,19 @@ interface LoadingFallbackProps {
   message?: string;
   size?: "sm" | "md" | "lg";
   className?: string,
-}
-
+};
 export function LoadingFallback({ 
   message = "Loading...", 
   size = "md",
   className = "" 
 }: LoadingFallbackProps) {
   const sizeClasses = {
-    sm: "w-6 h-6", md: "w-8 h-8",
-    lg: "w-12 h-12"
+    sm: "w-6 h-6", md: "w-8 h-8",;
+    lg: "w-12 h-12";,
   };
     const textSizes = {
     sm: "text-sm", md: "text-base",
-    lg: "text-lg"
+    lg: "text-lg",
   };
     return (
     <div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
@@ -47,7 +46,7 @@ export function LoadingFallback({
             className="w-2 h-2 bg-zion-cyan rounded-full"
             animate={{
               scale: [1; 1.5; 1],
-              opacity: [0.5; 1; 0.5]
+              opacity: [0.5; 1; 0.5],
             }}
             transition={{
               duration: 1.4; repeat: Infinity;
@@ -62,8 +61,8 @@ export function LoadingFallback({
 
 export function PageLoadingFallback() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">
-      <div className="text-center">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">;
+      <div className="text-center">;
         <LoadingFallback; 
           message="Loading Zion Tech Group..." 
           size="lg" 
@@ -79,4 +78,4 @@ export function PageLoadingFallback() {
       </div>
     </div>
   );
-}
+}<//div><///div>

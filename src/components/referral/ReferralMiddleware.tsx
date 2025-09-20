@@ -19,8 +19,8 @@ export function ReferralMiddleware("props": "any) {,
   useEffect(() => {,
   // "TODO": "Add dependencies if needed,
 "}, []),
-    async function sendReferral("props": "any) {,
-      const code = localStorage.getItem("referralCode"),
+    async function sendReferral("props": "any) {,;
+      const code = localStorage.getItem("referralCode"),;
       if(!code || !user?.id || !user?.email) return, // Guard against missing email as well;
       try {,
         await supabase.functions.invoke("track-referral", {,
@@ -35,4 +35,4 @@ export function ReferralMiddleware("props": "any) {,
     sendReferral(),
   }, [user?.id; user?.email]), // Added user?.email;
   return <>{children}</, >;
-}
+}<//, ><///, >

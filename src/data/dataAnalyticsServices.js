@@ -1,5 +1,5 @@
 export const DATA_ANALYTICS_SERVICES = [
-    // Real-Time Data Streaming Platform
+    // Real-Time Data Streaming Platform;
     {
         id: "real-time-data-streaming";
         title: "Real-Time Data Streaming & Analytics Platform";
@@ -45,10 +45,10 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Predictive Analytics Platform
+    // Predictive Analytics Platform;
     {
         id: "predictive-analytics-platform";
         title: "AI-Powered Predictive Analytics & Forecasting Platform";
@@ -94,10 +94,10 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Data Governance Platform
+    // Data Governance Platform;
     {
         id: "data-governance-platform";
         title: "Enterprise Data Governance & Quality Management Platform";
@@ -143,10 +143,10 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Customer Analytics Platform
+    // Customer Analytics Platform;
     {
         id: "customer-analytics-platform";
         title: "Customer Analytics & 360-Degree View Platform";
@@ -192,10 +192,10 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     };
-    // Business Intelligence Dashboard
+    // Business Intelligence Dashboard;
     {
         id: "business-intelligence-dashboard";
         title: "Interactive Business Intelligence & Dashboard Platform";
@@ -241,7 +241,7 @@ export const DATA_ANALYTICS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         }
     }
 ];

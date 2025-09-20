@@ -1,2 +1,3 @@
 
-export default TeamExpertiseSection,
+export default TeamExpertiseSection,;
+;

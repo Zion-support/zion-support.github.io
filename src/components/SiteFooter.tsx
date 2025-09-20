@@ -7,4 +7,4 @@ const SiteFooter: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default SiteFooter,
+export default SiteFooter,;<//div><///div>

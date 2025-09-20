@@ -1,5 +1,5 @@
 export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
-    // AI-Powered Content Generation Suite
+    // AI-Powered Content Generation Suite;
     {
         id: "ai-content-generation-suite-2025";
         title: "AI Content Generation Suite 2025";
@@ -47,7 +47,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-content-generation-suite-2025";
         technologyStack: ["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],
@@ -58,7 +58,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
         }
     },
-    // Smart Invoice Management System
+    // Smart Invoice Management System;
     {
         id: "smart-invoice-management-system";
         title: "Smart Invoice Management System";
@@ -106,7 +106,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/smart-invoice-management-system";
         technologyStack: ["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],
@@ -117,7 +117,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             limitations: ["No API access", "Limited integrations", "Basic templates"]
         }
     },
-    // AI-Powered Customer Support Platform
+    // AI-Powered Customer Support Platform;
     {
         id: "ai-customer-support-platform";
         title: "AI Customer Support Platform";
@@ -165,7 +165,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-customer-support-platform";
         technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "WebSocket"],
@@ -176,7 +176,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
         }
     },
-    // Smart Project Management Tool
+    // Smart Project Management Tool;
     {
         id: "smart-project-management-tool";
         title: "Smart Project Management Tool";
@@ -224,7 +224,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/smart-project-management-tool";
         technologyStack: ["AI/ML", "React", "Node.js", "Real-time Analytics", "Cloud Computing"],
@@ -235,7 +235,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             limitations: ["Limited AI features", "No advanced reporting", "Basic integrations"]
         }
     },
-    // AI-Powered Email Marketing Platform
+    // AI-Powered Email Marketing Platform;
     {
         id: "ai-email-marketing-platform";
         title: "AI Email Marketing Platform";
@@ -283,7 +283,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-email-marketing-platform";
         technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Email APIs"],
@@ -294,7 +294,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
         }
     },
-    // Smart Inventory Management System
+    // Smart Inventory Management System;
     {
         id: "smart-inventory-management-system";
         title: "Smart Inventory Management System";
@@ -342,7 +342,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/smart-inventory-management-system";
         technologyStack: ["Machine Learning", "Predictive Analytics", "React", "Node.js", "IoT Integration"],
@@ -353,7 +353,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             limitations: ["Limited AI features", "Basic reporting", "No API access"]
         }
     },
-    // AI-Powered Social Media Manager
+    // AI-Powered Social Media Manager;
     {
         id: "ai-social-media-manager";
         title: "AI Social Media Manager";
@@ -401,7 +401,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-social-media-manager";
         technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "Social Media APIs"],
@@ -412,7 +412,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
         }
     },
-    // Smart Time Tracking Solution
+    // Smart Time Tracking Solution;
     {
         id: "smart-time-tracking-solution";
         title: "Smart Time Tracking Solution";
@@ -460,7 +460,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/smart-time-tracking-solution";
         technologyStack: ["Machine Learning", "Computer Vision", "React", "Node.js", "Mobile Apps"],
@@ -471,7 +471,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             limitations: ["No AI features", "Basic reporting", "Limited integrations"]
         }
     },
-    // AI-Powered Lead Generation Platform
+    // AI-Powered Lead Generation Platform;
     {
         id: "ai-lead-generation-platform";
         title: "AI Lead Generation Platform";
@@ -519,7 +519,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-lead-generation-platform";
         technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Data Analytics"],
@@ -530,7 +530,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
         }
     },
-    // Smart Document Management System
+    // Smart Document Management System;
     {
         id: "smart-document-management-system";
         title: "Smart Document Management System";
@@ -578,7 +578,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/smart-document-management-system";
         technologyStack: ["OCR", "Machine Learning", "React", "Node.js", "Cloud Storage"],

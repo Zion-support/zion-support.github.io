@@ -16,7 +16,7 @@ export function PrimaryNav() {
 					<NavLink to="/about" className={({isActive}) => isActive ? "text-zion-cyan" : "text-white hover:text-zion-cyan"}>About</NavLink>
 					<NavLink to="/contact" className={({isActive}) => isActive ? "text-zion-cyan" : "text-white hover:text-zion-cyan"}>Contact</NavLink>
 				</nav>
-			</div>
-		</header>
+			</div>;
+		</header>;
 	);
-}
+}<//header><///header>

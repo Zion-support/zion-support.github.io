@@ -1,5 +1,5 @@
 export const EXPANDED_INNOVATIVE_SERVICES = [
-    // AI-Powered Content Creation & Marketing
+    // AI-Powered Content Creation & Marketing;
     {
         id: "ai-content-creation-suite";
         title: "AI Content Creation & Marketing Suite";
@@ -49,7 +49,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["OpenAI GPT-4", "React", "Node.js", "MongoDB", "AWS"],
         integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
@@ -57,9 +57,9 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "400% within 8 months";
         competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
         demoUrl: "https://ziontechgroup.com/demo/ai-content-suite";
-        documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"
+        documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite",
     };
-    // AI-Powered Video Analytics Platform
+    // AI-Powered Video Analytics Platform;
     {
         id: "ai-video-analytics-platform";
         title: "AI Video Analytics & Intelligence Platform";
@@ -109,7 +109,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["TensorFlow", "OpenCV", "Python", "React", "AWS", "Docker"],
         integrations: ["CCTV systems", "IP cameras", "Security platforms", "Analytics tools"],
@@ -117,7 +117,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "350% within 12 months";
         competitors: ["Vintra", "BriefCam", "Avigilon", "Milestone Systems"]
     },
-    // AI-Powered Financial Planning Platform
+    // AI-Powered Financial Planning Platform;
     {
         id: "ai-financial-planning-platform";
         title: "AI Financial Planning & Wealth Management Platform";
@@ -167,7 +167,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Plaid", "Yodlee", "TD Ameritrade", "Charles Schwab", "Fidelity"],
@@ -175,7 +175,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "500% within 18 months";
         competitors: ["Betterment", "Wealthfront", "Personal Capital", "M1 Finance"]
     },
-    // AI-Powered Healthcare Diagnostics Platform
+    // AI-Powered Healthcare Diagnostics Platform;
     {
         id: "ai-healthcare-diagnostics-platform";
         title: "AI Healthcare Diagnostics & Medical Imaging Platform";
@@ -225,7 +225,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["TensorFlow", "PyTorch", "Python", "React", "DICOM", "HL7"],
         integrations: ["PACS systems", "EHR systems", "Radiology information systems"],
@@ -233,7 +233,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "400% within 24 months";
         competitors: ["Aidoc", "Zebra Medical Vision", "Butterfly Network", "Enlitic"]
     },
-    // AI-Powered Supply Chain Optimization
+    // AI-Powered Supply Chain Optimization;
     {
         id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization & Predictive Analytics Platform";
@@ -283,7 +283,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"],
@@ -291,7 +291,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "450% within 15 months";
         competitors: ["Llamasoft", "E2open", "Kinaxis", "Blue Yonder"]
     },
-    // AI-Powered Legal Research & Document Analysis
+    // AI-Powered Legal Research & Document Analysis;
     {
         id: "ai-legal-research-platform";
         title: "AI Legal Research & Document Analysis Platform";
@@ -341,7 +341,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["NLP", "Python", "React", "Node.js", "Elasticsearch", "PostgreSQL"],
         integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
@@ -349,7 +349,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "350% within 12 months";
         competitors: ["Casetext", "ROSS Intelligence", "Harvey", "DoNotPay"]
     },
-    // AI-Powered Real Estate Analytics Platform
+    // AI-Powered Real Estate Analytics Platform;
     {
         id: "ai-real-estate-analytics";
         title: "AI Real Estate Analytics & Investment Platform";
@@ -399,7 +399,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],
@@ -407,7 +407,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "400% within 18 months";
         competitors: ["Zillow", "Redfin", "Realtor.com", "PropStream", "RealtyMogul"]
     },
-    // AI-Powered HR & Talent Management Platform
+    // AI-Powered HR & Talent Management Platform;
     {
         id: "ai-hr-talent-management";
         title: "AI HR & Talent Management Platform";
@@ -457,7 +457,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack"],
@@ -465,7 +465,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "350% within 12 months";
         competitors: ["Workday", "BambooHR", "Greenhouse", "Lever", "Hired"]
     },
-    // AI-Powered Energy Management Platform
+    // AI-Powered Energy Management Platform;
     {
         id: "ai-energy-management-platform";
         title: "AI Energy Management & Sustainability Platform";
@@ -515,7 +515,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "IoT protocols", "PostgreSQL"],
         integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage"],
@@ -523,7 +523,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "400% within 18 months";
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"]
     },
-    // AI-Powered Manufacturing Quality Control
+    // AI-Powered Manufacturing Quality Control;
     {
         id: "ai-manufacturing-quality-control";
         title: "AI Manufacturing Quality Control & Predictive Maintenance Platform";
@@ -573,7 +573,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
         integrations: ["MES systems", "ERP systems", "PLC controllers", "Quality control equipment"],
@@ -581,7 +581,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "450% within 15 months";
         competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation"]
     },
-    // AI-Powered Education & Learning Platform
+    // AI-Powered Education & Learning Platform;
     {
         id: "ai-education-learning-platform";
         title: "AI Education & Personalized Learning Platform";
@@ -631,7 +631,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
@@ -639,7 +639,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "300% within 12 months";
         competitors: ["Duolingo", "Khan Academy", "Coursera", "Udemy", "Pluralsight"]
     },
-    // AI-Powered Agriculture & Precision Farming
+    // AI-Powered Agriculture & Precision Farming;
     {
         id: "ai-agriculture-precision-farming";
         title: "AI Agriculture & Precision Farming Platform";
@@ -689,7 +689,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
         integrations: ["Weather APIs", "Satellite imagery", "Farm equipment", "Soil sensors"],
@@ -697,7 +697,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "400% within 18 months";
         competitors: ["John Deere", "Climate Corporation", "Farmers Edge", "Granular"]
     },
-    // AI-Powered Transportation & Logistics Optimization
+    // AI-Powered Transportation & Logistics Optimization;
     {
         id: "ai-transportation-logistics";
         title: "AI Transportation & Logistics Optimization Platform";
@@ -747,7 +747,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["TMS systems", "GPS tracking", "Fuel cards", "Maintenance systems"],
@@ -755,7 +755,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "400% within 15 months";
         competitors: ["Convoy", "KeepTruckin", "Samsara", "Verizon Connect"]
     },
-    // AI-Powered Insurance & Risk Assessment
+    // AI-Powered Insurance & Risk Assessment;
     {
         id: "ai-insurance-risk-assessment";
         title: "AI Insurance & Risk Assessment Platform";
@@ -805,7 +805,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Policy management systems", "Claims systems", "CRM systems", "Payment gateways"],
@@ -813,7 +813,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "450% within 18 months";
         competitors: ["Lemonade", "Root Insurance", "Metromile", "Trov"]
     },
-    // AI-Powered Gaming & Entertainment Platform
+    // AI-Powered Gaming & Entertainment Platform;
     {
         id: "ai-gaming-entertainment";
         title: "AI Gaming & Entertainment Platform";
@@ -863,7 +863,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Unity", "Unreal Engine", "Steam", "Twitch", "Discord"],

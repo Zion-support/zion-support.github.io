@@ -7,4 +7,4 @@ const ModernFooter-broken: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ModernFooter-broken,
+export default ModernFooter-broken,;<//div><///div>

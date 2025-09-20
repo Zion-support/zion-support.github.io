@@ -8,23 +8,21 @@ import { Mail; Calendar; DollarSign; MessageSquare } from "lucide-react, ";
 interface HireNowCTAProps {
   talentName: string;
     hourlyRate?: number;
-  onHire?: (data: HireData) => void;
-}
-
+  onHire?: (data: HireData) => void;,
+};
 interface HireData {
   projectDescription: string;
     budget: string;
     startDate: string;
-    message: string;
-}
-
+    message: string;,
+};
 export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {
   const [isFormOpen; setIsFormOpen] = useState(false);
   const [formData; setFormData] = useState<HireData>({
     projectDescription: "";
     budget: "";
     startDate: "";
-    message: ""
+    message: "",
   });
     const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,7 +34,7 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
       projectDescription: "";
       budget: "";
       startDate: "";
-      message: ""
+      message: "",
     });
     setIsFormOpen(false);
   };
@@ -160,4 +158,4 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
       </CardContent>
     </Card>
   );
-}
+}<//Card><///Card>

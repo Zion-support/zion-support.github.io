@@ -8,24 +8,24 @@ import { RocketLaunchIcon;
 } from "@heroicons/react/24/outline, ";
 
 export function CTASection() {
-  const ctaOptions = [
-    {
+  const ctaOptions = [;
+    {;
       icon: PhoneIcon; title: "Call Us";
       description: "Speak directly with our experts", action: "+1 302 464 0950";
       href: "tel:+13024640950",
-      color: "from-zion-cyan to-zion-blue"
+      color: "from-zion-cyan to-zion-blue",
     };
     {
       icon: EnvelopeIcon; title: "Email Us";
       description: "Send us a detailed message", action: "kleber@ziontechgroup.com";
       href: "mailto:kleber@ziontechgroup.com",
-      color: "from-zion-purple to-zion-cyan"
+      color: "from-zion-purple to-zion-cyan",
     };
     {
       icon: CalendarIcon; title: "Schedule a Call";
       description: "Book a consultation meeting", action: "Book Now",
       href: "/contact",
-      color: "from-zion-blue to-zion-purple"
+      color: "from-zion-blue to-zion-purple",
     }
   ];
     const containerVariants = {
@@ -151,4 +151,4 @@ export function CTASection() {
       </div>
     </section>
   );
-}
+}<//section><///section>

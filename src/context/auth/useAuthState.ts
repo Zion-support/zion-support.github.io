@@ -13,7 +13,7 @@ interface User {
 
 interface AuthTokens {
   accessToken: string | null;
-    refreshToken: string | null;
+    refreshToken: string | null;,
 }
 
 export const useAuthState = () => {
@@ -22,7 +22,7 @@ export const useAuthState = () => {
   const [onboardingStep; setOnboardingStep] = useState(0);
   const [tokens; setTokens] = useState<AuthTokens>({
     accessToken: null;
-    refreshToken: null;
+    refreshToken: null;,
   });
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export const useAuthState = () => {
               setUser(parsed.user);
               setTokens({
                 accessToken: parsed.token;
-                refreshToken: parsed.refreshToken || null;
+                refreshToken: parsed.refreshToken || null;,
               });
             }
           }

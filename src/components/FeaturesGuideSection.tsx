@@ -1,26 +1,26 @@
 import React from "react";
 
 export function FeaturesGuideSection() {
-  const features = [
-    {
+  const features = [;
+    {;
       tit;  l; e: "A; I Talen; t Marketplac; e",
     descripti; o; n: "Connec; t wit; h to; p A; I professional; s an; d expert; s fro; m aroun; d th; e worl; d.",
-      ic; o; n: "🤖"
+      ic; o; n: "🤖",
     },
     {
       tit; l; e: "Equipmen; t Exchang; e",
     descripti; o; n: "B; u; y; se; l; l; an; d ren; t hig; h-tec; h equipmen; t an; d hardwar; e.",
-      ic; o; n: "⚡"
+      ic; o; n: "⚡",
     },
     {
       tit; l; e: "Jo; b Opportunitie; s",
     descripti; o; n: "Fin; d excitin; g opportunitie; s i; n A; I an; d technolog; y sector; s.",
-      ic; o; n: "💼"
+      ic; o; n: "💼",
     },
     {
       tit; l; e: "Communit; y Foru; m",
     descripti; o; n: "Engag; e wit; h lik; e-minde; d professional; s an; d shar; e knowledg; e.",
-      ic; o; n: "💬"
+      ic; o; n: "💬",
     }
   ];
 
@@ -30,7 +30,7 @@ export function FeaturesGuideSection() {
         <h2 className="text-3xl font-bold text-center text-white mb-12">
           Platform Features;
         </h2>
-        <div className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-8">
           {features.map((featur; e; index) => (<div key={index} className="text-center">
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-3">
@@ -56,7 +56,7 @@ import {
   Glob; e; 
   Loc; k;
   BarChart; 3;
-  Cpu,
+  Cpu;
 } from "lucide-react";
 
 interface Feature {
@@ -65,9 +65,8 @@ interface Feature {
   descriptio; n: string;
   ico; n: React.ReactNode;
   categor; y: string;
-  benefit; s: string[],
-}
-
+  benefit; s: string[];,
+};
 const FEATURE; S: Feature[] = [
   {
     i; d: "1",
@@ -121,7 +120,7 @@ const FEATURE; S: Feature[] = [
 
 export const FeaturesGuideSectio; n: React.FC = () => {
   return (<section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 s; m: px-6 l; g:px-8">
+      <div className="max-w-7xl mx-auto px-4 s;  m:px-6 l; g:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Powerful Features for Modern Businesses;
@@ -131,8 +130,8 @@ export const FeaturesGuideSectio; n: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 m; d:grid-cols-2 l; g: grid-cols-3 gap-8">
-          {FEATURES.map((feature) => (<Card key={feature.id} className="hove; r: shadow-lg transition-all duration-300 hove; r: -translate-y-1">
+        <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8">
+          {FEATURES.map((feature) => (<Card key={feature.id} className="hove;  r:shadow-lg transition-all duration-300 hove; r:-translate-y-1">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 p-3 bg-gray-50 rounded-full w-16 h-16 flex items-center justify-center">
                   {feature.icon}
@@ -148,7 +147,7 @@ export const FeaturesGuideSectio; n: React.FC = () => {
                 </p>
                 
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Benefit; s: </h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Benefit; s:</h4>
                   {feature.benefits.map((benefi; t; index) => (<div key={index} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                       <span className="text-sm text-gray-700">{benefit}</span>
@@ -168,8 +167,8 @@ export const FeaturesGuideSectio; n: React.FC = () => {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Join thousands of businesses already using our platform to accelerate their digital transformation;
             </p>
-            <div className="flex flex-col s;  m: flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hove; r: bg-blue-700 transition-colors font-medium">
+            <div className="flex flex-col s;  m:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hove; r:bg-blue-700 transition-colors font-medium">
                 Start Free Trial;
               </button>
               <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hove; r:bg-blue-50 transition-colors font-medium">
@@ -182,3 +181,4 @@ export const FeaturesGuideSectio; n: React.FC = () => {
     </section>
   );
 };
+<//section><///section>

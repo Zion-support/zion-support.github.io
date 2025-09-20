@@ -18,7 +18,7 @@ export interface EmergingTechService {
     phone: string; email: string; website: string; address: string,
   };
   rating: number; reviewCount: number; launchDate: string;
-  status: "Active" | "Beta" | "Coming Soon", innovationScore: number;
+  status: "Active" | "Beta" | "Coming Soon", innovationScore: number;,
 }
 
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
@@ -33,7 +33,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       monthly: 299;
       yearly: 2990;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Multi-consensus mechanisms",
@@ -79,12 +79,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/enterprise-blockchain",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.8; reviewCount: 156;
     launchDate: "2024-01-01",
     status: "Active",
-    innovationScore: 92;
+    innovationScore: 92;,
   },
 
   // IoT Services;
@@ -97,7 +97,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 199; yearly: 1990;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Device management and provisioning",
@@ -138,12 +138,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/iot-ecosystem",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.7; reviewCount: 234;
     launchDate: "2023-12-01",
     status: "Active",
-    innovationScore: 89;
+    innovationScore: 89;,
   },
 
   // Edge Computing Services;
@@ -156,7 +156,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 249; yearly: 2490;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Distributed edge nodes",
@@ -197,12 +197,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-computing",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.9; reviewCount: 178;
     launchDate: "2024-02-01",
     status: "Active",
-    innovationScore: 94;
+    innovationScore: 94;,
   },
 
   // 5G Services;
@@ -215,7 +215,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 399; yearly: 3990;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Network performance monitoring",
@@ -256,12 +256,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/5g-optimization",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.8; reviewCount: 145;
     launchDate: "2024-01-15",
     status: "Active",
-    innovationScore: 91;
+    innovationScore: 91;,
   },
 
   // AR/VR Services;
@@ -274,7 +274,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 179; yearly: 1790;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "3D content creation tools",
@@ -315,12 +315,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ar-vr-platform",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.6; reviewCount: 189;
     launchDate: "2023-11-01",
     status: "Active",
-    innovationScore: 88;
+    innovationScore: 88;,
   },
 
   // Robotics Services;
@@ -333,7 +333,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 0; yearly: 0; oneTime: 25000;
       currency: "$",
-      pricingModel: "one-time"
+      pricingModel: "one-time",
     },
     features: [
       "AI-powered decision making",
@@ -374,12 +374,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/intelligent-robotics",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.9; reviewCount: 67;
     launchDate: "2024-01-01",
     status: "Active",
-    innovationScore: 95;
+    innovationScore: 95;,
   },
 
   // Quantum Computing Services;
@@ -392,7 +392,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 599; yearly: 5990;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Quantum circuit simulator",
@@ -433,12 +433,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-simulation",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.9; reviewCount: 89;
     launchDate: "2024-01-01",
     status: "Active",
-    innovationScore: 96;
+    innovationScore: 96;,
   },
 
   // Biotechnology Services;
@@ -451,7 +451,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 449; yearly: 4490;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "AI-powered drug discovery",
@@ -492,12 +492,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-biotech",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.8; reviewCount: 123;
     launchDate: "2023-12-01",
     status: "Active",
-    innovationScore: 93;
+    innovationScore: 93;,
   },
 
   // Green Technology Services;
@@ -510,7 +510,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 199; yearly: 1990;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Renewable energy optimization",
@@ -551,12 +551,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/sustainable-tech",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.7; reviewCount: 167;
     launchDate: "2024-01-01",
     status: "Active",
-    innovationScore: 90;
+    innovationScore: 90;,
   },
 
   // Space Technology Services;
@@ -569,7 +569,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 799; yearly: 7990;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Satellite mission planning",
@@ -610,12 +610,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-tech",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.9; reviewCount: 78;
     launchDate: "2024-02-01",
     status: "Active",
-    innovationScore: 97;
+    innovationScore: 97;,
   },
 
   // NEW EMERGING TECHNOLOGY SERVICES;
@@ -628,7 +628,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 3000; yearly: 30000;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Quantum neural networks",
@@ -672,12 +672,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.9; reviewCount: 89;
     launchDate: "2024-03-01",
     status: "Active",
-    innovationScore: 95;
+    innovationScore: 95;,
   },
 
   {
@@ -689,7 +689,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 2000; yearly: 20000;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Satellite mission planning",
@@ -733,12 +733,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.8; reviewCount: 67;
     launchDate: "2024-02-15",
     status: "Active",
-    innovationScore: 93;
+    innovationScore: 93;,
   },
 
   {
@@ -750,7 +750,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 2500; yearly: 25000;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "EEG signal processing",
@@ -794,12 +794,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.7; reviewCount: 45;
     launchDate: "2024-01-20",
     status: "Beta",
-    innovationScore: 96;
+    innovationScore: 96;,
   },
 
   {
@@ -811,7 +811,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 1800; yearly: 18000;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Sensor fusion algorithms",
@@ -855,12 +855,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.6; reviewCount: 78;
     launchDate: "2024-02-01",
     status: "Active",
-    innovationScore: 94;
+    innovationScore: 94;,
   },
 
   {
@@ -872,7 +872,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 2200; yearly: 22000;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Quantum key distribution",
@@ -916,12 +916,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.9; reviewCount: 34;
     launchDate: "2024-01-10",
     status: "Beta",
-    innovationScore: 97;
+    innovationScore: 97;,
   },
 
   {
@@ -933,7 +933,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 1600; yearly: 16000;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Consciousness simulation engines",
@@ -977,12 +977,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.8; reviewCount: 23;
     launchDate: "2024-01-05",
     status: "Beta",
-    innovationScore: 98;
+    innovationScore: 98;,
   },
 
   {
@@ -994,7 +994,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 2800; yearly: 28000;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Quantum portfolio optimization",
@@ -1038,12 +1038,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.9; reviewCount: 56;
     launchDate: "2024-02-20",
     status: "Active",
-    innovationScore: 95;
+    innovationScore: 95;,
   },
 
   {
@@ -1055,7 +1055,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 1500; yearly: 15000;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Autonomous production lines",
@@ -1099,12 +1099,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.7; reviewCount: 89;
     launchDate: "2024-01-15",
     status: "Active",
-    innovationScore: 93;
+    innovationScore: 93;,
   },
 
   {
@@ -1116,7 +1116,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     price: {
       monthly: 3200; yearly: 32000;
       currency: "$",
-      pricingModel: "subscription"
+      pricingModel: "subscription",
     },
     features: [
       "Quantum molecular modeling",
@@ -1160,12 +1160,12 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008; Middletown DE 19709",
     },
     rating: 4.9; reviewCount: 67;
     launchDate: "2024-02-25",
     status: "Active",
-    innovationScore: 96;
+    innovationScore: 96;,
   }
 ];
 
@@ -1190,7 +1190,7 @@ export const getServicesByInnovationScore = (minScore: number) => {
     competitors: ["Magic Leap", "Microsoft HoloLens", "RealView", "Looking Glass"],
     marketTrend: "Growing market with increasing demand for immersive experiences",
     innovationLevel: "Advanced holographic platform for commercial applications",
-    uniqueValue: "First comprehensive platform for creating and distributing holographic content across multiple display types"
+    uniqueValue: "First comprehensive platform for creating and distributing holographic content across multiple display types",
   }
 ];
 

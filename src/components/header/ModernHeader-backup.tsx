@@ -7,4 +7,4 @@ const ModernHeader-backup: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ModernHeader-backup,
+export default ModernHeader-backup,;<//div><///div>

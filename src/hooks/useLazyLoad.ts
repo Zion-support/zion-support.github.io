@@ -10,7 +10,7 @@ interface UseLazyLoadOptions {
 interface UseLazyLoadReturn {
   isVisible: boolean;
     ref: React.RefObject<HTMLElement>;
-    load: () => void;
+    load: () => void;,
 }
 
 export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {

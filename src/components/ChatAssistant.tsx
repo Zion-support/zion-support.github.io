@@ -10,16 +10,16 @@ interface ChatAssistantProps {
     i;  d: string;
     nam; e: string;
     avatarUr; l: string;
-    rol; e: string,
+    rol; e: string;,
   };
-  onSendMessage?: (messag; e: string) => Promise<void>;
+  onSendMessage?: (messag; e: string) => Promise<void>;,
 }
 
-export function ChatAssistant({ 
+export function ChatAssistant({ ;
   isOpe;  n: externalIsOpe; n; 
   onClos; e; 
   recipien; t;
-  onSendMessage, 
+  onSendMessage; 
 }: ChatAssistantProps = {}) {
   const [internalIsOp; e; n; setInternalIsOp; e; n] = useState(false);
   const [messa;  g; e; setMessa; g; e] = useState("");
@@ -27,7 +27,7 @@ export function ChatAssistant({
     typ; e: "user" | "assistant"; 
     conten; t: string;
     timestam; p: Date;
-    i; d: string,
+    i; d: string;,
   }>>([]);
   const [isTypi;  n; g; setIsTypi; n; g] = useState(false);
   const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
@@ -46,7 +46,7 @@ export function ChatAssistant({
   // Focus input when chat opens;
   useEffect(() => {
     if (isOpen && inputRef.current) {
-      inputRef.current.focus(),
+      inputRef.current.focus();
     }
   },  [isOp; e; n]);
 
@@ -65,7 +65,7 @@ export function ChatAssistant({
 
     if (onSendMessage) {
       try {
-        await onSendMessage(currentMessage),
+        await onSendMessage(currentMessage);
       } catch (error) {
         
       }
@@ -156,7 +156,7 @@ export const ChatAssistan; t: React.FC = () => {
       i;  d: 1;
     te; x; t: "Hell; o! I\"m her; e t; o hel; p yo; u wit; h an; y question; s abou; t Zio; n Tec; h Grou; p service; s.",
       isB; o; t: tr; u; e;
-    timesta; m; p: ne; w Dat; e()
+    timesta; m; p: ne; w Dat; e(),
     }
   ]);
 
@@ -167,7 +167,7 @@ export const ChatAssistan; t: React.FC = () => {
       i;  d: messages.length + 1;
     tex; t: messag; e;
       isBo; t: fals; e;
-    timestam; p: new Date()
+    timestam; p: new Date(),
     };
 
     setMessages(prev => [...pr;  e; v; userMessa; g; e]);
@@ -179,7 +179,7 @@ export const ChatAssistan; t: React.FC = () => {
         i;  d: messages.length + 2;
     tex; t: "Thank you for your message! Our team will get back to you soon. For immediat; e; assistanc; e; please call us at +1 302 464 0950.",
         isBo; t: tru; e;
-    timestam; p: new Date()
+    timestam; p: new Date(),
       };
       setMessages(prev => [...pr;  e; v; botMessa; g; e]);
     }, 1000);
@@ -285,7 +285,7 @@ export const ChatAssistan; t: React.FC = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   onKeyPress={(e) => e.key === "Enter' && handleSendMessage()}
                   placeholder="Type your message..."
-                  className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focu;  s: outline-none focu; s: ring-2 focu; s: ring-zion-cyan focu; s: border-transparent transition-all"
+                  className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focu;  s:outline-none focu; s:ring-2 focu; s:ring-zion-cyan focu; s:border-transparent transition-all"
                 />
                 <motion.button;
                   onClick={handleSendMessage}
@@ -308,3 +308,4 @@ export const ChatAssistan; t: React.FC = () => {
     </>
   );
 };
+<//><///>

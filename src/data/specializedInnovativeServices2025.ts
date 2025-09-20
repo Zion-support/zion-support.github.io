@@ -2,7 +2,7 @@ export interface ServiceContact {
   phone: string;
     email: string;
     website: string;
-    address: string;
+    address: string;,
 }
 
 export interface SpecializedService {
@@ -25,7 +25,7 @@ export interface SpecializedService {
     scalability: string[];
     estimatedDelivery: string;
     supportLevel: string;
-    innovationScore: number;
+    innovationScore: number;,
 }
 
 // Specialized Innovative Services for 2025;
@@ -63,7 +63,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/digital-twin-platform";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$8;500-20;000/month",
     technologyStack: ["Unity", "Unreal Engine", "IoT Platforms", "Cloud Computing", "AI/ML"],
@@ -71,7 +71,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     scalability: ["Multi-system Support", "Cloud-based Rendering", "Real-time Processing"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "premium";
-    innovationScore: 9.1;
+    innovationScore: 9.1;,
   };
   {
     id: 2;
@@ -106,7 +106,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/federated-learning";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$12;000-30;000/month",
     technologyStack: ["Python", "TensorFlow Federated", "PySyft", "Homomorphic Encryption", "Cloud Computing"],
@@ -114,7 +114,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     scalability: ["Multi-organization Support", "Global Collaboration", "Scalable Training"],
     estimatedDelivery: "10-14 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.3;
+    innovationScore: 9.3;,
   };
   {
     id: 3;
@@ -149,7 +149,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/neuromorphic-computing";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$25;000-60;000/month",
     technologyStack: ["Neuromorphic Hardware", "Spiking Neural Networks", "Event-Driven Computing", "Custom Algorithms"],
@@ -157,7 +157,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     scalability: ["Multi-processor Support", "Distributed Computing", "Scalable Neural Networks"],
     estimatedDelivery: "16-20 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.5;
+    innovationScore: 9.5;,
   };
   {
     id: 4;
@@ -192,7 +192,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/holographic-display";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$15;000-35;000/month",
     technologyStack: ["Holographic Hardware", "3D Rendering", "Computer Vision", "Spatial Computing", "AI"],
@@ -200,7 +200,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     scalability: ["Multi-display Support", "Network Distribution", "Content Scaling"],
     estimatedDelivery: "12-16 weeks";
     supportLevel: "premium";
-    innovationScore: 9.2;
+    innovationScore: 9.2;,
   };
   {
     id: 5;
@@ -235,7 +235,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/ambient-intelligence";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$18;000-40;000/month",
     technologyStack: ["IoT Sensors", "AI/ML", "Edge Computing", "Cloud Platforms", "Context Recognition"],
@@ -243,7 +243,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     scalability: ["Multi-location Support", "Sensor Network Scaling", "Geographic Expansion"],
     estimatedDelivery: "14-18 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.0;
+    innovationScore: 9.0;,
   };
   {
     id: 6;
@@ -278,7 +278,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/swarm-robotics";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$22;000-50;000/month",
     technologyStack: ["ROS", "Python", "Computer Vision", "AI/ML", "Robotics Hardware", "Communication Protocols"],
@@ -286,7 +286,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     scalability: ["Multi-robot Support", "Task Complexity Scaling", "Geographic Expansion"],
     estimatedDelivery: "16-20 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.4;
+    innovationScore: 9.4;,
   };
   {
     id: 7;
@@ -321,7 +321,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/bio-inspired-computing";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$14;000-32;000/month",
     technologyStack: ["Python", "Evolutionary Algorithms", "Genetic Programming", "AI/ML", "Optimization Libraries"],
@@ -329,7 +329,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     scalability: ["Multi-problem Support", "Algorithm Scaling", "Distributed Computing"],
     estimatedDelivery: "10-14 weeks";
     supportLevel: "premium";
-    innovationScore: 8.8;
+    innovationScore: 8.8;,
   };
   {
     id: 8;
@@ -364,7 +364,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/quantum-machine-learning";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     };
     marketPrice: "$35;000-80;000/month",
     technologyStack: ["Qiskit", "PennyLane", "Quantum Hardware", "Python", "Quantum Algorithms", "AI/ML"],
@@ -372,7 +372,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     scalability: ["Quantum Hardware Scaling", "Algorithm Complexity", "Multi-qubit Support"],
     estimatedDelivery: "18-24 weeks";
     supportLevel: "enterprise";
-    innovationScore: 9.6;
+    innovationScore: 9.6;,
   }
 ];
     export default specializedInnovativeServices2025;

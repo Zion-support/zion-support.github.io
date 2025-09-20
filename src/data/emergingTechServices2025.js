@@ -39,7 +39,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$50,000/month (Industry average: $100,000/month)",
         competitors: ["SpaceX Starlink", "OneWeb", "Amazon Project Kuiper", "Telesat"],
@@ -102,7 +102,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$35,000/month (Industry average: $70,000/month)",
         competitors: ["Insitro", "Atomwise", "BenevolentAI", "Recursion Pharmaceuticals"],
@@ -165,7 +165,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$40,000/month (Industry average: $80,000/month)",
         competitors: ["Nano Dimension", "Nanofabrica", "Carbon", "Desktop Metal"],
@@ -228,7 +228,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$30,000/month (Industry average: $60,000/month)",
         competitors: ["Quantum Xchange", "ID Quantique", "Toshiba Quantum", "NTT Quantum"],
@@ -291,7 +291,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$25,000/month (Industry average: $50,000/month)",
         competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
@@ -354,7 +354,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$100,000/month (Industry average: $200,000/month)",
         competitors: ["ITER", "Commonwealth Fusion", "General Fusion", "Helion Energy"],
@@ -417,7 +417,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$15,000/month (Industry average: $30,000/month)",
         competitors: ["Siemens Digital Twin", "GE Digital Twin", "Microsoft Azure Digital Twins", "IBM Digital Twin"],
@@ -480,7 +480,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$20,000/month (Industry average: $40,000/month)",
         competitors: ["Looking Glass", "Light Field Lab", "RealView Imaging", "Leia Inc"],
@@ -543,7 +543,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$18,000/month (Industry average: $35,000/month)",
         competitors: ["Q-CTRL", "Quantum Machines", "Rigetti", "D-Wave"],
@@ -606,7 +606,7 @@ export const emergingTechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$25,000/month (Industry average: $50,000/month)",
         competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC"],

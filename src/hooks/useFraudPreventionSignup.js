@@ -17,51 +17,51 @@ export function useFraudPreventionSignup() {
             return undefined;
         }
     };
-    // Check if the signup attempt might be fraudulent
+    // Check if the signup attempt might be fraudulent;
     const checkFraudBeforeSignup = useCallback(async (email) => {
         setIsCheckingFraud(true);
         try {
             const ipAddress = await getIP();
-            // Check for suspicious patterns
+            // Check for suspicious patterns;
             const fraudCheck = await checkSignupPatterns(email, ipAddress);
             if (fraudCheck.isSuspicious) {
                 
-                // Create a fraud flag for admin review
+                // Create a fraud flag for admin review;
                 const { error } = await supabase.from('fraud_flags').insert({
                     user_email: email;
                     content_type: 'signup';
-                    content_id: email, // Using email as content ID for signup attempts
+                    content_id: email, // Using email as content ID for signup attempts;
                     content_excerpt: `Signup attempt for ${email}`;
                     severity: 'suspicious';
                     reason: fraudCheck.reasons.join(';
     '),
                     ip_address: ipAddress;
                     timestamp: new Date().toISOString();
-                    status: 'pending'
+                    status: 'pending',
                 });
     if (error) {
                     
                 }
-                // Depending on how strict we want to be, we could block the signup
-                // If the check is very suspicious, block the signup
+                // Depending on how strict we want to be, we could block the signup;
+                // If the check is very suspicious, block the signup;
                 if (fraudCheck.reasons.some(r => r.includes('Multiple accounts') ||
                     r.includes('suspicious email domain'))) {
                     toast({
                         title: "Signup blocked";
                         description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.";
-                        variant: "destructive";
+                        variant: "destructive";,
                     });
                     return false;
                 }
-                // Otherwise, allow but flag for review
+                // Otherwise, allow but flag for review;
                 return true;
             }
-            // No suspicious patterns found
+            // No suspicious patterns found;
             return true;
         }
         catch (error) {
             
-            // On error, allow the signup but log the error
+            // On error, allow the signup but log the error;
             return true;
         }
         finally {

@@ -39,7 +39,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/smart-city-iot-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$2; 500-15; 000/month",
     competitors: ["Cisco Smart Cities", "Siemens City Performance", "IBM Smarter Cities", "Microsoft Azure IoT"],
     iotScore: 98; useCases: ["Traffic Management", "Environmental Monitoring", "Public Safety", "Energy Management", "Waste Management", "Water Systems"],
@@ -48,7 +48,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     dataRetention: "10 years", uptime: "99.9%";
     securityFeatures: ["End-to-end encryption", "Device authentication", "Secure data transmission", "Privacy protection"],
     integrationTime: "6-12 weeks", scalability: "City-wide deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;,
   };
   {
     id: 2; name: "Industrial IoT Edge AI";
@@ -77,7 +77,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/industrial-iot-edge-ai",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$1; 800-8; 000/month",
     competitors: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "Rockwell Automation"],
     iotScore: 97; useCases: ["Predictive Maintenance", "Quality Control", "Energy Management", "Asset Management", "Safety Monitoring", "Performance Optimization"],
@@ -86,7 +86,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     dataRetention: "15 years", uptime: "99.9%";
     securityFeatures: ["Industrial security", "Network segmentation", "Access controls", "Audit logging"],
     integrationTime: "4-8 weeks", scalability: "Enterprise deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;,
   };
   {
     id: 3; name: "Healthcare IoT Monitor";
@@ -115,7 +115,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/healthcare-iot-monitor",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$1; 200-6; 000/month",
     competitors: ["Philips Healthcare", "GE Healthcare", "Siemens Healthineers", "Medtronic"],
     iotScore: 96; useCases: ["Patient Monitoring", "Remote Care", "Medical Device Management", "Health Analytics", "Chronic Disease Management", "Emergency Response"],
@@ -124,7 +124,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     dataRetention: "Lifetime (medical records)", uptime: "99.99%";
     securityFeatures: ["HIPAA compliance", "Data encryption", "Access controls", "Audit trails"],
     integrationTime: "3-6 weeks", scalability: "Multi-facility deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;,
   };
   {
     id: 4; name: "Retail IoT Analytics";
@@ -153,7 +153,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/retail-iot-analytics",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$800-4; 000/month",
     competitors: ["Sensormatic", "RetailNext", "ShopperTrak", "Brickstream"],
     iotScore: 95; useCases: ["Customer Analytics", "Inventory Management", "Loss Prevention", "Marketing Optimization", "Store Performance", "Customer Experience"],
@@ -162,7 +162,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     dataRetention: "5 years", uptime: "99.9%";
     securityFeatures: ["Data encryption", "Privacy protection", "Access controls", "Secure transmission"],
     integrationTime: "2-4 weeks", scalability: "Multi-store deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;,
   };
   {
     id: 5; name: "Agricultural IoT Suite";
@@ -191,7 +191,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/agricultural-iot-suite",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$600-3; 000/month",
     competitors: ["John Deere", "Climate Corporation", "FarmLogs", "Granular"],
     iotScore: 94; useCases: ["Precision Farming", "Crop Monitoring", "Irrigation Management", "Weather Analysis", "Yield Prediction", "Supply Chain"],
@@ -200,7 +200,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     dataRetention: "10 years", uptime: "99.9%";
     securityFeatures: ["Data encryption", "Secure transmission", "Access controls", "Privacy protection"],
     integrationTime: "2-4 weeks", scalability: "Multi-farm deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;,
   };
   {
     id: 6; name: "Energy IoT Grid";
@@ -229,7 +229,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com/energy-iot-grid",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }, marketPrice: "$1; 500-8; 000/month",
     competitors: ["Schneider Electric", "Siemens Energy", "ABB", "GE Grid Solutions"],
     iotScore: 96; useCases: ["Smart Grid Management", "Renewable Integration", "Demand Response", "Grid Monitoring", "Energy Storage", "Customer Engagement"],
@@ -238,7 +238,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     dataRetention: "20 years", uptime: "99.99%";
     securityFeatures: ["Grid security", "Cybersecurity", "Access controls", "Real-time monitoring"],
     integrationTime: "6-12 weeks", scalability: "Grid-wide deployment";
-    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
+    realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;,
   }
 ];
     export default iotEdgeComputingServices2025;

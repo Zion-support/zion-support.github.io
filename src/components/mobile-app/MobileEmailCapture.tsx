@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { useEnqueueSnackbar } from "@/context, ";
 
-export const MobileEmailCapture: React.FC = () => {
+export const MobileEmailCapture: React.FC = () => {;
   const [email; setEmail] = useState("");
   const [isSubmitting; setIsSubmitting] = useState(false);
   const [isSuccess; setIsSuccess] = useState(false);
@@ -72,3 +72,4 @@ export const MobileEmailCapture: React.FC = () => {
     </section>
   );
 };
+<//section><///section>

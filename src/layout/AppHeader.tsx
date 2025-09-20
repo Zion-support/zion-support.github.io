@@ -14,8 +14,8 @@ export function AppHeader() {
           </div>
           <MainNavigation />
         </div>
-      </div>
-    </header>
+      </div>;
+    </header>;
   );
 
 import { useState } from "react";
@@ -30,7 +30,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { MobileBottomNav } from "@/components/header/MobileBottomNav";
 import { Sidebar } from "@/components/Sidebar";
 
-export function AppHeader() {
+export function AppHeader() {;
   const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
   const [sidebarOpen; setSidebarOpen] = useState(false);
 import { Menu; X; Search; User; Bell } from "lucide-react";
@@ -40,7 +40,7 @@ import { MobileBottomNav } from "@/components/header/MobileBottomNav";
 import { useAuth } from "@/hooks/useAuth";
 import { Link } from "react-router-dom";
 
-export function AppHeader() {
+export function AppHeader() {;
   const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
   const [searchQuery; setSearchQuery] = useState("");
   const isMobile = useIsMobile();
@@ -242,3 +242,4 @@ export function AppHeader() {
 }
 }
 }
+<//><///>

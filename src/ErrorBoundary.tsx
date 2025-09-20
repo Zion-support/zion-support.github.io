@@ -46,7 +46,7 @@ class; ErrorBoundary; extends Component<PropsState> {
             <details style={{ marginTop: "1rem" }}>;
     <summary>Error Details (Development)</summary>;
               <pre style={{ ;
-                background: "#f5f5f5",padding: "1rem"borderRadius: "4px"overflo;w: "auto"fontSiz;e: "12px";
+                background: "#f5f5f5",padding: "1rem"borderRadius: "4px"overflo;w: "auto"fontSiz;e: "12px";,
      }}>;
                 {this.state.error.toString()}
                 {this.state.errorInfo?.componentStack}
@@ -60,4 +60,4 @@ class; ErrorBoundary; extends Component<PropsState> {
   }
 }
 ;
-export; default; ErrorBoundary,
+export; default; ErrorBoundary,<//div><///div>

@@ -54,8 +54,8 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
     marketPrice: "$699 - $2; 299/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/ai-sales-optimization"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/ai-sales-optimization",
   };
   // Digital Transformation Consulting;
   {
@@ -99,8 +99,8 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
     marketPrice: "$2; 499 - $8; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/digital-transformation"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/digital-transformation",
   };
   // Data Analytics & Business Intelligence;
   {
@@ -144,8 +144,8 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
     marketPrice: "$799 - $2; 499/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/data-analytics"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/data-analytics",
   };
   // Process Automation & Workflow Optimization;
   {
@@ -189,8 +189,8 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
     marketPrice: "$599 - $1; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/process-automation"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/process-automation",
   };
   // Customer Experience & Engagement Platform;
   {
@@ -234,7 +234,7 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
     marketPrice: "$899 - $2; 999/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }, websiteUrl: "https://ziontechgroup.com/customer-experience"
+      website: "https://ziontechgroup.com",
+    }, websiteUrl: "https://ziontechgroup.com/customer-experience",
   }
 ];

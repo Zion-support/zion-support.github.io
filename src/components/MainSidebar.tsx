@@ -45,9 +45,8 @@ const company = [
 
 interface MainSidebarProps {
   className?: string,
-}
-
-export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
+};
+export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {;
   const location = useLocation();
 
   const isActive = (href: string) => {
@@ -202,4 +201,4 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {
   );
 };
 
-export default MainSidebar;
+export default MainSidebar;<//div><///div>

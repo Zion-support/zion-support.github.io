@@ -46,7 +46,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-credit-risk";
         demoUrl: "https://ziontechgroup.com/ai-credit-risk/demo";
@@ -54,7 +54,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$12.5B global credit scoring market";
         competitiveAdvantage: "Alternative data integration and real-time processing";
         roi: "300% ROI within 6 months";
-        implementationTime: "3-4 weeks"
+        implementationTime: "3-4 weeks",
     };
     {
         id: "ai-medical-imaging";
@@ -103,7 +103,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-medical-imaging";
         demoUrl: "https://ziontechgroup.com/ai-medical-imaging/demo";
@@ -111,7 +111,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$2.5B AI medical imaging market";
         competitiveAdvantage: "Multi-modality support and regulatory compliance";
         roi: "400% ROI within 12 months";
-        implementationTime: "6-8 weeks"
+        implementationTime: "6-8 weeks",
     };
     {
         id: "ai-supply-chain-optimization";
@@ -160,7 +160,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-supply-chain";
         demoUrl: "https://ziontechgroup.com/ai-supply-chain/demo";
@@ -168,7 +168,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$8.9B supply chain analytics market";
         competitiveAdvantage: "Real-time optimization and multi-echelon inventory management";
         roi: "250% ROI within 8 months";
-        implementationTime: "4-6 weeks"
+        implementationTime: "4-6 weeks",
     };
     {
         id: "ai-energy-optimization";
@@ -217,7 +217,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-energy-optimization";
         demoUrl: "https://ziontechgroup.com/ai-energy-optimization/demo";
@@ -225,7 +225,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$6.8B energy management systems market";
         competitiveAdvantage: "AI-powered predictive optimization and renewable integration";
         roi: "280% ROI within 10 months";
-        implementationTime: "5-7 weeks"
+        implementationTime: "5-7 weeks",
     };
     {
         id: "ai-legal-document-analysis";
@@ -274,7 +274,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-legal-analysis";
         demoUrl: "https://ziontechgroup.com/ai-legal-analysis/demo";
@@ -282,7 +282,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$1.2B legal AI market";
         competitiveAdvantage: "Advanced NLP and comprehensive risk assessment";
         roi: "320% ROI within 9 months";
-        implementationTime: "4-5 weeks"
+        implementationTime: "4-5 weeks",
     };
     {
         id: "ai-real-estate-analytics";
@@ -331,7 +331,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-real-estate";
         demoUrl: "https://ziontechgroup.com/ai-real-estate/demo";
@@ -339,7 +339,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$4.2B real estate analytics market";
         competitiveAdvantage: "Multi-market analysis and predictive modeling";
         roi: "260% ROI within 7 months";
-        implementationTime: "3-4 weeks"
+        implementationTime: "3-4 weeks",
     };
     {
         id: "ai-personalized-learning";
@@ -388,7 +388,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-personalized-learning";
         demoUrl: "https://ziontechgroup.com/ai-personalized-learning/demo";
@@ -396,7 +396,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$3.2B adaptive learning market";
         competitiveAdvantage: "Advanced personalization algorithms and comprehensive analytics";
         roi: "240% ROI within 8 months";
-        implementationTime: "4-6 weeks"
+        implementationTime: "4-6 weeks",
     };
     {
         id: "ai-predictive-maintenance";
@@ -445,7 +445,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance";
         demoUrl: "https://ziontechgroup.com/ai-predictive-maintenance/demo";
@@ -453,7 +453,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$7.9B predictive maintenance market";
         competitiveAdvantage: "Advanced ML algorithms and comprehensive IoT integration";
         roi: "350% ROI within 12 months";
-        implementationTime: "6-8 weeks"
+        implementationTime: "6-8 weeks",
     };
     {
         id: "ai-retail-optimization";
@@ -502,7 +502,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-retail-optimization";
         demoUrl: "https://ziontechgroup.com/ai-retail-optimization/demo";
@@ -510,7 +510,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$5.8B retail AI market";
         competitiveAdvantage: "Real-time optimization and comprehensive retail analytics";
         roi: "270% ROI within 9 months";
-        implementationTime: "4-5 weeks"
+        implementationTime: "4-5 weeks",
     };
     {
         id: "ai-logistics-optimization";
@@ -559,7 +559,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-logistics";
         demoUrl: "https://ziontechgroup.com/ai-logistics/demo";
@@ -567,7 +567,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$4.8B logistics AI market";
         competitiveAdvantage: "Advanced route optimization and real-time fleet management";
         roi: "290% ROI within 10 months";
-        implementationTime: "5-6 weeks"
+        implementationTime: "5-6 weeks",
     };
     {
         id: "ai-hr-talent-management";
@@ -616,7 +616,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-hr-talent";
         demoUrl: "https://ziontechgroup.com/ai-hr-talent/demo";
@@ -624,7 +624,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$3.6B HR AI market";
         competitiveAdvantage: "Comprehensive talent lifecycle management and advanced analytics";
         roi: "250% ROI within 8 months";
-        implementationTime: "4-6 weeks"
+        implementationTime: "4-6 weeks",
     };
     {
         id: "ai-marketing-automation";
@@ -673,7 +673,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/ai-marketing-automation";
         demoUrl: "https://ziontechgroup.com/ai-marketing-automation/demo";
@@ -681,6 +681,6 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$6.4B marketing automation market";
         competitiveAdvantage: "Advanced personalization and comprehensive journey optimization";
         roi: "280% ROI within 8 months";
-        implementationTime: "3-5 weeks"
+        implementationTime: "3-5 weeks",
     }
 ];

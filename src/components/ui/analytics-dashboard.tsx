@@ -16,9 +16,8 @@ interface AnalyticsDashboardProps {
   isExpanded?: boolean;
   onMetricClick?: (metricId: string) => void;
     className?: string,
-}
-
-export function AnalyticsDashboard({
+};
+export function AnalyticsDashboard({;
   enabled = true;
   isExpanded = false;
   onMetricClick;
@@ -41,7 +40,7 @@ export function AnalyticsDashboard({
       setMetrics(prev => ({
         ...prev;
         revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500;
-        growth: prev.growth + (Math.random() * 2 - 1)
+        growth: prev.growth + (Math.random() * 2 - 1),
       }));
      }, 5000);
 
@@ -71,7 +70,7 @@ export function AnalyticsDashboard({
       ...prev;
       totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;
       revenue: prev.revenue + Math.floor(Math.random() * 5000) - 2500;
-      growth: prev.growth + (Math.random() * 2 - 1)
+      growth: prev.growth + (Math.random() * 2 - 1),
     }));
     setIsLoading(false);
   }, []);
@@ -274,4 +273,4 @@ export function AnalyticsDashboard({
       </AnimatePresence>
     </motion.div>
   );
-}
+}<//motion.div><///motion.div>

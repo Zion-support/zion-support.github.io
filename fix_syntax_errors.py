@@ -1,72 +1,120 @@
 #!/usr/bin/env python3
 """
-Fix TypeScript syntax errors by replacing semicolons with commas in function parameters
+Fix syntax errors in TypeScript and JavaScript files
 """
-
 import os
 import re
-import subprocess
-from pathlib import Path
+import glob
 
-def fix_syntax_errors():
-    """Fix common TypeScript syntax errors"""
-    
-    # Find all TypeScript files
-    ts_files = []
-    for root, dirs, files in os.walk('src'):
-        for file in files:
-            if file.endswith(('.ts', '.tsx')):
-                ts_files.append(os.path.join(root, file))
-    
-    print(f"Found {len(ts_files)} TypeScript files to process")
-    
-    fixed_files = 0
-    total_fixes = 0
-    
-    for file_path in ts_files:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            original_content = content
-            
-            # Fix function parameter syntax: (param1; param2) -> (param1, param2)
-            content = re.sub(r'\(([^)]*);([^)]*)\)', r'(\1,\2)', content)
-            
-            # Fix object destructuring: { prop1; prop2 } -> { prop1, prop2 }
-            content = re.sub(r'\{([^}]*);([^}]*)\}', r'{\1,\2}', content)
-            
-            # Fix array syntax: [item1; item2] -> [item1, item2]
-            content = re.sub(r'\[([^\]]*);([^\]]*)\]', r'[\1,\2]', content)
-            
-            # Fix specific patterns that are common
-            patterns = [
-                # Function parameters with semicolons
-                (r'(\w+):\s*(\w+);\s*(\w+):\s*(\w+)', r'\1: \2, \3: \4'),
-                # Object properties with semicolons
-                (r'(\w+):\s*([^,;]+);\s*(\w+):\s*([^,;]+)', r'\1: \2, \3: \4'),
-                # Array elements with semicolons
-                (r'(\d+);\s*(\d+)', r'\1, \2'),
-                # String literals with semicolons
-                (r'"([^"]+)";\s*"([^"]+)"', r'"\1", "\2"'),
-            ]
-            
-            for pattern, replacement in patterns:
-                content = re.sub(pattern, replacement, content)
-            
-            # Only write if content changed
-            if content != original_content:
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(content)
-                fixed_files += 1
-                changes = len(re.findall(r';', original_content)) - len(re.findall(r';', content))
-                total_fixes += changes
-                print(f"Fixed {file_path}: {changes} changes")
+def fix_tsx_jsx_syntax(file_path):
+    """Fix common syntax errors in TSX/JSX files"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
         
-        except Exception as e:
-            print(f"Error processing {file_path}: {e}")
+        original_content = content
+        
+        # Fix common syntax issues
+        # Fix missing semicolons after interface declarations
+        content = re.sub(r'(interface \w+ \{[^}]*\})\s*$', r'\1;', content, flags=re.MULTILINE)
+        
+        # Fix missing semicolons after type declarations
+        content = re.sub(r'(type \w+ = [^;]*)\s*$', r'\1;', content, flags=re.MULTILINE)
+        
+        # Fix missing semicolons after export statements
+        content = re.sub(r'(export [^;]*)\s*$', r'\1;', content, flags=re.MULTILINE)
+        
+        # Fix JSX syntax issues - ensure proper closing tags
+        content = re.sub(r'<([^>]+)>([^<]*)\s*$', r'<\1>\2</\1>', content)
+        
+        # Fix missing commas in object literals
+        content = re.sub(r'(\w+):\s*([^,\n}]+)\s*\n(\s*\})', r'\1: \2,\n\3', content)
+        
+        # Fix missing commas in arrays
+        content = re.sub(r'(\w+)\s*\n(\s*\])', r'\1,\n\2', content)
+        
+        # Only write if content changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+        
+        return False
+        
+    except Exception as e:
+        print(f"Error fixing {file_path}: {e}")
+        return False
+
+def fix_js_syntax(file_path):
+    """Fix common syntax errors in JS files"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        original_content = content
+        
+        # Fix missing commas in object literals
+        content = re.sub(r'(\w+):\s*([^,\n}]+)\s*\n(\s*\})', r'\1: \2,\n\3', content)
+        
+        # Fix missing commas in arrays
+        content = re.sub(r'(\w+)\s*\n(\s*\])', r'\1,\n\2', content)
+        
+        # Fix missing semicolons
+        content = re.sub(r'(\w+)\s*$', r'\1;', content, flags=re.MULTILINE)
+        
+        # Only write if content changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+        
+        return False
+        
+    except Exception as e:
+        print(f"Error fixing {file_path}: {e}")
+        return False
+
+def main():
+    """Main function to fix syntax errors"""
+    print("🔧 Fixing syntax errors in TypeScript and JavaScript files...")
     
-    print(f"\nFixed {total_fixes} syntax errors in {fixed_files} files")
+    # Get all TSX files
+    tsx_files = glob.glob('src/**/*.tsx', recursive=True)
+    jsx_files = glob.glob('src/**/*.jsx', recursive=True)
+    ts_files = glob.glob('src/**/*.ts', recursive=True)
+    js_files = glob.glob('src/**/*.js', recursive=True)
+    
+    all_files = tsx_files + jsx_files + ts_files + js_files
+    
+    print(f"📋 Found {len(all_files)} files to check")
+    
+    fixed_count = 0
+    
+    for file_path in all_files:
+        print(f"🔍 Checking {file_path}...")
+        
+        if file_path.endswith(('.tsx', '.jsx')):
+            if fix_tsx_jsx_syntax(file_path):
+                print(f"✅ Fixed {file_path}")
+                fixed_count += 1
+        elif file_path.endswith(('.ts', '.js')):
+            if fix_js_syntax(file_path):
+                print(f"✅ Fixed {file_path}")
+                fixed_count += 1
+    
+    print(f"\n🎉 Fixed syntax errors in {fixed_count} files!")
+    
+    # Test build after fixes
+    print("🧪 Testing build after syntax fixes...")
+    import subprocess
+    try:
+        result = subprocess.run(['npm', 'run', 'build'], capture_output=True, text=True, timeout=180)
+        if result.returncode == 0:
+            print("✅ Build test passed!")
+        else:
+            print(f"⚠️  Build test failed: {result.stderr}")
+    except Exception as e:
+        print(f"❌ Build test error: {e}")
 
 if __name__ == "__main__":
-    fix_syntax_errors()
+    main()

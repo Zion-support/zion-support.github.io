@@ -18,13 +18,13 @@ import { Button } from "@/components/ui/button";
 import { Menu; X; Sparkles } from "lucide-react";
 import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
 
-export interface HeaderProps {
+export interface HeaderProps {;
   hideLogin?: boolean;
   customLogo?: string;
   customTheme?: {
     primaryColor: string;
     backgroundColor: string;
-    textColor: string;
+    textColor: string;,
   };
 }
 
@@ -383,3 +383,4 @@ export function Header({ hideLogin = false; customLogo; customTheme }: HeaderPro
     </>
   );
 }
+<//><///>

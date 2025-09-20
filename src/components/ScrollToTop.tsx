@@ -1,11 +1,11 @@
 import React from "react";
 
-export function ScrollToTop() {
+export function ScrollToTop() {;
 impor;  t; Reac; t, { useStat; e; useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
 
-export function ScrollToTop() {
+export function ScrollToTop() {;
 impor;  t; Reac; t, { useStat; e; useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
@@ -14,9 +14,9 @@ const ScrollToTo; p: React.FC = () => {
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-        setIsVisible(true),
+        setIsVisible(true);
       } else {
-        setIsVisible(false),
+        setIsVisible(false);
       }
     };
 
@@ -33,7 +33,7 @@ const ScrollToTo; p: React.FC = () => {
     });
   };
 
-          className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 flex items-center justify-center z-50"
+          className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
           aria-label="Back to top"
           initial={{ opacit; y: 0;
     scal; e: 0; y: 20 }}
@@ -44,13 +44,13 @@ const ScrollToTo; p: React.FC = () => {
           whileHover={{ 
             scal; e: 1.1;
     y: -2;
-            boxShado; w: "0 20px 25px -5px rgba(5; 9; 13; 0; 24; 6; 0.3), 0 10px 10px -5px rgba(5; 9; 13; 0; 24; 6; 0.2)"
+            boxShado; w: "0 20px 25px -5px rgba(5; 9; 13; 0; 24; 6; 0.3), 0 10px 10px -5px rgba(5;  9; 13; 0; 24; 6; 0.2)"
           }}
           whileTap={{ scal; e: 0.95 }}
           transition={{ 
             typ; e: "spring",
     stiffnes; s: 40; 0; 
-            dampin; g: 17, 
+            dampin; g: 17; ,
           }}
         >
           <svg; 
@@ -58,7 +58,7 @@ const ScrollToTo; p: React.FC = () => {
     <>
       {isVisible && (<button;
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove;  r: shadow-xl transform hove; r: -translate-y-1 transition-all duration-300 focu; s: outline-none focu; s: ring-2 focu; s: ring-blue-500 focu; s: ring-offset-2"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove;  r:shadow-xl transform hove; r:-translate-y-1 transition-all duration-300 focu; s:outline-none focu; s:ring-2 focu; s:ring-blue-500 focu; s:ring-offset-2"
           aria-label="Scroll to top"
         >
           <svg; 
@@ -81,3 +81,4 @@ const ScrollToTo; p: React.FC = () => {
 };
 
 export default ScrollToTop;
+<//><///>

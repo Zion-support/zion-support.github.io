@@ -5,13 +5,11 @@ interface AIInsight {
   id: string; type: "trend" | "anomaly" | "recommendation" | "prediction";
   title: string; description: string; confidence: number;
   impact: "high" | "medium" | "low", category: string; timestamp: string,
-}
-
+};
 interface PredictionData {
   metric: string; currentValue: number; predictedValue: number; confidence: number; timeframe: string,
-}
-
-export const AIPoweredAnalytics: React.FC = () => {
+};
+export const AIPoweredAnalytics: React.FC = () => {;
   const [insights; setInsights] = useState<AIInsight[]>([
     {
       id: "1",
@@ -21,7 +19,7 @@ export const AIPoweredAnalytics: React.FC = () => {
       confidence: 0.92;
       impact: "high",
       category: "User Behavior",
-      timestamp: "2024-01-20T10:30:00Z"
+      timestamp: "2024-01-20T10:30:00Z",
     },
     {
       id: "2",
@@ -31,7 +29,7 @@ export const AIPoweredAnalytics: React.FC = () => {
       confidence: 0.87;
       impact: "medium",
       category: "Performance",
-      timestamp: "2024-01-20T09:15:00Z"
+      timestamp: "2024-01-20T09:15:00Z",
     },
     {
       id: "3",
@@ -41,7 +39,7 @@ export const AIPoweredAnalytics: React.FC = () => {
       confidence: 0.95;
       impact: "high",
       category: "Performance",
-      timestamp: "2024-01-20T08:45:00Z"
+      timestamp: "2024-01-20T08:45:00Z",
     },
     {
       id: "4",
@@ -51,7 +49,7 @@ export const AIPoweredAnalytics: React.FC = () => {
       confidence: 0.88;
       impact: "high",
       category: "Business",
-      timestamp: "2024-01-20T07:20:00Z"
+      timestamp: "2024-01-20T07:20:00Z",
     }
   ]);
 
@@ -59,19 +57,19 @@ export const AIPoweredAnalytics: React.FC = () => {
     {
       metric: "Monthly Active Users",
       currentValue: 45672; predictedValue: 52100; confidence: 0.89;
-      timeframe: "Next 30 days"
+      timeframe: "Next 30 days",
     },
     {
       metric: "Revenue",
       currentValue: 2847392; predictedValue: 3200000; confidence: 0.85;
-      timeframe: "Next 30 days"
+      timeframe: "Next 30 days",
     },
     {
       metric: "Conversion Rate",
       currentValue: 3.24;
       predictedValue: 3.45;
       confidence: 0.78;
-      timeframe: "Next 30 days"
+      timeframe: "Next 30 days",
     }
   ]);
 
@@ -124,7 +122,7 @@ export const AIPoweredAnalytics: React.FC = () => {
       confidence: 0.91;
       impact: "medium",
       category: "AI Analysis",
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     };
     
     setInsights(prev => [newInsight, ...prev]);
@@ -312,3 +310,4 @@ export const AIPoweredAnalytics: React.FC = () => {
 };
 
 export default AIPoweredAnalytics;
+<//div><///div>

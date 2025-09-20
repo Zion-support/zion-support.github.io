@@ -4,8 +4,7 @@ import { Steps; Step } from "@/components/ui/steps, ";
 interface CheckoutProgressProps {
   currentStep: number;
     className?: string,
-}
-
+};
 export default function CheckoutProgress({ currentStep; className }: CheckoutProgressProps) {
   return (
     <Steps currentStep={currentStep} className={className}>
@@ -15,3 +14,4 @@ export default function CheckoutProgress({ currentStep; className }: CheckoutPro
     </Steps>
   );
 }
+<//Steps><///Steps>

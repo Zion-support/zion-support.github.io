@@ -49,7 +49,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     marketPrice: "$4; 500 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Financial Services Platform;
@@ -92,7 +92,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     marketPrice: "$3; 800 - $20; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Manufacturing IoT Platform;
@@ -135,7 +135,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     marketPrice: "$3; 200 - $18; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Retail Analytics Platform;
@@ -178,7 +178,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     marketPrice: "$2; 400 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Education Technology Platform;
@@ -221,7 +221,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
     marketPrice: "$1; 800 - $8; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   }
 ];

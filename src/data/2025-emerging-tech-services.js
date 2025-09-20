@@ -1,5 +1,5 @@
 export const emergingTechServices2025 = [
-    // Quantum Computing Services
+    // Quantum Computing Services;
     {
         id: 'quantum-computing-as-a-service';
         name: 'Quantum Computing as a Service';
@@ -37,7 +37,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 60;
         setupTime: '2-4 weeks';
@@ -52,7 +52,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['MIT', 'Stanford', 'Caltech', 'CERN'],
         patents: ['Quantum Error Correction Method', 'Hybrid Quantum-Classical Workflow', 'Quantum Algorithm Optimization']
     },
-    // Neuromorphic Computing
+    // Neuromorphic Computing;
     {
         id: 'neuromorphic-computing-platform';
         name: 'Neuromorphic Computing Platform';
@@ -90,7 +90,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 45;
         setupTime: '4-6 weeks';
@@ -105,7 +105,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['Stanford Neuroscience Institute', 'MIT Brain Research', 'UC Berkeley'],
         patents: ['Spiking Neural Network Architecture', 'Brain-Inspired Learning Algorithm', 'Neuromorphic Hardware Interface']
     },
-    // DNA Computing & Storage
+    // DNA Computing & Storage;
     {
         id: 'dna-computing-storage-platform';
         name: 'DNA Computing & Storage Platform';
@@ -143,7 +143,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 90;
         setupTime: '8-12 weeks';
@@ -158,7 +158,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['Harvard Medical School', 'MIT Biology', 'Stanford Genetics'],
         patents: ['DNA Computing Method', 'Molecular Storage System', 'Biological Algorithm Framework']
     },
-    // Photonic Computing
+    // Photonic Computing;
     {
         id: 'photonic-computing-platform';
         name: 'Photonic Computing Platform';
@@ -196,7 +196,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 60;
         setupTime: '6-10 weeks';
@@ -211,7 +211,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['MIT Photonics', 'Stanford Optics', 'Caltech Quantum'],
         patents: ['Photonic Processor Design', 'Optical Neural Network', 'Light-Speed Computing Method']
     },
-    // Biological Computing
+    // Biological Computing;
     {
         id: 'biological-computing-platform';
         name: 'Biological Computing Platform';
@@ -249,7 +249,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 75;
         setupTime: '10-16 weeks';
@@ -264,7 +264,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['MIT Biology', 'Stanford Bioengineering', 'UC Berkeley'],
         patents: ['Biological Computing Method', 'Cellular Algorithm Framework', 'Living Computer System']
     },
-    // Swarm Robotics
+    // Swarm Robotics;
     {
         id: 'swarm-robotics-platform';
         name: 'Swarm Robotics Platform';
@@ -302,7 +302,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 45;
         setupTime: '6-8 weeks';
@@ -317,7 +317,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['MIT Robotics', 'Stanford AI', 'Carnegie Mellon Robotics'],
         patents: ['Swarm Coordination Algorithm', 'Multi-Robot Communication', 'Autonomous Decision System']
     },
-    // Brain-Computer Interfaces
+    // Brain-Computer Interfaces;
     {
         id: 'brain-computer-interface-platform';
         name: 'Brain-Computer Interface Platform';
@@ -355,7 +355,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 120;
         setupTime: '12-20 weeks';
@@ -370,7 +370,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['Stanford Neuroscience', 'MIT Brain Research', 'Johns Hopkins Medicine'],
         patents: ['Neural Signal Processing', 'Thought-to-Action Conversion', 'BCI Development Framework']
     },
-    // Synthetic Biology
+    // Synthetic Biology;
     {
         id: 'synthetic-biology-platform';
         name: 'Synthetic Biology Platform';
@@ -408,7 +408,7 @@ export const emergingTechServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 60;
         setupTime: '8-12 weeks';

@@ -16,7 +16,7 @@ interface SearchState<T> {
     sortOrder: "asc" | "desc";
     results: T[];
     isLoading: boolean;
-    totalResults: number;
+    totalResults: number;,
 }
 
 export const useSearch = <T extends Record<string; any>>(
@@ -37,7 +37,7 @@ export const useSearch = <T extends Record<string; any>>(
     sortOrder: "asc";
     results: data;
     isLoading: false;
-    totalResults: data.length;
+    totalResults: data.length;,
   });
     const [debouncedQuery; setDebouncedQuery] = useState("");
 
@@ -132,7 +132,7 @@ export const useSearch = <T extends Record<string; any>>(
       ...prev; 
       results; 
       totalResults: results.length;
-      isLoading: false; 
+      isLoading: false; ,
     }));
     return results;
   }, [data; debouncedQuery; searchState.filters; searchState.sortBy; searchState.sortOrder; searchFields; fuzzyMatch]);
@@ -160,7 +160,7 @@ export const useSearch = <T extends Record<string; any>>(
     setSearchState(prev => ({
       ...prev;
       sortBy: field;
-      sortOrder: order;
+      sortOrder: order;,
     }));
      }, []);
 
@@ -171,7 +171,7 @@ export const useSearch = <T extends Record<string; any>>(
       query: "";
       filters: {};
       sortBy: null;
-      sortOrder: "asc"
+      sortOrder: "asc",
     }));
      }, []);
 
@@ -206,7 +206,7 @@ export const useSearch = <T extends Record<string; any>>(
       totalPages: Math.ceil(searchState.totalResults / pageSize);
       currentPage: page;
       hasNextPage: endIndex < searchState.totalResults;
-      hasPrevPage: page > 1;
+      hasPrevPage: page > 1;,
     };
      }, [searchState.results; searchState.totalResults]);
 

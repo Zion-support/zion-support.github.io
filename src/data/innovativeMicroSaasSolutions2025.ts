@@ -18,7 +18,7 @@ export interface InnovativeMicroSaasSolution2025 {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -74,9 +74,9 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/ai-content-generation"
+    websiteUrl: "https://ziontechgroup.com/ai-content-generation",
   };
   // Blockchain DeFi Analytics Platform;
   {
@@ -126,9 +126,9 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"
+    websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics",
   };
   // IoT Smart Home Management Platform;
   {
@@ -178,9 +178,9 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/iot-smart-home"
+    websiteUrl: "https://ziontechgroup.com/iot-smart-home",
   };
   // AI-Powered Customer Service Automation;
   {
@@ -230,9 +230,9 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/ai-customer-service"
+    websiteUrl: "https://ziontechgroup.com/ai-customer-service",
   };
   // Quantum-Ready Cybersecurity Suite;
   {
@@ -282,8 +282,8 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"
+    websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity",
   }
 ];

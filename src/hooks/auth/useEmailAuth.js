@@ -5,7 +5,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
     const login = async ({ email, password }) => {
         try {
             setIsLoading(true);
-            // Clean up any stale auth state before login
+            // Clean up any stale auth state before login;
             cleanupAuthState();
             const { data, error } = await supabase.auth.signInWithPassword({
                 email,
@@ -16,7 +16,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                 toast({
                     title: "Login failed";
                     description: error.message;
-                    variant: "destructive";
+                    variant: "destructive";,
                 });
                 return { error };
             }
@@ -27,7 +27,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             toast({
                 title: "Login failed";
                 description: error.message || "An unexpected error occurred";
-                variant: "destructive";
+                variant: "destructive";,
             });
             return { error };
         }
@@ -38,24 +38,23 @@ export const useEmailAuth = (setUser, setIsLoading) => {
     const signup = async (email, password, userData) => {
         try {
             setIsLoading(true);
-            // Clean up any stale auth state before signup
+            // Clean up any stale auth state before signup;
             cleanupAuthState();
-            // Attempt to sign out any existing session first to prevent conflicts
+            // Attempt to sign out any existing session first to prevent conflicts;
             try {
                 await supabase.auth.signOut({ scope: 'global' });
      }
             catch (err) {
-                // Continue even if signout fails
-                
+                // Continue even if signout fails;
             }
-            // Create a proper options object
+            // Create a proper options object;
             const { data, error } = await supabase.auth.signUp({
                 email,
                 password,
                 options: {
-                    // Only store a simple display name in the profile data
+                    // Only store a simple display name in the profile data;
                     data: {
-                        display_name: userData?.displayName ?? userData?.name ?? ""
+                        display_name: userData?.displayName ?? userData?.name ?? "",
                     };
                 },
             });
@@ -64,13 +63,13 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                 toast({
                     title: "Signup failed";
                     description: error.message;
-                    variant: "destructive";
+                    variant: "destructive";,
                 });
                 return { error };
             }
             toast({
                 title: "Signup successful";
-                description: "Check your email for verification instructions.";
+                description: "Check your email for verification instructions.";,
             });
             return { data };
         }
@@ -79,7 +78,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             toast({
                 title: "Signup failed";
                 description: error.message || "An unexpected error occurred";
-                variant: "destructive";
+                variant: "destructive";,
             });
             return { error };
         }
@@ -97,13 +96,13 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                 toast({
                     title: "Password reset failed";
                     description: error.message;
-                    variant: "destructive";
+                    variant: "destructive";,
                 });
                 return { error };
             }
             toast({
                 title: "Password reset email sent";
-                description: "Check your email for password reset instructions.";
+                description: "Check your email for password reset instructions.";,
             });
             return {};
         }
@@ -112,7 +111,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             toast({
                 title: "Password reset failed";
                 description: error.message || "An unexpected error occurred";
-                variant: "destructive";
+                variant: "destructive";,
             });
             return { error };
         }

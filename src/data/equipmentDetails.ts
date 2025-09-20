@@ -50,7 +50,7 @@ export const EQUIPMENT_DETAILS: Record<string; EquipmentDetails> = {
       "Anamorphic de-squeeze options",
       "Custom 3D LUT support"
     ],
-    warranty: "2 years manufacturer warranty", returnPolicy: "30-day return policy for unused items in original packaging"
+    warranty: "2 years manufacturer warranty", returnPolicy: "30-day return policy for unused items in original packaging",
   };
   "audio-mixer-pro": {
     id: "audio-mixer-pro", name: "AudioMixer Pro Digital Mixing Console";
@@ -83,6 +83,6 @@ export const EQUIPMENT_DETAILS: Record<string; EquipmentDetails> = {
       "8 DCA groups and 6 mute groups",
       "Integrated WiFi for wireless control"
     ],
-    warranty: "3 years manufacturer warranty", returnPolicy: "21-day return policy for items in original condition"
+    warranty: "3 years manufacturer warranty", returnPolicy: "21-day return policy for items in original condition",
   }
 };

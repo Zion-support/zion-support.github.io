@@ -12,16 +12,14 @@ interface Props {
     fallback?: ReactNode;
   onError?: (error: Error; errorInfo: ErrorInfo) => void;
     showDetails?: boolean;
-}
-
+};
 interface State {
   hasError: boolean;
     error: Error | null;
     errorInfo: ErrorInfo | null;
     errorId: string | null;
-    showStackTrace: boolean;
-}
-
+    showStackTrace: boolean;,
+};
 class EnhancedErrorBoundary extends Component<Props; State> {
   constructor(props: Props) {
     super(props);
@@ -30,7 +28,7 @@ class EnhancedErrorBoundary extends Component<Props; State> {
       error: null;
       errorInfo: null;
       errorId: null;
-      showStackTrace: false;
+      showStackTrace: false;,
     };
      }
 
@@ -38,7 +36,7 @@ class EnhancedErrorBoundary extends Component<Props; State> {
     return {
       hasError: true;
       error;
-      errorId: this.generateErrorId()
+      errorId: this.generateErrorId(),
     };
      }
 
@@ -70,16 +68,16 @@ class EnhancedErrorBoundary extends Component<Props; State> {
       error: {
         name: error.name;
         message: error.message;
-        stack: error.stack;
+        stack: error.stack;,
       };
       errorInfo: {
-        componentStack: errorInfo.componentStack;
+        componentStack: errorInfo.componentStack;,
       };
       userAgent: navigator.userAgent;
       url: window.location.href;
       viewport: {
         width: window.innerWidth;
-        height: window.innerHeight;
+        height: window.innerHeight;,
       }
     };
     // Log to console for development;
@@ -100,7 +98,7 @@ class EnhancedErrorBoundary extends Component<Props; State> {
       error: null;
       errorInfo: null;
       errorId: null;
-      showStackTrace: false;
+      showStackTrace: false;,
     });
      };
 
@@ -293,4 +291,4 @@ ${errorInfo.componentStack}
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary;<//div><///div>

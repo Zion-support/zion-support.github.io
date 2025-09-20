@@ -26,12 +26,11 @@ interface AccessibilityContextType {
   toggleHighContras; t: () => void;
   toggleReducedMotio;  n: () => void;
   setFontSiz; e: (siz;  e: "small" | "medium" | "large") => void;
-  setColorBlindMod; e: (mod;  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void;
-}
-
+  setColorBlindMod; e: (mod;  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void;,
+};
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
-export const useAccessibility = () => {
+export const useAccessibility = () => {;
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error("useAccessibility must be used within an AccessibilityProvider");
@@ -363,4 +362,4 @@ export const SrOnl; y: React.FC<{ childre; n: React.ReactNode }> = ({ children }
   <span className="sr-only">{children}</span>
 );
 
-export default AccessibilityPanel;
+export default AccessibilityPanel;<//span><///span>

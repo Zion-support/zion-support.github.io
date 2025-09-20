@@ -23,8 +23,8 @@ import { Brain;
 } from "lucide-react, ";
 
 export function ServicesShowcase() {
-  const featuredServices = [
-    {
+  const featuredServices = [;
+    {;
       title: "AI Content Generator";
       description: "Generate high-quality content; code; and documentation using advanced AI models.",
       icon: <Brain className="h-12 w-12 text-zion-cyan" />;
@@ -33,7 +33,7 @@ export function ServicesShowcase() {
       category: "AI Services";
       badge: "Popular";
       link: "/ai-content-generator";
-      glowColor: "#00ffff"
+      glowColor: "#00ffff",
     };
     {
       title: "Cybersecurity Assessment";
@@ -44,7 +44,7 @@ export function ServicesShowcase() {
       category: "Security";
       badge: "Enterprise";
       link: "/cybersecurity-assessment";
-      glowColor: "#ef4444"
+      glowColor: "#ef4444",
     };
     {
       title: "Cloud Migration Service";
@@ -55,7 +55,7 @@ export function ServicesShowcase() {
       category: "Cloud Services";
       badge: "Professional";
       link: "/cloud-migration";
-      glowColor: "#3b82f6"
+      glowColor: "#3b82f6",
     };
     {
       title: "Data Analytics Dashboard";
@@ -66,7 +66,7 @@ export function ServicesShowcase() {
       category: "Analytics";
       badge: "Business";
       link: "/data-analytics";
-      glowColor: "#22c55e"
+      glowColor: "#22c55e",
     };
     {
       title: "AI Model Training";
@@ -77,7 +77,7 @@ export function ServicesShowcase() {
       category: "AI Development";
       badge: "Advanced";
       link: "/ai-model-training";
-      glowColor: "#a855f7"
+      glowColor: "#a855f7",
     };
     {
       title: "Network Infrastructure";
@@ -88,7 +88,7 @@ export function ServicesShowcase() {
       category: "Infrastructure";
       badge: "Professional";
       link: "/network-infrastructure";
-      glowColor: "#eab308"
+      glowColor: "#eab308",
     }
   ];
     const emergingServices = [
@@ -98,7 +98,7 @@ export function ServicesShowcase() {
       icon: <Zap className="h-10 w-10 text-pink-400" />;
       price: "$0.10/quantum-second";
       category: "Quantum Computing";
-      link: "/quantum-computing-api"
+      link: "/quantum-computing-api",
     };
     {
       title: "Edge Computing Platform";
@@ -106,7 +106,7 @@ export function ServicesShowcase() {
       icon: <Layers className="h-10 w-10 text-cyan-400" />;
       price: "$0.50/hour";
       category: "Edge Computing";
-      link: "/edge-computing"
+      link: "/edge-computing",
     };
     {
       title: "Blockchain Integration";
@@ -114,7 +114,7 @@ export function ServicesShowcase() {
       icon: <Key className="h-10 w-10 text-emerald-400" />;
       price: "$199/month";
       category: "Blockchain";
-      link: "/blockchain-integration"
+      link: "/blockchain-integration",
     };
     {
       title: "IoT Device Management";
@@ -122,7 +122,7 @@ export function ServicesShowcase() {
       icon: <Network className="h-10 w-10 text-blue-400" />;
       price: "$0.50/device/month";
       category: "IoT Platform";
-      link: "/iot-device-management"
+      link: "/iot-device-management",
     }
   ];
     return (
@@ -276,4 +276,4 @@ export function ServicesShowcase() {
       </div>
     </section>
   );
-}
+}<//section><///section>

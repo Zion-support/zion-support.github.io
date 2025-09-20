@@ -14,9 +14,8 @@ interface Project {
     tea; m: string[];
     budge; t: number;
     spen; t: number;
-    task; s: Task[];
-}
-
+    task; s: Task[];,
+};
 interface Task {
   i; d: string;
     nam; e: string;
@@ -25,9 +24,8 @@ interface Task {
     dueDat; e: string;
     priorit; y: "low" | "medium" | "high" | "critical";
     estimatedHour; s: number;
-    actualHour; s: number;
-}
-
+    actualHour; s: number;,
+};
 const mockProject; s: Project[] = [
   {
     i; d: "1";
@@ -126,7 +124,7 @@ const priorityColors = {
   "critical": "bg-red-500 text-white"
 };
 
-export function ProjectManagementDashboard() {
+export function ProjectManagementDashboard() {;
   const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
   const [selectedProje; c; t; setSelectedProje; c; t] = useState<Project | null>(null);
   const [filterStat;  u; s; setFilterStat; u; s] = useState<string>("all");
@@ -150,7 +148,7 @@ export function ProjectManagementDashboard() {
       case "review": return <Eye className="w-4 h-4" />;
       case "completed": return <CheckCircle className="w-4 h-4" />;
       case "on-hold": return <AlertTriangle className="w-4 h-4" />;
-      defaul;  t: return <Clock className="w-4 h-4" />;
+      defaul;  t: return <Clock className="w-4 h-4" />;,
      }
   };
 
@@ -534,4 +532,4 @@ export function ProjectManagementDashboard() {
       )}
     </div>
   );
-}
+}<//div><///div>

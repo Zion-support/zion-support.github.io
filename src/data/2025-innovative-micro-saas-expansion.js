@@ -1,5 +1,5 @@
 export const innovativeMicroSaasServices2025 = [
-    // Quantum AI & Machine Learning Services
+    // Quantum AI & Machine Learning Services;
     {
         id: 'quantum-ai-research-platform';
         name: 'Quantum AI Research Platform';
@@ -36,7 +36,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 30;
         setupTime: '1-2 weeks';
@@ -53,7 +53,7 @@ export const innovativeMicroSaasServices2025 = [
             'Quantum simulation capabilities'
         ]
     },
-    // Edge AI & IoT Services
+    // Edge AI & IoT Services;
     {
         id: 'edge-ai-iot-orchestrator';
         name: 'Edge AI IoT Orchestrator';
@@ -90,7 +90,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 21;
         setupTime: '2-4 weeks';
@@ -107,7 +107,7 @@ export const innovativeMicroSaasServices2025 = [
             'Predictive maintenance'
         ]
     },
-    // Blockchain & Web3 Services
+    // Blockchain & Web3 Services;
     {
         id: 'decentralized-ai-marketplace';
         name: 'Decentralized AI Marketplace';
@@ -144,7 +144,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 14;
         setupTime: '1-2 days';
@@ -161,7 +161,7 @@ export const innovativeMicroSaasServices2025 = [
             'Decentralized governance'
         ]
     },
-    // Sustainable AI Services
+    // Sustainable AI Services;
     {
         id: 'green-ai-optimizer';
         name: 'Green AI Optimizer';
@@ -198,7 +198,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 30;
         setupTime: '3-6 weeks';
@@ -215,7 +215,7 @@ export const innovativeMicroSaasServices2025 = [
             'Sustainable procurement'
         ]
     },
-    // Healthcare AI Services
+    // Healthcare AI Services;
     {
         id: 'ai-healthcare-diagnostics-pro';
         name: 'AI Healthcare Diagnostics Pro';
@@ -252,7 +252,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 45;
         setupTime: '4-8 weeks';
@@ -269,7 +269,7 @@ export const innovativeMicroSaasServices2025 = [
             'Clinical decision support'
         ]
     },
-    // Financial AI Services
+    // Financial AI Services;
     {
         id: 'ai-financial-intelligence-suite';
         name: 'AI Financial Intelligence Suite';
@@ -306,7 +306,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 30;
         setupTime: '2-4 weeks';
@@ -323,7 +323,7 @@ export const innovativeMicroSaasServices2025 = [
             'Portfolio optimization'
         ]
     },
-    // Cybersecurity AI Services
+    // Cybersecurity AI Services;
     {
         id: 'ai-cybersecurity-defense-platform';
         name: 'AI Cybersecurity Defense Platform';
@@ -360,7 +360,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 21;
         setupTime: '2-3 weeks';
@@ -377,7 +377,7 @@ export const innovativeMicroSaasServices2025 = [
             'Vulnerability assessment'
         ]
     },
-    // Logistics & Supply Chain AI
+    // Logistics & Supply Chain AI;
     {
         id: 'ai-logistics-optimization-engine';
         name: 'AI Logistics Optimization Engine';
@@ -414,7 +414,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 30;
         setupTime: '3-5 weeks';
@@ -431,7 +431,7 @@ export const innovativeMicroSaasServices2025 = [
             'Risk assessment'
         ]
     },
-    // Education AI Services
+    // Education AI Services;
     {
         id: 'ai-education-personalization-platform';
         name: 'AI Education Personalization Platform';
@@ -468,7 +468,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709'
+            address: '364 E Main St STE 1008 Middletown DE 19709',
         };
         trialDays: 14;
         setupTime: '1-2 weeks';

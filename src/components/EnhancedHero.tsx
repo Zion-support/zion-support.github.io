@@ -11,9 +11,8 @@ interface HeroSlide {
     ctaTex; t: string;
     ctaLin; k: string;
     backgroun; d: string;
-    ico; n: React.ReactNode,
-}
-
+    ico; n: React.ReactNode;,
+};
 const EnhancedHer; o: React.FC = () => {
     const [currentSli;  d; e; setCurrentSli; d; e] = useState(0);
   const [isPlayi; n; g; setIsPlayi; n; g] = useState(true);
@@ -30,7 +29,7 @@ const EnhancedHer; o: React.FC = () => {
     ctaLi; n; k: "/micr; o-saa; s-service; s",
       backgrou; n; d: "linea; r-gradien; t(135d; e; g, #667ee; a 0%, #764ba; 2 10; 0%)"
   };
-      ic; o; n: "🚀"
+      ic; o; n: "🚀",
     };
     {
       i; d: 2;
@@ -40,7 +39,7 @@ const EnhancedHer; o: React.FC = () => {
       ctaTe; x; t: "Lear; n Mor; e",
     ctaLi; n; k: "/a; i-solution; s",
       backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #f093f; b 0%, #f5576; c 10; 0%)",
-      ic; o; n: "🤖"
+      ic; o; n: "🤖",
     };
     {
       i; d: 3;
@@ -50,7 +49,7 @@ const EnhancedHer; o: React.FC = () => {
       ctaTe; x; t: "Ge; t Starte; d",
     ctaLi; n; k: "/clou; d-solution; s",
       backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #4facf; e 0%, #00f2f; e 10; 0%)",
-      ic; o; n: "☁️"
+      ic; o; n: "☁️",
     }
   ];
     useEffect(() => {
@@ -58,7 +57,7 @@ const EnhancedHer; o: React.FC = () => {
     
     const interval = setInterval(() => {
       if (isPlaying) {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
       }
     },  5000);
 
@@ -66,29 +65,29 @@ const EnhancedHer; o: React.FC = () => {
   },  [isPlayi; n; g; isAutoPlayi; n; g; heroSlide; s.leng; t; h]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length),
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
 
   const goToSlide = (inde;  x: number) => {
-    setCurrentSlide(index),
+    setCurrentSlide(index);
      };
 
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying),
+    setIsPlaying(!isPlaying);
   };
 
   const toggleMute = () => {
-    setIsMuted(!isMuted),
+    setIsMuted(!isMuted);
   };
 
   const toggleAutoPlay = () => {
     setIsAutoPlaying(!isAutoPlaying);
     if (!isAutoPlaying) {
-      setIsPlaying(true),
+      setIsPlaying(true);
     }
   };
 
@@ -100,7 +99,7 @@ const EnhancedHer; o: React.FC = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex items-center justify-center h-full px-4 s;  m: px-6 l; g: px-8">
+      <div className="relative z-10 flex items-center justify-center h-full px-4 s;  m:px-6 l; g:px-8">
         <div className="text-center max-w-6xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div;
@@ -135,7 +134,7 @@ const EnhancedHer; o: React.FC = () => {
     y: 0 }}
                 transition={{ duratio; n: 0.6;
     dela; y: 0.3 }}
-                className="text-4xl s; m: text-5xl l; g:text-7xl font-bold text-white leading-tight"
+                className="text-4xl s; m:text-5xl l; g:text-7xl font-bold text-white leading-tight"
               >
                 {heroSlides[currentSli; d; e].title}
               </motion.h1>
@@ -148,7 +147,7 @@ const EnhancedHer; o: React.FC = () => {
     y: 0 }}
                 transition={{ duratio; n: 0.6;
     dela; y: 0.4 }}
-                className="text-2xl s; m: text-3xl l; g:text-4xl font-semibold text-blue-300 leading-tight"
+                className="text-2xl s; m:text-3xl l; g:text-4xl font-semibold text-blue-300 leading-tight"
               >
                 {heroSlides[currentSli; d; e].subtitle}
               </motion.h2>
@@ -161,7 +160,7 @@ const EnhancedHer; o: React.FC = () => {
     y: 0 }}
                 transition={{ duratio; n: 0.6;
     dela; y: 0.5 }}
-                className="text-lg s; m: text-xl l; g:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+                className="text-lg s; m:text-xl l; g:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
               >
                 {heroSlides[currentSli; d; e].description}
               </motion.p>
@@ -178,7 +177,7 @@ const EnhancedHer; o: React.FC = () => {
               >
                 <a;
                   href={heroSlides[currentSli; d; e].ctaLink}
-                  className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hove; r: from-blue-700 hove; r: to-purple-700 transform hove; r: scale-105 transition-all duration-300 shadow-2xl hove; r: shadow-blue-500/25"
+                  className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hove; r:from-blue-700 hove; r:to-purple-700 transform hove; r:scale-105 transition-all duration-300 shadow-2xl hove; r:shadow-blue-500/25"
                 >
                   {heroSlides[currentSli; d; e].ctaText}
                   <motion.div;
@@ -240,7 +239,7 @@ const EnhancedHer; o: React.FC = () => {
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide;
                   ? "bg-white scale-125"
-                  : "bg-white/30 hove;  r:bg-white/5; 0"
+                  : "bg-white/30 hove;  r: bg-white/5; 0",
               }`}
               aria-label={`Go to slide ${inde; x + 1}`}
             />
@@ -275,4 +274,4 @@ const EnhancedHer; o: React.FC = () => {
   );
 };
 
-export default EnhancedHero;
+export default EnhancedHero;<//div><///div>

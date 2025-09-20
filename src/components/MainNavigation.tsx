@@ -4,7 +4,7 @@ import { Lin; k; useLocation } from "react-router-dom, ";
 import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bel; l; Settings } from "lucide-react, ";
 import ThemeToggle from "./ThemeToggle;";
 
-export function MainNavigation() {
+export function MainNavigation() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isScroll; e; d; setIsScroll; e; d] = useState(false);
   const [activeDropdo;  w; n; setActiveDropdo; w; n] = useState<string | null>(null);
@@ -137,7 +137,7 @@ export function MainNavigation() {
                       ? "text-zion-cyan bg-zion-cyan/10"
                       : isScrolled;
                       ? "text-zion-slate-dark hove;  r:text-zion-cyan hove; r:bg-zion-cyan/10"
-                      : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                      : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
                   }`}
                 >
                   <span>{item.name}</span>
@@ -168,7 +168,7 @@ export function MainNavigation() {
             <button className={`p-2 rounded-lg transition-all duration-300 ${
               isScrolled; 
                 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10" 
-                : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
             }`}>
               <Search className="w-5 h-5" />
             </button>
@@ -177,7 +177,7 @@ export function MainNavigation() {
             <button className={`p-2 rounded-lg transition-all duration-300 ${
               isScrolled; 
                 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10" 
-                : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
             }`}>
               <Bell className="w-5 h-5" />
             </button>
@@ -190,7 +190,7 @@ export function MainNavigation() {
               <button className={`flex items-center space-x-2 p-2 rounded-lg transition-all duration-300 ${
                 isScrolled; 
                   ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10" 
-                  : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                  : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
               }`}>
                 <User className="w-5 h-5" />
               </button>
@@ -224,7 +224,7 @@ export function MainNavigation() {
             className={`l;  g:hidden p-2 rounded-lg transition-all duration-300 ${
               isScrolled; 
                 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10" 
-                : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
             }`}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -241,7 +241,7 @@ export function MainNavigation() {
                     className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
                       isActive(item.href)
                         ? "text-zion-cyan bg-zion-cyan/10"
-                        : "text-zion-slate-dark hove;  r:text-zion-cyan hove; r:bg-zion-cyan/1; 0"
+                        : "text-zion-slate-dark hove;  r: text-zion-cyan hove; r:bg-zion-cyan/1; 0",
                     }`}
                   >
                     <div className="flex items-center justify-between">
@@ -287,4 +287,4 @@ export function MainNavigation() {
       </div>
     </nav>
   );
-}
+}<//nav><///nav>

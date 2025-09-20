@@ -1,5 +1,5 @@
 export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
-    // Advanced AI & Machine Learning Services
+    // Advanced AI & Machine Learning Services;
     {
         id: "ai-multimodal-orchestrator";
         title: "AI Multimodal Orchestrator Pro";
@@ -51,7 +51,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["GPT-4", "DALL-E 3", "Whisper", "React", "Python", "TensorFlow"],
@@ -65,7 +65,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         demoUrl: "https://ziontechgroup.com/demo/ai-multimodal";
         caseStudies: ["Media company 300% efficiency boost", "E-commerce 5x content output"]
     },
-    // Blockchain & Web3 Services
+    // Blockchain & Web3 Services;
     {
         id: "blockchain-enterprise-suite";
         title: "Blockchain Enterprise Suite Pro";
@@ -117,7 +117,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["Ethereum", "Solidity", "React", "Node.js", "IPFS", "Web3.js"],
@@ -128,9 +128,9 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["KYC/AML", "GDPR", "Financial regulations"]
         },
         competitors: ["ConsenSys", "Chainalysis", "Alchemy", "Infura"],
-        demoUrl: "https://ziontechgroup.com/demo/blockchain-suite"
+        demoUrl: "https://ziontechgroup.com/demo/blockchain-suite",
     };
-    // Quantum Computing Services
+    // Quantum Computing Services;
     {
         id: "quantum-optimization-platform";
         title: "Quantum Optimization Platform Elite";
@@ -182,7 +182,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Python", "Quantum algorithms"],
@@ -193,9 +193,9 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["Research ethics", "Data privacy", "Export controls"]
         },
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
-        demoUrl: "https://ziontechgroup.com/demo/quantum-platform"
+        demoUrl: "https://ziontechgroup.com/demo/quantum-platform",
     };
-    // Advanced Cybersecurity Services
+    // Advanced Cybersecurity Services;
     {
         id: "ai-threat-intelligence-platform";
         title: "AI Threat Intelligence Platform Pro";
@@ -247,7 +247,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["Machine Learning", "NLP", "Python", "Elasticsearch", "Kafka", "React"],
@@ -258,9 +258,9 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
         },
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "FireEye"],
-        demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence"
+        demoUrl: "https://ziontechgroup.com/demo/ai-threat-intelligence",
     };
-    // Edge Computing & IoT Services
+    // Edge Computing & IoT Services;
     {
         id: "edge-ai-orchestrator";
         title: "Edge AI Orchestrator Platform";
@@ -312,7 +312,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["Kubernetes", "Docker", "Python", "TensorFlow Lite", "MQTT", "React"],
@@ -323,9 +323,9 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["GDPR", "CCPA", "Industry standards"]
         },
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "NVIDIA Jetson"],
-        demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator"
+        demoUrl: "https://ziontechgroup.com/demo/edge-ai-orchestrator",
     };
-    // Advanced Data Analytics Services
+    // Advanced Data Analytics Services;
     {
         id: "real-time-data-fabric";
         title: "Real-Time Data Fabric Platform";
@@ -377,7 +377,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["Apache Kafka", "Apache Spark", "Python", "React", "PostgreSQL", "Redis"],
@@ -388,9 +388,9 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"]
         },
         competitors: ["Databricks", "Snowflake", "Confluent", "Apache Kafka"],
-        demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric"
+        demoUrl: "https://ziontechgroup.com/demo/real-time-data-fabric",
     };
-    // Autonomous Systems Services
+    // Autonomous Systems Services;
     {
         id: "autonomous-workflow-orchestrator";
         title: "Autonomous Workflow Orchestrator Pro";
@@ -442,7 +442,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -453,9 +453,9 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["GDPR", "CCPA", "SOC 2", "Industry standards"]
         },
         competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
-        demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow"
+        demoUrl: "https://ziontechgroup.com/demo/autonomous-workflow",
     };
-    // Digital Twin Services
+    // Digital Twin Services;
     {
         id: "digital-twin-platform";
         title: "Digital Twin Platform Elite";
@@ -507,7 +507,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["Unity 3D", "Unreal Engine", "Python", "React", "Three.js", "WebGL"],
@@ -518,9 +518,9 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["Industry standards", "Data privacy", "Security protocols"]
         },
         competitors: ["Siemens", "GE Digital", "PTC", "Bentley Systems"],
-        demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform"
+        demoUrl: "https://ziontechgroup.com/demo/digital-twin-platform",
     };
-    // Metaverse Development Services
+    // Metaverse Development Services;
     {
         id: "metaverse-development-platform";
         title: "Metaverse Development Platform Pro";
@@ -572,7 +572,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["Unity 3D", "Unreal Engine", "WebXR", "Three.js", "React", "Node.js"],
@@ -583,9 +583,9 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["GDPR", "CCPA", "Content moderation", "Age verification"]
         },
         competitors: ["Roblox", "Decentraland", "Meta", "Unity", "Epic Games"],
-        demoUrl: "https://ziontechgroup.com/demo/metaverse-platform"
+        demoUrl: "https://ziontechgroup.com/demo/metaverse-platform",
     };
-    // Green Technology Services
+    // Green Technology Services;
     {
         id: "sustainable-tech-optimizer";
         title: "Sustainable Technology Optimizer";
@@ -637,7 +637,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technicalSpecs: {
             technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time-series DB"],
@@ -648,6 +648,6 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             compliance: ["ISO 14001", "LEED certification", "Sustainability standards"]
         },
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-        demoUrl: "https://ziontechgroup.com/demo/sustainable-tech-optimizer"
+        demoUrl: "https://ziontechgroup.com/demo/sustainable-tech-optimizer",
     }
 ];

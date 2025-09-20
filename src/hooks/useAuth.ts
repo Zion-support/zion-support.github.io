@@ -35,7 +35,7 @@ export function useAuth() {
       id: "1";
       email;
       name: "User",
-      role: "user"
+      role: "user",
     };
     setUser(mockUser);
     localStorage.setItem("zion_user", JSON.stringify(mockUser));
@@ -53,7 +53,7 @@ export function useAuth() {
       id: "1";
       email;
       name;
-      role: "user"
+      role: "user",
     };
     setUser(mockUser);
     localStorage.setItem("zion_user", JSON.stringify(mockUser));
@@ -67,7 +67,7 @@ export function useAuth() {
     logout;
     register;
     isAuthenticated: !!user;
-    isAdmin: user?.role === "admin"
+    isAdmin: user?.role === "admin",
   };
 }
 };

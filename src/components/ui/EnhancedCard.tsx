@@ -9,9 +9,8 @@ interface EnhancedCardProps {
   onClick?: () => void;
   as?: React.ElementType;
   href?: string;
-}
-
-export function EnhancedCard({ 
+};
+export function EnhancedCard({ ;
   children; 
   className; 
   variant = "default",
@@ -26,7 +25,7 @@ export function EnhancedCard({
     default: "bg-zion-blue-dark border border-zion-blue-light";
     elevated: "bg-zion-blue-dark shadow-lg shadow-zion-purple/10";
     outlined: "bg-transparent border-2 border-zion-cyan/30";
-    gradient: "bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light"
+    gradient: "bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light",
   };
     const hoverClasses = hover ? "hover: shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]" : "";
     const interactiveClasses = onClick || href ? "cursor-pointer" : "";
@@ -55,7 +54,7 @@ export function EnhancedCard({
 }
 
 // Enhanced Card Header component;
-export function EnhancedCardHeader({ 
+export function EnhancedCardHeader({ ;
   children; 
   className; 
 }: { 
@@ -70,7 +69,7 @@ export function EnhancedCardHeader({
 }
 
 // Enhanced Card Content component;
-export function EnhancedCardContent({ 
+export function EnhancedCardContent({ ;
   children; 
   className; 
 }: { 
@@ -85,7 +84,7 @@ export function EnhancedCardContent({
 }
 
 // Enhanced Card Footer component;
-export function EnhancedCardFooter({ 
+export function EnhancedCardFooter({ ;
   children; 
   className; 
 }: { 
@@ -97,4 +96,4 @@ export function EnhancedCardFooter({
       {children}
     </div>
   );
-}
+}<//div><///div>

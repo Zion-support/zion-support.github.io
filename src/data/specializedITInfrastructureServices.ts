@@ -18,7 +18,7 @@ export interface SpecializedITInfrastructureService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -26,7 +26,7 @@ export interface SpecializedITInfrastructureService {
     roi: string;
     competitors: string[];
     marketTrend: string;
-    innovationLevel: string;
+    innovationLevel: string;,
 }
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructureService[] = [
@@ -80,7 +80,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes", "Docker", "React", "Node.js", "Redis", "AWS Edge"],
     integrations: ["AWS", "Azure", "Google Cloud", "IoT platforms", "Monitoring tools"],
@@ -88,7 +88,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     roi: "300% within 8 months";
     competitors: ["AWS Edge", "Azure Edge", "Google Edge", "Cloudflare Workers"],
     marketTrend: "Growing market with 250% annual growth";
-    innovationLevel: "Advanced edge computing with AI capabilities"
+    innovationLevel: "Advanced edge computing with AI capabilities",
   };
   // Zero-Trust Security Architecture;
   {
@@ -140,7 +140,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["React", "Node.js", "PostgreSQL", "Redis", "OAuth 2.0", "SAML"],
     integrations: ["Active Directory", "LDAP", "SAML providers", "SIEM systems", "Firewalls"],
@@ -148,7 +148,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     roi: "400% within 12 months";
     competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
     marketTrend: "Growing market with 300% annual growth";
-    innovationLevel: "Advanced zero-trust with AI-powered threat detection"
+    innovationLevel: "Advanced zero-trust with AI-powered threat detection",
   };
   // Hybrid Cloud Management Platform;
   {
@@ -200,7 +200,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes", "Terraform", "React", "Node.js", "MongoDB", "Docker"],
     integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
@@ -208,7 +208,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     roi: "350% within 8 months";
     competitors: ["VMware", "Red Hat", "HashiCorp", "CloudBolt"],
     marketTrend: "Growing market with 200% annual growth";
-    innovationLevel: "Advanced hybrid cloud with AI-powered optimization"
+    innovationLevel: "Advanced hybrid cloud with AI-powered optimization",
   };
   // Software-Defined Networking (SDN) Platform;
   {
@@ -260,7 +260,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["OpenFlow", "React", "Node.js", "PostgreSQL", "Redis", "Docker"],
     integrations: ["Cisco", "Juniper", "VMware", "OpenStack", "Kubernetes"],
@@ -268,7 +268,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     roi: "300% within 6 months";
     competitors: ["VMware NSX", "Cisco ACI", "Juniper Contrail", "OpenDaylight"],
     marketTrend: "Growing market with 180% annual growth";
-    innovationLevel: "Advanced SDN with AI-powered traffic optimization"
+    innovationLevel: "Advanced SDN with AI-powered traffic optimization",
   };
   // Container Orchestration Platform;
   {
@@ -320,7 +320,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes", "Docker", "React", "Node.js", "MongoDB", "Redis"],
     integrations: ["AWS EKS", "Azure AKS", "Google GKE", "Docker Swarm", "OpenShift"],
@@ -328,6 +328,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     roi: "400% within 6 months";
     competitors: ["Red Hat OpenShift", "VMware Tanzu", "Docker Enterprise", "Rancher"],
     marketTrend: "Growing market with 250% annual growth";
-    innovationLevel: "Advanced container orchestration with AI-powered optimization"
+    innovationLevel: "Advanced container orchestration with AI-powered optimization",
   }
 ];

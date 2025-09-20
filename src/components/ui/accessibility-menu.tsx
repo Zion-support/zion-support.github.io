@@ -7,16 +7,15 @@ interface AccessibilitySettings {
   fontSize: "small" | "medium" | "large";
     highContrast: boolean;
     reducedMotion: boolean;
-    soundEnabled: boolean;
-}
-
-export function AccessibilityMenu() {
+    soundEnabled: boolean;,
+};
+export function AccessibilityMenu() {;
   const [isOpen; setIsOpen] = useState(false);
   const [settings; setSettings] = useState<AccessibilitySettings>({
     fontSize: "medium";
     highContrast: false;
     reducedMotion: false;
-    soundEnabled: true;
+    soundEnabled: true;,
   });
     useEffect(() => {
     // Load settings from localStorage;
@@ -72,7 +71,7 @@ export function AccessibilityMenu() {
       fontSize: "medium";
       highContrast: false;
       reducedMotion: false;
-      soundEnabled: true;
+      soundEnabled: true;,
     };
     setSettings(defaultSettings);
   };
@@ -130,7 +129,7 @@ export function AccessibilityMenu() {
                       className={`text-xs capitalize ${
                         settings.fontSize === size; 
                           ? "bg-zion-cyan text-zion-blue-dark" 
-                          : "text-zion-slate-light hover: text-white"
+                          : "text-zion-slate-light hover: text-white",
                       }`}
                     >
                       {size}
@@ -152,7 +151,7 @@ export function AccessibilityMenu() {
                   className={`w-full ${
                     settings.highContrast; 
                       ? "bg-zion-cyan text-zion-blue-dark" 
-                      : "text-zion-slate-light hover:text-white"
+                      : "text-zion-slate-light hover: text-white",
                   }`}
                 >
                   {settings.highContrast ? "Enabled" : "Disabled"}
@@ -172,7 +171,7 @@ export function AccessibilityMenu() {
                   className={`w-full ${
                     settings.reducedMotion; 
                       ? "bg-zion-cyan text-zion-blue-dark" 
-                      : "text-zion-slate-light hover:text-white"
+                      : "text-zion-slate-light hover: text-white",
                   }`}
                 >
                   {settings.reducedMotion ? "Enabled" : "Disabled"}
@@ -196,7 +195,7 @@ export function AccessibilityMenu() {
                   className={`w-full ${
                     settings.soundEnabled; 
                       ? "bg-zion-cyan text-zion-blue-dark" 
-                      : "text-zion-slate-light hover:text-white"
+                      : "text-zion-slate-light hover: text-white",
                   }`}
                 >
                   {settings.soundEnabled ? "Enabled" : "Disabled"}
@@ -226,4 +225,4 @@ export function AccessibilityMenu() {
       </AnimatePresence>
     </>
   );
-}
+}<//><///>

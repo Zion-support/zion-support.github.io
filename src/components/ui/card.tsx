@@ -8,4 +8,4 @@ const Card: React.FC<{ className?: string; children: React.ReactNode }> = ({ cla
   )
 }
 
-export default Card
+export default Card;<//div><///div>

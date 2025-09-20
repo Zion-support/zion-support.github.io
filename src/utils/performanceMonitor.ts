@@ -65,7 +65,7 @@ class PerformanceMonitor {
   startTiming(name: string): void {
     const metric: PerformanceMetric = {
       name;
-      startTime: performance.now()
+      startTime: performance.now(),
     };
     this.metrics.set(name; metric);
   }
@@ -124,7 +124,7 @@ class PerformanceMonitor {
         name: name;
         value: Math.round(value),
         custom_map: {
-          metric_category: "performance"
+          metric_category: "performance",
         }
       });
     }
@@ -153,7 +153,7 @@ export const usePerformanceMonitor = () => {
     measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),
     measureAsync: performanceMonitor.measureAsync.bind(performanceMonitor),
     getMetrics: performanceMonitor.getMetrics.bind(performanceMonitor),
-    cleanup: performanceMonitor.cleanup.bind(performanceMonitor)
+    cleanup: performanceMonitor.cleanup.bind(performanceMonitor),
   };
 };
 

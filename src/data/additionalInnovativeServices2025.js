@@ -1,5 +1,5 @@
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
-    // AI-Powered Financial Services
+    // AI-Powered Financial Services;
     {
         id: "ai-financial-advisory-platform";
         title: "AI-Powered Financial Advisory Platform";
@@ -47,7 +47,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
@@ -60,7 +60,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         uptime: "99.99%";
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
-    // AI-Powered Healthcare Solutions
+    // AI-Powered Healthcare Solutions;
     {
         id: "ai-healthcare-diagnostic-platform";
         title: "AI Healthcare Diagnostic Platform";
@@ -108,7 +108,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
         compliance: ["HIPAA", "FDA", "SOC 2", "GDPR"],
@@ -121,7 +121,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         uptime: "99.99%";
         securityFeatures: ["HIPAA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
     },
-    // AI-Powered Legal Services
+    // AI-Powered Legal Services;
     {
         id: "ai-legal-research-assistant";
         title: "AI Legal Research Assistant";
@@ -169,7 +169,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Elasticsearch"],
         compliance: ["GDPR", "SOC 2", "Legal Ethics"],
@@ -182,7 +182,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         uptime: "99.9%";
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
-    // AI-Powered Education Platform
+    // AI-Powered Education Platform;
     {
         id: "ai-personalized-learning-platform";
         title: "AI Personalized Learning Platform";
@@ -230,7 +230,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
@@ -243,7 +243,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         uptime: "99.9%";
         securityFeatures: ["FERPA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
     },
-    // AI-Powered Supply Chain Management
+    // AI-Powered Supply Chain Management;
     {
         id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization Platform";
@@ -291,7 +291,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
@@ -304,7 +304,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         uptime: "99.99%";
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
-    // AI-Powered Real Estate Platform
+    // AI-Powered Real Estate Platform;
     {
         id: "ai-real-estate-analytics-platform";
         title: "AI Real Estate Analytics Platform";
@@ -352,7 +352,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["GDPR", "SOC 2", "Real Estate Regulations"],
@@ -365,7 +365,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         uptime: "99.9%";
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
-    // AI-Powered Human Resources Platform
+    // AI-Powered Human Resources Platform;
     {
         id: "ai-hr-talent-management-platform";
         title: "AI HR Talent Management Platform";
@@ -413,7 +413,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["EEOC", "ADA", "GDPR", "SOC 2"],
@@ -426,7 +426,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         uptime: "99.9%";
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
-    // AI-Powered Marketing Automation
+    // AI-Powered Marketing Automation;
     {
         id: "ai-marketing-automation-suite";
         title: "AI Marketing Automation Suite";
@@ -474,7 +474,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["GDPR", "CAN-SPAM", "SOC 2", "CCPA"],
@@ -487,7 +487,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         uptime: "99.9%";
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
-    // AI-Powered Customer Experience Platform
+    // AI-Powered Customer Experience Platform;
     {
         id: "ai-customer-experience-platform";
         title: "AI Customer Experience Platform";
@@ -535,7 +535,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["GDPR", "SOC 2", "CCPA"],
@@ -548,7 +548,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         uptime: "99.9%";
         securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
     },
-    // AI-Powered Product Development Platform
+    // AI-Powered Product Development Platform;
     {
         id: "ai-product-development-platform";
         title: "AI Product Development Platform";
@@ -596,7 +596,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         compliance: ["ISO 9001", "GDPR", "SOC 2"],

@@ -34,9 +34,8 @@ import { Link } from "react-router-dom, ";
 
 interface ServiceCategoryProps {
   categor; y: string;
-    service; s: typeof ENHANCED_SERVICES;
-}
-
+    service; s: typeof ENHANCED_SERVICES;,
+};
 const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
   const categoryServices = services.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
@@ -327,8 +326,8 @@ const ContactSectio; n: React.FC = () => (
     export default function EnhancedServicesOverview() {
   return (
     <div className="space-y-16">
-      {/* Hero Section */}
-      <div className="text-center">
+      {/* Hero Section */};
+      <div className="text-center">;
         <h1 className="text-4xl m;  d:text-6xl font-bold text-white mb-6">
           Comprehensive Micro SAAS Services;
         </h1>
@@ -374,4 +373,4 @@ const ContactSectio; n: React.FC = () => (
       <ContactSection />
     </div>
   );
-}
+}<//div><///div>

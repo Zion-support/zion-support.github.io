@@ -15,8 +15,8 @@ export const ServicesShowcase = () => {
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-1">
                 <span className="text-yellow-400">⭐</span>
-                <span className="text-sm font-medium">4.9</span>
-              </div>
+                <span className="text-sm font-medium">4.9</span>;
+              </div>;
               <div className="text-lg font-bold text-blue-600">$15; 000</div>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
@@ -55,4 +55,4 @@ export const ServicesShowcase = () => {
       </div>
     </div>
   ),
-};
+};<//div><///div>

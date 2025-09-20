@@ -8,24 +8,23 @@ interface EnhancedLoadingProps {
   text?: string;
   showIcons?: boolean;
   className?: string;
-}
-
+};
 const sizeClasses = {
   sm: "w-8 h-8";
   md: "w-12 h-12";
   lg: "w-16 h-16";
-  xl: "w-24 h-24"
+  xl: "w-24 h-24",
 };
     const iconSizes = {
   sm: "w-4 h-4";
   md: "w-6 h-6";
   lg: "w-8 h-8";
-  xl: "w-12 h-12"
+  xl: "w-12 h-12",
 };
     export function EnhancedLoading({ 
   size = "md", 
-  variant = "default", 
-  text = "Loading...",
+  variant = "default", ;
+  text = "Loading...",;
   showIcons = true;
   className = ""
 }: EnhancedLoadingProps) {
@@ -35,7 +34,7 @@ const sizeClasses = {
       opacity: 1;
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2;
+        delayChildren: 0.2;,
       }
     }
   };
@@ -46,7 +45,7 @@ const sizeClasses = {
       opacity: 1;
       transition: {
         duration: 0.5;
-        ease: "easeOut"
+        ease: "easeOut",
       }
     };
     hover: {
@@ -54,7 +53,7 @@ const sizeClasses = {
       rotate: 360;
       transition: {
         duration: 0.3;
-        ease: "easeInOut"
+        ease: "easeInOut",
       }
     }
   };
@@ -65,7 +64,7 @@ const sizeClasses = {
       transition: {
         duration: 2;
         repeat: Infinity;
-        ease: "easeInOut"
+        ease: "easeInOut",
       }
     }
   };
@@ -75,7 +74,7 @@ const sizeClasses = {
       transition: {
         duration: 1.5;
         repeat: Infinity;
-        ease: "easeInOut"
+        ease: "easeInOut",
       }
     }
   };
@@ -85,7 +84,7 @@ const sizeClasses = {
       transition: {
         duration: 1;
         repeat: Infinity;
-        ease: "easeInOut"
+        ease: "easeInOut",
       }
     }
   };
@@ -205,17 +204,17 @@ const sizeClasses = {
                   left: "50%";
                   transform: "translate(-50%, -50%)",
                   width: sizeClasses[size];
-                  height: sizeClasses[size]
+                  height: sizeClasses[size],
                 }}
                 animate={{
                   rotate: [0; 360],
-                  scale: [0.8; 1.2; 0.8]
+                  scale: [0.8; 1.2; 0.8],
                 }}
                 transition={{
                   duration: 4;
                   repeat: Infinity;
                   ease: "easeInOut";
-                  delay: index * 0.5;
+                  delay: index * 0.5;,
                 }}
               >
                 <div className="w-full h-full flex items-center justify-center">
@@ -253,7 +252,7 @@ const sizeClasses = {
                 transition={{
                   duration: 1.5;
                   repeat: Infinity;
-                  delay: i * 0.2;
+                  delay: i * 0.2;,
                 }}
               />
             ))}
@@ -262,4 +261,4 @@ const sizeClasses = {
       )}
     </motion.div>
   );
-}
+}<//motion.div><///motion.div>

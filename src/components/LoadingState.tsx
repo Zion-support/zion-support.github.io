@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -6,8 +7,7 @@ interface LoadingStateProps {
   size?: 'sm' | 'md' | 'lg';
   color?: string;
   text?: string;
-}
-
+};
 export const LoadingState: React.FC<LoadingStateProps> = ({
   type = 'spinner',
   size = 'md',
@@ -16,15 +16,15 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    md: 'w-8 h-8',;
+    lg: 'w-12 h-12';,
   };
 
   const colorClasses = {
     blue: 'border-blue-500',
     green: 'border-green-500',
     purple: 'border-purple-500',
-    red: 'border-red-500'
+    red: 'border-red-500',
   };
 
   const renderLoading = () => {
@@ -32,7 +32,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
       case 'spinner':
         return (
           <motion.div
-            className={`border-4 border-gray-200 border-t-4 ${colorClasses[color as keyof typeof colorClasses]} ${sizeClasses[size]} rounded-full`}
+            className={\`border-4 border-gray-200 border-t-4 \${colorClasses[color as keyof typeof colorClasses]} \${sizeClasses[size]} rounded-full\`}
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           />
@@ -49,7 +49,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
       case 'pulse':
         return (
           <motion.div
-            className={`${sizeClasses[size]} bg-${color}-500 rounded-full`}
+            className={\`\${sizeClasses[size]} bg-${color}-500 rounded-full\`}
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
           />
@@ -61,20 +61,19 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
             {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                className={`w-2 h-2 bg-${color}-500 rounded-full`}
+                className={\`w-2 h-2 bg-${color}-500 rounded-full\`}
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{
                   duration: 0.6,
                   repeat: Infinity,
-                  delay: i * 0.2
+                  delay: i * 0.2,
                 }}
               />
             ))}
           </div>
         );
       
-      default:
-        return null;
+      default: return null;,
     }
   };
 
@@ -95,3 +94,4 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
 };
 
 export default LoadingState;
+<//div><///div>

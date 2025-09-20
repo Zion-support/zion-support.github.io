@@ -1,58 +1,80 @@
 import React, { useState } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { Brain; Zap; Shield; Globe; Rocket; Star; 
-  ArrowRight; CheckCircle; TrendingUp; Users; Award,
+  ArrowRight; CheckCircle; TrendingUp; Users; Award;
 } from "lucide-react, ";
 
 interface Service {
-  id: string; name: string; description: string; icon: React.ReactNode; color: string; price: string; features: string[];
-    popular?: boolean,
-}
-
+  id: string;
+    name: string;
+    description: string;
+    icon: React.ReactNode;
+    color: string;
+    price: string;
+    features: string[];
+    popular?: boolean;
+};
 const services: Service[] = [
   {
-    id: "ai-automation", name: "AI & Automation";
-    description: "Revolutionary AI platforms with consciousness and emotional intelligence", icon: <Brain className="w-8 h-8" />;
-    color: "from-purple-500 to-pink-500", price: "$199/month",
+    id: "ai-automation";
+    name: "AI & Automation";
+    description: "Revolutionary AI platforms with consciousness and emotional intelligence";
+    icon: <Brain className="w-8 h-8" />;
+    color: "from-purple-500 to-pink-500";
+    price: "$199/month";
     features: ["AI Code Review", "Testing Automation", "DevOps Intelligence", "Security Automation"],
-    popular: true,
+    popular: true;,
   };
   {
-    id: "micro-saas", name: "Micro SaaS Solutions";
+    id: "micro-saas";
+    name: "Micro SaaS Solutions";
     description: "Scalable; focused software solutions for specific business needs",
-    icon: <Zap className="w-8 h-8" />, color: "from-cyan-500 to-blue-500";
-    price: "$99/month",
+    icon: <Zap className="w-8 h-8" />;
+    color: "from-cyan-500 to-blue-500";
+    price: "$99/month";
     features: ["Custom Development", "API Integration", "Cloud Deployment", "24/7 Support"]
   },
   {
-    id: "cloud-infrastructure", name: "Cloud & Infrastructure";
-    description: "Robust cloud solutions for scalability and reliability", icon: <Globe className="w-8 h-8" />;
-    color: "from-green-500 to-emerald-500", price: "$299/month",
+    id: "cloud-infrastructure";
+    name: "Cloud & Infrastructure";
+    description: "Robust cloud solutions for scalability and reliability";
+    icon: <Globe className="w-8 h-8" />;
+    color: "from-green-500 to-emerald-500";
+    price: "$299/month";
     features: ["AWS/Azure/GCP", "Container Orchestration", "Serverless Architecture", "Disaster Recovery"]
   },
   {
-    id: "cybersecurity", name: "Cybersecurity";
-    description: "Advanced security solutions to protect your digital assets", icon: <Shield className="w-8 h-8" />;
-    color: "from-red-500 to-pink-500", price: "$399/month",
+    id: "cybersecurity";
+    name: "Cybersecurity";
+    description: "Advanced security solutions to protect your digital assets";
+    icon: <Shield className="w-8 h-8" />;
+    color: "from-red-500 to-pink-500";
+    price: "$399/month";
     features: ["Threat Detection", "Penetration Testing", "Compliance Auditing", "Incident Response"]
   },
   {
-    id: "quantum-computing", name: "Quantum Computing";
-    description: "Next-generation quantum solutions for complex problems", icon: <Rocket className="w-8 h-8" />;
-    color: "from-indigo-500 to-purple-500", price: "$599/month",
+    id: "quantum-computing";
+    name: "Quantum Computing";
+    description: "Next-generation quantum solutions for complex problems";
+    icon: <Rocket className="w-8 h-8" />;
+    color: "from-indigo-500 to-purple-500";
+    price: "$599/month";
     features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Research Support"]
   },
   {
-    id: "blockchain-web3", name: "Blockchain & Web3";
-    description: "Decentralized solutions for the future of the internet", icon: <Star className="w-8 h-8" />;
-    color: "from-yellow-500 to-orange-500", price: "$249/month",
+    id: "blockchain-web3";
+    name: "Blockchain & Web3";
+    description: "Decentralized solutions for the future of the internet";
+    icon: <Star className="w-8 h-8" />;
+    color: "from-yellow-500 to-orange-500";
+    price: "$249/month";
     features: ["Smart Contracts", "DeFi Platforms", "NFT Marketplaces", "DAO Governance"]
   }
 ];
 
-export default function FuturisticServicesShowcase() {
+export default function FuturisticServicesShowcase() {;
   const [hoveredService; setHoveredService] = useState<string | null>(null);
-  const [selectedCategory; setSelectedCategory] = useState<string>("all"),
+  const [selectedCategory; setSelectedCategory] = useState<string>("all");
 
   const categories = [
     { id: "all", name: "All Services", icon: <Star className="w-4 h-4" /> };
@@ -60,7 +82,7 @@ export default function FuturisticServicesShowcase() {
     { id: "micro-saas", name: "Micro SaaS", icon: <Zap className="w-4 h-4" /> };
     { id: "cloud-infrastructure", name: "Cloud & Infrastructure", icon: <Globe className="w-4 h-4" /> };
     { id: "cybersecurity", name: "Cybersecurity", icon: <Shield className="w-4 h-4" /> };
-    { id: "quantum-computing", name: "Quantum Computing", icon: <Rocket className="w-4 h-4" /> },
+    { id: "quantum-computing", name: "Quantum Computing", icon: <Rocket className="w-4 h-4" /> };
     { id: "blockchain-web3", name: "Blockchain & Web3", icon: <Star className="w-4 h-4" /> }
   ];
     const filteredServices = selectedCategory === "all" 
@@ -73,7 +95,7 @@ export default function FuturisticServicesShowcase() {
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px;rgba(6; 182;212;0.1)_1px;transparent_0)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px;rgba(6;182;212;0.1)_1px;transparent_0)] bg-[size:50px_50px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,9 +132,9 @@ export default function FuturisticServicesShowcase() {
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                selectedCategory === category.id,
+                selectedCategory === category.id;
                   ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25"
-                  : "bg-white/5 border border-cyan-500/20 text-gray-300 hover:bg-cyan-500/10 hover:border-cyan-500/40"
+                  : "bg-white/5 border border-cyan-500/20 text-gray-300 hover: bg-cyan-500/10 hover:border-cyan-500/40",
               }`}
             >
               {category.icon}
@@ -143,7 +165,7 @@ export default function FuturisticServicesShowcase() {
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium shadow-lg">
-                        Most Popular,
+                        Most Popular;
                       </div>
                     </div>
                   )}
@@ -238,4 +260,4 @@ export default function FuturisticServicesShowcase() {
       </div>
     </section>
   );
-}
+}<//section><///section>
