@@ -9,12 +9,18 @@ interface SEOProps {
   ogUrl?: string;
   canonical?: string;
   noindex?: boolean;
+<<<<<<< HEAD
   type?: 'website' | 'article';
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
   section?: string;
   tags?: string[];
+=======
+  nofollow?: boolean;
+  image?: string;
+  type?: string;
+>>>>>>> origin/ziontechgroup-improvements
 }
 
 export function SEO({
@@ -24,6 +30,7 @@ export function SEO({
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
   ogUrl,
   canonical,
+<<<<<<< HEAD
   noindex,
   type = "website",
   publishedTime,
@@ -36,6 +43,22 @@ export function SEO({
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   const siteUrl = "https://ziontechgroup.com";
   const fullCanonical = canonical || `${siteUrl}${window.location.pathname}`;
+=======
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noindex = false,
+  nofollow = false,
+  image,
+  type
+}: SEOProps) {
+  const siteName = 'Zion Tech Group';
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullCanonicalUrl = canonical || 'https://ziontechgroup.com';
+  const fullImageUrl = (image || ogImage).startsWith('http') ? (image || ogImage) : `https://ziontechgroup.com${image || ogImage}`;
+  const fullOgType = type || ogType;
+>>>>>>> origin/ziontechgroup-improvements
   
   // Structured data for organization
   const organizationSchema = {
@@ -119,8 +142,18 @@ export function SEO({
       <meta property="og:url" content={ogUrl || fullCanonical} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
+<<<<<<< HEAD
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
+=======
+      <meta property="og:type" content={fullOgType} />
+      <meta property="og:url" content={fullCanonicalUrl} />
+      <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content="en_US" />
+>>>>>>> origin/ziontechgroup-improvements
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />

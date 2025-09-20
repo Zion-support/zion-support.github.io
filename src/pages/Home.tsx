@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -6,6 +7,13 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
+=======
+
+import React from 'react';
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+import { EnhancedQuickAccess } from "@/components/home/EnhancedQuickAccess";
+>>>>>>> origin/ziontechgroup-improvements
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
@@ -29,10 +37,13 @@ export default function Home() {
 
       <HeroSection />
       
-      <QuickAccess />
+      <EnhancedQuickAccess />
       
       <FeatureCTAs />
       
+      <FeatureCTAs />
+      
+<<<<<<< HEAD
       <FeatureHighlights />
       
       <CategoriesSection />
@@ -42,6 +53,9 @@ export default function Home() {
       <NewsletterSection />
       
       <FloatingCTA />
+=======
+      <TestimonialsSection />
+>>>>>>> origin/ziontechgroup-improvements
     </div>
   );
 }
