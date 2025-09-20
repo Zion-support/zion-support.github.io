@@ -28,6 +28,14 @@ const nextConfig = {
 
   // Bundle analyzer
   webpack: (config, { dev, isServer }) => {
+    // Configure webpack extensions
+    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
+    
+    // Add path alias resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': require('path').resolve(__dirname, '.'),
+    };
     if (!dev && !isServer) {
       // Optimize bundle size
       config.optimization.splitChunks = {
