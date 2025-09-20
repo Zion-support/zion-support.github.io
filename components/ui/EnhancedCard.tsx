@@ -1,14 +1,20 @@
-import { ReactNode } from "react";
-
-interface EnhancedCardProps {
-  children: ReactNode;
+<<<<<<< HEAD
+import React from 'react';
+export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
+=======
+import React from "react";
+export default function EnhancedCard({
+  children
+  className = ""
+}: {
+  children: React.ReactNode;
   className?: string;
-}
-
-export default function EnhancedCard({ children, className = "bg-white rounded-lg shadow-md p-6" }: EnhancedCardProps) {
+}) {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
-    <div className={className}>
-      {children}
-    </div>
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>
+  );
+  return (
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>
   );
 }
