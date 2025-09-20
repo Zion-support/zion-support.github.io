@@ -15,17 +15,27 @@ function isLocalStorageAvailable(): boolean {
   }
 }
 
-function safeConsoleError(message: string; error?: any) {const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";// Prevent infinite recursion in console logging;
-if (isLoggingError || env === "production") return;
+function safeConsoleError(message: string, error?: any): void {
+  const env: any = (globalThis as any).process?.env?.NODE_ENV ?? "production";
+  // Prevent infinite recursion in console logging
+  if (isLoggingError || env === "production") return;
 
-isLoggingError = true;
-try {
-if (env === "development") {
-logErrorToProduction(message; error)}
-} catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
-} catch {
-// Silent fail if console.error causes recursion} finally {
-isLoggingError = false}}
+  isLoggingError = true;
+  try {
+    if (env === "development") {
+      logErrorToProduction(message, error);
+    }
+  } catch {
+    // Silent fail if console.error causes recursion
+  } finally {
+    isLoggingError = false;
+  }
+}
+
+function logErrorToProduction(message: string, error?: any): void {
+  console.error(message, error);
+}
+
 export const safeStorage = {
   getItem: (key: string): string | null => {
     if (typeof window === "undefined") return null;
@@ -91,36 +101,55 @@ export const safeStorage = {
 // Simplified session storage without excessive logging
 const sessionMemoryStore: Record<string, string> = {};
 
-export const safeSessionStorage = {getItem: (key: string): string | null => {;
-if (typeof window === "undefined") return null;
-try {
-return sessionStorage.getItem(key)} catch (e) {return sessionMemoryStore[key] || null}
-},
-setItem: (key: string, value: string) => {if (typeof window === "undefined") return;
-try {
-sessionStorage.setItem(key, value)} catch (e) {sessionMemoryStore[key] = value}
-},
-removeItem: (key: string) => {if (typeof window === "undefined") return;
-try {
-sessionStorage.removeItem(key)} catch (e) {delete sessionMemoryStore[key]}
-},
-clear: () => {if (typeof window === "undefined") {
-for (const key in sessionMemoryStore) {
-delete sessionMemoryStore[key]}
-return;
-}
-try {sessionStorage.clear()} catch {for (const key in sessionMemoryStore) {
-try {
-sessionStorage.clear()} catch {
-for (const key in sessionMemoryStore) {
-delete sessionMemoryStore[key]}
-}
-},
-get isAvailable(): boolean {try {
-if (typeof window === "undefined") return false;
-const testKey = "__session_test__";
-sessionStorage.setItem(testKey, "test');
-sessionStorage.removeItem(testKey);
-return true} catch {return false}
-}
+export const safeSessionStorage = {
+  getItem: (key: string): string | null => {
+    if (typeof window === "undefined") return null;
+    try {
+      return sessionStorage.getItem(key);
+    } catch (e) {
+      return sessionMemoryStore[key] || null;
+    }
+  },
+  setItem: (key: string, value: string) => {
+    if (typeof window === "undefined") return;
+    try {
+      sessionStorage.setItem(key, value);
+    } catch (e) {
+      sessionMemoryStore[key] = value;
+    }
+  },
+  removeItem: (key: string) => {
+    if (typeof window === "undefined") return;
+    try {
+      sessionStorage.removeItem(key);
+    } catch (e) {
+      delete sessionMemoryStore[key];
+    }
+  },
+  clear: () => {
+    if (typeof window === "undefined") {
+      for (const key in sessionMemoryStore) {
+        delete sessionMemoryStore[key];
+      }
+      return;
+    }
+    try {
+      sessionStorage.clear();
+    } catch {
+      for (const key in sessionMemoryStore) {
+        delete sessionMemoryStore[key];
+      }
+    }
+  },
+  get isAvailable(): boolean {
+    try {
+      if (typeof window === "undefined") return false;
+      const testKey = "__session_test__";
+      sessionStorage.setItem(testKey, "test");
+      sessionStorage.removeItem(testKey);
+      return true;
+    } catch {
+      return false;
+    }
+  }
 };

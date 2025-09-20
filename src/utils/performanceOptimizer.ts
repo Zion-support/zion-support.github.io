@@ -1,4 +1,3 @@
-
 import React from "react";
 /**
  * Performance Optimization Utilities
@@ -98,27 +97,98 @@ class PerformanceOptimizer {
     });
   }
 
-if (document.readyState === "complete") {runTasks()} else {window.addEventListener("load", runTasks)}
-if (document.readyState === "complete") {
-runTasks()} else {
-window.addEventListener("load", runTasks)}loadTime: 0; renderTime: 0; memoryUsage: 0;,
-bundleSize: 0});
+  private getResourceType(url: string): string {
+    const extension = url.split('.').pop()?.toLowerCase();
+    switch (extension) {
+      case 'css':
+        return 'style';
+      case 'js':
+        return 'script';
+      case 'woff':
+      case 'woff2':
+      case 'ttf':
+      case 'otf':
+        return 'font';
+      case 'png':
+      case 'jpg':
+      case 'jpeg':
+      case 'webp':
+      case 'svg':
+        return 'image';
+      default:
+        return 'fetch';
+    }
+  }
+
+  private updateMemoryUsage(): void {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      this.metrics.memoryUsage = memory.usedJSHeapSize;
+    }
+  }
+
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
+
+  cleanup(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+}
+
+// React hook for performance monitoring
+export const usePerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0
+  });
   const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
+    const optimizer = new PerformanceOptimizer();
+    
     const updateMetrics = () => {
-      // Update metrics logic here
-      setScore(performanceOptimizer.calculatePerformanceScore());
+      const currentMetrics = optimizer.getMetrics();
+      setMetrics(currentMetrics);
+      
+      // Calculate performance score
+      const score = calculatePerformanceScore(currentMetrics);
+      setScore(score);
     };
 
-    updateMetrics();
+    // Update metrics on load
+    if (document.readyState === "complete") {
+      updateMetrics();
+    } else {
+      window.addEventListener("load", updateMetrics);
+    }
+
+    // Update metrics periodically
     const interval = setInterval(updateMetrics, 5000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("load", updateMetrics);
+      optimizer.cleanup();
+    };
   }, []);
 
-  return { score, metrics };
+  return { metrics, score };
 };
 
-export default performanceOptimizer;
+const calculatePerformanceScore = (metrics: PerformanceMetrics): number => {
+  let score = 100;
+  
+  // Deduct points for poor performance
+  if (metrics.loadTime > 3000) score -= 20;
+  if (metrics.renderTime > 100) score -= 15;
+  if (metrics.memoryUsage > 50 * 1024 * 1024) score -= 25; // 50MB
+  if (metrics.bundleSize > 1000 * 1024) score -= 10; // 1MB
+  
+  return Math.max(0, score);
+};
 
+export default PerformanceOptimizer;

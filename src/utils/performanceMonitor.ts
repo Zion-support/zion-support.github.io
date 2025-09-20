@@ -1,47 +1,77 @@
-
-interface PerformanceMetric {name: string; startTime: number;
-}
-endTime?: number;}
 interface PerformanceMetric {
-name: string; startTime: number;
-endTime?: number;
-duration?: number}
-
-class PerformanceMonitor {private metrics: Map<string; PerformanceMetric> = new Map();private observers: PerformanceObserver[] = [];
-
-constructor() {
-this.initializeObservers()}
-
-private initializeObservers() {// Monitor Core Web Vitals;
-if ("PerformanceObserver" in window) {
-// Largest Contentful Paint;
-try {
-const lcpObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
-const lastEntry = entries[entries.length - 1];
-this.logMetric("LCP", lastEntry.startTime)});
-lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
-this.observers.push(lcpObserver);
-} catch (error) {console.warn("LCP observer failed:", error)}
-
-// First Input Delay;
-try {const fidObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
-entries.forEach(entry => {
-this.logMetric("FID", entry.processingStart - entry.startTime)});
-});
-fidObserver.observe({ entryTypes: ["first-input"] });
-this.observers.push(fidObserver);
-} catch (error) {console.warn("FID observer failed:", error)}
-} catch (error) {
-console.warn("FID observer failed:", error)}this.startTiming(name);
-try {
-const result = func(...args);
-this.endTiming(name);
-return result} catch (error) {this.endTiming(name);
-return result} catch (error) {
-this.endTiming(name);throw error}
+  name: string;
+  startTime: number;
+  endTime?: number;
+  duration?: number;
 }
+
+class PerformanceMonitor {
+  private metrics: Map<string, PerformanceMetric> = new Map();
+  private observers: PerformanceObserver[] = [];
+
+  constructor() {
+    this.initializeObservers();
+  }
+
+  private initializeObservers(): void {
+    // Monitor Core Web Vitals
+    if ("PerformanceObserver" in window) {
+      // Largest Contentful Paint
+      try {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          this.logMetric("LCP", lastEntry.startTime);
+        });
+        lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
+        this.observers.push(lcpObserver);
+      } catch (error) {
+        console.warn("LCP observer failed:", error);
+      }
+
+      // First Input Delay
+      try {
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            this.logMetric("FID", entry.processingStart - entry.startTime);
+          });
+        });
+        fidObserver.observe({ entryTypes: ["first-input"] });
+        this.observers.push(fidObserver);
+      } catch (error) {
+        console.warn("FID observer failed:", error);
+      }
+
+      // Cumulative Layout Shift
+      try {
+        const clsObserver = new PerformanceObserver((list) => {
+          let clsValue = 0;
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          });
+          if (clsValue > 0) {
+            this.logMetric("CLS", clsValue);
+          }
+        });
+        clsObserver.observe({ entryTypes: ["layout-shift"] });
+        this.observers.push(clsObserver);
+      } catch (error) {
+        console.warn("CLS observer failed:", error);
+      }
+    }
+  }
+
+  startTiming(name: string): void {
+    this.metrics.set(name, {
+      name,
+      startTime: performance.now()
+    });
+  }
+
   endTiming(name: string): number {
     const metric = this.metrics.get(name);
     if (!metric) {
@@ -101,6 +131,8 @@ this.endTiming(name);throw error}
         }
       });
     }
+    
+    console.log(`Performance Metric - ${name}: ${value.toFixed(2)}ms`);
   }
 
   getMetrics(): Record<string, PerformanceMetric> {
@@ -114,68 +146,81 @@ this.endTiming(name);throw error}
   cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
+    this.metrics.clear();
   }
 }
 
-    // Measure FID (simplified)
-    const fidEntries = performance.getEntriesByType("first-input");
-    if (fidEntries.length > 0) {
-      metrics.firstInputDelay = (fidEntries[0] as any).processingStart - fidEntries[0].startTime;
-    }
+// Performance thresholds for monitoring
+interface PerformanceThresholds {
+  LCP: number; // Largest Contentful Paint (ms)
+  FID: number; // First Input Delay (ms)
+  CLS: number; // Cumulative Layout Shift
+  FCP: number; // First Contentful Paint (ms)
+  TTFB: number; // Time to First Byte (ms)
+}
 
-export const usePerformanceMonitor = () => {
-  return {
-    startTiming: performanceMonitor.startTiming.bind(performanceMonitor),
-    endTiming: performanceMonitor.endTiming.bind(performanceMonitor),
-    measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),
-    measureAsync: performanceMonitor.measureAsync.bind(performanceMonitor),
-    getMetrics: performanceMonitor.getMetrics.bind(performanceMonitor),
-    cleanup: performanceMonitor.cleanup.bind(performanceMonitor)
+interface PerformanceMetrics {
+  LCP?: number;
+  FID?: number;
+  CLS?: number;
+  FCP?: number;
+  TTFB?: number;
+}
+
+class PerformanceAnalyzer {
+  private metrics: PerformanceMetrics = {};
+  private thresholds: PerformanceThresholds = {
+    LCP: 2500, // Good: < 2.5s
+    FID: 100,  // Good: < 100ms
+    CLS: 0.1,  // Good: < 0.1
+    FCP: 1800, // Good: < 1.8s
+    TTFB: 600  // Good: < 600ms
   };
-};
 
-    // Measure memory usage if available
-    if ((performance as any).memory) {
-      metrics.memoryUsage = (performance as any).memory.usedJSHeapSize;
+  constructor() {
+    this.initializeMetrics();
+  }
+
+  private initializeMetrics(): void {
+    if (typeof window !== "undefined" && window.performance) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        this.metrics.TTFB = navigation.responseStart - navigation.requestStart;
+        this.metrics.FCP = navigation.domContentLoadedEventStart - navigation.navigationStart;
+      }
     }
-
-    this.metrics = metrics;
-    return metrics;
   }
 
   public getMetrics(): PerformanceMetrics | null {
-    return this.metrics;
+    return { ...this.metrics };
   }
 
   public checkThresholds(): { [K in keyof PerformanceThresholds]: boolean } {
-    if (!this.metrics) {
-      throw new Error("No performance metrics available. Call measurePerformance() first.");
-    }
-
     const results = {} as { [K in keyof PerformanceThresholds]: boolean };
     
-    for (const [key, threshold] of Object.entries(this.thresholds)) {
+    Object.keys(this.thresholds).forEach(key => {
       const metricKey = key as keyof PerformanceThresholds;
-      const metricValue = this.metrics[metricKey as keyof PerformanceMetrics] as number;
-      results[metricKey] = metricValue <= threshold;
-    }
+      const metricValue = this.metrics[metricKey];
+      if (metricValue !== undefined) {
+        results[metricKey] = metricValue <= this.thresholds[metricKey];
+      }
+    });
 
     return results;
   }
 
   public getPerformanceScore(): number {
-    if (!this.metrics) {
-      return 0;
-    }
-
-    const thresholdResults = this.checkThresholds();
-    const passedThresholds = Object.values(thresholdResults).filter(Boolean).length;
-    const totalThresholds = Object.keys(this.thresholds).length;
+    const thresholds = this.checkThresholds();
+    const passed = Object.values(thresholds).filter(Boolean).length;
+    const total = Object.keys(thresholds).length;
     
-    return Math.round((passedThresholds / totalThresholds) * 100);
+    return total > 0 ? Math.round((passed / total) * 100) : 0;
   }
 
   public setThresholds(thresholds: Partial<PerformanceThresholds>): void {
     this.thresholds = { ...this.thresholds, ...thresholds };
   }
 }
+
+export { PerformanceMonitor, PerformanceAnalyzer };
+export type { PerformanceMetric, PerformanceThresholds, PerformanceMetrics };
