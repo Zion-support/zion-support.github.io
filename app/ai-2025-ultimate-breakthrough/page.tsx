@@ -1,5 +1,5 @@
 import React from 'react'
-import SEO from '../../components/SEO'
+// import SEO from '../../components/SEO'
 
 export const metadata = {
   title: 'AI 2025 Ultimate Breakthrough | Zion Tech Group',
