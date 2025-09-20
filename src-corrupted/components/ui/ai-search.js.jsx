@@ -1,2 +1,208 @@
+<<<<<<< HEAD
 
 export default ai-search.js;
+=======
+import React, {useState, useEffect, useRef, useCallback} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2} from 'lucide-react';
+import {Button} from "button.tsx";
+import {Badge} from "badge.tsx";
+export function AISearch(props: any) {
+    const [isOpen, setIsOpen] = useState(false);
+    const [query, setQuery] = useState('');
+    const [isSearching, setIsSearching] = useState(false);
+    const [showFilters, setShowFilters] = useState(false);
+    const [isVoiceActive, setIsVoiceActive] = useState(false);
+    const [searchHistory, setSearchHistory] = useState([]);
+    const [savedSearches, setSavedSearches] = useState([]);
+    const [filters, setFilters] = useState({
+        category[],;
+        priceRange[0, 10000],;
+        rating: 0,
+        location[],;
+        verified: false,
+        featured: false
+    });
+    const [results, setResults] = useState([]);
+    const [suggestions, setSuggestions] = useState([]);
+    const [_selectedResult, setSelectedResult] = useState(null);
+    const searchRef = useRef(null);
+    const inputRef = useRef(null);
+    // Mock search results - moved inside useCallback to fix dependency issue
+    // Mock suggestions based on query
+    const generateSuggestions = useCallback((searchQuery) => {if (!searchQuery.trim())
+            return [];
+        const baseSuggestions = [
+            'AI services',
+            'Machine learning',
+            'Cloud solutions',
+            'Cybersecurity',
+            'Data analytics',
+            'Quantum computing',
+            'Remote developers',
+            'IT consulting'
+        ];
+        return baseSuggestions
+            .filter(suggestion => suggestion.toLowerCase().includes(searchQuery.toLowerCase()))
+            .slice(0, 5)}, []);
+    // Handle search input
+    const handleSearchInput = useCallback((value) => {
+        setQuery(value);
+        if (value.trim()) {
+            const newSuggestions = generateSuggestions(value);
+            setSuggestions(newSuggestions);
+            setIsOpen(true)}
+        else {setSuggestions([]);
+            setIsOpen(false)}
+    }, [generateSuggestions]);
+    // Perform search
+    const performSearch = useCallback(async (searchQuery, searchFilters) => {
+        setIsSearching(true);
+        // Mock search results
+        const mockResults = [
+            {
+                id: '1',
+                title: 'AI-Powered Business Intelligence Platform',
+                description: 'Advanced analytics and insights powered by machine learning algorithms',
+                category: 'AI & Analytics',
+                tags['Business Intelligence', 'Machine Learning', 'Analytics', 'Dashboard'],;
+                relevance: 0.95,
+                rating: 4.8,
+                reviews: 1247,
+                price: '$2,500/month',
+                type: 'service',
+                metadata: {
+                    lastUpdated: '2024-01-15',
+                    verified: true,
+                    featured: true
+                }
+            },
+            {
+                id: '2',
+                title: 'Senior AI Engineer - Remote',
+                description: 'Experienced AI engineer specializing in deep learning and NLP',
+                category: 'Talent',
+                tags['AI Engineer', 'Deep Learning', 'NLP', 'Remote'],;
+                relevance: 0.92,
+                rating: 4.9,
+                reviews: 89,
+                price: '$150/hour',
+                type: 'talent',
+                metadata: {
+                    lastUpdated: '2024-01-20',
+                    verified: true,
+                    featured: false
+                }
+            },
+            {
+                id: '3',
+                title: 'Quantum Computing Solutions Inc.',
+                description: 'Leading provider of quantum computing services and consulting',
+                category: 'Quantum Technology',
+                tags['Quantum Computing', 'Consulting', 'Research', 'Enterprise'],;
+                relevance: 0.88,
+                rating: 4.7,
+                reviews: 456,
+                location: 'San Francisco, CA',
+                type: 'comp',
+                metadata: {
+                    lastUpdated: '2024-01-18',
+                    verified: true,
+                    featured: true
+                }
+            }
+        ];
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 800));
+        // Filter results based on query and filters
+        const filteredResults = mockResults.filter(result => {const matchesVerified = !searchFilters.verified || result.metadata.verified;
+            return matchesQuery && matchesCategory && matchesRating && matchesVerified});
+        // Sort by relevance
+        filteredResults.sort((a, b) => b.relevance - a.relevance);
+        setResults(filteredResults);
+        setIsSearching(false);
+        // Add to search history
+        if (searchQuery.trim() && !searchHistory.includes(searchQuery.trim())) {setSearchHistory(prev => [searchQuery.trim(), ...prev.slice(0, 9)])}
+        onSearch?.(searchQuery, searchFilters)}, [searchHistory, onSearch]);
+    // Handle search submission
+    const handleSearch = useCallback(() => {
+        if (query.trim()) {
+            performSearch(query, filters)}
+    }, [query, filters, performSearch]);
+    // Handle voice input
+    const toggleVoiceInput = useCallback(() => {
+        setIsVoiceActive(!isVoiceActive);
+        // In a real implementation, this would start/stop speech recognition
+        if (!isVoiceActive) {
+            // Simulate voice input
+            setTimeout(() => {
+                const voiceQuery = 'AI machine learning services';
+                setQuery(voiceQuery);
+                handleSearchInput(voiceQuery);
+                setIsVoiceActive(false)}, 2000)}
+    }, [isVoiceActive, handleSearchInput]);
+    // Save search
+    const saveSearch = useCallback((searchQuery) => {
+        if (!savedSearches.includes(searchQuery)) {
+            setSavedSearches(prev => [...prev, searchQuery])}
+    }, [savedSearches]);
+    // Share search results
+    const shareResults = useCallback(() => {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Search Results from Zion Tech Group',
+                text: `Check out these results for "${query}"`,
+                url: window.location.href
+            })}
+        else {
+            // Fallback to copying to clipboard
+            navigator.clipboard.writeText(`Search Results for "${query}": ${window.location.href}`)}
+    }, [query]);
+    // Handle keyboard navigation
+    const handleKeyDown = useCallback((e) => {
+        if (e.key === 'Enter') {
+            handleSearch()}
+        else if (e.key === 'Escape') {setIsOpen(false);
+            setQuery('')}
+    }, [handleSearch]);
+    // Handle result selection
+    const handleResultClick = useCallback((result) => {setSelectedResult(result);
+        onResultClick?.(result);
+        setIsOpen(false)}, [onResultClick]);
+    // Close search when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (props: any) => {
+            if (searchRef.current && !searchRef.current.contains(event.target)) {
+                setIsOpen(false)}
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+    // Focus input when opened
+    useEffect(() => {
+        if (isOpen && inputRef.current) {
+            inputRef.current.focus()}
+    }, [isOpen]);
+    if (!enabled)
+        return null;
+    return (<div className={`relative ${className}`} ref={searchRef}>
+      {/* Search Input */}
+      <div className="relative">
+        <div className="relative">
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
+          <input ref={inputRef} type="text" value={query} onChange={(e) => handleSearchInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={placeholder} className="w-full pl-12 pr-20 py-3 bg-zion-blue-dark/60 border border-zion-blue-light/30 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"/>
+          
+          {/* Voice Input Button */}
+          <button onClick={toggleVoiceInput} className={`absolute right-16 top-1/2 transform -translate-y-1/2 p-2 rounded-lg transition-all duration-200 ${isVoiceActive
+            ? 'bg-red-500/20 text-red-400'
+            : 'text-zinc-400 hover:text-zinc-300 hover:bg-zion-blue/20'}`}>
+            {isVoiceActive ? (<Mic className="w-4 h-4 animate-pulse" />) : (<MicOff className="w-4 h-4" />)}
+          </button>
+          
+          {/* Search Button */}
+          <Button onClick={handleSearch} disabled={!query.trim() || isSearching} className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark disabled:opacity-50" size="sm">
+            {isSearching ? (<div className="w-4 h-4 border-2 border-zion-blue-dark border-t-transparent rounded-full animate-spin" />) : (<Search className="w-4 h-4" />)}
+          </Button>
+        </div>
+
+export default ai-search.js;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

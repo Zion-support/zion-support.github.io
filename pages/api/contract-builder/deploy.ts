@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { Interface } from 'ethers';
 
 // Simple ABI for demonstration (release/refund)
@@ -34,3 +35,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' });
   }
 }
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });
+}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

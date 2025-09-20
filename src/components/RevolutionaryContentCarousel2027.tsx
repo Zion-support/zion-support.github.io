@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2027: React.FC = () => {
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -15,6 +16,9 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       default:
         return REVOLUTIONARY_BLOG_POSTS_2027;
     }
+=======
+  const [currentSlide, setCurrentSlide] = useState(0);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const slides = [
@@ -337,6 +341,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
+<<<<<<< HEAD
               }`}</button>
             /></button>
           ))}</button>
@@ -351,6 +356,30 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></p>
             </svg>
           </Link>
+=======
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Quick Access Grid */}
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {contentItems.map((item, index) => (
+            <a
+              key={item.id}
+              href={item.link}
+              className={`bg-gradient-to-br ${item.gradient} rounded-lg p-4 text-white text-center hover:scale-105 transition-all duration-300 ${
+                index === currentSlide ? 'ring-2 ring-white' : ''
+              }`}
+            >
+              <div className="text-3xl mb-2">{item.image}</div>
+              <div className="text-sm font-semibold">{item.title.split(' ')[0]}</div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

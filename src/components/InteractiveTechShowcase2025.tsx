@@ -252,6 +252,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"></button>
               Start Interactive Demo</button>
             </button>
+<<<<<<< HEAD
             <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg"></button>
               Schedule Consultation</button>
             ))}
@@ -320,6 +321,10 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg"></button>
               Schedule Consultation</button>
+=======
+            <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
+              Schedule Consultation
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
             </button>
   );
 };

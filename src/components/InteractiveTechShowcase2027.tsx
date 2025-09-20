@@ -8,6 +8,37 @@ const InteractiveTechShowcase2027: React.FC = () => {
 
   const techCategories = [
     {
+<<<<<<< HEAD
+=======
+      id: 'ai-revolution',
+      title: 'Next-Gen AI Revolution 2027',
+      description: 'Conscious AI systems with quantum-enhanced processing',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      borderColor: 'border-purple-400',
+      bgColor: 'from-purple-600/30 to-pink-600/30',
+      link: '/pages/NextGenAIRevolution2027'
+    },
+    {
+      id: 'quantum-computing',
+      title: 'Quantum Computing Revolution 2027',
+      description: '1000+ qubit quantum computers achieving true supremacy',
+      icon: '⚡',
+      color: 'from-cyan-600 to-blue-600',
+      borderColor: 'border-cyan-400',
+      bgColor: 'from-cyan-600/30 to-blue-600/30',
+      link: '/pages/QuantumComputingRevolution2027'
+    },
+    {
+      id: 'neural-interface',
+      title: 'Neural Interface Revolution 2027',
+      description: 'Direct brain-computer communication and thought control',
+      icon: '🧬',
+      color: 'from-emerald-600 to-teal-600',
+      borderColor: 'border-emerald-400',
+      bgColor: 'from-emerald-600/30 to-teal-600/30',
+      link: '/pages/NeuralInterfaceRevolution2027'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       id: 0,
       title: "Conscious AI Systems",
       icon: "🧠",
@@ -21,7 +52,10 @@ const InteractiveTechShowcase2027: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       color: "from-purple-600 to-pink-600",
       link: "/pages/RevolutionaryTechTrends2027"
+<<<<<<< HEAD
       id: 0,
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     },
     {
       id: 1,
@@ -195,6 +229,11 @@ const InteractiveTechShowcase2027: React.FC = () => {
               {category.title}
             </button>
           ))}
+<<<<<<< HEAD
+=======
+        </div>
+
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
         {/* Technology Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {techCategories[activeTab].technologies.map((tech, index) => (
@@ -262,8 +301,13 @@ const InteractiveTechShowcase2027: React.FC = () => {
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold text-white mb-6">Interactive Features</h3>
+<<<<<<< HEAD
             <p className="text-xl text-purple-100 max-w-4xl mx-auto"></p>
               Experience our technologies through immersive interactive features and real-time demonstrations</p>
+=======
+            <p className="text-xl text-purple-100 max-w-4xl mx-auto">
+              Experience our technologies through immersive interactive features and real-time demonstrations
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
             </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">

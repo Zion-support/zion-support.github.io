@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
 import { Bot, Clock, Globe, TrendingDown, Shield, Zap, Users, Award } from "lucide-react";
@@ -39,6 +39,7 @@ const benefits = [
   },
 ];
 
+<<<<<<< HEAD
 const additionalFeatures = [
   {
     title: "Verified Quality",
@@ -209,3 +210,32 @@ export function BenefitsSection() {
     </section>
   );
 }
+=======
+export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ className, style }) => {
+  const { t } = useTranslation();
+  const benefits = getBenefits(t);
+
+  return (
+    <section className={cn("py-16 bg-gradient-to-br from-slate-50 to-blue-50", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <GradientHeading
+          title={t('benefits.title')}
+          subtitle={t('benefits.subtitle')}
+          className="text-center mb-12"
+        />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {benefits.map((benefit, index) => (
+            <FeatureCard
+              key={index}
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

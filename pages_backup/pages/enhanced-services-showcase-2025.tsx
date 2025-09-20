@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
       <Helmet>,
@@ -13,6 +14,255 @@ import { Helmet } from 'react-helmet-async';
         </div>,
       </div>,
     </div>,
+=======
+
+
+
+
+
+
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },;
+    {;
+      id: 'quantum',;
+      name: 'Quantum Computing',;
+      icon: '⚛️',;
+      count: quantumCount,;
+    },;
+    {;
+      id: 'blockchain',;
+      name: 'Blockchain & Web3',;
+      icon: '⛓️',;
+      count: blockchainCount,;
+    },;
+    { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },;
+    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },;
+    {;
+      id: 'security',;
+      name: 'Cybersecurity',;
+      icon: '🔒',;
+      count: cybersecurityCount,;
+    },  ];
+
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },;
+    { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },;
+    { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },;
+    { id: 'premium', name: '$20K+/month', range: '$20K+' },  ];
+
+  const sortOptions = [;
+    { id: 'name', name: 'Name A-Z' },;
+    { id: 'price-low', name: 'Price Low to High' },;
+    { id: 'price-high', name: 'Price High to Low' },;
+    { id: 'rating', name: 'Rating' },;
+    { id: 'customers', name: 'Customer Count' },  ];
+
+  // Filter and sort services;
+  const filteredServices = React && React.useMemo(() => {;
+    const parsePriceToNumber = (price: string | number): number => {;
+      if (typeof price === 'number') return price,;
+      if (typeof price === 'string') {;
+        const match = price && price.replace(/[^0-9.]/g, '');
+        const parsed = parseFloat(match || '0');
+
+
+    visible: {
+      opacity: 1
+      transition: {
+
+    }
+  };
+
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.5
+      }
+    }
+
+
+
+
+
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+import {;
+  Search, Star, Users, TrendingUp,;
+  DollarSign, Clock, CheckCircle, ArrowRight,;
+  Rocket, Monitor, Cpu,;
+  Zap, Database, Cloud, Lock, Code,;
+  Sparkles, Target, Award, Lightbulb;
+} from 'lucide-react',;
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+export default function EnhancedServicesShowcase2025(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+  const allServices = [;
+    ...innovative2025Services;
+    ...emergingTech2025Services;
+  ];
+  // Dynamic category counts;
+  const aiCount = allServices.filter(service => service.category.includes('AI')).length;
+  const quantumCount = allServices.filter(service => service.category.includes('Quantum')).length;
+  const blockchainCount = allServices.filter(service => service.category.includes('Blockchain')).length;
+  const iotCount = allServices.filter(service => service.category.includes('IoT')).length;
+  const spaceCount = allServices.filter(service => service.category.includes('Space')).length;
+  const cybersecurityCount = allServices.filter(service => service.category.includes('Security') || service.category.includes('Cybersecurity')).length;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },;
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: quantumCount },;
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: '⛓️', count: blockchainCount },;
+    { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },;
+    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },;
+    { id: 'security', name: 'Cybersecurity', icon: '🔒', count: cybersecurityCount   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },;
+    { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },;
+    { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },;
+    { id: 'premium', name: '$20K+/month', range: '$20K+'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const sortOptions = [;
+    { id: 'name', name: 'Name A-Z' },;
+    { id: 'price-low', name: 'Price Low to High' },;
+    { id: 'price-high', name: 'Price High to Low' },;
+    { id: 'rating', name: 'Rating' },;
+    { id: 'customers', name: 'Customer Count'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  // Filter and sort services;
+  const filteredServices = React.useMemo(() => {;
+    const parsePriceToNumber = (price: string | number): number => {;
+      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+        const match = price.replace(/[^0-9.]/g, '');
+        const parsed = parseFloat(match || '0');
+        return isNaN(parsed) ? 0 : parsed;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      return 0;
+    };
+    let filtered = allServices.filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' ||;
+                             (selectedCategory === 'ai' && service.category.includes('AI')) ||;
+                             (selectedCategory === 'quantum' && service.category.includes('Quantum')) ||;
+                             (selectedCategory === 'blockchain' && service.category.includes('Blockchain')) ||;
+                             (selectedCategory === 'iot' && service.category.includes('IoT')) ||;
+                             (selectedCategory === 'space' && service.category.includes('Space')) ||;
+                             (selectedCategory === 'security' && (service.category.includes('Security') || service.category.includes('Cybersecurity')));
+      const matchesPrice = selectedPriceRange === 'all' ||;
+                          (selectedPriceRange === 'low' && parsePriceToNumber(service.price) < 2000) ||;
+                          (selectedPriceRange === 'medium' && parsePriceToNumber(service.price) >= 2000 && parsePriceToNumber(service.price) < 8000) ||;
+                          (selectedPriceRange === 'high' && parsePriceToNumber(service.price) >= 8000 && parsePriceToNumber(service.price) < 20000) ||;
+                          (selectedPriceRange === 'premium' && parsePriceToNumber(service.price) >= 20000);
+      return matchesSearch && matchesCategory && matchesPrice;
+    });
+    // Sort services;
+    switch (sortBy) {;
+      case 'price-low':;
+        filtered.sort((a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price)),;
+        break,;
+      case 'price-high':;
+        filtered.sort((a, b) => parsePriceToNumber(b.price) - parsePriceToNumber(a.price)),;
+        break,;
+      case 'rating':;
+        filtered.sort((a, b) => b.rating - a.rating),;
+        break,;
+      case 'customers':;
+        filtered.sort((a, b) => b.customers - a.customers),;
+        break,;
+      default:;
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    return filtered;
+  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]),;
+
+
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };
+
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+
+        duration: 0.5;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>enhanced-services-showcase-2025 | Zion Tech Group</title>
+        <meta name="description" content="enhanced-services-showcase-2025 - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">enhanced-services-showcase-2025</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default enhanced-services-showcase-2025;

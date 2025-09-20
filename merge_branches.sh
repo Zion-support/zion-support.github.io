@@ -1,6 +1,7 @@
 #!/bin/bash
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Script to systematically merge branches and resolve conflicts
 set -e
 =======
@@ -11,6 +12,13 @@ set -e
 set -e
 
 <<<<<<< HEAD
+=======
+# Script to systematically merge branches and resolve conflicts
+set -e
+
+set -e
+
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 # Function to resolve conflicts automatically
 resolve_conflicts() {
     local file="$1"
@@ -19,6 +27,7 @@ resolve_conflicts() {
     # For most files, we'll take the incoming changes (theirs) to get the latest content
     if [[ -f "$file" ]]; then
         # Check if file has merge conflicts
+<<<<<<< HEAD
         if grep -q "<<<<<<< HEAD" "$file"; then
             echo "  - File has merge conflicts, resolving..."
             
@@ -163,6 +172,8 @@ merge_branch() {
     echo "Attempting to merge $branch..."
     
 <<<<<<< HEAD
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     if git merge "origin/$branch" --no-commit; then
         echo "  - Merge successful without conflicts"
         git commit -m "Merge $branch into main"
@@ -236,6 +247,7 @@ else
 fi
 
 echo "All branches merged successfully!"
+<<<<<<< HEAD
 =======
     log "Found branches to merge:"
     echo "$branches"
@@ -275,3 +287,5 @@ echo "All branches merged successfully!"
 # Run main function
 main "$@"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

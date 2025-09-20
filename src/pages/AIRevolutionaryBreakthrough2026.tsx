@@ -184,8 +184,14 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
             <button className="border-2 border-white text-white px-16 py-6 rounded-xl hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-2xl"></button>
               Contact Experts</button>
             </button>
+<<<<<<< HEAD
   );
 };
+=======
+          </div>
+        </div>
+      </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 export default AIRevolutionaryBreakthrough2026;
   </div>

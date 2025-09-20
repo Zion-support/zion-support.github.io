@@ -38,6 +38,7 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentStudy((prev) => (prev + 1) % caseStudies.length);
@@ -45,6 +46,8 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
     return () => clearInterval(interval);
   }, [caseStudies.length]);
 
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -101,6 +104,7 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
                     <div className="text-3xl font-bold text-orange-400 mb-2">{caseStudies[activeCase].results.timeReduction}
                     <div className="text-white/80 text-sm">Time Reduction
             </motion.div>
+<<<<<<< HEAD
             {/* Carousel Controls */}
             <div className="flex justify-center mt-8 space-x-2">
               {caseStudies.map((_, index) => (
@@ -204,6 +208,60 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
               }`}</button>
             /></button>
           ))}</button>
+=======
+          </div>
+        </div>
+
+        {/* Case Study Indicators */}
+        <div className="flex justify-center space-x-4 mb-12">
+          {caseStudies.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveCase(index)}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                activeCase === index 
+                  ? 'bg-indigo-400 scale-125' 
+                  : 'bg-gray-600 hover:bg-gray-500'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-indigo-400 mb-2">500+</div>
+            <div className="text-gray-300">Companies Transformed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">1000%</div>
+            <div className="text-gray-300">Average ROI Increase</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+            <div className="text-gray-300">Success Rate</div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies already using our revolutionary technologies
+            to achieve unprecedented growth and innovation.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center">
+              Start Your Transformation
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-white transition-all duration-300">
+              View All Case Studies
+            </button>
+          </div>
+        </div>
+      </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     </motion.div>
   );
 };

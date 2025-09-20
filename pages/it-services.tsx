@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -12,6 +13,12 @@ import {
   Music, Film, BookOpenCheck, Building, MessageCircle, 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Wrench
 } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Cloud, Shield, Database, Smartphone, Globe, Code, Server, BarChart3, Link as LinkIcon, Cpu, TestTube, BookOpen, Wrench, Brain } from 'lucide-react';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const ITServicesPage: React.FC = () => {
   const itServices = [

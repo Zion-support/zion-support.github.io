@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {,
   constructor(props) {,
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     super(props);
     this.state = { hasError: false ,};
   }
@@ -30,4 +35,7 @@ export default /**,
 function ForgotPassword() {,
   return (,
 }
+<<<<<<< HEAD
 ,)
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

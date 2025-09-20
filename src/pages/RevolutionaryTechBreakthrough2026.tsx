@@ -4,6 +4,7 @@ import React from 'react';
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -340,6 +341,8 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
               Experience the future of technology with our groundbreaking innovations that are transforming every aspect of human life</p>
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import { Helmet } from 'react-helmet-async';
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
@@ -526,8 +529,13 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl"></button>
               🚀 Start Your Journey →</button>
             </button>
+<<<<<<< HEAD
             <button className="border-2 border-white text-white px-12 py-5 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-2xl"></button>
               📞 Contact Us</button>
+=======
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
+              Schedule Demo
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
             </button>
         </motion.div>
   );

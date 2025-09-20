@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Brain, Cpu, Zap } from 'lucide-react';
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Star, Zap, Brain, Rocket, Sparkles } from 'lucide-react';
+import { REVOLUTIONARY_BLOG_POSTS_2026, REVOLUTIONARY_SERVICES_2026 } from '../data/revolutionaryContent2026';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const RevolutionaryContentBanner2026: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="relative overflow-hidden">
       {/* Background with animated gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">
@@ -59,6 +67,14 @@ const RevolutionaryContentBanner2026: React.FC = () => {
               </Link>
             </div>
           </div>
+=======
+    <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]" />
+      </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
           {/* Feature Cards Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -141,6 +157,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Bottom CTA */}
           <div className="text-center mt-12">
             <p className="text-gray-300 mb-6 text-lg">
@@ -156,6 +173,17 @@ const RevolutionaryContentBanner2026: React.FC = () => {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
+=======
+          {/* Close Button */}
+          <button
+            onClick={() => setIsVisible(false)}
+            className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors duration-300"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
         </div>
       </div>
 

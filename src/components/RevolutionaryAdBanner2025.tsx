@@ -1,53 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryAdBanner2025: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentOffer, setCurrentOffer] = useState(0);
-
-  const offers = [
-    {
-      title: "🚀 LIMITED TIME: Ultimate Tech Package",
-      description: "Get access to ALL revolutionary technologies for just $99/month",
-      originalPrice: "$999",
-      currentPrice: "$99",
-      discount: "90% OFF",
-      cta: "Claim Offer Now",
-      bg: "from-red-600 to-orange-600",
-      accent: "from-yellow-400 to-orange-400"
-    },
-    {
-      title: "🧠 AI Consciousness Access",
-      description: "Experience conscious AI systems - First 100 users get FREE access",
-      originalPrice: "$299",
-      currentPrice: "FREE",
-      discount: "100% OFF",
-      cta: "Get Free Access",
-      bg: "from-purple-600 to-pink-600",
-      accent: "from-pink-400 to-purple-400"
-    },
-    {
-      title: "⚛️ Quantum Computing Trial",
-      description: "Try our quantum reality engine for 30 days - No commitment",
-      originalPrice: "$499",
-      currentPrice: "$0",
-      discount: "FREE TRIAL",
-      cta: "Start Trial",
-      bg: "from-cyan-600 to-blue-600",
-      accent: "from-blue-400 to-cyan-400"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentOffer((prev) => (prev + 1) % offers.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [offers.length]);
-
-  const currentOfferData = offers[currentOffer];
-
   return (
+<<<<<<< HEAD
     <div className={`relative overflow-hidden rounded-2xl mb-12 transition-all duration-1000 ${
       isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'
     }`}>
@@ -240,3 +195,75 @@ export default RevolutionaryAdBanner2025;
   </div>
   </div>
   </div>
+=======
+    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            ⚡ REVOLUTIONARY BREAKTHROUGH • JANUARY 2025
+          </div>
+          <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary Tech Breakthrough 2025</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-6">
+            Witness the most groundbreaking technological breakthroughs that will revolutionize every aspect of human life
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
+            <div className="text-5xl mb-4 text-center">🧠</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Breakthrough</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              The world's first truly conscious artificial intelligence that can think, feel, and create independently
+            </p>
+            <div className="space-y-2 mb-6 text-sm">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-indigo-200">Self-aware decision making</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-indigo-200">Emotional intelligence</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                <span className="text-indigo-200">Creative problem solving</span>
+              </div>
+            </div>
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
+              Experience Breakthrough →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
+            <div className="text-5xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness Engine</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Revolutionary quantum computing technology that can process consciousness itself
+            </p>
+            <div className="space-y-2 mb-6 text-sm">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                <span className="text-purple-200">Quantum neural networks</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                <span className="text-purple-200">Consciousness simulation</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                <span className="text-purple-200">Reality manipulation</span>
+              </div>
+            </div>
+            <a href="/pages/UltimateTechRevolution2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
+              Explore Revolution →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryAdBanner2025;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

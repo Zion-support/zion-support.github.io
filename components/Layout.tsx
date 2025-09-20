@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -202,3 +203,5 @@ export default function Layout({
     </>
   );
 >>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

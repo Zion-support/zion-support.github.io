@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 const InnovativeServices2025: React.FC = () => {,
   return (,
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
@@ -7,3 +8,44 @@ const InnovativeServices2025: React.FC = () => {,
     </div>,
   ),};
 export default InnovativeServices2025;
+=======
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Network, 
+  Code, 
+  BarChart3, 
+  Target, 
+  Lightbulb, 
+  Rocket, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Cpu, 
+  Sparkles,
+  ShieldCheck,
+  Globe2,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink
+} from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+
+const InnovativeServices2025: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">InnovativeServices2025</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default InnovativeServices2025;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

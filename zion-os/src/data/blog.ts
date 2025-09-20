@@ -152,6 +152,7 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     content: 'This guide covers audits across data, models, policies, and operations...'
   }
+<<<<<<< HEAD
   ,
   {
     id: 'agentic-supply-chains-2025',
@@ -225,6 +226,8 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     content: 'We present a toolkit for incident analysis in agentic systems: span diffing, prompt and tool lineage, environment captures, and policy exception trails that make remediations auditable and scalable.'
   }
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 ];
 
 export function getFeaturedPosts(): BlogPost[] {

@@ -14,12 +14,17 @@ const NextGenInnovationHub2026: React.FC = () => {
       status: 'Active',
       progress: 95,
       impact: 'Revolutionary',
+<<<<<<< HEAD
       timeline: 'Q2 2026'
+=======
+      color: 'from-purple-500 to-pink-500'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     },
     {
       id: 2,
       category: 'quantum',
       title: 'Quantum Reality Engine',
+<<<<<<< HEAD
       description: 'Computing power that transcends physical limitations',
       icon: '⚛️',
       status: 'Development',
@@ -70,16 +75,78 @@ const NextGenInnovationHub2026: React.FC = () => {
       progress: 88,
       impact: 'Breakthrough',
       timeline: 'Q2 2026'
+=======
+      description: 'Immersive virtual environments powered by quantum computing',
+      icon: '⚡',
+      status: 'In Development',
+      progress: 78,
+      impact: 'Breakthrough',
+      color: 'from-cyan-500 to-blue-500'
+    },
+    {
+      id: 3,
+      category: 'neural',
+      title: 'Neural Interface Pro',
+      description: 'Direct brain-computer interface for seamless interaction',
+      icon: '🧬',
+      status: 'Testing',
+      progress: 82,
+      impact: 'Transformative',
+      color: 'from-emerald-500 to-teal-500'
+    },
+    {
+      id: 4,
+      category: 'biotech',
+      title: 'Synthetic Biology AI',
+      description: 'AI-powered biological systems for medical breakthroughs',
+      icon: '🧪',
+      status: 'Research',
+      progress: 65,
+      impact: 'Life-changing',
+      color: 'from-green-500 to-lime-500'
+    },
+    {
+      id: 5,
+      category: 'space',
+      title: 'Interstellar Computing',
+      description: 'Computing systems for deep space exploration',
+      icon: '🚀',
+      status: 'Concept',
+      progress: 45,
+      impact: 'Cosmic',
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      id: 6,
+      category: 'energy',
+      title: 'Fusion Power AI',
+      description: 'AI-controlled fusion reactors for unlimited clean energy',
+      icon: '⚛️',
+      status: 'Prototype',
+      progress: 70,
+      impact: 'Planetary',
+      color: 'from-yellow-500 to-orange-500'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     }
   ];
 
   const categories = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Innovations', icon: '🌟' },
     { id: 'ai', name: 'Artificial Intelligence', icon: '🤖' },
     { id: 'quantum', name: 'Quantum Computing', icon: '⚛️' },
     { id: 'biotech', name: 'Biotechnology', icon: '🧬' },
     { id: 'space', name: 'Space Technology', icon: '🚀' },
     { id: 'energy', name: 'Energy Systems', icon: '⚡' }
+=======
+    { key: 'all', label: 'All Innovations', icon: '🌟' },
+    { key: 'ai', label: 'AI & Consciousness', icon: '🧠' },
+    { key: 'quantum', label: 'Quantum Computing', icon: '⚡' },
+    { key: 'neural', label: 'Neural Interfaces', icon: '🧬' },
+    { key: 'biotech', label: 'Biotechnology', icon: '🧪' },
+    { key: 'space', label: 'Space Technology', icon: '🚀' },
+    { key: 'energy', label: 'Clean Energy', icon: '⚛️' }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   ];
 
   const filteredInnovations = selectedCategory === 'all' 
@@ -87,6 +154,7 @@ const NextGenInnovationHub2026: React.FC = () => {
     : innovations.filter(innovation => innovation.category === selectedCategory);
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -114,8 +182,58 @@ const NextGenInnovationHub2026: React.FC = () => {
               AI Solutions
             </Link>
           </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-6xl font-bold text-white mb-6">
+              Next-Gen Innovation Hub 2026
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover the future of technology through our revolutionary innovations
+              that are reshaping the world as we know it.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+              >
+                Get Involved
+              </Link>
+              <Link 
+                to="/research" 
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
+              >
+                View Research
+              </Link>
+            </div>
+          </div>
         </div>
 
+      {/* Category Filter */}
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
+          {categories.map((category) => (
+            <button
+              key={category.key}
+              onClick={() => setSelectedCategory(category.key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                selectedCategory === category.key
+                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
+            >
+              <span className="mr-2">{category.icon}</span>
+              {category.label}
+            </button>
+          ))}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
+        </div>
+
+<<<<<<< HEAD
         {/* Category Filter */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-center mb-8">Innovation Categories</h2>
@@ -139,6 +257,11 @@ const NextGenInnovationHub2026: React.FC = () => {
 
         {/* Innovations Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+=======
+      {/* Innovations Grid */}
+      <div className="container mx-auto px-4 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           {filteredInnovations.map((innovation) => (
             <div
               key={innovation.id}
@@ -183,14 +306,24 @@ const NextGenInnovationHub2026: React.FC = () => {
                   <span className="text-sm font-semibold">{innovation.timeline}</span>
                 </div>
               </div>
+<<<<<<< HEAD
               
               <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Learn More →
               </button>
+=======
+
+              <div className="mt-6 text-center">
+                <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
             </div>
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate?</h2>
@@ -207,6 +340,36 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Shape the Future?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join us in creating the next generation of technological innovations
+            that will transform the world.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+            >
+              Join Our Team
+            </Link>
+            <Link 
+              to="/invest" 
+              className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
+            >
+              Invest in Innovation
+            </Link>
+          </div>
+        </div>
+      </main>
+      
+      <EnhancedFooter />
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     </div>
   );
 };

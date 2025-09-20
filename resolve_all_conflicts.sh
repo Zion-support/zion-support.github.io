@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8069
@@ -21,6 +22,10 @@ echo "Resolving all merge conflicts by accepting our version..."
 # Comprehensive conflict resolution script
 echo "🚀 Starting comprehensive conflict resolution..."
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+=======
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 # Step 1: Check current status
 echo "📊 Checking current status..."
@@ -126,19 +131,14 @@ done
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8069
-echo "🎉 All conflict resolution complete!"
-=======
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-df8e
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 =======
->>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
 echo "Resolving all merge conflicts by using main branch version..."
 
 # Find all files with merge conflicts
+<<<<<<< HEAD
 conflicted_files=$(grep -r -l "<<<<<<< HEAD" src/ 2>/dev/null || true)
 
 if [ -z "$conflicted_files" ]; then
@@ -176,20 +176,15 @@ fi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 echo "All merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-87a1
 =======
 echo "All merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-df8e
-=======
-echo "All merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-87a1
->>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
-<<<<<<< HEAD
-=======
 =======
 echo "Conflict resolution complete!"
 echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-8069
 =======
@@ -209,3 +204,5 @@ fi
 echo "---"
 echo "✅ Script completed!"
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

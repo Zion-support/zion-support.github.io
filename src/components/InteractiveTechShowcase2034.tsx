@@ -5,6 +5,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
 
   const technologies = [
     {
+<<<<<<< HEAD
       id: 'conscious-ai',
       name: 'Conscious AI Systems',
       icon: '🧠',
@@ -54,6 +55,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
       color: 'from-emerald-600 to-teal-600',
       bgColor: 'from-emerald-600/20 to-teal-600/20',
       borderColor: 'border-emerald-400/30'
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       id: 1,
       title: "Conscious AI Systems",
       description: "Self-aware artificial intelligence with emotional intelligence and creative problem-solving capabilities",
@@ -236,6 +239,12 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 className={`bg-gradient-to-r ${tech.color}/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer transition-all duration-500 ${
                   hoveredCard === index ? 'scale-105 shadow-2xl' : 'hover:scale-102'
                 }`}
+<<<<<<< HEAD
+=======
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => setActiveTech(index)}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
               >
                 <div className="flex items-center space-x-6">
                   <div className="text-6xl">{tech.icon}
@@ -259,6 +268,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
             <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
               {/* Technology Header */}
               <div className="text-center mb-8">
+<<<<<<< HEAD
                 <div className="text-8xl mb-4 animate-bounce">{currentTech.icon}
                 <h3 className="text-4xl font-bold mb-4">{currentTech.name}</h3>
                 <p className="text-xl opacity-90">{currentTech.description}</p>
@@ -297,6 +307,26 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 <button className={`bg-gradient-to-r ${currentTech.color} text-white px-8 py-4 rounded-2xl text-xl font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105`}></button>
                   Experience {currentTech.name} →</button>
                 </button>
+=======
+                <div className="text-8xl mb-6 animate-bounce">{technologies[activeTech].icon}</div>
+                <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].title}</h3>
+                <p className="text-xl opacity-90 leading-relaxed">{technologies[activeTech].description}</p>
+              </div>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {technologies[activeTech].features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className={`bg-gradient-to-r ${technologies[activeTech].color} p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 cursor-pointer`}
+                  >
+                    <div className="text-2xl mb-2">✨</div>
+                    <h4 className="font-bold text-sm">{feature}</h4>
+                  </div>
+                ))};
+              </div>
+
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
               {/* Metrics */}
               <div className="bg-white/10 rounded-2xl p-6 mb-8">
                 <h4 className="text-xl font-bold mb-4 text-center">Performance Metrics</h4>

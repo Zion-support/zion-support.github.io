@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -184,3 +185,20 @@ commit-and-push.js
 =======
 >>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
 >>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
+=======
+node_modules/
+.next/
+out/
+build/
+dist/
+*.config.js
+*.config.ts
+scripts/
+automation/
+netlify/
+apps/
+src/components-disabled/
+src/utils-disabled/
+**/components-disabled/**
+**/utils-disabled/**
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

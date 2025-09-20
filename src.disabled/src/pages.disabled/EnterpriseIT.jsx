@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 const EnterpriseIT: React.FC = () => {,
   return (,
@@ -7,7 +11,15 @@ const EnterpriseIT: React.FC = () => {,
     </div>,
   ),};
 export default EnterpriseIT;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
 import React from \'react\', const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}, export default EnterpriseIT;
 const React from "react", const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}, export default EnterpriseIT,''",
 import _React from 'react', const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}, export default EnterpriseIT;
+=======
+=======
+import _React from 'react'; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;
+import React from \'react\'; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;
+const React from "react"; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;''"
+import _React from 'react'; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

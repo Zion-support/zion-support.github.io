@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -153,6 +154,8 @@ const ComprehensiveServices2025: React.FC = () => {
               Discover our complete range of revolutionary services that are transforming industries and creating infinite possibilities</p>
             </p>
           </motion.div>
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 
 const ComprehensiveServices2025: React.FC = () => {
@@ -168,6 +171,7 @@ const ComprehensiveServices2025: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4">Innovation</h3>
             <p className="text-blue-100">Cutting-edge technology solutions</p>
+<<<<<<< HEAD
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory}
@@ -256,3 +260,21 @@ export default ComprehensiveServices2025;
   </div>
   </div>
   </div>
+=======
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Technology</h3>
+            <p className="text-blue-100">Revolutionary technological advances</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Future</h3>
+            <p className="text-blue-100">Next-generation solutions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ComprehensiveServices2025;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

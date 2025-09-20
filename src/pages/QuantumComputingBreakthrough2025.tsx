@@ -1,7 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const QuantumComputingBreakthrough2025: React.FC = () => {
   return (
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -42,6 +44,8 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
               <li>• Protein Folding Simulation</li>
               <li>• Drug Interaction Modeling</li>
               <li>• Molecular Design</li>
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -70,12 +74,28 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
           <p className="text-xl opacity-80">Discover the breakthrough technologies that make quantum computing accessible</p>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+<<<<<<< HEAD
             <div className="text-6xl mb-4 text-center">🔬
             <h3 className="text-2xl font-bold mb-4 text-center">Molecular Simulation</h3>
             <p className="text-cyan-100 mb-6 text-center"></p>
+=======
+            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Supremacy</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Achieve computational power that exceeds classical computers by orders of magnitude
+            </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• 1,000,000x faster processing</li>
+              <li>• Parallel universe computing</li>
+              <li>• Instant problem solving</li>
+            </ul>
+          </div>
+          
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔐
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Cryptography</h3>
+<<<<<<< HEAD
             <p className="text-purple-100 mb-6 text-center"></p>
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             </ul>
@@ -83,16 +103,39 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-center">Optimization Problems</h3>
             <p className="text-emerald-100 mb-6 text-center"></p>
               Solve complex optimization problems in logistics, finance, and resource allocation</p>
+=======
+            <p className="text-purple-100 mb-6 text-center">
+              Unbreakable encryption that ensures absolute security for your data
+            </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum key distribution</li>
+              <li>• Unhackable communications</li>
+              <li>• Future-proof security</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🧬</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Molecular Simulation</h3>
+            <p className="text-emerald-100 mb-6 text-center">
+              Simulate complex molecular interactions for drug discovery and materials science
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
             </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Supply chain optimization</li>
-              <li>• Portfolio management</li>
-              <li>• Route optimization</li>
-              <li>• Resource allocation</li>
+              <li>• Drug discovery acceleration</li>
+              <li>• Materials design</li>
+              <li>• Climate solutions</li>
             </ul>
+<<<<<<< HEAD
             <div className="text-center">
               <div className="inline-block bg-white/20 px-4 py-2 rounded-lg text-sm font-semibold">
                 Coming Soon
+=======
+          </div>
+        </div>
+      </div>
+
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       {/* Quantum Performance Metrics */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
@@ -216,6 +259,7 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
                     <div>Traveling Salesman (1000 cities)
                     <div className="text-blue-200">Optimal solution found in 0.05 seconds
                   <div className="bg-purple-600/30 rounded-lg p-3">
+<<<<<<< HEAD
                     <div className="font-semibold">Machine Learning:
                     <div>Neural Network Training (1M parameters)
                     <div className="text-purple-200">Converged in 0.1 seconds
@@ -239,6 +283,65 @@ const QuantumComputingBreakthrough2025: React.FC = () => {
             >
               Learn More
             </a>
+=======
+                    <div className="font-semibold">Machine Learning:</div>
+                    <div>Neural Network Training (1M parameters)</div>
+                    <div className="text-purple-200">Converged in 0.1 seconds</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
+          <h2 className="text-4xl font-bold mb-6">Ready to Harness Quantum Power?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join the quantum revolution and discover how quantum computing can solve your most complex problems
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Quantum Journey
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
+              <h2 className="text-4xl font-bold mb-6">Ready to Harness Quantum Power?</h2>
+              <p className="text-xl mb-8 max-w-3xl mx-auto">
+                Join the quantum revolution and unlock computational capabilities that were once thought impossible. 
+                The future of computing is quantum, and it starts now.
+              </p>
+              <div className="flex justify-center space-x-6">
+                <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
+                  Start Quantum Journey
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
+                  Request Demo
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

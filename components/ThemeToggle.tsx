@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 'use client';
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Sun, Moon, Monitor } from 'lucide-react';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 import React, { useEffect, useState } from 'react';
 import { Sun, Moon, Monitor, Palette } from 'lucide-react';
@@ -190,4 +196,8 @@ const ThemeToggle: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ThemeToggle;
+=======
+export default ThemeToggle;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

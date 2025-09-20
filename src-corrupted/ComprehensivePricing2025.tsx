@@ -1,4 +1,37 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Check, 
+  Star, 
+  DollarSign, 
+  Clock, 
+  Users, 
+  Shield, 
+  Zap, 
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Download,
+  Play,
+  Search,
+  Filter,
+  ArrowRight,
+  Award,
+  Globe,
+  Cpu,
+  Brain,
+  Cloud,
+  Lock,
+  Code
+} from 'lucide-react';
+import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const ComprehensivePricing2025: React.FC = () => {,
   return (,

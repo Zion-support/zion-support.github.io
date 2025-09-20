@@ -30,13 +30,8 @@ npm error To see a list of scripts, run:
 npm error   npm run
 npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-09-15T13_11_53_370Z-debug-0.log
 [2025-09-15T13:11:53.430Z] ❌ sitemap generation failed: Command failed: npm run sitemap
-<<<<<<< HEAD
-[2025-09-15T19:06:59.441Z] 🚀 Sitemap keeper starting
-[2025-09-15T19:06:59.447Z] ▶ npm run sitemap
-=======
 [2025-09-15T20:20:21.359Z] 🚀 Sitemap keeper starting
 [2025-09-15T20:20:21.365Z] ▶ npm run sitemap
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
 npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
 npm warn config `--include=optional` to include them.
 npm warn config
@@ -45,13 +40,8 @@ npm error Missing script: "sitemap"
 npm error
 npm error To see a list of scripts, run:
 npm error   npm run
-<<<<<<< HEAD
-npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-09-15T19_06_59_501Z-debug-0.log
-[2025-09-15T19:06:59.587Z] ❌ sitemap generation failed: Command failed: npm run sitemap
-=======
 npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-09-15T20_20_21_423Z-debug-0.log
 [2025-09-15T20:20:21.505Z] ❌ sitemap generation failed: Command failed: npm run sitemap
->>>>>>> 989864ad5ef118804be96b17356deb0745379eba
 [2025-09-16T05:28:50.231Z] 🚀 Sitemap keeper starting
 [2025-09-16T05:28:50.234Z] ▶ npm run sitemap
 npm error Missing script: "sitemap"
@@ -60,6 +50,7 @@ npm error To see a list of scripts, run:
 npm error   npm run
 npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-09-16T05_28_50_307Z-debug-0.log
 [2025-09-16T05:28:50.412Z] ❌ sitemap generation failed: Command failed: npm run sitemap
+<<<<<<< HEAD
 [2025-09-16T10:58:27.979Z] 🚀 Sitemap keeper starting
 [2025-09-16T10:58:27.982Z] ▶ npm run sitemap
 npm error Missing script: "sitemap"
@@ -92,3 +83,5 @@ npm error To see a list of scripts, run:
 npm error   npm run
 npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2025-09-17T08_20_28_464Z-debug-0.log
 [2025-09-17T08:20:28.552Z] ❌ sitemap generation failed: Command failed: npm run sitemap
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

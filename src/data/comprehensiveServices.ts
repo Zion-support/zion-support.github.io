@@ -271,6 +271,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     deliveryTime: "24-32 weeks",
     support: "Consciousness AI experts",
     reviews: { rating: 5.0, count: 12 }
+<<<<<<< HEAD
   },
   {
     id: "holographic-computing-001",
@@ -483,3 +484,7 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
   },
   ...newServices2026
 ];
+=======
+  }
+];
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

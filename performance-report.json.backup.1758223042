@@ -1,0 +1,18 @@
+{
+<<<<<<< HEAD
+  "timestamp": "2025-09-17T01:10:23.249Z",
+  "buildTime": 0,
+  "bundleSize": 827670,
+  "chunkCount": 41,
+  "recommendations": [
+    "Enable gzip/brotli compression on server",
+    "Implement service worker for caching",
+    "Use CDN for static assets"
+  ]
+}
+=======
+  "timestamp": "2025-09-01T12:00:42.429Z",
+  "buildSize": 0,
+  "largeFiles": [],
+  "summary": "Performance monitoring completed"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7bc1

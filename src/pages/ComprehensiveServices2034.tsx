@@ -1,6 +1,7 @@
 import React from 'react';
 
 const ComprehensiveServices2034: React.FC = () => {
+<<<<<<< HEAD
   const services = [
     {
       category: 'Conscious AI Systems',
@@ -50,6 +51,8 @@ const ComprehensiveServices2034: React.FC = () => {
   };
 
   return (
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -189,6 +192,7 @@ const ComprehensiveServices2034: React.FC = () => {
             <p className="text-xl opacity-90">What our clients say about our services</p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+<<<<<<< HEAD
               <div className="text-yellow-400 text-2xl mb-3">⭐⭐⭐⭐⭐
               <p className="text-sm opacity-80 mb-4"></p>
                 "The AI consciousness systems transformed our entire operation. We achieved 500% efficiency gains in just 6 months."</p>
@@ -309,6 +313,36 @@ const ComprehensiveServices2034: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"></button>
               Schedule Consultation</button>
             </button>
+=======
+              <div className="text-yellow-400 text-2xl mb-3">⭐⭐⭐⭐⭐</div>
+              <p className="text-sm opacity-80 mb-4">
+                "The AI consciousness systems transformed our entire operation. We achieved 500% efficiency gains in just 6 months."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Service Categories Navigation */}
+        <div className="container mx-auto px-4 py-16">
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            {serviceCategories.map((category, index) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`px-8 py-4 rounded-2xl text-xl font-bold transition-all duration-300 ${
+                  activeCategory === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-2xl scale-105`
+                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                {category.icon} {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

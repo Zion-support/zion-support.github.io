@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { 
   Monitor, 
   Shield, 
@@ -16,6 +17,8 @@ import {
   Zap, 
   Target, 
   Rocket
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
@@ -444,7 +447,6 @@ const AIPoweredITAssetManagement: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
 import { Server, Shield, BarChart3, Zap, Users, Globe, Settings, Database } from 'lucide-react';
@@ -600,7 +602,11 @@ const AIPoweredITAssetManagement: React.FC = () => {</p>
         description="Revolutionary AI-powered platform for comprehensive IT asset management, optimization, and security compliance."
         keywords="IT asset management, AI asset tracking, IT inventory, asset optimization, IT compliance, AI management"
       />
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
+=======
+      
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">

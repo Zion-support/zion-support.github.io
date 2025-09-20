@@ -1,6 +1,46 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2036: React.FC = () => {
+<<<<<<< HEAD
+=======
+  const [currentAd, setCurrentAd] = useState(0);
+
+  const ads = [
+    {
+      title: "🧠 Conscious AI Revolution",
+      subtitle: "Experience AI that truly understands and feels",
+      cta: "Explore Consciousness",
+      link: "/pages/UltimateTechBreakthrough2036",
+      gradient: "from-purple-600 to-pink-600",
+      icon: "🧠"
+    },
+    {
+      title: "⚛️ Quantum Reality Engine",
+      subtitle: "Computing across infinite dimensions",
+      cta: "Go Quantum",
+      link: "/pages/RevolutionaryTechShowcase2036",
+      gradient: "from-cyan-600 to-blue-600",
+      icon: "⚛️"
+    },
+    {
+      title: "🌌 Interdimensional Tech",
+      subtitle: "Technology that bridges realities",
+      cta: "Enter Dimensions",
+      link: "/pages/NextGenInnovationHub2036",
+      gradient: "from-emerald-600 to-teal-600",
+      icon: "🌌"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentAd((prev) => (prev + 1) % ads.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [ads.length]);
+
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm">
@@ -100,6 +140,10 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <a href="/pages/RevolutionaryTechShowcase2036" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience All Technologies →
           </a>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {ads.map((ad, index) => (
@@ -113,6 +157,7 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               <p className="text-sm opacity-90">{ad.subtitle}</p>
             </a>
           ))}
+<<<<<<< HEAD
         <div className="text-center mt-8">
           <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg mr-4"></button>
             Explore All Technologies</button>
@@ -120,6 +165,11 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg"></button>
             Learn More</button>
           </button>
+=======
+        </div>
+      </div>
+    </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

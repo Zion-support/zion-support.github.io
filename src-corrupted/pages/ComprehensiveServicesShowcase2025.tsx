@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {,
@@ -16,3 +17,86 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {,
     </div>,
   ),};
 export default ComprehensiveServicesShowcase2025;
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Cloud, 
+  Users, 
+  Cpu, 
+  Database, 
+  Globe, 
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Award,
+  Target,
+  BarChart3,
+  Smartphone,
+  Server,
+  Lock,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  Mail,
+  Eye,
+  Code,
+  Settings
+} from 'lucide-react';
+import { SEOHead } from '../components/seo/SEOHead';
+import { COMPREHENSIVE_REAL_SERVICES_2025 } from '../data/comprehensiveRealServices2025';
+
+const ComprehensiveServicesShowcase2025 = (props: any) => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+
+  const categories = ['All', 'Micro SAAS', 'IT Services', 'AI Services', 'Cloud Solutions', 'Cybersecurity', 'Digital Transformation'];
+
+  const filteredServices = COMPREHENSIVE_REAL_SERVICES_2025.filter(service => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const getCategoryIcon = (props: any) => {
+    switch (category) {
+      case 'Micro SAAS': return <Smartphone className="w-6 h-6"  />;
+      case 'IT Services': return <Server className="w-6 h-6"  />;
+      case 'AI Services': return <Brain className="w-6 h-6"  />;
+      case 'Cloud Solutions': return <Cloud className="w-6 h-6"  />;
+      case 'Cybersecurity': return <Shield className="w-6 h-6"  />;
+      case 'Digital Transformation': return <Zap className="w-6 h-6"  />;
+      default: retur n <Settings className="w-6 h-6"  />;
+    }
+  };
+
+const ComprehensiveServicesShowcase2025: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ComprehensiveServicesShowcase2025 | Zion Tech Group</title>
+        <meta name="description" content="ComprehensiveServicesShowcase2025 - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ComprehensiveServicesShowcase2025</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ComprehensiveServicesShowcase2025;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

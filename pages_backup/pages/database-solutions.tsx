@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
       <Helmet>,
@@ -11,6 +12,152 @@
         </div>,
       </div>,
     </div>,
+=======
+import * as React from 'react';
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import { BarChart3,Database,RefreshCw,Server,Shield,Zap,CheckCircle,ArrowRight } from 'lucide-react';
+
+const services = [
+  {
+    icon: Database,
+    title: 'Database Design & Architecture',
+    description: 'Custom database solutions designed for your specific business needs',
+    features: ['Schema optimization', 'Performance tuning', 'Scalability planning', 'Data modeling']
+  },
+  {
+    icon: Server,
+    title: 'Database Migration',
+    description: 'Seamless migration between database systems with zero downtime',
+    features: ['Data integrity assurance', 'Automated migration tools', 'Rollback capabilities', 'Testing & validation']
+  },
+  {
+    icon: Shield,
+    title: 'Database Security',
+    description: 'Comprehensive security solutions to protect your valuable data',
+    features: ['Access control', 'Encryption at rest', 'Audit logging', 'Compliance monitoring']
+  },
+  {
+    icon: Zap,
+    title: 'Performance Optimization',
+    description: 'Optimize your database performance for maximum efficiency',
+    features: ['Query optimization', 'Index tuning', 'Resource monitoring', 'Capacity planning']
+  },
+  {
+    icon: BarChart3,
+    title: 'Analytics & Reporting',
+    description: 'Transform your data into actionable business insights',
+    features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Predictive analytics']
+  },
+  {
+    icon: RefreshCw,
+    title: 'Backup & Recovery',
+    description: 'Reliable backup and disaster recovery solutions',
+    features: ['Automated backups', 'Point-in-time recovery', 'Cross-region replication', 'Disaster recovery testing']
+  }
+];
+
+const databaseTypes = [
+  {
+    name: 'PostgreSQL',
+    description: 'Open-source relational database with advanced features',
+    useCases: ['Web applications', 'Analytics', 'Geospatial data'],
+    icon: '🐘'
+  },
+  {
+    name: 'MySQL',
+    description: 'Popular open-source database for web applications',
+    useCases: ['E-commerce', 'Content management', 'Small to medium apps'],
+    icon: '🐬'
+  },
+  {
+    name: 'MongoDB',
+    description: 'NoSQL document database for modern applications',
+    useCases: ['Real-time analytics', 'Content management', 'Mobile apps'],
+    icon: '🍃'
+  },
+  {
+    name: 'Redis',
+    description: 'In-memory data structure store for caching',
+    useCases: ['Caching', 'Session storage', 'Real-time features'],
+    icon: '🔴'
+  },
+  {
+    name: 'Elasticsearch',
+    description: 'Search and analytics engine for complex queries',
+    useCases: ['Search functionality', 'Log analysis', 'Business intelligence'],
+    icon: '🔍'
+  },
+  {
+    name: 'ClickHouse',
+    description: 'Columnar database for real-time analytics',
+    useCases: ['Big data analytics', 'Time series data', 'OLAP workloads'],
+    icon: '⚡'
+  }
+];
+
+const pricingPlans = [
+  {
+    name: 'Consultation',
+    price: '$150',
+    period: '/hour',
+    description: 'Database assessment and planning',
+    features: [
+      'Database audit',
+      'Performance analysis',
+      'Security review',
+      'Optimization recommendations',
+      'Migration planning'
+    ]
+  },
+  {
+    name: 'Implementation',
+    price: '$5,000',
+    period: '/project',
+    description: 'Complete database setup and migration',
+    features: [
+      'Database design',
+      'Migration execution',
+      'Performance tuning',
+      'Security configuration',
+      'Documentation',
+      'Training'
+    ],
+    popular: true
+  },
+  {
+    name: 'Management',
+    price: '$2,500',
+    period: '/month',
+    description: 'Ongoing database management and support',
+    features: [
+      '24/7 monitoring',
+      'Performance optimization',
+      'Security updates',
+      'Backup management',
+      'Incident response',
+      'Monthly reports'
+    ]
+  }
+];
+
+export default function DatabaseSolutionsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>database-solutions | Zion Tech Group</title>
+        <meta name="description" content="database-solutions - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">database-solutions</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default database-solutions;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 
 const AIBusinessIntelligence: React.FC = () => {,
@@ -16,3 +17,75 @@ const AIBusinessIntelligence: React.FC = () => {,
     </div>,
   ),};
 export default AIBusinessIntelligence;
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target  } from 'lucide-react.ts';
+
+export default function AIBusinessIntelligence(...args: any[]): any {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Intelligent analysis and predictive modeling'
+    },
+    {
+      icon: BarChart3,
+      title: 'Real-time Analytics',
+      description: 'Live data visualization and reporting'
+    },
+    {
+      icon: Zap,
+      title: 'Automated Intelligence',
+      description: 'Smart automation of business processes'
+    },
+    {
+      icon: Eye,
+      title: 'Predictive Analytics',
+      description: 'Forecast trends and identify opportunities'
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: 'Business Intelligence Dashboard',
+      description: 'Comprehensive view of all business metrics and KPIs',
+      icon: BarChart3
+    },
+    {
+      title: 'Predictive Modeling',
+      description: 'AI algorithms to forecast business outcomes',
+      icon: TrendingUp
+    },
+    {
+      title: 'Natural Language Query',
+      description: 'Ask questions in plain English and get instant answers',
+      icon: Database
+    },
+    {
+      title: 'Automated Reporting',
+      description: 'Generate reports automatically with AI insights',
+      icon: Target
+    }
+  ];
+
+const AIBusinessIntelligence: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>AIBusinessIntelligence | Zion Tech Group</title>
+        <meta name="description" content="AIBusinessIntelligence - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AIBusinessIntelligence</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AIBusinessIntelligence;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 
 const NewContentPromotionBanner2025: React.FC = () => {
@@ -244,6 +245,8 @@ const NewContentPromotionBanner2025: React.FC = () => {
               Watch Live Demos
             </a>
 import React, { useState, useEffect } from 'react';
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const NewContentPromotionBanner2025: React.FC = () => {
   const [currentPromo, setCurrentPromo] = useState(0);
@@ -363,6 +366,7 @@ const NewContentPromotionBanner2025: React.FC = () => {
             />
           ))}
       {/* Animated Border */}
+<<<<<<< HEAD
       <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-border animate-gradient-x">
       </motion.div>
       </motion.div>
@@ -476,3 +480,11 @@ export default NewContentPromotionBanner2025;
   </div>
   </div>
   </div>
+=======
+      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 bg-clip-border animate-gradient-x"></div>
+    </div>
+  );
+};
+
+export default NewContentPromotionBanner2025;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

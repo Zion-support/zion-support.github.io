@@ -1,0 +1,175 @@
+<<<<<<< HEAD
+
+const custom-development: React.FC = () => {
+=======
+import * as React from 'react';
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import { Code, Zap, Server, Database, Shield, BarChart3, Users, Building2, Rocket, Factory, Brain, Cloud, Network, Settings, ArrowRight, CheckCircle, Star, TrendingUp, Award, Clock, Globe, Lock, Cpu, Workflow, MessageCircle, ArrowUp, Sparkles, Home, Truck, BookOpen, Leaf, Satellite, HelpCircle, Menu, X, Building, DollarSign, ShoppingCart, Heart, Eye, FileText, AlertCircle, Scale, Phone, Mail, MapPin, Instagram, Linkedin, Twitter, Facebook, ExternalLink, Calendar, User, Download, Play, Tag, Smartphone, Target } from 'lucide-react';
+
+const services = [
+  {
+    icon: Code,
+    title: 'Custom Web Applications',
+    description: 'Tailored web applications built to your exact specifications',
+    features: ['Responsive design', 'Cross-browser compatibility', 'Performance optimization', 'SEO-friendly']
+  },
+  {
+    icon: Zap,
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform mobile applications for iOS and Android',
+    features: ['Native performance', 'Cross-platform compatibility', 'App store optimization', 'Push notifications']
+  },
+  {
+    icon: Server,
+    title: 'Backend Development',
+    description: 'Robust server-side solutions and API development',
+    features: ['RESTful APIs', 'GraphQL endpoints', 'Database design', 'Microservices architecture']
+  },
+  {
+    icon: Database,
+    title: 'Database Solutions',
+    description: 'Custom database design and optimization for your specific needs',
+    features: ['Schema design', 'Query optimization', 'Data migration', 'Backup strategies']
+  },
+  {
+    icon: Shield,
+    title: 'Security Implementation',
+    description: 'Comprehensive security measures for your custom applications',
+    features: ['Authentication systems', 'Data encryption', 'Security audits', 'Compliance standards']
+  },
+  {
+    icon: BarChart3,
+    title: 'Analytics Integration',
+    description: 'Custom analytics and reporting solutions for business insights',
+    features: ['Real-time dashboards', 'Custom metrics', 'Data visualization', 'Automated reporting']
+  }
+];
+
+const technologies = [
+  {
+    category: 'Frontend',
+    technologies: ['React', 'Vue.js', 'Angular', 'Next.js', 'TypeScript', 'Tailwind CSS']
+  },
+  {
+    category: 'Backend',
+    technologies: ['Node.js', 'Python', 'Java', 'C#', 'Go', 'PHP']
+  },
+  {
+    category: 'Mobile',
+    technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin', 'Ionic']
+  },
+  {
+    category: 'Databases',
+    technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'ClickHouse']
+  },
+  {
+    category: 'Cloud',
+    technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform']
+  },
+  {
+    category: 'DevOps',
+    technologies: ['CI/CD', 'GitLab', 'Jenkins', 'Ansible', 'Prometheus', 'Grafana']
+  }
+];
+
+const process = [
+  {
+    step: 'Discovery',
+    description: 'Understanding your requirements and business goals',
+    duration: '1-2 weeks',
+    activities: ['Requirements gathering', 'Technical analysis', 'Project planning', 'Resource allocation']
+  },
+  {
+    step: 'Design',
+    description: 'Creating detailed technical specifications and UI/UX designs',
+    duration: '2-3 weeks',
+    activities: ['System architecture', 'UI/UX design', 'Database design', 'API specification']
+  },
+  {
+    step: 'Development',
+    description: 'Building your custom solution with regular updates',
+    duration: '4-12 weeks',
+    activities: ['Agile development', 'Code reviews', 'Testing', 'Regular demos']
+  },
+  {
+    step: 'Testing',
+    description: 'Comprehensive testing to ensure quality and reliability',
+    duration: '1-2 weeks',
+    activities: ['Unit testing', 'Integration testing', 'User acceptance testing', 'Performance testing']
+  },
+  {
+    step: 'Deployment',
+    description: 'Launching your solution with full support and documentation',
+    duration: '1 week',
+    activities: ['Production deployment', 'User training', 'Documentation', 'Go-live support']
+  },
+  {
+    step: 'Maintenance',
+    description: 'Ongoing support and continuous improvement',
+    duration: 'Ongoing',
+    activities: ['Bug fixes', 'Feature updates', 'Performance monitoring', 'Security updates']
+  }
+];
+
+const pricingModels = [
+  {
+    name: 'Fixed Price',
+    description: 'Perfect for well-defined projects with clear requirements',
+    price: 'From $10,000',
+    features: [
+      'Fixed timeline and budget',
+      'Detailed project scope',
+      'Milestone-based payments',
+      'Change request process'
+    ],
+    ideal: 'Clear requirements, defined scope'
+  },
+  {
+    name: 'Time & Materials',
+    description: 'Flexible pricing based on actual work performed',
+    price: '$75-150/hour',
+    features: [
+      'Pay only for work done',
+      'Flexible scope changes',
+      'Regular progress reports',
+      'Transparent billing'
+    ],
+    ideal: 'Evolving requirements, agile development',
+    popular: true
+  },
+  {
+    name: 'Dedicated Team',
+    description: 'Dedicated development team for long-term projects',
+    price: 'From $15,000/month',
+    features: [
+      'Dedicated team members',
+      'Full project management',
+      'Regular communication',
+      'Scalable team size'
+    ],
+    ideal: 'Long-term projects, ongoing development'
+  }
+];
+
+export default function CustomDevelopmentPage() {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7bc1
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>custom-development | Zion Tech Group</title>
+        <meta name="description" content="custom-development - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">custom-development</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default custom-development;

@@ -68,6 +68,75 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
                         Explore {slide.title} →
                       </a>
               ))}
+<<<<<<< HEAD
+=======
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Dots Indicator */}
+        <div className="flex justify-center space-x-2 mt-8">
+          {contentSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Quick Access Links */}
+        <div className="mt-8 text-center">
+          <div className="inline-flex items-center space-x-4">
+            <a 
+              href="/pages/UltimateTechBreakthrough2039" 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+            >
+              🌟 Ultimate Breakthrough
+            </a>
+            <a 
+              href="/pages/RevolutionaryTechShowcase2039" 
+              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+            >
+              ⚡ Tech Showcase
+            </a>
+            <a 
+              href="/pages/NextGenInnovationHub2039" 
+              className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+            >
+              🧠 Innovation Hub
+            </a>
+            <a 
+              href="/pages/TranscendentTechRevolution2039" 
+              className="bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+            >
+              🌟 Transcendent Revolution
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

@@ -1,7 +1,12 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
 import globals from 'globals';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -9,6 +14,7 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
@@ -26,19 +32,221 @@ export default [
         clearTimeout: 'readonly',
         clearInterval: 'readonly'
       },
+=======
+    files: ['src/**/*.ts', 'src/**/*.tsx'],
+    ignores: [
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/build/**',
+      '**/.next/**',
+      '**/zion-os.disabled/**',
+      '**/zion-os/**',
+      '**/zion-website/**',
+      '**/zion.app/**',
+      '**/zion_academy/**',
+      '**/automation/**',
+      '**/backup/**',
+      '**/backups/**',
+      '**/cache/**',
+      '**/artifacts/**',
+      '**/dao/**',
+      '**/data/**',
+      '**/app/**',
+      '**/apps.backup/**',
+      '**/auto-*.js',
+      '**/automation-runner.js',
+      '**/automation.tsx',
+      '**/automation/**',
+      '**/automation_backup/**',
+      '**/backup-merge-conflicts/**',
+      '**/backup-problematic-files/**',
+      '**/basic-test.js',
+      '**/batch-syntax-fixer.cjs',
+      '**/blockchain-solutions.tsx',
+      '**/blog/**',
+      '**/broken_components/**',
+      '**/broken_files_backup/**',
+      '**/browserstack.config.ts',
+      '**/build-verification.js',
+      '**/case-studies.tsx',
+      '**/check-syntax.js',
+      '**/clean-merge-resolver.js',
+      '**/code-quality-improvements.js',
+      '**/code-splitting-examples.js',
+      '**/commit-and-push.js',
+      '**/complete-improvement-suite.cjs',
+      '**/component-library.tsx',
+      '**/components.disabled/**',
+      '**/components.disabled_full/**',
+      // Root level problematic files
+      '**/AIMatcher.tsx',
+      '**/App-conflicted.tsx',
+      '**/App.smoke.test.tsx',
+      '**/App.test.tsx',
+      '**/App.tsx',
+      '**/App_backup.tsx',
+      '**/App_clean.tsx',
+      '**/App_minimal.tsx',
+      '**/CategoryDetail.tsx',
+      '**/ComprehensivePricingGuide2030.tsx',
+      '**/ComprehensiveServices2025.tsx',
+      '**/ComprehensiveServicesLanding2026.tsx',
+      '**/InnovativeServices2029.tsx',
+      '**/ListingDetail.tsx',
+      // Test directories
+      '**/__tests__/**',
+      '**/__mocks__/**',
+      // API directories
+      '**/api-backup/**',
+      '**/api-disabled/**',
+      '**/api.disabled/**',
+      '**/api.disabled.temp/**',
+      '**/api/**',
+      // App directories
+      '**/app-disabled/**',
+      '**/app-minimal/**',
+      '**/app-optimizer.js',
+      // Pages directories
+      '**/pages.disabled_auto/**',
+      '**/pages.disabled_build/**',
+      // Source files
+      '**/src/App.backup.tsx',
+      '**/src/App_backup.tsx',
+      '**/src/App.full.tsx',
+      '**/src/App.minimal.tsx',
+      '**/src/AppOptimized.tsx',
+      // Advanced files
+      '**/advanced-app-improvement-suite.cjs',
+      '**/advanced-source-fixer.js',
+      '**/analyze-missing-pages.js',
+      // File patterns
+      '**/*.disabled.js',
+      '**/*.backup.*',
+      '**/*.conflicted.*',
+      '**/*.broken.*',
+      '**/*.temp.*',
+      '**/*.cjs',
+      '**/*.mjs',
+      '**/*.js',
+      '**/test-*.js',
+      '**/test-*.ts',
+      '**/test-*.tsx',
+      '**/ultimate-*.js',
+      '**/ultimate-*.cjs',
+      '**/verify-*.js',
+      '**/workbox-*.js',
+      '**/vite.config-backup.*',
+      '**/vitest.config.ts',
+      '**/types/**',
+      '**/zion_academy/**',
+      '**/token/**',
+      '**/hardhat.config.js',
+      '**/next-*.js',
+      '**/sentry.*.js',
+      '**/script.js',
+      '**/performance-optimization.js',
+      '**/start-all-automations.js',
+      '**/syntax-fixer.js',
+      '**/verify-and-complete-merges.js',
+      '**/simple-*.js',
+      '**/merge-*.js',
+      '**/resolve-*.js',
+      '**/fix-*.js',
+      '**/auto-*.js',
+      '**/batch-*.js',
+      '**/comprehensive-*.js',
+      '**/final-*.js',
+      '**/run-*.js',
+      '**/check-*.js',
+      '**/clean-*.js',
+      '**/code-*.js',
+      '**/commit-*.js',
+      '**/complete-*.js',
+      '**/analyze-*.js',
+      '**/optimized-*.js',
+      '**/debug-*.js',
+      '**/execute-*.js',
+      '**/extract*.js',
+      '**/git-*.js',
+      '**/health-*.js',
+      '**/improve-*.js',
+      '**/maintenance-*.js',
+      '**/monitoring-*.js',
+      '**/restore-*.js',
+      '**/selective-*.js',
+      '**/seo-*.js',
+      '**/mcp-*.js',
+      '**/github-*.js',
+      '**/pr-*.js',
+      '**/systematic-*.js',
+      '**/temp_*.js',
+      '**/ultimate_*.js',
+      '**/ecosystem-*.js',
+      '**/babel.config.js',
+      '**/build-*.js',
+      '**/check_*.js',
+      '**/comment-*.js',
+      '**/comprehensive_*.js',
+      '**/create-*.js',
+      '**/create_*.js',
+      '**/fix_*.js',
+      '**/mcp_*.js',
+      '**/merge_*.js',
+      '**/simple_*.js',
+      '**/.scripts/**',
+      '**/next-i18next.config.js',
+      '**/next-sitemap.config.js',
+      '**/sentry.*.config.js'
+    ]
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       parserOptions: {
         ecmaFeatures: {
+<<<<<<< HEAD
           jsx: true
         }
       }
     },
     plugins: {
+=======
+          jsx: true,
+        },
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        React: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
+<<<<<<< HEAD
       'no-unused-vars': 'warn',
+=======
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       'no-console': 'warn',
       'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off'

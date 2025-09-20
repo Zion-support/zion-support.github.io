@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 import { Helmet } from "react-helmet-async";
 
@@ -17,6 +22,7 @@ interface SEOProps {
   tags?: string[];
 }
 
+<<<<<<< HEAD
 export function SEO({
   title,
   description,
@@ -112,6 +118,19 @@ export function SEO({
   return (
     <Helmet>
       <title>{fullTitle}</title>
+=======
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+  image = 'https://zion.app/images/zion-tech-group-logo.png',
+  url = 'https://zion.app',
+  type = 'website'
+}) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       
@@ -144,6 +163,7 @@ export function SEO({
       <meta name="twitter:creator" content="@ziontechgroup" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
+<<<<<<< HEAD
       <meta name="twitter:image" content={ogImage} />
       
       {/* Canonical URL */}
@@ -172,3 +192,14 @@ export function SEO({
     </Helmet>
   );
 }
+=======
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={url} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Helmet>
+  );
+};
+
+export default SEO;
+
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

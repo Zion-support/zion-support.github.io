@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {,
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom,
+=======
+import { 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 ];
 const serviceCategories = [,
   {,

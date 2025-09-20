@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Calendar, MapPin, Clock, Users, ExternalLink, 
+  Filter, Search, Tag, ArrowRight 
+} from 'lucide-react';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const Events: React.FC = () => {,
   return (,

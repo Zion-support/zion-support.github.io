@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 
 const EnhancedAccessibilityPanel: React.FC = () => {,
@@ -8,3 +9,264 @@ const EnhancedAccessibilityPanel: React.FC = () => {,
     </div>,
   ),};
 export default EnhancedAccessibilityPanel;
+=======
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Eye, 
+  EyeOff, 
+  Volume2, 
+  VolumeX, 
+  Type, 
+  Contrast, 
+  MousePointer,
+  Keyboard,
+  Monitor,
+  Settings,
+  X,
+  Check,
+  AlertTriangle
+ } from 'lucide-react.ts';
+
+interface AccessibilitySettings {
+
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+  focusIndicator: boolean;
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+  fontSize: 'small' | 'medium' | 'large' | 'extra-large';
+
+}
+
+export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<any>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: boolean,
+    keyboardNavigation: false,
+    focusIndicator: true,
+    colorBlindness: 'none',
+    fontSize: 'medium'
+  });
+
+  const [announcements, setAnnouncements] = useState<any>([]);
+  const [isAnnouncing, setIsAnnouncing] = useState(false);
+
+  // Load settings from localStorage
+  useEffect(() => {
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings(prev => ({ ...prev, ...parsed }));
+        applySettings({ ...prev, ...parsed });
+      } catch (error) {
+        console.error('Failed to parse accessibility settings:', error);
+      }
+    }
+  }, []);
+
+  // Apply accessibility settings to the document
+  const applySettings = useCallback((newSettings: anyAccessibilitySettings)  => {
+    const root = document.documentElement;
+    
+    // High contrast mode
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
+      root.style.setProperty('--bg-primary', '#000000');
+      root.style.setProperty('--text-primary', '#ffffff');
+      root.style.setProperty('--accent-color', '#ffff00');
+    } else {
+      root.classList.remove('high-contrast');
+      root.style.removeProperty('--bg-primary');
+      root.style.removeProperty('--text-primary');
+      root.style.removeProperty('--accent-color');
+    }
+
+    // Large text
+    if (newSettings.largeText) {
+      root.style.fontSize = '120%';
+    } else {
+      root.style.fontSize = '100%';
+    }
+
+    // Reduced motion
+    if (newSettings.reducedMotion) {
+      root.style.setProperty('--animation-duration', '0.01ms');
+      root.style.setProperty('--transition-duration', '0.01ms');
+    } else {
+      root.style.removeProperty('--animation-duration');
+      root.style.removeProperty('--transition-duration');
+    }
+
+    // Color blindness simulation
+    if (newSettings.colorBlindness !== 'none') {
+      const filters = {
+        protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',
+        deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',
+        tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)'
+      };
+      root.style.filter = filters[newSettings.colorBlindness];
+    } else {
+      root.style.filter = 'none';
+    }
+
+    // Font size
+    const fontSizes = {
+      small: '0.875rem',
+      medium: '1rem',
+      large: '1.125rem',
+      'extra-large': '1.25rem'
+    };
+    root.style.setProperty('--base-font-size', fontSizes[newSettings.fontSize]);
+
+    // Focus indicator
+    if (newSettings.focusIndicator) {
+      root.style.setProperty('--focus-outline', '2px solid #06b6d4');
+    } else {
+      root.style.setProperty('--focus-outline', 'none');
+    }
+
+    // Keyboard navigation
+    if (newSettings.keyboardNavigation) {
+      document.addEventListener('keydown', handleKeyboardNavigation);
+    } else {
+      document.removeEventListener('keydown', handleKeyboardNavigation);
+    }
+
+    // Save settings
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  }, []);
+
+  // Handle keyboard navigation
+  const handleKeyboardNavigation = useCallback((event: anyKeyboardEvent)  => {
+    const focusableElements = document.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    
+    const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
+    
+    switch (event.key) {
+      case 'Tab':
+        // Let default tab behavior work
+        break;
+      case 'ArrowRight':
+      case 'ArrowDown':
+        event.preventDefault();
+        const nextIndex = (currentIndex + 1) % focusableElements.length;
+        (focusableElements[nextIndex] as HTMLElement).focus();
+        announceToScreenReader(`Focused on ${(focusableElements[nextIndex] as HTMLElement).textContent || 'element'}`);
+        break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+        event.preventDefault();
+        const prevIndex = currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;
+        (focusableElements[prevIndex] as HTMLElement).focus();
+        announceToScreenReader(`Focused on ${(focusableElements[prevIndex] as HTMLElement).textContent || 'element'}`);
+        break;
+      case 'Enter':
+      case ' ':
+        if (document.activeElement instanceof HTMLElement) {
+          document.activeElement.click();
+        }
+        break;
+    }
+  }, []);
+
+  // Screen reader announcements
+  const announceToScreenReader = useCallback((message: anystring)  => {
+    if (!settings.screenReader) return;
+
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    // Remove after announcement
+    setTimeout(() => {
+      if (announcement.parentNode) {
+        announcement.parentNode.removeChild(announcement);
+      }
+    }, 1000);
+
+    setAnnouncements(prev => [...prev, message]);
+    setIsAnnouncing(true);
+    setTimeout(() => setIsAnnouncing(false), 1000);
+  }, [settings.screenReader]);
+
+  // Update settings
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any)  => {
+    const newSettings = { ...settings, [key]: value };
+    setSettings(newSettings);
+    applySettings(newSettings);
+    
+    // Announce changes to screen reader
+    const settingNames = {
+      highContrast: 'high contrast mode',
+      largeText: 'large text',
+      reducedMotion: 'reduced motion',
+      screenReader: 'screen reader support',
+      keyboardNavigation: 'keyboard navigation',
+      focusIndicator: 'focus indicator',
+      colorBlindness: 'color blindness simulation',
+      fontSize: 'font size'
+    };
+    
+    announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`);
+  }, [settings, applySettings, announceToScreenReader]);
+
+  // Reset to defaults
+  const resetToDefaults = useCallback(() => {
+    const defaultSettings: AccessibilitySettings = {
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      keyboardNavigation: false,
+      focusIndicator: true,
+      colorBlindness: 'none',
+      fontSize: 'medium'
+    };
+    
+    setSettings(defaultSettings);
+    applySettings(defaultSettings);
+    announceToScreenReader('Accessibility settings reset to defaults');
+  }, [applySettings, announceToScreenReader]);
+
+  // Toggle panel
+  const togglePanel = useCallback(() => {
+    setIsOpen(!isOpen);
+    announceToScreenReader(isOpen ? 'Accessibility panel closed' : 'Accessibility panel opened');
+  }, [isOpen, announceToScreenReader]);
+
+  // Handle escape key
+  useEffect(() => {
+    const handleEscape = (event: anyKeyboardEvent)  => {
+      if (event.key === 'Escape' && isOpen) {
+        setIsOpen(false);
+        announceToScreenReader('Accessibility panel closed');
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [isOpen, announceToScreenReader]);
+
+const EnhancedAccessibilityPanel: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedAccessibilityPanel</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default EnhancedAccessibilityPanel;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

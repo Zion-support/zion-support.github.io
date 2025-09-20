@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+// import SEO from '@/components/SEO';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import { 
   Users, 
   Target, 
@@ -66,6 +70,7 @@ const About: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -90,6 +95,34 @@ const About: React.FC = () => {
             >
               Our Services
             </Link>
+=======
+    <>
+      {/* <SEO 
+        title="About Zion Tech Group - Leading AI & Technology Innovation Company"
+        description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions. Discover our story, values, and commitment to innovation."
+        keywords={['about Zion Tech Group', 'AI company', 'technology innovation', 'quantum computing', 'digital transformation']}
+      /> */}
+      
+      <div className="min-h-screen bg-futuristic">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
+          
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Pioneering the Future of
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Technology
+              </span>
+            </h1>
+            
+            <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
+              At Zion Tech Group, we're not just building technology – we're building the future. 
+              Our mission is to democratize AI and cutting-edge technology, making it accessible 
+              to businesses of all sizes.
+            </p>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           </div>
         </div>
       </section>

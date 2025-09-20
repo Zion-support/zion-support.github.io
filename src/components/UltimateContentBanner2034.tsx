@@ -1,6 +1,7 @@
 import React from 'react';
 
 const UltimateContentBanner2034: React.FC = () => {
+<<<<<<< HEAD
   const [currentMessage, setCurrentMessage] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -72,6 +73,9 @@ const UltimateContentBanner2034: React.FC = () => {
       {/* Animated Border */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
     </motion.div>
+=======
+  return (
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm">
@@ -124,6 +128,7 @@ const UltimateContentBanner2034: React.FC = () => {
               <div className="text-3xl font-bold text-pink-300 mb-1">1M+
               <div className="text-sm opacity-80">Users Served
             <div className="text-center">
+<<<<<<< HEAD
               <div className="text-3xl font-bold text-cyan-300 mb-1">∞
               <div className="text-sm opacity-80">Possibilities
       {/* Floating Elements */}
@@ -182,6 +187,20 @@ const UltimateContentBanner2034: React.FC = () => {
             <a href="/pages/ComprehensiveServices2034" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               🚀 See All Services
             </a>
+=======
+              <div className="text-3xl font-bold text-cyan-300 mb-1">∞</div>
+              <div className="text-sm opacity-80">Possibilities</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
+    </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

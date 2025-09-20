@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const privacy: React.FC = () => {,

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Job } from '../../utils/types';
@@ -68,3 +69,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
 }
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });
+}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

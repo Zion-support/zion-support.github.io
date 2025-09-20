@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const UltimateTechShowcase2027: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -74,6 +79,7 @@ const UltimateTechShowcase2027: React.FC = () => {
             </button>
           ))}
         </div>
+<<<<<<< HEAD
 
         {/* Active Tab Content */}
         <div className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-slate-700/50">
@@ -125,6 +131,105 @@ const UltimateTechShowcase2027: React.FC = () => {
           <h3 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h3>
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
             Join the technology revolution and unlock the potential of tomorrow's innovations today.
+=======
+        {/* Content Display */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.5 }}
+            className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+          >
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Left Content */}
+              <div>
+                <div className="text-6xl mb-4">{showcaseItems[activeTab].icon}</div>
+                <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  {showcaseItems[activeTab].title}
+                </h3>
+                <p className="text-xl opacity-90 mb-8">
+                  {showcaseItems[activeTab].description}
+                </p>
+                <div className="space-y-4 mb-8">
+                  {showcaseItems[activeTab].features.map((feature, index) => (
+                    <motion.div
+                      key={feature}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="flex items-center space-x-3"
+                    >
+                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      <span className="text-lg">{feature}</span>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-4">
+                  <motion.a
+                    href={showcaseItems[activeTab].link}
+                    className={`bg-gradient-to-r ${showcaseItems[activeTab].gradient} px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Explore Technology →
+                  </motion.a>
+                  <motion.button
+                    className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Watch Demo
+                  </motion.button>
+                </div>
+              </div>
+              {/* Right Visual */}
+              <div className="relative">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className={`bg-gradient-to-br ${showcaseItems[activeTab].gradient} rounded-2xl p-8 text-center relative overflow-hidden`}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
+                  <div className="relative z-10">
+                    <div className="text-8xl mb-4">{showcaseItems[activeTab].icon}</div>
+                    <h4 className="text-2xl font-bold mb-4">Interactive Demo</h4>
+                    <p className="opacity-90 mb-6">
+                      Experience this revolutionary technology through our interactive demonstration
+                    </p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-white/20 rounded-lg p-4">
+                        <div className="text-2xl mb-2">⚡</div>
+                        <div className="text-sm font-semibold">Performance</div>
+                        <div className="text-xs opacity-75">99.9% Uptime</div>
+                      </div>
+                      <div className="bg-white/20 rounded-lg p-4">
+                        <div className="text-2xl mb-2">🔒</div>
+                        <div className="text-sm font-semibold">Security</div>
+                        <div className="text-xs opacity-75">Quantum Safe</div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mt-16"
+        >
+          <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
+          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+            Join thousands of pioneers who are already experiencing these revolutionary technologies. 
+            The future is here, and it's more incredible than you can imagine.
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

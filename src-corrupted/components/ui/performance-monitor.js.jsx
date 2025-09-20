@@ -1,2 +1,193 @@
+<<<<<<< HEAD
 
 export default performance-monitor.js;
+=======
+import React, {useState, useEffect, useCallback} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X} from 'lucide-react';
+import {Button} from "button.tsx";
+import {Badge} from "badge.tsx";
+export function PerformanceMonitor(props: any) {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [isMinimized, setIsMinimized] = useState(false);
+    const [showSettings, setShowSettings] = useState(false);
+    const [metrics, setMetrics] = useState({
+        fps: 60,
+        memory: { used: 0, total: 0, percentage: 0 },
+        renderTime: 0,
+        networkLatency: 0,
+        cpuUsage: 0,
+        diskUsage: 0,
+        timestamp: Date.now()
+    });
+    const [alerts, setAlerts] = useState([]);
+    const [thresholds, setThresholds] = useState({fps: 30,
+        memory: 80,
+        renderTime: 16,
+        networkLatency: 100,
+        cpuUsage: 70,
+        diskUsage: 85});
+    // Performance monitoring functions
+    const measureFPS = useCallback(() => {
+        let frameCount = 0;
+        let lastTime = performance.now();
+        const currentTime = performance.now();
+            if (currentTime - lastTime >= 1000) {
+                const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+                setMetrics(prev => ({ ...prev, fps }));
+                // Check for performance alerts
+                if (fps < thresholds.fps) {
+                    const alert = {
+                        id: `fps-${Date.now()}`,
+                        metric: 'FPS',
+                        message: `Low FPS detected: ${fps} (threshold: ${thresholds.fps})`,
+                        severity: 'warning',
+                        timestamp: Date.now()
+                    };
+                    setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+                    onAlert?.('fps', fps, thresholds.fps)}
+                frameCount = 0;
+                lastTime = currentTime}
+            requestAnimationFrame(countFrame)};
+        requestAnimationFrame(countFrame)}, [thresholds.fps, onAlert]);
+    const memoryInfo = performance.memory;
+            const used = Math.round(memoryInfo.usedJSHeapSize / 1024 / 1024);
+            const total = Math.round(memoryInfo.totalJSHeapSize / 1024 / 1024);
+            const percentage = Math.round((used / total) * 100);
+            setMetrics(prev => ({
+                ...prev,
+                memory: { used, total, percentage }
+            }));
+            if (percentage > thresholds.memory) {
+                const alert = {
+                    id: `memory-${Date.now()}`,
+                    metric: 'Memory',
+                    message: `High memory usage: ${percentage}% (threshold: ${thresholds.memory}%)`,
+                    severity: 'warning',
+                    timestamp: Date.now()
+                };
+                setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+                onAlert?.('memory', percentage, thresholds.memory)}
+        }
+    }, [thresholds.memory, onAlert]);
+    const measureRenderTime = useCallback(() => {
+        const start = performance.now();
+        // Simulate render work
+        requestAnimationFrame(() => {
+            const end = performance.now();
+            const renderTime = Math.round(end - start);
+            setMetrics(prev => ({ ...prev, renderTime }));
+            if (renderTime > thresholds.renderTime) {
+                const alert = {
+                    id: `render-${Date.now()}`,
+                    metric: 'Render Time',
+                    message: `Slow render time: ${renderTime}ms (threshold: ${thresholds.renderTime}ms)`,
+                    severity: 'error',
+                    timestamp: Date.now()
+                };
+                setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+                onAlert?.('renderTime', renderTime, thresholds.renderTime)}
+        })}, [thresholds.renderTime, onAlert]);
+    const measureNetworkLatency = useCallback(async () => {
+        const start = performance.now();
+        try {
+            await fetch('/api/health', {
+                method: 'HEAD',
+                cache: 'no-cache'
+            });
+            const end = performance.now();
+            const latency = Math.round(end - start);
+            setMetrics(prev => ({...prev, networkLatency: latency}));
+            if (latency > thresholds.networkLatency) {
+                const alert = {
+                    id: `network-${Date.now()}`,
+                    metric: 'Network',
+                    message: `High network latency: ${latency}ms (threshold: ${thresholds.networkLatency}ms)`,
+                    severity: 'warning',
+                    timestamp: Date.now()
+                };
+                setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+                onAlert?.('networkLatency', latency, thresholds.networkLatency)}
+        }
+        catch {
+            // Network error, set high latency
+            setMetrics(prev => ({ ...prev, networkLatency: 999 }))}
+    }, [thresholds.networkLatency, onAlert]);
+    const simulateMetrics = useCallback(() => {
+        // Simulate CPU and disk usage for demo purposes
+        const cpuUsage = Math.round(Math.random() * 100);
+        const diskUsage = Math.round(60 + Math.random() * 30);
+        setMetrics(prev => ({
+            ...prev,
+            cpuUsage,
+            diskUsage,
+            timestamp: Date.now()
+        }));
+        if (cpuUsage > thresholds.cpuUsage) {
+            const alert = {
+                id: `cpu-${Date.now()}`,
+                metric: 'CPU',
+                message: `High CPU usage: ${cpuUsage}% (threshold: ${thresholds.cpuUsage}%)`,
+                severity: 'warning',
+                timestamp: Date.now()
+            };
+            setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+            onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage)}
+        if (diskUsage > thresholds.diskUsage) {
+            const alert = {
+                id: `disk-${Date.now()}`,
+                metric: 'Disk',
+                message: `High disk usage: ${diskUsage}% (threshold: ${thresholds.diskUsage}%)`,
+                severity: 'warning',
+                timestamp: Date.now()
+            };
+            setAlerts(prev => [alert, ...prev.slice(0, 9)]);
+            onAlert?.('diskUsage', diskUsage, thresholds.diskUsage)}
+    }, [thresholds.cpuUsage, thresholds.diskUsage, onAlert]);
+    // Auto-refresh metrics
+    useEffect(() => {
+        if (!enabled || !autoRefresh)
+            return;
+        const interval = setInterval(() => {
+            measureMemory();
+            measureRenderTime();
+            measureNetworkLatency();
+            simulateMetrics()}, refreshInterval);
+        return () => clearInterval(interval)}, [enabled, autoRefresh, refreshInterval, measureMemory, measureRenderTime, measureNetworkLatency, simulateMetrics]);
+    // Start FPS monitoring
+    useEffect(() => {if (!enabled)
+            return;
+        measureFPS()}, [enabled, measureFPS]);
+    // Clear old alerts
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const now = Date.now();
+            setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
+        }, 5000);
+        return () => clearInterval(interval)}, []);
+    const getMetricIcon = (props: any) => {
+        switch (metric) {
+            case 'FPS': return Activity;
+            case 'Memory': return Activity;
+            case 'Render Time': return Cpu;
+            case 'Network': return Wifi;
+            case 'CPU': return Cpu;
+            case 'Disk': return HardDrive;
+            default: return Activity}
+    };
+    const getSeverityColor = (props: any) => {
+        switch (severity) {
+            case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';
+            case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
+            case 'info': return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
+            default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
+    };
+    if (!enabled)
+        return null;
+    if (isMinimized) {
+        return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
+  { scale: 0.8,
+  opacity: 0 
+
+export default performance-monitor.js;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

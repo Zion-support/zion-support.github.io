@@ -1641,8 +1641,13 @@
   },
   {
     "route": "/case-studies",
+<<<<<<< HEAD
     "title": "Case Studies | Zion Tech Group",
     "h1": "Success Stories"
+=======
+    "title": "",
+    "h1": "Case Studies"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   },
   {
     "route": "/categories",
@@ -3891,8 +3896,13 @@
   },
   {
     "route": "/test",
+<<<<<<< HEAD
     "title": "test - Zion App",
     "h1": "test"
+=======
+    "title": "Test Page | Zion Tech Group",
+    "h1": "Test Page Working"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   },
   {
     "route": "/thank-you",
@@ -7981,6 +7991,7 @@
   },
   {
     "route": "/products",
+<<<<<<< HEAD
     "title": "",
     "h1": "Products"
   },
@@ -9323,6 +9334,10 @@
     "route": "/product/[id]",
     "title": "product/[id] - Zion App",
     "h1": "product/[id]"
+=======
+    "title": "Index - Zion Tech Solutions",
+    "h1": "Index"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   },
   {
     "route": "/plans/enterprise",
@@ -10125,11 +10140,25 @@
     "h1": "{post.title}"
   },
   {
+<<<<<<< HEAD
+=======
+    "route": "/blog/ai-2026-edge-agents-production-guide",
+    "title": "",
+    "h1": "AI 2026: Edge Agents in Production"
+  },
+  {
+    "route": "/blog/ai-2026-real-time-retrieval-architectures",
+    "title": "",
+    "h1": "AI 2026: Real-Time Retrieval Architectures"
+  },
+  {
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025 | Zion Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
   },
   {
+<<<<<<< HEAD
     "route": "/blog/ai-customer-experience-automation",
     "title": "AI-Powered Customer Experience: The Future of Customer Service Automation | Zion Tech Group",
     "h1": "AI-Powered Customer Experience: The Future of Customer Service Automation"
@@ -10205,6 +10234,8 @@
     "h1": "CloudNativeArchitectureBestPracticesChat"
   },
   {
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     "route": "/blog/cloud-native-automation",
     "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
     "h1": "Building Cloud-Native Automation Infrastructure"
@@ -10220,6 +10251,7 @@
     "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
   },
   {
+<<<<<<< HEAD
     "route": "/blog/cybersecurity-trends-for-2024-and-beyond-chat",
     "title": "CybersecurityTrendsFor2024AndBeyondChat - Zion Tech Solutions",
     "h1": "CybersecurityTrendsFor2024AndBeyondChat"
@@ -10255,11 +10287,14 @@
     "h1": "The Future of Work: Human-AI Collaboration"
   },
   {
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     "route": "/blog",
     "title": "Blog - Zion AI Marketplace",
     "h1": "Zion Blog"
   },
   {
+<<<<<<< HEAD
     "route": "/blog/machine-learning-applications-in-enterprise-software-chat",
     "title": "MachineLearningApplicationsInEnterpriseSoftwareChat - Zion Tech Solutions",
     "h1": "MachineLearningApplicationsInEnterpriseSoftwareChat"
@@ -10360,6 +10395,8 @@
     "h1": "Autonomous Ideas Miner"
   },
   {
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     "route": "/automations",
     "title": "",
     "h1": "Autonomous Cloud Automations"

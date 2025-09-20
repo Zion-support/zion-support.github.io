@@ -1,10 +1,23 @@
-import React from 'react',
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, X, ArrowRight, Globe, Brain, Shield, Cpu, Cloud, BarChart3, Lock } from 'lucide-react';
 
-const SearchComponent: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">SearchComponent</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
+interface SearchResult {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  url: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+const SearchComponent: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SearchComponent</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
 export default SearchComponent;

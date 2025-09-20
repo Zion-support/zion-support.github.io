@@ -2,8 +2,18 @@
 set -e
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Script to resolve merge conflicts by choosing HEAD version
 <<<<<<< HEAD
+=======
+    sed -i '/^>>>>>>>/d' "$file"
+    
+    echo "Resolved: $file"
+done
+
+echo "All merge conflicts resolved!"
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 # This will remove all merge conflict markers and keep only the HEAD version
 
 echo "Resolving merge conflicts..."
@@ -12,16 +22,6 @@ echo "Resolving merge conflicts..."
 find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | \
 grep -v node_modules | \
 while read file; do
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Resolving conflicts in: $file"
-        
-        # Create a temporary file
-        temp_file=$(mktemp)
-        
-        # Process the file to resolve conflicts
-        awk '
-        /^<<<<<<< HEAD/ { in_head = 1; next }
-        /^=======/ { in_head = 0; in_other = 1; next }
         /^>>>>>>>/ { in_other = 0; next }
         in_head { print; next }
         !in_other { print }
@@ -34,6 +34,7 @@ done
 
 echo "Merge conflicts resolved!"
 =======
+<<<<<<< HEAD
 echo "Resolving merge conflicts..."
 =======
 echo "Resolving merge conflicts automatically..."
@@ -84,3 +85,9 @@ else
     echo "No conflicts found"
 fi
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
+=======
+echo "Starting merge conflict resolution..."
+
+# Find all files with merge conflicts
+echo "Finding files with merge conflicts..."
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

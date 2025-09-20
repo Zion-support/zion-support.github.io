@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, 
+  Home, Users, Code, Shield, 
+  Brain, Rocket, Globe, Phone
+} from 'lucide-react';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const Navigation: React.FC = () => {,
   return (,

@@ -125,6 +125,72 @@ const InteractiveTechShowcase2037: React.FC = () => {
                 {activeDemo === index ? 'Active Demo' : 'Click to Activate'}
             </button>
           ))}
+<<<<<<< HEAD
+=======
+        </div>
+      </div>
+
+      {/* Active Technology Display */}
+      <div className="grid lg:grid-cols-2 gap-12">
+        <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
+          <div className="text-center mb-8">
+            <div className="text-8xl mb-4">{technologies[activeTech as keyof typeof technologies].icon}</div>
+            <h3 className="text-3xl font-bold mb-4">{technologies[activeTech as keyof typeof technologies].title}</h3>
+            <p className="text-purple-100 text-lg">
+              {technologies[activeTech as keyof typeof technologies].description}
+            </p>
+          </div>
+          <h2 className="text-5xl font-bold mb-6">🚀 Interactive Technology Showcase 2037</h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Experience our revolutionary technologies with interactive demonstrations and real-time simulations
+          </p>
+        </div>
+        
+        {/* Tab Navigation */}
+        <div className="flex justify-center mb-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-full p-2">
+            {technologies.map((tech, index) => (
+              <button
+                key={tech.id}
+                onClick={() => setActiveTab(index)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  activeTab === index
+                    ? 'bg-white text-purple-900 shadow-lg'
+                    : 'text-white hover:bg-white/20'
+                }`}
+              >
+                <span className="mr-2">{tech.icon}</span>
+                {tech.name}
+              </button>
+            ))}
+          </div>
+        </div>
+        
+        {/* Active Technology Display */}
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <div className="text-6xl mb-4 text-center">{technologies[activeTab].icon}</div>
+              <h3 className="text-3xl font-bold mb-4 text-center">{technologies[activeTab].name}</h3>
+              <p className="text-xl opacity-90 mb-6 text-center">
+                {technologies[activeTab].description}
+              </p>
+              
+              <div className="space-y-3">
+                {technologies[activeTab].features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                    <span className="text-white/90">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           <div className="bg-white/10 rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-4xl mb-4">🌌
             <h4 className="font-bold mb-2">Dimension Explorer</h4>
@@ -149,6 +215,7 @@ const InteractiveTechShowcase2037: React.FC = () => {
           <a href="/pages/UltimateTechBreakthrough2037" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
             Experience Breakthrough →
           </a>
+<<<<<<< HEAD
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • JANUARY 2037
@@ -237,6 +304,11 @@ const InteractiveTechShowcase2037: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-pink-400 mb-2">1000+
             <div className="text-white/80">Active Users
+=======
+        </div>
+      </div>
+    </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

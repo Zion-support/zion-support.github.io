@@ -1,4 +1,50 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React, {useState, useCallback} from 'react';'''
+import {motion, AnimatePresence} from 'framer-motion';'''
+import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
+import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
+;
+export const AICodeGenerator = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;});'
+    const [activeTab, setActiveTab] = useState('generate');
+    const [showAdvanced, setShowAdvanced] = useState(false);'
+    const [customCode, setCustomCode] = useState('');
+    const [copied, setCopied] = useState(false);
+    const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();
+    const [form, setForm] = useState({}
+'
+''
+'''
+        prompt: '','''
+        language: 'typescript','''
+        framework: 'react','''
+        style: 'functional','''
+        target: 'web','''
+        quality: 'development',
+includeTests: false,
+        includeDocs: false,
+        includeErrorHandling: false,
+        includeLogging: false,
+        includeMetrics: false})
+}
+    // comment
+";""
+""";""
+        prompt: "", """;""
+        language: "typescript", """;""
+        framework: "react", """;""
+        style: "functional", """;""
+        target: "web", """;""
+        quality: "development", includeTests: false,
+        includeDocs: false, includeErrorHandling: false,
+        includeLogging: false, includeMetrics: false})
+}
+    // comment
+    const handleSubmit = useCallback(async (e) => {}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const AICodeGenerator: React.FC = () => {,
   return (,

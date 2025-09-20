@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
@@ -5,6 +6,8 @@ import {
   Brain, Rocket, Dna, Globe, Shield, Wifi, 
   Package, Bot, Car, Building2, Monitor, Cpu, 
   Zap, Atom, Database, Cloud, Lock, Code
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 } from 'lucide-react';
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';

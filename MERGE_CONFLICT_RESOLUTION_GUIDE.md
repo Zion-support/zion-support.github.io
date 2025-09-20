@@ -216,6 +216,7 @@ bash -n script-name.sh
 bash -x script-name.sh
 ```
 
+<<<<<<< HEAD
 ## 🔒 **SAFETY MEASURES**
 
 ### **Backup Strategy**
@@ -225,6 +226,22 @@ bash -x script-name.sh
 - **Rollback Capability**: Easy restoration from backup
 
 ### **Recovery Procedures**
+=======
+   (content from feature branch)
+   ```
+=======
+      (content from main branch)
+      (content from feature branch)
+      ```
+
+3. **Resolve conflicts by:**
+   - Keeping both changes where appropriate
+   - Choosing the feature branch changes for new content
+=======
+   - Removing conflict markers (`<<<<<<<`, ``, `>>>>>>>`)
+=======
+### 6. Process All Open PRs
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 ```bash
 # List available backups
 git branch -r | grep backup

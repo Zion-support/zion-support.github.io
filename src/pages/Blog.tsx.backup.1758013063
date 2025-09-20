@@ -1,0 +1,60 @@
+import React from 'react';
+import LatestContentPromotion from '@/components/LatestContentPromotion';
+
+const Blog: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold mb-6">Innovation Landing 2025</h1>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Discover the latest innovations and technological breakthroughs of 2025.
+          </p>
+        </div>
+        {/* Promote freshest content */}
+        <div className="mb-12">
+          <LatestContentPromotion />
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
+            <h3 className="text-2xl font-bold mb-4">AI Innovation</h3>
+            <p className="text-blue-100">Cutting-edge artificial intelligence solutions.</p>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+            <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
+            <p className="text-purple-100">Revolutionary quantum computing technology.</p>
+          </div>
+          
+          <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
+            <h3 className="text-2xl font-bold mb-4">Neural Interfaces</h3>
+            <p className="text-pink-100">Direct brain-computer interface technology.</p>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold mb-6">Innovation Landing 2025</h1>
+          <p className="text-xl opacity-90">Discover the latest innovations and technology breakthroughs</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/20">
+            <h3 className="text-2xl font-semibold mb-4 text-white">AI Innovation</h3>
+            <p className="text-white/90">Cutting-edge artificial intelligence solutions</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/20">
+            <h3 className="text-2xl font-semibold mb-4 text-white">Quantum Computing</h3>
+            <p className="text-white/90">Revolutionary quantum computing technologies</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-white/20">
+            <h3 className="text-2xl font-semibold mb-4 text-white">Neural Interfaces</h3>
+            <p className="text-white/90">Advanced brain-computer interface systems</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Blog;
