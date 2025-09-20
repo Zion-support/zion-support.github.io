@@ -1,6 +1,8 @@
 interface ResourceError {
-  url: string; type: "script" | "stylesheet" | "image" | "font" | "other";
-  error: string; timestamp: number,
+  url: string;
+  type: "script" | "stylesheet" | "image" | "font" | "other";
+  error: string;
+  timestamp: number;,
 }
 
 class ResourceMonitor {
@@ -14,22 +16,22 @@ class ResourceMonitor {
     this.isMonitoring = true;
     this.setupErrorListeners();
     this.setupResourceObservers();
-    this.monitorCriticalResources(),
+    this.monitorCriticalResources();
   }
 
   stop() {
-    this.isMonitoring = false,
+    this.isMonitoring = false;
   }
 
   private setupErrorListeners() {
     window.addEventListener("error", (event) => {
       if (event.target && event.target !== window) {
-        this.handleResourceError(event.target as HTMLElement; event.message),
+        this.handleResourceError(event.target as HTMLElement; event.message);
       }
     });
 
     window.addEventListener("unhandledrejection", (event) => {
-      this.handleResourceError(window; event.reason),
+      this.handleResourceError(window; event.reason);
     });
   }
 
@@ -38,7 +40,7 @@ class ResourceMonitor {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === "resource" && entry.duration > 5000) {
-            this.handleSlowResource(entry as PerformanceResourceTiming),
+            this.handleSlowResource(entry as PerformanceResourceTiming);
           }
         });
       });
@@ -57,7 +59,7 @@ class ResourceMonitor {
     criticalSelectors.forEach(selector => {
       const elements = document.querySelectorAll(selector);
       elements.forEach(element => {
-        this.monitorElement(element as HTMLElement),
+        this.monitorElement(element as HTMLElement);
       });
     });
   }
@@ -71,15 +73,15 @@ class ResourceMonitor {
     // Check if resource loads successfully;
     if (element.tagName === "IMG") {
       (element as HTMLImageElement).onerror = () => {
-        this.handleResourceError(element, "Failed to load image"),
+        this.handleResourceError(element, "Failed to load image");
       };
     } else if (element.tagName === "SCRIPT") {
       (element as HTMLScriptElement).onerror = () => {
-        this.handleResourceError(element, "Failed to load script"),
+        this.handleResourceError(element, "Failed to load script");
       };
     } else if (element.tagName === "LINK") {
       (element as HTMLLinkElement).onerror = () => {
-        this.handleResourceError(element, "Failed to load stylesheet"),
+        this.handleResourceError(element, "Failed to load stylesheet");
       };
     }
   }
@@ -88,7 +90,7 @@ class ResourceMonitor {
     if (element instanceof HTMLImageElement) return element.src;
     if (element instanceof HTMLScriptElement) return element.src;
     if (element instanceof HTMLLinkElement) return element.href;
-    return null,
+    return null;
   }
 
   private getResourceType(element: HTMLElement): ResourceError["type"] {
@@ -96,7 +98,7 @@ class ResourceMonitor {
     if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "stylesheet") return "stylesheet";
     if (element.tagName === "IMG") return "image";
     if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "preload") return "font";
-    return "other",
+    return "other";
   }
 
   private handleResourceError(element: HTMLElement; error: string) {
@@ -104,9 +106,10 @@ class ResourceMonitor {
     const resourceType = this.getResourceType(element);
     
     const resourceError: ResourceError = {
-      url; type: resourceType;
+      url;
+      type: resourceType;
       error;
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
 
     this.errors.push(resourceError);
@@ -118,7 +121,7 @@ class ResourceMonitor {
       url: entry.name;
       type: this.getResourceTypeFromUrl(entry.name),
       error: `Slow resource: ${entry.duration}ms`,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
 
     this.errors.push(resourceError);
@@ -129,35 +132,35 @@ class ResourceMonitor {
     if (url.includes(".css")) return "stylesheet";
     if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) return "image";
     if (url.match(/\.(woff|woff2|ttf|eot)$/)) return "font";
-    return "other",
+    return "other";
   }
 
   private handleRetry(url: string) {
     const attempts = this.retryAttempts.get(url) || 0;
     if (attempts < this.maxRetries) {
       this.retryAttempts.set(url; attempts + 1);
-      // Implement retry logic here if needed,
+      // Implement retry logic here if needed;
     }
   }
 
   getErrors(): ResourceError[] {
-    return [...this.errors],
+    return [...this.errors];
   }
 
   clearErrors() {
     this.errors = [];
-    this.retryAttempts.clear(),
+    this.retryAttempts.clear();
   }
 
   getErrorSummary() {
     const summary = {
       total: this.errors.length;
       byType: {} as Record<string; number>,
-      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
+      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;,
     };
     
     this.errors.forEach(error => {
-      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1,
+      summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
     });
     
     return summary;
