@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Shield;
-  FileText, ;
-  TrendingUp, ;
-  CheckCircle, ;
+  FileText,
+  TrendingUp,
+  CheckCircle,
   ArrowRight;
   Play;
   Settings;
@@ -319,119 +319,123 @@ import { ;
   CloudFog10;
   CloudHail10;
   CloudSnow10;
-  CloudSleet10;
+  CloudSleet10
 } from "lucide-react";
 const AIFinancialCompliancePlatform = () => {
-  const features = [;
-    {;
-      icon: Brain,title: 'AI-Powered Risk Assessment',description: 'Advanced machine learning algorithms identify compliance risks with 98% accuracy';
-    }
-    {;
-      icon: Shield,title: 'Automated Compliance Monitoring',description: 'Real-time monitoring of regulatory changes and automated compliance updates';
-    }
-    {;
-      icon: FileText,title: 'Intelligent Document Analysis',description: 'AI-driven analysis of financial documents for compliance verification';
-    }
-    {;
-      icon: TrendingUp,title: 'Predictive Compliance Analytics',description: 'Forecast potential compliance issues before they become violations';
-    }
-    {;
-      icon: Activity,title: 'Real-time Audit Trails',description: 'Comprehensive tracking of all compliance activities and decisions';
-    }
-    {;
-      icon: AlertTriangle,title: 'Proactive Risk Alerts',description: 'Instant notifications of compliance risks and regulatory changes';
-    }
+  const features = [
+  {
+  icon: Brain,title: 'AI-Powered Risk Assessment',description: 'Advanced machine learning algorithms identify compliance risks with 98% accuracy'
+},
+  {
+  icon: Shield,title: 'Automated Compliance Monitoring',description: 'Real-time monitoring of regulatory changes and automated compliance updates'
+},
+  {
+  icon: FileText,title: 'Intelligent Document Analysis',description: 'AI-driven analysis of financial documents for compliance verification'
+},
+  {
+  icon: TrendingUp,title: 'Predictive Compliance Analytics',description: 'Forecast potential compliance issues before they become violations'
+},
+  {
+  icon: Activity,title: 'Real-time Audit Trails',description: 'Comprehensive tracking of all compliance activities and decisions'
+},
+  {
+  icon: AlertTriangle,title: 'Proactive Risk Alerts',description: 'Instant notifications of compliance risks and regulatory changes'
+},
   ]
-  const benefits = [;
-    'Reduce compliance costs by 40-60%Improve compliance accuracy by 95%';
+  const benefits = [
+  'Reduce compliance costs by 40-60%Improve compliance accuracy by 95%';
     'Automate 80% of routine compliance tasksReduce audit preparation time by 70%';
-    'Minimize regulatory fines and penaltiesEnsure 24/7 regulatory compliance monitoring';
-  ]
+    'Minimize regulatory fines and penaltiesEnsure 24/7 regulatory compliance monitoring'
+]
 
-  const useCases = [;
-    {;
-      industry: 'Banking & Financial Services',description: 'Comply with Basel III, Dodd-Frank, AML/KYC, and other financial regulations';
-    }
-    {;
-      industry: 'Insurance Companies',description: 'Meet Solvency II, NAIC, and state-specific insurance compliance requirements';
-    }
-    {;
-      industry: 'Investment Firms',description: 'Ensure SEC, FINRA, and other investment advisory compliance standards';
-    }
-    {;
-      industry: 'Fintech Startups',description: 'Navigate complex regulatory landscapes and maintain compliance as you scale';
-    }
+  const useCases = [
+  {
+  industry: 'Banking & Financial Services',description: 'Comply with Basel III, Dodd-Frank, AML/KYC, and other financial regulations'
+},
+  {
+  industry: 'Insurance Companies',description: 'Meet Solvency II, NAIC, and state-specific insurance compliance requirements'
+},
+  {
+  industry: 'Investment Firms',description: 'Ensure SEC, FINRA, and other investment advisory compliance standards'
+},
+  {
+  industry: 'Fintech Startups',description: 'Navigate complex regulatory landscapes and maintain compliance as you scale'
+},
   ]
-  const pricing = [;
-    {;
-      plan: 'Starter',price: '$2,200/month';
-      features: [;
-        'Up to 100 usersBasic AI risk assessment';
+  const pricing = [
+  {
+  plan: 'Starter',price: '$2,200/month';
+      features: [
+  'Up to 100 usersBasic AI risk assessment';
         'Core compliance monitoringDocument analysis';
-        'Basic reportingEmail support';
-      ]
-    }
-    {;
-      plan: 'Professional',price: '$4,500/month';
-      features: [;
-        'Up to 500 usersAdvanced AI analytics';
+        'Basic reportingEmail support'
+],
+  },
+  {
+  plan: 'Professional',price: '$4,500/month';
+      features: [
+  'Up to 500 usersAdvanced AI analytics';
         'Multi-regulation supportCustom compliance workflows';
         'Advanced reportingPriority support';
-        'API access';
-      ]
-    }
-    {;
-      plan: 'Enterprise',price: '$9,000/month';
-      features: [;
-        'Unlimited usersFull AI capabilities';
+        'API access'
+],
+  },
+  {
+  plan: 'Enterprise',price: '$9,000/month';
+      features: [
+  'Unlimited usersFull AI capabilities';
         'Custom integrationsWhite-label options';
         'Dedicated compliance manager24/7 phone support';
-        'Custom training';
-      ]
-    }
+        'Custom training'
+],
+  },
   ]
 
-  const integrations = [;
-    'SAP FinancialsOracle Financials';
+  const integrations = [
+  'SAP FinancialsOracle Financials';
     'QuickBooks EnterpriseXero';
     'Sage IntacctNetSuite';
     'Microsoft DynamicsSalesforce';
     'WorkdayADP';
-    'PaychexWebhook APIs';
-  ]
+    'PaychexWebhook APIs'
+]
 
-  const keyMetrics = [;
-    {;
-      metric: '98%',label: 'Compliance Accuracy';
-    }
-    {;
-      metric: '60%',label: 'Cost Reduction';
-    }
-    {;
-      metric: '80%',label: 'Task Automation';
-    }
-    {;
-      metric: '70%',label: 'Time Savings';
-    }
+  const keyMetrics = [
+  {
+  metric: '98%',label: 'Compliance Accuracy'
+},
+  {
+  metric: '60%',label: 'Cost Reduction'
+},
+  {
+  metric: '80%',label: 'Task Automation'
+},
+  {
+  metric: '70%',label: 'Time Savings'
+},
   ]
-  const regulations = [;
-    'Basel IIIDodd-Frank Act';
+  const regulations = [
+  'Basel IIIDodd-Frank Act';
     'Sarbanes-Oxley (SOX)GDPR';
     'CCPAPCI DSS';
     'SOC 2ISO 27001';
     'FINRA RulesSEC Regulations';
-    'AML/KYCAnti-Money Laundering';
-  ]
+    'AML/KYCAnti-Money Laundering'
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-medium mb-6">
@@ -450,16 +454,20 @@ const AIFinancialCompliancePlatform = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200";"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200";"
               >
                 <Settings className="w-5 h-5 mr-2" />
@@ -470,16 +478,21 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
 
-      {{/* Key Metrics Section */}}
+      {{/* Key Metrics Section */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {keyMetrics.map((item, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {keyMetrics.map((item, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, scale: 0.8 },
+  }
+                whileInView={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="text-center";"
               >
                 <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">{item.metric}</div>
@@ -490,13 +503,17 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -508,12 +525,16 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
@@ -527,13 +548,17 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -545,12 +570,16 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: -20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="flex items-start space-x-3";"
               >
                 <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -561,13 +590,17 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -579,12 +612,16 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20";"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
@@ -595,13 +632,17 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
 
-      {{/* Regulations Section */}}
+      {{/* Regulations Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -613,12 +654,16 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {regulations.map((regulation, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {regulations.map((regulation, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, scale: 0.8 },
+  }
+                whileInView={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-purple-400/40 transition-all duration-300";"
               >
                 <span className="text-zion-slate-light font-medium text-sm">{regulation}</span>
@@ -628,13 +673,17 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -646,30 +695,34 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${;
-                  index === 1 ;
+            {pricing.map((plan, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
+  index === 1 ;
                     ? 'border-purple-500/50 bg-gradient-to-b from-purple-500/10 to-transparent' ;
-                    : 'border-zion-slate-light/20';
-                }`}
+                    : 'border-zion-slate-light/20'
+}`}
               >
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-white mb-2">{plan.price}</div>
-                  {index === 1 && (;
-                    <span className="inline-block bg-purple-500 text-white text-sm px-3 py-1 rounded-full">
+                  {index === 1 && (
+  <span className="inline-block bg-purple-500 text-white text-sm px-3 py-1 rounded-full">
                       Most Popular;
                     </span>
                   )}
                 </div>
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center space-x-3">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
@@ -684,13 +737,17 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
 
-      {{/* Integrations Section */}}
+      {{/* Integrations Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -702,12 +759,16 @@ const AIFinancialCompliancePlatform = () => {
           </motion.div>
           ;
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {integrations.map((integration, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, scale: 0.8 },
+  }
+                whileInView={{ opacity: 1, scale: 1 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300";"
               >
                 <span className="text-zion-slate-light font-medium text-sm">{integration}</span>
@@ -717,13 +778,17 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Financial Compliance?;
@@ -733,16 +798,20 @@ const AIFinancialCompliancePlatform = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Start Free Trial;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200";"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
@@ -753,13 +822,17 @@ const AIFinancialCompliancePlatform = () => {
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Get in Touch;

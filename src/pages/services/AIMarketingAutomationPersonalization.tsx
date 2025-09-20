@@ -1,52 +1,60 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe } from "lucide-react";
-export default function AIMarketingAutomationPersonalization() {;
-  const features = [;
-    'AI-powered customer segmentation with behavioral analysisDynamic content personalization across all marketing channels';
+export default function AIMarketingAutomationPersonalization() {
+  const features = [
+  'AI-powered customer segmentation with behavioral analysisDynamic content personalization across all marketing channels';
     'Predictive lead scoring and conversion optimizationMulti-channel campaign orchestration (email, SMS, social, web)';
     'Real-time A/B testing with AI-driven optimizationCustomer journey mapping and automated nurturing sequences';
-    'Advanced analytics and ROI tracking with attribution modelingIntegration with major CRM, e-commerce, and advertising platforms';
-  ]
+    'Advanced analytics and ROI tracking with attribution modelingIntegration with major CRM, e-commerce, and advertising platforms'
+]
 
-  const benefits = [;
-    'Increase conversion rates by 40-60% with personalizationReduce customer acquisition costs by 30-50%';
+  const benefits = [
+  'Increase conversion rates by 40-60% with personalizationReduce customer acquisition costs by 30-50%';
     'Improve email open rates by 25-40% with AI optimizationGenerate 35-50% more qualified leads through automation';
-    'Boost customer lifetime value by 20-35%Achieve 99.9% campaign delivery and tracking accuracy';
-  ]
+    'Boost customer lifetime value by 20-35%Achieve 99.9% campaign delivery and tracking accuracy'
+]
 
-  const marketingChannels = [;
-    'Email Marketing AutomationSMS & Push Notifications';
+  const marketingChannels = [
+  'Email Marketing AutomationSMS & Push Notifications';
     'Social Media AdvertisingDisplay & Retargeting Ads';
     'Content MarketingSearch Engine Marketing';
     'Influencer MarketingVideo Marketing';
-    'Voice & Chatbot MarketingLocation-Based Marketing';
-  ]
+    'Voice & Chatbot MarketingLocation-Based Marketing'
+]
 
-  const aiCapabilities = [;
-    'Customer Behavior AnalysisPredictive Analytics';
+  const aiCapabilities = [
+  'Customer Behavior AnalysisPredictive Analytics';
     'Dynamic Content GenerationSmart Segmentation';
     'Lead Scoring & QualificationCampaign Optimization';
     'Personalization EngineA/B Testing Automation';
-    'Performance PredictionROI Optimization';
-  ]
+    'Performance PredictionROI Optimization'
+]
 
-  const integrations = [;
-    'Salesforce Marketing CloudHubSpot Marketing Hub';
+  const integrations = [
+  'Salesforce Marketing CloudHubSpot Marketing Hub';
     'MailchimpKlaviyo';
     'ShopifyWooCommerce';
     'Facebook AdsGoogle Ads';
-    'LinkedIn AdsTikTok Ads';
-  ]
-  const stack = [;
-    {{ name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' }}
-    {{ name: 'TensorFlow', url: 'https://www.tensorflow.org/' }}
-    {{ name: 'Scikit-learn', url: 'https://scikit-learn.org/' }}
-    {{ name: 'Apache Spark', url: 'https://spark.apache.org/' }}
-    {{ name: 'Kubernetes', url: 'https://kubernetes.io/' }}
-    {{ name: 'Redis', url: 'https://redis.io/' }}
-    {{ name: 'PostgreSQL', url: 'https://www.postgresql.org/' }}
-    {{ name: 'Elasticsearch', url: 'https://www.elastic.co/' }}
+    'LinkedIn AdsTikTok Ads'
+]
+  const stack = [
+  {{ name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
+  },
+  {{ name: 'TensorFlow', url: 'https://www.tensorflow.org/' },
+  },
+  {{ name: 'Scikit-learn', url: 'https://scikit-learn.org/' },
+  },
+  {{ name: 'Apache Spark', url: 'https://spark.apache.org/' },
+  },
+  {{ name: 'Kubernetes', url: 'https://kubernetes.io/' },
+  },
+  {{ name: 'Redis', url: 'https://redis.io/' },
+  },
+  {{ name: 'PostgreSQL', url: 'https://www.postgresql.org/' },
+  },
+  {{ name: 'Elasticsearch', url: 'https://www.elastic.co/' },
+  },
   ]
   return (
     <div className="min-h-screen bg-futuristic">
@@ -88,10 +96,11 @@ export default function AIMarketingAutomationPersonalization() {;
               <h3 className="ml-3 text-xl font-semibold text-white">AI Features</h3>
             </div>
             <ul className="space-y-3">
-              {features.slice(0, 4).map((item) => (;
-                <li key={item} className="flex items-center text-slate-300">
+              {features.slice(0, 4).map((item) => (
+  <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
-                  {{item}}
+                  {{item},
+  }
                 </li>
               ))}
             </ul>
@@ -105,10 +114,11 @@ export default function AIMarketingAutomationPersonalization() {;
               <h3 className="ml-3 text-xl font-semibold text-white">Marketing Channels</h3>
             </div>
             <ul className="space-y-3">
-              {marketingChannels.slice(0, 5).map((item) => (;
-                <li key={item} className="flex items-center text-slate-300">
+              {marketingChannels.slice(0, 5).map((item) => (
+  <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-purple-400 mr-3" />
-                  {{item}}
+                  {{item},
+  }
                 </li>
               ))}
             </ul>
@@ -182,9 +192,10 @@ export default function AIMarketingAutomationPersonalization() {;
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">AI Capabilities</h3>
           <div className="flex flex-wrap gap-3">
-            {aiCapabilities.map((capability) => (;
-              <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
-                {{capability}}
+            {aiCapabilities.map((capability) => (
+  <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
+                {{capability},
+  }
               </span>
             ))}
           </div>
@@ -195,9 +206,10 @@ export default function AIMarketingAutomationPersonalization() {;
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">Platform Integrations</h3>
           <div className="flex flex-wrap gap-3">
-            {integrations.map((integration) => (;
-              <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
-                {{integration}}
+            {integrations.map((integration) => (
+  <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
+                {{integration},
+  }
               </span>
             ))}
           </div>
@@ -208,9 +220,10 @@ export default function AIMarketingAutomationPersonalization() {;
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
           <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack & Tools</h3>
           <div className="flex flex-wrap gap-3">
-            {stack.map((s) => (;
-              <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
-                {{s.name}}
+            {stack.map((s) => (
+  <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
+                {{s.name},
+  }
               </a>
             ))}
           </div>

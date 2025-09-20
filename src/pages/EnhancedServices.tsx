@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ;
+import {
   Search;
-  Filter, ;
-  Star, ;
-  ArrowRight, ;
-  ChevronDown, ;
-  Brain, ;
-  Cpu, ;
-  Database, ;
-  Network, ;
-  Shield, ;
-  Rocket, ;
-  Users, ;
-  BarChart3, ;
-  Code, ;
-  Server, ;
-  Chip, ;
-  Globe, ;
-  Zap, ;
-  Lock, ;
+  Filter,
+  Star,
+  ArrowRight,
+  ChevronDown,
+  Brain,
+  Cpu,
+  Database,
+  Network,
+  Shield,
+  Rocket,
+  Users,
+  BarChart3,
+  Code,
+  Server,
+  Chip,
+  Globe,
+  Zap,
+  Lock,
   ShieldCheck;
   TrendingUp;
   CheckCircle;
@@ -49,7 +49,7 @@ import { ;
   Globe as GlobeIcon2;
   Zap as ZapIcon2;
   Lock as LockIcon;
-  ShieldCheck as ShieldCheckIcon;
+  ShieldCheck as ShieldCheckIcon
 } from "lucide-react";
 import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from "../data/enhancedMicroSaasServices2025";
 import { SEO } from "../components/SEO";
@@ -59,31 +59,40 @@ const EnhancedServices: React.FC = () => {
   const [sortBy, setSortBy] = useState('rating')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   ;
-  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025;
+const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025;
   ;
-  const categories = [;
-    {{ id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-zion-cyan to-zion-blue' }}
-    {{ id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '🤖', color: 'from-zion-purple to-zion-cyan' }}
-    {{ id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-zion-purple to-zion-pink' }}
-    {{ id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-zion-purple to-zion-pink' }}
-    {{ id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-zion-red to-zion-pink' }}
-    {{ id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗', color: 'from-zion-green to-zion-emerald' }}
-    {{ id: 'IoT & Smart Cities', name: 'IoT & Smart Cities', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length, icon: '🌐', color: 'from-zion-blue to-zion-cyan' }}
-    {{ id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' }}
-    {{ id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍', color: 'from-zion-purple to-zion-indigo' }}
+const categories = [
+  {{ id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-zion-cyan to-zion-blue' },
+  },
+  {{ id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '🤖', color: 'from-zion-purple to-zion-cyan' },
+  },
+  {{ id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-zion-purple to-zion-pink' },
+  },
+  {{ id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-zion-purple to-zion-pink' },
+  },
+  {{ id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-zion-red to-zion-pink' },
+  },
+  {{ id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗', color: 'from-zion-green to-zion-emerald' },
+  },
+  {{ id: 'IoT & Smart Cities', name: 'IoT & Smart Cities', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length, icon: '🌐', color: 'from-zion-blue to-zion-cyan' },
+  },
+  {{ id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' },
+  },
+  {{ id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍', color: 'from-zion-purple to-zion-indigo' },
+  },
   ]
-  const filteredServices = allServices.filter(service => {;
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  const filteredServices = allServices.filter(service => {
+  const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    return matchesCategory && matchesSearch;
-  })
+    return matchesCategory && matchesSearch
+})
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
+  const sortedServices = [...filteredServices].sort((a, b) => {
+  switch (sortBy) {
+  case 'price':;
         return a.price - b.price;
       case 'innovation':;
         return b.innovationLevel.localeCompare(a.innovationLevel)
@@ -91,28 +100,32 @@ const EnhancedServices: React.FC = () => {
         return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''))
       case 'name':;
         return a.title.localeCompare(b.title)
-      default: return 0;
-    }
+      default: return 0
+},
   })
-  const const containerVariants = {; = {
-    hidden: {{ opacity: 0 }}
-    visible: {;
-      opacity: 1,transition: {;
-        staggerChildren: 0.1;
-      }
-    }
+  const const containerVariants = {
+  = {
+    hidden: {{ opacity: 0 },
   }
-  const const itemVariants = {; = {
-    hidden: {{ y: 20, opacity: 0 }}
-    visible: {;
-      y: 0,opacity: 1,transition: {;
-        duration: 0.5,ease: "easeOut";
-      }
-    }
+    visible: {
+  opacity: 1,transition: {
+  staggerChildren: 0.1
+},
+  },
   }
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
-      case 'AI & Analytics': return <BrainIcon className="w-6 h-6" />
+  const const itemVariants = {
+  = {
+    hidden: {{ y: 20, opacity: 0 },
+  }
+    visible: {
+  y: 0,opacity: 1,transition: {
+  duration: 0.5,ease: "easeOut"
+},
+  },
+  }
+  const getCategoryIcon = (category: string) => {
+  switch (category) {
+  case 'AI & Analytics': return <BrainIcon className="w-6 h-6" />
       case 'AI & Legal Tech': return <ShieldIcon className="w-6 h-6" />;
       case 'Quantum Computing': return <CpuIcon className="w-6 h-6" />;
       case 'AI & Healthcare': return <UsersIcon className="w-6 h-6" />;
@@ -121,15 +134,17 @@ const EnhancedServices: React.FC = () => {
       case 'Cybersecurity': return <ShieldCheckIcon className="w-6 h-6" />;
       case 'Metaverse': return <GlobeIcon2 className="w-6 h-6" />;
       default: return <RocketIcon className="w-6 h-6" />
-    }
+    },
   }
-  const getInnovationBadge = (level: string) => {;
-    const const colors = {; = {
-      'Advanced': 'bg-blue-500Cutting-edge': 'bg-purple-500Revolutionary': 'bg-red-500';
-    }
+  const getInnovationBadge = (level: string) => {
+  const const colors = {
+  = {
+      'Advanced': 'bg-blue-500Cutting-edge': 'bg-purple-500Revolutionary': 'bg-red-500'
+}
     return (
       <span className={`px-2 py-1 text-xs font-semibold text-white rounded-full ${colors[level as keyof typeof colors] || 'bg-gray-500'}`}>
-        {{level}}
+        {{level},
+  }
       </span>
     )
   }
@@ -141,15 +156,19 @@ const EnhancedServices: React.FC = () => {
         description="Discover our cutting-edge micro SAAS services including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with innovative technology solutions.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1 ;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
               className="className="text-5xl md:text-6xl font-bold text-white mb-6";"
             >
               Revolutionary Micro SAAS;
@@ -158,20 +177,27 @@ const EnhancedServices: React.FC = () => {
               </span>
             </motion.h1>
             <motion.p ;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.2 },
+  }
               className="className="text-xl text-gray-300 max-w-3xl mx-auto mb-8";"
             >
               Transform your business with our cutting-edge AI, Quantum Computing, Blockchain, and IoT solutions. ;
               Each service is designed to deliver exceptional ROI and competitive advantage.;
             </motion.p>
             ;
-            {{/* Contact Information */}}
+            {{/* Contact Information */},
+  }
             <motion.div ;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8, delay: 0.4 },
+  }
               className="className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto";"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -196,9 +222,11 @@ const EnhancedServices: React.FC = () => {
         </div>
       </div>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {{/* Filters and Search */}}
+        {{/* Filters and Search */},
+  }
         <div className="mb-8">
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             <div className="flex-1 max-w-md">
@@ -207,8 +235,10 @@ const EnhancedServices: React.FC = () => {
                 <input;
                   type="text";
                   placeholder="Search services...";
-                  value={{searchTerm}}
-                  onChange={{(e) => setSearchTerm(e.target.value)}}
+                  value={{searchTerm},
+  }
+                  onChange={{(e) => setSearchTerm(e.target.value)},
+  }
                   className="className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                 />
               </div>
@@ -216,8 +246,10 @@ const EnhancedServices: React.FC = () => {
             ;
             <div className="flex gap-4">
               <select;
-                value={{sortBy}}
-                onChange={{(e) => setSortBy(e.target.value)}}
+                value={{sortBy},
+  }
+                onChange={{(e) => setSortBy(e.target.value)},
+  }
                 className="className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
               >
                 <option value="price">Sort by Price</option>
@@ -227,25 +259,32 @@ const EnhancedServices: React.FC = () => {
               </select>
               ;
               <button;
-                onClick={{onClick={() => setViewMode(viewMode === 'grid' ? 'list' : 'grid')}}}
+                onClick={{onClick={() => setViewMode(viewMode === 'grid' ? 'list' : 'grid')},
+  },
+  }
                 className="className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 transition-colors";"
               >
-                {{viewMode === 'grid' ? 'List View' : 'Grid View'}}
+                {{viewMode === 'grid' ? 'List View' : 'Grid View'},
+  }
               </button>
             </div>
           </div>
 
-          {{/* Category Filters */}}
+          {{/* Category Filters */},
+  }
           <div className="mt-6 flex flex-wrap gap-3">
-            {categories.map((category) => (;
-              <button;
-                key={{category.id}}
-                onClick={{onClick={() => setActiveCategory(category.id)}}}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${;
-                  activeCategory === category.id;
+            {categories.map((category) => (
+  <button;
+                key={{category.id},
+  }
+                onClick={{onClick={() => setActiveCategory(category.id)},
+  },
+  }
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+  activeCategory === category.id;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg';
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20';
-                }`}
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+}`}
               >
                 <span className="mr-2">{category.icon}</span>
                 {category.name} ({category.count})
@@ -254,29 +293,34 @@ const EnhancedServices: React.FC = () => {
           </div>
         </div>
 
-        {{/* Services Grid */}}
+        {{/* Services Grid */},
+  }
         <motion.div;
-          variants={{containerVariants}}
+          variants={{containerVariants},
+  }
           initial="hidden";
           animate="visible";
-          className={`grid gap-6 ${;
-            viewMode === 'grid' ;
+          className={`grid gap-6 ${
+  viewMode === 'grid' ;
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' ;
-              : 'grid-cols-1';
-          }`}
+              : 'grid-cols-1'
+}`}
         >
-          {sortedServices.map((service) => (;
-            <motion.div;
-              key={{service.id}}
-              variants={{itemVariants}}
-              className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105 ${;
-                viewMode === 'list' ? 'flex gap-6' : '';
-              }`}
+          {sortedServices.map((service) => (
+  <motion.div;
+              key={{service.id},
+  }
+              variants={{itemVariants},
+  }
+              className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105 ${
+  viewMode === 'list' ? 'flex gap-6' : ''
+}`}
             >
-              {viewMode === 'list' && (;
-                <div className="flex-shrink-0">
+              {viewMode === 'list' && (
+  <div className="flex-shrink-0">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
-                    {{getCategoryIcon(service.category)}}
+                    {{getCategoryIcon(service.category)},
+  }
                   </div>
                 </div>
               )}
@@ -286,13 +330,15 @@ const EnhancedServices: React.FC = () => {
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                     <div className="flex items-center gap-2 mb-3">
-                      {{getInnovationBadge(service.innovationLevel)}}
+                      {{getInnovationBadge(service.innovationLevel)},
+  }
                       <span className="text-zion-cyan font-semibold">${service.price.toLocaleString()}/month</span>
                     </div>
                   </div>
-                  {viewMode === 'grid' && (;
-                    <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
-                      {{getCategoryIcon(service.category)}}
+                  {viewMode === 'grid' && (
+  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
+                      {{getCategoryIcon(service.category)},
+  }
                     </div>
                   )}
                 </div>
@@ -303,10 +349,11 @@ const EnhancedServices: React.FC = () => {
                   <div>
                     <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Benefits:</h4>
                     <ul className="space-y-1">
-                      {service.benefits.slice(0, 3).map((benefit, index) => (;
-                        <li key={index} className="text-sm text-gray-300 flex items-center">
+                      {service.benefits.slice(0, 3).map((benefit, index) => (
+  <li key={index} className="text-sm text-gray-300 flex items-center">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {{benefit}}
+                          {{benefit},
+  }
                         </li>
                       ))}
                     </ul>
@@ -327,7 +374,8 @@ const EnhancedServices: React.FC = () => {
                   <div className="text-sm text-gray-400">
                     <span className="flex items-center">
                       <Clock className="w-4 h-4 mr-1" />
-                      {{service.estimatedDelivery}}
+                      {{service.estimatedDelivery},
+  }
                     </span>
                   </div>
                   ;
@@ -344,11 +392,15 @@ const EnhancedServices: React.FC = () => {
           ))}
         </motion.div>
 
-        {{/* Call to Action */}}
+        {{/* Call to Action */},
+  }
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
+          transition={{ duration: 0.8, delay: 0.6 },
+  }
           className="className="mt-16 text-center";"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 rounded-2xl p-8 border border-zion-cyan/30">

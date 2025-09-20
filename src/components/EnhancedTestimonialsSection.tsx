@@ -34,31 +34,31 @@ const testimonials: Testimonial[] = [
   {
     id: '5',name: 'Lisa Park',position: 'Director of IT',company: 'CloudScale Enterprises',companyLogo: '/images/company-logos/cloudscale.svg',content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',rating: 5,industry: 'Cloud Services',results: ['40% cost reduction60% performance boost', 'Unified management'],
     avatar: '/images/avatars/lisa-park.jpg'
-  }
-];
+  },
+  ];
 export default function EnhancedTestimonialsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   useEffect(() => {
     if (!isAutoPlaying) return,
 
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 8000),
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
+}, 8000),
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, testimonials.length]),
+    return () => clearInterval(interval)
+}, [isAutoPlaying, testimonials.length]),
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    setIsAutoPlaying(false);
-  },
+    setIsAutoPlaying(false)
+},
 
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    setIsAutoPlaying(false);
-  };
-  const goToTestimonial = (index: number) => {
+    setIsAutoPlaying(false)
+};
+const goToTestimonial = (index: number) => {
     setCurrentTestimonial(index);
     setIsAutoPlaying(false)
   },
@@ -76,10 +76,14 @@ export default function EnhancedTestimonialsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          viewport={{ once: true },
+  }
+          transition={{ duration: 0.6 },
+  }
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -95,10 +99,14 @@ export default function EnhancedTestimonialsSection() {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimonial}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, x: 100 },
+  }
+              animate={{ opacity: 1, x: 0 },
+  }
+              exit={{ opacity: 0, x: -100 },
+  }
+              transition={{ duration: 0.5 },
+  }
               className="relative"
             >
               {/* Main Testimonial Card */}
@@ -109,8 +117,11 @@ export default function EnhancedTestimonialsSection() {
                 {/* Quote icon */}
                 <motion.div
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 20, repeat: Infinity }}
+                  animate={{ rotate: [0, 360],
+  },
+  }
+                  transition={{ duration: 20, repeat: Infinity },
+  }
                 >
                   <Quote className="w-8 h-8 text-zion-cyan" />
                 </motion.div>
@@ -121,9 +132,12 @@ export default function EnhancedTestimonialsSection() {
                     {[...Array(currentTestimonialData.rating)].map((_, index) => (
                       <motion.div
                         key={index}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: index * 0.1 }}
+                        initial={{ scale: 0 },
+  }
+                        animate={{ scale: 1 },
+  }
+                        transition={{ delay: index * 0.1 },
+  }
                       >
                         <Star className="w-6 h-6 text-yellow-400 fill-current" />
                       </motion.div>
@@ -140,9 +154,12 @@ export default function EnhancedTestimonialsSection() {
                     {currentTestimonialData.results.map((result, index) => (
                       <motion.div
                         key={result}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 + index * 0.1 }}
+                        initial={{ opacity: 0, y: 20 },
+  }
+                        animate={{ opacity: 1, y: 0 },
+  }
+                        transition={{ delay: 0.3 + index * 0.1 },
+  }
                         className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center"
                       >
                         <p className="text-zion-cyan font-semibold">{result}</p>
@@ -179,8 +196,10 @@ export default function EnhancedTestimonialsSection() {
             <motion.button
               onClick={prevTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.1 },
+  }
+              whileTap={{ scale: 0.9 },
+  }
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </motion.button>
@@ -195,7 +214,8 @@ export default function EnhancedTestimonialsSection() {
                       ? 'bg-zion-cyan w-8'
                       : 'bg-white/30 hover:bg-white/50'
                   }`}
-                  whileHover={{ scale: 1.2 }}
+                  whileHover={{ scale: 1.2 },
+  }
                 />
               ))}
             </div>
@@ -203,8 +223,10 @@ export default function EnhancedTestimonialsSection() {
             <motion.button
               onClick={nextTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.1 },
+  }
+              whileTap={{ scale: 0.9 },
+  }
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </motion.button>
@@ -213,10 +235,14 @@ export default function EnhancedTestimonialsSection() {
 
         {/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          viewport={{ once: true },
+  }
+          transition={{ duration: 0.6, delay: 0.3 },
+  }
           className="mt-20"
         >
           <div className="text-center">
@@ -228,14 +254,18 @@ export default function EnhancedTestimonialsSection() {
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' };
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' };
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' };
-                { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map((indicator, index) => (
+                { icon: Building, label: '99.9% Uptime', value: 'Reliability' },
+  ].map((indicator, index) => (
                 <motion.div
                   key={indicator.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 },
+  }
+                  whileInView={{ opacity: 1, y: 0 },
+  }
+                  viewport={{ once: true },
+  }
+                  transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">
@@ -251,10 +281,14 @@ export default function EnhancedTestimonialsSection() {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial={{ opacity: 0, y: 30 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          viewport={{ once: true },
+  }
+          transition={{ duration: 0.6, delay: 0.5 },
+  }
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">

@@ -1,18 +1,18 @@
 import React from "react";
 import { SEO } from "../../components/SEO";
-import { ;
+import {
   Shield;
-  Brain, ;
-  Zap, ;
-  Users, ;
-  TrendingUp, ;
-  Lock, ;
+  Brain,
+  Zap,
+  Users,
+  TrendingUp,
+  Lock,
   Clock;
   BarChart3;
   AlertTriangle;
-  Eye;
+  Eye
 } from "lucide-react";
-export default function Cybersecurity() {;
+export default function Cybersecurity() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO ;
@@ -20,7 +20,8 @@ export default function Cybersecurity() {;
         description="Comprehensive security solutions that protect your digital assets and ensure business continuity. Advanced AI-powered threat detection and zero trust security.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-orange-900 to-slate-900"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +46,8 @@ export default function Cybersecurity() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -121,7 +123,8 @@ export default function Cybersecurity() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">

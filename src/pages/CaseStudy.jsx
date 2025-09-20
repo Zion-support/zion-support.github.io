@@ -4,11 +4,12 @@ import { CASE_STUDIES } from "@/data/case-studies";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-export default function CaseStudy() {;
-    const router = useRouter()
+export default function CaseStudy() {
+  const router = useRouter()
     const { slug } = router.query;
-    const study = CASE_STUDIES.find((s) => s.slug === slug)
-    if (if (!study) {;) {
+const study = CASE_STUDIES.find((s) => s.slug === slug)
+    if (if (!study) {
+  ) {
         return (<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.;
       </div>)
@@ -25,7 +26,8 @@ export default function CaseStudy() {;
           <img loading="lazy" src={study.companyLogo} alt={`${study.company} logo`} className="h-12 mb-4"/>
           <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
           <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
-          <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: study.content }}/>
+          <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: study.content },
+  }/>
           <p className="mt-8 text-white font-semibold">— {study.author}, {study.role}</p>
         </div>
       </div>

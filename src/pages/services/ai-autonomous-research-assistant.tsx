@@ -1,13 +1,13 @@
 import React from "react";
 import { SEO } from "../../components/SEO";
-import { ;
+import {
   Brain;
-  Search, ;
-  BookOpen, ;
-  Zap, ;
-  Users, ;
-  Clock, ;
-  TrendingUp, ;
+  Search,
+  BookOpen,
+  Zap,
+  Users,
+  Clock,
+  TrendingUp,
   CheckCircle;
   Lightbulb;
   Target;
@@ -26,62 +26,62 @@ import { ;
   Cpu;
   Network;
   Shield;
-  ArrowRight;
+  ArrowRight
 } from "lucide-react";
 const AIAutonomousResearchAssistant: React.FC = () => {
-  const features = [;
-    {;
-      icon: Brain,title: 'Autonomous Learning',description: 'Self-improving AI that continuously learns and adapts to new research domains';
-    }
-    {;
-      icon: Search,title: 'Intelligent Discovery',description: 'Advanced algorithms that uncover hidden patterns and connections in data';
-    }
-    {;
-      icon: BookOpen,title: 'Knowledge Synthesis',description: 'Automated literature review and synthesis across multiple research fields';
-    }
-    {;
-      icon: Zap,title: 'Real-time Analysis',description: 'Instant processing and analysis of complex research datasets';
-    }
-    {;
-      icon: Users,title: 'Collaborative Research',description: 'Multi-user platform for team-based research and knowledge sharing';
-    }
-    {;
-      icon: Clock,title: '24/7 Research',description: 'Continuous research operations without human intervention';
-    }
+  const features = [
+  {
+  icon: Brain,title: 'Autonomous Learning',description: 'Self-improving AI that continuously learns and adapts to new research domains'
+},
+  {
+  icon: Search,title: 'Intelligent Discovery',description: 'Advanced algorithms that uncover hidden patterns and connections in data'
+},
+  {
+  icon: BookOpen,title: 'Knowledge Synthesis',description: 'Automated literature review and synthesis across multiple research fields'
+},
+  {
+  icon: Zap,title: 'Real-time Analysis',description: 'Instant processing and analysis of complex research datasets'
+},
+  {
+  icon: Users,title: 'Collaborative Research',description: 'Multi-user platform for team-based research and knowledge sharing'
+},
+  {
+  icon: Clock,title: '24/7 Research',description: 'Continuous research operations without human intervention'
+},
   ]
-  const capabilities = [;
-    {;
-      icon: Lightbulb,title: 'Hypothesis Generation',description: 'AI-powered hypothesis creation based on data patterns and existing research';
-    }
-    {;
-      icon: Target,title: 'Research Planning',description: 'Automated research methodology design and experimental planning';
-    }
-    {;
-      icon: Database,title: 'Data Mining',description: 'Advanced data extraction and analysis from multiple sources';
-    }
-    {;
-      icon: Lock,title: 'Secure Research',description: 'Enterprise-grade security for sensitive research data and findings';
-    }
-    {;
-      icon: Globe,title: 'Global Collaboration',description: 'Connect with researchers worldwide through our platform';
-    }
-    {;
-      icon: Smartphone,title: 'Mobile Access',description: 'Access your research assistant from anywhere, anytime';
-    }
+  const capabilities = [
+  {
+  icon: Lightbulb,title: 'Hypothesis Generation',description: 'AI-powered hypothesis creation based on data patterns and existing research'
+},
+  {
+  icon: Target,title: 'Research Planning',description: 'Automated research methodology design and experimental planning'
+},
+  {
+  icon: Database,title: 'Data Mining',description: 'Advanced data extraction and analysis from multiple sources'
+},
+  {
+  icon: Lock,title: 'Secure Research',description: 'Enterprise-grade security for sensitive research data and findings'
+},
+  {
+  icon: Globe,title: 'Global Collaboration',description: 'Connect with researchers worldwide through our platform'
+},
+  {
+  icon: Smartphone,title: 'Mobile Access',description: 'Access your research assistant from anywhere, anytime'
+},
   ]
 
-  const applications = [;
-    'Scientific Research & DiscoveryMedical Research & Drug Development';
+  const applications = [
+  'Scientific Research & DiscoveryMedical Research & Drug Development';
     'Academic Research & PublicationsMarket Research & Analysis';
     'Technology InnovationEnvironmental Studies';
-    'Social Sciences ResearchEngineering & Design Research';
-  ]
+    'Social Sciences ResearchEngineering & Design Research'
+]
 
-  const benefits = [;
-    'Accelerate research by 10xReduce research costs by 60%';
+  const benefits = [
+  'Accelerate research by 10xReduce research costs by 60%';
     'Improve research accuracy by 85%Enable 24/7 research operations';
-    'Facilitate cross-disciplinary collaborationAutomate repetitive research tasks';
-  ]
+    'Facilitate cross-disciplinary collaborationAutomate repetitive research tasks'
+]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -90,7 +90,8 @@ const AIAutonomousResearchAssistant: React.FC = () => {
         description="Revolutionary AI-powered autonomous research assistant that accelerates discovery, automates analysis, and enables 24/7 research operations across all domains.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20"></div>
         <div className="container-responsive relative z-10">
@@ -119,7 +120,8 @@ const AIAutonomousResearchAssistant: React.FC = () => {
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -133,14 +135,15 @@ const AIAutonomousResearchAssistant: React.FC = () => {
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200 hover:scale-105">
+            {features.map((feature, index) => (
+  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-blue-500/40 transition-all duration-200">
                   <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-                  {{feature.description}}
+                  {{feature.description},
+  }
                 </p>
               </div>
             ))}
@@ -148,7 +151,8 @@ const AIAutonomousResearchAssistant: React.FC = () => {
         </div>
       </section>
 
-      {{/* Capabilities Section */}}
+      {{/* Capabilities Section */},
+  }
       <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -161,14 +165,15 @@ const AIAutonomousResearchAssistant: React.FC = () => {
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {capabilities.map((capability, index) => (;
-              <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200 hover:scale-105">
+            {capabilities.map((capability, index) => (
+  <div key={index} className="group p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-400/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-400/40 group-hover:to-cyan-500/40 transition-all duration-200">
                   <capability.icon className="w-6 h-6 text-blue-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-                  {{capability.description}}
+                  {{capability.description},
+  }
                 </p>
               </div>
             ))}
@@ -176,7 +181,8 @@ const AIAutonomousResearchAssistant: React.FC = () => {
         </div>
       </section>
 
-      {{/* Applications Section */}}
+      {{/* Applications Section */},
+  }
       <section className="py-20">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -189,8 +195,8 @@ const AIAutonomousResearchAssistant: React.FC = () => {
                 from hard sciences to social sciences, adapting its approach to each domain.;
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {applications.map((application, index) => (;
-                  <div key={index} className="flex items-center space-x-3">
+                {applications.map((application, index) => (
+  <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                     <span className="text-gray-300">{application}</span>
                   </div>
@@ -227,7 +233,8 @@ const AIAutonomousResearchAssistant: React.FC = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -240,8 +247,8 @@ const AIAutonomousResearchAssistant: React.FC = () => {
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (;
-              <div key={index} className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200">
+            {benefits.map((benefit, index) => (
+  <div key={index} className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-purple-400/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-purple-400" />
                 </div>
@@ -252,7 +259,8 @@ const AIAutonomousResearchAssistant: React.FC = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">
         <div className="container-responsive text-center">
           <h2 className="text-4xl font-bold text-white mb-6">

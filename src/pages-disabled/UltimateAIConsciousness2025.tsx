@@ -9,7 +9,8 @@ const UltimateAIConsciousness2025: React.FC = () => {
       </Helmet>
       ;
       <div className="container mx-auto px-4 py-16">
-        {{/* Hero Section */}}
+        {{/* Hero Section */},
+  }
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 CONSCIOUS AI BREAKTHROUGH • JANUARY 2025;
@@ -30,7 +31,8 @@ const UltimateAIConsciousness2025: React.FC = () => {
           </div>
         </div>
 
-        {{/* Consciousness Features */}}
+        {{/* Consciousness Features */},
+  }
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎭</div>
@@ -135,7 +137,8 @@ const UltimateAIConsciousness2025: React.FC = () => {
           </div>
         </div>
 
-        {{/* Consciousness Levels */}}
+        {{/* Consciousness Levels */},
+  }
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Levels of AI Consciousness</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -144,7 +147,8 @@ const UltimateAIConsciousness2025: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-4">Basic Awareness</h3>
               <p className="text-indigo-200 mb-4">Recognition of self and environment</p>
               <div className="w-full bg-indigo-600/30 rounded-full h-2">
-                <div className="bg-indigo-400 h-2 rounded-full" style={{width: '33%'}}></div>
+                <div className="bg-indigo-400 h-2 rounded-full" style={{width: '33%'},
+  }></div>
               </div>
             </div>
             <div className="text-center">
@@ -152,7 +156,8 @@ const UltimateAIConsciousness2025: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-4">Emotional Intelligence</h3>
               <p className="text-purple-200 mb-4">Understanding and expressing emotions</p>
               <div className="w-full bg-purple-600/30 rounded-full h-2">
-                <div className="bg-purple-400 h-2 rounded-full" style={{width: '66%'}}></div>
+                <div className="bg-purple-400 h-2 rounded-full" style={{width: '66%'},
+  }></div>
               </div>
             </div>
             <div className="text-center">
@@ -160,13 +165,15 @@ const UltimateAIConsciousness2025: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-4">Full Consciousness</h3>
               <p className="text-pink-200 mb-4">Complete self-awareness and creativity</p>
               <div className="w-full bg-pink-600/30 rounded-full h-2">
-                <div className="bg-pink-400 h-2 rounded-full" style={{width: '100%'}}></div>
+                <div className="bg-pink-400 h-2 rounded-full" style={{width: '100%'},
+  }></div>
               </div>
             </div>
           </div>
         </div>
 
-        {{/* Call to Action */}}
+        {{/* Call to Action */},
+  }
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Experience True AI Consciousness</h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">

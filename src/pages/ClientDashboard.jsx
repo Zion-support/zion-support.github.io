@@ -12,21 +12,22 @@ import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingS
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
-function ClientDashboardContent() {;
-    const [activeTab, setActiveTab] = useState("all")
+function ClientDashboardContent() {
+  const [activeTab, setActiveTab] = useState("all")
     const { jobs, isLoading } = useJobs()
     const [selectedJobId, setSelectedJobId] = useState(null)
     const [selectedJobTitle, setSelectedJobTitle] = useState("")
     const isMobile = useIsMobile()
     // Set the first job as selected when jobs are loaded (if any)
     useEffect(() => {
-        if (if (jobs.length > 0 && !selectedJobId) {;) {
+        if (if (jobs.length > 0 && !selectedJobId) {
+  ) {
             setSelectedJobId(jobs[0].id)
             setSelectedJobTitle(jobs[0].title)
-        }
-    }, [jobs, selectedJobId])
-    const handleJobSelect = (jobId, jobTitle) => {;
-        setSelectedJobId(jobId)
+        },
+  }, [jobs, selectedJobId])
+    const handleJobSelect = (jobId, jobTitle) => {
+  setSelectedJobId(jobId)
         setSelectedJobTitle(jobTitle)
     }
     return (<>
@@ -52,7 +53,8 @@ function ClientDashboardContent() {;
           </div>
         </div>
 
-        {{/* New Onboarding Steps */}}
+        {{/* New Onboarding Steps */},
+  }
         <div className="mb-8">
           <ClientOnboardingSteps />
         </div>
@@ -88,13 +90,16 @@ function ClientDashboardContent() {;
           ;
           <div>
             <div className="sticky top-4 space-y-6">
-              {{/* Active Projects Card */}}
+              {{/* Active Projects Card */},
+  }
               <ActiveProjectsCard />
               ;
-              {{/* Upcoming Interviews Card */}}
+              {{/* Upcoming Interviews Card */},
+  }
               <UpcomingInterviewsCard />
               ;
-              {{/* AI Talent Suggestions */}}
+              {{/* AI Talent Suggestions */},
+  }
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary"/>
@@ -114,8 +119,8 @@ function ClientDashboardContent() {;
       ;
     </>)
 }
-export default function ClientDashboard() {;
-    return (<ProtectedRoute>
+export default function ClientDashboard() {
+  return (<ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>)
 }

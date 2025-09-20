@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ;
+import {
   Brain;
-  Cloud, ;
-  Shield, ;
-  Rocket, ;
-  Zap, ;
-  Users, ;
-  Globe, ;
+  Cloud,
+  Shield,
+  Rocket,
+  Zap,
+  Users,
+  Globe,
   Cpu;
   Lock;
   Heart;
@@ -79,38 +79,40 @@ import { ;
   AwardIcon;
   PhoneIcon;
   MapPinIcon;
-  InfinityIcon;
+  InfinityIcon
 } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027";
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from "../data/innovativeITInfrastructureServices2027";
 import { EMERGING_TECHNOLOGY_SERVICES_2027 } from "../data/emergingTechnologyServices2027";
-export default function ComprehensivePricingGuide2027() {;
+export default function ComprehensivePricingGuide2027() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [priceRange, setPriceRange] = useState([0, 50000])
   const [sortBy, setSortBy] = useState('price')
 
   // Combine all services;
-  const allServices = [;
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2027;
+const allServices = [
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2027;
     ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027;
-    ...EMERGING_TECHNOLOGY_SERVICES_2027;
-  ]
+    ...EMERGING_TECHNOLOGY_SERVICES_2027
+]
 
   // Get unique categories;
-  const categories = [['all', ...Array.from(new Set(allServices.map(s => s.category)))];]
+const categories = [['all', ...Array.from(new Set(allServices.map(s => s.category)))],
+  ]
 
   // Filter services based on selection;
-  const filteredServices = allServices.filter(service => {;
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[[1];]
-    return matchesCategory && matchesPrice;
-  })
+const filteredServices = allServices.filter(service => {
+  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[[1],
+  ]
+    return matchesCategory && matchesPrice
+})
 
   // Sort services;
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
+const sortedServices = [...filteredServices].sort((a, b) => {
+  switch (sortBy) {
+  case 'price':;
         return a.price - b.price;
       case 'rating':;
         return b.rating - a.rating;
@@ -118,17 +120,18 @@ export default function ComprehensivePricingGuide2027() {;
         return parseInt(b.roi) - parseInt(a.roi)
       case 'name':;
         return a.title.localeCompare(b.title)
-      default: return a.price - b.price;
-    }
+      default: return a.price - b.price
+},
   })
   // Calculate statistics;
-  const totalServices = allServices.length;
-  const averagePrice = Math.round(allServices.reduce((acc, s) => acc + s.price, 0) / totalServices)
+const totalServices = allServices.length;
+const averagePrice = Math.round(allServices.reduce((acc, s) => acc + s.price, 0) / totalServices)
   const totalValue = allServices.reduce((acc, s) => acc + s.price, 0)
   const averageROI = Math.round(allServices.reduce((acc, s) => acc + parseInt(s.roi), 0) / totalServices)
 
-  const getCategoryIcon = (category: string) => {;
-    const const iconMap: { [key: string]: React.ReactNode } = {; = {
+  const getCategoryIcon = (category: string) => {
+  const const iconMap: { [key: string]: React.ReactNode } = {
+  = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />
       'Cybersecurity': <Shield className="w-6 h-6" />;
       'Cloud & DevOps': <Cloud className="w-6 h-6" />;
@@ -151,20 +154,21 @@ export default function ComprehensivePricingGuide2027() {;
       'Autonomous Systems': <Car className="w-6 h-6" />;
       'Robotics & Automation': <Bot className="w-6 h-6" />
     }
-    return iconMap[category] || <Star className="w-6 h-6" />;
-  }
+    return iconMap[category] || <Star className="w-6 h-6" />
+}
 
-  const formatPrice = (price: number) => {;
-    if (if (price >= 1000) {;) {
-      return `$${(price / 1000).toFixed(1)}K`;
-    }
-    return `$${price}`;
-  }
+  const formatPrice = (price: number) => {
+  if (if (price >= 1000) {
+  ) {
+      return `$${(price / 1000).toFixed(1)}K`
+}
+    return `$${price}`
+}
 
-  const parseROI = (roi: string) => {;
-    const match = roi.match(/(\d+)%/)
-    return match ? parseInt(match[1]) : 0;
-  }
+  const parseROI = (roi: string) => {
+  const match = roi.match(/(\d+)%/)
+    return match ? parseInt(match[1]) : 0
+}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -174,14 +178,18 @@ export default function ComprehensivePricingGuide2027() {;
         keywords="pricing guide, AI services pricing, quantum computing cost, space technology pricing, emerging tech pricing, Zion Tech Group";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.h1 ;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-5xl md:text-7xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -192,20 +200,27 @@ export default function ComprehensivePricingGuide2027() {;
           </motion.h1>
           ;
           <motion.p ;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.2 },
+  }
             className="className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";"
           >
             Discover transparent pricing for our cutting-edge technology services. Compare costs;
             analyze ROI, and find the perfect solution for your business needs.;
           </motion.p>
 
-          {{/* Pricing Statistics */}}
+          {{/* Pricing Statistics */},
+  }
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8, delay: 0.4 },
+  }
             className="className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto";"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -232,61 +247,81 @@ export default function ComprehensivePricingGuide2027() {;
         </div>
       </section>
 
-      {{/* Filters and Controls */}}
+      {{/* Filters and Controls */},
+  }
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-12";"
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {{/* Category Filter */}}
+              {{/* Category Filter */},
+  }
               <div>
                 <label className="block text-white font-medium mb-3">Category</label>
                 <select;
-                  value={{selectedCategory}}
-                  onChange={{(e) => setSelectedCategory(e.target.value)}}
+                  value={{selectedCategory},
+  }
+                  onChange={{(e) => setSelectedCategory(e.target.value)},
+  }
                   className="className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                 >
-                  {categories.map(category => (;
-                    <option key={category} value={category}>
-                      {{category === 'all' ? 'All Categories' : category}}
+                  {categories.map(category => (
+  <option key={category} value={category}>
+                      {{category === 'all' ? 'All Categories' : category},
+  }
                     </option>
                   ))}
                 </select>
               </div>
 
-              {{/* Price Range */}}
+              {{/* Price Range */},
+  }
               <div>
                 <label className="block text-white font-medium mb-3">Price Range</label>
                 <div className="flex items-center gap-4">
                   <input;
                     type="number";
                     placeholder="Min";
-                    value={{priceRange[0]}}
-                    onChange={{(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])}}
+                    value={{priceRange[0],
+  },
+  }
+                    onChange={{(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1],
+  ])},
+  }
                     className="className="flex-1 px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                   />
                   <span className="text-white">to</span>
                   <input;
                     type="number";
                     placeholder="Max";
-                    value={{priceRange[1]}}
-                    onChange={{(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 50000])}}
+                    value={{priceRange[1],
+  },
+  }
+                    onChange={{(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 50000])},
+  }
                     className="className="flex-1 px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                   />
                 </div>
               </div>
 
-              {{/* Sort By */}}
+              {{/* Sort By */},
+  }
               <div>
                 <label className="block text-white font-medium mb-3">Sort By</label>
                 <select;
-                  value={{sortBy}}
-                  onChange={{(e) => setSortBy(e.target.value)}}
+                  value={{sortBy},
+  }
+                  onChange={{(e) => setSortBy(e.target.value)},
+  }
                   className="className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                 >
                   <option value="price">Price (Low to High)</option>
@@ -300,14 +335,19 @@ export default function ComprehensivePricingGuide2027() {;
         </div>
       </section>
 
-      {{/* Services Pricing Grid */}}
+      {{/* Services Pricing Grid */},
+  }
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-12";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -319,23 +359,32 @@ export default function ComprehensivePricingGuide2027() {;
             </p>
           </motion.div>
 
-          {{/* Services Grid */}}
+          {{/* Services Grid */},
+  }
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service, index) => (;
-              <motion.div;
-                key={{service.id}}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {sortedServices.map((service, index) => (
+  <motion.div;
+                key={{service.id},
+  }
+                initial={{ opacity: 0, y: 30 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105";"
               >
-                {{/* Service Header */}}
+                {{/* Service Header */},
+  }
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    {{getCategoryIcon(service.category)}}
+                    {{getCategoryIcon(service.category)},
+  }
                     <span className="text-sm text-gray-300 bg-white/10 px-2 py-1 rounded-full">
-                      {{service.category}}
+                      {{service.category},
+  }
                     </span>
                   </div>
                   <div className="flex items-center gap-1">
@@ -344,17 +393,21 @@ export default function ComprehensivePricingGuide2027() {;
                   </div>
                 </div>
 
-                {{/* Service Title and Description */}}
+                {{/* Service Title and Description */},
+  }
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-6 line-clamp-3">{service.description}</p>
 
-                {{/* Pricing Information */}}
+                {{/* Pricing Information */},
+  }
                 <div className="space-y-4 mb-6">
                   <div className="bg-white/5 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-gray-400 text-sm">Our Price:</span>
                       <span className="text-2xl font-bold text-cyan-400">
-                        {service.currency}{{service.price.toLocaleString()}}
+                        {service.currency},
+  {{service.price.toLocaleString()},
+  }
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
@@ -375,34 +428,41 @@ export default function ComprehensivePricingGuide2027() {;
                   </div>
                 </div>
 
-                {{/* Competitors */}}
+                {{/* Competitors */},
+  }
                 <div className="mb-6">
                   <div className="text-gray-400 text-sm mb-2">Competitors:</div>
                   <div className="flex flex-wrap gap-2">
-                    {service.competitors?.slice(0, 3).map((competitor, compIndex) => (;
-                      <span;
-                        key={{compIndex}}
+                    {service.competitors?.slice(0, 3).map((competitor, compIndex) => (
+  <span;
+                        key={{compIndex},
+  }
                         className="className="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded-full";"
                       >
-                        {{competitor}}
+                        {{competitor},
+  }
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {{/* Tags */}}
+                {{/* Tags */},
+  }
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {service.tags.slice(0, 3).map((tag, tagIndex) => (;
-                    <span;
-                      key={{tagIndex}}
+                  {service.tags.slice(0, 3).map((tag, tagIndex) => (
+  <span;
+                      key={{tagIndex},
+  }
                       className="className="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded-full";"
                     >
-                      {{tag}}
+                      {{tag},
+  }
                     </span>
                   ))}
                 </div>
 
-                {{/* Action Buttons */}}
+                {{/* Action Buttons */},
+  }
                 <div className="flex items-center justify-between">
                   <Link;
                     to={`/services/${service.id}`}
@@ -421,11 +481,14 @@ export default function ComprehensivePricingGuide2027() {;
             ))}
           </div>
 
-          {{/* No Results Message */}}
-          {sortedServices.length === 0 && (;
-            <motion.div ;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+          {{/* No Results Message */},
+  },
+  {sortedServices.length === 0 && (
+  <motion.div ;
+              initial={{ opacity: 0 },
+  }
+              animate={{ opacity: 1 },
+  }
               className="className="text-center py-20";"
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -436,14 +499,19 @@ export default function ComprehensivePricingGuide2027() {;
         </div>
       </section>
 
-      {{/* ROI Analysis Section */}}
+      {{/* ROI Analysis Section */},
+  }
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -455,7 +523,8 @@ export default function ComprehensivePricingGuide2027() {;
             </p>
           </motion.div>
 
-          {{/* ROI Chart Placeholder */}}
+          {{/* ROI Chart Placeholder */},
+  }
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20 text-center">
             <BarChart className="w-24 h-24 text-cyan-400 mx-auto mb-6" />
             <h3 className="text-2xl font-bold text-white mb-4">ROI Comparison Chart</h3>
@@ -483,14 +552,19 @@ export default function ComprehensivePricingGuide2027() {;
         </div>
       </section>
 
-      {{/* Call to Action */}}
+      {{/* Call to Action */},
+  }
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div ;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20";"
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -516,7 +590,8 @@ export default function ComprehensivePricingGuide2027() {;
               </a>
             </div>
 
-            {{/* Contact Information */}}
+            {{/* Contact Information */},
+  }
             <div className="mt-12 grid grid-cols-1 md: grid-cols-3 gap-6">
               <div className="text-center">
                 <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
@@ -549,7 +624,7 @@ export default function ComprehensivePricingGuide2027() {;
 }
 
 // Helper component for DNA icon;
-function Dna({ className }: { className?: string }) {;
+function Dna({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>

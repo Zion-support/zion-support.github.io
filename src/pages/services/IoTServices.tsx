@@ -1,48 +1,52 @@
 import React from "react";
 import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe } from "lucide-react";
 const IoTServices = () => {
-  const iotServices = [;
-    {;
-      title: "IoT Device Development",description: "Custom IoT device design and development for your specific use case.",price: "From $15,000/project";
+  const iotServices = [
+  {
+  title: "IoT Device Development",description: "Custom IoT device design and development for your specific use case.",price: "From $15,000/project";
       features: ["Hardware design", "Firmware development", "Sensor integration", "Power management"]
-      icon: Cog;
-    }
-    {;
-      title: "IoT Connectivity Solutions",description: "Secure and reliable connectivity for your IoT ecosystem.",price: "From $8,000/month";
+      icon: Cog
+},
+  {
+  title: "IoT Connectivity Solutions",description: "Secure and reliable connectivity for your IoT ecosystem.",price: "From $8,000/month";
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"]
-      icon: Wifi;
-    }
-    {;
-      title: "IoT Data Management",description: "Comprehensive data collection, processing, and analytics for IoT devices.";
+      icon: Wifi
+},
+  {
+  title: "IoT Data Management",description: "Comprehensive data collection, processing, and analytics for IoT devices.";
       price: "From $6,500/month";
       features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"]
-      icon: Database;
-    }
+      icon: Database
+},
   ]
-  const iotTechnologies = [;
-    {;
-      name: "Edge Computing",description: "Local data processing and decision making",icon: Activity,features: [["Local processing", "Reduced latency", "Bandwidth optimization", "Offline operation"];]
-    }
-    {;
-      name: "Machine Learning",description: "AI-powered IoT intelligence and automation",icon: BarChart3,features: [["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"];]
-    }
-    {;
-      name: "Security & Privacy",description: "Enterprise-grade IoT security solutions",icon: Shield,features: [["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"];]
-    }
+  const iotTechnologies = [
+  {
+  name: "Edge Computing",description: "Local data processing and decision making",icon: Activity,features: [["Local processing", "Reduced latency", "Bandwidth optimization", "Offline operation"],
+  ],
+  },
+  {
+  name: "Machine Learning",description: "AI-powered IoT intelligence and automation",icon: BarChart3,features: [["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"],
+  ],
+  },
+  {
+  name: "Security & Privacy",description: "Enterprise-grade IoT security solutions",icon: Shield,features: [["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"],
+  ],
+  },
   ]
 
-  const benefits = [;
-    "Real-time monitoring and control capabilities";
+  const benefits = [
+  "Real-time monitoring and control capabilities";
     "Improved operational efficiency and automation";
     "Enhanced data collection and insights";
     "Reduced operational costs and manual work";
     "Scalable and flexible IoT infrastructure";
-    "Better decision-making with real-time data";
-  ]
+    "Better decision-making with real-time data"
+]
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -70,7 +74,8 @@ const IoTServices = () => {
         </div>
       </section>
 
-      {{/* IoT Services */}}
+      {{/* IoT Services */},
+  }
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -84,8 +89,8 @@ const IoTServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {iotServices.map((service, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
+            {iotServices.map((service, index) => (
+  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -93,10 +98,11 @@ const IoTServices = () => {
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <p className="text-lg font-semibold text-blue-400 mb-4">{service.price}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
+                  {service.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -106,7 +112,8 @@ const IoTServices = () => {
         </div>
       </section>
 
-      {{/* IoT Technologies */}}
+      {{/* IoT Technologies */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -120,17 +127,18 @@ const IoTServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {iotTechnologies.map((tech, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
+            {iotTechnologies.map((tech, index) => (
+  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
                 <p className="text-gray-300 mb-4">{tech.description}</p>
                 <ul className="space-y-2">
-                  {tech.features.map((feature, idx) => (;
-                    <li key={idx} className="text-sm text-gray-400">
-                      {{feature}}
+                  {tech.features.map((feature, idx) => (
+  <li key={idx} className="text-sm text-gray-400">
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -140,7 +148,8 @@ const IoTServices = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -153,10 +162,11 @@ const IoTServices = () => {
                 control, and optimize your business operations.;
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (;
-                  <li key={index} className="flex items-center text-gray-300">
+                {benefits.map((benefit, index) => (
+  <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    {{benefit}}
+                    {{benefit},
+  }
                   </li>
                 ))}
               </ul>
@@ -180,7 +190,8 @@ const IoTServices = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

@@ -27,10 +27,10 @@ import {
 } from "lucide-react";
 export const FuturisticFooter: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  },
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+},
   const currentYear = new Date().getFullYear();
-  const footerSections = [
+const footerSections = [
     {
       title: "Services",links: [
         { name: "AI & Machine Learning", href: "/ai-services" };
@@ -40,9 +40,9 @@ export const FuturisticFooter: React.FC = () => {
         { name: "Cybersecurity", href: "/it-services/cybersecurity" };
         { name: "Cloud Solutions", href: "/it-services/cloud" };
         { name: "DevOps & Automation", href: "/it-services/devops" };
-        { name: "Data Management", href: "/it-services/data" }
-      ]
-    };
+        { name: "Data Management", href: "/it-services/data" },
+  ],
+  };
     {
       title: "Solutions",links: [
         { name: "Quantum Computing", href: "/emerging-tech/quantum" };
@@ -52,9 +52,9 @@ export const FuturisticFooter: React.FC = () => {
         { name: "Healthcare AI", href: "/ai-services/healthcare" };
         { name: "Financial AI", href: "/ai-services/financial" };
         { name: "Green Technology", href: "/green-it" };
-        { name: "Space Technology", href: "/emerging-tech/space" }
-      ]
-    };
+        { name: "Space Technology", href: "/emerging-tech/space" },
+  ],
+  };
     {
       title: "Company",links: [
         { name: "About Us", href: "/about" };
@@ -64,9 +64,9 @@ export const FuturisticFooter: React.FC = () => {
         { name: "News & Blog", href: "/blog" };
         { name: "Press Kit", href: "/press" };
         { name: "Investor Relations", href: "/investors" };
-        { name: "Sustainability", href: "/sustainability" }
-      ]
-    };
+        { name: "Sustainability", href: "/sustainability" },
+  ],
+  };
     {
       title: "Resources",links: [
         { name: "Documentation", href: "/docs" };
@@ -76,15 +76,15 @@ export const FuturisticFooter: React.FC = () => {
         { name: "FAQ", href: "/faq" };
         { name: "Contact Us", href: "/contact" };
         { name: "Case Studies", href: "/case-studies" };
-        { name: "Marketplace", href: "/marketplace" }
-      ]
-    }
+        { name: "Marketplace", href: "/marketplace" },
+  ],
+  },
   ];
-  const socialLinks = [
+const socialLinks = [
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin };
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter };
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook };
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
   ];
   return (
     <footer className="relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
@@ -97,10 +97,14 @@ export const FuturisticFooter: React.FC = () => {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                viewport={{ once: true },
+  }
+                transition={{ duration: 0.6 },
+  }
               >
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
@@ -136,21 +140,25 @@ export const FuturisticFooter: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-            {/* Footer Links */}
-            {footerSections.map((section, index) => (
+            {/* Footer Links */},
+  {footerSections.map((section, index) => (
               <div key={section.title}>
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 },
+  }
+                  whileInView={{ opacity: 1, y: 0 },
+  }
+                  viewport={{ once: true },
+  }
+                  transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 >
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                    {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
-                    {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />}
-                    {section.title === "Company" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
-                    {section.title === "Resources" && <FileText className="w-5 h-5 mr-2 text-zion-cyan" />}
-                    {section.title}
+                    {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />},
+  {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />},
+  {section.title === "Company" && <Users className="w-5 h-5 mr-2 text-zion-blue" />},
+  {section.title === "Resources" && <FileText className="w-5 h-5 mr-2 text-zion-cyan" />},
+  {section.title}
                   </h3>
                   <ul className="space-y-2">
                     {section.links.map((link) => (
@@ -170,10 +178,14 @@ export const FuturisticFooter: React.FC = () => {
           </div>
           {/* Additional Quick Access Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            viewport={{ once: true },
+  }
+            transition={{ duration: 0.6, delay: 0.4 },
+  }
             className="border-t border-zion-slate/30 mt-12 pt-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -221,10 +233,14 @@ export const FuturisticFooter: React.FC = () => {
           </motion.div>
           {/* Bottom Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            viewport={{ once: true },
+  }
+            transition={{ duration: 0.6, delay: 0.5 },
+  }
             className="border-t border-zion-slate/30 mt-12 pt-8"
           >
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
@@ -268,8 +284,10 @@ export const FuturisticFooter: React.FC = () => {
         <motion.button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-full shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300 z-50 flex items-center justify-center group"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1 },
+  }
+          whileTap={{ scale: 0.9 },
+  }
         >
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
         </motion.button>
@@ -277,5 +295,5 @@ export const FuturisticFooter: React.FC = () => {
       {/* Bottom Border Glow */}
       <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />
     </footer>
-  );
+  )
 };

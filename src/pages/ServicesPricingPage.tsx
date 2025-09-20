@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {;
+import {
   Check;
   X;
   Star;
@@ -23,19 +23,20 @@ import {;
   MapPin;
   ExternalLink;
   DollarSign;
-  Clock;
+  Clock
 } from "lucide-react";
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices";
 // Group services by category for better organization;
-const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;
-  if (if (!acc[service.category]) {;) {
-    acc[service.category] = []
+const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
+  if (if (!acc[service.category]) {
+  ) {
+    acc[service.category] = [],
   }
   acc[service.category].push(service)
-  return acc;
+  return acc
 }, {} as { [key: string]: typeof EXPANDED_SERVICES })
 // Pricing comparison features;
-const pricingFeatures = [;
+const pricingFeatures = [
   "AI-Powered Solutions";
   "24/7 Support";
   "Global Coverage";
@@ -43,16 +44,18 @@ const pricingFeatures = [;
   "Training & Documentation";
   "Regular Updates";
   "Security Compliance";
-  "Scalable Architecture";
+  "Scalable Architecture"
 ]
-export default function ServicesPricingPage() {;
+export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = Object.keys(servicesByCategory)
   const filteredServices = selectedCategory === 'all';
     ? EXPANDED_SERVICES;
-    : servicesByCategory[selectedCategory] || [[];]
-  const getCategoryIcon = (category: string) => {;
-    const const categoryIcons: { [key: string]: React.ReactNode } = {; = {
+    : servicesByCategory[selectedCategory] || [[],
+  ]
+  const getCategoryIcon = (category: string) => {
+  const const categoryIcons: { [key: string]: React.ReactNode } = {
+  = {
       'AI Automation': <Zap className="h-5 w-5" />
       'Customer Intelligence': <Users className="h-5 w-5" />;
       'Content Marketing': <TrendingUp className="h-5 w-5" />;
@@ -74,11 +77,12 @@ export default function ServicesPricingPage() {;
       'Education Technology': <GraduationCap className="h-5 w-5" />;
       'Supply Chain': <Truck className="h-5 w-5" />
     }
-    return categoryIcons[category] || <Zap className="h-5 w-5" />;
-  }
+    return categoryIcons[category] || <Zap className="h-5 w-5" />
+}
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
@@ -104,7 +108,8 @@ export default function ServicesPricingPage() {;
           </div>
         </div>
       </div>
-      {{/* Contact Information Banner */}}
+      {{/* Contact Information Banner */},
+  }
       <div className="bg-zion-purple/20 border-b border-zion-purple/30">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-white">
@@ -121,14 +126,16 @@ export default function ServicesPricingPage() {;
           </div>
         </div>
       </div>
-      {{/* Main Content */}}
+      {{/* Main Content */},
+  }
       <div className="container mx-auto px-4 py-12">
-        {{/* Pricing Tiers Overview */}}
+        {{/* Pricing Tiers Overview */},
+  }
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Tiers Overview</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier]) => (;
-              <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
+            {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier]) => (
+  <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                 <CardHeader className="text-center">
                   <CardTitle className="text-zion-cyan text-xl">{key.charAt(0).toUpperCase() + key.slice(1)}</CardTitle>
                   <CardDescription className="text-zion-cyan-light text-lg font-semibold">{tier.range}</CardDescription>
@@ -136,8 +143,8 @@ export default function ServicesPricingPage() {;
                 <CardContent>
                   <p className="text-sm text-center mb-6">{tier.description}</p>
                   <div className="space-y-3">
-                    {pricingFeatures.map((feature, index) => (;
-                      <div key={index} className="flex items-center gap-2">
+                    {pricingFeatures.map((feature, index) => (
+  <div key={index} className="flex items-center gap-2">
                         <Check className="h-4 w-4 text-green-400" />
                         <span className="text-sm">{feature}</span>
                       </div>
@@ -145,7 +152,9 @@ export default function ServicesPricingPage() {;
                   </div>
                   <Button;
                     className="className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white";"
-                    onClick={{onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry_blank')}}}
+                    onClick={{onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry_blank')},
+  },
+  }
                   >
                     Get Custom Quote;
                   </Button>
@@ -154,7 +163,8 @@ export default function ServicesPricingPage() {;
             ))}
           </div>
         </div>
-        {{/* Service Categories Tabs */}}
+        {{/* Service Categories Tabs */},
+  }
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Services by Category</h2>
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
@@ -162,21 +172,24 @@ export default function ServicesPricingPage() {;
               <TabsTrigger value="all" className="text-white data-[state=active]:bg-zion-purple">
                 All Services;
               </TabsTrigger>
-              {categories.slice(0, 5).map(category => (;
-                <TabsTrigger key={category} value={category} className="text-white data-[state=active]:bg-zion-purple">
-                  {{category.split(' ')[0]}}
+              {categories.slice(0, 5).map(category => (
+  <TabsTrigger key={category} value={category} className="text-white data-[state=active]:bg-zion-purple">
+                  {{category.split(' ')[0],
+  },
+  }
                 </TabsTrigger>
               ))}
             </TabsList>
             <TabsContent value={selectedCategory} className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredServices.map((service) => (;
-                  <Card key={service.id} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
+                {filteredServices.map((service) => (
+  <Card key={service.id} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                     <CardHeader>
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-2">
                           <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">
-                            {{getCategoryIcon(service.category)}}
+                            {{getCategoryIcon(service.category)},
+  }
                           </div>
                           <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
                             {service.price && service.price <= 4999 ? 'Starter' :;
@@ -187,56 +200,66 @@ export default function ServicesPricingPage() {;
                       </div>
                       <CardTitle className="text-lg text-white line-clamp-2">{service.title}</CardTitle>
                       <CardDescription className="text-zion-cyan-light line-clamp-3">
-                        {{service.description}}
+                        {{service.description},
+  }
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        {{/* Pricing and Details */}}
+                        {{/* Pricing and Details */},
+  }
                         <div className="space-y-2">
                           <div className="flex items-center justify-between">
                             <span className="text-zion-cyan-light">Price:</span>
                             <span className="font-semibold text-zion-cyan text-lg">
-                              ${{service.price?.toLocaleString()}}
+                              ${{service.price?.toLocaleString()},
+  }
                             </span>
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-zion-cyan-light">Availability:</span>
                             <span className="flex items-center gap-1 text-sm">
                               <Clock className="h-3 w-3" />
-                              {{service.availability}}
+                              {{service.availability},
+  }
                             </span>
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-zion-cyan-light">Location:</span>
                             <span className="flex items-center gap-1 text-sm">
                               <Globe className="h-3 w-3" />
-                              {{service.location}}
+                              {{service.location},
+  }
                             </span>
                           </div>
                         </div>
-                        {{/* Tags */}}
+                        {{/* Tags */},
+  }
                         <div className="flex flex-wrap gap-2">
-                          {service.tags.slice(0, 3).map((tag, index) => (;
-                            <Badge key={index} variant="secondary" className="bg-white/10 text-zion-cyan-light border-white/20 text-xs">
-                              {{tag}}
+                          {service.tags.slice(0, 3).map((tag, index) => (
+  <Badge key={index} variant="secondary" className="bg-white/10 text-zion-cyan-light border-white/20 text-xs">
+                              {{tag},
+  }
                             </Badge>
                           ))}
                         </div>
-                        {{/* Rating and AI Score */}}
+                        {{/* Rating and AI Score */},
+  }
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-1">
                             <Star className="h-4 w-4 text-yellow-400 fill-current" />
                             <span className="text-sm">{service.rating}</span>
                             <span className="text-xs text-zion-cyan-light">({service.reviewCount} reviews)</span>
                           </div>
-                          {service.aiScore && (;
-                            <Badge className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                              AI Score: {{service.aiScore}}
+                          {service.aiScore && (
+  <Badge className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
+                              AI Score: {{service.aiScore},
+  }
                             </Badge>
                           )}
                         </div>
-                        {{/* Action Buttons */}}
+                        {{/* Action Buttons */},
+  }
                         <div className="flex gap-2">
                           <Button;
                             className="className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white";"
@@ -248,7 +271,9 @@ export default function ServicesPricingPage() {;
                           <Button;
                             variant="outline";
                             className="className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";"
-                            onClick={{onClick={() => window.open('https://ziontechgroup.com_blank')}}}
+                            onClick={{onClick={() => window.open('https://ziontechgroup.com_blank')},
+  },
+  }
                           >
                             <ExternalLink className="h-4 w-4" />
                           </Button>
@@ -261,12 +286,13 @@ export default function ServicesPricingPage() {;
             </TabsContent>
           </Tabs>
         </div>
-        {{/* Service Benefits Section */}}
+        {{/* Service Benefits Section */},
+  }
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose ZionTech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(SERVICE_BENEFITS).map(([key, benefit]) => (;
-              <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/10 transition-all duration-300">
+            {Object.entries(SERVICE_BENEFITS).map(([key, benefit]) => (
+  <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/10 transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="h-8 w-8 text-zion-cyan" />
@@ -277,7 +303,8 @@ export default function ServicesPricingPage() {;
             ))}
           </div>
         </div>
-        {{/* Pricing FAQ Section */}}
+        {{/* Pricing FAQ Section */},
+  }
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -327,7 +354,8 @@ export default function ServicesPricingPage() {;
             </Card>
           </div>
         </div>
-        {{/* Contact CTA Section */}}
+        {{/* Contact CTA Section */},
+  }
         <div className="bg-gradient-to-r from-zion-purple to-zion-blue rounded-xl p-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl mb-6 text-zion-cyan-light">
@@ -337,7 +365,9 @@ export default function ServicesPricingPage() {;
             <Button;
               size="lg";
               className="className="bg-white text-zion-purple hover:bg-zion-cyan-light";"
-              onClick={{onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')}}}
+              onClick={{onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')},
+  },
+  }
             >
               <Mail className="h-5 w-5 mr-2" />
               Schedule Consultation;
@@ -346,7 +376,9 @@ export default function ServicesPricingPage() {;
               size="lg";
               variant="outline";
               className="className="border-white text-white hover:bg-white/10";"
-              onClick={{onClick={() => window.open('tel:+13024640950_blank')}}}
+              onClick={{onClick={() => window.open('tel:+13024640950_blank')},
+  },
+  }
             >
               <Phone className="h-5 w-5 mr-2" />
               Call Now;

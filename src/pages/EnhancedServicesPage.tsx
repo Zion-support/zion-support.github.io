@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {;
+import {
   Search;
   Filter;
   Star;
@@ -27,16 +27,16 @@ import {;
   DollarSign;
   Link;
   Users;
-  CheckCircle;
+  CheckCircle
 } from "lucide-react";
 import SEO from "@/components/SEO";
-export default function EnhancedServicesPage() {;
+export default function EnhancedServicesPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedPriceRange, setSelectedPriceRange] = useState('all')
 
-  const filteredServices = ENHANCED_SERVICES.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+  const filteredServices = ENHANCED_SERVICES.filter(service => {
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
 
@@ -48,11 +48,11 @@ export default function EnhancedServicesPage() {;
                         (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||;
                         (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||;
                         (selectedPriceRange === 'premium' && service.price > 25000)
-    return matchesSearch && matchesCategory && matchesPrice;
-  })
-  const getCategoryIcon = (category: string) => {;
-    switch (category.toLowerCase()) {;
-      case 'ai automation':;
+    return matchesSearch && matchesCategory && matchesPrice
+})
+  const getCategoryIcon = (category: string) => {
+  switch (category.toLowerCase()) {
+  case 'ai automation':;
       case 'ai & machine learning':;
         return <Brain className="w-5 h-5" />
       case 'cloud management':;
@@ -80,14 +80,14 @@ export default function EnhancedServicesPage() {;
       case 'quantum computing':;
         return <Zap className="w-5 h-5" />;
       default: return <Code className="w-5 h-5" />
-    }
+    },
   }
-  const getPriceRange = (price: number) => {;
-    if (price <= 2000) return 'basic';
+  const getPriceRange = (price: number) => {
+  if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
     if (price <= 25000) return 'enterprise';
-    return 'premium';
-  }
+    return 'premium'
+}
 
   return (
     <div className="min-h-screen bg-background">
@@ -98,7 +98,8 @@ export default function EnhancedServicesPage() {;
         canonical="https://ziontechgroup.com/enhanced-services";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -127,19 +128,21 @@ export default function EnhancedServicesPage() {;
         </div>
       </div>
 
-      {{/* Pricing Tiers Overview */}}
+      {{/* Pricing Tiers Overview */},
+  }
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Service Pricing Tiers;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info]) => (;
-              <Card key={tier} className="bg-zion-blue border-zion-blue-light">
+            {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info]) => (
+  <Card key={tier} className="bg-zion-blue border-zion-blue-light">
                 <CardHeader className="text-center">
                   <CardTitle className="text-zion-cyan capitalize">{tier}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    {{info.range}}
+                    {{info.range},
+  }
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -151,7 +154,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Services Overview & Benefits */}}
+      {{/* Services Overview & Benefits */},
+  }
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -233,7 +237,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Search and Filters */}}
+      {{/* Search and Filters */},
+  }
       <section className="py-8 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4">
@@ -241,8 +246,10 @@ export default function EnhancedServicesPage() {;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <Input;
                 placeholder="Search services, technologies, or keywords...";
-                value={{searchTerm}}
-                onChange={{(e) => setSearchTerm(e.target.value)}}
+                value={{searchTerm},
+  }
+                onChange={{(e) => setSearchTerm(e.target.value)},
+  }
                 className="className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light";"
               />
             </div>
@@ -252,9 +259,10 @@ export default function EnhancedServicesPage() {;
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
-                {ENHANCED_SERVICE_CATEGORIES.map(category => (;
-                  <SelectItem key={category.value} value={category.value}>
-                    {{category.label}}
+                {ENHANCED_SERVICE_CATEGORIES.map(category => (
+  <SelectItem key={category.value} value={category.value}>
+                    {{category.label},
+  }
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -275,7 +283,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <section id="services-grid" className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -288,25 +297,28 @@ export default function EnhancedServicesPage() {;
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (;
-              <Card key={service.id} className="h-full hover:shadow-xl transition-shadow duration-300">
+            {filteredServices.map((service) => (
+  <Card key={service.id} className="h-full hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      {{getCategoryIcon(service.category)}}
+                      {{getCategoryIcon(service.category)},
+  }
                       <Badge variant={getPriceRange(service.price) === 'enterprise' ? 'default' : 'secondary'}>
-                        {{getPriceRange(service.price)}}
+                        {{getPriceRange(service.price)},
+  }
                       </Badge>
                     </div>
-                    {service.featured && (;
-                      <Badge variant="default" className="bg-zion-purple">
+                    {service.featured && (
+  <Badge variant="default" className="bg-zion-purple">
                         Featured;
                       </Badge>
                     )}
                   </div>
                   <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-sm text-zion-slate">
-                    {{service.description}}
+                    {{service.description},
+  }
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -318,18 +330,22 @@ export default function EnhancedServicesPage() {;
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-zion-blue">
-                        {service.currency}{{service.price?.toLocaleString()}}
+                        {service.currency},
+  {{service.price?.toLocaleString()},
+  }
                       </div>
                       <div className="text-sm text-zion-slate">
-                        {{service.availability}}
+                        {{service.availability},
+  }
                       </div>
                     </div>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(0, 3).map((tag, index) => (;
-                      <Badge key={index} variant="outline" className="text-xs">
-                        {{tag}}
+                    {service.tags.slice(0, 3).map((tag, index) => (
+  <Badge key={index} variant="outline" className="text-xs">
+                        {{tag},
+  }
                       </Badge>
                     ))}
                   </div>
@@ -337,11 +353,13 @@ export default function EnhancedServicesPage() {;
                   <div className="flex items-center justify-between text-sm text-zion-slate">
                     <div className="flex items-center gap-1">
                       <Globe className="w-4 h-4" />
-                      {{service.location}}
+                      {{service.location},
+  }
                     </div>
                     <div className="flex items-center gap-1">
                       <TrendingUp className="w-4 h-4" />
-                      AI Score: {{service.aiScore}}
+                      AI Score: {{service.aiScore},
+  }
                     </div>
                   </div>
 
@@ -364,7 +382,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Service Categories Tabs */}}
+      {{/* Service Categories Tabs */},
+  }
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -372,25 +391,28 @@ export default function EnhancedServicesPage() {;
           </h2>
           <Tabs defaultValue="ai-ml" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-zion-blue-dark">
-              {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (;
-                <TabsTrigger;
-                  key={{category.value}}
-                  value={{category.value}}
+              {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
+  <TabsTrigger;
+                  key={{category.value},
+  }
+                  value={{category.value},
+  }
                   className="className="text-zion-slate-light data-[state=active]:text-zion-cyan";"
                 >
-                  {{category.label}}
+                  {{category.label},
+  }
                 </TabsTrigger>
               ))}
             </TabsList>
 
-            {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (;
-              <TabsContent key={category.value} value={category.value} className="mt-8">
+            {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
+  <TabsContent key={category.value} value={category.value} className="mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {ENHANCED_SERVICES;
                     .filter(service => service.category.toLowerCase().includes(category.value.toLowerCase()))
                     .slice(0, 6)
-                    .map(service => (;
-                      <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white">
+                    .map(service => (
+  <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white">
                         <CardHeader>
                           <CardTitle className="text-lg">{service.title}</CardTitle>
                           <CardDescription className="text-zion-slate-light">
@@ -400,7 +422,9 @@ export default function EnhancedServicesPage() {;
                         <CardContent>
                           <div className="flex items-center justify-between">
                             <span className="text-zion-cyan font-bold">
-                              {service.currency}{{service.price?.toLocaleString()}}
+                              {service.currency},
+  {{service.price?.toLocaleString()},
+  }
                             </span>
                             <Button;
                               size="sm";
@@ -420,7 +444,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -467,7 +492,8 @@ export default function EnhancedServicesPage() {;
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section id="contact-section" className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -524,7 +550,9 @@ export default function EnhancedServicesPage() {;
                 size="lg";
                 variant="outline";
                 className="className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";"
-                onClick={{onClick={() => window.open(CONTACT_INFO.website, '_blank')}}}
+                onClick={{onClick={() => window.open(CONTACT_INFO.website, '_blank')},
+  },
+  }
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Visit Website;

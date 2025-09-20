@@ -12,7 +12,8 @@ const AICustomerExperience: React.FC = () => {
         description="Revolutionary AI-powered customer experience platform that personalizes interactions, predicts customer needs, and delivers exceptional service with 95% customer satisfaction rates.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -40,7 +41,8 @@ const AICustomerExperience: React.FC = () => {
         </div>
       </section>
 
-      {{/* Key Benefits */}}
+      {{/* Key Benefits */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -83,7 +85,8 @@ const AICustomerExperience: React.FC = () => {
         </div>
       </section>
 
-      {{/* Features */}}
+      {{/* Features */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -162,7 +165,8 @@ const AICustomerExperience: React.FC = () => {
         </div>
       </section>
 
-      {{/* Use Cases */}}
+      {{/* Use Cases */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -221,7 +225,8 @@ const AICustomerExperience: React.FC = () => {
         </div>
       </section>
 
-      {{/* Pricing */}}
+      {{/* Pricing */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -336,7 +341,8 @@ const AICustomerExperience: React.FC = () => {
         </div>
       </section>
 
-      {{/* Market Information */}}
+      {{/* Market Information */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -364,7 +370,8 @@ const AICustomerExperience: React.FC = () => {
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">

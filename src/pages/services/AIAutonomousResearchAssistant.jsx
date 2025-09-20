@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from "lucide-react";
 const AIAutonomousResearchAssistant = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -31,7 +32,8 @@ const AIAutonomousResearchAssistant = () => {
         </div>
       </section>
 
-      {{/* What is AI Autonomous Research Assistant */}}
+      {{/* What is AI Autonomous Research Assistant */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -95,7 +97,8 @@ const AIAutonomousResearchAssistant = () => {
         </div>
       </section>
 
-      {{/* Key Features */}}
+      {{/* Key Features */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -170,7 +173,8 @@ const AIAutonomousResearchAssistant = () => {
         </div>
       </section>
 
-      {{/* How It Works */}}
+      {{/* How It Works */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -224,7 +228,8 @@ const AIAutonomousResearchAssistant = () => {
         </div>
       </section>
 
-      {{/* Applications */}}
+      {{/* Applications */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -294,7 +299,8 @@ const AIAutonomousResearchAssistant = () => {
         </div>
       </section>
 
-      {{/* Benefits */}}
+      {{/* Benefits */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -386,7 +392,8 @@ const AIAutonomousResearchAssistant = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

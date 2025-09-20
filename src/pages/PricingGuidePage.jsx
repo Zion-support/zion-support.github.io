@@ -5,36 +5,42 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from "lucide-react";
 import SEO from "@/components/SEO";
-export default function PricingGuidePage() {;
-    const [selectedCategory, setSelectedCategory] = useState('all')
+export default function PricingGuidePage() {
+  const [selectedCategory, setSelectedCategory] = useState('all')
     const filteredServices = selectedCategory === 'all';
         ? EXPANDED_SERVICES;
         : EXPANDED_SERVICES.filter(service => service.category === selectedCategory)
-    const getCategoryStats = (category) => {;
-        const services = EXPANDED_SERVICES.filter(s => s.category === category)
+    const getCategoryStats = (category) => {
+  const services = EXPANDED_SERVICES.filter(s => s.category === category)
         const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length;
-        const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
-        return { count: services.length, avgPrice, avgRating }
-    }
-    const formatPrice = (price) => {;
-        if (if (price >= 1000) {;) {
-            return `$${(price / 1000).toFixed(1)}K`;
-        }
-        return `$${price}`;
-    }
-    const getServiceTier = (price) => {;
-        if (price < 2000)
-            return {{ tier: "Starter", color: "bg-green-100 text-green-800" }}
+const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
+        return { count: services.length, avgPrice, avgRating },
+  }
+    const formatPrice = (price) => {
+  if (if (price >= 1000) {
+  ) {
+            return `$${(price / 1000).toFixed(1)}K`
+}
+        return `$${price}`
+}
+    const getServiceTier = (price) => {
+  if (price < 2000)
+            return {{ tier: "Starter", color: "bg-green-100 text-green-800" },
+  }
         if (price < 5000)
-            return {{ tier: "Professional", color: "bg-blue-100 text-blue-800" }}
+            return {{ tier: "Professional", color: "bg-blue-100 text-blue-800" },
+  }
         if (price < 10000)
-            return {{ tier: "Enterprise", color: "bg-purple-100 text-purple-800" }}
-        return {{ tier: "Premium", color: "bg-orange-100 text-orange-800" }}
-    }
+            return {{ tier: "Enterprise", color: "bg-purple-100 text-purple-800" },
+  }
+        return {{ tier: "Premium", color: "bg-orange-100 text-orange-800" },
+  },
+  }
     return (<div className="min-h-screen bg-background">
       <SEO title="Service Pricing Guide - Zion Tech Group" description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs." keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost" canonical="https://ziontechgroup.com/pricing"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -44,7 +50,8 @@ export default function PricingGuidePage() {;
             Transparent pricing for all our micro SAAS services and IT solutions. No hidden fees, no surprises.;
           </p>
           ;
-          {{/* Pricing Summary */}}
+          {{/* Pricing Summary */},
+  }
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan">{EXPANDED_SERVICES.length}+</div>
@@ -52,13 +59,15 @@ export default function PricingGuidePage() {;
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan">
-                ${{Math.round(EXPANDED_SERVICES.reduce((sum, s) => sum + (s.price || 0), 0) / EXPANDED_SERVICES.length).toLocaleString()}}
+                ${{Math.round(EXPANDED_SERVICES.reduce((sum, s) => sum + (s.price || 0), 0) / EXPANDED_SERVICES.length).toLocaleString()},
+  }
               </div>
               <div className="text-zion-slate-light">Average Price</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan">
-                {{Math.round(EXPANDED_SERVICES.reduce((sum, s) => sum + (s.rating || 0), 0) / EXPANDED_SERVICES.length * 10) / 10}}
+                {{Math.round(EXPANDED_SERVICES.reduce((sum, s) => sum + (s.rating || 0), 0) / EXPANDED_SERVICES.length * 10) / 10},
+  }
               </div>
               <div className="text-zion-slate-light">Average Rating</div>
             </div>
@@ -68,7 +77,8 @@ export default function PricingGuidePage() {;
             </div>
           </div>
 
-          {{/* Contact Information */}}
+          {{/* Contact Information */},
+  }
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold mb-4">Need Custom Pricing?</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -89,15 +99,16 @@ export default function PricingGuidePage() {;
         </div>
       </div>
 
-      {{/* Category Filter */}}
+      {{/* Category Filter */},
+  }
       <div className="bg-zion-blue-dark py-8 border-b border-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant={selectedCategory === 'all' ? 'default' : 'outline'} onClick={() => setSelectedCategory('all')} className={selectedCategory === 'all' ? 'bg-zion-cyan text-white' : 'border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10'}>
               All Services ({EXPANDED_SERVICES.length})
             </Button>
-            {SERVICE_CATEGORIES.map(category => {;
-            const stats = getCategoryStats(category.name)
+            {SERVICE_CATEGORIES.map(category => {
+  const stats = getCategoryStats(category.name)
             return (<Button key={category.id} variant={selectedCategory === category.name ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.name)} className={selectedCategory === category.name ? 'bg-zion-cyan text-white' : 'border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10'}>
                   {category.name} ({stats.count})
                 </Button>)
@@ -106,7 +117,8 @@ export default function PricingGuidePage() {;
         </div>
       </div>
 
-      {{/* Services Grid */}}
+      {{/* Services Grid */},
+  }
       <div className="container mx-auto px-4 py-12">
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
@@ -120,14 +132,16 @@ export default function PricingGuidePage() {;
         </div>
 
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service) => {;
-            const tier = getServiceTier(service.price || 0)
+          {filteredServices.map((service) => {
+  const tier = getServiceTier(service.price || 0)
             return (<Card key={service.id} className="h-full hover:shadow-lg transition-shadow duration-300">
                 <div className="relative">
-                  <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+                  <img src={service.images[0],
+  } alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
                   <div className="absolute top-2 left-2">
                     <Badge className={tier.color}>
-                      {{tier.tier}}
+                      {{tier.tier},
+  }
                     </Badge>
                   </div>
                   {service.featured && (<Badge className="absolute top-2 right-2 bg-zion-purple text-white">
@@ -147,13 +161,15 @@ export default function PricingGuidePage() {;
                           <span className="text-sm text-gray-500">({service.reviewCount})</span>
                         </div>
                         {service.aiScore && (<Badge variant="outline" className="text-xs">
-                            AI: {{service.aiScore}}
+                            AI: {{service.aiScore},
+  }
                           </Badge>)}
                       </div>
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-zion-purple">
-                        {{formatPrice(service.price || 0)}}
+                        {{formatPrice(service.price || 0)},
+  }
                       </div>
                       <div className="text-sm text-gray-500">Starting Price</div>
                     </div>
@@ -161,11 +177,14 @@ export default function PricingGuidePage() {;
                 </CardHeader>
 
                 <CardContent className="pt-0">
-                  <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
-                    {{service.description}}
+                  <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' },
+  }>
+                    {{service.description},
+  }
                   </CardDescription>
 
-                  {{/* Service Details */}}
+                  {{/* Service Details */},
+  }
                   <div className="space-y-2 text-sm text-gray-600 mb-4">
                     <div className="flex items-center space-x-2">
                       <Clock className="w-4 h-4"/>
@@ -181,14 +200,17 @@ export default function PricingGuidePage() {;
                     </div>
                   </div>
 
-                  {{/* Tags */}}
+                  {{/* Tags */},
+  }
                   <div className="flex flex-wrap gap-1 mb-4">
                     {service.tags.slice(0, 3).map((tag) => (<Badge key={tag} variant="secondary" className="text-xs">
-                        {{tag}}
+                        {{tag},
+  }
                       </Badge>))}
                   </div>
 
-                  {{/* Action Buttons */}}
+                  {{/* Action Buttons */},
+  }
                   <div className="flex space-x-2">
                     <Button className="flex-1 bg-zion-purple hover: bg-zion-purple-dark text-white">
                       Get Quote;
@@ -209,7 +231,8 @@ export default function PricingGuidePage() {;
           </div>)}
       </div>
 
-      {{/* Pricing Tiers Explanation */}}
+      {{/* Pricing Tiers Explanation */},
+  }
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -261,7 +284,8 @@ export default function PricingGuidePage() {;
         </div>
       </div>
 
-      {{/* Value Proposition */}}
+      {{/* Value Proposition */},
+  }
       <div className="bg-zion-blue py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-8">
@@ -296,7 +320,8 @@ export default function PricingGuidePage() {;
         </div>
       </div>
 
-      {{/* Contact CTA */}}
+      {{/* Contact CTA */},
+  }
       <div className="bg-gradient-to-r from-zion-purple to-zion-blue py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">

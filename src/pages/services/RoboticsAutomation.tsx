@@ -1,9 +1,9 @@
 import React from "react";
 import { SEO } from "../../components/SEO";
 import { motion } from "framer-motion";
-import { ;
+import {
   Robot;
-  Zap, ;
+  Zap,
   CheckCircle;
   Star;
   TrendingUp;
@@ -294,84 +294,88 @@ import { ;
   FileZoomIn;
   FileZoomOut;
   FileMaximize;
-  FileMinim;
+  FileMinim
 } from "lucide-react";
-export default function RoboticsAutomation() {;
-  const features = [;
-    {;
-      icon: Robot,title: 'Industrial Robotics',description: 'Advanced robotic systems for manufacturing and production',color: 'from-blue-500 to-cyan-500';
-    }
-    {;
-      icon: Cog,title: 'Process Automation',description: 'Intelligent automation of complex business processes',color: 'from-purple-500 to-pink-500';
-    }
-    {;
-      icon: Wrench,title: 'Predictive Maintenance',description: 'AI-powered maintenance scheduling and optimization',color: 'from-green-500 to-emerald-500';
-    }
-    {;
-      icon: Gauge,title: 'Quality Control',description: 'Automated inspection and quality assurance systems',color: 'from-yellow-500 to-orange-500';
-    }
-    {;
-      icon: Palette,title: 'Custom Solutions',description: 'Tailored robotics and automation for specific needs',color: 'from-red-500 to-pink-500';
-    }
-    {;
-      icon: Network,title: 'IoT Integration',description: 'Connected devices and smart factory solutions',color: 'from-indigo-500 to-blue-500';
-    }
+export default function RoboticsAutomation() {
+  const features = [
+  {
+  icon: Robot,title: 'Industrial Robotics',description: 'Advanced robotic systems for manufacturing and production',color: 'from-blue-500 to-cyan-500'
+},
+  {
+  icon: Cog,title: 'Process Automation',description: 'Intelligent automation of complex business processes',color: 'from-purple-500 to-pink-500'
+},
+  {
+  icon: Wrench,title: 'Predictive Maintenance',description: 'AI-powered maintenance scheduling and optimization',color: 'from-green-500 to-emerald-500'
+},
+  {
+  icon: Gauge,title: 'Quality Control',description: 'Automated inspection and quality assurance systems',color: 'from-yellow-500 to-orange-500'
+},
+  {
+  icon: Palette,title: 'Custom Solutions',description: 'Tailored robotics and automation for specific needs',color: 'from-red-500 to-pink-500'
+},
+  {
+  icon: Network,title: 'IoT Integration',description: 'Connected devices and smart factory solutions',color: 'from-indigo-500 to-blue-500'
+},
   ]
-  const benefits = [;
-    'Increase production efficiency by 60% with robotic automationReduce operational costs by 40% through process optimization';
+  const benefits = [
+  'Increase production efficiency by 60% with robotic automationReduce operational costs by 40% through process optimization';
     'Improve product quality with 99.9% accuracy in inspectionsEnable 24/7 operation without human fatigue or errors';
-    'Scale operations rapidly without proportional cost increasesEnhance workplace safety by handling dangerous tasks';
+    'Scale operations rapidly without proportional cost increasesEnhance workplace safety by handling dangerous tasks'
+]
+
+  const useCases = [
+  {
+  title: 'Manufacturing',description: 'Assembly lines, welding, and material handling';
+      icon: Factory
+},
+  {
+  title: 'Logistics',description: 'Warehouse automation and supply chain optimization',icon: Truck
+},
+  {
+  title: 'Healthcare',description: 'Surgical robots and medical device automation',icon: Heart
+},
+  {
+  title: 'Agriculture',description: 'Precision farming and crop management robots',icon: Globe
+},
+  ]
+  const automationCapabilities = [
+  {
+  name: 'Industrial Robotics',description: 'Advanced robotic systems for manufacturing and production',examples: [['Assembly robotsWelding robots', 'Material handlingPackaging'],
+  ],
+  },
+  {
+  name: 'Process Automation',description: 'Intelligent automation of complex business processes',examples: [['Workflow automationData processing', 'Report generationQuality control'],
+  ],
+  },
+  {
+  name: 'Predictive Maintenance',description: 'AI-powered maintenance scheduling and optimization',examples: [['Equipment monitoringFailure prediction', 'Maintenance schedulingPerformance optimization'],
+  ],
+  },
+  {
+  name: 'Quality Assurance',description: 'Automated inspection and quality control systems',examples: [['Visual inspectionMeasurement systems', 'Defect detectionCompliance checking'],
+  ],
+  },
   ]
 
-  const useCases = [;
-    {;
-      title: 'Manufacturing',description: 'Assembly lines, welding, and material handling';
-      icon: Factory;
-    }
-    {;
-      title: 'Logistics',description: 'Warehouse automation and supply chain optimization',icon: Truck;
-    }
-    {;
-      title: 'Healthcare',description: 'Surgical robots and medical device automation',icon: Heart;
-    }
-    {;
-      title: 'Agriculture',description: 'Precision farming and crop management robots',icon: Globe;
-    }
-  ]
-  const automationCapabilities = [;
-    {;
-      name: 'Industrial Robotics',description: 'Advanced robotic systems for manufacturing and production',examples: [['Assembly robotsWelding robots', 'Material handlingPackaging'];]
-    }
-    {;
-      name: 'Process Automation',description: 'Intelligent automation of complex business processes',examples: [['Workflow automationData processing', 'Report generationQuality control'];]
-    }
-    {;
-      name: 'Predictive Maintenance',description: 'AI-powered maintenance scheduling and optimization',examples: [['Equipment monitoringFailure prediction', 'Maintenance schedulingPerformance optimization'];]
-    }
-    {;
-      name: 'Quality Assurance',description: 'Automated inspection and quality control systems',examples: [['Visual inspectionMeasurement systems', 'Defect detectionCompliance checking'];]
-    }
-  ]
-
-  const industries = [;
-    {;
-      name: 'Manufacturing',icon: Factory,description: 'Assembly lines, welding, and material handling automation';
-    }
-    {;
-      name: 'Logistics',icon: Truck,description: 'Warehouse automation and supply chain optimization';
-    }
-    {;
-      name: 'Healthcare',icon: Heart,description: 'Surgical robots and medical device automation';
-    }
-    {;
-      name: 'Agriculture',icon: Globe,description: 'Precision farming and crop management robots';
-    }
-    {;
-      name: 'Construction',icon: Building,description: 'Automated construction and building maintenance';
-    }
-    {;
-      name: 'Energy',icon: Zap,description: 'Power plant automation and renewable energy systems';
-    }
+  const industries = [
+  {
+  name: 'Manufacturing',icon: Factory,description: 'Assembly lines, welding, and material handling automation'
+},
+  {
+  name: 'Logistics',icon: Truck,description: 'Warehouse automation and supply chain optimization'
+},
+  {
+  name: 'Healthcare',icon: Heart,description: 'Surgical robots and medical device automation'
+},
+  {
+  name: 'Agriculture',icon: Globe,description: 'Precision farming and crop management robots'
+},
+  {
+  name: 'Construction',icon: Building,description: 'Automated construction and building maintenance'
+},
+  {
+  name: 'Energy',icon: Zap,description: 'Power plant automation and renewable energy systems'
+},
   ]
   return (
     <>
@@ -382,13 +386,17 @@ export default function RoboticsAutomation() {;
       />
       ;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {{/* Hero Section */}}
+        {{/* Hero Section */},
+  }
         <section className="relative overflow-hidden py-20 lg:py-32">
           <div className="container-responsive">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
               className="className="text-center max-w-4xl mx-auto";"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-full text-orange-400 text-sm font-medium mb-6">
@@ -411,15 +419,19 @@ export default function RoboticsAutomation() {;
               ;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 },
+  }
+                  whileTap={{ scale: 0.95 },
+  }
                   className="className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-orange-500/25";"
                 >
                   Get Started;
                 </motion.button>
                 <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 },
+  }
+                  whileTap={{ scale: 0.95 },
+  }
                   className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300";"
                 >
                   View Demo;
@@ -428,21 +440,27 @@ export default function RoboticsAutomation() {;
             </motion.div>
           </div>
           ;
-          {{/* Background Elements */}}
+          {{/* Background Elements */},
+  }
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
           </div>
         </section>
 
-        {{/* Features Section */}}
+        {{/* Features Section */},
+  }
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
+              viewport={{ once: true },
+  }
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -455,13 +473,18 @@ export default function RoboticsAutomation() {;
             </motion.div>
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (;
-                <motion.div;
-                  key={{feature.title}}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+              {features.map((feature, index) => (
+  <motion.div;
+                  key={{feature.title},
+  }
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  whileInView={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                  viewport={{ once: true },
+  }
                   className="className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-orange-500/30 transition-all duration-300 hover:bg-slate-800/70";"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -469,11 +492,13 @@ export default function RoboticsAutomation() {;
                   </div>
                   ;
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors">
-                    {{feature.title}}
+                    {{feature.title},
+  }
                   </h3>
                   ;
                   <p className="text-gray-400 leading-relaxed">
-                    {{feature.description}}
+                    {{feature.description},
+  }
                   </p>
                 </motion.div>
               ))}
@@ -481,15 +506,20 @@ export default function RoboticsAutomation() {;
           </div>
         </section>
 
-        {{/* Benefits Section */}}
+        {{/* Benefits Section */},
+  }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div;
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, x: -30 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.8 },
+  }
+                viewport={{ once: true },
+  }
               >
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                   Transform Your Operations with Automation;
@@ -502,13 +532,18 @@ export default function RoboticsAutomation() {;
                 </p>
                 ;
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {benefits.map((benefit, index) => (;
-                    <motion.div;
-                      key={{benefit}}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                  {benefits.map((benefit, index) => (
+  <motion.div;
+                      key={{benefit},
+  }
+                      initial={{ opacity: 0, x: -20 },
+  }
+                      whileInView={{ opacity: 1, x: 0 },
+  }
+                      transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                      viewport={{ once: true },
+  }
                       className="className="flex items-center gap-3";"
                     >
                       <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />
@@ -519,10 +554,14 @@ export default function RoboticsAutomation() {;
               </motion.div>
               ;
               <motion.div;
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, x: 30 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.8 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="relative";"
               >
                 <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-3xl p-8 border border-orange-500/30">
@@ -560,14 +599,19 @@ export default function RoboticsAutomation() {;
           </div>
         </section>
 
-        {{/* Automation Capabilities Section */}}
+        {{/* Automation Capabilities Section */},
+  }
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
+              viewport={{ once: true },
+  }
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -580,28 +624,36 @@ export default function RoboticsAutomation() {;
             </motion.div>
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {automationCapabilities.map((capability, index) => (;
-                <motion.div;
-                  key={{capability.name}}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+              {automationCapabilities.map((capability, index) => (
+  <motion.div;
+                  key={{capability.name},
+  }
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  whileInView={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                  viewport={{ once: true },
+  }
                   className="className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-orange-500/30 transition-all duration-300 group";"
                 >
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-orange-400 transition-colors">
-                    {{capability.name}}
+                    {{capability.name},
+  }
                   </h3>
                   ;
                   <p className="text-gray-400 mb-4 leading-relaxed">
-                    {{capability.description}}
+                    {{capability.description},
+  }
                   </p>
                   ;
                   <div className="space-y-2">
-                    {capability.examples.map((example, idx) => (;
-                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-500">
+                    {capability.examples.map((example, idx) => (
+  <div key={idx} className="flex items-center gap-2 text-sm text-gray-500">
                         <div className="w-1.5 h-1.5 bg-orange-400 rounded-full"></div>
-                        {{example}}
+                        {{example},
+  }
                       </div>
                     ))}
                   </div>
@@ -611,14 +663,19 @@ export default function RoboticsAutomation() {;
           </div>
         </section>
 
-        {{/* Industries Section */}}
+        {{/* Industries Section */},
+  }
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
+              viewport={{ once: true },
+  }
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -631,13 +688,18 @@ export default function RoboticsAutomation() {;
             </motion.div>
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (;
-                <motion.div;
-                  key={{industry.name}}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+              {industries.map((industry, index) => (
+  <motion.div;
+                  key={{industry.name},
+  }
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  whileInView={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                  viewport={{ once: true },
+  }
                   className="className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-orange-500/30 transition-all duration-300 group";"
                 >
                   <div className="flex items-start gap-4">
@@ -647,10 +709,12 @@ export default function RoboticsAutomation() {;
                     ;
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">
-                        {{industry.name}}
+                        {{industry.name},
+  }
                       </h3>
                       <p className="text-gray-400 leading-relaxed">
-                        {{industry.description}}
+                        {{industry.description},
+  }
                       </p>
                     </div>
                   </div>
@@ -660,14 +724,19 @@ export default function RoboticsAutomation() {;
           </div>
         </section>
 
-        {{/* Use Cases Section */}}
+        {{/* Use Cases Section */},
+  }
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
+              viewport={{ once: true },
+  }
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -680,13 +749,18 @@ export default function RoboticsAutomation() {;
             </motion.div>
             ;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (;
-                <motion.div;
-                  key={{useCase.title}}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+              {useCases.map((useCase, index) => (
+  <motion.div;
+                  key={{useCase.title},
+  }
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  whileInView={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.6, delay: index * 0.1 },
+  }
+                  viewport={{ once: true },
+  }
                   className="className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-orange-500/30 transition-all duration-300 group";"
                 >
                   <div className="flex items-start gap-4">
@@ -696,10 +770,12 @@ export default function RoboticsAutomation() {;
                     ;
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">
-                        {{useCase.title}}
+                        {{useCase.title},
+  }
                       </h3>
                       <p className="text-gray-400 leading-relaxed">
-                        {{useCase.description}}
+                        {{useCase.description},
+  }
                       </p>
                     </div>
                   </div>
@@ -709,14 +785,19 @@ export default function RoboticsAutomation() {;
           </div>
         </section>
 
-        {{/* CTA Section */}}
+        {{/* CTA Section */},
+  }
         <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
           <div className="container-responsive">
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 30 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
+              viewport={{ once: true },
+  }
               className="className="text-center max-w-4xl mx-auto";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -730,15 +811,19 @@ export default function RoboticsAutomation() {;
               ;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 },
+  }
+                  whileTap={{ scale: 0.95 },
+  }
                   className="className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-orange-500/25";"
                 >
                   Start Today;
                 </motion.button>
                 <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 },
+  }
+                  whileTap={{ scale: 0.95 },
+  }
                   className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300";"
                 >
                   Schedule Demo;

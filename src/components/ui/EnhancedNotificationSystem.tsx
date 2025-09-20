@@ -7,8 +7,8 @@ export interface Notification {
   duration?: number,
   action?: {
     label: string,onClick: () => void
-  };
-}
+  },
+  }
 
 interface NotificationContextType {
   notifications: Notification[],addNotification: (notification: Omit<Notification, 'id'>) => void,
@@ -19,9 +19,9 @@ const NotificationContext = createContext<NotificationContextType | undefined>(u
 export const useNotifications = () => {
   const context = useContext(NotificationContext);
   if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
-  }
-  return context;
+    throw new Error('useNotifications must be used within a NotificationProvider')
+}
+  return context
 },
 
 interface NotificationProviderProps {
@@ -33,24 +33,25 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 
   const addNotification = (notification: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
-    const newNotification = { ...notification, id },
+const newNotification = { ...notification, id },
     setNotifications(prev => [...prev, newNotification]);
     // Auto-remove after duration
     if (notification.duration !== 0) {
       setTimeout(() => {
-        removeNotification(id);
-      }, notification.duration || 5000);
-    }
+        removeNotification(id)
+}, notification.duration || 5000)
+},
   };
-  const removeNotification = (id: string) => {
+const removeNotification = (id: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id))
   };
-  const clearAll = () => {
-    setNotifications([]);
-  },
+const clearAll = () => {
+    setNotifications([])
+},
 
   return (
-    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification, clearAll }}>
+    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification, clearAll },
+  }>
       {children}
       <NotificationContainer />
     </NotificationContext.Provider>
@@ -66,12 +67,16 @@ const NotificationContainer: React.FC = () => {
         {notifications.map((notification, index) => (
           <motion.div
             key={notification.id}
-            initial={{ opacity: 0, x: 300, scale: 0.8 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: 300, scale: 0.8 }}
+            initial={{ opacity: 0, x: 300, scale: 0.8 },
+  }
+            animate={{ opacity: 1, x: 0, scale: 1 },
+  }
+            exit={{ opacity: 0, x: 300, scale: 0.8 },
+  }
             transition={{
               duration: 0.3,delay: index * 0.1,type: "spring",stiffness: 200
-            }}
+            },
+  }
             className="relative"
           >
             <NotificationItem notification={notification} onRemove={removeNotification} />
@@ -81,8 +86,10 @@ const NotificationContainer: React.FC = () => {
 
       {notifications.length > 1 && (
         <motion.button
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 10 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
           onClick={clearAll}
           className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover:bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
         >
@@ -91,7 +98,7 @@ const NotificationContainer: React.FC = () => {
         </motion.button>
       )}
     </div>
-  );
+  )
 },
 
 interface NotificationItemProps {
@@ -109,9 +116,9 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
       case 'info':
         return <Info className="w-5 h-5 text-blue-400" />
-    }
+    },
   };
-  const getBorderColor = (type: NotificationType) => {
+const getBorderColor = (type: NotificationType) => {
     switch (type) {
       case 'success':
         return 'border-green-500/30';
@@ -121,9 +128,9 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         return 'border-yellow-500/30';
       case 'info':
         return 'border-blue-500/30'
-    }
+    },
   };
-  const getBackgroundColor = (type: NotificationType) => {
+const getBackgroundColor = (type: NotificationType) => {
     switch (type) {
       case 'success':
         return 'bg-green-500/10';
@@ -133,7 +140,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         return 'bg-yellow-500/10';
       case 'info':
         return 'bg-blue-500/10'
-    }
+    },
   };
   return (
     <motion.div
@@ -177,15 +184,15 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>) => {
     // This would be used with the context
-    console.log('Success notification:', { title, message, ...options });
-  },
+    console.log('Success notification:', { title, message, ...options })
+},
   error: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Error notification:', { title, message, ...options });
-  },
+    console.log('Error notification:', { title, message, ...options })
+},
   warning: (title: string, message: string, options?: Partial<Notification>) => {
 
   };
   info: (title: string, message: string, options?: Partial<Notification>) => {
 
-  }
-};
+  },
+  };

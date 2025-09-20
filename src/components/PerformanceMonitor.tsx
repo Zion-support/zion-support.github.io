@@ -6,7 +6,7 @@ export default function PerformanceMonitor() {
       const [metrics, setMetrics] = useState<PerformanceMetrics>({
         loadTime: 0,renderTime: 0,memoryUsage: 0,networkLatency: 0,fps: 0,lighthouseScore: 0
       });
-      const [isVisible, setIsVisible] = useState(false);
+const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Measure page load time
@@ -14,11 +14,11 @@ export default function PerformanceMonitor() {
     
     // Measure memory usage
     const memoryInfo = (performance as any).memory;
-    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
+const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
 
     // Measure render time
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const renderTime = navigationEntry?.loadEventEnd || 0;
+const renderTime = navigationEntry?.loadEventEnd || 0;
 
     // Measure network latency (simplified)
     const networkLatency = performance.getEntriesByType('resource')
@@ -26,19 +26,18 @@ export default function PerformanceMonitor() {
 
     // Calculate FPS (simplified)
     let fps = 60;
-    let lastTime = performance.now();
-    let frameCount = 0;
-
-    const measureFPS = () => {
+let lastTime = performance.now();
+let frameCount = 0;
+const measureFPS = () => {
       frameCount++;
-      const currentTime = performance.now();
+const currentTime = performance.now();
       if (currentTime - lastTime >= 1000) {
         fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
         frameCount = 0;
-        lastTime = currentTime;
-      }
-      requestAnimationFrame(measureFPS);
-    };
+        lastTime = currentTime
+}
+      requestAnimationFrame(measureFPS)
+};
     measureFPS();
 
     // Calculate Lighthouse score (simplified)
@@ -57,12 +56,12 @@ export default function PerformanceMonitor() {
     // Show performance monitor on Ctrl+Shift+P
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(!isVisible);
-      }
-    };
+        setIsVisible(!isVisible)
+},
+  };
     window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [isVisible]);
+    return () => window.removeEventListener('keydown', handleKeyPress)
+}, [isVisible]);
 
   if (!isVisible) return null;
 
@@ -117,7 +116,8 @@ export default function PerformanceMonitor() {
                   metrics.lighthouseScore >= 70 ? 'bg-yellow-400' :
                   'bg-red-400'
                 }`}
-                style={{ width: `${metrics.lighthouseScore}%` }}
+                style={{ width: `${metrics.lighthouseScore}%` },
+  }
               />
             </div>
             <span className={metrics.lighthouseScore >= 90 ? 'text-green-400' : 
@@ -132,5 +132,5 @@ export default function PerformanceMonitor() {
         <span className="text-gray-500 text-xs">Press Ctrl+Shift+P to toggle</span>
       </div>
     </div>
-  );
+  )
 }

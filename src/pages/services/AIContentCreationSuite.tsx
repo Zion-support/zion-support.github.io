@@ -1,66 +1,71 @@
 import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from "lucide-react";
-export default function AIContentCreationSuite() {;
-  const features = [;
-    'AI-powered text generation and editingAutomated image creation and editing';
+export default function AIContentCreationSuite() {
+  const features = [
+  'AI-powered text generation and editingAutomated image creation and editing';
     'Video content generation and optimizationMulti-language content localization';
     'SEO-optimized content creationBrand voice consistency management';
     'Content performance analyticsAutomated content scheduling';
-    'Plagiarism detection and preventionContent collaboration and workflow management';
-  ]
+    'Plagiarism detection and preventionContent collaboration and workflow management'
+]
 
-  const benefits = [;
-    'Increase content production by 10xReduce content creation costs by 60%';
+  const benefits = [
+  'Increase content production by 10xReduce content creation costs by 60%';
     'Improve content engagement by 45%Maintain consistent brand voice';
-    'Scale content across multiple channelsOptimize content for better SEO performance';
-  ]
+    'Scale content across multiple channelsOptimize content for better SEO performance'
+]
 
-  const useCases = [;
-    'Marketing and advertising agenciesE-commerce and retail brands';
+  const useCases = [
+  'Marketing and advertising agenciesE-commerce and retail brands';
     'Publishing and media companiesEducational institutions';
-    'Corporate communicationsSocial media management';
-  ]
-  const tiers = [;
-    {;
-      name: 'Creator',price: '$199/mo',details: [;
-        'Up to 100 content pieces/monthBasic AI text generation';
+    'Corporate communicationsSocial media management'
+]
+  const tiers = [
+  {
+  name: 'Creator',price: '$199/mo',details: [
+  'Up to 100 content pieces/monthBasic AI text generation';
         'Standard image creationEmail support';
-        'Basic analytics';
-      ]
-    }
-    {;
-      name: 'Professional',price: '$499/mo',details: [;
-        'Up to 500 content pieces/monthAdvanced AI content creation';
+        'Basic analytics'
+],
+  },
+  {
+  name: 'Professional',price: '$499/mo',details: [
+  'Up to 500 content pieces/monthAdvanced AI content creation';
         'Video generationPriority support';
-        'Multi-language supportAdvanced analytics';
-      ]
-    }
-    {;
-      name: 'Enterprise',price: '$1,299/mo';
-      details: [;
-        'Unlimited content creationFull AI content suite';
+        'Multi-language supportAdvanced analytics'
+],
+  },
+  {
+  name: 'Enterprise',price: '$1,299/mo';
+      details: [
+  'Unlimited content creationFull AI content suite';
         'Custom AI modelsDedicated support';
-        'API accessWhite-label solutions';
-      ]
-    }
+        'API accessWhite-label solutions'
+],
+  },
   ]
 
-  const const technicalSpecs = {; = {
+  const const technicalSpecs = {
+  = {
     technology: ['GPT-4DALL-E', 'Stable DiffusionPython', 'ReactNode.js', 'PostgreSQLRedis']
     integrations: ['WordPressShopify', 'HubSpotMailchimp', 'HootsuiteBuffer', 'CanvaAdobe Creative Suite']
     security: ['SOC 2 Type IIISO 27001', 'GDPREnd-to-end encryption', 'Multi-factor authentication']
-    uptime: '99.9%',compliance: [['SOC 2ISO 27001', 'GDPRCCPA', 'COPPA'];]
+    uptime: '99.9%',compliance: [['SOC 2ISO 27001', 'GDPRCCPA', 'COPPA'],
+  ],
   }
 
-  const contentTypes = [;
-    {;
-      type: 'Text Content',solutions: [['Blog postsSocial media posts', 'Email campaignsProduct descriptions', 'Press releases'];]
-    }
-    {;
-      type: 'Visual Content',solutions: [['Images and graphicsInfographics', 'Social media visualsProduct photos', 'Brand assets'];]
-    }
-    {;
-      type: 'Video Content',solutions: [['Product videosSocial media clips', 'Educational contentMarketing videos', 'Live streams'];]
-    }
+  const contentTypes = [
+  {
+  type: 'Text Content',solutions: [['Blog postsSocial media posts', 'Email campaignsProduct descriptions', 'Press releases'],
+  ],
+  },
+  {
+  type: 'Visual Content',solutions: [['Images and graphicsInfographics', 'Social media visualsProduct photos', 'Brand assets'],
+  ],
+  },
+  {
+  type: 'Video Content',solutions: [['Product videosSocial media clips', 'Educational contentMarketing videos', 'Live streams'],
+  ],
+  },
   ]
   return (
     <div className="min-h-screen bg-white">
@@ -83,8 +88,8 @@ export default function AIContentCreationSuite() {;
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Key Features</h2>
             <ul className="space-y-3">
-              {features.map((feature) => (;
-                <li key={feature} className="flex items-start">
+              {features.map((feature) => (
+  <li key={feature} className="flex items-start">
                   <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{feature}</span>
                 </li>
@@ -94,8 +99,8 @@ export default function AIContentCreationSuite() {;
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Content Benefits</h2>
             <ul className="space-y-3">
-              {benefits.map((benefit) => (;
-                <li key={benefit} className="flex items-start">
+              {benefits.map((benefit) => (
+  <li key={benefit} className="flex items-start">
                   <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{benefit}</span>
                 </li>
@@ -107,8 +112,8 @@ export default function AIContentCreationSuite() {;
         <div className="mt-12">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Use Cases</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {useCases.map((useCase) => (;
-              <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
+            {useCases.map((useCase) => (
+  <div key={useCase} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <FileText className="w-6 h-6 text-zion-cyan mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{useCase}</div>
               </div>
@@ -119,14 +124,15 @@ export default function AIContentCreationSuite() {;
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Content Types</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {contentTypes.map((content) => (;
-              <div key={content.type} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+            {contentTypes.map((content) => (
+  <div key={content.type} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">{content.type}</h3>
                 <ul className="space-y-2">
-                  {content.solutions.map((sol) => (;
-                    <li key={sol} className="flex items-start text-sm text-zion-slate-dark">
+                  {content.solutions.map((sol) => (
+  <li key={sol} className="flex items-start text-sm text-zion-slate-dark">
                       <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
-                      {{sol}}
+                      {{sol},
+  }
                     </li>
                   ))}
                 </ul>
@@ -138,8 +144,8 @@ export default function AIContentCreationSuite() {;
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6 text-center">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {tiers.map((tier) => (;
-              <div key={tier.name} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
+            {tiers.map((tier) => (
+  <div key={tier.name} className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
                 <div className="text-lg font-semibold mb-1">{tier.name}</div>
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{tier.price}</div>
                 <ul className="text-sm text-zion-slate-dark space-y-1">
@@ -157,9 +163,10 @@ export default function AIContentCreationSuite() {;
               <div>
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Technology Stack</h3>
                 <div className="flex flex-wrap gap-2">
-                  {technicalSpecs.technology.map((tech) => (;
-                    <span key={tech} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">
-                      {{tech}}
+                  {technicalSpecs.technology.map((tech) => (
+  <span key={tech} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">
+                      {{tech},
+  }
                     </span>
                   ))}
                 </div>
@@ -167,9 +174,10 @@ export default function AIContentCreationSuite() {;
               <div>
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">Platform Integrations</h3>
                 <div className="flex flex-wrap gap-2">
-                  {technicalSpecs.integrations.map((integration) => (;
-                    <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
-                      {{integration}}
+                  {technicalSpecs.integrations.map((integration) => (
+  <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
+                      {{integration},
+  }
                     </span>
                   ))}
                 </div>
@@ -179,10 +187,11 @@ export default function AIContentCreationSuite() {;
               <div>
                 <h4 className="font-semibold text-zion-slate-dark mb-2">Security & Compliance</h4>
                 <div className="space-y-1">
-                  {technicalSpecs.security.map((sec) => (;
-                    <div key={sec} className="flex items-center text-sm text-zion-slate-dark">
+                  {technicalSpecs.security.map((sec) => (
+  <div key={sec} className="flex items-center text-sm text-zion-slate-dark">
                       <Shield className="w-4 h-4 text-zion-cyan mr-2" />
-                      {{sec}}
+                      {{sec},
+  }
                     </div>
                   ))}
                 </div>
@@ -194,10 +203,11 @@ export default function AIContentCreationSuite() {;
               <div>
                 <h4 className="font-semibold text-zion-slate-dark mb-2">Compliance Standards</h4>
                 <div className="space-y-1">
-                  {technicalSpecs.compliance.map((comp) => (;
-                    <div key={comp} className="flex items-center text-sm text-zion-slate-dark">
+                  {technicalSpecs.compliance.map((comp) => (
+  <div key={comp} className="flex items-center text-sm text-zion-slate-dark">
                       <Shield className="w-4 h-4 text-zion-cyan mr-2" />
-                      {{comp}}
+                      {{comp},
+  }
                     </div>
                   ))}
                 </div>

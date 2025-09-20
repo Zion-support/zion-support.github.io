@@ -1,75 +1,82 @@
 import React from "react";
 import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase } from "lucide-react";
 const Consulting = () => {
-  const consultingServices = [;
-    {;
-      icon: Lightbulb,title: "Technology Strategy",description: "Strategic technology planning and digital transformation roadmaps",features: [["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"];]
-    }
-    {;
-      icon: Target,title: "AI & ML Consulting",description: "Expert guidance on AI implementation and machine learning strategies",features: [["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"];]
-    }
-    {;
-      icon: Shield,title: "Cybersecurity Consulting",description: "Comprehensive security assessments and risk management strategies",features: [["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"];]
-    }
-    {;
-      icon: Globe,title: "Cloud Strategy",description: "Cloud migration planning and multi-cloud optimization strategies",features: [["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"];]
-    }
-    {;
-      icon: Database,title: "Data Strategy",description: "Data governance, analytics, and business intelligence consulting";
-      features: [["Data governance", "Analytics strategy", "BI implementation", "Data quality management"];]
-    }
-    {;
-      icon: Zap,title: "Digital Innovation",description: "Emerging technology consulting and innovation acceleration",features: [["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];]
-    }
+  const consultingServices = [
+  {
+  icon: Lightbulb,title: "Technology Strategy",description: "Strategic technology planning and digital transformation roadmaps",features: [["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"],
+  ],
+  },
+  {
+  icon: Target,title: "AI & ML Consulting",description: "Expert guidance on AI implementation and machine learning strategies",features: [["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"],
+  ],
+  },
+  {
+  icon: Shield,title: "Cybersecurity Consulting",description: "Comprehensive security assessments and risk management strategies",features: [["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"],
+  ],
+  },
+  {
+  icon: Globe,title: "Cloud Strategy",description: "Cloud migration planning and multi-cloud optimization strategies",features: [["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"],
+  ],
+  },
+  {
+  icon: Database,title: "Data Strategy",description: "Data governance, analytics, and business intelligence consulting";
+      features: [["Data governance", "Analytics strategy", "BI implementation", "Data quality management"],
+  ],
+  },
+  {
+  icon: Zap,title: "Digital Innovation",description: "Emerging technology consulting and innovation acceleration",features: [["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"],
+  ],
+  },
   ]
 
-  const industries = [;
-    {;
-      title: "Financial Services",description: "Banking, insurance, and fintech consulting";
-      icon: TrendingUp;
-    }
-    {;
-      title: "Healthcare",description: "Digital health and medical technology consulting",icon: Shield;
-    }
-    {;
-      title: "Manufacturing",description: "Industry 4.0 and smart manufacturing consulting",icon: Cpu;
-    }
-    {;
-      title: "Retail & E-commerce",description: "Digital commerce and customer experience consulting",icon: Users;
-    }
-    {;
-      title: "Energy & Utilities",description: "Smart grid and sustainability consulting",icon: Globe;
-    }
-    {;
-      title: "Government",description: "Public sector digital transformation consulting",icon: Briefcase;
-    }
+  const industries = [
+  {
+  title: "Financial Services",description: "Banking, insurance, and fintech consulting";
+      icon: TrendingUp
+},
+  {
+  title: "Healthcare",description: "Digital health and medical technology consulting",icon: Shield
+},
+  {
+  title: "Manufacturing",description: "Industry 4.0 and smart manufacturing consulting",icon: Cpu
+},
+  {
+  title: "Retail & E-commerce",description: "Digital commerce and customer experience consulting",icon: Users
+},
+  {
+  title: "Energy & Utilities",description: "Smart grid and sustainability consulting",icon: Globe
+},
+  {
+  title: "Government",description: "Public sector digital transformation consulting",icon: Briefcase
+},
   ]
-  const benefits = [;
-    "Expert guidance from industry professionals";
+  const benefits = [
+  "Expert guidance from industry professionals";
     "Proven methodologies and best practices";
     "Customized solutions for your specific needs";
     "Long-term strategic partnerships";
     "Measurable results and ROI";
-    "Access to cutting-edge technology insights";
-  ]
+    "Access to cutting-edge technology insights"
+]
 
-  const process = [;
-    {;
-      phase: "Discovery",description: "Understanding your business needs and objectives",duration: "1-2 weeks";
-    }
-    {;
-      phase: "Assessment",description: "Comprehensive analysis of current state and opportunities",duration: "2-4 weeks";
-    }
-    {;
-      phase: "Strategy",description: "Developing customized solutions and implementation plans",duration: "3-6 weeks";
-    }
-    {;
-      phase: "Implementation",description: "Executing the strategy with ongoing support and guidance",duration: "Ongoing";
-    }
+  const process = [
+  {
+  phase: "Discovery",description: "Understanding your business needs and objectives",duration: "1-2 weeks"
+},
+  {
+  phase: "Assessment",description: "Comprehensive analysis of current state and opportunities",duration: "2-4 weeks"
+},
+  {
+  phase: "Strategy",description: "Developing customized solutions and implementation plans",duration: "3-6 weeks"
+},
+  {
+  phase: "Implementation",description: "Executing the strategy with ongoing support and guidance",duration: "Ongoing"
+},
   ]
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -97,7 +104,8 @@ const Consulting = () => {
         </div>
       </section>
 
-      {{/* Consulting Services */}}
+      {{/* Consulting Services */},
+  }
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -111,18 +119,19 @@ const Consulting = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {consultingServices.map((service, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
+            {consultingServices.map((service, index) => (
+  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (;
-                    <li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {service.features.map((feature, idx) => (
+  <li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -132,7 +141,8 @@ const Consulting = () => {
         </div>
       </section>
 
-      {{/* Industries */}}
+      {{/* Industries */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -146,8 +156,8 @@ const Consulting = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (;
-              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-orange-500/50 transition-all duration-300">
+            {industries.map((industry, index) => (
+  <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-orange-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -159,7 +169,8 @@ const Consulting = () => {
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -172,10 +183,11 @@ const Consulting = () => {
                 solutions that drive real business value and competitive advantage.;
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (;
-                  <li key={index} className="flex items-center text-gray-300">
+                {benefits.map((benefit, index) => (
+  <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
-                    {{benefit}}
+                    {{benefit},
+  }
                   </li>
                 ))}
               </ul>
@@ -199,7 +211,8 @@ const Consulting = () => {
         </div>
       </section>
 
-      {{/* Consulting Process */}}
+      {{/* Consulting Process */},
+  }
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -211,10 +224,11 @@ const Consulting = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((phase, index) => (;
-              <div key={index} className="text-center">
+            {process.map((phase, index) => (
+  <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                  {{index + 1}}
+                  {{index + 1},
+  }
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>
                 <p className="text-gray-300 mb-2">{phase.description}</p>
@@ -225,7 +239,8 @@ const Consulting = () => {
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

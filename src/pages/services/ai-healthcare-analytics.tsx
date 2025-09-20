@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ;
+import {
   Activity;
-  Heart, ;
-  Brain, ;
-  Zap, ;
-  CheckCircle, ;
-  Clock, ;
+  Heart,
+  Brain,
+  Zap,
+  CheckCircle,
+  Clock,
   DollarSign;
   Users;
   BarChart3;
@@ -22,95 +22,95 @@ import { ;
   Stethoscope;
   Pill;
   Microscope;
-  Database;
+  Database
 } from "lucide-react";
 import { SEO } from "../../components/SEO";
-export default function AIHealthcareAnalytics() {;
-  const features = [;
-    {;
-      icon: <Brain className="w-6 h-6" />,title: "Predictive Patient Analytics",description: "AI algorithms predict patient outcomes, readmission risks, and treatment effectiveness with 96% accuracy";
-    }
-    {;
-      icon: <Activity className="w-6 h-6" />,title: "Real-time Health Monitoring",description: "Continuous monitoring of patient vitals with early warning systems and automated alerts for critical changes";
-    }
-    {;
-      icon: <Database className="w-6 h-6" />,title: "Clinical Data Integration",description: "Seamless integration with EHR systems, medical devices, and wearable technology for comprehensive data analysis";
-    }
-    {;
-      icon: <Microscope className="w-6 h-6" />,title: "Medical Image Analysis",description: "Advanced AI-powered analysis of X-rays, MRIs, and CT scans for faster and more accurate diagnoses";
-    }
-    {;
-      icon: <Shield className="w-6 h-6" />,title: "HIPAA-Compliant Security",description: "Enterprise-grade security with end-to-end encryption and full HIPAA compliance for patient data protection";
-    }
-    {;
-      icon: <BarChart3 className="w-6 h-6" />,title: "Population Health Insights",description: "Comprehensive analytics for population health management, disease trends, and preventive care strategies";
-    }
+export default function AIHealthcareAnalytics() {
+  const features = [
+  {
+  icon: <Brain className="w-6 h-6" />,title: "Predictive Patient Analytics",description: "AI algorithms predict patient outcomes, readmission risks, and treatment effectiveness with 96% accuracy"
+},
+  {
+  icon: <Activity className="w-6 h-6" />,title: "Real-time Health Monitoring",description: "Continuous monitoring of patient vitals with early warning systems and automated alerts for critical changes"
+},
+  {
+  icon: <Database className="w-6 h-6" />,title: "Clinical Data Integration",description: "Seamless integration with EHR systems, medical devices, and wearable technology for comprehensive data analysis"
+},
+  {
+  icon: <Microscope className="w-6 h-6" />,title: "Medical Image Analysis",description: "Advanced AI-powered analysis of X-rays, MRIs, and CT scans for faster and more accurate diagnoses"
+},
+  {
+  icon: <Shield className="w-6 h-6" />,title: "HIPAA-Compliant Security",description: "Enterprise-grade security with end-to-end encryption and full HIPAA compliance for patient data protection"
+},
+  {
+  icon: <BarChart3 className="w-6 h-6" />,title: "Population Health Insights",description: "Comprehensive analytics for population health management, disease trends, and preventive care strategies"
+},
   ]
 
-  const pricing = [;
-    {;
-      name: "Clinic",price: "$399",period: "/month",features: [;
-        "Up to 1,000 patients";
+  const pricing = [
+  {
+  name: "Clinic",price: "$399",period: "/month",features: [
+  "Up to 1,000 patients";
         "Basic predictive analytics";
         "Standard reporting";
         "Email support";
-        "HIPAA compliance";
-      ]
-      popular: false;
-    }
-    {;
-      name: "Hospital",price: "$1,199";
-      period: "/month",features: [;
-        "Up to 10,000 patients";
+        "HIPAA compliance"
+]
+      popular: false
+},
+  {
+  name: "Hospital",price: "$1,199";
+      period: "/month",features: [
+  "Up to 10,000 patients";
         "Advanced AI analytics";
         "Real-time monitoring";
         "Priority support";
         "Custom dashboards";
         "API access";
-        "Integration support";
-      ]
-      popular: true;
-    }
-    {;
-      name: "Health System",price: "$2,999";
-      period: "/month",features: [;
-        "Unlimited patients";
+        "Integration support"
+]
+      popular: true
+},
+  {
+  name: "Health System",price: "$2,999";
+      period: "/month",features: [
+  "Unlimited patients";
         "Custom AI models";
         "Advanced analytics";
         "Dedicated support";
         "White-label options";
         "SLA guarantees";
-        "On-premise deployment";
-      ]
-      popular: false;
-    }
+        "On-premise deployment"
+]
+      popular: false
+},
   ]
-  const benefits = [;
-    "Reduce readmission rates by 30%";
+  const benefits = [
+  "Reduce readmission rates by 30%";
     "Improve diagnostic accuracy by 25%";
     "Reduce healthcare costs by 20-35%";
     "Enhance patient outcomes and satisfaction";
     "Streamline clinical workflows";
-    "Enable proactive patient care";
-  ]
+    "Enable proactive patient care"
+]
 
-  const useCases = [;
-    {;
-      specialty: "Cardiology",description: "Predict heart failure risks, monitor cardiac function, and optimize treatment plans";
-      improvement: "40% risk reduction";
-    }
-    {;
-      specialty: "Oncology",description: "Personalized treatment recommendations, drug response prediction, and survival analysis";
-      improvement: "35% treatment efficacy";
-    }
-    {;
-      specialty: "Emergency Medicine",description: "Triage optimization, resource allocation, and patient flow management";
-      improvement: "50% efficiency gain";
-    }
-    {;
-      specialty: "Primary Care",description: "Preventive care planning, chronic disease management, and population health insights";
-      improvement: "45% preventive care";
-    }
+  const useCases = [
+  {
+  specialty: "Cardiology",description: "Predict heart failure risks, monitor cardiac function, and optimize treatment plans";
+      improvement: "40% risk reduction"
+},
+  {
+  specialty: "Oncology",description: "Personalized treatment recommendations, drug response prediction, and survival analysis";
+      improvement: "35% treatment efficacy"
+},
+  {
+  specialty: "Emergency Medicine",description: "Triage optimization, resource allocation, and patient flow management";
+      improvement: "50% efficiency gain"
+},
+  {
+  specialty: "Primary Care",description: "Preventive care planning, chronic disease management, and population health insights";
+      improvement: "45% preventive care"
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -119,13 +119,17 @@ export default function AIHealthcareAnalytics() {;
         description="Revolutionary AI platform for healthcare analytics, patient monitoring, and clinical insights. Improve patient outcomes while reducing healthcare costs by 20-35%.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Healthcare Analytics;
@@ -153,7 +157,8 @@ export default function AIHealthcareAnalytics() {;
         </div>
       </section>
 
-      {{/* Key Benefits */}}
+      {{/* Key Benefits */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -166,12 +171,16 @@ export default function AIHealthcareAnalytics() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300";"
               >
                 <CheckCircle className="w-8 h-8 text-red-400 mb-4" />
@@ -182,7 +191,8 @@ export default function AIHealthcareAnalytics() {;
         </div>
       </section>
 
-      {{/* Features */}}
+      {{/* Features */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -195,16 +205,21 @@ export default function AIHealthcareAnalytics() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300 group";"
               >
                 <div className="text-red-400 mb-4 group-hover:text-red-300 transition-colors duration-300">
-                  {{feature.icon}}
+                  {{feature.icon},
+  }
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -214,7 +229,8 @@ export default function AIHealthcareAnalytics() {;
         </div>
       </section>
 
-      {{/* Use Cases */}}
+      {{/* Use Cases */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -227,12 +243,16 @@ export default function AIHealthcareAnalytics() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300";"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.specialty}</h3>
@@ -247,7 +267,8 @@ export default function AIHealthcareAnalytics() {;
         </div>
       </section>
 
-      {{/* Pricing */}}
+      {{/* Pricing */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -260,20 +281,24 @@ export default function AIHealthcareAnalytics() {;
           </div>
           ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${;
-                  plan.popular ;
+            {pricing.map((plan, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
+  plan.popular ;
                     ? 'border-red-500 ring-2 ring-red-500/20' ;
-                    : 'border-slate-700';
-                } hover:border-red-500 transition-all duration-300`}
+                    : 'border-slate-700'
+} hover:border-red-500 transition-all duration-300`}
               >
-                {plan.popular && (;
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (
+  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -289,21 +314,22 @@ export default function AIHealthcareAnalytics() {;
                 </div>
                 ;
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
                 ;
                 <a;
                   href="https://ziontechgroup.com/contact";
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
-                    plan.popular;
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+  plan.popular;
                       ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white hover:from-red-700 hover:to-pink-700';
-                      : 'bg-slate-700 text-white hover:bg-slate-600';
-                  }`}
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
+}`}
                 >
                   Get Started;
                 </a>
@@ -313,14 +339,18 @@ export default function AIHealthcareAnalytics() {;
         </div>
       </section>
 
-      {{/* Market Information */}}
+      {{/* Market Information */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: -20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Market-Leading Healthcare Solution;
@@ -358,9 +388,12 @@ export default function AIHealthcareAnalytics() {;
             </motion.div>
             ;
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: 20 },
+  }
+              whileInView={{ opacity: 1, x: 0 },
+  }
+              transition={{ duration: 0.8 },
+  }
               className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700";"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Clinical Performance Metrics</h3>
@@ -387,13 +420,17 @@ export default function AIHealthcareAnalytics() {;
         </div>
       </section>
 
-      {{/* Contact CTA */}}
+      {{/* Contact CTA */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="bg-gradient-to-r from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-red-500/30";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -422,7 +459,8 @@ export default function AIHealthcareAnalytics() {;
         </div>
       </section>
 
-      {{/* Contact Information */}}
+      {{/* Contact Information */},
+  }
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>

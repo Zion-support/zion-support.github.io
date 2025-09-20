@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SEO } from "../../components/SEO";
-import { ;
+import {
   MessageCircle;
-  Brain, ;
-  Target, ;
-  Zap, ;
-  BarChart3, ;
-  Clock, ;
-  Award, ;
+  Brain,
+  Target,
+  Zap,
+  BarChart3,
+  Clock,
+  Award,
   Star;
   Globe;
   Cpu;
@@ -22,74 +22,74 @@ import { ;
   Phone;
   Mail;
   Calendar;
-  Search;
+  Search
 } from "lucide-react";
-export default function HelpdeskPlatform() {;
-  const features = [;
-    {;
-      icon: Brain,title: "AI-Powered Support",description: "Intelligent chatbots and virtual assistants for instant customer support.";
-    }
-    {;
-      icon: MessageCircle,title: "Multi-Channel Support",description: "Unified support across email, chat, phone, and social media platforms.";
-    }
-    {;
-      icon: Target,title: "Smart Ticket Routing",description: "AI-driven ticket classification and automatic assignment to best agents.";
-    }
-    {;
-      icon: Zap,title: "Automated Workflows",description: "Intelligent automation for common support scenarios and escalations.";
-    }
-    {;
-      icon: BarChart3,title: "Performance Analytics",description: "Comprehensive insights into support metrics and customer satisfaction.";
-    }
-    {;
-      icon: Shield,title: "Knowledge Management",description: "Centralized knowledge base with AI-powered search and suggestions.";
-    }
+export default function HelpdeskPlatform() {
+  const features = [
+  {
+  icon: Brain,title: "AI-Powered Support",description: "Intelligent chatbots and virtual assistants for instant customer support."
+},
+  {
+  icon: MessageCircle,title: "Multi-Channel Support",description: "Unified support across email, chat, phone, and social media platforms."
+},
+  {
+  icon: Target,title: "Smart Ticket Routing",description: "AI-driven ticket classification and automatic assignment to best agents."
+},
+  {
+  icon: Zap,title: "Automated Workflows",description: "Intelligent automation for common support scenarios and escalations."
+},
+  {
+  icon: BarChart3,title: "Performance Analytics",description: "Comprehensive insights into support metrics and customer satisfaction."
+},
+  {
+  icon: Shield,title: "Knowledge Management",description: "Centralized knowledge base with AI-powered search and suggestions."
+},
   ]
-  const benefits = [;
-    "Reduce support response time by 60-80% with AI automation";
+  const benefits = [
+  "Reduce support response time by 60-80% with AI automation";
     "Improve customer satisfaction scores by 40-60%";
     "Reduce support costs by 30-50% through automation";
     "Increase agent productivity by 50-70%";
     "Provide 24/7 customer support availability";
-    "Enhance first-call resolution rates by 35-55%";
-  ]
+    "Enhance first-call resolution rates by 35-55%"
+]
 
-  const supportChannels = [;
-    {;
-      channel: "Live Chat",description: "Real-time chat support with AI-powered instant responses",icon: MessageCircle;
-    }
-    {;
-      channel: "Email Support",description: "Intelligent email routing and automated responses",icon: Mail;
-    }
-    {;
-      channel: "Phone Support",description: "Call center integration with smart call routing",icon: Phone;
-    }
-    {;
-      channel: "Social Media",description: "Multi-platform social media support integration",icon: Users;
-    }
-    {;
-      channel: "Self-Service",description: "Knowledge base and FAQ automation",icon: Search;
-    }
-    {;
-      channel: "Mobile Support",description: "Mobile-optimized support experience",icon: Globe;
-    }
+  const supportChannels = [
+  {
+  channel: "Live Chat",description: "Real-time chat support with AI-powered instant responses",icon: MessageCircle
+},
+  {
+  channel: "Email Support",description: "Intelligent email routing and automated responses",icon: Mail
+},
+  {
+  channel: "Phone Support",description: "Call center integration with smart call routing",icon: Phone
+},
+  {
+  channel: "Social Media",description: "Multi-platform social media support integration",icon: Users
+},
+  {
+  channel: "Self-Service",description: "Knowledge base and FAQ automation",icon: Search
+},
+  {
+  channel: "Mobile Support",description: "Mobile-optimized support experience",icon: Globe
+},
   ]
-  const useCases = [;
-    {;
-      industry: "E-commerce",description: "Order support, product inquiries, and customer service automation";
-    }
-    {;
-      industry: "SaaS & Technology",description: "Technical support, user onboarding, and feature assistance";
-    }
-    {;
-      industry: "Healthcare",description: "Patient support, appointment scheduling, and medical inquiries";
-    }
-    {;
-      industry: "Financial Services",description: "Account support, transaction assistance, and security help";
-    }
-    {;
-      industry: "Education",description: "Student support, course assistance, and technical help";
-    }
+  const useCases = [
+  {
+  industry: "E-commerce",description: "Order support, product inquiries, and customer service automation"
+},
+  {
+  industry: "SaaS & Technology",description: "Technical support, user onboarding, and feature assistance"
+},
+  {
+  industry: "Healthcare",description: "Patient support, appointment scheduling, and medical inquiries"
+},
+  {
+  industry: "Financial Services",description: "Account support, transaction assistance, and security help"
+},
+  {
+  industry: "Education",description: "Student support, course assistance, and technical help"
+},
   ]
 
   return (
@@ -99,14 +99,18 @@ export default function HelpdeskPlatform() {;
         description="Transform your customer support with AI-powered helpdesk automation, multi-channel support, and intelligent ticket management solutions.";
       />
       ;
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
@@ -128,15 +132,19 @@ export default function HelpdeskPlatform() {;
             ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/25";"
               >
                 Start Free Trial;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300";"
               >
                 Schedule Demo;
@@ -146,13 +154,17 @@ export default function HelpdeskPlatform() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -165,12 +177,16 @@ export default function HelpdeskPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{feature.title}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{feature.title},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-orange-400/30 transition-all duration-300 hover:transform hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -184,13 +200,17 @@ export default function HelpdeskPlatform() {;
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -206,12 +226,16 @@ export default function HelpdeskPlatform() {;
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (;
-                  <motion.div;
-                    key={{index}}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                {benefits.map((benefit, index) => (
+  <motion.div;
+                    key={{index},
+  }
+                    initial={{ opacity: 0, x: -20 },
+  }
+                    whileInView={{ opacity: 1, x: 0 },
+  }
+                    transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                     className="className="flex items-start space-x-3";"
                   >
                     <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
@@ -250,13 +274,17 @@ export default function HelpdeskPlatform() {;
         </div>
       </section>
 
-      {{/* Support Channels Section */}}
+      {{/* Support Channels Section */},
+  }
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -269,12 +297,16 @@ export default function HelpdeskPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {supportChannels.map((channel, index) => (;
-              <motion.div;
-                key={{channel.channel}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {supportChannels.map((channel, index) => (
+  <motion.div;
+                key={{channel.channel},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-orange-400/30 transition-all duration-300";"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -290,13 +322,17 @@ export default function HelpdeskPlatform() {;
         </div>
       </section>
 
-      {{/* Use Cases Section */}}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -309,12 +345,16 @@ export default function HelpdeskPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (;
-              <motion.div;
-                key={{useCase.industry}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+            {useCases.map((useCase, index) => (
+  <motion.div;
+                key={{useCase.industry},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.6, delay: index * 0.1 },
+  }
                 className="className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-orange-400/30 transition-all duration-300";"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -330,13 +370,17 @@ export default function HelpdeskPlatform() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 p-12 rounded-2xl border border-orange-400/20 text-center";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -348,15 +392,19 @@ export default function HelpdeskPlatform() {;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-orange-500/25";"
               >
                 Start Free Trial;
               </motion.button>
               <motion.button;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 },
+  }
+                whileTap={{ scale: 0.95 },
+  }
                 className="className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover: bg-orange-400/10 transition-all duration-300";"
               >
                 Contact Sales;

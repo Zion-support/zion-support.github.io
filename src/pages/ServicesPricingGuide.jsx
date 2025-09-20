@@ -7,29 +7,29 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from "lucide-react";
 import SEO from "@/components/SEO";
-export default function ServicesPricingGuide() {;
-    const [selectedCategory, setSelectedCategory] = useState('all')
+export default function ServicesPricingGuide() {
+  const [selectedCategory, setSelectedCategory] = useState('all')
     const filteredServices = selectedCategory === 'all';
         ? EXPANDED_SERVICES;
         : EXPANDED_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory)
-    const getPriceTier = (price) => {;
-        if (price < 10000)
+    const getPriceTier = (price) => {
+  if (price < 10000)
             return 'Starter';
         if (price < 25000)
             return 'Professional';
-        return 'Enterprise';
-    }
-    const getPriceTierColor = (tier) => {;
-        switch (tier) {;
-            case 'Starter': return 'bg-green-500';
+        return 'Enterprise'
+}
+    const getPriceTierColor = (tier) => {
+  switch (tier) {
+  case 'Starter': return 'bg-green-500';
             case 'Professional': return 'bg-blue-500';
             case 'Enterprise': return 'bg-purple-500';
-            default: return 'bg-gray-500';
-        }
-    }
-    const getServiceIcon = (category) => {;
-        switch (category) {;
-            case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>;
+            default: return 'bg-gray-500'
+},
+  }
+    const getServiceIcon = (category) => {
+  switch (category) {
+  case 'AI Development': return <TrendingUp className="w-5 h-5 text-blue-500"/>;
             case 'Cloud Services': return <Globe className="w-5 h-5 text-green-500"/>;
             case 'Cybersecurity': return <Shield className="w-5 h-5 text-red-500"/>;
             case 'Data & Analytics': return <TrendingUp className="w-5 h-5 text-purple-500"/>;
@@ -38,12 +38,13 @@ export default function ServicesPricingGuide() {;
             case 'Blockchain & Web3': return <TrendingUp className="w-5 h-5 text-orange-500"/>;
             case 'AR/VR & Metaverse': return <Globe className="w-5 h-5 text-pink-500"/>;
             default: return <TrendingUp className="w-5 h-5 text-gray-500"/>
-        }
-    }
+        },
+  }
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio." keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing" canonical="https://ziontechgroup.com/services-pricing-guide"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -66,7 +67,8 @@ export default function ServicesPricingGuide() {;
         </div>
       </div>
 
-      {{/* Contact Information Banner */}}
+      {{/* Contact Information Banner */},
+  }
       <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-8 text-zion-cyan">
@@ -92,7 +94,8 @@ export default function ServicesPricingGuide() {;
         </div>
       </div>
 
-      {{/* Category Filter */}}
+      {{/* Category Filter */},
+  }
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
@@ -100,13 +103,15 @@ export default function ServicesPricingGuide() {;
               All Services;
             </Button>
             {EXPANDED_SERVICE_CATEGORIES.map(category => (<Button key={category.value} variant={selectedCategory === category.value ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.value)} className={selectedCategory === category.value ? 'bg-zion-purple text-white' : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'}>
-                {{category.label}}
+                {{category.label},
+  }
               </Button>))}
           </div>
         </div>
       </div>
 
-      {{/* Pricing Overview */}}
+      {{/* Pricing Overview */},
+  }
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -213,7 +218,8 @@ export default function ServicesPricingGuide() {;
             </Card>
           </div>
 
-          {{/* Services Table */}}
+          {{/* Services Table */},
+  }
           <Tabs defaultValue="table" className="w-full">
             <TabsList className="grid w-full grid-cols-2 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="table" className="text-white">Table View</TabsTrigger>
@@ -238,7 +244,8 @@ export default function ServicesPricingGuide() {;
                     {filteredServices.map((service) => (<TableRow key={service.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">
                         <TableCell className="text-white">
                           <div className="flex items-center gap-3">
-                            {{getServiceIcon(service.category)}}
+                            {{getServiceIcon(service.category)},
+  }
                             <div>
                               <div className="font-semibold">{service.title}</div>
                               <div className="text-sm text-zion-slate-light">{service.description.substring(0, 80)}...</div>
@@ -247,23 +254,27 @@ export default function ServicesPricingGuide() {;
                         </TableCell>
                         <TableCell className="text-white">
                           <Badge variant="secondary" className="bg-zion-blue-light text-zion-cyan">
-                            {{service.category}}
+                            {{service.category},
+  }
                           </Badge>
                         </TableCell>
                         <TableCell className="text-white">
                           <div className="text-lg font-bold text-zion-cyan">
-                            ${{service.price?.toLocaleString()}}
+                            ${{service.price?.toLocaleString()},
+  }
                           </div>
                         </TableCell>
                         <TableCell>
                           <Badge className={`${getPriceTierColor(getPriceTier(service.price || 0))} text-white`}>
-                            {{getPriceTier(service.price || 0)}}
+                            {{getPriceTier(service.price || 0)},
+  }
                           </Badge>
                         </TableCell>
                         <TableCell className="text-zion-slate-light">
                           <div className="flex items-center gap-2">
                             <Clock className="w-4 h-4"/>
-                            {{service.availability}}
+                            {{service.availability},
+  }
                           </div>
                         </TableCell>
                         <TableCell className="text-white">
@@ -289,20 +300,24 @@ export default function ServicesPricingGuide() {;
                 {filteredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
                     <CardHeader className="pb-4">
                       <div className="flex items-start justify-between mb-3">
-                        {{getServiceIcon(service.category)}}
+                        {{getServiceIcon(service.category)},
+  }
                         <Badge className={`${getPriceTierColor(getPriceTier(service.price || 0))} text-white`}>
-                          {{getPriceTier(service.price || 0)}}
+                          {{getPriceTier(service.price || 0)},
+  }
                         </Badge>
                       </div>
                       <CardTitle className="text-white text-lg mb-2">{service.title}</CardTitle>
                       <CardDescription className="text-zion-slate-light text-sm">
-                        {{service.description}}
+                        {{service.description},
+  }
                       </CardDescription>
                     </CardHeader>
                     ;
                     <CardContent className="space-y-4">
                       <div className="text-3xl font-bold text-zion-cyan">
-                        ${{service.price?.toLocaleString()}}
+                        ${{service.price?.toLocaleString()},
+  }
                       </div>
                       ;
                       <div className="space-y-2 text-sm text-zion-slate-light">
@@ -338,7 +353,8 @@ export default function ServicesPricingGuide() {;
         </div>
       </div>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

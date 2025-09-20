@@ -1,5 +1,5 @@
 import React from "react";
-export default function TermsOfService() {;
+export default function TermsOfService() {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="prose prose-invert max-w-none">
@@ -74,7 +74,8 @@ export default function TermsOfService() {;
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">Contact Information</h2>
             <p className="text-lg leading-relaxed">
-              If you have any questions about these Terms of Service, please contact us at{{' '}}
+              If you have any questions about these Terms of Service, please contact us at{{' '},
+  }
               <a href="mailto: legal@ziontechgroup.com" className="text-zion-cyan hover:underline">
                 legal@ziontechgroup.com;
               </a>

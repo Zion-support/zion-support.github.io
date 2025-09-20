@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ;
+import {
   Sparkles;
-  ArrowRight, ;
-  CheckCircle, ;
-  TrendingUp, ;
-  Shield, ;
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Shield,
   Zap;
   Phone;
   Mail;
@@ -16,38 +16,38 @@ import { ;
   Clock;
   Users;
   Target;
-  Rocket;
+  Rocket
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { NEW_INNOVATIVE_SERVICES_2025 } from "../data/newInnovativeServices2025";
-export default function NewInnovativeServicesShowcase() {;
-  const serviceCategories = [;
-    {;
-      title: "AI & Legal Tech",description: "Revolutionary legal document automation and compliance solutions",icon: Shield,color: "from-blue-500 to-purple-600";
-    }
-    {;
-      title: "AI & Healthcare",description: "Transformative healthcare analytics and clinical decision support",icon: TrendingUp,color: "from-green-500 to-blue-600";
-    }
-    {;
-      title: "AI & FinTech",description: "Advanced trading platforms with intelligent risk management",icon: DollarSign,color: "from-green-500 to-emerald-600";
-    }
+export default function NewInnovativeServicesShowcase() {
+  const serviceCategories = [
+  {
+  title: "AI & Legal Tech",description: "Revolutionary legal document automation and compliance solutions",icon: Shield,color: "from-blue-500 to-purple-600"
+},
+  {
+  title: "AI & Healthcare",description: "Transformative healthcare analytics and clinical decision support",icon: TrendingUp,color: "from-green-500 to-blue-600"
+},
+  {
+  title: "AI & FinTech",description: "Advanced trading platforms with intelligent risk management",icon: DollarSign,color: "from-green-500 to-emerald-600"
+},
   ]
-  const keyBenefits = [;
-    {;
-      title: "Cutting-Edge AI Technology",description: "Leverage the latest advances in machine learning, natural language processing, and predictive analytics";
-      icon: Sparkles;
-    }
-    {;
-      title: "Industry-Specific Solutions",description: "Tailored solutions designed for specific industry challenges and regulatory requirements",icon: Target;
-    }
-    {;
-      title: "Proven ROI & Results",description: "Measurable improvements in efficiency, accuracy, and cost savings across all services";
-      icon: TrendingUp;
-    }
-    {;
-      title: "Enterprise-Grade Security",description: "SOC 2, ISO 27001, and industry-specific compliance certifications for maximum security";
-      icon: Shield;
-    }
+  const keyBenefits = [
+  {
+  title: "Cutting-Edge AI Technology",description: "Leverage the latest advances in machine learning, natural language processing, and predictive analytics";
+      icon: Sparkles
+},
+  {
+  title: "Industry-Specific Solutions",description: "Tailored solutions designed for specific industry challenges and regulatory requirements",icon: Target
+},
+  {
+  title: "Proven ROI & Results",description: "Measurable improvements in efficiency, accuracy, and cost savings across all services";
+      icon: TrendingUp
+},
+  {
+  title: "Enterprise-Grade Security",description: "SOC 2, ISO 27001, and industry-specific compliance certifications for maximum security";
+      icon: Shield
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -56,14 +56,18 @@ export default function NewInnovativeServicesShowcase() {;
         description="Discover our latest AI-powered innovative services: Legal document automation, healthcare analytics, and financial trading platforms. Transform your business with cutting-edge technology.";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative py-20 sm:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
         <div className="relative container mx-auto px-4 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-purple-500/20 rounded-2xl">
@@ -98,7 +102,8 @@ export default function NewInnovativeServicesShowcase() {;
         </div>
       </section>
 
-      {{/* Service Categories Overview */}}
+      {{/* Service Categories Overview */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -112,12 +117,16 @@ export default function NewInnovativeServicesShowcase() {;
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">
-            {serviceCategories.map((category, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {serviceCategories.map((category, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6`}>
@@ -145,7 +154,8 @@ export default function NewInnovativeServicesShowcase() {;
         </div>
       </section>
 
-      {{/* Key Benefits Section */}}
+      {{/* Key Benefits Section */},
+  }
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -159,12 +169,16 @@ export default function NewInnovativeServicesShowcase() {;
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
-            {keyBenefits.map((benefit, index) => (;
-              <motion.div;
-                key={{index}}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {keyBenefits.map((benefit, index) => (
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: -20 },
+  }
+                animate={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/30 backdrop-blur border border-slate-700/30 rounded-xl p-8";"
               >
                 <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -178,7 +192,8 @@ export default function NewInnovativeServicesShowcase() {;
         </div>
       </section>
 
-      {{/* Detailed Services Section */}}
+      {{/* Detailed Services Section */},
+  }
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -192,12 +207,16 @@ export default function NewInnovativeServicesShowcase() {;
           </div>
 
           <div className="space-y-12">
-            {NEW_INNOVATIVE_SERVICES_2025.map((service, index) => (;
-              <motion.div;
-                key={{service.id}}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+            {NEW_INNOVATIVE_SERVICES_2025.map((service, index) => (
+  <motion.div;
+                key={{service.id},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                 className="className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-2xl p-8";"
               >
                 <div className="grid gap-8 lg:grid-cols-2">
@@ -218,7 +237,9 @@ export default function NewInnovativeServicesShowcase() {;
                       <div className="bg-slate-700/30 rounded-lg p-4">
                         <div className="text-sm text-slate-400 mb-1">Starting Price</div>
                         <div className="text-2xl font-bold text-green-400">
-                          {service.currency}{{service.price.toLocaleString()}}
+                          {service.currency},
+  {{service.price.toLocaleString()},
+  }
                           <span className="text-sm text-slate-400">/month</span>
                         </div>
                       </div>
@@ -249,8 +270,8 @@ export default function NewInnovativeServicesShowcase() {;
                   <div>
                     <h4 className="font-semibold text-lg mb-4 text-purple-400">Key Features</h4>
                     <div className="space-y-3 mb-6">
-                      {service.features.slice(0, 6).map((feature, featureIndex) => (;
-                        <div key={featureIndex} className="flex items-start">
+                      {service.features.slice(0, 6).map((feature, featureIndex) => (
+  <div key={featureIndex} className="flex items-start">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-slate-300">{feature}</span>
                         </div>
@@ -259,12 +280,14 @@ export default function NewInnovativeServicesShowcase() {;
 
                     <h4 className="font-semibold text-lg mb-4 text-purple-400">Target Audience</h4>
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {service.targetAudience.slice(0, 4).map((audience, audienceIndex) => (;
-                        <span;
-                          key={{audienceIndex}}
+                      {service.targetAudience.slice(0, 4).map((audience, audienceIndex) => (
+  <span;
+                          key={{audienceIndex},
+  }
                           className="className="px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full";"
                         >
-                          {{audience}}
+                          {{audience},
+  }
                         </span>
                       ))}
                     </div>
@@ -291,13 +314,17 @@ export default function NewInnovativeServicesShowcase() {;
         </div>
       </section>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="max-w-4xl mx-auto";"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">

@@ -7,28 +7,30 @@ import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
 import { ArrowRight, Star } from "lucide-react";
 import { FuturisticCard } from "@/components/ui/futuristic-card";
 import { NeonText } from "@/components/ui/neon-text";
-export function ServicesShowcase() {;
-    const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6)
-    const emergingServices = [;
-        {;
-            title: "AI Workflow Orchestrator",description: "Intelligent process automation with AI-driven optimization",category: "AI & Automation",price: "$99/month",icon: "🤖",link: "/services/ai-workflow-orchestrator";
-        }
-        {;
-            title: "AI Data Governance Platform",description: "Enterprise data protection and compliance automation",category: "Data & Security",price: "$149/month",icon: "🛡️",link: "/services/ai-data-governance-platform";
-        }
-        {;
-            title: "AI Customer Experience Analytics",description: "Intelligent analytics and insights for data-driven decisions",category: "Analytics",price: "$99/month",icon: "📊",link: "/services/ai-customer-experience-analytics";
-        }
-        {;
-            title: "Cloud DevOps Platform",description: "Streamlined cloud infrastructure and deployment automation",category: "Cloud & DevOps",price: "$299/month",icon: "☁️",link: "/services/cloud-devops";
-        }
-    ]
+export function ServicesShowcase() {
+  const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6)
+    const emergingServices = [
+  {
+  title: "AI Workflow Orchestrator",description: "Intelligent process automation with AI-driven optimization",category: "AI & Automation",price: "$99/month",icon: "🤖",link: "/services/ai-workflow-orchestrator"
+},
+  {
+  title: "AI Data Governance Platform",description: "Enterprise data protection and compliance automation",category: "Data & Security",price: "$149/month",icon: "🛡️",link: "/services/ai-data-governance-platform"
+},
+  {
+  title: "AI Customer Experience Analytics",description: "Intelligent analytics and insights for data-driven decisions",category: "Analytics",price: "$99/month",icon: "📊",link: "/services/ai-customer-experience-analytics"
+},
+  {
+  title: "Cloud DevOps Platform",description: "Streamlined cloud infrastructure and deployment automation",category: "Cloud & DevOps",price: "$299/month",icon: "☁️",link: "/services/cloud-devops"
+},
+  ]
     return (<section className="py-20 relative">
-      {{/* Background accent */}}
+      {{/* Background accent */},
+  }
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>
       ;
       <div className="container mx-auto px-4 relative z-10">
-        {{/* Header */}}
+        {{/* Header */},
+  }
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight mb-4">
             <NeonText color="#00ffff" glowIntensity="high">
@@ -40,44 +42,54 @@ export function ServicesShowcase() {;
           </p>
         </div>
 
-        {{/* Featured Services Grid */}}
+        {{/* Featured Services Grid */},
+  }
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {featuredServices.map((service, index) => (<FuturisticCard key={index} glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-105 transition-transform duration-300">
               <CardHeader className="pb-4">
                 <div className="flex justify-between items-start mb-4">
                   <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">
-                    {{service.icon}}
+                    {{service.icon},
+  }
                   </div>
                   <Badge variant="secondary" className="bg-primary/20 text-primary">
-                    {{service.badge}}
+                    {{service.badge},
+  }
                   </Badge>
                 </div>
                 <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
-                  {{service.title}}
+                  {{service.title},
+  }
                 </CardTitle>
                 <CardDescription className="text-base">
-                  {{service.description}}
+                  {{service.description},
+  }
                 </CardDescription>
               </CardHeader>
 
               <CardContent className="pt-0">
-                {{/* Pricing */}}
+                {{/* Pricing */},
+  }
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-zion-purple">
-                    ${{service.price?.toLocaleString()}}
+                    ${{service.price?.toLocaleString()},
+  }
                   </div>
                 </div>
 
-                {{/* Tags */}}
+                {{/* Tags */},
+  }
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
                     {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs">
-                        {{tag}}
+                        {{tag},
+  }
                       </Badge>))}
                   </div>
                 </div>
 
-                {{/* Rating */}}
+                {{/* Rating */},
+  }
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center gap-1">
                     <Star className="w-4 h-4 text-yellow-500 fill-current"/>
@@ -86,7 +98,8 @@ export function ServicesShowcase() {;
                   </div>
                 </div>
 
-                {{/* Actions */}}
+                {{/* Actions */},
+  }
                 <div className="space-y-2">
                   <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
                     Get Started;
@@ -103,7 +116,8 @@ export function ServicesShowcase() {;
           ))}
         </div>
 
-        {{/* Emerging Technologies */}}
+        {{/* Emerging Technologies */},
+  }
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-4">
             <NeonText color="#ff00ff" glowIntensity="medium">
@@ -120,25 +134,30 @@ export function ServicesShowcase() {;
               <CardHeader className="pb-3">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 rounded-lg bg-black/20">
-                    {{service.icon}}
+                    {{service.icon},
+  }
                   </div>
                 </div>
                 <CardTitle className="text-lg text-center group-hover:text-primary transition-colors">
-                  {{service.title}}
+                  {{service.title},
+  }
                 </CardTitle>
               </CardHeader>
               ;
               <CardContent className="text-center space-y-3">
                 <CardDescription className="text-sm">
-                  {{service.description}}
+                  {{service.description},
+  }
                 </CardDescription>
                 <div className="flex items-center justify-center">
                   <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded">
-                    {{service.category}}
+                    {{service.category},
+  }
                   </span>
                 </div>
                 <div className="text-lg font-bold text-primary">
-                  {{service.price}}
+                  {{service.price},
+  }
                 </div>
                 <Button asChild size="sm" className="w-full">
                   <Link to={service.link}>
@@ -149,7 +168,8 @@ export function ServicesShowcase() {;
             </Card>))}
         </div>
 
-        {{/* CTA Section */}}
+        {{/* CTA Section */},
+  }
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 rounded-2xl p-8 border border-zion-purple/20">
             <h3 className="text-2xl font-bold mb-4">

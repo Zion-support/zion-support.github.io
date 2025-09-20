@@ -5,50 +5,50 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from "lucide-react";
 import SEO from "@/components/SEO";
-const pricingTiers = [;
-    {;
-        name: "Starter",description: "Perfect for small businesses and startups",price: "From $500",priceRange: "500 - 1,999";
-        features: [;
-            "Basic AI Integration";
+const pricingTiers = [
+  {
+  name: "Starter",description: "Perfect for small businesses and startups",price: "From $500",priceRange: "500 - 1,999";
+        features: [
+  "Basic AI Integration";
             "Standard Security";
             "Email Support";
             "Basic Analytics";
             "5 User Licenses";
-            "Standard Templates";
-        ]
-        notIncluded: [;
-            "Advanced Customization";
+            "Standard Templates"
+]
+        notIncluded: [
+  "Advanced Customization";
             "Priority Support";
             "Custom Integrations";
-            "Advanced Analytics";
-        ]
-        color: "from-emerald-500 to-green-600",popular: false;
-    }
-    {;
-        name: "Professional",description: "Ideal for growing businesses and teams",price: "From $2,000";
+            "Advanced Analytics"
+]
+        color: "from-emerald-500 to-green-600",popular: false
+},
+  {
+  name: "Professional",description: "Ideal for growing businesses and teams",price: "From $2,000";
         priceRange: "2,000 - 4,999";
-        features: [;
-            "Advanced AI Features";
+        features: [
+  "Advanced AI Features";
             "Enhanced Security";
             "Priority Support";
             "Advanced Analytics";
             "Unlimited Users";
             "Custom Templates";
             "API Access";
-            "Integration Support";
-        ]
-        notIncluded: [;
-            "Enterprise Security";
+            "Integration Support"
+]
+        notIncluded: [
+  "Enterprise Security";
             "Custom Development";
-            "Dedicated Account Manager";
-        ]
-        color: "from-blue-500 to-indigo-600",popular: true;
-    }
-    {;
-        name: "Enterprise",description: "For large organizations with complex needs",price: "From $5,000";
+            "Dedicated Account Manager"
+]
+        color: "from-blue-500 to-indigo-600",popular: true
+},
+  {
+  name: "Enterprise",description: "For large organizations with complex needs",price: "From $5,000";
         priceRange: "5,000 - 15,000";
-        features: [;
-            "Full AI Suite";
+        features: [
+  "Full AI Suite";
             "Enterprise Security";
             "24/7 Premium Support";
             "Custom Analytics";
@@ -57,71 +57,88 @@ const pricingTiers = [;
             "Dedicated Account Manager";
             "SLA Guarantees";
             "Custom Integrations";
-            "Training & Onboarding";
-        ]
-        notIncluded: [],color: "from-purple-500 to-indigo-600",popular: false;
-    }
+            "Training & Onboarding"
 ]
-const serviceCategories = [;
-    {;
-        name: "AI Services",icon: <Zap className="w-6 h-6"/>,services: [;
-            {{ name: "AI Chatbot Platform", starter: 899, professional: 2999, enterprise: 5999 }}
-            {{ name: "Content Generation Suite", starter: 499, professional: 899, enterprise: 1999 }}
-            {{ name: "Data Analytics Platform", starter: 999, professional: 1999, enterprise: 4999 }}
-            {{ name: "Computer Vision API", starter: 799, professional: 1499, enterprise: 3999 }}
-        ]
-    }
-    {;
-        name: "IT Services",icon: <Shield className="w-6 h-6"/>,services: [;
-            {{ name: "Cloud Migration", starter: 1999, professional: 4999, enterprise: 9999 }}
-            {{ name: "Cybersecurity Audit", starter: 1499, professional: 3999, enterprise: 7999 }}
-            {{ name: "DevOps Automation", starter: 999, professional: 3499, enterprise: 6999 }}
-            {{ name: "Infrastructure Setup", starter: 1299, professional: 2999, enterprise: 5999 }}
-        ]
-    }
-    {;
-        name: "Business Solutions",icon: <TrendingUp className="w-6 h-6"/>,services: [;
-            {{ name: "Workflow Automation", starter: 799, professional: 2499, enterprise: 4999 }}
-            {{ name: "Customer Support System", starter: 599, professional: 1799, enterprise: 3999 }}
-            {{ name: "Project Management", starter: 699, professional: 1999, enterprise: 4499 }}
-            {{ name: "HR Management Suite", starter: 899, professional: 2499, enterprise: 5499 }}
-        ]
-    }
-    {;
-        name: "Digital Solutions",icon: <Globe className="w-6 h-6"/>,services: [;
-            {{ name: "E-commerce Optimization", starter: 1499, professional: 3999, enterprise: 7999 }}
-            {{ name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 }}
-            {{ name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 }}
-            {{ name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 }}
-        ]
-    }
-]
-const benefits = [;
-    {;
-        icon: <CheckCircle className="w-8 h-8"/>,title: "Scalable Solutions",description: "Start with what you need and scale up as your business grows";
-    }
-    {;
-        icon: <Shield className="w-8 h-8"/>,title: "Enterprise Security",description: "Bank-level security and compliance for all our solutions";
-    }
-    {;
-        icon: <Clock className="w-8 h-8"/>,title: "Rapid Deployment",description: "Get up and running in days, not months";
-    }
-    {;
-        icon: <Users className="w-8 h-8"/>,title: "Expert Support",description: "24/7 technical support and dedicated account management";
-    }
-    {;
-        icon: <TrendingUp className="w-8 h-8"/>,title: "Proven ROI",description: "Track record of delivering measurable business outcomes";
-    }
-    {;
-        icon: <BarChart3 className="w-8 h-8"/>,title: "Continuous Innovation",description: "Regular updates and new features to keep you ahead";
-    }
-]
-export default function ServicesPricing() {;
-    const [selectedTier, setSelectedTier] = useState('professional')
+        notIncluded: [],color: "from-purple-500 to-indigo-600",popular: false
+},
+  ]
+const serviceCategories = [
+  {
+  name: "AI Services",icon: <Zap className="w-6 h-6"/>,services: [
+  {{ name: "AI Chatbot Platform", starter: 899, professional: 2999, enterprise: 5999 },
+  },
+  {{ name: "Content Generation Suite", starter: 499, professional: 899, enterprise: 1999 },
+  },
+  {{ name: "Data Analytics Platform", starter: 999, professional: 1999, enterprise: 4999 },
+  },
+  {{ name: "Computer Vision API", starter: 799, professional: 1499, enterprise: 3999 },
+  },
+  ],
+  },
+  {
+  name: "IT Services",icon: <Shield className="w-6 h-6"/>,services: [
+  {{ name: "Cloud Migration", starter: 1999, professional: 4999, enterprise: 9999 },
+  },
+  {{ name: "Cybersecurity Audit", starter: 1499, professional: 3999, enterprise: 7999 },
+  },
+  {{ name: "DevOps Automation", starter: 999, professional: 3499, enterprise: 6999 },
+  },
+  {{ name: "Infrastructure Setup", starter: 1299, professional: 2999, enterprise: 5999 },
+  },
+  ],
+  },
+  {
+  name: "Business Solutions",icon: <TrendingUp className="w-6 h-6"/>,services: [
+  {{ name: "Workflow Automation", starter: 799, professional: 2499, enterprise: 4999 },
+  },
+  {{ name: "Customer Support System", starter: 599, professional: 1799, enterprise: 3999 },
+  },
+  {{ name: "Project Management", starter: 699, professional: 1999, enterprise: 4499 },
+  },
+  {{ name: "HR Management Suite", starter: 899, professional: 2499, enterprise: 5499 },
+  },
+  ],
+  },
+  {
+  name: "Digital Solutions",icon: <Globe className="w-6 h-6"/>,services: [
+  {{ name: "E-commerce Optimization", starter: 1499, professional: 3999, enterprise: 7999 },
+  },
+  {{ name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 },
+  },
+  {{ name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
+  },
+  {{ name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 },
+  },
+  ],
+  },
+  ]
+const benefits = [
+  {
+  icon: <CheckCircle className="w-8 h-8"/>,title: "Scalable Solutions",description: "Start with what you need and scale up as your business grows"
+},
+  {
+  icon: <Shield className="w-8 h-8"/>,title: "Enterprise Security",description: "Bank-level security and compliance for all our solutions"
+},
+  {
+  icon: <Clock className="w-8 h-8"/>,title: "Rapid Deployment",description: "Get up and running in days, not months"
+},
+  {
+  icon: <Users className="w-8 h-8"/>,title: "Expert Support",description: "24/7 technical support and dedicated account management"
+},
+  {
+  icon: <TrendingUp className="w-8 h-8"/>,title: "Proven ROI",description: "Track record of delivering measurable business outcomes"
+},
+  {
+  icon: <BarChart3 className="w-8 h-8"/>,title: "Continuous Innovation",description: "Regular updates and new features to keep you ahead"
+},
+  ]
+export default function ServicesPricing() {
+  const [selectedTier, setSelectedTier] = useState('professional')
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="Micro SAAS Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS services. Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget." keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing" url="https://ziontechgroup.com/services-pricing"/>
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -144,7 +161,8 @@ export default function ServicesPricing() {;
         </div>
       </div>
 
-      {{/* Contact Info Banner */}}
+      {{/* Contact Info Banner */},
+  }
       <div className="bg-zion-blue-dark py-4 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-6 text-zion-cyan text-sm">
@@ -170,7 +188,8 @@ export default function ServicesPricing() {;
         </div>
       </div>
 
-      {{/* Pricing Tiers */}}
+      {{/* Pricing Tiers */},
+  }
       <div className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -193,7 +212,8 @@ export default function ServicesPricing() {;
                 <CardHeader className="text-center pb-6">
                   <CardTitle className="text-2xl text-white mb-2">{tier.name}</CardTitle>
                   <CardDescription className="text-zion-slate-light mb-4">
-                    {{tier.description}}
+                    {{tier.description},
+  }
                   </CardDescription>
                   <div className="mb-4">
                     <div className="text-3xl font-bold text-white">{tier.price}</div>
@@ -228,7 +248,8 @@ export default function ServicesPricing() {;
         </div>
       </div>
 
-      {{/* Service Category Pricing */}}
+      {{/* Service Category Pricing */},
+  }
       <div className="py-20 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -258,7 +279,8 @@ export default function ServicesPricing() {;
                 {serviceCategories.map((category, index) => (<div key={index} className="bg-zion-blue rounded-lg p-6 border border-zion-blue-light">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="text-zion-cyan">
-                        {{category.icon}}
+                        {{category.icon},
+  }
                       </div>
                       <h3 className="text-xl font-bold text-white">{category.name}</h3>
                     </div>
@@ -269,7 +291,8 @@ export default function ServicesPricing() {;
                           <div className="flex items-center gap-2">
                             <DollarSign className="w-4 h-4 text-zion-cyan"/>
                             <span className="text-white font-semibold">
-                              {{service[selectedTier]?.toLocaleString()}}
+                              {{service[selectedTier]?.toLocaleString()},
+  }
                             </span>
                           </div>
                         </div>))}
@@ -281,7 +304,8 @@ export default function ServicesPricing() {;
         </div>
       </div>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <div className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -296,7 +320,8 @@ export default function ServicesPricing() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light bg-zion-blue-dark">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
-                  {{benefit.icon}}
+                  {{benefit.icon},
+  }
                 </div>
                 <h3 className="text-white font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-zion-slate-light text-sm leading-relaxed">{benefit.description}</p>
@@ -305,7 +330,8 @@ export default function ServicesPricing() {;
         </div>
       </div>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">

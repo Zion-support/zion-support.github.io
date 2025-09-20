@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SEO } from "@/components/SEO";
-import { ;
+import {
   Cpu;
-  Zap, ;
-  Shield, ;
-  Cloud, ;
-  Database, ;
-  Network, ;
+  Zap,
+  Shield,
+  Cloud,
+  Database,
+  Network,
   Code;
   CheckCircle;
   Star;
@@ -28,106 +28,106 @@ import { ;
   Settings;
   Play;
   Pause;
-  RefreshCw;
+  RefreshCw
 } from "lucide-react";
-export default function AIDevOpsAutomationPlatform() {;
-  const features = [;
-    "AI-Powered Code Review & Analysis";
+export default function AIDevOpsAutomationPlatform() {
+  const features = [
+  "AI-Powered Code Review & Analysis";
     "Intelligent CI/CD Pipeline Optimization";
     "Automated Security Vulnerability Detection";
     "Smart Resource Scaling & Management";
     "Predictive Performance Monitoring";
     "Automated Testing & Quality Assurance";
     "Intelligent Deployment Strategies";
-    "Real-time Incident Response & Recovery";
-  ]
+    "Real-time Incident Response & Recovery"
+]
 
-  const benefits = [;
-    "Reduce deployment time by 80% through intelligent automation";
+  const benefits = [
+  "Reduce deployment time by 80% through intelligent automation";
     "Eliminate 95% of human errors in deployment processes";
     "Cut infrastructure costs by 40% with smart resource management";
     "Improve code quality by 60% with AI-powered analysis";
     "Achieve 99.9% uptime with predictive monitoring";
     "Reduce security incidents by 90% with automated scanning";
     "Accelerate time-to-market by 3x";
-    "Enable 24/7 autonomous operations";
-  ]
-  const capabilities = [;
-    {;
-      category: "Code Management",items: [;
-        "AI-powered code review and suggestions";
+    "Enable 24/7 autonomous operations"
+]
+  const capabilities = [
+  {
+  category: "Code Management",items: [
+  "AI-powered code review and suggestions";
         "Automated code quality analysis";
         "Intelligent refactoring recommendations";
         "Security vulnerability scanning";
-        "Performance optimization suggestions";
-      ]
-    }
-    {;
-      category: "Build & Deploy",items: [;
-        "Smart CI/CD pipeline orchestration";
+        "Performance optimization suggestions"
+],
+  },
+  {
+  category: "Build & Deploy",items: [
+  "Smart CI/CD pipeline orchestration";
         "Automated testing and validation";
         "Intelligent deployment strategies";
         "Rollback automation";
-        "Multi-environment management";
-      ]
-    }
-    {;
-      category: "Infrastructure",items: [;
-        "Auto-scaling based on demand";
+        "Multi-environment management"
+],
+  },
+  {
+  category: "Infrastructure",items: [
+  "Auto-scaling based on demand";
         "Cost optimization algorithms";
         "Resource allocation intelligence";
         "Cloud provider optimization";
-        "Disaster recovery automation";
-      ]
-    }
-    {;
-      category: "Monitoring & Operations",items: [;
-        "Predictive performance monitoring";
+        "Disaster recovery automation"
+],
+  },
+  {
+  category: "Monitoring & Operations",items: [
+  "Predictive performance monitoring";
         "Automated incident response";
         "Intelligent alerting systems";
         "Root cause analysis automation";
-        "Performance trend analysis";
-      ]
-    }
+        "Performance trend analysis"
+],
+  },
   ]
 
-  const pricing = [;
-    {;
-      name: "Starter",price: "$29,999";
-      period: "one-time setup",features: [;
-        "Basic AI DevOps automation";
+  const pricing = [
+  {
+  name: "Starter",price: "$29,999";
+      period: "one-time setup",features: [
+  "Basic AI DevOps automation";
         "Up to 10 applications";
         "Standard CI/CD pipelines";
         "Basic monitoring & alerting";
         "Email support";
-        "Cloud deployment";
-      ]
-    }
-    {;
-      name: "Professional",price: "$59,999";
-      period: "one-time setup",features: [;
-        "Advanced AI automation";
+        "Cloud deployment"
+],
+  },
+  {
+  name: "Professional",price: "$59,999";
+      period: "one-time setup",features: [
+  "Advanced AI automation";
         "Up to 50 applications";
         "Custom CI/CD workflows";
         "Advanced monitoring & analytics";
         "Priority support";
         "On-premise deployment option";
-        "Advanced security features";
-      ]
-    }
-    {;
-      name: "Enterprise",price: "$119,999";
-      period: "one-time setup",features: [;
-        "Full AI DevOps platform";
+        "Advanced security features"
+],
+  },
+  {
+  name: "Enterprise",price: "$119,999";
+      period: "one-time setup",features: [
+  "Full AI DevOps platform";
         "Unlimited applications";
         "Custom automation workflows";
         "24/7 dedicated support";
         "Hybrid deployment options";
         "Advanced analytics & reporting";
         "Custom integrations";
-        "White-label solutions";
-      ]
-    }
+        "White-label solutions"
+],
+  },
   ]
 
   return (
@@ -138,14 +138,18 @@ export default function AIDevOpsAutomationPlatform() {;
         keywords="AI DevOps, automation platform, CI/CD, deployment automation, intelligent operations, Zion Tech Group";
       />
 
-      {{/* Hero Section */}}
+      {{/* Hero Section */},
+  }
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
         <div className="relative max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl mb-8 border border-blue-400/30">
@@ -184,14 +188,19 @@ export default function AIDevOpsAutomationPlatform() {;
         </div>
       </section>
 
-      {{/* Features Section */}}
+      {{/* Features Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -203,13 +212,18 @@ export default function AIDevOpsAutomationPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (;
-              <motion.div;
-                key={{feature}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {features.map((feature, index) => (
+  <motion.div;
+                key={{feature},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">
@@ -222,14 +236,19 @@ export default function AIDevOpsAutomationPlatform() {;
         </div>
       </section>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -241,13 +260,18 @@ export default function AIDevOpsAutomationPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (;
-              <motion.div;
-                key={{benefit}}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {benefits.map((benefit, index) => (
+  <motion.div;
+                key={{benefit},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="flex items-start space-x-4";"
               >
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -260,14 +284,19 @@ export default function AIDevOpsAutomationPlatform() {;
         </div>
       </section>
 
-      {{/* Capabilities Section */}}
+      {{/* Capabilities Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -279,29 +308,39 @@ export default function AIDevOpsAutomationPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((category, index) => (;
-              <motion.div;
-                key={{category.category}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            {capabilities.map((category, index) => (
+  <motion.div;
+                key={{category.category},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
                 className="className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300";"
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mr-4 border border-blue-400/30">
-                    {{index === 0 && <Code className="w-6 h-6 text-blue-400" />}}
-                    {{index === 1 && <GitBranch className="w-6 h-6 text-blue-400" />}}
-                    {{index === 2 && <Server className="w-6 h-6 text-blue-400" />}}
-                    {{index === 3 && <Monitor className="w-6 h-6 text-blue-400" />}}
+                    {{index === 0 && <Code className="w-6 h-6 text-blue-400" />},
+  },
+  {{index === 1 && <GitBranch className="w-6 h-6 text-blue-400" />},
+  },
+  {{index === 2 && <Server className="w-6 h-6 text-blue-400" />},
+  },
+  {{index === 3 && <Monitor className="w-6 h-6 text-blue-400" />},
+  }
                   </div>
                   <h3 className="text-2xl font-bold text-white">{category.category}</h3>
                 </div>
                 <ul className="space-y-3">
-                  {category.items.map((item, itemIndex) => (;
-                    <li key={itemIndex} className="flex items-start text-gray-300">
+                  {category.items.map((item, itemIndex) => (
+  <li key={itemIndex} className="flex items-start text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
-                      {{item}}
+                      {{item},
+  }
                     </li>
                   ))}
                 </ul>
@@ -311,14 +350,19 @@ export default function AIDevOpsAutomationPlatform() {;
         </div>
       </section>
 
-      {{/* Pricing Section */}}
+      {{/* Pricing Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -330,21 +374,26 @@ export default function AIDevOpsAutomationPlatform() {;
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (;
-              <motion.div;
-                key={{plan.name}}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${;
-                  plan.name === 'Professional' ;
+            {pricing.map((plan, index) => (
+  <motion.div;
+                key={{plan.name},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                viewport={{ once: true },
+  }
+                className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
+  plan.name === 'Professional' ;
                     ? 'border-blue-400/50 bg-gradient-to-b from-blue-500/10 to-transparent' ;
-                    : 'border-blue-400/20';
-                } hover:border-blue-400/40 transition-all duration-300`}
+                    : 'border-blue-400/20'
+} hover:border-blue-400/40 transition-all duration-300`}
               >
-                {plan.name === 'Professional' && (;
-                  <div className="text-center mb-4">
+                {plan.name === 'Professional' && (
+  <div className="text-center mb-4">
                     <span className="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
                       Most Popular;
                     </span>
@@ -356,10 +405,11 @@ export default function AIDevOpsAutomationPlatform() {;
                   <span className="text-gray-400 ml-2">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                  {plan.features.map((feature, featureIndex) => (
+  <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      {{feature}}
+                      {{feature},
+  }
                     </li>
                   ))}
                 </ul>
@@ -376,14 +426,19 @@ export default function AIDevOpsAutomationPlatform() {;
         </div>
       </section>
 
-      {{/* Contact Section */}}
+      {{/* Contact Section */},
+  }
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
+            viewport={{ once: true },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -396,10 +451,14 @@ export default function AIDevOpsAutomationPlatform() {;
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.5, delay: 0.1 },
+  }
+              viewport={{ once: true },
+  }
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30">
@@ -416,10 +475,14 @@ export default function AIDevOpsAutomationPlatform() {;
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.5, delay: 0.2 },
+  }
+              viewport={{ once: true },
+  }
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30">
@@ -436,10 +499,14 @@ export default function AIDevOpsAutomationPlatform() {;
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              transition={{ duration: 0.5, delay: 0.3 },
+  }
+              viewport={{ once: true },
+  }
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30">

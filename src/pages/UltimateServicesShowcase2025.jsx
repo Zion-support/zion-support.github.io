@@ -8,54 +8,57 @@ const UltimateServicesShowcase2025 = () => {
     const [searchTerm, setSearchTerm] = useState('')
     const [sortBy, setSortBy] = useState('name')
     // Combine all services;
-    const allServices = [;
-        ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
+const allServices = [
+  ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
         ...INNOVATIVE_ENTERPRISE_SOLUTIONS_2025;
-        ...EMERGING_TECHNOLOGY_SOLUTIONS_2025;
-    ]
+        ...EMERGING_TECHNOLOGY_SOLUTIONS_2025
+]
     // Get unique categories;
-    const categories = [['all', ...Array.from(new Set(allServices.map(service => service.category)))];]
+const categories = [['all', ...Array.from(new Set(allServices.map(service => service.category)))],
+  ]
     // Filter and sort services;
-    const filteredServices = allServices;
-        .filter(service => {;
-        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
-        const priceMatch = selectedPriceRange === 'all' ||;
+const filteredServices = allServices;
+        .filter(service => {
+  const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
+const priceMatch = selectedPriceRange === 'all' ||;
             (selectedPriceRange === 'low' && service.price < 5000) ||;
             (selectedPriceRange === 'medium' && service.price >= 5000 && service.price < 15000) ||;
             (selectedPriceRange === 'high' && service.price >= 15000)
         const searchMatch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-        return categoryMatch && priceMatch && searchMatch;
-    })
-        .sort((a, b) => {;
-        switch (sortBy) {;
-            case 'price':;
+        return categoryMatch && priceMatch && searchMatch
+})
+        .sort((a, b) => {
+  switch (sortBy) {
+  case 'price':;
                 return a.price - b.price;
             case 'name':;
                 return a.title.localeCompare(b.title)
             case 'category':;
                 return a.category.localeCompare(b.category)
-            default: return 0;
-        }
-    })
-    const formatPrice = (price) => {;
-        if (if (price >= 1000) {;) {
-            return `$${(price / 1000).toFixed(1)}K`;
-        }
-        return `$${price}`;
-    }
-    const getSupportLevelColor = (level) => {;
-        switch (level) {;
-            case 'enterprise':;
+            default: return 0
+},
+  })
+    const formatPrice = (price) => {
+  if (if (price >= 1000) {
+  ) {
+            return `$${(price / 1000).toFixed(1)}K`
+}
+        return `$${price}`
+}
+    const getSupportLevelColor = (level) => {
+  switch (level) {
+  case 'enterprise':;
                 return 'bg-purple-600';
             case 'premium':;
                 return 'bg-blue-600';
-            default: return 'bg-green-600';
-        }
-    }
+            default: return 'bg-green-600'
+},
+  }
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {{/* Header */}}
+      {{/* Header */},
+  }
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -67,7 +70,8 @@ const UltimateServicesShowcase2025 = () => {
           </p>
         </div>
 
-        {{/* Contact Information */}}
+        {{/* Contact Information */},
+  }
         <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-6 mb-8 border border-blue-500/30">
           <div className="text-center">
             <h2 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h2>
@@ -93,14 +97,16 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
 
-        {{/* Filters and Search */}}
+        {{/* Filters and Search */},
+  }
         <div className="bg-gray-800/50 rounded-xl p-6 mb-8 border border-gray-600/30">
           <div className="grid md:grid-cols-4 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full bg-gray-700 border border-gray-600 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                 {categories.map(category => (<option key={category} value={category}>
-                    {{category === 'all' ? 'All Categories' : category}}
+                    {{category === 'all' ? 'All Categories' : category},
+  }
                   </option>))}
               </select>
             </div>
@@ -128,17 +134,21 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
 
-        {{/* Services Grid */}}
+        {{/* Services Grid */},
+  }
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredServices.map((service) => (<div key={service.id} className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-6 border border-gray-600/30 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105">
-              {{/* Service Header */}}
+              {{/* Service Header */},
+  }
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getSupportLevelColor(service.supportLevel)}`}>
-                    {{service.supportLevel}}
+                    {{service.supportLevel},
+  }
                   </span>
                   <span className="text-2xl font-bold text-cyan-400">
-                    {{formatPrice(service.price)}}
+                    {{formatPrice(service.price)},
+  }
                     <span className="text-sm text-gray-400">/{service.pricingModel}</span>
                   </span>
                 </div>
@@ -146,60 +156,69 @@ const UltimateServicesShowcase2025 = () => {
                 <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {service.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full border border-blue-700/50">
-                      {{tag}}
+                      {{tag},
+  }
                     </span>))}
                 </div>
               </div>
 
-              {{/* Key Features */}}
+              {{/* Key Features */},
+  }
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-blue-300 mb-2">Key Features</h4>
                 <ul className="text-xs text-gray-300 space-y-1">
                   {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="flex items-start">
                       <span className="text-cyan-400 mr-2">•</span>
-                      {{feature}}
+                      {{feature},
+  }
                     </li>))}
                 </ul>
               </div>
 
-              {{/* Benefits */}}
+              {{/* Benefits */},
+  }
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-green-300 mb-2">Key Benefits</h4>
                 <ul className="text-xs text-gray-300 space-y-1">
                   {service.benefits.slice(0, 2).map((benefit, index) => (<li key={index} className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
-                      {{benefit}}
+                      {{benefit},
+  }
                     </li>))}
                 </ul>
               </div>
 
-              {{/* ROI */}}
-              {service.roi && (<div className="mb-4">
+              {{/* ROI */},
+  },
+  {service.roi && (<div className="mb-4">
                   <h4 className="text-sm font-semibold text-yellow-300 mb-2">ROI</h4>
                   <div className="text-xs text-gray-300">
                     <span className="text-yellow-400 mr-2">📈</span>
-                    {{service.roi}}
+                    {{service.roi},
+  }
                   </div>
-                </div>)}
-
-              {{/* Technology */}}
-              {service.technology && (<div className="mb-4">
+                </div>)},
+  {{/* Technology */},
+  },
+  {service.technology && (<div className="mb-4">
                   <h4 className="text-sm font-semibold text-purple-300 mb-2">Technology</h4>
                   <div className="flex flex-wrap gap-1">
                     {service.technology.slice(0, 4).map((tech, index) => (<span key={index} className="px-2 py-1 bg-purple-900/30 text-purple-300 text-xs rounded border border-purple-700/50">
-                        {{tech}}
+                        {{tech},
+  }
                       </span>))}
                   </div>
-                </div>)}
-
-              {{/* Market Price Comparison */}}
+                </div>)},
+  {{/* Market Price Comparison */},
+  }
               <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">
                 <h4 className="text-sm font-semibold text-orange-300 mb-1">Market Price</h4>
                 <p className="text-xs text-gray-300">{service.marketPrice}</p>
                 <p className="text-xs text-cyan-400 mt-1">Our Price: {formatPrice(service.price)}/{service.pricingModel}</p>
               </div>
 
-              {{/* Contact and Action */}}
+              {{/* Contact and Action */},
+  }
               <div className="border-t border-gray-600/30 pt-4">
                 <div className="text-center mb-3">
                   <p className="text-xs text-gray-400 mb-2">Ready to get started?</p>
@@ -216,7 +235,8 @@ const UltimateServicesShowcase2025 = () => {
             </div>))}
         </div>
 
-        {{/* Summary Statistics */}}
+        {{/* Summary Statistics */},
+  }
         <div className="mt-16 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-2xl p-8 border border-blue-500/30">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-6 text-cyan-400">Services Portfolio Summary</h2>
@@ -233,13 +253,15 @@ const UltimateServicesShowcase2025 = () => {
               </div>
               <div>
                 <div className="text-4xl font-bold text-purple-400 mb-2">
-                  {{Array.from(new Set(allServices.map(service => service.category))).length}}
+                  {{Array.from(new Set(allServices.map(service => service.category))).length},
+  }
                 </div>
                 <div className="text-gray-300">Technology Categories</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-orange-400 mb-2">
-                  {{Array.from(new Set(allServices.map(service => service.industryFocus || []).flat())).length}}
+                  {{Array.from(new Set(allServices.map(service => service.industryFocus || []).flat())).length},
+  }
                 </div>
                 <div className="text-gray-300">Industry Focus</div>
               </div>
@@ -247,7 +269,8 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
 
-        {{/* Call to Action */}}
+        {{/* Call to Action */},
+  }
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-2xl p-8 border border-cyan-500/30">
             <h2 className="text-3xl font-bold mb-4 text-cyan-400">Ready to Transform Your Business?</h2>

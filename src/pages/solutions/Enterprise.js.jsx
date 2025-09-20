@@ -2,57 +2,62 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, Shield, Globe, Zap, Users, BarChart3, Lock } from "lucide-react";
 const EnterpriseSolutions = () => {
-    const solutions = [;
-        {;
-            title: 'AI-Powered Business Intelligence',description: 'Transform your data into actionable insights with our advanced AI analytics platform.',features: [;
-                'Real-time data processingPredictive analytics';
+    const solutions = [
+  {
+  title: 'AI-Powered Business Intelligence',description: 'Transform your data into actionable insights with our advanced AI analytics platform.',features: [
+  'Real-time data processingPredictive analytics';
                 'Custom dashboardsAutomated reporting';
-                'Multi-source integration';
-            ]
-            icon: BarChart3,href: '/services/ai-autonomous-systems';
-        }
-        {;
-            title: 'Enterprise Cybersecurity Suite',description: 'Comprehensive security solutions designed for large organizations.',features: [;
-                'Threat detection & responseCompliance management';
+                'Multi-source integration'
+]
+            icon: BarChart3,href: '/services/ai-autonomous-systems'
+},
+  {
+  title: 'Enterprise Cybersecurity Suite',description: 'Comprehensive security solutions designed for large organizations.',features: [
+  'Threat detection & responseCompliance management';
                 'Identity & access controlSecurity monitoring';
-                'Incident response';
-            ]
-            icon: Shield,href: '/services/cybersecurity';
-        }
-        {;
-            title: 'Cloud Infrastructure Management',description: 'Scalable cloud solutions optimized for enterprise workloads.',features: [;
-                'Multi-cloud strategyCost optimization';
+                'Incident response'
+]
+            icon: Shield,href: '/services/cybersecurity'
+},
+  {
+  title: 'Cloud Infrastructure Management',description: 'Scalable cloud solutions optimized for enterprise workloads.',features: [
+  'Multi-cloud strategyCost optimization';
                 'Performance monitoringDisaster recovery';
-                'Security compliance';
-            ]
-            icon: Globe,href: '/services/it-infrastructure';
-        }
-        {;
-            title: 'AI Process Automation',description: 'Streamline operations with intelligent automation across all departments.',features: [;
-                'Workflow automationDocument processing';
+                'Security compliance'
+]
+            icon: Globe,href: '/services/it-infrastructure'
+},
+  {
+  title: 'AI Process Automation',description: 'Streamline operations with intelligent automation across all departments.',features: [
+  'Workflow automationDocument processing';
                 'Customer service botsSupply chain optimization';
-                'Quality control';
-            ]
-            icon: Zap,href: '/services/ai-autonomous-systems';
-        }
-    ]
-    const industries = [;
-        {;
-            name: 'Healthcare',description: 'AI-powered healthcare solutions for hospitals and medical facilities.',icon: Users,solutions: [['Patient care automationMedical imaging AI', 'Drug discoveryCompliance management'];]
-        }
-        {;
-            name: 'Financial Services',description: 'Secure, compliant solutions for banks and financial institutions.';
-            icon: Lock,solutions: [['Fraud detectionRisk assessment', 'Compliance automationCustomer analytics'];]
-        }
-        {;
-            name: 'Manufacturing',description: 'Smart manufacturing solutions for Industry 4.0 transformation.',icon: Building2,solutions: [['Predictive maintenanceQuality control', 'Supply chain optimizationEnergy management'];]
-        }
-        {;
-            name: 'Retail',description: 'Omnichannel retail solutions for modern commerce.',icon: Globe,solutions: [['Customer personalizationInventory management', 'Demand forecastingE-commerce optimization'];]
-        }
-    ]
+                'Quality control'
+]
+            icon: Zap,href: '/services/ai-autonomous-systems'
+},
+  ]
+    const industries = [
+  {
+  name: 'Healthcare',description: 'AI-powered healthcare solutions for hospitals and medical facilities.',icon: Users,solutions: [['Patient care automationMedical imaging AI', 'Drug discoveryCompliance management'],
+  ],
+  },
+  {
+  name: 'Financial Services',description: 'Secure, compliant solutions for banks and financial institutions.';
+            icon: Lock,solutions: [['Fraud detectionRisk assessment', 'Compliance automationCustomer analytics'],
+  ],
+  },
+  {
+  name: 'Manufacturing',description: 'Smart manufacturing solutions for Industry 4.0 transformation.',icon: Building2,solutions: [['Predictive maintenanceQuality control', 'Supply chain optimizationEnergy management'],
+  ],
+  },
+  {
+  name: 'Retail',description: 'Omnichannel retail solutions for modern commerce.',icon: Globe,solutions: [['Customer personalizationInventory management', 'Demand forecastingE-commerce optimization'],
+  ],
+  },
+  ]
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {{/* Header Section */}}
+      {{/* Header Section */},
+  }
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
@@ -73,7 +78,8 @@ const EnterpriseSolutions = () => {
         </div>
       </div>
 
-      {{/* Core Solutions */}}
+      {{/* Core Solutions */},
+  }
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -81,8 +87,8 @@ const EnterpriseSolutions = () => {
           </h2>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => {;
-            const Icon = solution.icon;
+            {solutions.map((solution, index) => {
+  const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -112,7 +118,8 @@ const EnterpriseSolutions = () => {
         </div>
       </div>
 
-      {{/* Industry Solutions */}}
+      {{/* Industry Solutions */},
+  }
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -120,8 +127,8 @@ const EnterpriseSolutions = () => {
           </h2>
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => {;
-            const Icon = industry.icon;
+            {industries.map((industry, index) => {
+  const Icon = industry.icon;
             return (<div key={index} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -143,7 +150,8 @@ const EnterpriseSolutions = () => {
         </div>
       </div>
 
-      {{/* Benefits Section */}}
+      {{/* Benefits Section */},
+  }
       <div className="px-4 sm: px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -151,19 +159,19 @@ const EnterpriseSolutions = () => {
           </h2>
           ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[;
-            {;
-                title: 'Scalable Architecture',description: 'Our solutions grow with your business, from startup to enterprise.';
-                icon: Building2;
-            }
-            {;
-                title: 'Security First',description: 'Enterprise-grade security with compliance certifications.',icon: Shield;
-            }
-            {;
-                title: '24/7 Support',description: 'Round-the-clock support with dedicated account managers.',icon: Users;
-            }
-        ].map((benefit, index) => {;
-            const Icon = benefit.icon;
+            {[
+  {
+  title: 'Scalable Architecture',description: 'Our solutions grow with your business, from startup to enterprise.';
+                icon: Building2
+},
+  {
+  title: 'Security First',description: 'Enterprise-grade security with compliance certifications.',icon: Shield
+},
+  {
+  title: '24/7 Support',description: 'Round-the-clock support with dedicated account managers.',icon: Users
+},
+  ].map((benefit, index) => {
+  const Icon = benefit.icon;
             return (<div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white"/>
@@ -176,7 +184,8 @@ const EnterpriseSolutions = () => {
         </div>
       </div>
 
-      {{/* CTA Section */}}
+      {{/* CTA Section */},
+  }
       <div className="px-4 sm: px-6 lg:px-8 pb-16">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30">

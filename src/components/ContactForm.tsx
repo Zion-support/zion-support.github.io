@@ -18,7 +18,6 @@ const ContactForm: React.FC = () => {
     message: '',
     budget: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 

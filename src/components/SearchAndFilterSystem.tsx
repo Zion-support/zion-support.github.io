@@ -43,23 +43,23 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   showFilters = true
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set()),
+const [isSearchFocused, setIsSearchFocused] = useState(false);
+const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set()),
   const [showFilterPanel, setShowFilterPanel] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance'),
 
   // Filter options
   const filterOptions = useMemo(() => {
     const categories = data.reduce((acc, item) => {
       acc[item.category] = (acc[item.category] || 0) + 1,
-      return acc;
-    }, {} as Record<string, number>),
+      return acc
+}, {} as Record<string, number>),
 
     const types = data.reduce((acc, item) => {
       acc[item.type] = (acc[item.type] || 0) + 1,
-      return acc;
-    }, {} as Record<string, number>),
+      return acc
+}, {} as Record<string, number>),
 
     return {
       categories: Object.entries(categories).map(([key, count]) => ({
@@ -90,22 +90,22 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           item.type === filter ||
           item.category === filter
         );
-      return matchesSearch && matchesCategory && matchesFilters;
-    }),
+      return matchesSearch && matchesCategory && matchesFilters
+}),
 
     // Sort results
     switch (sortBy) {
       case 'date':
         results = results.sort((a, b) => {
           if (!a.date || !b.date) return 0;
-          return new Date(b.date).getTime() - new Date(a.date).getTime();
-        }),
+          return new Date(b.date).getTime() - new Date(a.date).getTime()
+}),
         break,
       case 'rating':
         results = results.sort((a, b) => {
           if (!a.rating || !b.rating) return 0;
-          return b.rating - a.rating;
-        }),
+          return b.rating - a.rating
+}),
         break,
       case 'name':
         results = results.sort((a, b) => a.title.localeCompare(b.title)),
@@ -115,8 +115,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         break
     }
 
-    return results;
-  }, [data, searchQuery, selectedCategory, activeFilters, sortBy]),
+    return results
+}, [data, searchQuery, selectedCategory, activeFilters, sortBy]),
 
   // Update parent component with results
   useEffect(() => {
@@ -129,17 +129,17 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId)
     } else {
-      newFilters.add(filterId);
-    }
-    setActiveFilters(newFilters);
-  },
+      newFilters.add(filterId)
+}
+    setActiveFilters(newFilters)
+},
 
   // Clear all filters
   const clearAllFilters = () => {
     setActiveFilters(new Set());
     setSelectedCategory('all');
-    setSortBy('relevance');
-  },
+    setSortBy('relevance')
+},
 
   // Get icon for type
   const getTypeIcon = (type: string) => {
@@ -149,15 +149,15 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       case 'team': return <Users className="w-4 h-4" />;
       case 'technology': return <Brain className="w-4 h-4" />;
       default: return <Globe className="w-4 h-4" />
-    }
+    },
   };
   // Get category color
   const getCategoryColor = (category: string) => {
     const colors = {
       'ai': 'text-purple-400cloud': 'text-blue-400security': 'text-red-400development': 'text-green-400consulting': 'text-yellow-400digital-transformation': 'text-cyan-400'
     };
-    return colors[category as keyof typeof colors] || 'text-zinc-400';
-  },
+    return colors[category as keyof typeof colors] || 'text-zinc-400'
+},
 
   return (
     <div className="w-full max-w-6xl mx-auto">
@@ -188,9 +188,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         <AnimatePresence>
           {isSearchFocused && searchQuery && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: -10 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              exit={{ opacity: 0, y: -10 },
+  }
               className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto"
             >
               {filteredResults.slice(0, 5).map((result) => (
@@ -217,8 +220,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         </AnimatePresence>
       </div>
 
-      {/* Filters and Sort */}
-      {showFilters && (
+      {/* Filters and Sort */},
+  {showFilters && (
         <div className="flex flex-wrap items-center gap-4 mb-6">
           {/* Category Filter */}
           <div className="relative">
@@ -270,8 +273,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             )}
           </button>
 
-          {/* Clear Filters */}
-          {activeFilters.size > 0 && (
+          {/* Clear Filters */},
+  {activeFilters.size > 0 && (
             <button
               onClick={clearAllFilters}
               className="px-3 py-2 text-sm text-zinc-400 hover:text-white transition-colors"
@@ -280,16 +283,19 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             </button>
           )}
         </div>
-      )}
-
-      {/* Filter Panel */}
+      )},
+  {/* Filter Panel */}
       <AnimatePresence>
         {showFilterPanel && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            initial={{ height: 0, opacity: 0 },
+  }
+            animate={{ height: 'auto', opacity: 1 },
+  }
+            exit={{ height: 0, opacity: 0 },
+  }
+            transition={{ duration: 0.3, ease: 'easeOut' },
+  }
             className="mb-6 overflow-hidden"
           >
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
@@ -369,8 +375,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         {filteredResults.map((result) => (
           <motion.div
             key={result.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer group"
           >
             <div className="flex items-start gap-4">
@@ -404,8 +412,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                       <MapPin className="w-4 h-4" />
                       {result.location}
                     </div>
-                  )}
-                  {result.date && (
+                  )},
+  {result.date && (
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       {result.date}
@@ -413,8 +421,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                   )}
                   <div className="flex items-center gap-1">
                     <Tag className="w-4 h-4" />
-                    {result.tags.slice(0, 3).join(', ')}
-                    {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
+                    {result.tags.slice(0, 3).join(', ')},
+  {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
                   </div>
                 </div>
               </div>
@@ -423,11 +431,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         ))}
       </div>
 
-      {/* No Results */}
-      {filteredResults.length === 0 && (
+      {/* No Results */},
+  {filteredResults.length === 0 && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 },
+  }
+          animate={{ opacity: 1 },
+  }
           className="text-center py-12"
         >
           <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -444,5 +454,5 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         </motion.div>
       )}
     </div>
-  );
+  )
 };
