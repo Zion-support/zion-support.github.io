@@ -1,4 +1,20 @@
-import React, { useState, useCallback } from 'react';
+#!/usr/bin/env node
+
+/**
+ * Fix Services Component Script
+ * Creates a clean, working version of the Services component
+ */
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+console.log('🔧 Fixing Services Component...');
+
+const cleanServicesComponent = `import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -294,9 +310,9 @@ export default function Services() {
                     <button
                       key={category.id}
                       onClick={() => handleCategoryChange(category.id)}
-                      className={`flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all ${activeCategory === category.id 
+                      className={\`flex items-center gap-2 px-4 py-2 rounded-full border-2 transition-all \${activeCategory === category.id 
                         ? 'border-blue-500 bg-blue-50 text-blue-700' 
-                        : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}
+                        : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'\`}
                     >
                       <span className="text-lg">{category.icon}</span>
                       <span className="font-medium">{category.name}</span>
@@ -354,7 +370,7 @@ export default function Services() {
                             {[...Array(5)].map((_, i) => (
                               <Star
                                 key={i}
-                                className={`h-4 w-4 ${i < (service.rating || 0) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
+                                className={\`h-4 w-4 \${i < (service.rating || 0) ? 'text-yellow-400 fill-current' : 'text-gray-300'\`}
                               />
                             ))}
                           </div>
@@ -362,7 +378,7 @@ export default function Services() {
                         </div>
                         {service.price && (
                           <div className="text-lg font-bold text-blue-600">
-                            ${service.price.toLocaleString()}
+                            \${service.price.toLocaleString()}
                           </div>
                         )}
                       </div>
@@ -372,7 +388,7 @@ export default function Services() {
                           {service.category}
                         </span>
                         <Link
-                          to={`/services/${service.id}`}
+                          to={\`/services/\${service.id}\`}
                           className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
                         >
                           Learn More
@@ -400,9 +416,9 @@ export default function Services() {
                   <button
                     key={i}
                     onClick={() => handlePageChange(i + 1)}
-                    className={`px-4 py-2 rounded-lg transition-colors ${currentPage === i + 1 
+                    className={\`px-4 py-2 rounded-lg transition-colors \${currentPage === i + 1 
                       ? 'bg-blue-600 text-white' 
-                      : 'border border-gray-300 hover:bg-gray-50'}`}
+                      : 'border border-gray-300 hover:bg-gray-50'\`}
                   >
                     {i + 1}
                   </button>
@@ -423,3 +439,10 @@ export default function Services() {
     </>
   );
 }
+`;
+
+const servicesPath = path.join(process.cwd(), 'src/pages/Services.tsx');
+fs.writeFileSync(servicesPath, cleanServicesComponent);
+console.log('✅ Fixed Services.tsx component');
+
+console.log('🎉 Services component fix completed!');

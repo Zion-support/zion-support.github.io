@@ -1,197 +1,118 @@
-import React, { useState } from "react"
-import { GradientHeading     } from "@/components/GradientHeading";
-import { Button     } from "@/components/ui/button";
-import { Input     } from "@/components/ui/Input";
-import { useNavigate     } from "react-router-dom";
-import { motion     } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin, ArrowRight     } from "lucide-react";
-export function ITServiceRequestHero() {
-    const [location, setLocation] = useState("")
-const [isSubmitting, setIsSubmitting] = useState(false)
-const navigate = useNavigate()
-const handleSubmit = async (e) () => {
-        e.preventDefault()
-        if (location.trim()) {
-            setIsSubmitting(true)
-            // Simulate API call;
-            setTimeout(() () => {
-                setIsSubmitting(false)
-                navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`)
-}, 1000)
-},
-  }
-const containerVariants = {
-        hidd,
-  e: n: { opacit,
-  y: 0, y: 20 }
-        visib,
-  l: e: {
-            opacit,
-  y: 1,y: 0,transiti,
-  o: n: {
-                duratio,
-  n: 0.6,staggerChildr,
-  e: n: 0.2;
-            },
-  },
-  }
-const itemVariants = {
-        hidd,
-  e: n: { opacit,
-  y: 0, y: 20 }
-        visib,
-  l: e: {
-            opacit,
-  y: 1,y: 0,transiti,
-  o: n: { duratio,
-  n: 0.5 },
-  },
-  }
-const features = [
-        { ic,
-  o: n: Clock, te,
-  x: t: "24/7 Availability", col,
-  o: r: "text-zion-cyan" }, { ic,
-  o: n: Globe, te,
-  x: t: "Global Coverage", col,
-  o: r: "text-zion-purple" }, { ic,
-  o: n: Shield, te,
-  x: t: "Certified Technicians", col,
-  o: r: "text-zion-cyan-light" }, { ic,
-  o: n: Zap, te,
-  x: t: "Fast Response", col,
-  o: r: "text-zion-purple-light" },
-  ]
-    return (<section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20,
-  m: d:py-28 border-b border-zion-purple/20 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
-      </div>
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { MapPin, Search, ArrowRight, Clock, Users, Shield } from 'lucide-react';
 
-      <motion.div className="container mx-auto px-4 relative z-10" variants={containerVariants} initial="hidden" whileInView="visible" viewport={ on,
-  c: e: true },
-  }>
-        <div className="grid grid-cols-1,
-  l: g:grid-cols-2 gap-16 items-center">
-          {/* Left content */}
-          <motion.div variants={itemVariants} className="text-white">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-zion-cyan/20 rounded-lg">
-                <Zap className="w-6 h-6 text-zion-cyan"/>
-              </div>
-              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
-                Global IT Services;
-              </span>
-            </div>
-            
-            <GradientHeading className="mb-6 text-4xl,
-  m: d: text-5xl,
-  l: g:text-6xl leading-tight">
-              24x7 Global IT Onsite Services;
-            </GradientHeading>
-            
-            <p className="text-lg m,
-  d:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
-              Request professional technicians anywhere in the world, anytime you need them. 
-              Fast, reliable, and secure IT solutions for your business.
-            </p>
+const ITServiceRequestHero = () => {
+  const [location, setLocation] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-            {/* Feature highlights */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                <span className="text-zion-cyan-light">Available 24/7 worldwide</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-zion-purple rounded-full"></div>
-                <span className="text-zion-purple-light">Certified technicians</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-zion-blue rounded-full"></div>
-                <span className="text-zion-blue-light">Same-day response guarantee</span>
-              </div>
-            </div>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (location.trim()) {
+      setIsSubmitting(true);
+      // Simulate API call
+      setTimeout(() => {
+        setIsSubmitting(false);
+        // Handle navigation or success
+      }, 2000);
+    }
+  };
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-cyan">150+</div>
-                <div className="text-sm text-zion-slate-light">Countries</div>
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <div className="absolute inset-0 bg-black/20"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
+          >
+            Request IT Services
+          </motion.h1>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto"
+          >
+            Get expert IT support and solutions tailored to your business needs
+          </motion.p>
+
+          {/* Search Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="max-w-2xl mx-auto mb-12"
+          >
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
+              <div className="relative flex-1">
+                <MapPin className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                  placeholder="Enter your location or service needed"
+                  className="w-full pl-12 pr-4 py-4 rounded-xl border-0 focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-500"
+                />
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-purple">24/7</div>
-                <div className="text-sm text-zion-slate-light">Support</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-blue">15min</div>
-                <div className="text-sm text-zion-slate-light">Response</div>
-              </div>
-            </div>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    Searching...
+                  </>
+                ) : (
+                  <>
+                    <Search className="w-5 h-5" />
+                    Find Services
+                  </>
+                )}
+              </button>
+            </form>
           </motion.div>
 
-          {/* Right form */}
-          <motion.div variants={itemVariants} className="relative">
-            <div className="relative">
-              {/* Glassmorphism form container */}
-              <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-8 shadow-2xl">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-8 h-8 text-zion-cyan"/>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Request Service</h3>
-                  <p className="text-zion-slate-light">Enter your location to get started</p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="relative">
-                    <Input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Enter service location (e.g., New York, NY)" className="w-full bg-white/10 border-white/30,
-  focu: s: border-zion-cyan,
-  focu: s:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm" required/>
-                    <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/50"/>
-                  </div>
-
-                  <Button type="submit" className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue,
-  hove: r:from-zion-cyan-light,
-  hove: r:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg,
-  hove: r:shadow-zion-cyan/25 transition-all duration-300,
-  transform: hover:scale-105 group">
-                    <span className="flex items-center gap-2">
-                      Request Service Now;
-                      <ArrowRight className="w-5 h-5 group-hove,
-  r:translate-x-1 transition-transform duration-200"/>
-                    </span>
-                  </Button>
-                </form>
-
-                {/* Trust indicators */}
-                <div className="mt-6 pt-6 border-t border-white/10">
-                  <div className="flex items-center justify-center gap-4 text-xs text-zion-slate-light">
-                    <div className="flex items-center gap-1">
-                      <Shield className="w-3 h-3 text-zion-cyan"/>
-                      <span>Secure</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-zion-purple"/>
-                      <span>Fast</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Globe className="w-3 h-3 text-zion-blue"/>
-                      <span>Global</span>
-                    </div>
-                  </div>
-                </div>
+          {/* Features */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+          >
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-6 h-6 text-white" />
               </div>
-
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-zion-cyan/30 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-zion-purple/30 rounded-full animate-pulse" style={ animationDel,
-  a: y: "1s" },
-  }></div>
+              <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
+              <p className="text-blue-200 text-sm">Round-the-clock IT assistance</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Expert Team</h3>
+              <p className="text-blue-200 text-sm">Certified IT professionals</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Secure & Reliable</h3>
+              <p className="text-blue-200 text-sm">Enterprise-grade security</p>
             </div>
           </motion.div>
         </div>
-      </motion.div>
-    </section>)
-}
+      </div>
+    </section>
+  );
+};
+
+export default ITServiceRequestHero;
