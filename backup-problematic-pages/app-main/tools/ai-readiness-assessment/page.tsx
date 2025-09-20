@@ -1,8 +1,10 @@
 import React from 'react'
-const page: React.FC = () => {
+
+export default function Aitransformationroicalculator2025Page() {
   return (
-    <div>
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>)}
-export default page;
+    <div className="min-h-screen bg-gray-900 text-white p-8">
+      <h1 className="text-3xl font-bold mb-4">ai transformation roi calculator 2025</h1>
+      <p className="text-gray-300">Tool description coming soon.</p>
+    </div>
+  )
+}
