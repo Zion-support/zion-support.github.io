@@ -1,7 +1,8 @@
 import globals from 'globals';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-    files: ['**/*.{js,jsx}'],
+
+export default [
+  {
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'App.tsx', 'main.jsx', 'index.html'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -18,9 +19,15 @@ import tsparser from '@typescript-eslint/parser';
         clearTimeout: 'readonly',
         clearInterval: 'readonly'
       },
+      parserOptions: {
+        ecmaFeatures: {
           jsx: true
         }
       }
     },
-    plugins: {
+    rules: {
       'no-unused-vars': 'warn',
+      'no-console': 'warn'
+    }
+  }
+];
