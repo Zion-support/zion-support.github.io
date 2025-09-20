@@ -11,8 +11,8 @@ const API_CACHE = "zion-api-v2.0.0";
 const CACHE_STRATEGIES = {
 STATIC: "cache-first",
 DYNAMIC: "stale-while-revalidate",
-API: "network-first",
-IMAGES: "cache-first",
+API: "network-first",;
+IMAGES: "cache-first",;
 FONTS: "cache-first",;
 };
 
@@ -22,8 +22,8 @@ const STATIC_ASSETS = [
 "/static/js/bundle.js",
 "/static/css/main.css",
 "/manifest.json",
-"/favicon.ico",
-"/logo192.png",
+"/favicon.ico",;
+"/logo192.png",;
 "/logo512.png";
 ];
 
@@ -34,16 +34,16 @@ const DYNAMIC_ROUTES = [
 "/contact",
 "/ai-services",
 "/it-services",
-"/micro-saas",
-"/blog",
+"/micro-saas",;
+"/blog",;
 "/careers";
 ];
 
 // API endpoints to cache;
 const API_ENDPOINTS = [
 "/api/services",
-"/api/contact",
-"/api/blog",
+"/api/contact",;
+"/api/blog",;
 "/api/careers";
 ];
 

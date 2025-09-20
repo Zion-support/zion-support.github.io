@@ -5,9 +5,9 @@ id: string; title: string; description: string; category: string; price: number;
 features: string[], tags: string[];
 images?: string[];
 rating?: number;
-reviewCount?: number;
+reviewCount?: number;,
 availability: "immediate" | "within-week" | "within-month" | "custom";
-deliveryTime?: string;
+deliveryTime?: string;,
 supportLevel: "basic" | "standard" | "premium" | "enterprise";
 compliance?: string[];
 integrations?: string[];

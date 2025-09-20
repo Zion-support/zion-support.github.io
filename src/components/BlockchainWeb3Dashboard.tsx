@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e, useCallback  } from "react, ";
-import { motio; n, AnimatePresence  } from "framer-motion, ";
+import { useStat; e; useCallback } from "react, ";
+import { motio; n; AnimatePresence } from "framer-motion, ";
 import { Walle; t;
 Smartphon; e;
 Coin; s;
@@ -15,7 +15,8 @@ RefreshC; w;
 Loader; 2;
 CheckCircl; e;
 XCircl; e;
-AlertTriangle} from "lucide-react, ";
+AlertTriangle;
+} from "lucide-react, ";
 import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -25,7 +26,8 @@ className?: string;
 export const BlockchainWeb3Dashboar; d: React.FC<BlockchainDashboardProps> = ({ className = "" }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;});
+enableUserBehaviorTrackin; g: true;,
+});
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "wallet" | "contracts" | "nfts" | "defi" | "transactions">("overview");
 const [showMintN;  F; T; setShowMintN; F; T] = useState(false);
 const [showSendTransacti; o; n; setShowSendTransacti; o; n] = useState(false);
@@ -51,12 +53,14 @@ createDeFiPosition;
 const [nftFo; r; m; setNftFo; r; m] = useState({
 nam;  e: "";
 descriptio; n: "";
-imag; e: ""});
+imag; e: "",
+});
 const [transactionFo; r; m; setTransactionFo; r; m] = useState({
 t;  o: "";
 valu; e: "";
-dat; a: ""});
-const handleConnectWallet = useCallback(async () => {
+dat; a: "",
+});
+const handleConnectWallet = useCallback(async () => {;
 try {;
 await connectWallet();
 trackEvent("blockchain",  "dashboard", "wallet_connected");
@@ -66,8 +70,8 @@ trackEvent("blockchain",  "dashboard", "wallet_connected");
 }, [connectWall; e; t; trackEve; n; t]);
 
 const handleMintNFT = useCallback(async () => {
-if (nftForm.name.trim() && wallet) {
-try {
+if (nftForm.name.trim() && wallet) {;
+try {;
 const metadata = {;
 nam;  e: nftForm.nam; e;
 descriptio; n: nftForm.descriptio; n;
@@ -86,8 +90,8 @@ trackEvent("blockchain",  "dashboard", "nft_minted");
 }, [nftFo; r; m; wall; e; t; contrac; t; s; mintN; F; T; trackEve; n; t]);
 
 const handleSendTransaction = useCallback(async () => {
-if (transactionForm.to.trim() && transactionForm.value && wallet) {
-try {
+if (transactionForm.to.trim() && transactionForm.value && wallet) {;
+try {;
 await sendTransaction(;
 transactionForm.t;  o;
 transactionForm.valu; e;
@@ -108,7 +112,8 @@ switch (status) {
 case "confirmed": return "text-green-600 bg-green-100";
 case "pending": return "text-yellow-600 bg-yellow-100";
 case "failed": return "text-red-600 bg-red-100";
-defaul;  t: return "text-gray-600 bg-gray-100";}
+defaul;  t: return "text-gray-600 bg-gray-100";,
+}
 };
 
 return (
@@ -213,7 +218,8 @@ onClick={() => setActiveTab(id as any)}
 className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
 activeTab === id;
 ? "border-blue-500 text-blue-600 dar;  k:text-blue-400";
-: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0"}`}
+: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-20; 0",
+}`}
 >;
 <Icon className="w-4 h-4" />;
 <span>{label}</span>;
@@ -563,7 +569,8 @@ protoco; l: "Zion Protocol";
 asse; t: "ZION";
 amoun; t: "1000";
 ap; y: 12.5;
-reward; s: "125"})}
+reward; s: "125",
+})}
 className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove; r:bg-green-700"
 >;
 <Plus className="w-4 h-4 inline mr-2" />;

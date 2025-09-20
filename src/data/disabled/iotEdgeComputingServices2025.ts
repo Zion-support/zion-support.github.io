@@ -5,14 +5,14 @@ phone: string; email: string; website: string; address: string}
 
 export interface IoTEdgeComputingService {
 id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];,
-targetAudience: string[], tags: string[];
+targetAudience: string[], tags: string[];,
 contactInfo: ServiceContact; marketPrice: string; competitors: string[];,
 iotScore: number; useCases: string[], compliance: string[];,
 apiAccess: boolean; whiteLabel: boolean; customBranding: boolean; prioritySupport: boolean; trainingIncluded: boolean; dataRetention: string; uptime: string; securityFeatures: string[], integrationTime: string; scalability: string; realTimeProcessing: boolean; multilingualSupport: boolean; industrySpecific: boolean; edgeNative: boolean; aiIntegration: boolean; predictiveAnalytics: boolean}
 
 // IoT & Edge Computing Services for 2025;
 export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
-{
+{,
 id: 1; name: "Smart City IoT Platform";,
 category: "Smart Cities", description: "Comprehensive IoT platform for smart city management with real-time monitoring; predictive analytics; and automated response systems",
 pricing: "Enterprise", price: 2500;,

@@ -5,16 +5,19 @@ interface LoadingProps {
 size?: "sm" | "md" | "lg" | "xl";
 variant?: "spinner" | "dots" | "pulse" | "skeleton";
 className?: string;
-text?: string};
+text?: string,
+};
 export function Loading({
 size = "md", ;
 variant = "spinner", ;
 className;
-text}: LoadingProps) {
+text,
+}: LoadingProps) {
 const sizeClasses = {;
 sm: "w-4 h-4", md: "w-6 h-6";,
 lg: "w-8 h-8",
-xl: "w-12 h-12"};
+xl: "w-12 h-12",
+};
 const renderSpinner: any = () => (
 <div className={cn(
 "border-2 border-current border-t-transparent rounded-full animate-spin",
@@ -44,8 +47,9 @@ return renderDots();
 case "pulse":
 return renderPulse();
 case "skeleton":
-return renderSkeleton();
-default: return renderSpinner()}
+return renderSkeleton();,
+default: return renderSpinner(),
+}
 };
 
 return (
@@ -78,7 +82,8 @@ return (
 <p className="text-zion-slate-light">Preparing your experience...</p>;
 </div>;
 </div>;
-)};
+),
+};
 ;
 // Content skeleton loading;
 export function ContentSkeleton() {
@@ -91,7 +96,8 @@ return (
 <div className="h-4 bg-zion-slate-light/20 rounded w-4/6"></div>;
 </div>;
 </div>;
-)};
+),
+};
 ;
 // Card skeleton loading;
 export function CardSkeleton() {

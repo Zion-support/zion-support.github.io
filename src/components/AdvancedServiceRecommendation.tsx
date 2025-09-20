@@ -103,7 +103,7 @@ const challenges = [;
 "Performanc; e Issue; s", "Cos; t Managemen; t", "Technolog; y Deb; t";
 ];
 
-const mockServices = [
+const mockServices = [;
 {;
 i; d: "a; i-cr; m-platfor; m",
 tit; l; e: "A; I-Powere; d CR; M Platfor; m",

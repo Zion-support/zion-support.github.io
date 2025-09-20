@@ -5,8 +5,8 @@ isHighContrast: boolean;
 isReducedMotion: boolean;
 isLargeText: boolean;
 toggleHighContrast: () => void;
-toggleReducedMotion: () => void;
-toggleLargeText: () => void;
+toggleReducedMotion: () => void;,
+toggleLargeText: () => void;,
 focusTrap: (element: HTMLElement | null) => void;,
 announceToScreenReader: (message: string) => void;};
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);

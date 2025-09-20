@@ -11,8 +11,8 @@ tt;l: number;
 strategy: "lru" | "lfu" | "fifo" | "ttl";
 persis;t: boolean;};
 interface CacheEntry<T> {
-key: string;
-value: T;
+key: string;,
+value: T;,
 timestamp: number;,
 accessCount: number;
 lastAccesse;d: number;
@@ -21,8 +21,8 @@ tags?: string[];
 }
 ;
 interface CacheStats {
-hits: number;
-misses: number;
+hits: number;,
+misses: number;,
 size: number;,
 maxSize: number;
 hitRat;e: number;

@@ -14,16 +14,16 @@ padding = "md";
 const maxWidthClasses = {,
 "sm": "max-w-sm",
 "md": "max-w-md",
-"lg": "max-w-lg",
-"xl": "max-w-7xl2xl": "max-w-8xl",
+"lg": "max-w-lg",;
+"xl": "max-w-7xl2xl": "max-w-8xl",;
 "full": "max-w-full";
 },
-const paddingClasses = {,
-"none": ",
+const paddingClasses = {,;
+"none": ",;
 "sm": "px-2 sm: px-4", "md": "px-4 sm: px-6 lg:px-8",;
 "lg": "px-6 sm: px-8 lg:px-12"};
-const containerClasses = ["mx-auto",
-maxWidthClasses[maxWidth],
+const containerClasses = ["mx-auto",;
+maxWidthClasses[maxWidth],;
 paddingClasses[padding],;
 className;
 ].join(" "),

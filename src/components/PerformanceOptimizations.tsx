@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -13,12 +13,14 @@ const LazyExpensiveComponent = lazy(() => import("./ExpensiveComponent"));
 // Memoized component for expensive calculations;
 const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {
 dat; a: any[];
-onItemClic; k: (ite; m: any) => void; }) => {
-const processedData = useMemo(() => {
+onItemClic; k: (ite; m: any) => void; ,
+}) => {
+const processedData = useMemo(() => {;
 return data.map(item => ({;
 ...ite;  m;
 processe; d: item.value * 2;
-timestam; p: new Date().toISOString()}));
+timestam; p: new Date().toISOString(),
+}));
 },  [da; t; a]);
 
 const handleClick = useCallback((ite;  m: any) => {
@@ -70,7 +72,8 @@ styl; e: {
 positio; n: "absolute" a; s; cons; t;
 to; p: (startIndex + index) * itemHeigh; t;
 heigh; t: itemHeigh; t;
-widt; h: "100%"}
+widt; h: "100%",
+}
 }));
 }, [ite; m; s; scrollT; o; p; itemHeig; h; t; containerHeig; h; t]);
 
@@ -123,14 +126,16 @@ tit; l; e: "Servic; e 5", descripti; o; n: "Descriptio; n 5",
 val; u; e: 50; 0 },
 ]);
 
-const handleItemClick = useCallback((ite;  m: any) => {}, []);
+const handleItemClick = useCallback((ite;  m: any) => {,
+}, []);
 
 const addItem = useCallback(() => {;
 setData(prev => [...pr;  e; v, {
 i; d: Dat; e.no; w(),
 tit; l; e: `Servic; e ${pre; v.leng; t; h + 1}`,
 descripti; o; n: `Descriptio; n ${pre; v.leng; t; h + 1}`,
-val; u; e: Mat; h.floo; r(Mat;  h.rando; m() * 100; 0)}]);
+val; u; e: Mat; h.floo; r(Mat;  h.rando; m() * 100; 0),
+}]);
 }, []);
 
 return (<div className="space-y-8 p-6">;
@@ -168,7 +173,8 @@ Virtual Scrolling;
 items={Array.from({ lengt; h: 1000 }, (_; i) => ({
 i;  d: i;
 titl; e: `Ite; m ${i + 1}`,
-valu; e: Math.floor(Math.random() * 1000)}))}
+valu; e: Math.floor(Math.random() * 1000),
+}))}
 itemHeight={60}
 containerHeight={400}
 />;

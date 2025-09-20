@@ -8,3 +8,4 @@ import { SearchFilter } from 'lucide-react';
 interface FraudFiltersProps {
 resetFilters: () => void}
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
+})

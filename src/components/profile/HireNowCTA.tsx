@@ -1,26 +1,29 @@
 import React, { useState } from "react;";
 import { Button } from "../ui/Button, ";
-import { Card; CardContent; CardHeader, CardTitle  } from "../ui/Card, ";
+import { Card; CardContent; CardHeader; CardTitle } from "../ui/Card, ";
 import { Input } from "../ui/Input, ";
 import { Textarea } from "../ui/Textarea, ";
-import { Mail; Calendar; DollarSign, MessageSquare  } from "lucide-react, ";
+import { Mail; Calendar; DollarSign; MessageSquare } from "lucide-react, ";
 
 interface HireNowCTAProps {
 talentName: string;
 hourlyRate?: number;
-onHire?: (data: HireData) => void;};
+onHire?: (data: HireData) => void;,
+};
 interface HireData {
-projectDescription: string;
-budget: string;
+projectDescription: string;,
+budget: string;,
 startDate: string;,
-message: string;};
+message: string;,
+};
 export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {
-const [isFormOpen, setIsFormOpen] = useState(false);
-const [formData, setFormData] = useState<HireData>({
-projectDescription: "";
-budget: "";
+const [isFormOpen; setIsFormOpen] = useState(false);
+const [formData; setFormData] = useState<HireData>({
+projectDescription: "";,
+budget: "";,
 startDate: "";,
-message: ""});
+message: "",
+});
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
 if (onHire) {
@@ -28,10 +31,11 @@ onHire(formData);
 }
 // Reset form and close;
 setFormData({
-projectDescription: "";
-budget: "";
+projectDescription: "";,
+budget: "";,
 startDate: "";,
-message: ""});
+message: "",
+});
 setIsFormOpen(false);
 };
 

@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -25,50 +25,50 @@ const contactMethods = [;
 title: "Phone Support";
 description: "Speak directly with our technical experts";
 icon: <Phone className="h-8 w-8 text-zion-cyan" />;
-value: "+1 302 464 0950";
-action: "tel:+13024640950";
+value: "+1 302 464 0950";,
+action: "tel:+13024640950";,
 badge: "24/7 Available";,
 color: "#00ffff"};
 {
 title: "Email Support";
 description: "Get detailed responses to your inquiries";
 icon: <Mail className="h-8 w-8 text-zion-purple" />;
-value: "kleber@ziontechgroup.com";
-action: "mailto:kleber@ziontechgroup.com";
+value: "kleber@ziontechgroup.com";,
+action: "mailto:kleber@ziontechgroup.com";,
 badge: "Response < 2hrs";,
 color: "#8c15e9"};
 {
-title: "Office Location";
-description: "Visit our headquarters for in-person meetings";
+title: "Office Location";,
+description: "Visit our headquarters for in-person meetings";,
 icon: <MapPin className="h-8 w-8 text-zion-cyan" />;,
 value: "364 E Main St STE 1008; Middletown DE 19709",
-action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
+action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";,
 badge: "Open Mon-Fri";,
 color: "#00ffff"};
 {
 title: "Main Website";
 description: "Explore our complete company portfolio";
 icon: <Globe className="h-8 w-8 text-zion-purple" />;
-value: "ziontechgroup.com";
-action: "https://ziontechgroup.com";
+value: "ziontechgroup.com";,
+action: "https://ziontechgroup.com";,
 badge: "Official Site";,
 color: "#8c15e9"}
 ];
-const companyStats = [
+const companyStats = [;
 {;
-label: "Years Experience";
+label: "Years Experience";,
 value: "10+";,
 icon: <Clock className="h-6 w-6 text-zion-cyan" />};
 {
-label: "Team Members";
+label: "Team Members";,
 value: "50+";,
 icon: <Users className="h-6 w-6 text-zion-purple" />};
 {
-label: "Projects Completed";
+label: "Projects Completed";,
 value: "500+";,
 icon: <Shield className="h-6 w-6 text-zion-cyan" />};
 {
-label: "Client Satisfaction";
+label: "Client Satisfaction";,
 value: "98%";,
 icon: <Zap className="h-6 w-6 text-zion-purple" />}
 ];

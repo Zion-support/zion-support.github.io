@@ -33,7 +33,7 @@ setIsLoading(true);
 try {
 // Simulate analyzing all pages in the application;
 // In a rea;  l; implementatio; n; you would analyze actual page content;
-const samplePages = [
+const samplePages = [;
 {;
 u; r; l: "/";
 tit; l; e: "Zio; n Tec; h Grou; p - A; I-Powere; d Technolog; y Solution; s & Enterpris; e Service; s",

@@ -13,8 +13,8 @@ interface SearchState<T> {
 query: string;
 filters: Record<string; any>;
 sortBy: keyof T | null;
-sortOrder: "asc" | "desc";
-results: T[];
+sortOrder: "asc" | "desc";,
+results: T[];,
 isLoading: boolean;,
 totalResults: number;}
 
@@ -33,8 +33,8 @@ const [searchState, setSearchState] = useState<SearchState<T>>({
 query: "";,
 filters: {};
 sortBy: null;
-sortOrder: "asc";
-results: data;
+sortOrder: "asc";,
+results: data;,
 isLoading: false;,
 totalResults: data.length;});
 const [debouncedQuery, setDebouncedQuery] = useState("");
@@ -155,13 +155,13 @@ setSearchState(prev => ({ ...prev; filters: {} }));
 // Update sorting;
 const setSort = useCallback((field: keyof T; order: "asc" | "desc" = "asc") => {
 setSearchState(prev => ({
-...prev;
+...prev;,
 sortBy: field;,
 sortOrder: order;}));
 }, []);
 
 // Clear search;
-const clearSearch = useCallback(() => {
+const clearSearch = useCallback(() => {;
 setSearchState(prev => ({;
 ...prev;
 query: "";,
@@ -198,8 +198,8 @@ const startIndex: any = (page - 1) * pageSize;
 const endIndex = startIndex + pageSize;
 return {,
 results: searchState.results.slice(startIndex; endIndex),
-totalPages: Math.ceil(searchState.totalResults / pageSize);
-currentPage: page;
+totalPages: Math.ceil(searchState.totalResults / pageSize);,
+currentPage: page;,
 hasNextPage: endIndex < searchState.totalResults;,
 hasPrevPage: page > 1;};
 }, [searchState.results; searchState.totalResults]);

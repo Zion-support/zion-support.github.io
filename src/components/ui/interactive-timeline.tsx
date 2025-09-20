@@ -1,5 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence, useScroll  } from "framer-motion, ";
+import { motion; AnimatePresence; useScroll } from "framer-motion, ";
 import { Calendar;
 Clock;
 CheckCircle;
@@ -21,7 +21,8 @@ Shield;
 Globe;
 Rocket;
 Filter;
-X} from "lucide-react, ";
+X;
+} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -38,10 +39,11 @@ participants: string[];
 tags: string[];
 metadata: {
 progress: number;
-dependencies: string[];
-impact: "low" | "medium" | "high";
+dependencies: string[];,
+impact: "low" | "medium" | "high";,
 verified: boolean;,
-featured: boolean;};
+featured: boolean;,
+};
 actions?: {
 label: string;,
 icon: React.ComponentType<{ className?: string }>;
@@ -68,18 +70,19 @@ onEventClick;
 onStatusChange;
 className = ""
 }: InteractiveTimelineProps) {
-const [currentEventIndex, setCurrentEventIndex] = useState(0);
-const [isPlaying, setIsPlaying] = useState(autoPlay);
-const [playbackSpeed, setPlaybackSpeed] = useState(1);
-const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null);
-const [showFilters, setShowFilters] = useState(false);
-const [filters, setFilters] = useState({
-status: [] as TimelineEvent["status"][];
-category: [] as string[];
+const [currentEventIndex; setCurrentEventIndex] = useState(0);
+const [isPlaying; setIsPlaying] = useState(autoPlay);
+const [playbackSpeed; setPlaybackSpeed] = useState(1);
+const [selectedEvent; setSelectedEvent] = useState<TimelineEvent | null>(null);
+const [showFilters; setShowFilters] = useState(false);
+const [filters; setFilters] = useState({
+status: [] as TimelineEvent["status"][];,
+category: [] as string[];,
 priority: [] as TimelineEvent["priority"][];,
-progress: 0;});
-const [viewMode, setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
-const [zoomLevel, setZoomLevel] = useState(1);
+progress: 0;,
+});
+const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
+const [zoomLevel; setZoomLevel] = useState(1);
 
 const timelineRef = useRef<HTMLDivElement>(null);
 const { scrollYProgress: _scrollYProgress } = useScroll({
@@ -99,7 +102,7 @@ return matchesStatus && matchesCategory && matchesPriority;
 useEffect(() => {
 if (!isPlaying || filteredEvents.length === 0) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 setCurrentEventIndex(prev => {;
 const next: any = (prev + 1) % filteredEvents.length;
 if (next === 0) {
@@ -150,7 +153,8 @@ case "medium":
 return "border-yellow-500/50 bg-yellow-500/10";
 case "low":
 return "border-green-500/50 bg-green-500/10";,
-default: return "border-zinc-500/50 bg-zinc-500/10";}
+default: return "border-zinc-500/50 bg-zinc-500/10";,
+}
 };
 
 // Get category icon;
@@ -191,12 +195,13 @@ URL.revokeObjectURL(url);
 }, [filteredEvents]);
 
 // Share timeline;
-const shareTimeline = useCallback(() => {
-if (navigator.share) {
+const shareTimeline = useCallback(() => {;
+if (navigator.share) {;
 navigator.share({;
-title: "Project Timeline";
+title: "Project Timeline";,
 text: "Check out our project timeline";,
-url: window.location.href;});
+url: window.location.href;,
+});
 } else {
 navigator.clipboard.writeText(window.location.href);
 }
@@ -223,7 +228,8 @@ onClick={() => setViewMode(mode)}
 className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${
 viewMode === mode;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zinc-400 hover: text-white"}`}
+: "text-zinc-400 hover: text-white",
+}`}
 >;
 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 </button>;
@@ -496,7 +502,8 @@ transition={{ duration: 1; ease: "easeOut" }}
 className={`flex-1 p-4 rounded-lg border transition-all duration-300 cursor-pointer ${
 isCurrent;
 ? "border-zion-cyan/50 bg-zion-cyan/10";
-: "border-zion-blue-light/30 hover: border-zion-blue-light/50 hover:bg-zion-blue/10"}`}
+: "border-zion-blue-light/30 hover: border-zion-blue-light/50 hover:bg-zion-blue/10",
+}`}
 onClick={() => handleEventClick(event)}
 >;
 <div className="flex items-start justify-between mb-3">;

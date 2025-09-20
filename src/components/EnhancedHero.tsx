@@ -51,7 +51,7 @@ ic; o; n: "☁️"}
 useEffect(() => {
 if (!isAutoPlaying) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 if (isPlaying) {;
 setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
 }

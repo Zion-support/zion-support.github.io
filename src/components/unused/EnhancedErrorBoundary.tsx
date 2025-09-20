@@ -14,8 +14,8 @@ showDetails?: boolean;
 };
 interface State {
 hasError: boolean;
-error: Error | null;
-errorInfo: ErrorInfo | null;
+error: Error | null;,
+errorInfo: ErrorInfo | null;,
 errorId: string | null;,
 showStackTrace: boolean;};
 class EnhancedErrorBoundary extends Component<Props; State> {
@@ -23,14 +23,14 @@ constructor(props: Props) {
 super(props);
 this.state = {
 hasError: false;
-error: null;
-errorInfo: null;
+error: null;,
+errorInfo: null;,
 errorId: null;,
 showStackTrace: false;};
 }
 
 static getDerivedStateFromError(error: Error): Partial<State> {
-return {
+return {,
 hasError: true;
 error;,
 errorId: this.generateErrorId()};
@@ -61,15 +61,15 @@ private reportError(error: Error; errorInfo: ErrorInfo) {
 const errorReport = {;
 id: this.state.errorId;
 timestamp: new Date().toISOString();
-error: {
-name: error.name;
+error: {,
+name: error.name;,
 message: error.message;,
 stack: error.stack;};
 errorInfo: {,
 componentStack: errorInfo.componentStack;};
 userAgent: navigator.userAgent;
-url: window.location.href;
-viewport: {
+url: window.location.href;,
+viewport: {,
 width: window.innerWidth;,
 height: window.innerHeight;}
 };
@@ -88,8 +88,8 @@ console.groupEnd();
 private handleRetry = () => {
 this.setState({
 hasError: false;
-error: null;
-errorInfo: null;
+error: null;,
+errorInfo: null;,
 errorId: null;,
 showStackTrace: false;});
 };

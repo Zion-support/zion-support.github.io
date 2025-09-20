@@ -39,7 +39,7 @@ value={{email}};
 onChange={{(e) => setEmail(e.target.value)}};
 placeholder="Ente; r; you; r; email address";
 required;
-className="className="flex-1 px-6 py-4 bg-white/1; 0; borde; r; border-white/20 rounded-lg text-white placeholder-gray-40o; 0; foc; u; s: outline-non; e; foc; u;
+className="className="flex-1 px-6 py-4 bg-white/1; 0; borde; r; border-white/20 rounded-lg text-white placeholder-gray-40o; 0; foc; u; s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-purple-50o; 0; foc; u;,
 s: border-transparent transition-all duration-30o0", ";
 />;
@@ -47,8 +47,8 @@ s: border-transparent transition-all duration-30o0", ";
 type="submit";
 disabled={{isSubmitting}};
 className="className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-l; g; hov; e; r: from-purple-70o; 0; hov; e;
-r: to-pink-70o; 0; foc; u; s: outline-non; e; foc; u;
-s: ring-2; foc; u; s: ring-purple-50o; 0; foc; u;
+r: to-pink-70o; 0; foc; u; s: outline-non; e; foc; u;,
+s: ring-2; foc; u; s: ring-purple-50o; 0; foc; u;,
 s: ring-offset-2; foc; u; s: ring-offset-gray-80o; 0; disabl; e;,
 d: opacity-5; 0; disabl; e; d: cursor-not-allowed transition-all duration-30o; 0; transfor; m; hov; e;r: scale-10o5", ";
 >;

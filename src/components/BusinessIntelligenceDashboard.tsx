@@ -83,8 +83,8 @@ current: 3; target: 5; progress: 60;,
 status: "at-risk"},
 {
 metric: "Employee Satisfaction",
-current: 4.2;
-target: 4.5;
+current: 4.2;,
+target: 4.5;,
 progress: 93;,
 status: "on-track"}
 ]);
@@ -109,7 +109,7 @@ count: 1245; revenue: 2800000; growth: 22.1;,
 satisfaction: 4.6},
 {
 segment: "SMB",
-count: 8900; revenue: 1100000;
+count: 8900; revenue: 1100000;,
 growth: 8.7;,
 satisfaction: 4.3}
 ]);

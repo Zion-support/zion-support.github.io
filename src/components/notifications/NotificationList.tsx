@@ -10,3 +10,4 @@ import { Bell } from 'lucide-react';
 interface NotificationListProps {
 onRetry: () => void}
 export const NotificationList: React.FC<NotificationListProps> = ({
+})

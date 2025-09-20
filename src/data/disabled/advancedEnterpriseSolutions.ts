@@ -17,28 +17,28 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
-contactInfo: {
-phone: string;
+contactInfo: {,
+phone: string;,
 email: string;,
 website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
-roi: string;
-competitors: string[];
+roi: string;,
+competitors: string[];,
 innovationLevel: string;,
 marketTrend: string;}
 
 export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
 // AI-Powered Enterprise Platforms;
-{
-id: "ai-enterprise-operating-system";
+{,
+id: "ai-enterprise-operating-system";,
 title: "AI Enterprise Operating System";,
 description: "Next-generation enterprise OS that integrates AI; automation; and real-time analytics across all business operations.",
 category: "AI Enterprise Platforms";
 subcategory: "Operating Systems";
-price: 25000;
-currency: "$";
+price: 25000;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-powered process automation";
@@ -72,11 +72,11 @@ targetAudience: [
 "Digital transformation leaders";
 ],
 tags: ["AI", "Enterprise OS", "Automation", "Analytics", "Integration"],
-estimatedDelivery: "8-12 weeks";
+estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$25;000 - $100;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Cloud Native", "Microservices", "Kubernetes", "TensorFlow"],
@@ -88,13 +88,13 @@ innovationLevel: "Breakthrough";,
 marketTrend: "Rapidly Growing"};
 // Quantum Enterprise Solutions;
 {
-id: "quantum-enterprise-computing";
+id: "quantum-enterprise-computing";,
 title: "Quantum Enterprise Computing Platform";,
 description: "Enterprise-grade quantum computing platform for complex problem-solving; optimization; and advanced simulations.",
 category: "Quantum Enterprise";
 subcategory: "Computing Platforms";
-price: 50000;
-currency: "$";
+price: 50000;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Quantum algorithm optimization";
@@ -128,11 +128,11 @@ targetAudience: [
 "Technology leaders";
 ],
 tags: ["Quantum Computing", "Enterprise", "Optimization", "Simulation", "Research"],
-estimatedDelivery: "12-16 weeks";
+estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$50;000 - $200;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Quantum Algorithms", "Qiskit", "Cirq", "Hybrid Systems"],
@@ -144,13 +144,13 @@ innovationLevel: "Revolutionary";,
 marketTrend: "Emerging"};
 // Autonomous Business Intelligence;
 {
-id: "autonomous-business-intelligence";
+id: "autonomous-business-intelligence";,
 title: "Autonomous Business Intelligence Platform";,
 description: "Self-learning BI platform that automatically discovers insights; generates reports; and provides actionable recommendations.",
 category: "Autonomous BI";
 subcategory: "Intelligence Platforms";
-price: 15000;
-currency: "$";
+price: 15000;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Self-learning algorithms";
@@ -184,11 +184,11 @@ targetAudience: [
 "Strategy teams";
 ],
 tags: ["Autonomous", "BI", "AI", "Analytics", "Automation"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$15;000 - $60;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "NLP", "Deep Learning", "AutoML"],
@@ -200,13 +200,13 @@ innovationLevel: "Advanced";,
 marketTrend: "Growing"};
 // Next-Gen Cybersecurity Platform;
 {
-id: "next-gen-cybersecurity";
+id: "next-gen-cybersecurity";,
 title: "Next-Generation Cybersecurity Platform";,
 description: "AI-powered cybersecurity platform with autonomous threat detection; response; and prevention capabilities.",
 category: "Cybersecurity";
 subcategory: "AI-Powered Security";
-price: 20000;
-currency: "$";
+price: 20000;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI threat detection";
@@ -240,11 +240,11 @@ targetAudience: [
 "Risk managers";
 ],
 tags: ["Cybersecurity", "AI", "Threat Detection", "Automation", "Compliance"],
-estimatedDelivery: "8-10 weeks";
+estimatedDelivery: "8-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$20;000 - $80;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Behavioral Analytics", "Threat Intelligence", "SOAR"],
@@ -256,13 +256,13 @@ innovationLevel: "Advanced";,
 marketTrend: "High Growth"};
 // Digital Twin Enterprise Platform;
 {
-id: "digital-twin-enterprise";
+id: "digital-twin-enterprise";,
 title: "Digital Twin Enterprise Platform";,
 description: "Comprehensive digital twin platform for simulating; monitoring; and optimizing enterprise operations in real-time.",
 category: "Digital Twins";
 subcategory: "Enterprise Platforms";
-price: 30000;
-currency: "$";
+price: 30000;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Real-time simulation";
@@ -296,11 +296,11 @@ targetAudience: [
 "Healthcare administrators";
 ],
 tags: ["Digital Twin", "IoT", "Simulation", "Optimization", "Real-time"],
-estimatedDelivery: "10-14 weeks";
+estimatedDelivery: "10-14 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$30;000 - $120;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT", "3D Modeling", "Real-time Analytics", "AI/ML"],

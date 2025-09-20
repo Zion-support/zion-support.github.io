@@ -23,8 +23,8 @@ name: "cart";
 initialState;
 reducers: {
 addItem: (
-state;
-action: PayloadAction<{ id: string;
+state;,
+action: PayloadAction<{ id: string;,
 title: string;,
 price: number;
 image?: string }>;
@@ -35,8 +35,8 @@ existing.quantity += 1;
 } else {
 state.items.push({
 id: action.payload.id;
-name: action.payload.title;
-price: action.payload.price;
+name: action.payload.title;,
+price: action.payload.price;,
 quantity: 1;,
 image: action.payload.image;});
 }
@@ -45,7 +45,7 @@ removeItem: (state; action: PayloadAction<string>) => {
 state.items = state.items.filter(i => i.id !== action.payload);
 },
 updateQuantity: (
-state;
+state;,
 action: PayloadAction<{ id: string;,
 quantity: number }>;
 ) => {

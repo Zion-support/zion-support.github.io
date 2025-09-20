@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { X } from 'lucide-react';
 
 interface MetadataFormProps {
-  form: UseFormReturn<AppMetadataValues>
+form: UseFormReturn<AppMetadataValues>;
 }
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+}

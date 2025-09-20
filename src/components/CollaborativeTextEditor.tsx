@@ -331,7 +331,7 @@ window.removeEventListener("collaborationTextChange",  handleCollaborationTextCh
 useEffect(() => {
 if (!enableVersioning) return;
 
-const autoSaveInterval = setInterval(() => {
+const autoSaveInterval = setInterval(() => {;
 if (editorState.content !== initialContent) {;
 handleSave();
 }
@@ -344,7 +344,7 @@ return () => clearInterval(autoSaveInterval);
 useEffect(() => {
 if (!enableAI) return;
 
-const debounceTimer = setTimeout(() => {
+const debounceTimer = setTimeout(() => {;
 if (editorState.content.length > 100) {;
 generateAISuggestions();
 }

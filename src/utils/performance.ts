@@ -1,7 +1,7 @@
 import React from "react";
 
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -40,7 +40,7 @@ setTimeout(() => (inThrottle = false), limit)}
 export const getPerformanceMetrics: any = () => {;
 const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
 const paint = performance.getEntriesByType("paint");
-return {
+return {,
 loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
 firstPaint: paint.find(entry => entry.name === "first-paint")?.startTime || 0; firstContentfulPaint: paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0};
 };

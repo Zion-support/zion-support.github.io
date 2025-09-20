@@ -16,8 +16,8 @@ tags: string[];
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
-contactInfo: {
-phone: string;
+contactInfo: {,
+phone: string;,
 email: string;,
 website: string;};
 technology: string[];
@@ -26,21 +26,21 @@ integrations: string[];
 apiAccess: boolean;
 mobileApp: boolean;
 whiteLabel: boolean;
-customBranding: boolean;
-dataRetention: string;
+customBranding: boolean;,
+dataRetention: string;,
 uptime: string;,
 securityFeatures: string[];}
 
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService2025[] = [
 // AI-Powered Financial Services;
-{
-id: "ai-financial-advisory-platform";
+{,
+id: "ai-financial-advisory-platform";,
 title: "AI-Powered Financial Advisory Platform";,
 description: "Intelligent financial advisory platform that provides personalized investment recommendations; portfolio optimization; and risk management using advanced AI algorithms.",
 category: "AI & Financial Services";
 subcategory: "Financial Advisory";
-price: 2500;
-currency: "$";
+price: 2500;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-driven investment recommendations";
@@ -74,11 +74,11 @@ targetAudience: [
 "Tax professionals";
 ],
 tags: ["AI", "Financial Advisory", "Investment", "Portfolio Management", "Risk Management"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $8;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -87,21 +87,21 @@ integrations: ["TD Ameritrade", "Charles Schwab", "Fidelity", "TurboTax", "Mint"
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "10 years";
+customBranding: true;,
+dataRetention: "10 years";,
 uptime: "99.99%";,
 securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
 },
 
 // AI-Powered Healthcare Solutions;
 {
-id: "ai-healthcare-diagnostic-platform";
+id: "ai-healthcare-diagnostic-platform";,
 title: "AI Healthcare Diagnostic Platform";,
 description: "Advanced AI-powered healthcare diagnostic platform that analyzes medical images; patient data; and symptoms to provide accurate diagnoses and treatment recommendations.",
 category: "AI & Healthcare";
 subcategory: "Medical Diagnostics";
-price: 4500;
-currency: "$";
+price: 4500;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Medical image analysis (X-rays; MRIs; CT scans)",
@@ -135,11 +135,11 @@ targetAudience: [
 "Health insurance companies";
 ],
 tags: ["AI", "Healthcare", "Medical Diagnostics", "Medical Imaging", "Telemedicine"],
-estimatedDelivery: "6-8 weeks";
+estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$4;500 - $15;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
@@ -148,21 +148,21 @@ integrations: ["Epic", "Cerner", "Athenahealth", "Zoom", "Doximity"],
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "7 years";
+customBranding: true;,
+dataRetention: "7 years";,
 uptime: "99.99%";,
 securityFeatures: ["HIPAA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"];
 },
 
 // AI-Powered Legal Services;
 {
-id: "ai-legal-research-assistant";
+id: "ai-legal-research-assistant";,
 title: "AI Legal Research Assistant";,
 description: "Intelligent legal research platform that uses AI to analyze case law; statutes; and legal documents to provide comprehensive legal research and document analysis.",
 category: "AI & Legal Services";
 subcategory: "Legal Research";
-price: 1800;
-currency: "$";
+price: 1800;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-powered case law analysis";
@@ -196,11 +196,11 @@ targetAudience: [
 "Government legal offices";
 ],
 tags: ["AI", "Legal Services", "Legal Research", "Case Law", "Document Analysis"],
-estimatedDelivery: "3-4 weeks";
+estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;800 - $5;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Elasticsearch"],
@@ -209,21 +209,21 @@ integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "10 years";
+customBranding: true;,
+dataRetention: "10 years";,
 uptime: "99.9%";,
 securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
 },
 
 // AI-Powered Education Platform;
 {
-id: "ai-personalized-learning-platform";
+id: "ai-personalized-learning-platform";,
 title: "AI Personalized Learning Platform";,
 description: "Adaptive learning platform that uses AI to create personalized educational experiences; track student progress; and optimize learning outcomes for each individual.",
 category: "AI & Education";
 subcategory: "Personalized Learning";
-price: 1200;
-currency: "$";
+price: 1200;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Adaptive learning algorithms";
@@ -257,11 +257,11 @@ targetAudience: [
 "Parents and students";
 ],
 tags: ["AI", "Education", "Personalized Learning", "Adaptive Learning", "EdTech"],
-estimatedDelivery: "4-6 weeks";
+estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;200 - $4;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -270,21 +270,21 @@ integrations: ["Canvas", "Blackboard", "Google Classroom", "Microsoft Teams", "Z
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "5 years";
+customBranding: true;,
+dataRetention: "5 years";,
 uptime: "99.9%";,
 securityFeatures: ["FERPA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"];
 },
 
 // AI-Powered Supply Chain Management;
 {
-id: "ai-supply-chain-optimization";
+id: "ai-supply-chain-optimization";,
 title: "AI Supply Chain Optimization Platform";,
 description: "Intelligent supply chain management platform that uses AI to optimize inventory; predict demand; and streamline logistics operations for maximum efficiency.",
 category: "AI & Supply Chain";
 subcategory: "Supply Chain Optimization";
-price: 3200;
-currency: "$";
+price: 3200;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Demand forecasting and prediction";
@@ -318,11 +318,11 @@ targetAudience: [
 "Business executives";
 ],
 tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
-estimatedDelivery: "5-7 weeks";
+estimatedDelivery: "5-7 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;200 - $10;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -331,21 +331,21 @@ integrations: ["SAP", "Oracle", "Salesforce", "FedEx", "UPS", "DHL"],
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "7 years";
+customBranding: true;,
+dataRetention: "7 years";,
 uptime: "99.99%";,
 securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
 },
 
 // AI-Powered Real Estate Platform;
 {
-id: "ai-real-estate-analytics-platform";
+id: "ai-real-estate-analytics-platform";,
 title: "AI Real Estate Analytics Platform";,
 description: "Advanced real estate analytics platform that uses AI to analyze market trends; property values; and investment opportunities with predictive insights.",
 category: "AI & Real Estate";
 subcategory: "Real Estate Analytics";
-price: 1500;
-currency: "$";
+price: 1500;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Property value prediction";
@@ -379,11 +379,11 @@ targetAudience: [
 "Mortgage lenders";
 ],
 tags: ["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
-estimatedDelivery: "3-4 weeks";
+estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;500 - $5;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -392,21 +392,21 @@ integrations: ["Zillow", "Redfin", "Realtor.com", "MLS", "QuickBooks"],
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "10 years";
+customBranding: true;,
+dataRetention: "10 years";,
 uptime: "99.9%";,
 securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
 },
 
 // AI-Powered Human Resources Platform;
 {
-id: "ai-hr-talent-management-platform";
+id: "ai-hr-talent-management-platform";,
 title: "AI HR Talent Management Platform";,
 description: "Intelligent human resources platform that uses AI to streamline recruitment; employee management; performance evaluation; and workforce planning.",
 category: "AI & Human Resources";
 subcategory: "Talent Management";
-price: 2200;
-currency: "$";
+price: 2200;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-powered candidate screening";
@@ -440,11 +440,11 @@ targetAudience: [
 "Talent acquisition teams";
 ],
 tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Performance Management"],
-estimatedDelivery: "4-5 weeks";
+estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;200 - $7;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -453,21 +453,21 @@ integrations: ["Workday", "BambooHR", "Greenhouse", "LinkedIn", "Indeed"],
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "7 years";
+customBranding: true;,
+dataRetention: "7 years";,
 uptime: "99.9%";,
 securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
 },
 
 // AI-Powered Marketing Automation;
 {
-id: "ai-marketing-automation-suite";
+id: "ai-marketing-automation-suite";,
 title: "AI Marketing Automation Suite";,
 description: "Comprehensive marketing automation platform that uses AI to optimize campaigns; personalize content; and maximize ROI across all marketing channels.",
 category: "AI & Marketing";
 subcategory: "Marketing Automation";
-price: 2800;
-currency: "$";
+price: 2800;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-powered campaign optimization";
@@ -501,11 +501,11 @@ targetAudience: [
 "Marketing agencies";
 ],
 tags: ["AI", "Marketing", "Automation", "Personalization", "Analytics"],
-estimatedDelivery: "4-5 weeks";
+estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;800 - $8;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -514,21 +514,21 @@ integrations: ["HubSpot", "Salesforce", "Mailchimp", "Google Ads", "Facebook Ads
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "5 years";
+customBranding: true;,
+dataRetention: "5 years";,
 uptime: "99.9%";,
 securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
 },
 
 // AI-Powered Customer Experience Platform;
 {
-id: "ai-customer-experience-platform";
+id: "ai-customer-experience-platform";,
 title: "AI Customer Experience Platform";,
 description: "Intelligent customer experience platform that uses AI to analyze customer behavior; predict needs; and deliver personalized experiences across all touchpoints.",
 category: "AI & Customer Experience";
 subcategory: "Customer Experience Management";
-price: 1900;
-currency: "$";
+price: 1900;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "Customer behavior analysis";
@@ -562,11 +562,11 @@ targetAudience: [
 "Product managers";
 ],
 tags: ["AI", "Customer Experience", "Personalization", "Analytics", "Customer Service"],
-estimatedDelivery: "3-4 weeks";
+estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;900 - $6;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -575,21 +575,21 @@ integrations: ["Zendesk", "Intercom", "HubSpot", "Salesforce", "Shopify"],
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "5 years";
+customBranding: true;,
+dataRetention: "5 years";,
 uptime: "99.9%";,
 securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
 },
 
 // AI-Powered Product Development Platform;
 {
-id: "ai-product-development-platform";
+id: "ai-product-development-platform";,
 title: "AI Product Development Platform";,
 description: "Intelligent product development platform that uses AI to optimize product design; predict market demand; and streamline the development process from concept to launch.",
 category: "AI & Product Development";
 subcategory: "Product Development";
-price: 3500;
-currency: "$";
+price: 3500;,
+currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-powered product design optimization";
@@ -623,11 +623,11 @@ targetAudience: [
 "Innovation managers";
 ],
 tags: ["AI", "Product Development", "R&D", "Innovation", "Market Analysis"],
-estimatedDelivery: "5-7 weeks";
+estimatedDelivery: "5-7 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;500 - $12;000/month",
-contactInfo: {
-phone: "+1 302 464 0950";
+contactInfo: {,
+phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -636,8 +636,8 @@ integrations: ["Jira", "Confluence", "Figma", "SolidWorks", "PLM systems"],
 apiAccess: true;
 mobileApp: true;
 whiteLabel: true;
-customBranding: true;
-dataRetention: "10 years";
+customBranding: true;,
+dataRetention: "10 years";,
 uptime: "99.99%";,
 securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"];
 }

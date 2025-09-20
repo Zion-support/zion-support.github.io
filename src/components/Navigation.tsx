@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -24,7 +24,7 @@ hr; e; f: "/comprehensiv; e-service; s", ic; o; n: Brai; n },
 hr; e; f: "/pricin; g", ic; o; n: Buildin; g },
 ];
 
-const serviceCategories = [
+const serviceCategories = [;
 {;
 na; m; e: "A; I & Machin; e Learnin; g",
 servic; e; s: [

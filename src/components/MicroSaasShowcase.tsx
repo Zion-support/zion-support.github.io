@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -26,7 +26,7 @@ na; m; e: "Automatio; n", ic; o; n: <Za; p classNam; e="h-5 w-5" /> },
 na; m; e: "Clou; d", ic; o; n: <Clou; d classNam; e="h-5 w-5" /> }
 ];
 
-const microSaasServices = [
+const microSaasServices = [;
 {;
 i; d: "a; i-conten; t-optimize; r",
 tit; l; e: "A; I Conten; t Optimize; r Pr; o",

@@ -36,8 +36,8 @@ features: string[];
 metadata: {
 lastUpdated: string;
 version: string;
-downloads: number;
-verified: boolean;
+downloads: number;,
+verified: boolean;,
 featured: boolean;,
 complexity: "beginner" | "intermediate" | "advanced" | "expert";};
 actions?: {
@@ -73,8 +73,8 @@ const [selectedItem, setSelectedItem] = useState<CardItem | null>(null);
 const [viewMode, setViewMode] = useState<"grid" | "list" | "carousel">("grid");
 const [filters, setFilters] = useState({
 category: [] as string[];
-status: [] as CardItem["status"][];
-complexity: [] as CardItem["metadata"]["complexity"][];
+status: [] as CardItem["status"][];,
+complexity: [] as CardItem["metadata"]["complexity"][];,
 verified: false;,
 featured: false;});
 const [searchQuery, setSearchQuery] = useState("");
@@ -88,7 +88,7 @@ const galleryRef = useRef<HTMLDivElement>(null);
 // Filter and sort items;
 const filteredAndSortedItems = items;
 .filter(item => {
-const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
@@ -586,8 +586,8 @@ interface Card3DProps {
 item: CardItem;
 index: number;
 onClick: () => void;
-onAction: (itemId: string; action: string) => void;
-getStatusColor: (status: CardItem["status"]) => string;
+onAction: (itemId: string; action: string) => void;,
+getStatusColor: (status: CardItem["status"]) => string;,
 getComplexityColor: (complexity: CardItem["metadata"]["complexity"]) => string;,
 getCategoryIcon: (category: string) => React.ComponentType<{ className?: string }>;
 isCarousel?: boolean;

@@ -18,7 +18,7 @@ date: "2024-01-15"}
 id: "2",
 name: "Technical Support",
 description: "Get help with technical issues",
-postCount: 89;
+postCount: 89;,
 adminOnly: false;,
 icon: "code",
 lastPost: {,
@@ -73,4 +73,5 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileTextMegaphone } from 'lucide-react';
 import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
-  {
+{
+}

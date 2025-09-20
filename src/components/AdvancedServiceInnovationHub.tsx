@@ -213,7 +213,7 @@ opportunitie; s: [
 investmen; t: "$50B+";
 categor; y: "ai"}
 ];
-const filteredTrends = useMemo(() => {
+const filteredTrends = useMemo(() => {;
 return innovationTrends.filter(trend => {;
 const matchesCategory = selectedCategory === "all" || trend.category === selectedCategory;
 const matchesImpact = selectedImpact === "all" || trend.impact === selectedImpact;

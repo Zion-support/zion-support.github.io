@@ -204,7 +204,7 @@ className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-
 <select;
 value={selectedStatus}
 onChange={(e) => setSelectedStatus(e.target.value)}
-className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;
+className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
@@ -219,7 +219,7 @@ s: border-transparent";
 <select;
 value={selectedPriority}
 onChange={(e) => setSelectedPriority(e.target.value)}
-className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;
+className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-whit; e; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
@@ -237,7 +237,7 @@ type="text";
 value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 placeholder="Search projects...";
-className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o; 0; foc; u;  s: outline-non; e; foc; u;
+className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o; 0; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 />;

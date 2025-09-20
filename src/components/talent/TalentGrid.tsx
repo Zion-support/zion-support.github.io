@@ -5,8 +5,8 @@ import { TalentSkeleton } from "@/components/talent/TalentSkeleton, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentGridProps {;
-talents: TalentProfile[];
-isLoading: boolean;
+talents: TalentProfile[];,
+isLoading: boolean;,
 onTalentClick: (id: string) => void;,
 isAuthenticated: boolean;
 viewProfile?: (id: string) => void;

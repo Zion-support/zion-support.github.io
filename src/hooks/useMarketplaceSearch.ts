@@ -94,7 +94,7 @@ const [selectedRating, setSelectedRating] = useState<number | null>(null);
 const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>(staticSearchSuggestions);
 
 useEffect(() => {
-const fetchSuggestions = async () => {
+const fetchSuggestions = async () => {;
 try {;
 const res = await fetch("/api/search/suggest?q=");
 if (res.ok) {
@@ -116,7 +116,7 @@ const filterOptions: FilterOptions = useMemo(
 );
 
 // Removed client-side filtering logic as the API now handles it.;
-const filteredListings = useMemo(() => {
+const filteredListings = useMemo(() => {;
 return listings,;
 }, [listings]);
 

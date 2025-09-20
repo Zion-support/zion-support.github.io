@@ -11,8 +11,8 @@ updatedAt?: string};
 export interface AuthTokens {;
 accessToken: string | null; refreshToken: string | null};
 export interface AuthContextType {;
-user: User | null; setUser: (user: User | null) => void;
-isLoading: boolean; setIsLoading: (loading: boolean) => void;
+user: User | null; setUser: (user: User | null) => void;,
+isLoading: boolean; setIsLoading: (loading: boolean) => void;,
 onboardingStep: number; setOnboardingStep: (step: number) => void;,
 tokens: AuthTokens; setTokens: (tokens: AuthTokens) => void};
 export const AuthContext = React.createContext<AuthContextType | undefined>(undefined);</AuthContextType | undefined><//AuthContextType | undefined>

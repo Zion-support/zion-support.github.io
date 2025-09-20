@@ -7,8 +7,8 @@ interface Service {
 id: string;
 name: string;
 description: string;
-icon: React.ReactNode;
-color: string;
+icon: React.ReactNode;,
+color: string;,
 price: string;,
 features: string[];
 popular?: boolean;
@@ -18,17 +18,17 @@ const services: Service[] = [
 id: "ai-automation";
 name: "AI & Automation";
 description: "Revolutionary AI platforms with consciousness and emotional intelligence";
-icon: <Brain className="w-8 h-8" />;
-color: "from-purple-500 to-pink-500";
+icon: <Brain className="w-8 h-8" />;,
+color: "from-purple-500 to-pink-500";,
 price: "$199/month";,
 features: ["AI Code Review", "Testing Automation", "DevOps Intelligence", "Security Automation"],
 popular: true;};
 {
-id: "micro-saas";
+id: "micro-saas";,
 name: "Micro SaaS Solutions";,
 description: "Scalable; focused software solutions for specific business needs",
-icon: <Zap className="w-8 h-8" />;
-color: "from-cyan-500 to-blue-500";
+icon: <Zap className="w-8 h-8" />;,
+color: "from-cyan-500 to-blue-500";,
 price: "$99/month";,
 features: ["Custom Development", "API Integration", "Cloud Deployment", "24/7 Support"];
 },
@@ -36,8 +36,8 @@ features: ["Custom Development", "API Integration", "Cloud Deployment", "24/7 Su
 id: "cloud-infrastructure";
 name: "Cloud & Infrastructure";
 description: "Robust cloud solutions for scalability and reliability";
-icon: <Globe className="w-8 h-8" />;
-color: "from-green-500 to-emerald-500";
+icon: <Globe className="w-8 h-8" />;,
+color: "from-green-500 to-emerald-500";,
 price: "$299/month";,
 features: ["AWS/Azure/GCP", "Container Orchestration", "Serverless Architecture", "Disaster Recovery"];
 },
@@ -45,8 +45,8 @@ features: ["AWS/Azure/GCP", "Container Orchestration", "Serverless Architecture"
 id: "cybersecurity";
 name: "Cybersecurity";
 description: "Advanced security solutions to protect your digital assets";
-icon: <Shield className="w-8 h-8" />;
-color: "from-red-500 to-pink-500";
+icon: <Shield className="w-8 h-8" />;,
+color: "from-red-500 to-pink-500";,
 price: "$399/month";,
 features: ["Threat Detection", "Penetration Testing", "Compliance Auditing", "Incident Response"];
 },
@@ -54,8 +54,8 @@ features: ["Threat Detection", "Penetration Testing", "Compliance Auditing", "In
 id: "quantum-computing";
 name: "Quantum Computing";
 description: "Next-generation quantum solutions for complex problems";
-icon: <Rocket className="w-8 h-8" />;
-color: "from-indigo-500 to-purple-500";
+icon: <Rocket className="w-8 h-8" />;,
+color: "from-indigo-500 to-purple-500";,
 price: "$599/month";,
 features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Research Support"];
 },
@@ -63,8 +63,8 @@ features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Resea
 id: "blockchain-web3";
 name: "Blockchain & Web3";
 description: "Decentralized solutions for the future of the internet";
-icon: <Star className="w-8 h-8" />;
-color: "from-yellow-500 to-orange-500";
+icon: <Star className="w-8 h-8" />;,
+color: "from-yellow-500 to-orange-500";,
 price: "$249/month";,
 features: ["Smart Contracts", "DeFi Platforms", "NFT Marketplaces", "DAO Governance"];
 }

@@ -2,8 +2,8 @@ import { Routes, Route  } from "react-router-dom, ";
 export interface ComprehensiveMicroSaasService {
 id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
-estimatedDelivery: string; supportLevel: string; marketPrice: string;
+targetAudience: string[], tags: string[];,
+estimatedDelivery: string; supportLevel: string; marketPrice: string;,
 contactInfo: {,
 phone: string; email: string; website: string};
 technology: string[], integrations: string[];,
@@ -18,7 +18,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
 {,
 id: "ai-business-intelligence-suite", title: "AI Business Intelligence Suite - Intelligent Data Insights";,
 description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights; predictive analytics; and automated reporting for data-driven decision making.",
-category: "AI & Business Intelligence", subcategory: "Data Analytics";
+category: "AI & Business Intelligence", subcategory: "Data Analytics";,
 price: 599; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered data analysis and insights",
@@ -69,7 +69,7 @@ scalability: "Enterprise-grade with unlimited users and data", customizationLeve
 {
 id: "ai-customer-experience-platform", title: "AI Customer Experience Platform - Personalized Customer Journeys";,
 description: "Comprehensive AI-powered customer experience platform that personalizes customer interactions; predicts customer needs; and optimizes customer journeys across all touchpoints.",
-category: "AI & Customer Experience", subcategory: "Customer Journey Optimization";
+category: "AI & Customer Experience", subcategory: "Customer Journey Optimization";,
 price: 449; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered customer journey mapping",
@@ -120,7 +120,7 @@ scalability: "Handles millions of customer interactions", customizationLevel: "F
 {
 id: "ai-supply-chain-optimizer-pro", title: "AI Supply Chain Optimizer Pro - Intelligent Logistics Management";,
 description: "Advanced AI-powered supply chain optimization platform that predicts demand; optimizes inventory; reduces costs; and improves delivery efficiency through machine learning algorithms.",
-category: "AI & Supply Chain", subcategory: "Logistics Optimization";
+category: "AI & Supply Chain", subcategory: "Logistics Optimization";,
 price: 799; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered demand forecasting",
@@ -171,7 +171,7 @@ scalability: "Enterprise-grade with multi-company support", customizationLevel: 
 {
 id: "ai-fintech-platform-elite", title: "AI FinTech Platform Elite - Intelligent Financial Solutions";,
 description: "Comprehensive AI-powered financial technology platform that provides intelligent banking; investment management; risk assessment; and financial planning solutions for businesses and individuals.",
-category: "AI & Financial Technology", subcategory: "Financial Services";
+category: "AI & Financial Technology", subcategory: "Financial Services";,
 price: 699; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered financial analysis",
@@ -222,7 +222,7 @@ scalability: "Banking-grade infrastructure with unlimited scalability", customiz
 {
 id: "ai-healthcare-solutions-suite", title: "AI Healthcare Solutions Suite - Intelligent Medical Technology";,
 description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance; patient monitoring; medical image analysis; and healthcare workflow optimization for medical professionals and institutions.",
-category: "AI & Healthcare", subcategory: "Medical Technology";
+category: "AI & Healthcare", subcategory: "Medical Technology";,
 price: 899; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered diagnostic assistance",
@@ -273,7 +273,7 @@ scalability: "Enterprise healthcare infrastructure with multi-institution suppor
 {
 id: "ai-education-learning-platform", title: "AI Education & Learning Platform - Intelligent Learning Solutions";,
 description: "Advanced AI-powered education platform that personalizes learning experiences; provides intelligent tutoring; automates assessment; and optimizes educational content delivery for students and educators.",
-category: "AI & Education", subcategory: "Learning Technology";
+category: "AI & Education", subcategory: "Learning Technology";,
 price: 399; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered personalized learning",
@@ -324,7 +324,7 @@ scalability: "Multi-institution platform with unlimited student support", custom
 {
 id: "ai-cybersecurity-threat-intelligence", title: "AI Cybersecurity & Threat Intelligence - Advanced Security Solutions";,
 description: "Comprehensive AI-powered cybersecurity platform that provides real-time threat detection; automated incident response; vulnerability assessment; and security intelligence for organizations of all sizes.",
-category: "AI & Cybersecurity", subcategory: "Threat Intelligence";
+category: "AI & Cybersecurity", subcategory: "Threat Intelligence";,
 price: 649; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered threat detection",
@@ -375,7 +375,7 @@ scalability: "Enterprise-grade security infrastructure with unlimited scalabilit
 {
 id: "ai-marketing-advertising-platform", title: "AI Marketing & Advertising Platform - Intelligent Marketing Solutions";,
 description: "Advanced AI-powered marketing platform that optimizes campaigns; personalizes content; predicts customer behavior; and automates marketing workflows for maximum ROI and customer engagement.",
-category: "AI & Marketing", subcategory: "Marketing Automation";
+category: "AI & Marketing", subcategory: "Marketing Automation";,
 price: 549; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered campaign optimization",
@@ -426,7 +426,7 @@ scalability: "Multi-client platform with unlimited campaign support", customizat
 {
 id: "ai-hr-talent-management-suite", title: "AI HR & Talent Management Suite - Intelligent People Management";,
 description: "Comprehensive AI-powered HR platform that streamlines recruitment; optimizes employee performance; predicts turnover; and automates HR processes for better talent management and organizational success.",
-category: "AI & Human Resources", subcategory: "Talent Management";
+category: "AI & Human Resources", subcategory: "Talent Management";,
 price: 499; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered candidate screening",
@@ -477,7 +477,7 @@ scalability: "Multi-company platform with enterprise HR capabilities", customiza
 {
 id: "ai-legal-technology-compliance", title: "AI Legal Technology & Compliance - Intelligent Legal Solutions";,
 description: "Advanced AI-powered legal technology platform that automates contract analysis; provides legal research assistance; monitors compliance; and optimizes legal workflows for law firms and legal departments.",
-category: "AI & Legal Technology", subcategory: "Legal Automation";
+category: "AI & Legal Technology", subcategory: "Legal Automation";,
 price: 749; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered contract analysis",
@@ -528,7 +528,7 @@ scalability: "Enterprise legal platform with multi-firm support", customizationL
 {
 id: "ai-real-estate-property-management", title: "AI Real Estate & Property Management - Intelligent Property Solutions";,
 description: "Comprehensive AI-powered real estate platform that optimizes property management; predicts market trends; automates tenant screening; and provides intelligent property insights for real estate professionals and investors.",
-category: "AI & Real Estate", subcategory: "Property Management";
+category: "AI & Real Estate", subcategory: "Property Management";,
 price: 399; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered market analysis",
@@ -579,7 +579,7 @@ scalability: "Multi-property platform with unlimited portfolio support", customi
 {
 id: "ai-manufacturing-industrial-iot", title: "AI Manufacturing & Industrial IoT - Intelligent Manufacturing Solutions";,
 description: "Advanced AI-powered manufacturing platform that optimizes production processes; predicts equipment failures; monitors quality control; and enables smart manufacturing through IoT integration and machine learning.",
-category: "AI & Manufacturing", subcategory: "Industrial IoT";
+category: "AI & Manufacturing", subcategory: "Industrial IoT";,
 price: 899; currency: "$";,
 pricingModel: "monthly", features: [
 "AI-powered production optimization",

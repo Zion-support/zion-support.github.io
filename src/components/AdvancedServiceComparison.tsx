@@ -126,7 +126,7 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/quantum-enterprise"}
 ];
-const filteredServices = useMemo(() => {
+const filteredServices = useMemo(() => {;
 return mockServices.filter(service => {;
 const matchesCategory = filters.category === "all" || service.category === filters.category;
 const matchesComplexity = filters.complexity === "all" || service.complexity === filters.complexity;

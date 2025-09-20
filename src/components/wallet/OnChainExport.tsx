@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
@@ -21,13 +21,13 @@ const [exportStatus, setExportStatus] = useState<"idle" | "processing" | "succes
 const { toast } = useToast();
 const { user } = useAuth();
 
-const handleConnectWallet = async () => {
+const handleConnectWallet = async () => {;
 try {;
 // Check if wallet is available;
 const ethereum: any = (window as any).ethereum;
 if (!ethereum) {
-toast({
-title: "Wallet not detected";
+toast({,
+title: "Wallet not detected";,
 description: "Please install MetaMask or another Ethereum wallet to use this feature";,
 variant: "destructive"});
 return;
@@ -48,8 +48,8 @@ toast({
 title: "Wallet connected";,
 description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`});
 } catch (error: any) {
-toast({
-title: "Connection failed";
+toast({,
+title: "Connection failed";,
 description: error.message || "Could not connect to wallet";,
 variant: "destructive"});
 }
@@ -69,8 +69,8 @@ title: "Tokens exported";,
 description: "Your ZION$ tokens have been exported to your wallet";});
 } catch (error: any) {
 setExportStatus("error");
-toast({
-title: "Export failed";
+toast({,
+title: "Export failed";,
 description: error.message || "Could not export tokens";,
 variant: "destructive"});
 } finally {
@@ -149,5 +149,5 @@ TooltipTrigger } from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
-  )
+)
 }

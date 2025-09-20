@@ -7,5 +7,5 @@ import { Textarea } from "@/components/ui/textarea";
 import { PlusTrash2 } from 'lucide-react';
 import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {
-  platform: AppPlatform;
+platform: AppPlatform;
 }

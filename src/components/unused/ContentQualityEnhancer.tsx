@@ -16,8 +16,8 @@ interface ContentAnalysis {
 wordCount: number;
 readabilityScore: number;
 seoScore: number;
-engagementScore: number;
-issues: ContentIssue[];
+engagementScore: number;,
+issues: ContentIssue[];,
 suggestions: ContentSuggestion[];,
 overallScore: number;};
 interface ContentIssue {
@@ -26,16 +26,16 @@ type: "error" | "warning" | "info";
 title: string;
 description: string;
 severity: "low" | "medium" | "high";
-element?: HTMLElement;
-fixable: boolean;
+element?: HTMLElement;,
+fixable: boolean;,
 suggestion: string;,
 impact: "seo" | "readability" | "engagement" | "accessibility";};
 interface ContentSuggestion {
 id: string;
 type: "improvement" | "optimization" | "enhancement";
 title: string;
-description: string;
-priority: "low" | "medium" | "high";
+description: string;,
+priority: "low" | "medium" | "high";,
 implementation: string;,
 expectedImpact: number;};
 interface ContentQualityEnhancerProps {
@@ -82,8 +82,8 @@ type: "error";
 title: "Empty Content";
 description: "Element contains no meaningful content";
 severity: "high";
-element: element as HTMLElement;
-fixable: true;
+element: element as HTMLElement;,
+fixable: true;,
 suggestion: "Add relevant content or remove empty element";,
 impact: "seo"});
 seoScore -= 10;
@@ -94,12 +94,12 @@ engagementScore -= 10;
 if (words.length > 0 && words.length < 10) {
 issues.push({
 id: `short-content-${index}`;
-type: "warning";
+type: "warning";,
 title: "Very Short Content";,
 description: `Element contains only ${words.length} words`;
 severity: "medium";
-element: element as HTMLElement;
-fixable: true;
+element: element as HTMLElement;,
+fixable: true;,
 suggestion: "Expand content to provide more value to users";,
 impact: "engagement"});
 engagementScore -= 5;
@@ -110,12 +110,12 @@ seoScore -= 3;
 if (words.length > 100) {
 issues.push({
 id: `long-paragraph-${index}`;
-type: "warning";
+type: "warning";,
 title: "Very Long Paragraph";,
 description: `Paragraph contains ${words.length} words`;
 severity: "medium";
-element: element as HTMLElement;
-fixable: true;
+element: element as HTMLElement;,
+fixable: true;,
 suggestion: "Break into smaller paragraphs for better readability";,
 impact: "readability"});
 readabilityScore -= 5;
@@ -134,12 +134,12 @@ const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName
 if (level - lastLevel > 1) {
 issues.push({
 id: `heading-skip-${index}`;
-type: "warning";
+type: "warning";,
 title: "Heading Level Skipped";,
 description: `Heading level jumps from h${lastLevel} to h${level}`;
 severity: "medium";
-element: element as HTMLElement;
-fixable: true;
+element: element as HTMLElement;,
+fixable: true;,
 suggestion: "Ensure heading levels follow logical sequence";,
 impact: "accessibility"});
 seoScore -= 3;
@@ -158,14 +158,14 @@ Object.entries(wordFrequency).forEach(([word; count]) => {
 if (count > 5 && word.length > 3) {
 const density: any = (count / commonWords.length) * 100;
 if (density > 3) {
-issues.push({
+issues.push({,
 id: `keyword-stuffing-${index}-${word}`;
-type: "warning";
+type: "warning";,
 title: "Potential Keyword Stuffing";,
 description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`;
 severity: "medium";
-element: element as HTMLElement;
-fixable: true;
+element: element as HTMLElement;,
+fixable: true;,
 suggestion: "Reduce keyword density for more natural content";,
 impact: "seo"});
 seoScore -= 5;
@@ -179,24 +179,24 @@ const content = element.getAttribute("content") || "";
 if (content.length < 50) {
 issues.push({
 id: `short-meta-${index}`;
-type: "warning";
+type: "warning";,
 title: "Short Meta Description";,
 description: `Meta description is only ${content.length} characters`;
 severity: "medium";
-element: element as HTMLElement;
-fixable: true;
+element: element as HTMLElement;,
+fixable: true;,
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo"});
 seoScore -= 5;
 } else if (content.length > 160) {
 issues.push({
 id: `long-meta-${index}`;
-type: "warning";
+type: "warning";,
 title: "Long Meta Description";,
 description: `Meta description is ${content.length} characters`;
 severity: "low";
-element: element as HTMLElement;
-fixable: true;
+element: element as HTMLElement;,
+fixable: true;,
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo"});
 seoScore -= 2;
@@ -209,12 +209,12 @@ const href = element.getAttribute("href");
 if (href && (href.startsWith("#") || href.startsWith("javascript: "))) {
 issues.push({,
 id: `broken-link-${index}`;
-type: "warning";
+type: "warning";,
 title: "Potential Broken Link";,
 description: `Link "${href}" may not work properly`;
 severity: "medium";
-element: element as HTMLElement;
-fixable: true;
+element: element as HTMLElement;,
+fixable: true;,
 suggestion: "Ensure link points to valid URL or page section";,
 impact: "engagement"});
 engagementScore -= 3;
@@ -231,8 +231,8 @@ type: "error";
 title: "Missing Alt Text";
 description: "Image has no alternative text for accessibility";
 severity: "high";
-element: element as HTMLElement;
-fixable: true;
+element: element as HTMLElement;,
+fixable: true;,
 suggestion: "Add descriptive alt text for better accessibility and SEO";,
 impact: "accessibility"});
 seoScore -= 8;
@@ -246,8 +246,8 @@ if (wordCount < 300) {
 suggestions.push({
 id: "increase-content";
 type: "improvement";
-title: "Increase Content Length";
-description: "Consider adding more content to improve SEO and user engagement";
+title: "Increase Content Length";,
+description: "Consider adding more content to improve SEO and user engagement";,
 priority: "high";,
 implementation: "Add relevant sections; expand existing content; include more examples",
 expectedImpact: 15;});
@@ -257,8 +257,8 @@ if (readabilityScore < 80) {
 suggestions.push({
 id: "improve-readability";
 type: "optimization";
-title: "Improve Readability";
-description: "Content could be more readable for better user experience";
+title: "Improve Readability";,
+description: "Content could be more readable for better user experience";,
 priority: "medium";,
 implementation: "Use shorter sentences; break up long paragraphs; simplify complex language",
 expectedImpact: 12;});
@@ -268,8 +268,8 @@ if (seoScore < 80) {
 suggestions.push({
 id: "seo-optimization";
 type: "enhancement";
-title: "SEO Optimization";
-description: "Several SEO improvements could boost search visibility";
+title: "SEO Optimization";,
+description: "Several SEO improvements could boost search visibility";,
 priority: "high";,
 implementation: "Fix meta descriptions; add alt text; improve heading structure",
 expectedImpact: 20;});
@@ -279,8 +279,8 @@ if (engagementScore < 80) {
 suggestions.push({
 id: "engagement-improvement";
 type: "improvement";
-title: "Improve User Engagement";
-description: "Content could be more engaging for visitors";
+title: "Improve User Engagement";,
+description: "Content could be more engaging for visitors";,
 priority: "medium";,
 implementation: "Add interactive elements; improve content structure; include calls-to-action",
 expectedImpact: 10;});

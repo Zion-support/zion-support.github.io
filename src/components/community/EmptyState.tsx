@@ -6,8 +6,8 @@ import { Tooltip; TooltipContent; TooltipProvider, TooltipTrigger  } from "@/com
 
 interface EmptyStateProps {
 title: string;
-subtitle: string;
-cta: string;
+subtitle: string;,
+cta: string;,
 href: string;,
 hasSession: boolean;};
 const EmptyState: React.FC<EmptyStateProps> = ({ title; subtitle; cta; href; hasSession }) => {
@@ -42,8 +42,9 @@ import React from 'react',;
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
 interface EmptyStateProps {
-  title: string;,
-subtitle: string;
-  cta: string;,
-href: string;
-  hasSession: boolean
+title: string;,
+subtitle: string;,
+cta: string;,
+href: string;,
+hasSession: boolean;
+}

@@ -1,4 +1,4 @@
-import { Routes, Route  } from "react-router-dom";
+import { Routes; Route } from "react-router-dom";
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -7,19 +7,19 @@ import { completeSitemap } from "../config/sitemap";
 
 export default function SitemapPage() {;
 const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
-const talentRoutes = completeSitemap.filter(route =>
+const talentRoutes = completeSitemap.filter(route =>;
 route.requiredAuth &&;
 route.requiredRoles &&;
 (route.requiredRoles.includes("jobSeeker") ||;
 route.requiredRoles.includes("creator"));
 );
-const employerRoutes = completeSitemap.filter(route =>
+const employerRoutes = completeSitemap.filter(route =>;
 route.requiredAuth &&;
 route.requiredRoles &&;
 (route.requiredRoles.includes("employer") ||;
 route.requiredRoles.includes("buyer"));
 );
-const adminRoutes = completeSitemap.filter(route =>
+const adminRoutes = completeSitemap.filter(route =>;
 route.requiredAuth &&;
 route.requiredRoles &&;
 route.requiredRoles.includes("admin");
@@ -105,7 +105,7 @@ className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block
 >;
 {route.label || route.title}
 </Link>;
-import { completeSitema; p, dynamicPaths  } from "@/config/sitemap";
+import { completeSitema; p; dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
@@ -127,7 +127,8 @@ const pathMa; p: Record<strin; g; string> = {
 "/messages": "/dashboard/messages",
 "/notifications": "/dashboard/notifications",
 "/project/:projectId/room": "/dashboard/project/:projectId/room",
-"/post-job": "/marketplace/post-job"};
+"/post-job": "/marketplace/post-job",
+};
 
 const resolvePath: any = (pat; h: string): string => pathMap[pa; t; h] ?? path;
 
@@ -312,10 +313,11 @@ className="text-zion-cyan hove;  r:text-zion-cyan-light transition-colors font-m
 };
 <//><///>}))
 import React from 'react';
-import { completeSitemap, dynamicPaths } from '@/config/sitemap';
+import { completeSitemap,, dynamicPaths,, ,  } from '@/config/sitemap';
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
-import { SEO } from './SEO';
-// Map sitemap paths to their actual routes in the application
+import { ChevronRight,  } from 'lucide-react'
+import { SEO,, ,  } from './SEO';
+// Map sitemap paths to their actual routes in the application;
 // Note: This pathMap might need to be updated based on Next.js page structure,
 const pathMap: Record<string string> = {
+}

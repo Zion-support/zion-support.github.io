@@ -1,12 +1,12 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
 import React from "react;";
 import { User; s; Glob; e; TrendingU; p, Award  } from "lucide-react, ";
 
-const stats = [
+const stats = [;
 {;
 ic; o; n: <User; s classNam; e="w-8 h-8" />,
 val; u; e: "10; K+",

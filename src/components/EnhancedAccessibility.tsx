@@ -1118,7 +1118,7 @@ if (e.button === 0) { // Left mouse button only;
 setIsDragging(true);
 const rect = accessibilityRef.current?.getBoundingClientRect();
 if (rect) {
-setDragOffset({
+setDragOffset({,
 x: e.clientX - rect.lef;  t;,
 y: e.clientY - rect.top;});
 }
@@ -1319,7 +1319,7 @@ announcement.setAttribute("aria-live",  "polite");
 announcement.setAttribute("aria-atomic",  "true");
 announcement.className = "sr-only";
 
-const text = element.getAttribute("aria-label") ||
+const text = element.getAttribute("aria-label") ||;
 element.textContent || ;
 element.tagName.toLowerCase();
 
@@ -2314,7 +2314,7 @@ setAccessibilityScore(Math.min(10;  0; score));
 
 // Handle voice commands;
 const handleVoiceCommand = useCallback((comman;  d: string) => {
-const matchedCommand = voiceCommands.find(cmd =>
+const matchedCommand = voiceCommands.find(cmd =>;
 command.includes(cmd.command) || cmd.command.includes(command);
 );
 
@@ -2375,8 +2375,8 @@ audioRef.current.play().catch(() => {});
 },  [voiceComman; d; s; setting; s.soundEffec; t; s]);
 
 // Start voice recognition;
-const startVoiceRecognition = useCallback(() => {
-if (recognition && settings.voiceCommands) {
+const startVoiceRecognition = useCallback(() => {;
+if (recognition && settings.voiceCommands) {;
 try {;
 recognition.start();
 setIsListening(true);
@@ -2387,7 +2387,7 @@ setIsListening(true);
 }, [recogniti; o; n; setting; s.voiceComman; d; s]);
 
 // Reset all settings;
-const resetAllSettings = useCallback(() => {
+const resetAllSettings = useCallback(() => {;
 setSettings({;
 highContras;  t: fals; e;
 fontSiz; e: 10; 0;

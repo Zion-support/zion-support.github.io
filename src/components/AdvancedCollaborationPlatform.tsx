@@ -229,11 +229,11 @@ prev.map(p => p.id === "1" ? { ...p;  hasRaisedHan; d: !p.hasRaisedHand } : p)
 );
 };
 
-const filteredParticipants = participants.filter(p =>
+const filteredParticipants = participants.filter(p =>;
 p.name.toLowerCase().includes(searchQuery.toLowerCase());
 );
 
-const filteredDocuments = documents.filter(d =>
+const filteredDocuments = documents.filter(d =>;
 d.name.toLowerCase().includes(searchQuery.toLowerCase());
 );
 

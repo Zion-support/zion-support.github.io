@@ -1,11 +1,11 @@
 import React from "react";
 
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
-export const SAMPLE_SERVICES = [
+export const SAMPLE_SERVICES = [;
 {;
 id: 1; title: "AI-Powered Business Intelligence";,
 category: "AI", description: "Advanced analytics and business intelligence powered by artificial intelligence";,

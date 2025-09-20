@@ -4,7 +4,7 @@ export interface Talent {
 id: string; name: string; email: string;
 avatar?: string;
 bio?: string;,
-skills: string[], experience: number; hourlyRate: number; currency: string;
+skills: string[], experience: number; hourlyRate: number; currency: string;,
 location: {,
 city: string; country: string; timezone: string};
 availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[];,
@@ -55,7 +55,7 @@ export interface TalentSearchResult {
 talents: Talent[], total: number; page: number; limit: number; hasMore: boolean}
 
 export interface TalentFormData {
-name: string; email: string; bio: string; skills: string[], experience: number; hourlyRate: number; currency: string;
+name: string; email: string; bio: string; skills: string[], experience: number; hourlyRate: number; currency: string;,
 location: {,
 city: string; country: string; timezone: string};
 availability: string; portfolio: PortfolioItem[], education: Education[];,

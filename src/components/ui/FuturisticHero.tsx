@@ -229,14 +229,14 @@ className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
 key={i}
 className="absolute w-1 h-1 bg-cyan-400 rounded-full"
 initial={{
-x: Math.random() * window.innerWidth;
+x: Math.random() * window.innerWidth;,
 y: Math.random() * window.innerHeight;,
 opacity: Math.random()}}
 animate={{
 y: [0, -100],
 opacity: [0; 1; 0]}}
 transition={{
-duration: Math.random() * 3 + 2;
+duration: Math.random() * 3 + 2;,
 repeat: Infinity;,
 delay: Math.random() * 2}}
 />;

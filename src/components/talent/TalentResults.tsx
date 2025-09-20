@@ -22,8 +22,8 @@ toggleAvailability: (availability: string) => void;
 selectedRegions: string[];
 toggleRegion: (region: string) => void;
 priceRange: [number; number];
-setPriceRange: (range: [number; number]) => void;
-experienceRange: [number; number];
+setPriceRange: (range: [number; number]) => void;,
+experienceRange: [number; number];,
 setExperienceRange: (range: [number; number]) => void;,
 clearFilters: () => void;};
 }

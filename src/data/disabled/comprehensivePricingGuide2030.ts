@@ -1,12 +1,12 @@
 import React from "react";
 
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 
-export const COMPREHENSIVE_PRICING_GUIDE_2030 = {
-basic: {,
+export const COMPREHENSIVE_PRICING_GUIDE_2030 = {;
+basic: {,;
 name: "Basic Plan",;
 price: 2999;,
 features: [

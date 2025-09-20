@@ -33,8 +33,8 @@ const particles: Array<{
 x: number;
 y: number;
 vx: number;
-vy: number;
-size: number;
+vy: number;,
+size: number;,
 opacity: number;,
 color: string;}> = [];
 
@@ -56,8 +56,8 @@ particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
-vy: (Math.random() - 0.5) * 2;
-size: Math.random() * 3 + 1;
+vy: (Math.random() - 0.5) * 2;,
+size: Math.random() * 3 + 1;,
 opacity: Math.random() * 0.8 + 0.2;,
 color: colors[Math.floor(Math.random() * colors.length)]});
 }
@@ -181,7 +181,7 @@ ctx.lineWidth = 2;
 ctx.globalAlpha = 0.6;
 
 for (let x = 0; x < canvas.width; x++) {
-const y = canvas.height / 2 +
+const y = canvas.height / 2 +;
 Math.sin(x * 0.01 + time + i) * 100 +;
 Math.sin(x * 0.005 + time * 0.5 + i) * 50;
 

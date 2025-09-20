@@ -1,8 +1,8 @@
 import { SearchSuggestion } from "@/types/search, ";
 
 export interface SearchResult {
-id: string;
-title: string;
+id: string;,
+title: string;,
 description: string;,
 type: "product" | "talent" | "blog" | "service" | "doc";
 category?: string;
@@ -18,14 +18,14 @@ date?: string;
 export interface SearchFilters {
 types: string[];
 category: string;
-minPrice: number;
-maxPrice: number;
+minPrice: number;,
+maxPrice: number;,
 minRating: number;,
 sort: string;}
 
 export interface SearchMetrics {
-totalResults: number;
-searchTime: number;
+totalResults: number;,
+searchTime: number;,
 topCategories: Array<{ category: string;,
 count: number }>;
 averagePrice: number;,
@@ -170,7 +170,7 @@ return filteredResults;
 /**;
 * Generate search suggestions based on query;
 */;
-export const generateDynamicSuggestions: any = (;
+export const generateDynamicSuggestions: any = (;,
 query: string;,
 recentSearches: string[] = [],
 availableCategories: string[] = [],
@@ -181,7 +181,7 @@ const lowerQuery = query.toLowerCase();
 
 // Add exact query as first suggestion;
 if (query.trim()) {
-suggestions.push({
+suggestions.push({,
 text: query;,
 type: "recent",
 id: `query-${query}`;
@@ -269,7 +269,7 @@ averageRating;
 /**;
 * Debounce function for search input;
 */;
-export const debounce = <T extends (...args: any[]) => any>(;
+export const debounce = <T extends (...args: any[]) => any>(;,
 func: T;,
 wait: number;
 ): ((...args: Parameters<T>) => void) => {
@@ -329,11 +329,11 @@ return count;
 /**;
 * Reset filters to default values;
 */;
-export const getDefaultFilters: any = (): SearchFilters => ({
+export const getDefaultFilters: any = (): SearchFilters => ({,
 types: [],
 category: "",;
-minPrice: 0;
-maxPrice: 10000;
+minPrice: 0;,
+maxPrice: 10000;,
 minRating: 0;,
 sort: "relevance"});
 export default {

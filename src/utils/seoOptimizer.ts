@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface SEOData {
-title: string;
+title: string;,
 description: string;,
 keywords: string[];
 ogImage?: string;
@@ -10,10 +10,11 @@ structuredData?: object;
 }
 
 export interface ContentQualityIssue {
-page: string;
-issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
+page: string;,
+issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";,
 severity: "high" | "medium" | "low";,
-suggestedFix: string;}
+suggestedFix: string;,
+}
 
 export class SEOOptimizer {
 private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {
@@ -113,8 +114,9 @@ const baseData = {
 "publisher": {
 "@type": "Organization",
 "name": "Zion Tech Group",
-"url": "https://ziontechgroup.com",
-"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"};
+"url": "https://ziontechgroup.com",;
+"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",;
+};
 };
 // Add specific structured data based on page type;
 if (path === "/") {
@@ -165,7 +167,8 @@ issues.push({
 page;,
 issue: "missing-title",
 severity: "high",
-suggestedFix: "Add a descriptive title tag with relevant keywords"});
+suggestedFix: "Add a descriptive title tag with relevant keywords",
+});
 }
 
 // Check for missing meta description;
@@ -174,7 +177,8 @@ issues.push({
 page;
 issue: "missing-description",
 severity: "high",
-suggestedFix: "Add a meta description tag with compelling content"});
+suggestedFix: "Add a meta description tag with compelling content",
+});
 }
 
 // Check for short meta description;
@@ -184,7 +188,8 @@ issues.push({
 page;
 issue: "short-description",
 severity: "medium",
-suggestedFix: "Expand meta description to 120-160 characters for better SEO"});
+suggestedFix: "Expand meta description to 120-160 characters for better SEO",
+});
 }
 
 // Check for missing headings;
@@ -193,7 +198,8 @@ issues.push({
 page;
 issue: "no-headings",
 severity: "medium",
-suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization"});
+suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization",
+});
 }
 
 // Check for minimal content;
@@ -203,7 +209,8 @@ issues.push({
 page;
 issue: "minimal-content",
 severity: "medium",
-suggestedFix: "Add more relevant content to improve user experience and SEO value"});
+suggestedFix: "Add more relevant content to improve user experience and SEO value",
+});
 }
 
 return issues;

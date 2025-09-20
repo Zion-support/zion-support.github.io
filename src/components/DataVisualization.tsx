@@ -70,7 +70,7 @@ change: -2.4; changeType: "decrease",",
 icon: <Target className="w-5 h-5"   />,
 color: "text-yellow-400"    };
 {,
-title: "Avg Session", value: "2m 47s";
+title: "Avg Session", value: "2m 47s";,
 change: 0.0;,
 changeType: "neutral",",
 icon: <Activity className="w-5 h-5"   />,
@@ -123,7 +123,7 @@ const lineChartData = {,
 </any>,
 </any>,
 </any>,
-</any>,
-</any, >,
+</any>,;
+</any, >,;
 </DataVisualizationProps>;
 })]]<//DataVisualizationProps><///DataVisualizationProps>;

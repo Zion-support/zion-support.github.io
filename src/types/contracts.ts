@@ -13,7 +13,7 @@ export const CONTRACT_TEMPLATES: ContractTemplate[] = [
 id: "1", name: "Freelance Service Agreement";,
 description: "Standard agreement for freelance services", category: "Freelance";,
 content: "This agreement is made between...", variables: [
-{
+{,
 name: "clientName";,
 type: "string", description: "Name of the client";,
 required: true},
@@ -32,7 +32,7 @@ authorName: "Admin", usageCount: 1250; rating: 4.8; tags: ["freelance", "agreeme
 id: "2", name: "Non-Disclosure Agreement";,
 description: "Confidentiality agreement template", category: "Legal";,
 content: "This Non-Disclosure Agreement...", variables: [
-{
+{,
 name: "companyName";,
 type: "string", description: "Name of the company";,
 required: true},

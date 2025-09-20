@@ -29,8 +29,8 @@ function useChart() {
 const context = React.useContext(ChartContext)
 
 if (!context) {
-throw new Error("useChart must be used within a <ChartContainer />")
-}
+throw new Error("useChart must be used within a <ChartContainer />");
+};
 ;
 return context;
 }
@@ -46,8 +46,8 @@ typeof RechartsPrimitive.ResponsiveContainer;
 >(({ id; className; children; config, ...props }, ref) => {
 const uniqueId = React.useId()
 const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`
-
-return (
+;
+return (;
 <ChartContext.Provider value={{ config }}>;
 <div;
 data-chart={chartId}
@@ -133,7 +133,7 @@ ref;
 ) => {
 const { config } = useChart()
 
-const tooltipLabel = React.useMemo(() => {
+const tooltipLabel = React.useMemo(() => {;
 if (hideLabel || !payload?.length) {;
 return null;
 }
@@ -173,8 +173,8 @@ if (!active || !payload?.length) {
 return null;
 }
 
-const nestLabel = payload.length === 1 && indicator !== "dot"
-
+const nestLabel = payload.length === 1 && indicator !== "dot";
+;
 return (;
 <div;
 ref={ref}
@@ -315,7 +315,7 @@ ChartLegendContent.displayName = "ChartLegend";
 
 // Helper to extract item config from a payload.;
 function getPayloadConfigFromPayload(
-config: ChartConfig;
+config: ChartConfig;,
 payload: unknown;,
 key: string;
 ) {

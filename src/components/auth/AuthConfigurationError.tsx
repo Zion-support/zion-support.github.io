@@ -2,5 +2,6 @@ import { AlertTriangle, ExternalLink, RefreshCw, SettingsCheckCircle } from 'luc
 import { Button } from '@/components/ui/button';
 import { AlertAlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {
-  onRetry?: () => void;
-  showSetupButton?: boolean
+onRetry?: () => void;
+showSetupButton?: boolean;
+}

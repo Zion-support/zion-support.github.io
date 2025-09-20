@@ -7,5 +7,5 @@ import { Wallet } from 'lucide-react';
 import { toast } from "sonner";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function Web3Login() {
-  )
+)
 }

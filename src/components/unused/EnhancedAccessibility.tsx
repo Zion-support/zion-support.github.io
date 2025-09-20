@@ -16,8 +16,8 @@ interface AccessibilitySettings {
 highContrast: boolean;
 fontSize: number;
 reducedMotion: boolean;
-screenReader: boolean;
-keyboardNavigation: boolean;
+screenReader: boolean;,
+keyboardNavigation: boolean;,
 focusIndicator: boolean;,
 colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";};
 const EnhancedAccessibility: React.FC = () => {
@@ -26,8 +26,8 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 fontSize: 16;
 reducedMotion: false;
-screenReader: false;
-keyboardNavigation: false;
+screenReader: false;,
+keyboardNavigation: false;,
 focusIndicator: true;,
 colorBlindness: "none"});
 useEffect(() => {
@@ -111,8 +111,8 @@ const defaultSettings: AccessibilitySettings = {;
 highContrast: false;
 fontSize: 16;
 reducedMotion: false;
-screenReader: false;
-keyboardNavigation: false;
+screenReader: false;,
+keyboardNavigation: false;,
 focusIndicator: true;,
 colorBlindness: "none"};
 setSettings(defaultSettings);

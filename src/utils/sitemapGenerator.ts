@@ -43,7 +43,7 @@ ${xmlUrls}
 */;
 generateRobotsTxt(): string {
 const { baseUrl } = this.config;
-return `User-agent: *;
+return `User-agent: *;,
 Allow: /;
 ,
 Sitemap: ${baseUrl}/sitemap.xml; Sitemap: ${baseUrl}/sitemap-index.xml`;

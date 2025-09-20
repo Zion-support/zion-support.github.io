@@ -1,6 +1,6 @@
 import React, { useState; useRef; useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
-import { motion, AnimatePresence  } from "framer-motion, ";
+import { motion; AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {
 src: string; alt: string;
@@ -17,7 +17,8 @@ onError?: () => void;
 aspectRatio?: "square" | "video" | "auto" | number;
 objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
 blur?: boolean;
-quality?: number};
+quality?: number,
+};
 export function OptimizedImage({;
 src;
 alt;
@@ -34,10 +35,11 @@ onError;
 aspectRatio = "auto",
 objectFit = "cover",
 blur = false;
-quality = 75}: OptimizedImageProps) {
-const [isLoaded, setIsLoaded] = useState(false);
-const [hasError, setHasError] = useState(false);
-const [isInView, setIsInView] = useState(priority);
+quality = 75,
+}: OptimizedImageProps) {
+const [isLoaded; setIsLoaded] = useState(false);
+const [hasError; setHasError] = useState(false);
+const [isInView; setIsInView] = useState(priority);
 const imgRef = useRef<HTMLImageElement>(null);
 const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -49,26 +51,31 @@ observerRef.current = new IntersectionObserver(
 ([entry]) => {
 if (entry.isIntersecting) {
 setIsInView(true);
-observerRef.current?.disconnect()}
+observerRef.current?.disconnect(),
+}
 },
 {
-rootMargin: "50px", threshold: 0.1}
+rootMargin: "50px", threshold: 0.1,
+}
 );
 observerRef.current.observe(imgRef.current);
 
 return () => {
 if (observerRef.current) {
-observerRef.current.disconnect()}
+observerRef.current.disconnect(),
+}
 };
 }, [priority]);
 
 const handleLoad: any = () => {;
 setIsLoaded(true);
-onLoad?.()};
+onLoad?.(),
+};
 
 const handleError: any = () => {;
 setHasError(true);
-onError?.()};
+onError?.(),
+};
 
 const getAspectRatioClass: any = () => {
 if (typeof aspectRatio === "number") {;
@@ -80,7 +87,8 @@ case "square":
 return "aspect-square";
 case "video":
 return "aspect-video";
-default: return ""}
+default: return "",
+}
 };
 
 const getObjectFitClass: any = () => {
@@ -94,8 +102,9 @@ return "object-fill";
 case "none":
 return "object-none";
 case "scale-down":
-return "object-scale-down";
-default: return "object-cover"}
+return "object-scale-down";,
+default: return "object-cover",
+}
 };
 
 // Generate responsive image sources;
@@ -160,7 +169,8 @@ srcSet={srcSet}
 onLoad={handleLoad}
 onError={handleError}
 style={{
-filter: blur && !isLoaded ? "blur(10px)" : "none"}}
+filter: blur && !isLoaded ? "blur(10px)" : "none",
+}}
 />;
 
 {/* Loading overlay */}
@@ -191,12 +201,15 @@ src;
 alt;
 size = "md",
 className,
-...props}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
-size?: "sm" | "md" | "lg" | "xl"}) {
+...props,
+}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
+size?: "sm" | "md" | "lg" | "xl",
+}) {
 const sizeClasses = {;
 sm: "w-8 h-8", md: "w-10 h-10";,
 lg: "w-12 h-12",
-xl: "w-16 h-16"};
+xl: "w-16 h-16",
+};
 return (
 <OptimizedImage;
 src={src}
@@ -214,7 +227,8 @@ export function HeroImage({;
 src;
 alt;
 className,
-...props}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
+...props,
+}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
 return (
 <OptimizedImage;
 src={src}

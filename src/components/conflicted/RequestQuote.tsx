@@ -35,8 +35,8 @@ email: "";
 phone: "";
 company: "";
 projectType: "";
-budget: "";
-timeline: "";
+budget: "";,
+timeline: "";,
 description: "";,
 urgency: "medium"});
 const [submissionStatus, setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -101,8 +101,8 @@ email: "";
 phone: "";
 company: "";
 projectType: "";
-budget: "";
-timeline: "";
+budget: "";,
+timeline: "";,
 description: "";,
 urgency: "medium"});
 setSubmissionStatus("idle");
