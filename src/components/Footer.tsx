@@ -1,4 +1,4 @@
-import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { FooterNewsletter } from "./FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 
