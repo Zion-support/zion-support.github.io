@@ -1,9 +1,11 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+
 interface Service {
   id: string;
   name: string;
 }
-
-import React, { useState, useEffect } from "react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

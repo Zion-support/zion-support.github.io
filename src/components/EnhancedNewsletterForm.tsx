@@ -1,60 +1,73 @@
-interface Service {
-id: string;
-name: string;
-}
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Mail } from 'lucide-react'
+import { useToast } from "@/hooks/use-toast"
 
-import React from "react",
-const EnhancedNewsletterForm: React.FC = () => {
-,
-return (,
-<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">EnhancedNewsletterForm</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
-},
-</div>)},
-export default EnhancedNewsletterForm,;<//div><///div>
-import { Button,  } from '@/components/ui/button'
-import { Input,  } from '@/components/ui/input'
-import { useState, useRef,  } from 'react'
-import { Mail,  } from 'lucide-react'
-import { useToast,  } from "@/hooks/use-toast";
-import { logErrorToProduction } from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
-return (
-    <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const { toast } = useToast()
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+
+    setIsSubmitting(true)
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setIsSubmitted(true)
+      toast({
+        title: "Success!",
+        description: "You've been subscribed to our newsletter.",
+      })
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to subscribe. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  return (
+    <div className='w-full max-w-lg mx-auto bg-blue-50 border border-blue-200 rounded-lg p-6'>
       <div className='flex items-center mb-4'>
-        <div className='p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3'>
+        <div className='p-2 bg-blue-100 rounded-full text-blue-600 mr-3'>
           <Mail className='h-6 w-6' />
         </div>
         <div>
-          <h3 className='text-lg font-bold text-white'>Stay Updated</h3>
-          <p className='text-zion-slate-light text-sm'>
-            Get exclusive offers trending AI news and early access to best,
-deals
+          <h3 className='text-lg font-bold text-gray-900'>Stay Updated</h3>
+          <p className='text-gray-600 text-sm'>
+            Get exclusive offers, trending AI news and early access to best deals
           </p>
         </div>
       </div>
       {isSubmitted ? (
-        <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>
-          <p className='text-white font-medium'>Thank you for subscribing!</p>
-          <p className='text-zion-slate-light mt-1'>
-            We&apos;ll keep you updated with the latest from Zion.
+        <div className='text-center p-4 rounded-lg bg-green-50 border border-green-200'>
+          <p className='text-green-800 font-medium'>Thank you for subscribing!</p>
+          <p className='text-green-600 mt-1'>
+            We'll keep you updated with the latest from Zion.
           </p>
         </div>
       ) : (
-        <form,
-onSubmit={handleSubmit}
+        <form
+          onSubmit={handleSubmit}
           className='flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2'
         >
           <label htmlFor='enhanced-newsletter-email' className='sr-only'>
             Email address for newsletter subscription
           </label>
-          <Input,
-type='email'
+          <Input
+            type='email'
             id='enhanced-newsletter-email'
             name='email'
             placeholder='Enter your email'
-            className='flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple'
+            className='flex-grow bg-white text-gray-900 border-gray-300 focus:border-blue-500 focus:ring-blue-500'
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setEmail(e.target.value)
@@ -62,25 +75,27 @@ type='email'
             autoComplete='email'
             required
           />
-          <Button,
-type='submit'
+          <Button
+            type='submit'
             disabled={isSubmitting}
-            className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'          >
+            className='bg-blue-600 hover:bg-blue-700 text-white'
+          >
             {isSubmitting ? 'Subscribing...' : 'Subscribe'}
           </Button>
         </form>
       )}
-      <div className='mt-4 flex items-center text-xs text-zion-slate-light'>
+      <div className='mt-4 flex items-center text-xs text-gray-500'>
         <div className='flex -space-x-1 mr-2'>
-          {[...Array(3)].map((_ i) => (
-            <div,
-key={i}
-              className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'
-            >              {String.fromCharCode(65 + i)}
+          {[...Array(3)].map((_, i) => (
+            <div
+              key={i}
+              className='h-5 w-5 rounded-full border border-gray-300 bg-white flex items-center justify-center text-blue-600'
+            >
+              {String.fromCharCode(65 + i)}
             </div>
           ))}
         </div>
-        <span>Join 10000+ tech professionals who already subscribe</span>
+        <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
   )
