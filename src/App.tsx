@@ -1,15 +1,18 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, Suspense, lazy } from 'react';
 import './App.css';
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LazyImage from './components/LazyImage';
-// import VirtualList from './components/VirtualList';
-// import MemoizedComponent from './components/MemoizedComponent';
 import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-// import LoadingSpinner from './components/LoadingSpinner';
-// import SkeletonLoader from './components/SkeletonLoader';
 import { useTheme } from './context/ThemeContext';
+import SEOOptimizer from './utils/seoOptimizer';
+
+// Lazy load heavy components for better performance
+const VirtualList = lazy(() => import('./components/VirtualList'));
+const MemoizedComponent = lazy(() => import('./components/MemoizedComponent'));
+const LoadingSpinner = lazy(() => import('./components/LoadingSpinner'));
+const SkeletonLoader = lazy(() => import('./components/SkeletonLoader'));
 
 // Service data with more details
 const services = [
@@ -94,14 +97,17 @@ function App() {
   const { isDarkMode, toggleTheme } = useTheme();
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [showContactForm, setShowContactForm] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [contactData, setContactData] = useState({
     name: '',
     email: '',
     company: '',
     message: ''
   });
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Performance monitoring
+  // Performance monitoring and loading state
   useEffect(() => {
     // Add performance monitoring
     const observer = new PerformanceObserver((list) => {
@@ -115,7 +121,15 @@ function App() {
     });
     observer.observe({ entryTypes: ['measure', 'navigation'] });
     
-    return () => observer.disconnect();
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    
+    return () => {
+      observer.disconnect();
+      clearTimeout(timer);
+    };
   }, []);
 
   // Theme toggle is now handled by the context
@@ -128,19 +142,63 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // Contact form handlers
-  const handleContactSubmit = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    if (process.env.NODE_ENV === 'development') {
-      // Log contact form submission in development
-      // eslint-disable-next-line no-console
-      console.log('Contact form submitted:', contactData);
+  // Form validation
+  const validateForm = useCallback(() => {
+    const errors: Record<string, string> = {};
+    
+    if (!contactData.name.trim()) {
+      errors.name = 'Name is required';
     }
-    // In a real app, you would send this to your backend
-    alert('Thank you for your message! We will get back to you soon.');
-    setContactData({ name: '', email: '', company: '', message: '' });
-    setShowContactForm(false);
+    
+    if (!contactData.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactData.email)) {
+      errors.email = 'Please enter a valid email address';
+    }
+    
+    if (!contactData.message.trim()) {
+      errors.message = 'Message is required';
+    } else if (contactData.message.trim().length < 10) {
+      errors.message = 'Message must be at least 10 characters long';
+    }
+    
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
   }, [contactData]);
+
+  // Contact form handlers
+  const handleContactSubmit = useCallback(async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      if (process.env.NODE_ENV === 'development') {
+        // Log contact form submission in development
+        // eslint-disable-next-line no-console
+        console.log('Contact form submitted:', contactData);
+      }
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // In a real app, you would send this to your backend
+      alert('Thank you for your message! We will get back to you soon.');
+      setContactData({ name: '', email: '', company: '', message: '' });
+      setShowContactForm(false);
+      setFormErrors({});
+    } catch (error) {
+      alert('Sorry, there was an error sending your message. Please try again.');
+      // eslint-disable-next-line no-console
+      console.error('Contact form error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }, [contactData, validateForm]);
 
   const handleContactChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -205,10 +263,27 @@ function App() {
   return (
     <ErrorBoundary>
       <AccessibilityEnhancer>
+        <SEOOptimizer
+          title="Zion Tech Group - Revolutionary AI & Technology Solutions"
+          description="Leading provider of AI, quantum computing, space technology, and enterprise IT solutions. Transform your business with cutting-edge technology."
+          keywords="AI, artificial intelligence, quantum computing, space technology, enterprise IT, machine learning, automation, Zion Tech Group"
+          url="https://zion.app"
+          type="website"
+        />
         <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
         <PerformanceMonitor />
+        
+        {/* Loading Screen */}
+        {isLoading && (
+          <div className="loading-screen" role="status" aria-label="Loading application">
+            <div className="loading-spinner">
+              <div className="spinner"></div>
+            </div>
+            <p className="loading-text">Loading Zion Tech Group...</p>
+          </div>
+        )}
       
-      <main id="main-content">
+      <main id="main-content" className={isLoading ? 'loading' : ''}>
       <header className="App-header">
         <div className="header-controls">
           <div className="current-time">
@@ -258,11 +333,16 @@ function App() {
       
       <main>
         {/* Services Section */}
-        <section className="services">
-          <h2>Our Services</h2>
-          <div className="services-grid">
+        <section className="services" id="services" aria-labelledby="services-heading">
+          <h2 id="services-heading">Our Services</h2>
+          <p className="services-description">
+            Discover our comprehensive range of cutting-edge technology solutions designed to transform your business.
+          </p>
+          <div className="services-grid" role="list" aria-label="Our services">
             {services.map((service) => (
-              <ServiceCard key={service.id} service={service} />
+              <div key={service.id} role="listitem">
+                <ServiceCard service={service} />
+              </div>
             ))}
           </div>
         </section>
@@ -307,11 +387,11 @@ function App() {
 
         {/* Contact Form Section */}
         {showContactForm && (
-          <section className="contact-form-section">
+          <section className="contact-form-section" id="contact" aria-labelledby="contact-heading">
             <div className="contact-form-container">
-              <h2>Get In Touch</h2>
+              <h2 id="contact-heading">Get In Touch</h2>
               <p>Ready to transform your business? Let's discuss your project.</p>
-              <form className="contact-form" onSubmit={handleContactSubmit}>
+              <form className="contact-form" onSubmit={handleContactSubmit} noValidate>
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name">Name *</label>
@@ -321,8 +401,16 @@ function App() {
                       name="name"
                       value={contactData.name}
                       onChange={handleContactChange}
+                      className={formErrors.name ? 'error' : ''}
+                      aria-invalid={!!formErrors.name}
+                      aria-describedby={formErrors.name ? 'name-error' : undefined}
                       required
                     />
+                    {formErrors.name && (
+                      <span id="name-error" className="error-message" role="alert">
+                        {formErrors.name}
+                      </span>
+                    )}
                   </div>
                   <div className="form-group">
                     <label htmlFor="email">Email *</label>
@@ -332,8 +420,16 @@ function App() {
                       name="email"
                       value={contactData.email}
                       onChange={handleContactChange}
+                      className={formErrors.email ? 'error' : ''}
+                      aria-invalid={!!formErrors.email}
+                      aria-describedby={formErrors.email ? 'email-error' : undefined}
                       required
                     />
+                    {formErrors.email && (
+                      <span id="email-error" className="error-message" role="alert">
+                        {formErrors.email}
+                      </span>
+                    )}
                   </div>
                 </div>
                 <div className="form-group">
@@ -354,12 +450,35 @@ function App() {
                     value={contactData.message}
                     onChange={handleContactChange}
                     rows={5}
+                    className={formErrors.message ? 'error' : ''}
+                    aria-invalid={!!formErrors.message}
+                    aria-describedby={formErrors.message ? 'message-error' : undefined}
                     required
                   />
+                  {formErrors.message && (
+                    <span id="message-error" className="error-message" role="alert">
+                      {formErrors.message}
+                    </span>
+                  )}
                 </div>
-                <button type="submit" className="submit-btn">
-                  Send Message
+                <button 
+                  type="submit" 
+                  className="submit-btn"
+                  disabled={isSubmitting}
+                  aria-describedby="submit-status"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <span className="spinner-small"></span>
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
+                <div id="submit-status" className="sr-only" aria-live="polite">
+                  {isSubmitting ? 'Sending your message...' : 'Ready to send message'}
+                </div>
               </form>
             </div>
           </section>
