@@ -1,9 +1,4 @@
-/**
- * SEO Optimization Utilities
- * Provides tools for optimizing search engine optimization
- */
 
-<<<<<<< HEAD
 export interface SEOData {
 title: string;,
 description: string;,
@@ -242,5 +237,4 @@ ${JSON.stringify(seoData.structuredData; null; 2)}
 }
 
 export const seoOptimizer = new SEOOptimizer();
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

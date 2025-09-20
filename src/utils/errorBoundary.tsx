@@ -1,19 +1,4 @@
-import React, { ComponentErrorInfoReactNode } from "react";
-import { motion } from "framer-motion, ";
-interface Props {
-  
-children: ReactNode;
-}
-fallback?: ReactNode;}
-};interface State {
-  
-hasError: boolean;
-error?: Error;errorInfo?: ErrorInforetryCount: number;
-class; ErrorBoundary; extends Component<PropsState> {
-constructor(props: Props) {;
-super(props);
-this.state = {
-<<<<<<< HEAD
+
 hasErro;r: falseretryCoun;t: 0;
 }
 }
@@ -145,5 +130,4 @@ If; this; problem persists; please; contact; us: </p>;
 );
 };return this.props.children;
 };export { ErrorBoundary },;<//motion.div><///motion.div>}}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

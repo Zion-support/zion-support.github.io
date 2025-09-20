@@ -1,12 +1,4 @@
-export interface ContentAnalysis {
-  
-page: string;
-wordCount: number;
-headingCount: number;
-imageCount: number;
-linkCount: number;
-readabilityScore: number;
-<<<<<<< HEAD
+
 seoScore: number;,
 issues: ContentIssue[];,
 suggestions: ContentSuggestion[];
@@ -398,5 +390,4 @@ return `${baseDescription} ${pageKeywords}. Transform your business with Zion Te
 }
 
 export const contentOptimizer = new ContentOptimizer();
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

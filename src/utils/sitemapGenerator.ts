@@ -1,8 +1,4 @@
-import React from "react";
 
-interface SitemapUrl {url: string;
-lastmod?: string;
-<<<<<<< HEAD
 }
 changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";}
 priority?: number}
@@ -112,5 +108,4 @@ return generator.generateXML()}
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
 const generator = new SitemapGenerator(config);
 return generator.generateRobotsTxt()}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

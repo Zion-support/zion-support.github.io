@@ -1,28 +1,23 @@
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";,
-import { useState; useEffect } from "react";,
-import { AlertCircle; CheckCircle, Clock; ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";,
-import Link from "next/link",;
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card";
-import { logWarn } from "@/utils/productionLogger";
-interface ServiceStatus {
-  )}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 import React from 'react';
+import { SEO } from '@/components/SEO';
 
 export default function Status() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Status</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
+    <>
+      <SEO
+        title="System Status | Zion AI Marketplace"
+        description="Check the current status of our services."
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">System Status</h1>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <p className="text-gray-600">All systems are operational.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
-<<<<<<< HEAD
-)}
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 }

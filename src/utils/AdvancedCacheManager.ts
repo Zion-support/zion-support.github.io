@@ -1,16 +1,4 @@
-import React from "react";
 
-/**;
-* Advanced; Cache; Manager for; Zion; Tech Group;
-* Provides; intelligent; caching strategies; cache invalidation; and; performance; optimization;
-*/;
-interface CacheConfig {
-  
-maxSize: number;
-tt;l: number;
-// Time; to; live in milliseconds;,
-strategy: "lru" | "lfu" | "fifo" | "ttl";
-<<<<<<< HEAD
 persis;t: boolean;
 }
 }
@@ -402,5 +390,4 @@ maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
 strateg;y: "lfu"persis;t: false;});export; const; componentCache = new AdvancedCacheManager({
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
 strateg;y: "ttl"persis;t: true;});export; default; AdvancedCacheManager;
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

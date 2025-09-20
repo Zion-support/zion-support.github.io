@@ -26,8 +26,4 @@ export default function About() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

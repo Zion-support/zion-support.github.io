@@ -1,29 +1,8 @@
-import React, { useState, useEffect } from "react";
-<<<<<<< HEAD
+
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Search, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Building, Cpu, Network, Cloud, Clock, Rocket, Globe, Lock, ArrowRight, ChevronDown, Home } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
-=======
-import ThemeToggle from "@/components/ThemeToggle";
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
-
-export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
   const location = useLocation();
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-<<<<<<< HEAD
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Code },
@@ -31,13 +10,6 @@ export function Header() {
     { name: 'About', href: '/about', icon: Building },
     { name: 'Contact', href: '/contact', icon: Heart }];
 
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-      isScrolled ? "bg-white shadow-md" : "bg-transparent"
-    }`}>
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -101,34 +73,4 @@ export function Header() {
 };
 
 export default Header;
-=======
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-8">
-            <a href="/" className="text-2xl font-bold text-gray-900">
-              Zion
-            </a>
-            <div className="hidden md:flex space-x-6">
-              <a href="/" className="text-gray-600 hover:text-gray-900">
-                Home
-              </a>
-              <a href="/blog" className="text-gray-600 hover:text-gray-900">
-                Blog
-              </a>
-              <a href="/contact" className="text-gray-600 hover:text-gray-900">
-                Contact
-              </a>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <ThemeToggle />
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </nav>
-    </header>
-  );
-}
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

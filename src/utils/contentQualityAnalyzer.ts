@@ -1,18 +1,4 @@
-import React from "react";
 
-export interface ContentQualityMetrics {
-  
-pageUrl: string;
-title: string;
-wordCount: number;
-headingCount: number;
-imageCount: number;
-linkCount: number;
-metaDescriptionLength: number;
-hasStructuredData: boolean;
-readabilityScore: number;
-seoScore: number;
-<<<<<<< HEAD
 overallScore: number;,
 issues: string[];,
 recommendations: string[];
@@ -417,5 +403,4 @@ this.analyzedPages.clear();
 }
 
 export default ContentQualityAnalyzer;
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

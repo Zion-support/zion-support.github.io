@@ -1,8 +1,4 @@
-import React from "react";
 
-export interface LinkInfo {url: string; status: "working" | "broken" | "missing" | "external";,
-page: string;
-<<<<<<< HEAD
 }
 anchor?: string;}
 error?: string}
@@ -140,5 +136,4 @@ return this.missingPages}
 }
 
 export default LinkChecker;
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

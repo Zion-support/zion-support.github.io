@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface CategoryCardProps {
   title: string;
@@ -12,7 +12,7 @@ interface CategoryCardProps {
 export function CategoryCard({ title, description, icon, href }: CategoryCardProps) {
   return (
     <Link
-      to={href}
+      href={href}
       className="group block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200 hover:border-blue-300"
     >
       <div className="flex items-center mb-4">
@@ -27,17 +27,5 @@ export function CategoryCard({ title, description, icon, href }: CategoryCardPro
         {description}
       </p>
     </Link>
-=======
-import React from 'react';
-
-export function CategoryCard({ category }) {
-  return (
-    <div className="p-4 border rounded-lg hover:shadow-md transition-shadow">
-      <h3 className="font-semibold">{category.name}</h3>
-      <p className="text-gray-600">{category.description}</p>
-    </div>
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
   );
 }
-
-export default CategoryCard;

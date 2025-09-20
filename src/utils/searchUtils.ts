@@ -1,9 +1,4 @@
-import { SearchSuggestion } from "@/types/search, ";
 
-export interface SearchResult {
-  
-id: string;
-<<<<<<< HEAD
 title: string;,
 description: string;,
 type: "product" | "talent" | "blog" | "service" | "doc";
@@ -365,5 +360,4 @@ hasActiveFilters;
 getActiveFilterCount;
 getDefaultFilters;
 };
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

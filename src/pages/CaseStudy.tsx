@@ -1,5 +1,4 @@
-import React from 'react';
-<<<<<<< HEAD
+
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { CASE_STUDIES } from "@/data/case-studies";
@@ -114,16 +113,4 @@ export default function CaseStudy() {
     </>
   );
 }
-=======
 
-export default function CaseStudy() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Study</h1>
-        <p className="text-lg text-gray-600">Case study details...</p>
-      </div>
-    </div>
-  );
-};
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

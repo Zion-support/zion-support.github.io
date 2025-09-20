@@ -1,45 +1,23 @@
-<<<<<<< HEAD
-import { useState; useEffect } from "react";,
-import Link from "next/link",;
-import { useRouter } from "next/router";,
-import { Suspense } from "react";,
-import { Button } from "@/components/ui/button";,
-import CreatePostButton from "@/components/community/CreatePostButton",;
-import { Input } from "@/components/ui/input";,
-import { SEO } from "@/components/SEO";,
-import PostCard from "@/components/community/PostCard",;
-import { PostListSkeleton } from "@/components/community/PostCardSkeleton";,
-import { ForumCategoryInfo; ForumPost } from "@/types/community";,
-import { usePostsByCategory } from "@/hooks/usePostsByCategory";,
-import NotFound from "./NotFound",;
-import { useAuth } from "@/hooks/useAuth";,
-import { useCommunity } from "@/context";,
-import { useToast } from "@/hooks/use-toast";,
-import { useFollowedCategories } from "@/hooks/useFollowedCategories";
-import { logInfo } from "@/utils/productionLogger";
-import { MessageSquare; Briefcase, Code; FileText, Megaphone; Search } from "lucide-react";
-// Mock category data;
-const categoriesInfo: Record<string ForumCategoryInfo> = {
-  "getting-hired": {
-  )
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 import React from 'react';
+import { SEO } from '@/components/SEO';
 
 export default function ForumCategoryPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">ForumCategoryPage</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
+    <>
+      <SEO
+        title="Forum Category | Zion AI Marketplace"
+        description="Browse forum discussions by category."
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Forum Category</h1>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <p className="text-gray-600">Forum discussions will be available here.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
-<<<<<<< HEAD
 }
-"getting-hired": {
-)
-}}
-=======
-};
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

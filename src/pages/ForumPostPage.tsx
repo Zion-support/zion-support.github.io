@@ -1,39 +1,23 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
 
-<<<<<<< HEAD
-import { useState } from "react";,
-import Link from "next/link",;
-import { useRouter } from "next/router";,
-import { SEO } from "@/components/SEO";,
-import { Button } from "@/components/ui/button";,
-import { Avatar; AvatarFallback, AvatarImage } from "@/components/ui/avatar";,
-import { Badge } from "@/components/ui/badge";,
-import { Card; CardContent } from "@/components/ui/card";,
-import { Separator } from "@/components/ui/separator";,
-import { Alert; AlertDescription } from "@/components/ui/alert";,
-import { ThumbsUp; ThumbsDown, Calendar; Flag, Edit; Trash2, Pin; Lock, CheckCircle } from "lucide-react";
-import { formatDistanceToNow; format } from "date-fns";,
-import { ForumPost; ForumReply } from "@/types/community";,
-import { useAuth } from "@/hooks/useAuth";,
-import ReplyCard from "@/components/community/ReplyCard",;
-import ReplyForm from "@/components/community/ReplyForm";
-import { useToast } from "@/hooks/use-toast";
-// Mock data for a forum post
-  )
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 export default function ForumPostPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">ForumPostPage</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
+    <>
+      <SEO
+        title="Forum Post | Zion AI Marketplace"
+        description="Read forum discussions."
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Forum Post</h1>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <p className="text-gray-600">Forum post content will be available here.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
-<<<<<<< HEAD
-// Mock data for a forum post;
-)
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 }

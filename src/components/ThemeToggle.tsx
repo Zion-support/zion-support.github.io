@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 interface Service {
 id: string;,
 name: string;
@@ -16,22 +16,7 @@ return (
 },
 </div>)},
 export default ThemeToggle,;<//div><///div>
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
-import React from 'react';
-
-export function ThemeToggle() {
-  return (
-    <button className="p-2 rounded-md hover:bg-gray-100">
-      Theme Toggle
-    </button>
-  );
-<<<<<<< HEAD
 };
 
 export default ThemeToggle;
-=======
-}
 
-export default ThemeToggle;
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

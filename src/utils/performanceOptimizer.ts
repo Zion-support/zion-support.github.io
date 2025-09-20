@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from "react";
 /**;
 * Performance Optimization Utilities;
@@ -148,6 +148,4 @@ return { score; metrics };
 };
 
 export default performanceOptimizer;
-=======
 
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

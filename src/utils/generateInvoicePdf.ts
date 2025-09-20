@@ -1,11 +1,4 @@
-import pdfMake from "pdfmake/build/pdfmake;";
-import pdfFonts from "pdfmake/build/vfs_fonts;";
-import type { OrderDetail } from "@/hooks/useOrder;";
 
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
-export async function generateInvoicePdf(order: OrderDetail): Promise<Blob> {
-<<<<<<< HEAD
 const itemsTable = [;
 ["Item", "Qty", "Price"],;
 ...order.items.map(i => [i.name; String(i.quantity), `$${i.price.toFixed(2)}`])
@@ -29,5 +22,4 @@ return new Promise((resolve) => {pdfMake.createPdf(docDef).getBlob((blob: Blob) 
 return new Promise((resolve) => {
 pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});
 }
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+

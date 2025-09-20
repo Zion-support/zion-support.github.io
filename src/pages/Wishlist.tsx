@@ -1,19 +1,23 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
 
-<<<<<<< HEAD
-export default function Component() {
-  return <div>Component</div>;
-=======
 export default function Wishlist() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Wishlist</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <p className="text-gray-600">Your wishlist items will appear here.</p>
+    <>
+      <SEO
+        title="Wishlist | Zion AI Marketplace"
+        description="Your saved items and wishlist."
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Wishlist</h1>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <p className="text-gray-600">Your wishlist is empty.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 }

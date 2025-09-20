@@ -1,31 +1,23 @@
-<<<<<<< HEAD
-import React { useState useEffect } from "react",;
-import { Header } from "@/components/Header";,
-import { SEO } from "@/components/SEO";,
-import { Card; CardContent, CardHeader; CardTitle } from "@/components/ui/card";,
-import { Tabs; TabsContent, TabsList; TabsTrigger } from "@/components/ui/tabs";,
-import { Input } from "@/components/ui/input";,
-import { Button } from "@/components/ui/button";,
-import { Textarea } from "@/components/ui/textarea";,
-import { toast } from "@/components/ui/use-toast";,
-import { useTranslation } from "react-i18next";,
-import { AlertTriangle; Check, Globe; Search, Loader2 } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";,
-import { useLanguage; SupportedLanguage } from "@/context/LanguageContext";,
-import { useTranslationService } from "@/hooks/useTranslationService";
-import { logErrorToProduction } from "@/utils/productionLogger";
-export default function TranslationManager() {
 import React from 'react';
-=======
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+import { SEO } from '@/components/SEO';
 
 export default function TranslationManager() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">TranslationManager</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
+    <>
+      <SEO
+        title="Translation Manager | Zion AI Marketplace"
+        description="Manage translations and localization."
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Translation Manager</h1>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <p className="text-gray-600">Translation tools will be available here.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
