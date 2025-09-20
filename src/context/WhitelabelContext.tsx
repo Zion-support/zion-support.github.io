@@ -27,9 +27,9 @@ config = {}
 const mergedConfig = { ...defaultConfig, ...config };
 
 return (
-<WhitelabelContext.Provider value={mergedConfig}>;
+<WhitelabelContext.Provider value={mergedConfig}>
 {children}
-</WhitelabelContext.Provider>;
+</WhitelabelContext.Provider>
 );
 };
-<//WhitelabelContext.Provider><///WhitelabelContext.Provider>;
+<//WhitelabelContext.Provider><///WhitelabelContext.Provider>

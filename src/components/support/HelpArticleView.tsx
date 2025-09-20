@@ -3,7 +3,7 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { ThumbsUpThumbsDown } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",;
+import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
 articleId: string;

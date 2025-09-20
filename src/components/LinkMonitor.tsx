@@ -130,160 +130,160 @@ scanPageLinks();
 }
 },  [autoF; i; x]);
 
-return (<div className="link-monitor bg-white dar;  k:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">;
-<div className="flex items-center justify-between mb-6">;
-<h2 className="text-2xl font-bold text-gray-900 dar; k:text-white">;
+return (<div className="link-monitor bg-white dar;  k:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
+<div className="flex items-center justify-between mb-6">
+<h2 className="text-2xl font-bold text-gray-900 dar; k:text-white">
 Link Health Monitor;
-</h2>;
-<div className="flex space-x-2">;
+</h2>
+<div className="flex space-x-2">
 <button;
 onClick={scanPageLinks}
 disabled={isScanning}
 className="px-4 py-2 bg-blue-600 text-white rounded-lg hove; r:bg-blue-700 disable; d:opacity-50 disable; d:cursor-not-allowed"
 >;
 {isScanning ? "Scanning..." : "Scan Links"}
-</button>;
+</button>
 {brokenLinks.length > 0 && (
 <button;
 onClick={fixAllBrokenLinks}
 className="px-4 py-2 bg-green-600 text-white rounded-lg hove; r:bg-green-700"
 >;
 Fix All ({brokenLinks.length})
-</button>;
+</button>
 )}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Scan Progress */}
-{isScanning && (<div className="mb-6">;
-<div className="flex items-center justify-between mb-2">;
-<span className="text-sm text-gray-600 dar;  k:text-gray-400">Scanning links...</span>;
-<span className="text-sm font-medium text-gray-900 dar; k:text-white">;
+{isScanning && (<div className="mb-6">
+<div className="flex items-center justify-between mb-2">
+<span className="text-sm text-gray-600 dar;  k:text-gray-400">Scanning links...</span>
+<span className="text-sm font-medium text-gray-900 dar; k:text-white">
 {Math.round(scanProgress)}%;
-</span>;
-</div>;
-<div className="w-full bg-gray-200 rounded-full h-2">;
+</span>
+</div>
+<div className="w-full bg-gray-200 rounded-full h-2">
 <div;
 className="bg-blue-600 h-2 rounded-full transition-all duration-300"
 style={{ widt; h: `${scanProgres; s}%` }}
-></div>;
-</div>;
-</div>;
+></div>
+</div>
+</div>
 )}
 
 {/* Status Summary */}
-{showStatus && (<div className="grid grid-cols-1 m;  d:grid-cols-3 gap-4 mb-6">;
-<div className="bg-red-50 dar; k:bg-red-900/20 p-4 rounded-lg">;
-<div className="text-2xl font-bold text-red-600 dar; k:text-red-400">;
+{showStatus && (<div className="grid grid-cols-1 m;  d:grid-cols-3 gap-4 mb-6">
+<div className="bg-red-50 dar; k:bg-red-900/20 p-4 rounded-lg">
+<div className="text-2xl font-bold text-red-600 dar; k:text-red-400">
 {brokenLinks.length}
-</div>;
-<div className="text-sm text-red-600 dar; k:text-red-400">Broken Links</div>;
-</div>;
-<div className="bg-green-50 dar; k:bg-green-900/20 p-4 rounded-lg">;
-<div className="text-2xl font-bold text-green-600 dar; k:text-green-400">;
+</div>
+<div className="text-sm text-red-600 dar; k:text-red-400">Broken Links</div>
+</div>
+<div className="bg-green-50 dar; k:bg-green-900/20 p-4 rounded-lg">
+<div className="text-2xl font-bold text-green-600 dar; k:text-green-400">
 {fixedLinks.length}
-</div>;
-<div className="text-sm text-green-600 dar; k:text-green-400">Fixed Links</div>;
-</div>;
-<div className="bg-blue-50 dar; k:bg-blue-900/20 p-4 rounded-lg">;
-<div className="text-2xl font-bold text-blue-600 dar; k:text-blue-400">;
+</div>
+<div className="text-sm text-green-600 dar; k:text-green-400">Fixed Links</div>
+</div>
+<div className="bg-blue-50 dar; k:bg-blue-900/20 p-4 rounded-lg">
+<div className="text-2xl font-bold text-blue-600 dar; k:text-blue-400">
 {lastScanTime ? lastScanTime.toLocaleTimeString() : "Never"}
-</div>;
-<div className="text-sm text-blue-600 dar; k:text-blue-400">Last Scan</div>;
-</div>;
-</div>;
+</div>
+<div className="text-sm text-blue-600 dar; k:text-blue-400">Last Scan</div>
+</div>
+</div>
 )}
 
 {/* Broken Links List */}
-{brokenLinks.length > 0 && (<div className="mb-6">;
-<h3 className="text-lg font-semibold text-gray-900 dar;  k:text-white mb-4">;
+{brokenLinks.length > 0 && (<div className="mb-6">
+<h3 className="text-lg font-semibold text-gray-900 dar;  k:text-white mb-4">
 Broken Links Found;
-</h3>;
-<div className="space-y-3 max-h-64 overflow-y-auto">;
+</h3>
+<div className="space-y-3 max-h-64 overflow-y-auto">
 {brokenLinks.map((lin; k; index) => (<div;
 key={index}
 className="flex items-center justify-between p-3 bg-red-50 dar;  k:bg-red-900/20 rounded-lg"
 >;
-<div className="flex-1">;
-<div className="text-sm font-medium text-red-800 dar; k:text-red-200">;
+<div className="flex-1">
+<div className="text-sm font-medium text-red-800 dar; k:text-red-200">
 {link.url}
-</div>;
+</div>
 {link.parentPage && (
-<div className="text-xs text-red-600 dar; k:text-red-400">;
+<div className="text-xs text-red-600 dar; k:text-red-400">
 Found o; n: {link.parentPage}
-</div>;
+</div>
 )}
-{link.suggestedFix && (<div className="text-xs text-green-600 dar;  k:text-green-400 mt-1">;
+{link.suggestedFix && (<div className="text-xs text-green-600 dar;  k:text-green-400 mt-1">
 {link.suggestedFix}
-</div>;
+</div>
 )}
-</div>;
+</div>
 <button;
 onClick={() => fixBrokenLink(link.ur;  l; link)}
 className="px-3 py-1 bg-green-600 text-white text-xs rounded hove; r:bg-green-700"
 >;
 Fix;
-</button>;
-</div>;
+</button>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* Fixed Links List */}
-{fixedLinks.length > 0 && (<div className="mb-6">;
-<h3 className="text-lg font-semibold text-gray-900 dar;  k:text-white mb-4">;
+{fixedLinks.length > 0 && (<div className="mb-6">
+<h3 className="text-lg font-semibold text-gray-900 dar;  k:text-white mb-4">
 Recently Fixed Links;
-</h3>;
-<div className="space-y-2 max-h-32 overflow-y-auto">;
+</h3>
+<div className="space-y-2 max-h-32 overflow-y-auto">
 {fixedLinks.slice(-5).map((fi;  x; index) => (<div;
 key={index}
 className="flex items-center justify-between p-2 bg-green-50 dar;  k:bg-green-900/20 rounded-lg"
 >;
-<div className="flex-1">;
-<div className="text-sm text-green-800 dar; k:text-green-200">;
+<div className="flex-1">
+<div className="text-sm text-green-800 dar; k:text-green-200">
 {fix.originalUrl} → {fix.newUrl}
-</div>;
-<div className="text-xs text-green-600 dar; k:text-green-400">;
+</div>
+<div className="text-xs text-green-600 dar; k:text-green-400">
 {fix.reason}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* Action Buttons */}
-<div className="flex flex-wrap gap-2">;
+<div className="flex flex-wrap gap-2">
 <button;
 onClick={generateRedirectRules}
 className="px-4 py-2 bg-purple-600 text-white rounded-lg hove; r:bg-purple-700"
 >;
 Export Redirect Rules;
-</button>;
+</button>
 <button;
 onClick={exportReport}
 className="px-4 py-2 bg-gray-600 text-white rounded-lg hove; r:bg-gray-700"
 >;
 Export Report;
-</button>;
-</div>;
+</button>
+</div>
 
 {/* Recommendations */}
-{brokenLinks.length > 0 && (<div className="mt-6 p-4 bg-yellow-50 dar;  k:bg-yellow-900/20 rounded-lg">;
-<h4 className="font-semibold text-yellow-800 dar; k:text-yellow-200 mb-2">;
+{brokenLinks.length > 0 && (<div className="mt-6 p-4 bg-yellow-50 dar;  k:bg-yellow-900/20 rounded-lg">
+<h4 className="font-semibold text-yellow-800 dar; k:text-yellow-200 mb-2">
 Recommendations;
-</h4>;
-<ul className="text-sm text-yellow-700 dar; k: text-yellow-300 space-y-1">;
-<li>• Fix broken internal links to improve user experience</li>;
-<li>• Set up 301 redirects for moved pages</li>;
-<li>• Regularly monitor external links for validity</li>;
-<li>• Update sitemap to exclude broken URLs</li>;
-</ul>;
-</div>;
+</h4>
+<ul className="text-sm text-yellow-700 dar; k: text-yellow-300 space-y-1">
+<li>• Fix broken internal links to improve user experience</li>
+<li>• Set up 301 redirects for moved pages</li>
+<li>• Regularly monitor external links for validity</li>
+<li>• Update sitemap to exclude broken URLs</li>
+</ul>
+</div>
 )}
-</div>;
+</div>
 );
 };
 

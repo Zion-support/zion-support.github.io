@@ -5,14 +5,14 @@ redirectUrl?: string,
 export function PaymentButton({
 >;
 {isProcessing ? (
-<>;
-<Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+<>
+<Loader2 className="h-4 w-4 mr-2 animate-spin" />
 Processing...;
-</>;
+</>
 ) : (
 buttonText;
 )}
-</Button>;
+</Button>
 )
 }catch (error) {';
 logErrorToProduction ('Payment error:', {

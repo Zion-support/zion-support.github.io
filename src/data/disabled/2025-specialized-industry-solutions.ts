@@ -433,23 +433,23 @@ industryStandards: ["ISO 11783", "Precision agriculture protocols", "IoT standar
 
 // Utility functions for specialized industry services;
 export const getServicesByIndustry: any = (industry: string): SpecializedIndustryService[] => {
-return specializedIndustrySolutions2025.filter(service => service.industry === industry),;
+return specializedIndustrySolutions2025.filter(service => service.industry === industry);
 };
 
 export const getServicesByCategory: any = (category: string): SpecializedIndustryService[] => {
-return specializedIndustrySolutions2025.filter(service => service.category === category),;
+return specializedIndustrySolutions2025.filter(service => service.category === category);
 };
 
 export const getServicesByCompliance: any = (compliance: string): SpecializedIndustryService[] => {
 return specializedIndustrySolutions2025.filter(service =>;
 service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase()))
-),;
+);
 };
 
 export const getServicesByTechnology: any = (technology: string): SpecializedIndustryService[] => {
 return specializedIndustrySolutions2025.filter(service =>;
 service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
-),;
+);
 };
 
 export const getPopularIndustryServices: any = (limit: number = 6): SpecializedIndustryService[] => {;

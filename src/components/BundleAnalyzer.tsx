@@ -7,9 +7,9 @@ import React from "react;";
 
 const BundleAnalyzer: React.FC = () => {
 return (
-<div className="bundle-analyzer">;
+<div className="bundle-analyzer">
 {/* Bundle analysis */}
-</div>;
+</div>
 );
 };
 

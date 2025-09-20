@@ -4,7 +4,7 @@ import { Toaster as HotToaster } from "react-hot-toast";
 
 export function Toaster() {
 return (;
-<HotToaster position="top-right" />;
+<HotToaster position="top-right" />
 );
 import React from "react";
 

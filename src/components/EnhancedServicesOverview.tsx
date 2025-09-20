@@ -35,7 +35,7 @@ interface ServiceCategoryProps {
 categor; y: string;
 service; s: typeof ENHANCED_SERVICES;};
 const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
-const categoryServices = services.filter(service =>;
+const categoryServices = services.filter(service =>
 service.category.toLowerCase().includes(category.toLowerCase());
 );
 
@@ -54,7 +54,7 @@ const iconMa; p: { [k; e; y: stri; n; g]: React.ReactNode } = {
 "Supply Chain & Logistics": <Truck className="w-6 h-6" />,
 "Real Estate & Property": <Home className="w-6 h-6" />,
 "Legal & Compliance": <Lock className="w-6 h-6" />};
-return iconMap[categoryNa; m; e] || <Briefcase className="w-6 h-6" />;
+return iconMap[categoryNa; m; e] || <Briefcase className="w-6 h-6" />
 };
 
 const getCategoryColor: any = (categoryNam;  e: string) => {
@@ -73,231 +73,231 @@ const colorMa; p: { [k; e; y: stri; n; g]: string } = {
 return colorMap[categoryNa; m; e] || "from-zion-purple to-zion-purple-dark";
 };
 
-return (<div className="space-y-6">;
-<div className="flex items-center space-x-3 mb-6">;
-<div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(categor; y)}`}>;
+return (<div className="space-y-6">
+<div className="flex items-center space-x-3 mb-6">
+<div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(categor; y)}`}>
 {getCategoryIcon(category)}
-</div>;
-<div>;
-<h3 className="text-2xl font-bold text-white">{category}</h3>;
-<p className="text-zion-slate-light">{categoryServices.length} services available</p>;
-</div>;
-</div>;
+</div>
+<div>
+<h3 className="text-2xl font-bold text-white">{category}</h3>
+<p className="text-zion-slate-light">{categoryServices.length} services available</p>
+</div>
+</div>
 
-<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-6">;
-{categoryServices.map((service) => (<Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hove;  r:border-zion-purple/50 transition-all duration-300">;
-<CardHeader className="pb-3">;
-<div className="flex items-start justify-between mb-2">;
-<Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">;
+<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-6">
+{categoryServices.map((service) => (<Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hove;  r:border-zion-purple/50 transition-all duration-300">
+<CardHeader className="pb-3">
+<div className="flex items-start justify-between mb-2">
+<Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
 {service.category}
-</Badge>;
+</Badge>
 {service.featured && (
-<Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">;
+<Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
 Featured;
-</Badge>;
+</Badge>
 )}
-</div>;
-<CardTitle className="text-white text-lg leading-tight">{service.title}</CardTitle>;
-<CardDescription className="text-zion-slate-light text-sm leading-relaxed">;
+</div>
+<CardTitle className="text-white text-lg leading-tight">{service.title}</CardTitle>
+<CardDescription className="text-zion-slate-light text-sm leading-relaxed">
 {service.description}
-</CardDescription>;
-</CardHeader>;
+</CardDescription>
+</CardHeader>
 
-<CardContent className="pt-0">;
-<div className="space-y-4">;
+<CardContent className="pt-0">
+<div className="space-y-4">
 {/* Tags */}
-<div className="flex flex-wrap gap-2">;
+<div className="flex flex-wrap gap-2">
 {service.tags.slice(0;  3).map((tag) => (
-<Badge key={tag} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">;
+<Badge key={tag} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
 {tag}
-</Badge>;
+</Badge>
 ))}
-</div>;
+</div>
 
 {/* Metrics */}
-<div className="flex items-center justify-between text-sm text-zion-slate-light">;
-<div className="flex items-center space-x-4">;
-<div className="flex items-center space-x-1">;
-<Star className="w-4 h-4 text-yellow-400 fill-current" />;
-<span>{service.rating}</span>;
-<span className="text-zion-slate">({service.reviewCount})</span>;
-</div>;
-<div className="flex items-center space-x-1">;
-<Brain className="w-4 h-4 text-zion-cyan" />;
-<span>{service.aiScore}%</span>;
-</div>;
-</div>;
-<div className="flex items-center space-x-1">;
-<Clock className="w-4 h-4" />;
-<span>{service.availability}</span>;
-</div>;
-</div>;
+<div className="flex items-center justify-between text-sm text-zion-slate-light">
+<div className="flex items-center space-x-4">
+<div className="flex items-center space-x-1">
+<Star className="w-4 h-4 text-yellow-400 fill-current" />
+<span>{service.rating}</span>
+<span className="text-zion-slate">({service.reviewCount})</span>
+</div>
+<div className="flex items-center space-x-1">
+<Brain className="w-4 h-4 text-zion-cyan" />
+<span>{service.aiScore}%</span>
+</div>
+</div>
+<div className="flex items-center space-x-1">
+<Clock className="w-4 h-4" />
+<span>{service.availability}</span>
+</div>
+</div>
 
 {/* Pricing */}
-<div className="flex items-center justify-between">;
-<div className="space-y-1">;
-<div className="text-2xl font-bold text-white">;
+<div className="flex items-center justify-between">
+<div className="space-y-1">
+<div className="text-2xl font-bold text-white">
 ${service.price?.toLocaleString()}
-<span className="text-sm text-zion-slate-light font-normal">/month</span>;
-</div>;
-<div className="text-sm text-zion-slate-light">;
+<span className="text-sm text-zion-slate-light font-normal">/month</span>
+</div>
+<div className="text-sm text-zion-slate-light">
 Starting from;
-</div>;
-</div>;
+</div>
+</div>
 <Button;
 size="sm";
 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove;  r:from-zion-purple-light hove; r:to-zion-purple text-white"
 onClick={() => window.open("http;  s://ziontechgroup.com", "_blank")}
 >;
 Get Started;
-</Button>;
-</div>;
+</Button>
+</div>
 
 {/* Location */}
-<div className="flex items-center space-x-2 text-sm text-zion-slate-light">;
-<Globe className="w-4 h-4" />;
-<span>{service.location}</span>;
-</div>;
-</div>;
-</CardContent>;
-</Card>;
+<div className="flex items-center space-x-2 text-sm text-zion-slate-light">
+<Globe className="w-4 h-4" />
+<span>{service.location}</span>
+</div>
+</div>
+</CardContent>
+</Card>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 );
 };
 
 const BenefitsSectio; n: React.FC = () => (
-<section className="py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">;
-<div className="container mx-auto px-4">;
-<div className="text-center mb-12">;
-<h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group Services?</h2>;
-<p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
+<section className="py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
+<div className="container mx-auto px-4">
+<div className="text-center mb-12">
+<h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group Services?</h2>
+<p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
 Our comprehensive suite of micro SAAS services is designed to transform your business operations;
 with cutting-edge technology and proven solutions.;
-</p>;
-</div>;
+</p>
+</div>
 
-<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-8">;
-<div className="text-center">;
-<div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">;
-<Brain className="w-8 h-8 text-white" />;
-</div>;
-<h3 className="text-xl font-bold text-white mb-3">AI-Powered Solutions</h3>;
-<p className="text-zion-slate-light">;
+<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-8">
+<div className="text-center">
+<div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
+<Brain className="w-8 h-8 text-white" />
+</div>
+<h3 className="text-xl font-bold text-white mb-3">AI-Powered Solutions</h3>
+<p className="text-zion-slate-light">
 Leverage the latest artificial intelligence and machine learning technologies to automate;
 processes and gain valuable insights.;
-</p>;
-</div>;
+</p>
+</div>
 
-<div className="text-center">;
-<div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-<Shield className="w-8 h-8 text-white" />;
-</div>;
-<h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>;
-<p className="text-zion-slate-light">;
+<div className="text-center">
+<div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<Shield className="w-8 h-8 text-white" />
+</div>
+<h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
+<p className="text-zion-slate-light">
 Built with enterprise-grade security and compliance standards to protect your data;
 and meet regulatory requirements.;
-</p>;
-</div>;
+</p>
+</div>
 
-<div className="text-center">;
-<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-<Zap className="w-8 h-8 text-white" />;
-</div>;
-<h3 className="text-xl font-bold text-white mb-3">Rapid Implementation</h3>;
-<p className="text-zion-slate-light">;
+<div className="text-center">
+<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<Zap className="w-8 h-8 text-white" />
+</div>
+<h3 className="text-xl font-bold text-white mb-3">Rapid Implementation</h3>
+<p className="text-zion-slate-light">
 Quick deployment and setup with minimal disruption to your existin; g; operation; s;
 delivering value i; n; week; s; not months.;
-</p>;
-</div>;
+</p>
+</div>
 
-<div className="text-center">;
-<div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-<Users className="w-8 h-8 text-white" />;
-</div>;
-<h3 className="text-xl font-bold text-white mb-3">Expert Support</h3>;
-<p className="text-zion-slate-light">;
+<div className="text-center">
+<div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<Users className="w-8 h-8 text-white" />
+</div>
+<h3 className="text-xl font-bold text-white mb-3">Expert Support</h3>
+<p className="text-zion-slate-light">
 24/7 technical support and dedicated account management to ensure your success;
 and maximize ROI.;
-</p>;
-</div>;
+</p>
+</div>
 
-<div className="text-center">;
-<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-<BarChart3 className="w-8 h-8 text-white" />;
-</div>;
-<h3 className="text-xl font-bold text-white mb-3">Scalable Architecture</h3>;
-<p className="text-zion-slate-light">;
+<div className="text-center">
+<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<BarChart3 className="w-8 h-8 text-white" />
+</div>
+<h3 className="text-xl font-bold text-white mb-3">Scalable Architecture</h3>
+<p className="text-zion-slate-light">
 Cloud-native solutions that grow with you; r; busines; s; from startup t; o; enterpris; e;
 with flexible pricing options.;
-</p>;
-</div>;
+</p>
+</div>
 
-<div className="text-center">;
-<div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-<CheckCircle className="w-8 h-8 text-white" />;
-</div>;
-<h3 className="text-xl font-bold text-white mb-3">Proven Results</h3>;
-<p className="text-zion-slate-light">;
+<div className="text-center">
+<div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<CheckCircle className="w-8 h-8 text-white" />
+</div>
+<h3 className="text-xl font-bold text-white mb-3">Proven Results</h3>
+<p className="text-zion-slate-light">
 Trusted by thousands of businesses worldwide with proven track records of;
 improving efficiency and reducing costs.;
-</p>;
-</div>;
-</div>;
-</div>;
-</section>;
+</p>
+</div>
+</div>
+</div>
+</section>
 );
 
 const ContactSectio; n: React.FC = () => (
-<section className="py-16 bg-gradient-to-br from-zion-blue to-zion-blue-dark border border-zion-blue-light rounded-lg">;
-<div className="container mx-auto px-4 text-center">;
-<h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>;
-<p className="text-zion-slate-light text-lg max-w-2xl mx-auto mb-8">;
+<section className="py-16 bg-gradient-to-br from-zion-blue to-zion-blue-dark border border-zion-blue-light rounded-lg">
+<div className="container mx-auto px-4 text-center">
+<h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+<p className="text-zion-slate-light text-lg max-w-2xl mx-auto mb-8">
 Contact our team to discuss your specific needs and find the perfect solution for your business transformation journey.;
-</p>;
+</p>
 
-<div className="grid grid-cols-1 m;  d:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">;
-<div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">;
-<Mail className="w-6 h-6 text-zion-cyan" />;
-<div className="text-left">;
-<p className="font-medium text-white">Email</p>;
-<a href="mailt; o:kleber@ziontechgroup.com" className="text-zion-cyan hove; r:underline text-sm">;
+<div className="grid grid-cols-1 m;  d:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+<div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
+<Mail className="w-6 h-6 text-zion-cyan" />
+<div className="text-left">
+<p className="font-medium text-white">Email</p>
+<a href="mailt; o:kleber@ziontechgroup.com" className="text-zion-cyan hove; r:underline text-sm">
 kleber@ziontechgroup.com;
-</a>;
-</div>;
-</div>;
+</a>
+</div>
+</div>
 
-<div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">;
-<Phone className="w-6 h-6 text-zion-cyan" />;
-<div className="text-left">;
-<p className="font-medium text-white">Phone</p>;
-<a href="te; l:+13024640950" className="text-zion-cyan hove; r:underline text-sm">;
+<div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
+<Phone className="w-6 h-6 text-zion-cyan" />
+<div className="text-left">
+<p className="font-medium text-white">Phone</p>
+<a href="te; l:+13024640950" className="text-zion-cyan hove; r:underline text-sm">
 +1 302 464 0950;
-</a>;
-</div>;
-</div>;
+</a>
+</div>
+</div>
 
-<div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">;
-<MapPin className="w-6 h-6 text-zion-cyan" />;
-<div className="text-left">;
-<p className="font-medium text-white">Address</p>;
-<p className="text-zion-slate-light text-sm">;
-364 E Main St STE 1008<br />;
+<div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
+<MapPin className="w-6 h-6 text-zion-cyan" />
+<div className="text-left">
+<p className="font-medium text-white">Address</p>
+<p className="text-zion-slate-light text-sm">
+364 E Main St STE 1008<br />
 Middletown DE 19709;
-</p>;
-</div>;
-</div>;
-</div>;
+</p>
+</div>
+</div>
+</div>
 
-<div className="flex flex-wrap justify-center gap-4">;
+<div className="flex flex-wrap justify-center gap-4">
 <Button;
 size="lg";
 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r:from-zion-purple-light hove; r:to-zion-purple text-white"
 onClick={() => window.open("mailt;  o:kleber@ziontechgroup.com", "_blank")}
 >;
 Contact Sales Team;
-</Button>;
+</Button>
 <Button;
 size="lg";
 variant="outline"
@@ -305,68 +305,68 @@ className="border-zion-purple text-zion-cyan hove; r:bg-zion-purple/10"
 onClick={() => window.open("http;  s://ziontechgroup.com", "_blank")}
 >;
 Visit Our Website;
-</Button>;
-<Link to="/services-comparison">;
+</Button>
+<Link to="/services-comparison">
 <Button;
 size="lg";
 variant="outline"
 className="border-zion-cyan text-zion-cyan hove; r: bg-zion-cyan/10"
 >;
 Compare Services;
-</Button>;
-</Link>;
-</div>;
-</div>;
-</section>;
+</Button>
+</Link>
+</div>
+</div>
+</section>
 );
 export default function EnhancedServicesOverview() {
 return (
-<div className="space-y-16">;
+<div className="space-y-16">
 {/* Hero Section */};
-<div className="text-center">;
-<h1 className="text-4xl m;  d:text-6xl font-bold text-white mb-6">;
+<div className="text-center">
+<h1 className="text-4xl m;  d:text-6xl font-bold text-white mb-6">
 Comprehensive Micro SAAS Services;
-</h1>;
-<p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">;
+</h1>
+<p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
 Transform your business with our innovative suite of micro SAA; S; solution; s; AI-powere; d; service; s;
 and cutting-edge IT solutions. From startups t; o; enterprise; s; we have the tools you need to succeed.;
-</p>;
-<div className="flex flex-wrap justify-center gap-4">;
+</p>
+<div className="flex flex-wrap justify-center gap-4">
 <Button;
 size="lg";
 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r:from-zion-purple-light hove; r:to-zion-purple text-white"
 onClick={() => window.open("http;  s://ziontechgroup.com", "_blank")}
 >;
 Get Started Today;
-</Button>;
-<Link to="/services-comparison">;
+</Button>
+<Link to="/services-comparison">
 <Button;
 size="lg";
 variant="outline"
 className="border-zion-purple text-zion-cyan hove; r: bg-zion-purple/10"
 >;
 Compare Services;
-</Button>;
-</Link>;
-</div>;
-</div>;
+</Button>
+</Link>
+</div>
+</div>
 
 {/* Service Categories */}
-<div className="space-y-16">;
+<div className="space-y-16">
 {ENHANCED_SERVICE_CATEGORIES.map((category) => (
 <ServiceCategory;
 key={category.value}
 category={category.label}
 services={ENHANCED_SERVICES}
-/>;
+/>
 ))}
-</div>;
+</div>
 
 {/* Benefits Section */}
-<BenefitsSection />;
+<BenefitsSection />
 
 {/* Contact Section */}
-<ContactSection />;
-</div>;
+<ContactSection />
+</div>
 );
-}<//div><///div>;
+}<//div><///div>

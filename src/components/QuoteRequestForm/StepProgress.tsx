@@ -21,16 +21,16 @@ status === "current" ? "text-white" :
 ),}
 >;
 {step.label}
-</span>;
-</div>;
+</span>
+</div>
 )
 })}
-</div>;
-</div>;
+</div>
+</div>
 )
 (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100,
 }%`;
-}/> </div>;
+}/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
 steps.findIndex (s => s.id === step.id) + 1,
 }</span>)
@@ -42,7 +42,7 @@ step.label,
 }</div> </div>)
 }"          )
 })}
-</div>;
-</div>;
+</div>
+</div>
 )
 }

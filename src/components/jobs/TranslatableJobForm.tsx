@@ -16,20 +16,20 @@ interface TranslatableJobFormProps {
 
 export function TranslatableJobForm({ onSubmit isSubmitting;
 return (
-<form onSubmit={handleSubmit} className="space-y-6">;
-<div>;
-<h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>;
-<p className="text-zion-slate-light mb-6">;
+<form onSubmit={handleSubmit} className="space-y-6">
+<div>
+<h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>
+<p className="text-zion-slate-light mb-6">
 {t('jobs.post_job_description')}
-</p>;
-</div>;
+</p>
+</div>
 
-<div className="space-y-4">;
-<div className="space-y-2">;
-<div className="flex justify-between items-center">;
-<label htmlFor="title" className="text-lg font-medium">;
+<div className="space-y-4">
+<div className="space-y-2">
+<div className="flex justify-between items-center">
+<label htmlFor="title" className="text-lg font-medium">
 {t('jobs.job_title')}
-</label>;
+</label>
 <Button,
 type="button"
 size="sm";
@@ -39,44 +39,44 @@ disabled={isTranslating || (!title.en && !title.es && !title.fr && !title.pt && 
 className="flex items-center gap-1"
 >;
 {isTranslating ? (
-<Loader2 className="h-4 w-4 animate-spin" />;
+<Loader2 className="h-4 w-4 animate-spin" />
 ) : (
-<Globe className="h-4 w-4" />;
+<Globe className="h-4 w-4" />
 )}
 {t('translation.auto_translate')}
-</Button>;
-</div>;
+</Button>
+</div>
 
-<Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-<TabsList className="w-full">;
+<Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+<TabsList className="w-full">
 {supportedLanguages.map((lang) => (
-<TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
+<TabsTrigger key={lang.code} value={lang.code} className="flex-1">
 <span className="mr-1">{lang.flag}</span> {lang.name}
-</TabsTrigger>;
+</TabsTrigger>
 ))}
-</TabsList>;
+</TabsList>
 
 {supportedLanguages.map((lang) => (
-<TabsContent key={lang.code} value={lang.code} className="mt-2">;
-<div className="space-y-1">;
+<TabsContent key={lang.code} value={lang.code} className="mt-2">
+<div className="space-y-1">
 <Input,
 id={`title-${lang.code}`}
 value={title[lang.code] || ''}
 onChange={(e) => handleTitleChange(e.target.value)}
 className="w-full"
 dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-/>;
-</div>;
-</TabsContent>;
+/>
+</div>
+</TabsContent>
 ))}
-</Tabs>;
-</div>;
+</Tabs>
+</div>
 
-<div className="space-y-2">;
-<div className="flex justify-between items-center">;
-<label htmlFor="description" className="text-lg font-medium">;
+<div className="space-y-2">
+<div className="flex justify-between items-center">
+<label htmlFor="description" className="text-lg font-medium">
 {t('jobs.job_description')}
-</label>;
+</label>
 <Button,
 type="button"
 size="sm";
@@ -86,42 +86,42 @@ disabled={isTranslating || (!description.en && !description.es && !description.f
 className="flex items-center gap-1"
 >;
 {isTranslating ? (
-<Loader2 className="h-4 w-4 animate-spin" />;
+<Loader2 className="h-4 w-4 animate-spin" />
 ) : (
-<Globe className="h-4 w-4" />;
+<Globe className="h-4 w-4" />
 )}
 {t('translation.auto_translate')}
-</Button>;
-</div>;
+</Button>
+</div>
 
-<Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-<TabsList className="w-full">;
+<Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+<TabsList className="w-full">
 {supportedLanguages.map((lang) => (
-<TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
+<TabsTrigger key={lang.code} value={lang.code} className="flex-1">
 <span className="mr-1">{lang.flag}</span> {lang.name}
-</TabsTrigger>;
+</TabsTrigger>
 ))}
-</TabsList>;
+</TabsList>
 
 {supportedLanguages.map((lang) => (
-<TabsContent key={lang.code} value={lang.code} className="mt-2">;
+<TabsContent key={lang.code} value={lang.code} className="mt-2">
 <Textarea,
 id={`description-${lang.code}`}
 value={description[lang.code] || ''}
 onChange={(e) => handleDescriptionChange(e.target.value)}
 className="min-h-32 w-full"
 dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-/>;
-</TabsContent>;
+/>
+</TabsContent>
 ))}
-</Tabs>;
-</div>;
+</Tabs>
+</div>
 
-<div className="space-y-2">;
-<div className="flex justify-between items-center">;
-<label htmlFor="requirements" className="text-lg font-medium">;
+<div className="space-y-2">
+<div className="flex justify-between items-center">
+<label htmlFor="requirements" className="text-lg font-medium">
 {t('jobs.skills_required')}
-</label>;
+</label>
 <Button,
 type="button"
 size="sm";
@@ -131,81 +131,81 @@ disabled={isTranslating || (!requirements.en && !requirements.es && !requirement
 className="flex items-center gap-1"
 >;
 {isTranslating ? (
-<Loader2 className="h-4 w-4 animate-spin" />;
+<Loader2 className="h-4 w-4 animate-spin" />
 ) : (
-<Globe className="h-4 w-4" />;
+<Globe className="h-4 w-4" />
 )}
 {t('translation.auto_translate')}
-</Button>;
-</div>;
+</Button>
+</div>
 
-<Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-<TabsList className="w-full">;
+<Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+<TabsList className="w-full">
 {supportedLanguages.map((lang) => (
-<TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
+<TabsTrigger key={lang.code} value={lang.code} className="flex-1">
 <span className="mr-1">{lang.flag}</span> {lang.name}
-</TabsTrigger>;
+</TabsTrigger>
 ))}
-</TabsList>;
+</TabsList>
 
 {supportedLanguages.map((lang) => (
-<TabsContent key={lang.code} value={lang.code} className="mt-2">;
+<TabsContent key={lang.code} value={lang.code} className="mt-2">
 <Textarea,
 id={`requirements-${lang.code}`}
 value={requirements[lang.code] || ''}
 onChange={(e) => handleRequirementsChange(e.target.value)}
 className="min-h-24 w-full"
 dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-/>;
-</TabsContent>;
+/>
+</TabsContent>
 ))}
-</Tabs>;
-</div>;
+</Tabs>
+</div>
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-<div className="space-y-1">;
-<label htmlFor="budget" className="text-lg font-medium">;
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div className="space-y-1">
+<label htmlFor="budget" className="text-lg font-medium">
 {t('jobs.budget')}
-</label>;
+</label>
 <Input,
 id="budget";
 value={budget}
 onChange={(e) => setBudget(e.target.value)}
 placeholder="$1000 - $2000";
 className="w-full"
-/>;
-</div>;
-<div className="space-y-1">;
-<label htmlFor="deadline" className="text-lg font-medium">;
+/>
+</div>
+<div className="space-y-1">
+<label htmlFor="deadline" className="text-lg font-medium">
 {t('jobs.deadline')}
-</label>;
+</label>
 <Input,
 id="deadline";
 type="date"
 value={deadline}
 onChange={(e) => setDeadline(e.target.value)}
 className="w-full"
-/>;
-</div>;
-</div>;
-</div>;
+/>
+</div>
+</div>
+</div>
 
-<div className="pt-4">;
+<div className="pt-4">
 <Button,
 type="submit"
 className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
 disabled={isSubmitting || isTranslating}
 >;
 {isSubmitting ? (
-<>;
-<Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+<>
+<Loader2 className="mr-2 h-4 w-4 animate-spin" />
 {t('jobs.submitting')}
-</>;
+</>
 ) : (
 t('jobs.post_job_button')
 )}
-</Button>;
-</div>;
-</form>;
+</Button>
+</div>
+</form>
 )
 })

@@ -101,12 +101,12 @@ setIsMonitoring(false);
 const getStatusIcon: any = (statu;  s: string) => {
 switch (status) {
 case "healthy":
-return <CheckCircle className="w-4 h-4 text-green-400" />;
+return <CheckCircle className="w-4 h-4 text-green-400" />
 case "broken":
-return <AlertTriangle className="w-4 h-4 text-red-400" />;
+return <AlertTriangle className="w-4 h-4 text-red-400" />
 case "external":
-return <ExternalLink className="w-4 h-4 text-blue-400" />;
-defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;}
+return <ExternalLink className="w-4 h-4 text-blue-400" />
+defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />}
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -125,7 +125,7 @@ if (selectedFilter === "all") return true;
 return link.status === selectedFilter;
 });
 
-return (<>;
+return (<>
 {/* Floating Action Button */}
 <motion.button;
 onClick={() => setIsOpen(true)}
@@ -133,8 +133,8 @@ className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-50
 whileHover={{ scal; e: 1.1 }}
 whileTap={{ scal; e: 0.9 }}
 >;
-<Link className="w-6 h-6" />;
-</motion.button>;
+<Link className="w-6 h-6" />
+</motion.button>
 
 {/* Modal */}
 {isOpen && (
@@ -156,51 +156,51 @@ className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90; v; h] 
 onClick={(e) => e.stopPropagation()}
 >;
 {/* Header */}
-<div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">;
-<div className="flex items-center justify-between">;
-<div className="flex items-center space-x-3">;
-<Link className="w-8 h-8" />;
-<h2 className="text-2xl font-bold">Link Health Monitor</h2>;
-</div>;
+<div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">
+<div className="flex items-center justify-between">
+<div className="flex items-center space-x-3">
+<Link className="w-8 h-8" />
+<h2 className="text-2xl font-bold">Link Health Monitor</h2>
+</div>
 <button;
 onClick={() => setIsOpen(false)}
 className="text-white/80 hove;  r:text-white transition-colors"
 >;
 ✕;
-</button>;
-</div>;
-<p className="text-cyan-100 mt-2">;
+</button>
+</div>
+<p className="text-cyan-100 mt-2">
 Monitor and maintain the health of all website links;
-</p>;
-</div>;
+</p>
+</div>
 
 {/* Content */}
-<div className="p-6 space-y-6">;
+<div className="p-6 space-y-6">
 {/* Summary Cards */}
 {report && (
-<div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">;
-<div className="bg-gray-800 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-white">{report.totalLinks}</div>;
-<div className="text-gray-400 text-sm">Total Links</div>;
-</div>;
-<div className="bg-green-900/20 border border-green-500/20 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-green-400">{report.healthyLinks}</div>;
-<div className="text-green-400 text-sm">Healthy</div>;
-</div>;
-<div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-red-400">{report.brokenLinks}</div>;
-<div className="text-red-400 text-sm">Broken</div>;
-</div>;
-<div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>;
-<div className="text-blue-400 text-sm">External</div>;
-</div>;
-</div>;
+<div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">
+<div className="bg-gray-800 rounded-lg p-4 text-center">
+<div className="text-2xl font-bold text-white">{report.totalLinks}</div>
+<div className="text-gray-400 text-sm">Total Links</div>
+</div>
+<div className="bg-green-900/20 border border-green-500/20 rounded-lg p-4 text-center">
+<div className="text-2xl font-bold text-green-400">{report.healthyLinks}</div>
+<div className="text-green-400 text-sm">Healthy</div>
+</div>
+<div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">
+<div className="text-2xl font-bold text-red-400">{report.brokenLinks}</div>
+<div className="text-red-400 text-sm">Broken</div>
+</div>
+<div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">
+<div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>
+<div className="text-blue-400 text-sm">External</div>
+</div>
+</div>
 )}
 
 {/* Actions */}
-<div className="flex items-center justify-between">;
-<div className="flex space-x-2">;
+<div className="flex items-center justify-between">
+<div className="flex space-x-2">
 <button;
 onClick={() => setSelectedFilter("all")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -209,7 +209,7 @@ selectedFilter === "all";
 : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 All Links;
-</button>;
+</button>
 <button;
 onClick={() => setSelectedFilter("broken")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -218,7 +218,7 @@ selectedFilter === "broken";
 : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 Broken;
-</button>;
+</button>
 <button;
 onClick={() => setSelectedFilter("external")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -227,7 +227,7 @@ selectedFilter === "external";
 : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 External;
-</button>;
+</button>
 <button;
 onClick={() => setSelectedFilter("healthy")}
 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -236,8 +236,8 @@ selectedFilter === "healthy";
 : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0"}`}
 >;
 Healthy;
-</button>;
-</div>;
+</button>
+</div>
 
 <button;
 onClick={startMonitoring}
@@ -245,98 +245,98 @@ disabled={isMonitoring}
 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hove; r:from-cyan-600 hove; r:to-blue-600 transition-all duration-300 disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center space-x-2"
 >;
 {isMonitoring ? (
-<RefreshCw className="w-4 h-4 animate-spin" />;
-) : (<Zap className="w-4 h-4" />;
+<RefreshCw className="w-4 h-4 animate-spin" />
+) : (<Zap className="w-4 h-4" />
 )}
-<span>{isMonitoring ? "Checking..." : "Check All Links"}</span>;
-</button>;
-</div>;
+<span>{isMonitoring ? "Checking..." : "Check All Links"}</span>
+</button>
+</div>
 
 {/* Links Table */}
-<div className="bg-gray-800 rounded-lg overflow-hidden">;
-<div className="overflow-x-auto">;
-<table className="w-full">;
-<thead className="bg-gray-700">;
-<tr>;
-<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
+<div className="bg-gray-800 rounded-lg overflow-hidden">
+<div className="overflow-x-auto">
+<table className="w-full">
+<thead className="bg-gray-700">
+<tr>
+<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
 Status;
-</th>;
-<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
+</th>
+<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
 Link;
-</th>;
-<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
+</th>
+<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
 Parent Page;
-</th>;
-<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
+</th>
+<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
 Response Time;
-</th>;
-<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">;
+</th>
+<th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
 Last Checked;
-</th>;
-</tr>;
-</thead>;
-<tbody className="divide-y divide-gray-700">;
-{filteredLinks.map((lin;  k; index) => (<tr key={index} className="hove;  r:bg-gray-700/50 transition-colors">;
-<td className="px-6 py-4 whitespace-nowrap">;
-<div className="flex items-center space-x-2">;
+</th>
+</tr>
+</thead>
+<tbody className="divide-y divide-gray-700">
+{filteredLinks.map((lin;  k; index) => (<tr key={index} className="hove;  r:bg-gray-700/50 transition-colors">
+<td className="px-6 py-4 whitespace-nowrap">
+<div className="flex items-center space-x-2">
 {getStatusIcon(link.status)}
-<span className={`text-sm font-medium ${getStatusColor(link.statu; s)}`}>;
+<span className={`text-sm font-medium ${getStatusColor(link.statu; s)}`}>
 {link.status.charAt(0).toUpperCase() + link.status.slice(1)}
-</span>;
-</div>;
-</td>;
-<td className="px-6 py-4 whitespace-nowrap">;
-<div className="max-w-xs truncate">;
+</span>
+</div>
+</td>
+<td className="px-6 py-4 whitespace-nowrap">
+<div className="max-w-xs truncate">
 <a;
 href={link.url}
 target="_blank";
 rel="noopener noreferrer";
 className="text-cyan-400 hove;  r:text-cyan-300 transition-colors flex items-center space-x-1"
 >;
-<span className="truncate">{link.url}</span>;
-<ExternalLink className="w-3 h-3" />;
-</a>;
+<span className="truncate">{link.url}</span>
+<ExternalLink className="w-3 h-3" />
+</a>
 {link.linkText && (
-<div className="text-xs text-gray-400 mt-1">;
+<div className="text-xs text-gray-400 mt-1">
 Tex; t: {link.linkText}
-</div>;
+</div>
 )}
-</div>;
-</td>;
-<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">;
+</div>
+</td>
+<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
 {link.parentPage || "Unknown"}
-</td>;
-<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">;
+</td>
+<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
 {link.responseTime ? `${link.responseTime}m; s` : "N/A"}
-</td>;
-<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">;
+</td>
+<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
 {link.lastChecked.toLocaleDateString()}
-</td>;
-</tr>;
+</td>
+</tr>
 ))}
-</tbody>;
-</table>;
-</div>;
-</div>;
+</tbody>
+</table>
+</div>
+</div>
 
 {/* Recommendations */}
-<div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">;
-<h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">;
-<AlertTriangle className="w-5 h-5 mr-2" />;
+<div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">
+<h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">
+<AlertTriangle className="w-5 h-5 mr-2" />
 Recommendations;
-</h3>;
-<ul className="text-yellow-200 text-sm space-y-1">;
-<li>• Fix broken LinkedIn and social media links</li>;
-<li>• Implement proper redirects for moved pages</li>;
-<li>• Set up automated link monitoring</li>;
-<li>• Review external link validity regularly</li>;
-</ul>;
-</div>;
-</div>;
-</motion.div>;
-</motion.div>;
+</h3>
+<ul className="text-yellow-200 text-sm space-y-1">
+<li>• Fix broken LinkedIn and social media links</li>
+<li>• Implement proper redirects for moved pages</li>
+<li>• Set up automated link monitoring</li>
+<li>• Review external link validity regularly</li>
+</ul>
+</div>
+</div>
+</motion.div>
+</motion.div>
 )}
-</>;
+</>
 );
 };
 

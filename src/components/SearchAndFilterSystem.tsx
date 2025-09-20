@@ -3,5 +3,5 @@ import React from "react";
 
 }
 
-export default SearchAndFilterSystem,;
+export default SearchAndFilterSystem;
 ;

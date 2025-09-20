@@ -6,22 +6,22 @@ import { SkillsFilterProps,  } from "@/types/filters";
 
 export function SkillsFilter({ selectedSkills toggleSkill expanded toggleSection isMobileFilterOpen }: SkillsFilterProps) {
 return (
-<div className="mb-6 border-b border-zion-blue-light pb-6">;
+<div className="mb-6 border-b border-zion-blue-light pb-6">
 <button,
 onClick={toggleSection}
 className="flex w-full items-center justify-between text-white font-medium"
 >;
-<span>Skills</span>;
+<span>Skills</span>
 {expanded ? (
-<ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+<ChevronUp className="h-4 w-4 text-zion-slate-light" />
 ) : (
-<ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+<ChevronDown className="h-4 w-4 text-zion-slate-light" />
 )}
-</button>;
+</button>
 {expanded && (
-<div className="mt-4 space-y-2">;
+<div className="mt-4 space-y-2">
 {POPULAR_SKILLS.map(skill => (
-<div key={skill} className="flex items-center">;
+<div key={skill} className="flex items-center">
 <Checkbox,
 id={`skill-${skill}`}
 checked={selectedSkills.includes(skill)}
@@ -33,12 +33,12 @@ className='ml-2 text-sm text-zion-slate-light cursor-pointer'
 >                {skill}                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
 htmlFor="input-;
 {skill}
-">;
-</label>;
-</div>;
+">
+</label>
+</div>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 )
 }

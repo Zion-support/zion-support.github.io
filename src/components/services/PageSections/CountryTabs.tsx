@@ -9,14 +9,14 @@ searchQuery: string;,
 setSearchQuery: (query: string) => void,
 export function CountryTabs({
 }}
-/>;
-</PaginationItem>;
-</PaginationContent>;
-</Pagination>;
-</div>;
+/>
+</PaginationItem>
+</PaginationContent>
+</Pagination>
+</div>
 )}
-</TabsContent>;
-</Tabs>;
+</TabsContent>
+</Tabs>
 )
 )
 }

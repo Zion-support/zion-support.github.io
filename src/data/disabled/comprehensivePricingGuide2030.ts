@@ -6,8 +6,8 @@ name: string;
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030 = {;
-basic: {,;
-name: "Basic Plan",;
+basic: {;
+name: "Basic Plan";
 price: 2999;,
 features: [
 "Basic AI Analytics",

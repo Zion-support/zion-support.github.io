@@ -9,8 +9,8 @@ updateFormData: (data: Partial<QuoteFormData>) => void,
 export function TimelineStep({ formData updateFormData }: TimelineStepProps) {
 return (
 )}
-</Button>;
-</PopoverTrigger>;
+</Button>
+</PopoverTrigger>
 <PopoverContent,
 className='w-auto p-0 bg-zion-blue-dark border border-zion-blue-light'
 align='start';
@@ -21,16 +21,16 @@ selected={formData.endDate}
 onSelect={date => updateFormData({ endDate: date })}
 initialFocus,
 className='p-3 pointer-events-auto'
-disabled={date =>;
+disabled={date =>
 date < (formData.startDate |new Date())
-}                    />;
-</PopoverContent>;
-</Popover>;
-</div>;
-</div>;
+}                    />
+</PopoverContent>
+</Popover>
+</div>
+</div>
 )}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )
 }

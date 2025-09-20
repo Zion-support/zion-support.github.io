@@ -117,7 +117,7 @@ const filterOptions: FilterOptions = useMemo(
 
 // Removed client-side filtering logic as the API now handles it.;
 const filteredListings = useMemo(() => {;
-return listings,;
+return listings;
 }, [listings]);
 
 // Handle filter changes;

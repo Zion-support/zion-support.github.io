@@ -21,11 +21,11 @@ localStorage.setItem("referralCode", code),
 }
 }, []),
 ,
-useEffect(() => {,;
-// "TODO": "Add dependencies if needed,;
-"}, []),;
-async function sendReferral("props": "any) {,;
-const code = localStorage.getItem("referralCode"),;
+useEffect(() => {;
+// "TODO": "Add dependencies if needed;
+"}, []);
+async function sendReferral("props": "any) {;
+const code = localStorage.getItem("referralCode");
 if(!code || !user?.id || !user?.email) return, // Guard against missing email as well;
 try {,
 await supabase.functions.invoke("track-referral", {,
@@ -39,5 +39,5 @@ console.error("Error tracking referral", err),
 }
 sendReferral(),
 }, [user?.id; user?.email]), // Added user?.email;
-return <>{children}</, >;
-}<//, ><///, >;
+return <>{children}</, >
+}<//, ><///, >

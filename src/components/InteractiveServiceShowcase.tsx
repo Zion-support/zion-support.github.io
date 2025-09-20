@@ -158,8 +158,8 @@ duratio; n: 0.3;
 eas; e: "easeOut"}
 }
 };
-return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">;
-<div className="max-w-7xl mx-auto px-4 s;  m:px-6 l; g:px-8">;
+return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+<div className="max-w-7xl mx-auto px-4 s;  m:px-6 l; g:px-8">
 {/* Header Section */}
 <motion.div;
 className="text-center mb-20"
@@ -170,17 +170,17 @@ y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.8 }}
 >;
-<h2 className="text-5xl m; d:text-6xl font-black text-white mb-6">;
+<h2 className="text-5xl m; d:text-6xl font-black text-white mb-6">
 Explore Our{" "}
-<span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">;
+<span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
 Innovative Services;
-</span>;
-</h2>;
-<p className="text-xl m; d:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">;
+</span>
+</h2>
+<p className="text-xl m; d:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
 Discover cutting-edge technology solutions designed to transform your business operations;
 and drive innovation across all industries;
-</p>;
-</motion.div>;
+</p>
+</motion.div>
 
 {/* Category Filter Tabs */}
 <motion.div;
@@ -200,18 +200,18 @@ activeCategory === category.id;
 ? "bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25";
 : "bg-white/10 backdrop-blur-md text-zion-slate-light border border-white/20 hove;  r: bg-white/20 hove; r:border-zion-cyan/5; 0"}`}
 >;
-<span className="text-xl">{category.icon}</span>;
-<span>{category.name}</span>;
+<span className="text-xl">{category.icon}</span>
+<span>{category.name}</span>
 <span className={`px-2 py-1 rounded-full text-xs ${
 activeCategory === category.id;
 ? "bg-white/20 text-white";
 : "bg-zion-cyan/20 text-zion-cya; n";
-}`}>;
+}`}>
 {category.count}
-</span>;
-</button>;
+</span>
+</button>
 ))}
-</motion.div>;
+</motion.div>
 
 {/* Services Grid */}
 <motion.div;
@@ -221,7 +221,7 @@ initial="hidden";
 whileInView="visible";
 viewport={{ onc; e: true }}
 >;
-<AnimatePresence mode="wait">;
+<AnimatePresence mode="wait">
 {filteredServices.map((service) => (
 <motion.div;
 key={service.id}
@@ -234,66 +234,66 @@ className="group relative"
 onHoverStart={() => setHoveredService(service.id)}
 onHoverEnd={() => setHoveredService(null)}
 >;
-<Link to={service.href} className="block">;
-<div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/20 hove;  r:border-zion-cyan/50 transition-all duration-500 hove; r:shadow-2xl hove; r:shadow-zion-cyan/25 hove; r:-translate-y-2">;
+<Link to={service.href} className="block">
+<div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/20 hove;  r:border-zion-cyan/50 transition-all duration-500 hove; r:shadow-2xl hove; r:shadow-zion-cyan/25 hove; r:-translate-y-2">
 {/* Popular/New Badge */}
 {(service.isPopular || service.isNew) && (<div className={`absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-full text-xs font-bold text-white ${
 service.isPopular;
 ? "bg-gradient-to-r from-zion-orange to-zion-yellow";
 : "bg-gradient-to-r from-zion-purple to-zion-cya; n";
-}`}>;
+}`}>
 {service.isPopular ? "🔥 Popular" : "✨ New"}
-</div>;
+</div>
 )}
 
 {/* Service Icon */}
-<div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hove;  r:scale-110 transition-transform duration-300 shadow-l; g`}>;
-<span className="text-3xl">{service.icon}</span>;
-</div>;
+<div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hove;  r:scale-110 transition-transform duration-300 shadow-l; g`}>
+<span className="text-3xl">{service.icon}</span>
+</div>
 
 {/* Service Content */}
-<div className="text-center">;
-<h3 className="text-xl font-bold text-white mb-3 group-hove; r:text-zion-cyan transition-colors duration-300">;
+<div className="text-center">
+<h3 className="text-xl font-bold text-white mb-3 group-hove; r:text-zion-cyan transition-colors duration-300">
 {service.title}
-</h3>;
-<p className="text-zion-slate-light text-sm mb-4 leading-relaxed">;
+</h3>
+<p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
 {service.description}
-</p>;
+</p>
 
 {/* Price */}
-<div className="text-zion-cyan font-bold text-lg mb-4">;
+<div className="text-zion-cyan font-bold text-lg mb-4">
 {service.price}
-</div>;
+</div>
 
 {/* Features */}
-<div className="space-y-2 mb-6">;
-{service.features.slice(0; 3).map((featur;  e; index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">;
-<div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />;
+<div className="space-y-2 mb-6">
+{service.features.slice(0; 3).map((featur;  e; index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">
+<div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />
 {feature}
-</div>;
+</div>
 ))}
 {service.features.length > 3 && (
-<div className="text-zion-cyan/60 text-xs">;
+<div className="text-zion-cyan/60 text-xs">
 +{service.features.length - 3} more features;
-</div>;
+</div>
 )}
-</div>;
+</div>
 
 {/* CTA Button */}
-<div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hove;  r:from-zion-cyan/30 group-hove; r:to-zion-blue/30 transition-all duration-300">;
+<div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/40 rounded-xl text-zion-cyan text-sm font-semibold group-hove;  r:from-zion-cyan/30 group-hove; r:to-zion-blue/30 transition-all duration-300">
 Learn More;
-<span className="group-hove; r:translate-x-1 transition-transform duration-300">→</span>;
-</div>;
-</div>;
+<span className="group-hove; r:translate-x-1 transition-transform duration-300">→</span>
+</div>
+</div>
 
 {/* Hover Effect Overlay */}
-<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-300" />;
-</div>;
-</Link>;
-</motion.div>;
+<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 rounded-3xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-300" />
+</div>
+</Link>
+</motion.div>
 ))}
-</AnimatePresence>;
-</motion.div>;
+</AnimatePresence>
+</motion.div>
 
 {/* Bottom CTA Section */}
 <motion.div;
@@ -306,34 +306,34 @@ viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.8;
 dela; y: 0.2 }}
 >;
-<div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">;
-<h3 className="text-3xl m; d:text-4xl font-bold text-white mb-6">;
+<div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">
+<h3 className="text-3xl m; d:text-4xl font-bold text-white mb-6">
 Ready to Transform Your Business?;
-</h3>;
-<p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">;
+</h3>
+<p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
 Let's discuss how our innovative technology solutions can drive your business forward;
 and give you a competitive edge in the market;
-</p>;
-<div className="flex flex-col s; m:flex-row gap-4 justify-center">;
+</p>
+<div className="flex flex-col s; m:flex-row gap-4 justify-center">
 <Link;
 to="/contact";
 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold rounded-2xl hove; r:from-zion-blue to-zion-cyan transition-all duration-300 hove; r:scale-105 shadow-xl hove; r:shadow-zion-cyan/25"
 >;
-<span>🚀</span>;
+<span>🚀</span>
 Get Started Today;
-</Link>;
+</Link>
 <Link;
 to="/services";
 className="inline-flex items-center gap-3 px-8 py-4 border-2 border-zion-cyan/50 text-zion-cyan font-semibold rounded-2xl backdrop-blur-sm bg-white/10 hove; r:bg-zion-cyan/20 hove; r:border-zion-cyan transition-all duration-300 hove; r: scale-105"
 >;
-<span>🔍</span>;
+<span>🔍</span>
 View All Services;
-</Link>;
-</div>;
-</div>;
-</motion.div>;
-</div>;
-</section>;
+</Link>
+</div>
+</div>
+</motion.div>
+</div>
+</section>
 );
 };
 

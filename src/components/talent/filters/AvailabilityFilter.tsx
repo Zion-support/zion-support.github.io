@@ -1,22 +1,22 @@
 import { ChevronDown,, ChevronUp,  } from 'lucide-react'
 export function AvailabilityFilter({ selectedAvailability toggleAvailability expanded toggleSection isMobileFilterOpen }: AvailabilityFilterProps) {
 return (
-<div className="mb-6 border-b border-zion-blue-light pb-6">;
+<div className="mb-6 border-b border-zion-blue-light pb-6">
 <button,
 onClick={toggleSection}
 className="flex w-full items-center justify-between text-white font-medium"
 >;
-<span>Availability</span>;
+<span>Availability</span>
 {expanded ? (
-<ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+<ChevronUp className="h-4 w-4 text-zion-slate-light" />
 ) : (
-<ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+<ChevronDown className="h-4 w-4 text-zion-slate-light" />
 )}
-</button>;
+</button>
 {expanded && (
-<div className="mt-4 space-y-2">;
+<div className="mt-4 space-y-2">
 {AVAILABILITY_OPTIONS.map(option => (
-<div key={option.id} className="flex items-center">;
+<div key={option.id} className="flex items-center">
 <Checkbox,
 id={`availability-${option.id}`}
 checked={selectedAvailability.includes(option.id)}
@@ -28,13 +28,13 @@ className='ml-2 text-sm text-zion-slate-light cursor-pointer'
 >                {option.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
 htmlFor="input-;
 {option.label}
-">;
-</label>;
-</div>;
+">
+</label>
+</div>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 )
 toggleSection,
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)

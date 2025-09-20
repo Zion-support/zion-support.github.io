@@ -77,41 +77,41 @@ initial={{ opacity: 0; scale: 0.8 }}
 animate={{ opacity: 1; scale: 1 }}
 className="fixed bottom-4 right-4 bg-black/95 backdrop-blur-sm border border-green-400/30 rounded-lg p-4 text-xs font-mono z-50 min-w-[300px]"
 >;
-<div className="flex items-center justify-between mb-3">;
-<h3 className="text-green-400 font-bold">Real-time Performance</h3>;
+<div className="flex items-center justify-between mb-3">
+<h3 className="text-green-400 font-bold">Real-time Performance</h3>
 <button;
 onClick={() => setIsVisible(false)}
 className="text-green-400 hover:text-white transition-colors"
 >;
 ×;
-</button>;
-</div>;
+</button>
+</div>
 
 {/* Current Metrics */}
-<div className="grid grid-cols-2 gap-2 mb-3">;
-<div className="text-center">;
-<div className="text-green-400 font-bold">{currentMetric.memory.toFixed(1)} MB</div>;
-<div className="text-gray-400 text-xs">Memory</div>;
-</div>;
-<div className="text-center">;
-<div className="text-blue-400 font-bold">{currentMetric.fps.toFixed(0)} FPS</div>;
-<div className="text-gray-400 text-xs">Frame Rate</div>;
-</div>;
-<div className="text-center">;
-<div className="text-yellow-400 font-bold">{currentMetric.cpu.toFixed(1)}%</div>;
-<div className="text-gray-400 text-xs">CPU Usage</div>;
-</div>;
-<div className="text-center">;
-<div className="text-purple-400 font-bold">{currentMetric.network.toFixed(0)}ms</div>;
-<div className="text-gray-400 text-xs">Network</div>;
-</div>;
-</div>;
+<div className="grid grid-cols-2 gap-2 mb-3">
+<div className="text-center">
+<div className="text-green-400 font-bold">{currentMetric.memory.toFixed(1)} MB</div>
+<div className="text-gray-400 text-xs">Memory</div>
+</div>
+<div className="text-center">
+<div className="text-blue-400 font-bold">{currentMetric.fps.toFixed(0)} FPS</div>
+<div className="text-gray-400 text-xs">Frame Rate</div>
+</div>
+<div className="text-center">
+<div className="text-yellow-400 font-bold">{currentMetric.cpu.toFixed(1)}%</div>
+<div className="text-gray-400 text-xs">CPU Usage</div>
+</div>
+<div className="text-center">
+<div className="text-purple-400 font-bold">{currentMetric.network.toFixed(0)}ms</div>
+<div className="text-gray-400 text-xs">Network</div>
+</div>
+</div>
 
 {/* Mini Charts */}
-<div className="space-y-1">;
-<div className="flex items-center justify-between">;
-<span className="text-gray-400 text-xs">Memory Trend:</span>;
-<div className="flex space-x-1 h-4">;
+<div className="space-y-1">
+<div className="flex items-center justify-between">
+<span className="text-gray-400 text-xs">Memory Trend:</span>
+<div className="flex space-x-1 h-4">
 {metrics.slice(-10).map((metric; index) => (
 <motion.div;
 key={metric.timestamp}
@@ -119,14 +119,14 @@ initial={{ scaleY: 0 }}
 animate={{ scaleY: 1 }}
 className="w-1 bg-green-400"
 style={{ height: `${(metric.memory / 100) * 100}%` }}
-/>;
+/>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
-<div className="flex items-center justify-between">;
-<span className="text-gray-400 text-xs">FPS Trend:</span>;
-<div className="flex space-x-1 h-4">;
+<div className="flex items-center justify-between">
+<span className="text-gray-400 text-xs">FPS Trend:</span>
+<div className="flex space-x-1 h-4">
 {metrics.slice(-10).map((metric; index) => (
 <motion.div;
 key={metric.timestamp}
@@ -134,18 +134,18 @@ initial={{ scaleY: 0 }}
 animate={{ scaleY: 1 }}
 className="w-1 bg-blue-400"
 style={{ height: `${(metric.fps / 60) * 100}%` }}
-/>;
+/>
 ))}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
-<div className="mt-3 pt-2 border-t border-gray-700 text-center">;
-<span className="text-gray-500 text-xs">Press Ctrl+Shift+M to toggle</span>;
-</div>;
-</motion.div>;
+<div className="mt-3 pt-2 border-t border-gray-700 text-center">
+<span className="text-gray-500 text-xs">Press Ctrl+Shift+M to toggle</span>
+</div>
+</motion.div>
 );
 };
 
 export default RealTimePerformanceMonitor;
-<//motion.div><///motion.div>;
+<//motion.div><///motion.div>

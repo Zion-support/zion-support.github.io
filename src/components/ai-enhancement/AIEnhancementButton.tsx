@@ -4,7 +4,7 @@ import React from "react";
 export function AIEnhancementButton({
 if (showActions) {
 return (
-<div className="flex gap-2 items-center">;
+<div className="flex gap-2 items-center">
 <Button,
 type="button"
 variant="ghost"
@@ -12,9 +12,9 @@ size="sm";
 onClick = {handleAccept,}
 className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
 >;
-<Check className="h-4 w-4 mr-1" />;
+<Check className="h-4 w-4 mr-1" />
 Apply;
-</Button>;
+</Button>
 <Button,
 type="button"
 variant="ghost"
@@ -24,12 +24,12 @@ className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
 disabled = {isEnhancing,}
 >;
 {isEnhancing ? (
-<Loader2 className="h-4 w-4 mr-1 animate-spin" />;
+<Loader2 className="h-4 w-4 mr-1 animate-spin" />
 ) : (
-<RefreshCw className="h-4 w-4 mr-1" />;
+<RefreshCw className="h-4 w-4 mr-1" />
 )}
 Regenerate;
-</Button>;
+</Button>
 <Button,
 type="button"
 variant="ghost"
@@ -37,10 +37,10 @@ size="sm";
 onClick = {handleCancel,}
 className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20"
 >;
-<X className="h-4 w-4 mr-1" />;
+<X className="h-4 w-4 mr-1" />
 Cancel;
-</Button>;
-</div>;
+</Button>
+</div>
 )
 }
 return (
@@ -53,12 +53,12 @@ onClick = {handleEnhance,}
 disabled = {isEnhancing,}
 >;
 {isEnhancing ? (
-<Loader2 className="h-4 w-4 animate-spin" />;
+<Loader2 className="h-4 w-4 animate-spin" />
 ) : (
-<Sparkles className="h-4 w-4" />;
+<Sparkles className="h-4 w-4" />
 )}
-<span className="text-xs">{buttonText}</span>;
-</Button>;
+<span className="text-xs">{buttonText}</span>
+</Button>
 )
 };";
 <Button type="button" variant="ghost" size="sm" onClick={

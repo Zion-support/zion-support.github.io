@@ -5,7 +5,7 @@ import { AlertTriangle,, Home,, RefreshCw,, Settings,  } from 'lucide-react'
 }}
 >;
 {children}
-</ErrorBoundary>;
+</ErrorBoundary>
 )
 }
 }

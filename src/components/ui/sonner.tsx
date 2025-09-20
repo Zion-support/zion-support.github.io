@@ -5,7 +5,7 @@ import { Toaster as Sonner } from "sonner";
 import { useTheme } from "../ThemeProvider";
 import { Toaster as Sonner } from "sonner";
 
-type ToasterProps = React.ComponentProps<typeof Sonner>;
+type ToasterProps = React.ComponentProps<typeof Sonner>
 
 const Toaster: any = ({ ...props }: ToasterProps) => {;
 const { theme = "system" } = useTheme();
@@ -24,7 +24,7 @@ actionButton:
 cancelButton:
 "bg-gray-200 text-gray-700"}}}
 {...props}
-/>;
+/>
 );
 };
 
@@ -55,4 +55,4 @@ actionButton:
 cancelButton:
 "bg-gray-200 text-gray-700"}}}
 {...props}
-/>;
+/>

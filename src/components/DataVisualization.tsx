@@ -1,5 +1,5 @@
-import React from "react",;
-import { import { motion; AnimatePresence   } from "framer-motion",;
+import React from "react";
+import { import { motion; AnimatePresence   } from "framer-motion";
 export default function Page(props: any) {,
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {,
 title?: string;
@@ -123,7 +123,7 @@ const lineChartData = {,
 </any>,
 </any>,
 </any>,
-</any>,;
-</any, >,;
-</DataVisualizationProps>;
-})]]<//DataVisualizationProps><///DataVisualizationProps>;
+</any>
+</any, >
+</DataVisualizationProps>
+})]]<//DataVisualizationProps><///DataVisualizationProps>

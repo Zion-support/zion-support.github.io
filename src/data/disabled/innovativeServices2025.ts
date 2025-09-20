@@ -194,7 +194,7 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
 "Blockchain & DeFi",
 "IoT & Analytics",
 "Cybersecurity",
-"Cloud Infrastructure",;
-"Data Science",;
+"Cloud Infrastructure";
+"Data Science";
 "Machine Learning";
 ];

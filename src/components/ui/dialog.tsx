@@ -29,8 +29,8 @@ onOpenChange(newOpen);
 };
 
 return (
-<DialogContext.Provider value={{ isOpen; setIsOpen }}>;
-<div className="relative">;
+<DialogContext.Provider value={{ isOpen; setIsOpen }}>
+<div className="relative">
 import React from "react";
 import { cn } from "@/lib/utils";
 
@@ -93,11 +93,11 @@ setIsOpen(value);
 } else {
 setIsOpen(value);
 }
-}}}>;
-<div className={cn("relative", className)} {...props}>;
+}}}>
+<div className={cn("relative", className)} {...props}>
 {children}
-</div>;
-</DialogContext.Provider>;
+</div>
+</DialogContext.Provider>
 );
 }
 
@@ -107,16 +107,16 @@ if (!context) throw new Error("DialogTrigger must be used within Dialog");
 
 if (asChild) {
 return (
-<div onClick={() => context.setIsOpen(true)}>;
+<div onClick={() => context.setIsOpen(true)}>
 {children}
-</div>;
+</div>
 );
 }
 
 return (
-<div onClick={() => context.setIsOpen(true)}>;
+<div onClick={() => context.setIsOpen(true)}>
 {children}
-</div>;
+</div>
 );
 }
 
@@ -127,9 +127,9 @@ if (!context) throw new Error("DialogContent must be used within Dialog");
 if (!context.isOpen) return null;
 
 return (
-<div className="fixed inset-0 z-50 flex items-center justify-center">;
-<div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)} />;
-<div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>;
+<div className="fixed inset-0 z-50 flex items-center justify-center">
+<div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)} />
+<div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
 };
 
 export const DialogTrigger: React.FC<DialogTriggerProps> = ({;
@@ -151,7 +151,7 @@ onClick={() => setOpen(true)}
 {...props}
 >;
 {children}
-</button>;
+</button>
 );
 };
 
@@ -170,11 +170,11 @@ const { open; setOpen } = context;
 if (!open) return null;
 
 return (
-<div className="fixed inset-0 z-50 flex items-center justify-center">;
+<div className="fixed inset-0 z-50 flex items-center justify-center">
 <div;
 className="fixed inset-0 bg-black/50"
 onClick={() => setOpen(false)}
-/>;
+/>
 <div;
 className={cn(
 "relative bg-white rounded-lg shadow-lg p-6 max-w-md w-full mx-4",
@@ -183,25 +183,25 @@ className;
 {...props}
 >;
 {children}
-</div>;
-</div>;
+</div>
+</div>
 );
 }
 
 export function DialogHeader({ children; className = "" }: { children: ReactNode; className?: string }) {
-return <div className={`mb-4 ${className}`}>{children}</div>;
+return <div className={`mb-4 ${className}`}>{children}</div>
 }
 
 export function DialogTitle({ children; className = "" }: { children: ReactNode; className?: string }) {
-return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>;
+return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>
 }
 
 export function DialogDescription({ children; className = "" }: { children: ReactNode; className?: string }) {
-return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>;
+return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>
 }
 
 export function DialogFooter({ children; className = "" }: { children: ReactNode; className?: string }) {
-return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;
+return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>
 }
 };
 
@@ -211,9 +211,9 @@ className,
 ...props;
 }) => {
 return (
-<div className={cn("mb-4", className)} {...props}>;
+<div className={cn("mb-4", className)} {...props}>
 {children}
-</div>;
+</div>
 );
 };
 
@@ -223,9 +223,9 @@ className,
 ...props;
 }) => {
 return (
-<h2 className={cn("text-lg font-semibold", className)} {...props}>;
+<h2 className={cn("text-lg font-semibold", className)} {...props}>
 {children}
-</h2>;
+</h2>
 );
 };
 
@@ -235,9 +235,9 @@ className,
 ...props;
 }) => {
 return (
-<p className={cn("text-sm text-gray-600", className)} {...props}>;
+<p className={cn("text-sm text-gray-600", className)} {...props}>
 {children}
-</p>;
+</p>
 );
 };
 
@@ -247,9 +247,9 @@ className,
 ...props;
 }) => {
 return (
-<div className={cn("flex justify-end gap-2 mt-4", className)} {...props}>;
+<div className={cn("flex justify-end gap-2 mt-4", className)} {...props}>
 {children}
-</div>;
+</div>
 );
 };
 <//div><///div>))
@@ -262,8 +262,8 @@ const DialogTrigger = DialogPrimitive.Trigger,
 const DialogPortal = DialogPrimitive.Portal,
 const DialogClose = DialogPrimitive.Close,
 const DialogOverlay = React.forwardRef<;
-React.ElementRef<typeof DialogPrimitive.Overlay>;
-React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>;
+React.ElementRef<typeof DialogPrimitive.Overlay>
+React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 ></typeof>(({ className, ...props }, ref) => (
 <DialogPrimitive.Overlay,
 ref={ref}
@@ -272,15 +272,15 @@ className={cn(
 className
 )}
 {...props}
-/>;
+/>
 ))
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName,
 const DialogContent = React.forwardRef<;
-React.ElementRef<typeof DialogPrimitive.Content>;
-React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>;
+React.ElementRef<typeof DialogPrimitive.Content>
+React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>
 >(({ className children, ...props }, ref) => (
-<DialogPortal>;
-<DialogOverlay />;
+<DialogPortal>
+<DialogOverlay />
 <DialogPrimitive.Content,
 ref={ref}
 className={cn(
@@ -290,12 +290,12 @@ className
 {...props}
 >;
 {children}
-<DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>;
-<X className='h-4 w-4' />;
-<span className='sr-only'>Close</span>;
-</DialogPrimitive.Close>;
-</DialogPrimitive.Content>;
-</DialogPortal>;
+<DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>
+<X className='h-4 w-4' />
+<span className='sr-only'>Close</span>
+</DialogPrimitive.Close>
+</DialogPrimitive.Content>
+</DialogPortal>
 ))
 DialogContent.displayName = DialogPrimitive.Content.displayName,
 const DialogHeader: any = ({
@@ -308,7 +308,7 @@ className={cn(
 className
 )}
 {...props}
-/>;
+/>
 )
 DialogHeader.displayName = 'DialogHeader';
 const DialogFooter: any = ({
@@ -321,12 +321,12 @@ className={cn(
 className
 )}
 {...props}
-/>;
+/>
 )
 DialogFooter.displayName = 'DialogFooter';
 const DialogTitle = React.forwardRef<;
-React.ElementRef<typeof DialogPrimitive.Title>;
-React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive.Title>;
+React.ElementRef<typeof DialogPrimitive.Title>
+React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
 <DialogPrimitive.Title,
 ref={ref}
@@ -335,18 +335,18 @@ className={cn(
 className
 )}
 {...props}
-/>;
+/>
 ))
 DialogTitle.displayName = DialogPrimitive.Title.displayName,
 const DialogDescription = React.forwardRef<;
-React.ElementRef<typeof DialogPrimitive.Description>;
-React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>;
+React.ElementRef<typeof DialogPrimitive.Description>
+React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
 <DialogPrimitive.Description,
 ref={ref}
 className={cn('text-sm text-muted-foreground', className)}
 {...props}
-/>;
+/>
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName,
 export {

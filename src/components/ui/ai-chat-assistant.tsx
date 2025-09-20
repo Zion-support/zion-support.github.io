@@ -177,7 +177,7 @@ setMessages([messages[0]]); // Keep welcome message;
 if (!enabled) return null;
 
 return (
-<div className={`fixed bottom-4 right-4 z-40 ${className}`}>;
+<div className={`fixed bottom-4 right-4 z-40 ${className}`}>
 {/* Chat Toggle Button */}
 <motion.button;
 onClick={() => setIsOpen(!isOpen)}
@@ -186,11 +186,11 @@ whileHover={{ scale: 1.1 }}
 whileTap={{ scale: 0.9 }}
 aria-label="AI Chat Assistant";
 >;
-<MessageSquare className="w-6 h-6" />;
-</motion.button>;
+<MessageSquare className="w-6 h-6" />
+</motion.button>
 
 {/* Chat Window */}
-<AnimatePresence>;
+<AnimatePresence>
 {isOpen && (
 <motion.div;
 className="fixed inset-0 z-50"
@@ -203,7 +203,7 @@ transition={{ duration: 0.2 }}
 <div;
 className="absolute inset-0 bg-black/50 backdrop-blur-sm"
 onClick={() => setIsOpen(false)}
-/>;
+/>
 
 {/* Chat Panel */}
 <motion.div;
@@ -216,31 +216,31 @@ exit={{ opacity: 0; y: 20; scale: 0.95 }}
 transition={{ duration: 0.3; ease: "easeOut" }}
 >;
 {/* Header */}
-<div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">;
-<div className="flex items-center gap-3">;
-<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
-<Bot className="w-5 h-5 text-white" />;
-</div>;
-<div>;
-<h3 className="text-white font-semibold">Zion AI Assistant</h3>;
-<div className="flex items-center gap-2">;
-<div className={`w-2 h-2 rounded-full ${isTyping ? "bg-zion-cyan animate-pulse" : "bg-green-400"}`} />;
-<span className="text-zinc-400 text-xs">;
+<div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
+<div className="flex items-center gap-3">
+<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
+<Bot className="w-5 h-5 text-white" />
+</div>
+<div>
+<h3 className="text-white font-semibold">Zion AI Assistant</h3>
+<div className="flex items-center gap-2">
+<div className={`w-2 h-2 rounded-full ${isTyping ? "bg-zion-cyan animate-pulse" : "bg-green-400"}`} />
+<span className="text-zinc-400 text-xs">
 {isTyping ? "Typing..." : "Online"}
-</span>;
-</div>;
-</div>;
-</div>;
+</span>
+</div>
+</div>
+</div>
 
-<div className="flex items-center gap-1">;
+<div className="flex items-center gap-1">
 <Button;
 size="sm";
 variant="ghost"
 onClick={() => setShowSettings(!showSettings)}
 className="text-zinc-400 hover:text-white p-2"
 >;
-<Settings className="w-4 h-4" />;
-</Button>;
+<Settings className="w-4 h-4" />
+</Button>
 <Button;
 size="sm";
 variant="ghost"
@@ -248,20 +248,20 @@ onClick={() => setIsMinimized(!isMinimized)}
 className="text-zinc-400 hover:text-white p-2"
 >;
 {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
-</Button>;
+</Button>
 <Button;
 size="sm";
 variant="ghost"
 onClick={() => setIsOpen(false)}
 className="text-zinc-400 hover:text-white p-2"
 >;
-<X className="w-4 h-4" />;
-</Button>;
-</div>;
-</div>;
+<X className="w-4 h-4" />
+</Button>
+</div>
+</div>
 
 {/* Settings Panel */}
-<AnimatePresence>;
+<AnimatePresence>
 {showSettings && !isMinimized && (
 <motion.div;
 className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10"
@@ -270,9 +270,9 @@ animate={{ height: "auto", opacity: 1 }}
 exit={{ height: 0; opacity: 0 }}
 transition={{ duration: 0.2 }}
 >;
-<div className="space-y-3">;
-<div className="flex items-center justify-between">;
-<span className="text-zinc-300 text-sm">Voice Input</span>;
+<div className="space-y-3">
+<div className="flex items-center justify-between">
+<span className="text-zinc-300 text-sm">Voice Input</span>
 <Button;
 size="sm";
 variant="ghost"
@@ -280,10 +280,10 @@ onClick={toggleVoiceInput}
 className={`p-2 ${isRecording ? "text-zion-cyan" : "text-zinc-400"}`}
 >;
 {isRecording ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
-</Button>;
-</div>;
-<div className="flex items-center justify-between">;
-<span className="text-zinc-300 text-sm">Clear Chat</span>;
+</Button>
+</div>
+<div className="flex items-center justify-between">
+<span className="text-zinc-300 text-sm">Clear Chat</span>
 <Button;
 size="sm";
 variant="ghost"
@@ -291,16 +291,16 @@ onClick={clearChat}
 className="text-zinc-400 hover:text-red-400 p-2"
 >;
 Clear;
-</Button>;
-</div>;
-</div>;
-</motion.div>;
+</Button>
+</div>
+</div>
+</motion.div>
 )}
-</AnimatePresence>;
+</AnimatePresence>
 
 {/* Messages */}
 {!isMinimized && (
-<div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[400px]">;
+<div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[400px]">
 {messages.map((message) => (
 <motion.div;
 key={message.id}
@@ -310,34 +310,34 @@ animate={{ opacity: 1; y: 0 }}
 transition={{ duration: 0.3 }}
 >;
 {message.type === "assistant" && (
-<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">;
-<Bot className="w-5 h-5 text-white" />;
-</div>;
+<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">
+<Bot className="w-5 h-5 text-white" />
+</div>
 )}
 
-<div className={`max-w-[280px] ${message.type === "user" ? "order-2" : "order-1"}`}>;
+<div className={`max-w-[280px] ${message.type === "user" ? "order-2" : "order-1"}`}>
 <div className={`p-3 rounded-lg ${
 message.type === "user";
 ? "bg-zion-purple text-white";
 : "bg-zion-blue/20 text-zinc-200";
-}`}>;
-<p className="text-sm leading-relaxed">{message.content}</p>;
-</div>;
+}`}>
+<p className="text-sm leading-relaxed">{message.content}</p>
+</div>
 
 {/* Message metadata */}
 {message.metadata && (
-<div className="mt-2 space-y-2">;
+<div className="mt-2 space-y-2">
 {/* Confidence score */}
 {message.metadata.confidence && (
-<div className="flex items-center gap-2 text-xs text-zinc-400">;
-<Brain className="w-3 h-3" />;
-<span>Confidence: {(message.metadata.confidence * 100).toFixed(0)}%</span>;
-</div>;
+<div className="flex items-center gap-2 text-xs text-zinc-400">
+<Brain className="w-3 h-3" />
+<span>Confidence: {(message.metadata.confidence * 100).toFixed(0)}%</span>
+</div>
 )}
 
 {/* Suggestions */}
 {message.metadata.suggestions && (
-<div className="flex flex-wrap gap-1">;
+<div className="flex flex-wrap gap-1">
 {message.metadata.suggestions.map((suggestion; index) => (
 <button;
 key={index}
@@ -345,25 +345,25 @@ onClick={() => handleSuggestionClick(suggestion)}
 className="px-2 py-1 bg-zion-blue/30 hover:bg-zion-blue/50 border border-zion-blue-light/30 rounded text-xs text-zinc-300 hover:text-white transition-all duration-200"
 >;
 {suggestion}
-</button>;
+</button>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 )}
 
 {/* Timestamp */}
-<div className="text-xs text-zinc-500 mt-1">;
+<div className="text-xs text-zinc-500 mt-1">
 {message.timestamp.toLocaleTimeString()}
-</div>;
-</div>;
+</div>
+</div>
 
 {message.type === "user" && (
-<div className="w-8 h-8 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center flex-shrink-0">;
-<User className="w-5 h-5 text-white" />;
-</div>;
+<div className="w-8 h-8 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center flex-shrink-0">
+<User className="w-5 h-5 text-white" />
+</div>
 )}
-</motion.div>;
+</motion.div>
 ))}
 
 {/* Typing indicator */}
@@ -374,43 +374,43 @@ initial={{ opacity: 0; y: 10 }}
 animate={{ opacity: 1; y: 0 }}
 transition={{ duration: 0.3 }}
 >;
-<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
-<Bot className="w-5 h-5 text-white" />;
-</div>;
-<div className="p-3 rounded-lg bg-zion-blue/20">;
-<div className="flex items-center gap-1">;
-<div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" />;
-<div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: "0.1s" }} />;
-<div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: "0.2s" }} />;
-</div>;
-</div>;
-</motion.div>;
+<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
+<Bot className="w-5 h-5 text-white" />
+</div>
+<div className="p-3 rounded-lg bg-zion-blue/20">
+<div className="flex items-center gap-1">
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" />
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: "0.1s" }} />
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: "0.2s" }} />
+</div>
+</div>
+</motion.div>
 )}
 
-<div ref={messagesEndRef} />;
-</div>;
+<div ref={messagesEndRef} />
+</div>
 )}
 
 {/* Input Area */}
 {!isMinimized && (
-<div className="p-4 border-t border-zion-blue-light/30">;
-<div className="flex items-center gap-2">;
+<div className="p-4 border-t border-zion-blue-light/30">
+<div className="flex items-center gap-2">
 <Button;
 size="sm";
 variant="ghost"
 className="text-zinc-400 hover:text-white p-2"
 >;
-<Paperclip className="w-4 h-4" />;
-</Button>;
+<Paperclip className="w-4 h-4" />
+</Button>
 <Button;
 size="sm";
 variant="ghost"
 className="text-zinc-400 hover:text-white p-2"
 >;
-<Smile className="w-4 h-4" />;
-</Button>;
+<Smile className="w-4 h-4" />
+</Button>
 
-<div className="flex-1 relative">;
+<div className="flex-1 relative">
 <input;
 ref={inputRef}
 value={inputValue}
@@ -419,15 +419,15 @@ onKeyPress={handleKeyPress}
 placeholder="Ask me anything...";
 className="w-full px-4 py-3 bg-zion-blue/20 border border-zion-blue-light/30 text-white placeholder-zinc-400 pr-20 rounded-lg focus:outline-none focus:border-zion-cyan/50 transition-colors duration-200"
 disabled={isTyping}
-/>;
+/>
 
 {/* Voice input indicator */}
 {isRecording && (
-<div className="absolute right-3 top-1/2 transform -translate-y-1/2">;
-<div className="w-3 h-3 bg-red-400 rounded-full animate-pulse" />;
-</div>;
+<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+<div className="w-3 h-3 bg-red-400 rounded-full animate-pulse" />
+</div>
 )}
-</div>;
+</div>
 
 <Button;
 size="sm";
@@ -436,19 +436,19 @@ onClick={toggleVoiceInput}
 className={`p-2 ${isRecording ? "text-red-400" : "text-zinc-400"} hover:text-white`}
 >;
 {isRecording ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
-</Button>;
+</Button>
 
 <Button;
 onClick={sendMessage}
 disabled={!inputValue.trim() || isTyping}
 className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark disabled:opacity-50"
 >;
-<Send className="w-4 h-4" />;
-</Button>;
-</div>;
+<Send className="w-4 h-4" />
+</Button>
+</div>
 
 {/* Quick actions */}
-<div className="mt-3 flex flex-wrap gap-2">;
+<div className="mt-3 flex flex-wrap gap-2">
 {["AI Services", "Cloud Solutions", "Cybersecurity", "Get Started"].map((action) => (
 <button;
 key={action}
@@ -456,15 +456,15 @@ onClick={() => handleSuggestionClick(action)}
 className="px-3 py-1 bg-zion-blue/20 hover: bg-zion-blue/30 border border-zion-blue-light/30 rounded-full text-xs text-zinc-300 hover:text-white transition-all duration-200"
 >;
 {action}
-</button>;
+</button>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</motion.div>;
-</motion.div>;
+</motion.div>
+</motion.div>
 )}
-</AnimatePresence>;
-</div>;
+</AnimatePresence>
+</div>
 );
-}<//div><///div>;
+}<//div><///div>

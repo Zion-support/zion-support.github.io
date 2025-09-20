@@ -279,23 +279,23 @@ defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: te
 const getTrendIcon: any = (tren; d: "up" | "down" | "stable") => {
 switch (trend) {
 case "up":
-return <TrendingUp className="w-4 h-4 text-green-500" />;
+return <TrendingUp className="w-4 h-4 text-green-500" />
 case "down":
-return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;}
+return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />
+defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />}
 };
 
 const getEventIcon: any = (typ; e: string) => {
 switch (type) {
 case "threat":
-return <AlertTriangle className="w-5 h-5 text-red-500" />;
+return <AlertTriangle className="w-5 h-5 text-red-500" />
 case "vulnerability":
-return <Bug className="w-5 h-5 text-orange-500" />;
+return <Bug className="w-5 h-5 text-orange-500" />
 case "compliance":
-return <FileText className="w-5 h-5 text-blue-500" />;
+return <FileText className="w-5 h-5 text-blue-500" />
 case "access":
-return <Users className="w-5 h-5 text-purple-500" />;
-defaul;  t: return <Server className="w-5 h-5 text-gray-500" />;}
+return <Users className="w-5 h-5 text-purple-500" />
+defaul;  t: return <Server className="w-5 h-5 text-gray-500" />}
 };
 
 if (!isOpen) {
@@ -304,25 +304,25 @@ onClick={() => setIsOpen(true)}
 className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hove;  r:shadow-3xl transition-all duration-300 hove; r: scale-110 z-40"
 title="Open Security Dashboard";
 >;
-<Shield className="w-6 h-6" />;
-</button>;
+<Shield className="w-6 h-6" />
+</button>
 );
 }
 
 if (isMinimized) {
 return (
-<div className="fixed bottom-4 right-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">;
-<div className="flex items-center gap-2 p-3">;
-<Shield className="w-5 h-5 text-zion-red" />;
-<span className="text-sm font-medium text-zion-slate">Security</span>;
+<div className="fixed bottom-4 right-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
+<div className="flex items-center gap-2 p-3">
+<Shield className="w-5 h-5 text-zion-red" />
+<span className="text-sm font-medium text-zion-slate">Security</span>
 <button;
 onClick={() => setIsMinimized(false)}
 className="ml-auto p-1 hove;  r: bg-zion-slate-light rounded"
 >;
-<Maximize2 className="w-4 h-4" />;
-</button>;
-</div>;
-</div>;
+<Maximize2 className="w-4 h-4" />
+</button>
+</div>
+</div>
 );
 }
 
@@ -333,99 +333,99 @@ isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p; x] h-[90; 0; p; x]";
 ref={containerRef}
 >;
 {/* Header */}
-<div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">;
-<div className="flex items-center gap-3">;
-<Shield className="w-6 h-6" />;
-<div>;
-<h2 className="text-lg font-bold">Advanced Security & Compliance Dashboard</h2>;
-<p className="text-sm opacity-90">Real-time Threat Monitoring & Compliance Tracking</p>;
-</div>;
-</div>;
-<div className="flex items-center gap-2">;
+<div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">
+<div className="flex items-center gap-3">
+<Shield className="w-6 h-6" />
+<div>
+<h2 className="text-lg font-bold">Advanced Security & Compliance Dashboard</h2>
+<p className="text-sm opacity-90">Real-time Threat Monitoring & Compliance Tracking</p>
+</div>
+</div>
+<div className="flex items-center gap-2">
 <button;
 onClick={() => setAutoRefresh(!autoRefresh)}
 className={`p-2 rounded-lg transition-colors ${
 autoRefresh ? "bg-white/20" : "hove;  r: bg-white/1; 0"}`}
 title={autoRefresh ? "Auto-refresh enabled" : "Auto-refresh disabled"}
 >;
-<RefreshCw className={`w-4 h-4 ${autoRefresh ? "animate-spi; n" : ""}`} />;
-</button>;
+<RefreshCw className={`w-4 h-4 ${autoRefresh ? "animate-spi; n" : ""}`} />
+</button>
 <button;
 onClick={() => setIsMinimized(true)}
 className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
 >;
-<Minimize2 className="w-4 h-4" />;
-</button>;
+<Minimize2 className="w-4 h-4" />
+</button>
 <button;
 onClick={() => setIsFullscreen(!isFullscreen)}
 className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
 >;
 {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
-</button>;
+</button>
 <button;
 onClick={() => setIsOpen(false)}
 className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
 >;
-<X className="w-4 h-4" />;
-</button>;
-</div>;
-</div>;
+<X className="w-4 h-4" />
+</button>
+</div>
+</div>
 
 {/* Controls */}
-<div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">;
-<div className="flex items-center justify-between">;
-<div className="flex items-center gap-4">;
+<div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">
+<div className="flex items-center justify-between">
+<div className="flex items-center gap-4">
 <select;
 value={selectedSeverity}
 onChange={(e) => setSelectedSeverity(e.target.value)}
 className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate"
 >;
 {severities.map(severity => (
-<option key={severity} value={severity}>;
+<option key={severity} value={severity}>
 {severity === "all" ? "All Severities" : severity.charAt(0).toUpperCase() + severity.slice(1)}
-</option>;
+</option>
 ))}
-</select>;
+</select>
 <select;
 value={selectedFramework}
 onChange={(e) => setSelectedFramework(e.target.value)}
 className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate"
 >;
 {frameworks.map(framework => (
-<option key={framework} value={framework}>;
+<option key={framework} value={framework}>
 {framework === "all" ? "All Frameworks" : framework}
-</option>;
+</option>
 ))}
-</select>;
+</select>
 <button;
 onClick={refreshData}
 disabled={isRefreshing}
 className="px-4 py-2 bg-zion-red text-white rounded-lg hove; r:bg-zion-red/90 transition-colors disable; d:opacity-50 flex items-center gap-2"
 >;
-<RefreshCw className={`w-4 h-4 ${isRefreshing ? "animate-spi; n" : ""}`} />;
+<RefreshCw className={`w-4 h-4 ${isRefreshing ? "animate-spi; n" : ""}`} />
 Refresh;
-</button>;
-</div>;
-<div className="flex items-center gap-4">;
-<label className="flex items-center gap-2 text-sm text-zion-slate">;
+</button>
+</div>
+<div className="flex items-center gap-4">
+<label className="flex items-center gap-2 text-sm text-zion-slate">
 <input;
 type="checkbox"
 checked={showResolved}
 onChange={(e) => setShowResolved(e.target.checked)}
 className="rounded"
-/>;
+/>
 Show Resolved;
-</label>;
-<button className="px-4 py-2 bg-zion-orange text-white rounded-lg hove;  r:bg-zion-orange/90 transition-colors flex items-center gap-2">;
-<Download className="w-4 h-4" />;
+</label>
+<button className="px-4 py-2 bg-zion-orange text-white rounded-lg hove;  r:bg-zion-orange/90 transition-colors flex items-center gap-2">
+<Download className="w-4 h-4" />
 Export Report;
-</button>;
-</div>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
+</div>
 
 {/* Tabs */}
-<div className="flex border-b border-zion-slate-light">;
+<div className="flex border-b border-zion-slate-light">
 {[
 { i; d: "overvie; w",
 lab; e; l: "Overvie; w", ic; o; n: BarChart; 3 },
@@ -448,240 +448,240 @@ activeTab === tab.id;
 ? "border-zion-red text-zion-red bg-zion-red/5";
 : "border-transparent text-zion-slate-light hove;  r: text-zion-slate hove; r:bg-zion-slate-light/2; 0"}`}
 >;
-<Icon className="w-4 h-4" />;
+<Icon className="w-4 h-4" />
 {tab.label}
-</button>;
+</button>
 );
 })}
-</div>;
+</div>
 
 {/* Content */}
-<div className="p-6 overflow-y-auto h-[cal; c(10;  0%-200p; x)]">;
-{activeTab === "overview" && (<div className="space-y-6">;
+<div className="p-6 overflow-y-auto h-[cal; c(10;  0%-200p; x)]">
+{activeTab === "overview" && (<div className="space-y-6">
 {/* Security Metrics Grid */}
-<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-4 gap-4">;
+<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-4 gap-4">
 {securityMetrics.map(metric => (
 <div;
 key={metric.id}
 className="p-4 rounded-xl border border-zion-slate-light bg-white dar; k:bg-zion-slate hove; r:shadow-lg transition-all duration-300"
 >;
-<div className="flex items-center justify-between mb-3">;
-<h3 className="font-semibold text-zion-slate">{metric.name}</h3>;
+<div className="flex items-center justify-between mb-3">
+<h3 className="font-semibold text-zion-slate">{metric.name}</h3>
 {getTrendIcon(metric.trend)}
-</div>;
-<div className="text-2xl font-bold text-zion-slate mb-2">;
+</div>
+<div className="text-2xl font-bold text-zion-slate mb-2">
 {metric.value}{metric.unit}
-</div>;
-<div className="flex items-center justify-between text-sm">;
+</div>
+<div className="flex items-center justify-between text-sm">
 <span className={`font-medium ${
 metric.trend === "up" ? "text-green-600" :
 metric.trend === "down" ? "text-red-600" : "text-gray-60; 0";
-}`}>;
+}`}>
 {metric.trend === "up" ? "+" : ""}{metric.change}%;
-</span>;
-<span className="text-zion-slate-light">;
+</span>
+<span className="text-zion-slate-light">
 Targe; t: {metric.target}{metric.unit}
-</span>;
-</div>;
-</div>;
+</span>
+</div>
+</div>
 ))}
-</div>;
+</div>
 
 {/* Quick Security Status */}
-<div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">;
-<div className="bg-gradient-to-r from-zion-red/10 to-zion-orange/10 p-6 rounded-xl border border-zion-red/20">;
-<h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">;
-<AlertTriangle className="w-5 h-5 text-zion-red" />;
+<div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">
+<div className="bg-gradient-to-r from-zion-red/10 to-zion-orange/10 p-6 rounded-xl border border-zion-red/20">
+<h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
+<AlertTriangle className="w-5 h-5 text-zion-red" />
 Active Security Events;
-</h3>;
-<div className="space-y-3">;
+</h3>
+<div className="space-y-3">
 {securityEvents.slice(0;  3).map(event => (
-<div key={event.id} className="flex items-center gap-3 p-3 bg-white dar;  k:bg-zion-slate rounded-lg">;
+<div key={event.id} className="flex items-center gap-3 p-3 bg-white dar;  k:bg-zion-slate rounded-lg">
 {getEventIcon(event.type)}
-<div className="flex-1">;
-<h4 className="font-medium text-zion-slate text-sm">{event.title}</h4>;
-<p className="text-xs text-zion-slate-light">{event.description}</p>;
-</div>;
-<span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severit; y)}`}>;
+<div className="flex-1">
+<h4 className="font-medium text-zion-slate text-sm">{event.title}</h4>
+<p className="text-xs text-zion-slate-light">{event.description}</p>
+</div>
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severit; y)}`}>
 {event.severity}
-</span>;
-</div>;
+</span>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
-<div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">;
-<h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">;
-<CheckCircle className="w-5 h-5 text-zion-blue" />;
+<div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">
+<h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">
+<CheckCircle className="w-5 h-5 text-zion-blue" />
 Compliance Status;
-</h3>;
-<div className="space-y-3">;
+</h3>
+<div className="space-y-3">
 {complianceRequirements.slice(0;  3).map(req => (
-<div key={req.id} className="flex items-center gap-3 p-3 bg-white dar;  k:bg-zion-slate rounded-lg">;
-<div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">;
-<FileText className="w-4 h-4 text-zion-blue" />;
-</div>;
-<div className="flex-1">;
-<h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>;
-<p className="text-xs text-zion-slate-light">{req.framework}</p>;
-</div>;
-<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>;
+<div key={req.id} className="flex items-center gap-3 p-3 bg-white dar;  k:bg-zion-slate rounded-lg">
+<div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">
+<FileText className="w-4 h-4 text-zion-blue" />
+</div>
+<div className="flex-1">
+<h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>
+<p className="text-xs text-zion-slate-light">{req.framework}</p>
+</div>
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>
 {req.status.replace("_",  " ")}
-</span>;
-</div>;
+</span>
+</div>
 ))}
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 )}
 
-{activeTab === "events" && (<div className="space-y-4">;
+{activeTab === "events" && (<div className="space-y-4">
 {filteredEvents.map(event => (
 <div;
 key={event.id}
 className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r:shadow-lg transition-shadow"
 >;
-<div className="flex items-start gap-3">;
+<div className="flex items-start gap-3">
 {getEventIcon(event.type)}
-<div className="flex-1">;
-<div className="flex items-center gap-3 mb-2">;
-<h3 className="font-semibold text-zion-slate">{event.title}</h3>;
-<span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severit; y)}`}>;
+<div className="flex-1">
+<div className="flex items-center gap-3 mb-2">
+<h3 className="font-semibold text-zion-slate">{event.title}</h3>
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severit; y)}`}>
 {event.severity}
-</span>;
+</span>
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 event.priority === "immediate" ? "bg-red-100 text-red-700 dar;  k:bg-red-900/30 dar; k:text-red-300" :
 event.priority === "high" ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/30 dar; k:text-orange-300" :
-"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>;
+"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>
 {event.priority}
-</span>;
-</div>;
-<p className="text-zion-slate-light mb-3">{event.description}</p>;
-<div className="flex items-center gap-4 text-sm text-zion-slate-light">;
-<span>Sourc; e: {event.source}</span>;
-<span>Statu; s: {event.status.replace("_", " ")}</span>;
+</span>
+</div>
+<p className="text-zion-slate-light mb-3">{event.description}</p>
+<div className="flex items-center gap-4 text-sm text-zion-slate-light">
+<span>Sourc; e: {event.source}</span>
+<span>Statu; s: {event.status.replace("_", " ")}</span>
 {event.assignedTo && <span>Assigne; d: {event.assignedTo}</span>}
-<span>Tim; e: {new Date(event.timestamp).toLocaleString()}</span>;
-</div>;
-</div>;
-</div>;
-</div>;
+<span>Tim; e: {new Date(event.timestamp).toLocaleString()}</span>
+</div>
+</div>
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
 
 {activeTab === "compliance" && (
-<div className="space-y-4">;
+<div className="space-y-4">
 {filteredCompliance.map(req => (
 <div;
 key={req.id}
 className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r:shadow-lg transition-shadow"
 >;
-<div className="flex items-start gap-3">;
-<div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">;
-<FileText className="w-6 h-6 text-zion-blue" />;
-</div>;
-<div className="flex-1">;
-<div className="flex items-center gap-3 mb-2">;
-<h3 className="font-semibold text-zion-slate">{req.requirement}</h3>;
-<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>;
+<div className="flex items-start gap-3">
+<div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">
+<FileText className="w-6 h-6 text-zion-blue" />
+</div>
+<div className="flex-1">
+<div className="flex items-center gap-3 mb-2">
+<h3 className="font-semibold text-zion-slate">{req.requirement}</h3>
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>
 {req.status.replace("_",  " ")}
-</span>;
-<span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLeve; l)}`}>;
+</span>
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLeve; l)}`}>
 {req.riskLevel} Risk;
-</span>;
-</div>;
-<p className="text-zion-slate-light mb-3">{req.description}</p>;
-<div className="mb-3">;
-<h4 className="font-medium text-zion-slate mb-2">Control;  s:</h4>;
-<div className="flex flex-wrap gap-2">;
+</span>
+</div>
+<p className="text-zion-slate-light mb-3">{req.description}</p>
+<div className="mb-3">
+<h4 className="font-medium text-zion-slate mb-2">Control;  s:</h4>
+<div className="flex flex-wrap gap-2">
 {req.controls.map((contro; l; index) => (<span;
 key={index}
 className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border border-zion-blue/20"
 >;
 {control}
-</span>;
+</span>
 ))}
-</div>;
-</div>;
-<div className="flex items-center gap-4 text-sm text-zion-slate-light">;
-<span>Framewor;  k: {req.framework}</span>;
-<span>Last Audi; t: {new Date(req.lastAudit).toLocaleDateString()}</span>;
-<span>Next Audi;  t: {new Date(req.nextAudit).toLocaleDateString()}</span>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+<div className="flex items-center gap-4 text-sm text-zion-slate-light">
+<span>Framewor;  k: {req.framework}</span>
+<span>Last Audi; t: {new Date(req.lastAudit).toLocaleDateString()}</span>
+<span>Next Audi;  t: {new Date(req.nextAudit).toLocaleDateString()}</span>
+</div>
+</div>
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
 
 {activeTab === "threats" && (
-<div className="space-y-4">;
+<div className="space-y-4">
 {threatIntelligence.map(threat => (
 <div;
 key={threat.id}
 className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r:shadow-lg transition-shadow"
 >;
-<div className="flex items-start gap-3">;
-<div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">;
-<Shield className="w-6 h-6 text-zion-red" />;
-</div>;
-<div className="flex-1">;
-<div className="flex items-center gap-3 mb-2">;
-<h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>;
+<div className="flex items-start gap-3">
+<div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">
+<Shield className="w-6 h-6 text-zion-red" />
+</div>
+<div className="flex-1">
+<div className="flex items-center gap-3 mb-2">
+<h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 threat.riskScore >= 8 ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
 threat.riskScore >= 6 ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/30 dar; k:text-orange-300" :
-"bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k:text-yellow-30; 0"}`}>;
+"bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k:text-yellow-30; 0"}`}>
 Ris; k: {threat.riskScore}/10;
-</span>;
-</div>;
-<p className="text-zion-slate-light mb-3">{threat.description}</p>;
-<div className="mb-3">;
-<h4 className="font-medium text-zion-slate mb-2">Affected System; s:</h4>;
-<div className="flex flex-wrap gap-2">;
+</span>
+</div>
+<p className="text-zion-slate-light mb-3">{threat.description}</p>
+<div className="mb-3">
+<h4 className="font-medium text-zion-slate mb-2">Affected System; s:</h4>
+<div className="flex flex-wrap gap-2">
 {threat.affectedSystems.map((syste; m; index) => (<span;
 key={index}
 className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border border-zion-red/20"
 >;
 {system}
-</span>;
+</span>
 ))}
-</div>;
-</div>;
-<div className="mb-3">;
-<h4 className="font-medium text-zion-slate mb-2">Mitigation Step;  s:</h4>;
-<div className="space-y-1">;
-{threat.mitigationSteps.map((ste; p; index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">;
-<span className="w-1.5 h-1.5 bg-zion-red rounded-full"></span>;
+</div>
+</div>
+<div className="mb-3">
+<h4 className="font-medium text-zion-slate mb-2">Mitigation Step;  s:</h4>
+<div className="space-y-1">
+{threat.mitigationSteps.map((ste; p; index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
+<span className="w-1.5 h-1.5 bg-zion-red rounded-full"></span>
 {step}
-</div>;
+</div>
 ))}
-</div>;
-</div>;
-<div className="flex items-center gap-4 text-sm text-zion-slate-light">;
-<span>Last See;  n: {new Date(threat.lastSeen).toLocaleString()}</span>;
-<span>Frequenc;  y: {threat.frequency} detections</span>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+<div className="flex items-center gap-4 text-sm text-zion-slate-light">
+<span>Last See;  n: {new Date(threat.lastSeen).toLocaleString()}</span>
+<span>Frequenc;  y: {threat.frequency} detections</span>
+</div>
+</div>
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
 
 {activeTab === "analytics" && (
-<div className="space-y-6">;
-<div className="text-center text-zion-slate-light">;
-<TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />;
-<h3 className="text-lg font-semibold mb-2">Security Analytics</h3>;
-<p>Advanced security analytics and threat intelligence reports coming soon...</p>;
-</div>;
-</div>;
+<div className="space-y-6">
+<div className="text-center text-zion-slate-light">
+<TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />
+<h3 className="text-lg font-semibold mb-2">Security Analytics</h3>
+<p>Advanced security analytics and threat intelligence reports coming soon...</p>
+</div>
+</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 );
-}<//div><///div>;
+}<//div><///div>

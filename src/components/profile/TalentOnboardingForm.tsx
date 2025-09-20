@@ -67,7 +67,7 @@ cv: z.any () .optional ()
 })
 type TalentFormValues = z.infer<typeof talentSchema>
 const form = useForm<TalentFormValues> ({
-resolver: zodResolver (talentSchema), defaultValues: {,;
+resolver: zodResolver (talentSchema), defaultValues: {;
 basicInfo: {;,
 cv: undefined;
 }
@@ -85,5 +85,5 @@ publicUrl,
 }= supabase.storage.from ('resumes') .getPublicUrl (fileName)
 return publicUrl,
 };
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null,;
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}

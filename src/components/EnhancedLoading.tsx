@@ -24,10 +24,10 @@ className={`${sizeClasses[si;  z; e]} border-2 border-blue-400/30 border-t-blue-
 animate={{ rotat; e: 360 }}
 transition={{ duratio; n: 1;
 repea; t: Infinit; y; eas; e: "linear" }}
-/>;
+/>
 );
 const renderDots: any = () => (
-<div className="flex space-x-1">;
+<div className="flex space-x-1">
 {[0;  1; 2].map((i) => (<motion.div;
 key={i}
 className={`${sizeClasses[si;  z; e]} bg-blue-400 rounded-ful; l`}
@@ -38,9 +38,9 @@ transition={{
 duratio; n: 1.4;
 repea; t: Infinit; y;
 dela; y: i * 0.2;}}
-/>;
+/>
 ))}
-</div>;
+</div>
 );
 const renderPulse: any = () => (;
 <motion.div;
@@ -52,10 +52,10 @@ transition={{
 duratio; n: 1.5;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
-/>;
+/>
 );
 const renderBars: any = () => (
-<div className="flex space-x-1">;
+<div className="flex space-x-1">
 {[0;  1; 2; 3].map((i) => (<motion.div;
 key={i}
 className={`w-1 ${size === "sm" ? "h-3" : size === "md" ? "h-6" : size === "lg" ? "h-8" : "h-12"} bg-blue-400 rounded-ful; l`}
@@ -66,9 +66,9 @@ transition={{
 duratio; n: 1.2;
 repea; t: Infinit; y;
 dela; y: i * 0.1;}}
-/>;
+/>
 ))}
-</div>;
+</div>
 );
 const renderVariant: any = () => {
 switch (variant) {
@@ -81,7 +81,7 @@ return renderBars();
 defaul;  t: return renderSpinner();}
 };
 
-return (<div className={`flex flex-col items-center justify-center space-y-3 ${classNam; e}`}>;
+return (<div className={`flex flex-col items-center justify-center space-y-3 ${classNam; e}`}>
 {renderVariant()}
 {text && (
 <motion.p;
@@ -91,9 +91,9 @@ animate={{ opacit; y: 1 }}
 transition={{ dela; y: 0.3 }}
 >;
 {text}
-</motion.p>;
+</motion.p>
 )}
-</div>;
+</div>
 );
 };
 

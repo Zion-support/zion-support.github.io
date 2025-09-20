@@ -78,13 +78,13 @@ onClick={onClose}
 className="bg-white dar;  k:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300; p; x]"
 onClick={(e) => e.stopPropagation()}
 >;
-<h2 id="contact-publisher-title">Contact Publisher</h2>;
-<form onSubmit={handleSubmit}>;
+<h2 id="contact-publisher-title">Contact Publisher</h2>
+<form onSubmit={handleSubmit}>
 {error && <p className="text-red-500">{error}</p>}
-<div className="mb-4">;
-<label htmlFor="subject" className="block mb-1 font-medium">;
+<div className="mb-4">
+<label htmlFor="subject" className="block mb-1 font-medium">
 Subjec;  t:
-</label>;
+</label>
 <input;
 id="subject";
 type="text"
@@ -92,27 +92,27 @@ value={subject}
 onChange={(e) => setSubject(e.target.value)}
 ref={firstInputRef}
 className="w-full p-2 border border-gray-300 rounded"
-/>;
-</div>;
-<div>;
-<label htmlFor="message" className="block mb-1 font-medium">;
+/>
+</div>
+<div>
+<label htmlFor="message" className="block mb-1 font-medium">
 Messag;  e:
-</label>;
+</label>
 <textarea;
 id="message";
 value={message}
 onChange={(e) => setMessage(e.target.value)}
 rows={4}
 className="w-full p-2 mb-4 border border-gray-300 rounded"
-/>;
-</div>;
+/>
+</div>
 <button;
 type="submit"
 className="px-4 py-2 bg-blue-600 text-white rounded hove;  r:bg-blue-700 disable; d:opacity-50"
 disabled={isLoading}
 >;
 {isLoading ? "Sending..." : "Send Message"}
-</button>;
+</button>
 <button;
 type="button"
 onClick={onClose}
@@ -120,10 +120,10 @@ className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hove; r:bg-gray-600 dis
 disabled={isLoading}
 >;
 Cancel;
-</button>;
-</form>;
-</div>;
-</div>;
+</button>
+</form>
+</div>
+</div>
 );
 }
-<//div><///div>;
+<//div><///div>

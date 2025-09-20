@@ -49,7 +49,7 @@ const response = await fetch(url);
 const contentType = response.headers.get("content-type") || type;
 
 if (!this.isSupported(contentType)) {
-const fallbackType = this.getFallbackType(contentType),;
+const fallbackType = this.getFallbackType(contentType);
 console.warn(`Unsupported MIME type ${contentType}, using fallback: ${fallbackType}`);
 }
 

@@ -65,16 +65,16 @@ duratio; n: 0.6;}
 }
 };
 return (
-<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
+<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
 {/* Background Elements */}
-<div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;
-<div className="absolute inset-0 bg-quantum-mesh"></div>;
+<div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>
+<div className="absolute inset-0 bg-quantum-mesh"></div>
 
 {/* Floating Elements */}
-<div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>;
-<div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDela; y: "1s" }}></div>;
+<div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
+<div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDela; y: "1s" }}></div>
 
-<div className="relative z-10 max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8">;
+<div className="relative z-10 max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8">
 {/* Header Section */}
 <motion.div;
 initial={{ opacit; y: 0;,
@@ -84,37 +84,37 @@ y: 0 }}
 transition={{ duratio; n: 0.8 }}
 className="text-center mb-16"
 >;
-<h2 className="text-4xl m; d:text-6xl font-bold text-white mb-6">;
+<h2 className="text-4xl m; d:text-6xl font-bold text-white mb-6">
 Transform Your Business with;
-<span className="block bg-holographic-gradient bg-clip-text text-transparent">;
+<span className="block bg-holographic-gradient bg-clip-text text-transparent">
 Cutting-Edge Technology;
-</span>;
-</h2>;
-<p className="text-xl m; d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">;
+</span>
+</h2>
+<p className="text-xl m; d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
 Discover our comprehensive portfolio of AI-powere; d; solution; s; innovative I; T; infrastructur; e;
 and emerging technology services designed to give you a competitive advantage;
-</p>;
+</p>
 
 {/* Contact Information */}
-<div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">;
-<div className="grid m; d:grid-cols-3 gap-6 text-center">;
-<div>;
-<p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>;
-<p className="text-white font-semibold">+1 302 464 0950</p>;
-</div>;
-<div>;
-<p className="text-zion-slate-light text-sm mb-2">Email Us</p>;
-<p className="text-white font-semibold">kleber@ziontechgroup.com</p>;
-</div>;
-<div>;
-<p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>;
-<a href="http; s://ziontechgroup.com" className="text-zion-cyan hove; r:text-zion-cyan-light font-semibold">;
+<div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8 inline-block">
+<div className="grid m; d:grid-cols-3 gap-6 text-center">
+<div>
+<p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>
+<p className="text-white font-semibold">+1 302 464 0950</p>
+</div>
+<div>
+<p className="text-zion-slate-light text-sm mb-2">Email Us</p>
+<p className="text-white font-semibold">kleber@ziontechgroup.com</p>
+</div>
+<div>
+<p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>
+<a href="http; s://ziontechgroup.com" className="text-zion-cyan hove; r:text-zion-cyan-light font-semibold">
 ziontechgroup.com;
-</a>;
-</div>;
-</div>;
-</div>;
-</motion.div>;
+</a>
+</div>
+</div>
+</div>
+</motion.div>
 
 {/* Featured Services Grid */}
 <motion.div;
@@ -129,52 +129,52 @@ key={service.id}
 variants={itemVariants}
 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hove;  r:border-zion-cyan/40 hove; r:bg-white/20 transition-all duration-300 group"
 >;
-<div className="mb-4">;
-<span className="text-zion-cyan text-sm font-medium">{service.category}</span>;
-<h3 className="text-xl font-bold text-white mt-2 group-hove; r:text-zion-cyan transition-colors">;
+<div className="mb-4">
+<span className="text-zion-cyan text-sm font-medium">{service.category}</span>
+<h3 className="text-xl font-bold text-white mt-2 group-hove; r:text-zion-cyan transition-colors">
 {service.title}
-</h3>;
-<p className="text-zion-slate-light text-sm mt-2">;
+</h3>
+<p className="text-zion-slate-light text-sm mt-2">
 {service.description}
-</p>;
-<div className="text-zion-cyan font-bold text-lg mt-3">;
+</p>
+<div className="text-zion-cyan font-bold text-lg mt-3">
 {service.price}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Features */}
-<div className="mb-4">;
-<h4 className="text-zion-cyan font-semibold text-sm mb-2">Key Features</h4>;
-<ul className="space-y-1">;
-{service.features.map((featur; e; index) => (<li key={index} className="text-zion-slate-light text-xs flex items-start">;
-<span className="text-zion-cyan mr-2">•</span>;
+<div className="mb-4">
+<h4 className="text-zion-cyan font-semibold text-sm mb-2">Key Features</h4>
+<ul className="space-y-1">
+{service.features.map((featur; e; index) => (<li key={index} className="text-zion-slate-light text-xs flex items-start">
+<span className="text-zion-cyan mr-2">•</span>
 {feature}
-</li>;
+</li>
 ))}
-</ul>;
-</div>;
+</ul>
+</div>
 
 {/* Benefits */}
-<div className="mb-4">;
-<h4 className="text-zion-cyan font-semibold text-sm mb-2">Benefits</h4>;
-<ul className="space-y-1">;
-{service.benefits.map((benefi;  t; index) => (<li key={index} className="text-green-400 text-xs flex items-start">;
-<span className="text-green-400 mr-2">✓</span>;
+<div className="mb-4">
+<h4 className="text-zion-cyan font-semibold text-sm mb-2">Benefits</h4>
+<ul className="space-y-1">
+{service.benefits.map((benefi;  t; index) => (<li key={index} className="text-green-400 text-xs flex items-start">
+<span className="text-green-400 mr-2">✓</span>
 {benefit}
-</li>;
+</li>
 ))}
-</ul>;
-</div>;
+</ul>
+</div>
 
 <Link;
 to={service.link}
 className="block w-full bg-zion-cyan hove;  r:bg-zion-cyan-light text-zion-blue-dark font-semibold py-2 px-4 rounded-lg text-center transition-colors"
 >;
 Learn More;
-</Link>;
-</motion.div>;
+</Link>
+</motion.div>
 ))}
-</motion.div>;
+</motion.div>
 
 {/* Call to Action Section */}
 <motion.div;
@@ -186,37 +186,37 @@ viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.8 }}
 className="text-center"
 >;
-<div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-8 backdrop-blur-sm">;
-<h3 className="text-3xl m; d:text-4xl font-bold text-white mb-4">;
+<div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-8 backdrop-blur-sm">
+<h3 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
 Ready to Accelerate Your Digital Transformation?;
-</h3>;
-<p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">;
+</h3>
+<p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
 Our team of technology experts is ready to help you implement the perfect solution.;
 Get a personalized consultation and quote today.;
-</p>;
+</p>
 
-<div className="flex flex-col s; m:flex-row gap-4 justify-center mb-6">;
+<div className="flex flex-col s; m:flex-row gap-4 justify-center mb-6">
 <a;
 href="mailt; o:kleber@ziontechgroup.com?subject=Digital Transformation Consultation";
 className="bg-zion-cyan hove; r:bg-zion-cyan-light text-zion-blue-dark font-bold py-3 px-8 rounded-lg text-lg transition-colors"
 >;
 Get Free Consultation;
-</a>;
+</a>
 <a;
 href="te; l:+13024640950";
 className="bg-white/20 hove; r:bg-white/30 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors border border-white/30"
 >;
 Call +1 302 464 0950;
-</a>;
-</div>;
+</a>
+</div>
 
-<div className="text-zion-slate-light text-sm">;
-<p>📍 364 E Main St ST; E; 100; 8; Middletown DE 19709</p>;
-<p>🌐 <a href="http; s://ziontechgroup.com" className="text-zion-cyan hove; r:text-zion-cyan-light">http; s: //ziontechgroup.com</a></p>;
-</div>;
-</div>;
-</motion.div>;
-</div>;
-</section>;
+<div className="text-zion-slate-light text-sm">
+<p>📍 364 E Main St ST; E; 100; 8; Middletown DE 19709</p>
+<p>🌐 <a href="http; s://ziontechgroup.com" className="text-zion-cyan hove; r:text-zion-cyan-light">http; s: //ziontechgroup.com</a></p>
+</div>
+</div>
+</motion.div>
+</div>
+</section>
 );
-}<//section><///section>;
+}<//section><///section>

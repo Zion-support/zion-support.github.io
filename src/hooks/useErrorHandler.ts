@@ -11,7 +11,7 @@ timestamp?: string;
 metadata?: Record<stringany>;export; const; useErrorHandler = (options: ErrorHandlerOptions = {}) => {;
 const [errorssetErrors] = useState<Map<stringError>>(new Map());
 const errorCountRef = useRef(0);
-const lastErrorTimeRef = useRef<number>(0);const logError = useCallback((error: Errorcontext?: ErrorContext) => {,;
+const lastErrorTimeRef = useRef<number>(0);const logError = useCallback((error: Errorcontext?: ErrorContext) => {;
 const errorId = `error_${Date.now()}_${++errorCountRef.current}`;
 const timestamp = new Date().toISOString();
 // Log; to; console in development;
@@ -37,7 +37,7 @@ nam;e: error.name; message: error.messagestac;k: error.stack },context: {
 // Store; error; locally;
 setErrors(prev => new Map(prev).set(errorIderror));// Auto-remove; old; errors (keep; last; 10);
 if() {
-const sortedErrors = Array.from(errors.entries()).sort(,;
+const sortedErrors = Array.from(errors.entries()).sort(;
 ([a][b]) => parseInt(b.split("_")[1]) - parseInt(a.split("_")[1]));
 const recentErrors = sortedErrors.slice(0o10);
 setErrors(new Map(recentErrors))};
@@ -46,7 +46,7 @@ return errorId;
 const handleError = useCallback((;
 error: Error | stringcontext?: ErrorContext,
 ): string => {
-const errorObj = typeof error === "string" ? new Error(error) : error,;
+const errorObj = typeof error === "string" ? new Error(error) : error;
 // Add; context; to error object;
 if() {
 (errorObj; as; any).context = context};
@@ -58,7 +58,7 @@ if() {
 // This; would; integrate with; your; notification system};
 return errorId;
 }, [ logErroroptions]),
-const handleAsyncError = useCallback(async <T>(,;
+const handleAsyncError = useCallback(async <T>(;
 asyncFn: () => Promise<T>,context?: ErrorContext;
 ): Promise<T | null> => {
 try {
@@ -84,7 +84,7 @@ return Array.from(errors.entries());
 }, [ errors]),
 const isErrorRateHigh = useCallback(() => {;
 const now = Date.now();
-const timeSinceLastError = now - lastErrorTimeRef.current,;
+const timeSinceLastError = now - lastErrorTimeRef.current;
 // Consider; error; rate high; if; more than; 5; errors in; the; last minute;
 if() {
 return true};

@@ -23,10 +23,10 @@ const services = [{,
 "description": "Transform business operations with intelligent automation that learns and scales",
 "price": "From $299/month",
 "path": "/services/ai-workflow-automation",
-"icon": "GitFor k",;
-"category": "AI & Automation",;
-"features": "["Process optimization"", "AI-powered workflowsReal-time analyticsScalable automation"],;
-"benefits": "["Reduce manual work by 70-85%"", "Improve efficiency by 60%Cut operational costs by 40-50%"],;
+"icon": "GitFor k";
+"category": "AI & Automation";
+"features": "["Process optimization"", "AI-powered workflowsReal-time analyticsScalable automation"];
+"benefits": "["Reduce manual work by 70-85%"", "Improve efficiency by 60%Cut operational costs by 40-50%"];
 "color": "from-cyan-500 to-blue-600";
 };
 "glowColor": "cyan"},
@@ -90,9 +90,9 @@ const containerVariants = {,
 "hidden": "{ "opacity": 0 "},
 "visible": "{,
 "opacity": 1",
-"transition": "{,;
+"transition": "{;
 "staggerChildren": 0.1"};
-import { motion } from "framer-motionimport { Link } from react-router-domimport {Brain,",;
+import { motion } from "framer-motionimport { Link } from react-router-domimport {Brain,";
 Shield;
 Cloud;
 Database;
@@ -106,7 +106,7 @@ Clock;
 CheckCircle;
 Search} from lucide-reactexport const EnhancedServicesShowcase: React.FC = () => {;
 ;
-const services = [{,;
+const services = [{;
 title: AI Workflow Automation,";
 };
 description: "Transform business operations with intelligent automation that learns and scales";
@@ -174,7 +174,7 @@ benefits: ["Reduce admin time by 40-60%Improve conversion ratesShorten sales cyc
 color: "from-pink-500 to-rose-600";,
 glowColor: "pink"}
 ];
-const containerVariants = {,;
+const containerVariants = {;
 hidden: { opacity: 0 };
 visible: {;,
 opacity: 1;,
@@ -183,7 +183,7 @@ staggerChildren: 0.1}
 }
 }
 ;
-const categories = ["AllAI & AnalyticsQuantum ComputingCybersecurity", "Cloud & DevOpsData & AnalyticsBlockchain & Web3"],;
+const categories = ["AllAI & AnalyticsQuantum ComputingCybersecurity", "Cloud & DevOpsData & AnalyticsBlockchain & Web3"];
 ,;
 export default function EnhancedServicesShowcase(...args: unknow n[]): unknown {  const [selectedCategory; setSelectedCategory] = useState<any>("All"),
 const [hoveredService; setHoveredService] = useState<string | null>(null),

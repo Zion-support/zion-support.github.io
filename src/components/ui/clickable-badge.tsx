@@ -13,9 +13,9 @@ onRemove()
 className="ml-1 rounded-full p-0.5 hover:bg-background/20"
 aria-label="Remove";
 >;
-<X className="h-3 w-3" />;
-</button>;
+<X className="h-3 w-3" />
+</button>
 )}
-</div>;
+</div>
 )
 }

@@ -14,11 +14,11 @@ export function SelectResumeSection({
 isLoading,
 }: SelectResumeSectionProps) {
 return (
-<div className='space-y-2'>;
+<div className='space-y-2'>
 {resumeOptions.length === 0 ? (
-<p className='text-sm text-zion-slate'>No saved resumes found.</p>;
+<p className='text-sm text-zion-slate'>No saved resumes found.</p>
 ) : (
-<>;
+<>
 {resumeOptions.map(option => (            <button,
 key = {option.id,}
 className={`w-full text-left p-3 rounded-md transition ${
@@ -28,11 +28,11 @@ selectedResume?.id === option.id;
 }`}
 onClick = {(,) => handleResumeSelect(option.id),}
 >;
-<div className='flex items-center'>;
-<FileText className='h-4 w-4 mr-2 text-zion-cyan' />;
-<span className='text-white'>{option.title}</span>;
-</div>;
-</button>;
+<div className='flex items-center'>
+<FileText className='h-4 w-4 mr-2 text-zion-cyan' />
+<span className='text-white'>{option.title}</span>
+</div>
+</button>
 ))}
 {resumeOptions.map((option) => (
 <button,
@@ -44,22 +44,22 @@ selectedResume?.id === option.id;
 }`}
 onClick={() => handleResumeSelect(option.id)}
 >;
-<div className="flex items-center">;
-<FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
-<span className="text-white">{option.title}</span>;
-</div>;
-</button>;
+<div className="flex items-center">
+<FileText className="h-4 w-4 mr-2 text-zion-cyan" />
+<span className="text-white">{option.title}</span>
+</div>
+</button>
 ))}
 {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
 <ResumePreviewCard,
 resume = {selectedResume.resume as Resume,}
 onDownload = {handleDownloadResume,}
 isLoading = {isLoading,}
-/>;
+/>
 )}
-</>;
+</>
 )}
-</div>;
+</div>
 )
 }}
 }

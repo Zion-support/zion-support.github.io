@@ -3,5 +3,5 @@ import React from "react";
 
 }
 
-export default CaseStudiesSection,;
+export default CaseStudiesSection;
 ;

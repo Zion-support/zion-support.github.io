@@ -41,20 +41,20 @@ childre; n;
 children: React.ReactNode;,
 }) {
 return (
-<html lang="en" suppressHydrationWarning>;
-<body className={inter.className}>;
-<ThemeProvider defaultTheme="system" storageKey="zion-theme">;
-<div className="min-h-screen bg-background">;
-<Header />;
-<main className="flex-1">;
+<html lang="en" suppressHydrationWarning>
+<body className={inter.className}>
+<ThemeProvider defaultTheme="system" storageKey="zion-theme">
+<div className="min-h-screen bg-background">
+<Header />
+<main className="flex-1">
 {children}
-</main>;
-<Footer />;
-</div>;
-<Toaster />;
-<SonnerToaster />;
-</ThemeProvider>;
-</body>;
-</html>;
+</main>
+<Footer />
+</div>
+<Toaster />
+<SonnerToaster />
+</ThemeProvider>
+</body>
+</html>
 )
-}<//html><///html>;
+}<//html><///html>

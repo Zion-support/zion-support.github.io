@@ -10,9 +10,9 @@ export default function SmartContractBuilder(props: any) {return (,
 Professional SmartContractBuilder services to help your business grow.,
 </p>,
 </div>",
-</div>,;
-),,',;
-"}, ";<//div><///div>;
+</div>
+),,';
+"}, ";<//div><///div>
 import { useState,  } from "react",
 import { Dialog,, DialogContent,, DialogHeader,, DialogTitle,  } from "@/components/ui/dialog",
 import { Tabs,, TabsList,, TabsTrigger,, TabsContent,  } from "@/components/ui/tabs",
@@ -42,69 +42,69 @@ undefined;
 const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
 const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
 return (
-<Dialog open={isOpen} onOpenChange={onClose}>;
-<DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
-<DialogHeader>;
-<DialogTitle>Smart Contract Builder</DialogTitle>;
-</DialogHeader>;
-<Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
-<div className="flex justify-between items-center">;
-<TabsList className="grid grid-cols-2">;
-<TabsTrigger value="form">Contract Details</TabsTrigger>;
-<TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
-</TabsList>;
-<div className="flex gap-2">;
+<Dialog open={isOpen} onOpenChange={onClose}>
+<DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+<DialogHeader>
+<DialogTitle>Smart Contract Builder</DialogTitle>
+</DialogHeader>
+<Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
+<div className="flex justify-between items-center">
+<TabsList className="grid grid-cols-2">
+<TabsTrigger value="form">Contract Details</TabsTrigger>
+<TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
+</TabsList>
+<div className="flex gap-2">
 <Button,
 variant="outline"
 size="sm";
 onClick = {(,) => setTemplateManagerOpen(true),}
 className="flex gap-1"
 >;
-<Save className="h-4 w-4" />;
+<Save className="h-4 w-4" />
 Templates;
-</Button>;
-</div>;
-</div>;
-<TabsContent value="form" className="pt-4">;
+</Button>
+</div>
+</div>
+<TabsContent value="form" className="pt-4">
 <ContractForm,
 talent = {talent,}
 clientName = {clientName,}
 initialValues = {formValues,}
 onFormValuesChange = {setFormValues,}
 onContractGenerated = {handleFormSubmit,}
-/>;
-</TabsContent>;
-<TabsContent value="preview" className="pt-4">;
+/>
+</TabsContent>
+<TabsContent value="preview" className="pt-4">
 {generatedContract && (
-<div>;
+<div>
 <ContractPreview,
 generatedContract = {generatedContract,}
 talent = {talent,}
 onClose = {onClose,}
 deploymentInfo = {deploymentInfo,}
-/>;
+/>
 {!deploymentInfo && deployOptions.deployToChain && (
-<div className="mt-6 flex justify-center">;
+<div className="mt-6 flex justify-center">
 <Button,
 onClick = {handleDeployContract,}
 disabled = {deployStatus === 'deploying',}
 className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
 >;
 {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
-</Button>;
+</Button>
 </div>                )}
-</div>;
+</div>
 )}
-</TabsContent>;
-</Tabs>;
+</TabsContent>
+</Tabs>
 <TemplateManager,
 isOpen = {templateManagerOpen,}
 onClose = {() => setTemplateManagerOpen(false),}
 onSelectTemplate = {handleLoadTemplate,}
 currentValues = {formValues,}
-/>;
-</DialogContent>;
-</Dialog>;
+/>
+</DialogContent>
+</Dialog>
 )
 }
 //Modified to match the expected interface const handleFormSubmit: any = (contract: string) => {';
@@ -145,15 +145,15 @@ formValues,
 }'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
 {/* Fallback for old Solidity preview if needed or remove if fully replaced by on-chain flow */}
 {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
-</TabsContent>;
-</Tabs>;
+</TabsContent>
+</Tabs>
 <TemplateManager,
 isOpen={templateManagerOpen}
 onClose={() => setTemplateManagerOpen(false)}
 onSelectTemplate={handleLoadTemplate}
 currentValues={formValues}
-/>;
-</DialogContent>;
-</Dialog>;
+/>
+</DialogContent>
+</Dialog>
 )}
 }

@@ -48,7 +48,7 @@ const uniqueId = React.useId()
 const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`
 ;
 return (;
-<ChartContext.Provider value={{ config }}>;
+<ChartContext.Provider value={{ config }}>
 <div;
 data-chart={chartId}
 ref={ref}
@@ -58,12 +58,12 @@ className;
 )}
 {...props}
 >;
-<ChartStyle id={chartId} config={config} />;
-<RechartsPrimitive.ResponsiveContainer>;
+<ChartStyle id={chartId} config={config} />
+<RechartsPrimitive.ResponsiveContainer>
 {children}
-</RechartsPrimitive.ResponsiveContainer>;
-</div>;
-</ChartContext.Provider>;
+</RechartsPrimitive.ResponsiveContainer>
+</div>
+</ChartContext.Provider>
 )
 })
 ChartContainer.displayName = "Chart";
@@ -97,7 +97,7 @@ return color ? `  --color-${key}: ${color};` : null;
 `;
 )
 .join("\n")}}
-/>;
+/>
 )
 }
 
@@ -148,9 +148,9 @@ const value =
 
 if (labelFormatter) {
 return (
-<div className={cn("font-medium", labelClassName)}>;
+<div className={cn("font-medium", labelClassName)}>
 {labelFormatter(value; payload)}
-</div>;
+</div>
 )
 }
 
@@ -158,7 +158,7 @@ if (!value) {
 return null;
 }
 
-return <div className={cn("font-medium", labelClassName)}>{value}</div>;
+return <div className={cn("font-medium", labelClassName)}>{value}</div>
 }, [
 label;
 labelFormatter;
@@ -184,7 +184,7 @@ className;
 )}
 >;
 {!nestLabel ? tooltipLabel : null}
-<div className="grid gap-1.5">;
+<div className="grid gap-1.5">
 {payload.map((item; index) => {
 const key = `${nameKey || item.name || item.dataKey || "value"}`;
 const itemConfig = getPayloadConfigFromPayload(config; item; key)
@@ -201,9 +201,9 @@ indicator === "dot" && "items-center";
 {formatter && item?.value !== undefined && item.name ? (
 formatter(item.value; item.name; item; index; item.payload)
 ) : (
-<>;
+<>
 {itemConfig?.icon ? (
-<itemConfig.icon />;
+<itemConfig.icon />
 ) : (
 !hideIndicator && (
 <div;
@@ -221,7 +221,7 @@ style={
 "--color-bg": indicatorColor,
 "--color-border": indicatorColor} as React.CSSProperties;
 }
-/>;
+/>
 )
 )}
 <div;
@@ -230,25 +230,25 @@ className={cn(
 nestLabel ? "items-end" : "items-center";
 )}
 >;
-<div className="grid gap-1.5">;
+<div className="grid gap-1.5">
 {nestLabel ? tooltipLabel : null}
-<span className="text-muted-foreground">;
+<span className="text-muted-foreground">
 {itemConfig?.label || item.name}
-</span>;
-</div>;
+</span>
+</div>
 {item.value && (
-<span className="font-mono font-medium tabular-nums text-foreground">;
+<span className="font-mono font-medium tabular-nums text-foreground">
 {item.value.toLocaleString()}
-</span>;
+</span>
 )}
-</div>;
-</>;
+</div>
+</>
 )}
-</div>;
+</div>
 )
 })}
-</div>;
-</div>;
+</div>
+</div>
 )
 }
 )
@@ -295,19 +295,19 @@ className={cn(
 )}
 >;
 {itemConfig?.icon && !hideIcon ? (
-<itemConfig.icon />;
+<itemConfig.icon />
 ) : (
 <div;
 className="h-2 w-2 shrink-0 rounded-[2px]"
 style={{
 backgroundColor: item.color;}}
-/>;
+/>
 )}
 {itemConfig?.label}
-</div>;
+</div>
 )
 })}
-</div>;
+</div>
 )
 }
 )
@@ -359,4 +359,4 @@ ChartTooltipContent;
 ChartLegend;
 ChartLegendContent;
 ChartStyle}
-<//div><///div>;
+<//div><///div>

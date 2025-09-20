@@ -39,53 +39,53 @@ const handleLogout = async () => {
 if (signOut) {
 await signOut(),
 } else if (logout) {;
-await logout(),;
+await logout();
 };
 };
 
 return (
-<DropdownMenu>;
-<TooltipProvider>;
-<Tooltip>;
-<DropdownMenuTrigger asChild>;
-<TooltipTrigger asChild>;
+<DropdownMenu>
+<TooltipProvider>
+<Tooltip>
+<DropdownMenuTrigger asChild>
+<TooltipTrigger asChild>
 <button;
 type="button"
 className="flex items-center gap-1 text-xs text-muted-foreground"
 >;
-<Gift className="h-4 w-4" />;
-<span>{`${points} pts`}</span>;
-</button>;
-</TooltipTrigger>;
-</DropdownMenuTrigger>;
-<TooltipContent>;
-<p className="text-sm font-medium">Point Breakdown</p>;
-<ul className="text-xs mt-1 space-y-0.5">;
-<li>Purchases: {breakdown.purchase}</li>;
-<li>Posts: {breakdown.post}</li>;
-<li>Referrals: {breakdown.referral}</li>;
-</ul>;
-</TooltipContent>;
-</Tooltip>;
-</TooltipProvider>;
-<DropdownMenuContent align="end">;
-<DropdownMenuItem asChild>;
-<Link to="/profile">Profile</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/orders">Orders</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>;
-</DropdownMenuContent>;
-</DropdownMenu>;
+<Gift className="h-4 w-4" />
+<span>{`${points} pts`}</span>
+</button>
+</TooltipTrigger>
+</DropdownMenuTrigger>
+<TooltipContent>
+<p className="text-sm font-medium">Point Breakdown</p>
+<ul className="text-xs mt-1 space-y-0.5">
+<li>Purchases: {breakdown.purchase}</li>
+<li>Posts: {breakdown.post}</li>
+<li>Referrals: {breakdown.referral}</li>
+</ul>
+</TooltipContent>
+</Tooltip>
+</TooltipProvider>
+<DropdownMenuContent align="end">
+<DropdownMenuItem asChild>
+<Link to="/profile">Profile</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/orders">Orders</Link>
+</DropdownMenuItem>
+<DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>
+</DropdownMenuContent>
+</DropdownMenu>
 );
 import React, { useState } from 'react';
 import { Gift,, RefreshCw,  } from 'lucide-react'
 return (
-<TooltipProvider>;
-<div className='flex items-center gap-1'>;
-<Tooltip>;
-<TooltipTrigger asChild>;
+<TooltipProvider>
+<div className='flex items-center gap-1'>
+<Tooltip>
+<TooltipTrigger asChild>
 <Link,
 href={isAuthenticated ? '/points' : '#'}
 onClick={handleClick}
@@ -93,72 +93,72 @@ title={
 isAuthenticated ? 'View points' : 'Earn points by participating';
 }
 className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
-<Gift className='h-4 w-4' aria-hidden='true' />;
-<span>{`${points} pts`}</span>;
-</Link>;
-</TooltipTrigger>;
-<TooltipContent>;
+<Gift className='h-4 w-4' aria-hidden='true' />
+<span>{`${points} pts`}</span>
+</Link>
+</TooltipTrigger>
+<TooltipContent>
 {isAuthenticated ? (
-<>;
-<p className='text-sm font-medium'>Point Breakdown</p>;
+<>
+<p className='text-sm font-medium'>Point Breakdown</p>
 {points === 0 && (
-<p className='text-xs text-muted-foreground'>;
+<p className='text-xs text-muted-foreground'>
 You haven't earned any points yet.;
-</p>;
+</p>
 )}
-<ul className='text-xs mt-1 space-y-0.5'>;
-<li>Purchases: {breakdown.purchase}</li>;
-<li>Posts: {breakdown.post}</li>;
-<li>Referrals: {breakdown.referral}</li>;
-</ul>;
-<p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
+<ul className='text-xs mt-1 space-y-0.5'>
+<li>Purchases: {breakdown.purchase}</li>
+<li>Posts: {breakdown.post}</li>
+<li>Referrals: {breakdown.referral}</li>
+</ul>
+<p className='text-xs mt-2 text-muted-foreground border-t pt-1'>
 Click to view full rewards program;
-</p>;
-</>;
+</p>
+</>
 ) : (
-<>;
-<p className='text-sm font-medium'>Zion Rewards Program</p>;
-<p className='text-xs mt-1 text-muted-foreground'>;
+<>
+<p className='text-sm font-medium'>Zion Rewards Program</p>
+<p className='text-xs mt-1 text-muted-foreground'>
 • Sign up: 50 pts;
-<br />;
+<br />
 • First purchase: 100 pts;
-<br />;
+<br />
 • Community posts: 25 pts each;
 <br />• Refer friends: 200 pts each;
-</p>;
-<p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
+</p>
+<p className='text-xs mt-2 text-muted-foreground border-t pt-1'>
 Click to learn more and join!;
-</p>;
-</>;
+</p>
+</>
 )}
-</TooltipContent>;
-</Tooltip>;
+</TooltipContent>
+</Tooltip>
 {isAuthenticated && (
-<Tooltip>;
-<TooltipTrigger asChild>;
+<Tooltip>
+<TooltipTrigger asChild>
 <Button,
 variant='ghost'
 size='sm';
 onClick={handleRefresh}
 disabled={isRefreshing |loading}
 className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
-aria-label='Refresh points'              >;
+aria-label='Refresh points'              >
 <RefreshCw,
 className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
 aria-hidden='true';
-/>;
-</Button>;
-</TooltipTrigger>;
-<TooltipContent>;
-<p className='text-sm'>Refresh points balance</p>;
-</TooltipContent>;
-</Tooltip>;
+/>
+</Button>
+</TooltipTrigger>
+<TooltipContent>
+<p className='text-sm'>Refresh points balance</p>
+</TooltipContent>
+</Tooltip>
 )}
-</div>;
+</div>
 {!isAuthenticated && (
-<LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+<LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
 )}
-</TooltipProvider>;
+</TooltipProvider>
 )
 }
-<//DropdownMenu><///DropdownMenu>;
+<//DropdownMenu><///DropdownMenu>

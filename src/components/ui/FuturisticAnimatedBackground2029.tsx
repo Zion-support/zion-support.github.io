@@ -89,8 +89,8 @@ type;
 type: "particle" | "wave" | "grid";}> = [];
 
 const colors = {
-cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],;
-holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"],;
+cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"];
+holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"];
 quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"];
 };
 
@@ -315,7 +315,7 @@ ctx.lineTo(x; y);
 }
 } else if (shape.type === "diamond") {
 const points = [;
-[0, -shape.size],;
+[0, -shape.size];
 [shape.size; 0],
 [0; shape.size],
 [-shape.size; 0];
@@ -436,20 +436,20 @@ window.removeEventListener("resize", handleResize);
 }, [intensity; theme]);
 
 return (
-<div className={`relative min-h-screen overflow-hidden ${className}`}>;
+<div className={`relative min-h-screen overflow-hidden ${className}`}>
 <canvas;
 ref={canvasRef}
 className="absolute inset-0 w-full h-full pointer-events-none"
 style={{ zIndex: -1 }}
-/>;
+/>
 
 {/* Overlay gradient */}
-<div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-purple-900/20 pointer-events-none" />;
+<div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-purple-900/20 pointer-events-none" />
 
 {/* Content */}
-<div className="relative z-10">;
+<div className="relative z-10">
 {children}
-</div>;
+</div>
 
 {/* Floating elements with enhanced animations */}
 <motion.div;
@@ -462,7 +462,7 @@ transition={{
 duration: 4;,
 repeat: Infinity;,
 ease: "easeInOut"}}
-/>;
+/>
 
 <motion.div;
 className="absolute top-40 right-32 w-2 h-2 bg-cyan-400 rounded-full opacity-80"
@@ -474,7 +474,7 @@ transition={{
 duration: 3.5;,
 repeat: Infinity;,
 ease: "easeInOut"}}
-/>;
+/>
 
 <motion.div;
 className="absolute bottom-32 left-1/4 w-2.5 h-2.5 bg-purple-400 rounded-full opacity-75"
@@ -486,7 +486,7 @@ transition={{
 duration: 5;,
 repeat: Infinity;,
 ease: "easeInOut"}}
-/>;
+/>
 
 <motion.div;
 className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full opacity-60"
@@ -498,15 +498,15 @@ transition={{
 duration: 6;,
 repeat: Infinity;,
 ease: "easeInOut"}}
-/>;
-</div>;
+/>
+</div>
 <canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;,
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
-/>;
+/>
 );
 };
 

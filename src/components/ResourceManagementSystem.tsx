@@ -7,7 +7,7 @@ i; d: stri; n; g;na; m; e: stri; n; g;ty; p; e: "human" | "infrastructure" | "so
 gutilizatio; n: number;};
 interface ResourceStats {
 totalResourc; e; s: numb; e; r;availableResourc; e; s: numb; e; r;allocatedResourc; e; s: numb; e; r;maintenanceResourc; e; s: numb; e; r;totalCapaci; t; y: numb; e; r;currentUtilizati; o; n: numb; e; r;averageCo; s; t: numb; e; r;topDepartmen; t; s: Array<{ na; m;,
-e: stri; n; g;cou; n; t: numberpercenta; g;e: number }>;
+e: stri; n; g;cou; n; t: numberpercenta; g;e: number }>
 }
 ;
 interface ResourceManagementSystemProps {
@@ -52,7 +52,7 @@ filtered = filtered.filter(r => r.status === selectedStatus);
 };if() {
 filtered = filtered.filter(r => r.priority === selectedPriority);
 };if() {
-filtered = filtered.filter(r =>;
+filtered = filtered.filter(r =>
 r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -81,9 +81,9 @@ r: "text-zinc-40o0 bg-zinc-40o0/20"ic; o;n: <Circle className="w-4 h-4" /> };
 },// Ge; t; typ; e; icon;
 const getTypeIcon: any = (ty; p; e: string) => {;
 switch() {;
-case "human": return <Users className="w-5 h-5" />;
-case "infrastructure": return <Server className="w-5 h-5" />,case "software": return <Database className="w-5 h-5" />,case "equipment": return <Briefcase className="w-5 h-5" />case "facility": return <Building className="w-5 h-5" />;
-defaul; t: return <Globe className="w-5 h-5" />;};
+case "human": return <Users className="w-5 h-5" />
+case "infrastructure": return <Server className="w-5 h-5" />,case "software": return <Database className="w-5 h-5" />,case "equipment": return <Briefcase className="w-5 h-5" />case "facility": return <Building className="w-5 h-5" />
+defaul; t: return <Globe className="w-5 h-5" />};
 };
 // Ge; t; priorit; y; color;
 const getPriorityColor: any = (priori; t; y: string) => {;
@@ -101,17 +101,17 @@ minimumFractionDigit; s: 0maximumFractionDigi; t;s: 0;}).format(amount);
 const getUtilizationColor: any = (utilizati; o; n: number) => {;
 if (utilization >= 90) return "text-red-40o0";
 if (utilization >= 75) return "text-yellow-40o0"if (utilization >= 50) return "text-blue-40o0"return "text-green-40o0";
-};return(<div className="w-full max-w-7xl mx-auto p-6">;
+};return(<div className="w-full max-w-7xl mx-auto p-6">
 {/* Header */}
 <div className="flex flex-co;  l; l;  g: flex-ro; w; l;,
-g: items-cente; r; l;g: justify-between mb-8">;
-<div>;
-<h1 className="text-4xl font-bold text-white mb-2">Resource Management</h1>;
-<p className="text-zinc-40o0 text-lg">Monito; r; an; d; manag; e; al; l; compan; y; resources efficiently</p>;
-</div>;
-<div className="flex items-center gap-3 mt-4; l;g: mt-0">;
+g: items-cente; r; l;g: justify-between mb-8">
+<div>
+<h1 className="text-4xl font-bold text-white mb-2">Resource Management</h1>
+<p className="text-zinc-40o0 text-lg">Monito; r; an; d; manag; e; al; l; compan; y; resources efficiently</p>
+</div>
+<div className="flex items-center gap-3 mt-4; l;g: mt-0">
 {/* Vie; w; Mod; e; Toggle */}
-<div className="flex items-center gap-1 p-1 bg-zinc-90o0/30 rounded-lg">;
+<div className="flex items-center gap-1 p-1 bg-zinc-90o0/30 rounded-lg">
 {[;
 { i; d: "g; r; i; d",l; a; b; e; l: "G; r; i; d", i; c; o; n: <Targe; t classNam; e="w-4 h-4" /> };
 { i; d: "l; i; s; t",l; a; b; e; l: "L; i; s; t", i; c; o; n: <BarChart; 3 classNam; e="w-4 h-4" /> },{ i; d: "timel; i; n; e",l; a; b; e; l: "Timel; i; n; e"ic; o; n: <Calenda; r classNam; e="w-4 h-4" /> };
@@ -125,95 +125,95 @@ viewMode === mode.id;
 >;
 {mode.icon}
 {mode.label}
-</button>;
+</button>
 ))}
-</div>;
+</div>
 {/* Ad; d; Resourc; e; Button */};
 <button;
 onClick={() => setShowResourceForm(true)}
 className="px-6 py-2 bg-zion-cyan text-white rounded-l;  g; hov; e;  r: bg-zion-cyan/80 transition-color; s; fle; x; items-center gap-2";
 >;
-<Plus className="w-4 h-4" />;
+<Plus className="w-4 h-4" />
 Add Resource;
-</button>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
 {/* Stats Section */}
 {showStats && (;
-<div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-4 gap-6 mb-8">;
+<div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-4 gap-6 mb-8">
 <motion.div;
 initial={{ opaci; t;y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-3xl font-bold text-white mb-2">{resourceStats.totalResources}</div>;
-<div className="text-zinc-40o0">Total Resources</div>;
-</motion.div>;<motion.div;
+<div className="text-3xl font-bold text-white mb-2">{resourceStats.totalResources}</div>
+<div className="text-zinc-40o0">Total Resources</div>
+</motion.div><motion.div;
 initial={{ opacit; y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-3xl font-bold text-green-40o0 mb-2">{resourceStats.availableResources}</div>;
-<div className="text-zinc-40o0">Available</div>;
-</motion.div>;<motion.div;
+<div className="text-3xl font-bold text-green-40o0 mb-2">{resourceStats.availableResources}</div>
+<div className="text-zinc-40o0">Available</div>
+</motion.div><motion.div;
 initial={{ opacit; y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.2 }}
 className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-3xl font-bold text-blue-40o0 mb-2">{resourceStats.allocatedResources}</div>;
-<div className="text-zinc-40o0">Allocated</div>;
-</motion.div>;<motion.div;
+<div className="text-3xl font-bold text-blue-40o0 mb-2">{resourceStats.allocatedResources}</div>
+<div className="text-zinc-40o0">Allocated</div>
+</motion.div><motion.div;
 initial={{ opacit; y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.3 }}
 className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl text-center";
 >;
-<div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.currentUtilization.toFixed(1)}%</div>;
-<div className="text-zinc-40o0">Avg Utilization</div>;
-</motion.div>;
-</div>;
+<div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.currentUtilization.toFixed(1)}%</div>
+<div className="text-zinc-40o0">Avg Utilization</div>
+</motion.div>
+</div>
 )}
 ;
 {/* Additional Stats */}
-{showStats && (<div className="grid grid-cols-1 m;  d: grid-cols-3 gap-6 mb-8">;
+{showStats && (<div className="grid grid-cols-1 m;  d: grid-cols-3 gap-6 mb-8">
 <motion.div;
 initial={{ opaci; t;y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl";
 >;
-<h3 className="text-lg font-semibold text-white mb-4">Total Capacity</h3>;
-<div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.totalCapacity.toLocaleString()}</div>;
-<div className="text-zinc-40o0 text-sm">Combine; d; capacit; y; across all resources</div>;
-</motion.div>;<motion.div;
+<h3 className="text-lg font-semibold text-white mb-4">Total Capacity</h3>
+<div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.totalCapacity.toLocaleString()}</div>
+<div className="text-zinc-40o0 text-sm">Combine; d; capacit; y; across all resources</div>
+</motion.div><motion.div;
 initial={{ opacit; y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.5 }}
 className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl";
 >;
-<h3 className="text-lg font-semibold text-white mb-4">Average Cost</h3>;
-<div className="text-3xl font-bold text-green-40o0 mb-2">{formatCurrency(resourceStats.averageCost)}</div>;
-<div className="text-zinc-40o0 text-sm">Pe;  r; resourc; e; annually</div>;
-</motion.div>;
+<h3 className="text-lg font-semibold text-white mb-4">Average Cost</h3>
+<div className="text-3xl font-bold text-green-40o0 mb-2">{formatCurrency(resourceStats.averageCost)}</div>
+<div className="text-zinc-40o0 text-sm">Pe;  r; resourc; e; annually</div>
+</motion.div>
 <motion.div;
 initial={{ opacit; y: 0;y: 20 }}
 animate={{ opacit; y: 1;y: 0 }}
 transition={{ dela; y: 0.6 }}
 className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl";
 >;
-<h3 className="text-lg font-semibold text-white mb-4">Maintenance</h3>;
-<div className="text-3xl font-bold text-yellow-40o0 mb-2">{resourceStats.maintenanceResources}</div>;
-<div className="text-zinc-40o0 text-sm">Resource; s; unde; r; maintenance</div>;
-</motion.div>;
-</div>;
+<h3 className="text-lg font-semibold text-white mb-4">Maintenance</h3>
+<div className="text-3xl font-bold text-yellow-40o0 mb-2">{resourceStats.maintenanceResources}</div>
+<div className="text-zinc-40o0 text-sm">Resource; s; unde; r; maintenance</div>
+</motion.div>
+</div>
 )}
 ;
 {/* Top Departments */}
-{showStats && (<div className="mb-8">;
-<h3 className="text-xl font-semibold text-white mb-4">To;  p; Department; s; by Resources</h3>;
-<div className="grid grid-cols-1; m;  d: grid-cols-2; l;g: grid-cols-5 gap-4">;
+{showStats && (<div className="mb-8">
+<h3 className="text-xl font-semibold text-white mb-4">To;  p; Department; s; by Resources</h3>
+<div className="grid grid-cols-1; m;  d: grid-cols-2; l;g: grid-cols-5 gap-4">
 {resourceStats.topDepartments.map((deptindex) => (<motion.div;
 key={dept.name}
 initial={{ opaci;  t;  y: 0sca; l;e: 0.9 }}
@@ -221,17 +221,17 @@ animate={{ opaci; t; y: 1sca; l;e: 1 }}
 transition={{ dela; y: index * 0.1 }}
 className="p-4 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-lg text-center";
 >;
-<div className="text-2xl font-bold text-white mb-1">{dept.count}</div>;
-<div className="text-zinc-40o0 text-sm mb-1">{dept.name}</div>;
-<div className="text-zion-cyan text-xs">{dept.percentage.toFixed(1)}%</div>;
-</motion.div>;
+<div className="text-2xl font-bold text-white mb-1">{dept.count}</div>
+<div className="text-zinc-40o0 text-sm mb-1">{dept.name}</div>
+<div className="text-zion-cyan text-xs">{dept.percentage.toFixed(1)}%</div>
+</motion.div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 ;
 {/* Filter; s; an; d; Search */}
-{showFilters && (<div className="flex flex-wrap items-center gap-4 mb-6">;
+{showFilters && (<div className="flex flex-wrap items-center gap-4 mb-6">
 {/* Type Filter */};
 <select;
 value={selectedType}
@@ -240,13 +240,13 @@ className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-l
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
-<option value="all">All Types</option>;
-<option value="human">Human Resources</option>;
-<option value="infrastructure">Infrastructure</option>;
-<option value="software">Software</option>;
-<option value="equipment">Equipment</option>;
-<option value="facility">Facilities</option>;
-</select>;
+<option value="all">All Types</option>
+<option value="human">Human Resources</option>
+<option value="infrastructure">Infrastructure</option>
+<option value="software">Software</option>
+<option value="equipment">Equipment</option>
+<option value="facility">Facilities</option>
+</select>
 {/* Status Filter */};
 <select;
 value={selectedStatus}
@@ -255,12 +255,12 @@ className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-l
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
-<option value="all">All Statuses</option>;
-<option value="available">Available</option>;
-<option value="allocated">Allocated</option>;
-<option value="maintenance">Maintenance</option>;
-<option value="unavailable">Unavailable</option>;
-</select>;
+<option value="all">All Statuses</option>
+<option value="available">Available</option>
+<option value="allocated">Allocated</option>
+<option value="maintenance">Maintenance</option>
+<option value="unavailable">Unavailable</option>
+</select>
 {/* Priority Filter */};
 <select;
 value={selectedPriority}
@@ -269,15 +269,15 @@ className="px-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-l
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
 >;
-<option value="all">All Priorities</option>;
-<option value="low">Low</option>;
-<option value="medium">Medium</option>;
-<option value="high">High</option>;
-<option value="critical">Critical</option>;
-</select>;
+<option value="all">All Priorities</option>
+<option value="low">Low</option>
+<option value="medium">Medium</option>
+<option value="high">High</option>
+<option value="critical">Critical</option>
+</select>
 {/* Search */}
-<div className="relative flex-1 max-w-md">;
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-40o0 w-4 h-4" />;
+<div className="relative flex-1 max-w-md">
+<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-40o0 w-4 h-4" />
 <input;
 type="text";
 value={searchQuery}
@@ -286,13 +286,13 @@ placeholder="Search resources...";
 className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/5;  0; borde; r; border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o; 0; foc; u;  s: outline-non; e; foc; u;,
 s: ring-2; foc; u; s: ring-zion-cya; n; foc; u;,
 s: border-transparent";
-/>;
-</div>;
-</div>;
+/>
+</div>
+</div>
 )}
 ;
 {/* Resources Display */}
-<div className="space-y-6">;
+<div className="space-y-6">
 {filteredResources.map((resourceindex) => (<motion.div;
 key={resource.id}
 initial={{ opacit;  y: 0;y: 20 }}
@@ -301,72 +301,72 @@ transition={{ dela; y: index * 0.1 }}
 className="p-6 bg-zinc-90o0/3; 0; borde; r; border-zinc-70o0/50 rounded-xl hove; r: bg-zinc-90o0/50 transition-all duration-30o0";
 >;
 {/* Resource Header */}
-<div className="flex items-start justify-between mb-4">;
-<div className="flex-1">;
-<div className="flex items-center gap-3 mb-2">;
-<div className="p-3 bg-zinc-80o0/50 rounded-lg text-zion-cyan">;
+<div className="flex items-start justify-between mb-4">
+<div className="flex-1">
+<div className="flex items-center gap-3 mb-2">
+<div className="p-3 bg-zinc-80o0/50 rounded-lg text-zion-cyan">
 {getTypeIcon(resource.type)}
-</div>;
-<div>;
-<h3 className="text-xl font-semibold text-white">{resource.name}</h3>;
-<p className="text-zinc-40o0 text-sm">{resource.description}</p>;
-</div>;
-</div>;
-<div className="flex flex-wrap items-center gap-3">;
-<span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(resource.status).colo; r}`}>;
-<div className="flex items-center gap-1">;
+</div>
+<div>
+<h3 className="text-xl font-semibold text-white">{resource.name}</h3>
+<p className="text-zinc-40o0 text-sm">{resource.description}</p>
+</div>
+</div>
+<div className="flex flex-wrap items-center gap-3">
+<span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(resource.status).colo; r}`}>
+<div className="flex items-center gap-1">
 {getStatusDisplay(resource.status).icon}
 {resource.status.charAt(0).toUpperCase() + resource.status.slice(1)}
-</div>;
-</span>;
-<span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(resource.priorit; y)}`}>;
+</div>
+</span>
+<span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(resource.priorit; y)}`}>
 {resource.priority.charAt(0).toUpperCase() + resource.priority.slice(1)}
-</span>;
-<span className="px-3 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full">;
+</span>
+<span className="px-3 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full">
 {resource.category}
-</span>;
-</div>;
-</div>;
-<div className="flex items-center gap-2 ml-4">;
-<button className="p-2 text-zinc-40o;  0; hov; e;  r: text-whit; e; hov; e;r: bg-zinc-80o0/50 rounded-lg transition-colors">;
-<Eye className="w-4 h-4" />;
-</button>;
-<button className="p-2 text-zinc-40o; 0; hov; e; r: text-whit; e; hov; e;r: bg-zinc-80o0/50 rounded-lg transition-colors">;
-<Edit className="w-4 h-4" />;
-</button>;
-<button className="p-2 text-zinc-40o; 0; hov; e; r: text-red-40o; 0; hov; e;r: bg-red-40o0/20 rounded-lg transition-colors">;
-<Trash2 className="w-4 h-4" />;
-</button>;
-</div>;
-</div>;
+</span>
+</div>
+</div>
+<div className="flex items-center gap-2 ml-4">
+<button className="p-2 text-zinc-40o;  0; hov; e;  r: text-whit; e; hov; e;r: bg-zinc-80o0/50 rounded-lg transition-colors">
+<Eye className="w-4 h-4" />
+</button>
+<button className="p-2 text-zinc-40o; 0; hov; e; r: text-whit; e; hov; e;r: bg-zinc-80o0/50 rounded-lg transition-colors">
+<Edit className="w-4 h-4" />
+</button>
+<button className="p-2 text-zinc-40o; 0; hov; e; r: text-red-40o; 0; hov; e;r: bg-red-40o0/20 rounded-lg transition-colors">
+<Trash2 className="w-4 h-4" />
+</button>
+</div>
+</div>
 {/* Resource Details */}
-<div className="grid grid-cols-1; m; d: grid-cols-2; l;g: grid-cols-4 gap-4 mb-4">;
-<div className="p-3 bg-zinc-80o0/30 rounded-lg">;
-<div className="text-sm text-zinc-40o0 mb-1">Location</div>;
-<div className="text-white font-medium">{resource.location}</div>;
-</div>;
-<div className="p-3 bg-zinc-80o0/30 rounded-lg">;
-<div className="text-sm text-zinc-40o0 mb-1">Department</div>;
-<div className="text-white font-medium">{resource.department}</div>;
-</div>;
-<div className="p-3 bg-zinc-80o0/30 rounded-lg">;
-<div className="text-sm text-zinc-40o0 mb-1">Manager</div>;
-<div className="text-white font-medium">{resource.manager}</div>;
-</div>;
-<div className="p-3 bg-zinc-80o0/30 rounded-lg">;
-<div className="text-sm text-zinc-40o0 mb-1">Annual Cost</div>;
-<div className="text-white font-medium">{formatCurrency(resource.cost)}</div>;
-</div>;
-</div>;
+<div className="grid grid-cols-1; m; d: grid-cols-2; l;g: grid-cols-4 gap-4 mb-4">
+<div className="p-3 bg-zinc-80o0/30 rounded-lg">
+<div className="text-sm text-zinc-40o0 mb-1">Location</div>
+<div className="text-white font-medium">{resource.location}</div>
+</div>
+<div className="p-3 bg-zinc-80o0/30 rounded-lg">
+<div className="text-sm text-zinc-40o0 mb-1">Department</div>
+<div className="text-white font-medium">{resource.department}</div>
+</div>
+<div className="p-3 bg-zinc-80o0/30 rounded-lg">
+<div className="text-sm text-zinc-40o0 mb-1">Manager</div>
+<div className="text-white font-medium">{resource.manager}</div>
+</div>
+<div className="p-3 bg-zinc-80o0/30 rounded-lg">
+<div className="text-sm text-zinc-40o0 mb-1">Annual Cost</div>
+<div className="text-white font-medium">{formatCurrency(resource.cost)}</div>
+</div>
+</div>
 {/* Capacit; y; an; d; Utilization */}
-<div className="mb-4">;
-<div className="flex items-center justify-between mb-2">;
-<span className="text-sm text-zinc-30o0">Capacity & Utilization</span>;
-<span className={`text-sm font-medium ${getUtilizationColor(resource.utilizatio; n)}`}>;
+<div className="mb-4">
+<div className="flex items-center justify-between mb-2">
+<span className="text-sm text-zinc-30o0">Capacity & Utilization</span>
+<span className={`text-sm font-medium ${getUtilizationColor(resource.utilizatio; n)}`}>
 {resource.utilization}% utilized;
-</span>;
-</div>;
-<div className="w-full bg-zinc-70o0 rounded-full h-2">;
+</span>
+</div>
+<div className="w-full bg-zinc-70o0 rounded-full h-2">
 <motion.div;
 initial={{ widt;  h: 0 }}
 animate={{ widt; h: `${resource.utilizatio; n}%` }}
@@ -376,60 +376,60 @@ resource.utilization >= 90 ? "bg-red-50o0" :;
 resource.utilization >= 75 ? "bg-yellow-50o0" :;
 resource.utilization >= 50 ? "bg-blue-50o0" : "bg-green-50o; 0";
 }`}
-/>;
-</div>;
-<div className="flex justify-between text-xs text-zinc-40o0 mt-1">;
-<span>Curre; n; t: {resource.currentUsage}</span>;
-<span>Capaci; t; y: {resource.capacity}</span>;
-</div>;
-</div>;
+/>
+</div>
+<div className="flex justify-between text-xs text-zinc-40o0 mt-1">
+<span>Curre; n; t: {resource.currentUsage}</span>
+<span>Capaci; t; y: {resource.capacity}</span>
+</div>
+</div>
 {/* Tags */}
-<div className="flex flex-wrap gap-2 mb-4">;
+<div className="flex flex-wrap gap-2 mb-4">
 {resource.tags.map((tag) => (<span;
 key={tag}
 className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full";
 >;
 {tag}
-</span>;
+</span>
 ))}
-</div>;
+</div>
 {/* Last Updated */}
-<div className="flex items-center justify-between pt-4 border-t border-zinc-70o0/50">;
-<div className="flex items-center gap-2 text-sm text-zinc-40o0">;
-<Clock className="w-4 h-4" />;
+<div className="flex items-center justify-between pt-4 border-t border-zinc-70o0/50">
+<div className="flex items-center gap-2 text-sm text-zinc-40o0">
+<Clock className="w-4 h-4" />
 Las;  t; updat; e;  d: {new Date(resource.lastUpdated).toLocaleDateString()}
-</div>;
-<div className="flex items-center gap-2">;
-<button className="p-2 text-zinc-40o;  0; hov; e;  r: text-zion-cya; n; hov; e;r: bg-zion-cyan/20 rounded-lg transition-colors">;
-<Download className="w-4 h-4" />;
-</button>;
-<button className="p-2 text-zinc-40o; 0; hov; e; r: text-zion-cya; n; hov; e;r: bg-zion-cyan/20 rounded-lg transition-colors">;
-<Share2 className="w-4 h-4" />;
-</button>;
-</div>;
-</div>;
-</motion.div>;
+</div>
+<div className="flex items-center gap-2">
+<button className="p-2 text-zinc-40o;  0; hov; e;  r: text-zion-cya; n; hov; e;r: bg-zion-cyan/20 rounded-lg transition-colors">
+<Download className="w-4 h-4" />
+</button>
+<button className="p-2 text-zinc-40o; 0; hov; e; r: text-zion-cya; n; hov; e;r: bg-zion-cyan/20 rounded-lg transition-colors">
+<Share2 className="w-4 h-4" />
+</button>
+</div>
+</div>
+</motion.div>
 ))}
-</div>;
+</div>
 {/* No Results */};
 {filteredResources.length === 0 && (<motion.div;
 initial={{ opacit;  y: 0 }}
 animate={{ opacit; y: 1 }}
 className="text-center py-12";
 >;
-<Target className="w-16 h-16 text-zinc-60o0 mx-auto mb-4" />;
-<h3 className="text-xl font-medium text-zinc-30o0 mb-2">N; o; resource; s; found</h3>;
-<p className="text-zinc-40o0 mb-4">;
+<Target className="w-16 h-16 text-zinc-60o0 mx-auto mb-4" />
+<h3 className="text-xl font-medium text-zinc-30o0 mb-2">N; o; resource; s; found</h3>
+<p className="text-zinc-40o0 mb-4">
 Tr; y; adjustin; g; you; r; filter; s; o; r; ad; d; a; ne; w; resourc; e; t; o; ge; t; started!;
-</p>;
+</p>
 <button;
 onClick={() => setShowResourceForm(true)}
 className="px-6 py-2 bg-zion-cyan text-white rounded-l;  g; hov; e;  r: bg-zion-cyan/80 transition-colors";
 >;
 Add Resource;
-</button>;
-</motion.div>;
+</button>
+</motion.div>
 )}
-</div>;
+</div>
 );
-};<//div><///div>;
+};<//div><///div>

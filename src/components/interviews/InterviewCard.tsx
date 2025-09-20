@@ -13,7 +13,7 @@ import { Clock, ExternalLink, MessageSquare, VideoX } from 'lucide-react';
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
-onRefresh: () => Promise<void>;
+onRefresh: () => Promise<void>
 }
 export function InterviewCard({ interview onRefresh }: InterviewCardProps) {
 )

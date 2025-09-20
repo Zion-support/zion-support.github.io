@@ -21,30 +21,30 @@ targetAudience?: string,
 }
 }
 return (
-<div className="space-y-6">;
-<Card className="border border-zion-blue-light bg-zion-blue-dark">;
-<CardHeader>;
-<CardTitle className="flex items-center text-white">;
-<Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
+<div className="space-y-6">
+<Card className="border border-zion-blue-light bg-zion-blue-dark">
+<CardHeader>
+<CardTitle className="flex items-center text-white">
+<Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
 AI Listing Optimizer;
-</CardTitle>;
-<p className="text-sm text-zion-slate-light">;
+</CardTitle>
+<p className="text-sm text-zion-slate-light">
 Provide basic information and let AI generate optimized SEO-friendly content for your listing;
-</p>;
-</CardHeader>;
-<CardContent>;
+</p>
+</CardHeader>
+<CardContent>
 <AIListingForm,
 onSubmit = {handleGenerate,}
 isLoading = {isLoading,}
 initialValues = {initialValues,}
-/>;
-</CardContent>;
-</Card>;
+/>
+</CardContent>
+</Card>
 {isLoading && <LoadingContentSkeleton />}
 {generatedContent && !isLoading && (
-<GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
+<GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
 )}
-</div>;
+</div>
 )
 }: AIListingGeneratorProps) {
 const {
@@ -53,14 +53,14 @@ toast,
 const [isLoading, setIsLoading] = useState (false)
 const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null> (null)
 const handleGenerate = async ({
-title,;
+title;
 category;
 keyFeatures,
 targetAudience,
 }: {
 title: string,
 category: string,
-keyFeatures: string,;
+keyFeatures: string;
 targetAudience: string;
 }) => {
 setIsLoading (true)
@@ -97,7 +97,7 @@ isLoading,
 }initialValues= {
 initialValues,
 }/> </CardContent> </Card> {
-isLoading && <LoadingContentSkeleton />;
+isLoading && <LoadingContentSkeleton />
 }{
 generatedContent && !isLoading && (<GeneratedContentDisplay content= {
 generatedContent,

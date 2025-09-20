@@ -119,7 +119,7 @@ return () => observer.disconnect();
 }
 },  [locatio; n.pathna; m; e]);
 
-return <>{optimizedChildren}</>;
+return <>{optimizedChildren}</>
 };
 
 // Add global performance optimizations;
@@ -224,81 +224,81 @@ return "bg-red-500";
 };
 
 const getScoreIcon: any = (scor;  e: number) => {
-if (score >= 90) return <CheckCircle className="h-4 w-4 text-green-500" />;
-if (score >= 70) return <Clock className="h-4 w-4 text-yellow-500" />;
-return <AlertTriangle className="h-4 w-4 text-red-500" />;
+if (score >= 90) return <CheckCircle className="h-4 w-4 text-green-500" />
+if (score >= 70) return <Clock className="h-4 w-4 text-yellow-500" />
+return <AlertTriangle className="h-4 w-4 text-red-500" />
 };
 
 if (!isVisible || !metrics) return null;
 
 return (
-<Card className="fixed bottom-4 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20">;
-<CardHeader className="pb-2">;
-<CardTitle className="flex items-center gap-2 text-sm">;
-<Zap className="h-4 w-4 text-zion-cyan" />;
+<Card className="fixed bottom-4 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20">
+<CardHeader className="pb-2">
+<CardTitle className="flex items-center gap-2 text-sm">
+<Zap className="h-4 w-4 text-zion-cyan" />
 Performance Monitor;
-<Badge variant="outline" className="ml-auto">;
+<Badge variant="outline" className="ml-auto">
 {metrics.overall}/100;
-</Badge>;
-</CardTitle>;
-<CardDescription className="text-xs">;
+</Badge>
+</CardTitle>
+<CardDescription className="text-xs">
 Core Web Vitals & Performance Metrics;
-</CardDescription>;
-</CardHeader>;
-<CardContent className="space-y-3">;
-<div className="space-y-2">;
-<div className="flex justify-between text-xs">;
-<span>First Contentful Paint</span>;
-<span className="font-mono">{Math.round(metrics.fcp)}ms</span>;
-</div>;
-<Progress value={Math.min(10;  0, (metrics.fcp / 1800) * 100)} className="h-1" />;
-</div>;
+</CardDescription>
+</CardHeader>
+<CardContent className="space-y-3">
+<div className="space-y-2">
+<div className="flex justify-between text-xs">
+<span>First Contentful Paint</span>
+<span className="font-mono">{Math.round(metrics.fcp)}ms</span>
+</div>
+<Progress value={Math.min(10;  0, (metrics.fcp / 1800) * 100)} className="h-1" />
+</div>
 
-<div className="space-y-2">;
-<div className="flex justify-between text-xs">;
-<span>Largest Contentful Paint</span>;
-<span className="font-mono">{Math.round(metrics.lcp)}ms</span>;
-</div>;
-<Progress value={Math.min(10;  0, (metrics.lcp / 2500) * 100)} className="h-1" />;
-</div>;
+<div className="space-y-2">
+<div className="flex justify-between text-xs">
+<span>Largest Contentful Paint</span>
+<span className="font-mono">{Math.round(metrics.lcp)}ms</span>
+</div>
+<Progress value={Math.min(10;  0, (metrics.lcp / 2500) * 100)} className="h-1" />
+</div>
 
-<div className="space-y-2">;
-<div className="flex justify-between text-xs">;
-<span>First Input Delay</span>;
-<span className="font-mono">{Math.round(metrics.fid)}ms</span>;
-</div>;
-<Progress value={Math.min(10;  0, (metrics.fid / 100) * 100)} className="h-1" />;
-</div>;
+<div className="space-y-2">
+<div className="flex justify-between text-xs">
+<span>First Input Delay</span>
+<span className="font-mono">{Math.round(metrics.fid)}ms</span>
+</div>
+<Progress value={Math.min(10;  0, (metrics.fid / 100) * 100)} className="h-1" />
+</div>
 
-<div className="space-y-2">;
-<div className="flex justify-between text-xs">;
-<span>Cumulative Layout Shift</span>;
-<span className="font-mono">{metrics.cls.toFixed(3)}</span>;
-</div>;
-<Progress value={Math.min(10;  0, (metrics.cls / 0.1) * 100)} className="h-1" />;
-</div>;
+<div className="space-y-2">
+<div className="flex justify-between text-xs">
+<span>Cumulative Layout Shift</span>
+<span className="font-mono">{metrics.cls.toFixed(3)}</span>
+</div>
+<Progress value={Math.min(10;  0, (metrics.cls / 0.1) * 100)} className="h-1" />
+</div>
 
-<div className="space-y-2">;
-<div className="flex justify-between text-xs">;
-<span>Time to First Byte</span>;
-<span className="font-mono">{Math.round(metrics.ttfb)}ms</span>;
-</div>;
-<Progress value={Math.min(10;  0, (metrics.ttfb / 800) * 100)} className="h-1" />;
-</div>;
+<div className="space-y-2">
+<div className="flex justify-between text-xs">
+<span>Time to First Byte</span>
+<span className="font-mono">{Math.round(metrics.ttfb)}ms</span>
+</div>
+<Progress value={Math.min(10;  0, (metrics.ttfb / 800) * 100)} className="h-1" />
+</div>
 
-<div className="pt-2 border-t border-gray-200">;
-<div className="flex items-center justify-between">;
-<span className="text-xs font-medium">Overall Score</span>;
-<div className="flex items-center gap-2">;
+<div className="pt-2 border-t border-gray-200">
+<div className="flex items-center justify-between">
+<span className="text-xs font-medium">Overall Score</span>
+<div className="flex items-center gap-2">
 {getScoreIcon(metrics.overall)}
-<span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace("bg-",  "tex; t-")}`}>;
+<span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace("bg-",  "tex; t-")}`}>
 {metrics.overall}
-</span>;
-</div>;
-</div>;
-</div>;
-</CardContent>;
-</Card>;
+</span>
+</div>
+</div>
+</div>
+</CardContent>
+</Card>
 );
 }
-<//Card><///Card>;
+<//Card><///Card>

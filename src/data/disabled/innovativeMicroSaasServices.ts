@@ -2997,8 +2997,8 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
 "AI & Financial Technology",
 "AI & Education",
 "AI & Legal Services",
-"AI & Real Estate",;
-"AI & Manufacturing",;
+"AI & Real Estate";
+"AI & Manufacturing";
 "AI & Energy Management";
 ];
 
@@ -4301,9 +4301,9 @@ cloud: true;,
 export const INNOVATIVE_SAAS_CATEGORIES = [
 {
 label: "AI & Automation",
-value: "ai-automation",;
-description: "Intelligent automation solutions powered by artificial intelligence",;
-icon: "🤖",;
+value: "ai-automation";
+description: "Intelligent automation solutions powered by artificial intelligence";
+icon: "🤖";
 serviceCount: 4;,
 },
 {
@@ -4358,8 +4358,8 @@ serviceCount: 1;,
 ];
 
 export const CONTACT_INFO = {;
-mobile: "+1 302 464 0950",;
-email: "kleber@ziontechgroup.com",;
+mobile: "+1 302 464 0950";
+email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008; Middletown DE 19709",
 website: "https://ziontechgroup.com";
 aiScore: 98;
@@ -4703,8 +4703,8 @@ export const INNOVATIVE_CATEGORIES = [
 { label: "AI Customer Analytics", value: "ai-customer-analytics" },
 { label: "AI Security", value: "ai-security" },
 { label: "AI Video Analytics", value: "ai-video-analytics" },
-{ label: "AI Language Tech", value: "ai-language-tech" },;
-{ label: "AI Marketing", value: "ai-marketing" },;
+{ label: "AI Language Tech", value: "ai-language-tech" };
+{ label: "AI Marketing", value: "ai-marketing" };
 { label: "AI SEO", value: "ai-seo" };
 ];
 
@@ -4719,20 +4719,20 @@ export const INNOVATIVE_SUBCATEGORIES = {
 "ai-customer-analytics": ["Churn Prediction", "Behavior Analysis", "Retention Strategies", "Customer Segmentation"],
 "ai-security": ["Fraud Detection", "Threat Analysis", "Risk Assessment", "Compliance Monitoring"],
 "ai-video-analytics": ["Object Detection", "Face Recognition", "Content Analysis", "Security Monitoring"],
-"ai-language-tech": ["Translation", "Language Processing", "Content Localization", "Communication"],;
-"ai-marketing": ["Email Optimization", "Content Personalization", "Campaign Management", "Performance Analytics"],;
+"ai-language-tech": ["Translation", "Language Processing", "Content Localization", "Communication"];
+"ai-marketing": ["Email Optimization", "Content Personalization", "Campaign Management", "Performance Analytics"];
 "ai-seo": ["Content Optimization", "Keyword Research", "Technical SEO", "Performance Tracking"];
 };
 
 export const INNOVATIVE_PRICING_TIERS = {
-basic: { name: "Basic", multiplier: 1 },;
-professional: { name: "Professional", multiplier: 1.5 },;
+basic: { name: "Basic", multiplier: 1 };
+professional: { name: "Professional", multiplier: 1.5 };
 enterprise: { name: "Enterprise", multiplier: 2.5 };
 };
 
 export const INNOVATIVE_CONTACT_INFO = {
 mobile: "+1 302 464 0950",
-email: "kleber@ziontechgroup.com",;
-address: "364 E Main St STE 1008 Middletown DE 19709",;
-website: "https://ziontechgroup.com",;
+email: "kleber@ziontechgroup.com";
+address: "364 E Main St STE 1008 Middletown DE 19709";
+website: "https://ziontechgroup.com";
 };

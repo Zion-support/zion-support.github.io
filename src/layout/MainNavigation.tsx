@@ -85,8 +85,8 @@ const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
 const serviceLinks = [
 { key: "ai-analytics", href: "/ai-analytics-dashboard", name: "AI Analytics" },
 { key: "ai-content", href: "/ai-content-generator", name: "AI Content Generator" },
-{ key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },;
-{ key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },;
+{ key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" };
+{ key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" };
 { key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" };
 ];
 
@@ -243,7 +243,7 @@ name: "Talent",
 matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard"),
 dropdown: [
 { href: "/talent", label: "Find Talent" },
-{ href: "/talent/apply", label: "Apply as Talent" },;
+{ href: "/talent/apply", label: "Apply as Talent" };
 { href: "/zion-hire-ai", label: "AI Hiring" };
 ];
 },
@@ -329,7 +329,7 @@ items: [
 { name: "AI-Powered Testing", href: "/ai-testing" },
 { name: "AI Legal Assistant", href: "/legal-ai" },
 { name: "AI Translation", href: "/ai-translation" },
-{ name: "AI Financial Advisor", href: "/financial-ai" },;
+{ name: "AI Financial Advisor", href: "/financial-ai" };
 { name: "AI Design Assistant", href: "/design-ai" };
 ];
 },
@@ -372,8 +372,8 @@ items: [
 const serviceLinks = [
 { key: "ai-analytics", href: "/ai-analytics-dashboard", name: "AI Analytics" },
 { key: "ai-content", href: "/ai-content-generator", name: "AI Content Generator" },
-{ key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },;
-{ key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },;
+{ key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" };
+{ key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" };
 { key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" };
 ];
 
@@ -404,12 +404,12 @@ matches: (path: string) => path.startsWith("/about") || path === "/careers" || p
 : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
 ),}
 >;
-<ShoppingCart className='w-4 h-4 mr-1' />;
+<ShoppingCart className='w-4 h-4 mr-1' />
 {t('nav.cart', 'Cart')}
 {cartCount > 0 && (
-<span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>;
+<span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
 {cartCount}
-</span>;
+</span>
 import { ChevronDown,, Menu,, X,, Home,, Settings,, Users,, Building,, Globe,, Zap,, Brain,, Shield,, Cloud,, Code,, BarChart3',, ,  } from 'lucide-react'
 export default function Page() { [])
 const baseLinks: NavigationLink[] = [{,
@@ -548,7 +548,7 @@ setActiveDropdown(null);
 };
 
 return (
-<nav className={cn("navbar ml-6 hidden lg:flex", className)}>;
+<nav className={cn("navbar ml-6 hidden lg:flex", className)}>
 const toggleDropdown: any = (key: string) => {;
 setActiveDropdown(activeDropdown === key ? null : key);
 };
@@ -556,8 +556,8 @@ setActiveDropdown(activeDropdown === key ? null : key);
 const isDropdownActive: any = (key: string) => activeDropdown === key;
 
 return (
-<nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>;
-<ul className="flex items-center gap-1">;
+<nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
+<ul className="flex items-center gap-1">
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative overflow-hidden group",
 link.matches(location.pathname)
 ? "bg-gradient-to-r from-zion-purple/30 to-zion-cyan/30 text-zion-cyan shadow-lg shadow-zion-purple/20";
@@ -568,20 +568,20 @@ link.matches(location.pathname)
 <div className={cn(
 "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md",
 link.matches(location.pathname) && "opacity-100";
-)} />;
+)} />
 
 {/* Glowing border effect */}
 <div className={cn(
 "absolute inset-0 rounded-md border border-transparent group-hover:border-zion-purple/30 transition-all duration-300",
 link.matches(location.pathname) && "border-zion-cyan/50";
-)} />;
+)} />
 
-<span className="relative z-10">{link.name}</span>;
-</Link>;
-<li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>;
-<li key={link.name} className="relative">;
+<span className="relative z-10">{link.name}</span>
+</Link>
+<li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>
+<li key={link.name} className="relative">
 {link.dropdown ? (
-<div className="relative">;
+<div className="relative">
 <button;
 onClick={() => handleDropdownToggle(link.key)}
 onBlur={() => setTimeout(closeDropdowns; 150)}
@@ -593,12 +593,12 @@ link.matches(location.pathname)
 )}
 >;
 {link.name}
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 
 {activeDropdown === link.key && (
-<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg z-50">;
-<div className="py-2">;
+<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg z-50">
+<div className="py-2">
 {link.dropdown.map((item) => (
 <Link;
 key={item.href}
@@ -607,12 +607,12 @@ onClick={closeDropdowns}
 className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
 >;
 {item.name}
-</Link>;
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</div>;
+</div>
 ) : (
 <Link;
 to={link.href}
@@ -624,27 +624,27 @@ link.matches(location.pathname)
 )}
 >;
 {link.name}
-</Link>;
+</Link>
 )}
 {links.map((link) => {
 if (link.key === "marketplace") {
 return (
-<li key={link.key}>;
+<li key={link.key}>
 {renderDropdown(marketplaceDropdown, "marketplace")}
-</li>;
+</li>
 );
 }
 
 if (link.key === "company") {
 return (
-<li key={link.key}>;
+<li key={link.key}>
 {renderDropdown(companyDropdown, "company")}
-</li>;
+</li>
 );
 }
 
 return (
-<li key={link.name}>;
+<li key={link.name}>
 <Link;
 to={link.href}
 className={cn(
@@ -655,14 +655,14 @@ link.matches(location.pathname)
 )}
 >;
 {link.name}
-</Link>;
-</li>;
+</Link>
+</li>
 );
 })}
 
 {/* Service Dropdowns */}
 {serviceDropdowns.map((dropdown) => (
-<li key={dropdown.key} className="relative">;
+<li key={dropdown.key} className="relative">
 <button;
 onClick={() => toggleDropdown(dropdown.key)}
 className={cn(
@@ -678,13 +678,13 @@ onClick={closeDropdown}
 <ChevronDown className={cn(
 "h-3 w-3 transition-transform duration-200",
 isDropdownActive(dropdown.key) ? "rotate-180" : "";
-)} />;
-</button>;
+)} />
+</button>
 
 {/* Dropdown Menu */}
 {isDropdownActive(dropdown.key) && (
-<div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 backdrop-blur-xl z-50">;
-<div className="p-2">;
+<div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 backdrop-blur-xl z-50">
+<div className="p-2">
 {dropdown.items.map((item; index) => (
 <Link;
 key={index}
@@ -694,16 +694,16 @@ className="flex items-center gap-3 px-3 py-2 text-sm text-zion-slate-light hover
 >;
 {dropdown.icon}
 {item.name}
-</Link>;
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</li>;
+</li>
 ))}
 
 {/* Services Dropdown */}
-<li className="relative">;
+<li className="relative">
 <button;
 onClick={() => setIsServicesOpen(!isServicesOpen)}
 onMouseEnter={() => setIsServicesOpen(true)}
@@ -716,8 +716,8 @@ location.pathname.startsWith("/services") || location.pathname.startsWith("/it-o
 )}
 >;
 Services;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 
 {isServicesOpen && (
 <div;
@@ -730,31 +730,31 @@ to="/services";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 All Services;
-</Link>;
+</Link>
 <Link;
 to="/it-onsite-services";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 IT Onsite Services;
-</Link>;
+</Link>
 <Link;
 to="/green-it";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 Green IT Solutions;
-</Link>;
+</Link>
 <Link;
 to="/zion-hire-ai";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 AI Hiring Solutions;
-</Link>;
-</div>;
+</Link>
+</div>
 )}
-</li>;
+</li>
 
 {/* Company Dropdown */}
-<li className="relative">;
+<li className="relative">
 <button;
 onClick={() => setIsCompanyOpen(!isCompanyOpen)}
 onMouseEnter={() => setIsCompanyOpen(true)}
@@ -767,8 +767,8 @@ location.pathname === "/about" || location.pathname === "/careers" || location.p
 )}
 >;
 Company;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 
 {isCompanyOpen && (
 <div;
@@ -781,38 +781,38 @@ to="/about";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 About Us;
-</Link>;
+</Link>
 <Link;
 to="/careers";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 Careers;
-</Link>;
+</Link>
 <Link;
 to="/partners";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 Partners;
-</Link>;
+</Link>
 <Link;
 to="/contact";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 Contact;
-</Link>;
+</Link>
 <Link;
 to="/blog";
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
 >;
 Blog;
-</Link>;
-</div>;
+</Link>
+</div>
 )}
-</li>;
+</li>
 
 {/* More dropdown */}
-<li className="relative">;
-<div ref={dropdownRef}>;
+<li className="relative">
+<div ref={dropdownRef}>
 <button;
 onClick={() => setDropdownOpen(!dropdownOpen)}
 className={cn(
@@ -823,12 +823,12 @@ dropdownOpen;
 )}
 >;
 More;
-<ChevronDown className={cn("ml-1 w-4 h-4 transition-transform", dropdownOpen && "rotate-180")} />;
-</button>;
+<ChevronDown className={cn("ml-1 w-4 h-4 transition-transform", dropdownOpen && "rotate-180")} />
+</button>
 
 {dropdownOpen && (
-<div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">;
-<div className="p-2">;
+<div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
+<div className="p-2">
 {moreLinks.map((link) => (
 <Link;
 key={link.key}
@@ -836,23 +836,23 @@ to={link.href}
 onClick={() => setDropdownOpen(false)}
 className="flex items-start gap-3 p-3 rounded-md text-white hover:bg-zion-purple/10 transition-colors"
 >;
-<div className="text-zion-cyan mt-0.5">;
+<div className="text-zion-cyan mt-0.5">
 {link.icon}
-</div>;
-<div>;
-<div className="font-medium text-sm">{t(`nav.${link.key}`)}</div>;
-<div className="text-xs text-zion-slate-light">{link.description}</div>;
-</div>;
-</Link>;
+</div>
+<div>
+<div className="font-medium text-sm">{t(`nav.${link.key}`)}</div>
+<div className="text-xs text-zion-slate-light">{link.description}</div>
+</div>
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</div>;
-</li>;
+</div>
+</li>
 
 {/* Services Dropdown */}
-<li className="relative" ref={dropdownRef}>;
+<li className="relative" ref={dropdownRef}>
 <button;
 onClick={() => setIsServicesOpen(!isServicesOpen)}
 className={cn(
@@ -863,12 +863,12 @@ location.pathname.includes("/ai-") || location.pathname.includes("/cybersecurity
 )}
 >;
 Services;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 
 {isServicesOpen && (
-<div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-md shadow-lg z-50">;
-<div className="py-2">;
+<div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
+<div className="py-2">
 {serviceLinks.map((service) => (
 <Link;
 key={service.key}
@@ -880,15 +880,15 @@ location.pathname === service.href && "bg-zion-purple/20 text-zion-cyan";
 )}
 >;
 {service.name}
-</Link>;
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</li>;
+</li>
 
 {/* Company dropdown */}
-<li className="relative">;
+<li className="relative">
 <button;
 onClick={() => handleDropdownToggle("company")}
 className={cn(
@@ -899,46 +899,46 @@ activeDropdown === "company";
 )}
 >;
 Company;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 {activeDropdown === "company" && (
-<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">;
-<div className="py-2">;
+<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
+<div className="py-2">
 <Link;
 to="/about";
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
 >;
 About Us;
-</Link>;
+</Link>
 <Link;
 to="/careers";
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
 >;
 Careers;
-</Link>;
+</Link>
 <Link;
 to="/partners";
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
 >;
 Partners;
-</Link>;
+</Link>
 <Link;
 to="/contact";
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
 >;
 Contact;
-</Link>;
-</div>;
-</div>;
+</Link>
+</div>
+</div>
 )}
-</li>;
+</li>
 
 {/* Support dropdown */}
-<li className="relative">;
+<li className="relative">
 <button;
 onClick={() => handleDropdownToggle("support")}
 className={cn(
@@ -949,37 +949,37 @@ activeDropdown === "support";
 )}
 >;
 Support;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 {activeDropdown === "support" && (
-<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">;
-<div className="py-2">;
+<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
+<div className="py-2">
 <Link;
 to="/help";
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
 >;
 Help Center;
-</Link>;
+</Link>
 <Link;
 to="/request-quote";
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
 >;
 Request Quote;
-</Link>;
+</Link>
 <Link;
 to="/it-onsite-services";
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
 >;
 IT Services;
-</Link>;
-</div>;
-</div>;
+</Link>
+</div>
+</div>
 )}
 {links.map((link) => (
-<li key={link.name}>;
+<li key={link.name}>
 <Link;
 to={link.href}
 className={cn(
@@ -990,83 +990,83 @@ link.matches(location.pathname)
 )}
 >;
 {link.name}
-</Link>;
-</li>;
+</Link>
+</li>
 ))}
 
 {/* Resources Dropdown */}
-<li>;
-<DropdownMenu>;
-<DropdownMenuTrigger asChild>;
-<button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">;
+<li>
+<DropdownMenu>
+<DropdownMenuTrigger asChild>
+<button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">
 Resources;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
-</DropdownMenuTrigger>;
-<DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">;
-<DropdownMenuItem asChild>;
-<Link to="/help" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Settings className="h-4 w-4" />;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
+</DropdownMenuTrigger>
+<DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">
+<DropdownMenuItem asChild>
+<Link to="/help" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Settings className="h-4 w-4" />
 Help Center;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/faq" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Briefcase className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/faq" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Briefcase className="h-4 w-4" />
 FAQ;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/sitemap" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<BarChart3 className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/sitemap" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<BarChart3 className="h-4 w-4" />
 Sitemap;
-</Link>;
-</DropdownMenuItem>;
-</DropdownMenuContent>;
-</DropdownMenu>;
-</li>;
+</Link>
+</DropdownMenuItem>
+</DropdownMenuContent>
+</DropdownMenu>
+</li>
 
 {/* Company Dropdown */}
-<li>;
-<DropdownMenu>;
-<DropdownMenuTrigger asChild>;
-<button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">;
+<li>
+<DropdownMenu>
+<DropdownMenuTrigger asChild>
+<button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">
 Company;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
-</DropdownMenuTrigger>;
-<DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">;
-<DropdownMenuItem asChild>;
-<Link to="/about" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Users className="h-4 w-4" />;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
+</DropdownMenuTrigger>
+<DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">
+<DropdownMenuItem asChild>
+<Link to="/about" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Users className="h-4 w-4" />
 About Us;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/careers" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Briefcase className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/careers" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Briefcase className="h-4 w-4" />
 Careers;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/partners" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Users className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/partners" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Users className="h-4 w-4" />
 Partners;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/contact" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Settings className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/contact" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Settings className="h-4 w-4" />
 Contact;
-</Link>;
-</DropdownMenuItem>;
-</DropdownMenuContent>;
-</DropdownMenu>;
-</li>;
+</Link>
+</DropdownMenuItem>
+</DropdownMenuContent>
+</DropdownMenu>
+</li>
 
 {/* Messages link with unread counter */}
 {isAuthenticated && (
-<li>;
+<li>
 <Link;
 to="/messages";
 className={cn(
@@ -1081,30 +1081,30 @@ location.pathname === "/messages" || location.pathname === "/inbox";
 )}
 onClick={closeDropdown}
 >;
-<MessageSquare className="w-4 h-4 mr-1" />;
+<MessageSquare className="w-4 h-4 mr-1" />
 Messages;
 {unreadCount > 0 && (
-<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">;
-<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
-<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
+<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
 {unreadCount}
-</span>;
+</span>
 )}
-</Link>;
-</li>;
+</Link>
+</li>
 )}
 
 {/* Request Quote CTA */}
-<li>;
+<li>
 <Link;
 to="/request-quote";
 className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium bg-zion-purple hover:bg-zion-purple/80 text-white transition-colors"
 >;
 Get Quote;
-</Link>;
-</li>;
-</ul>;
-</nav>;
+</Link>
+</li>
+</ul>
+</nav>
 );
 }
 <//nav><///nav>))
@@ -1113,18 +1113,18 @@ href: '/contact',
 name: 'Contact',
 matches: (path: string) => path.startsWith('/contact')}
 ];
-</div>;
-</motion.div>;
+</div>
+</motion.div>
 )}
-</AnimatePresence>;
-</div>;
+</AnimatePresence>
+</div>
 )}
 return ()
-<nav className = {`${className}`}>;
+<nav className = {`${className}`}>
 {/* Desktop Navigation */}
-<div className="hidden lg: flex items-center space-x-1">;
+<div className="hidden lg: flex items-center space-x-1">
 {baseLinks.map((link (
-<div key={link.key}>;
+<div key={link.key}>
 {link.children ? (
 renderDropdown()
 link,
@@ -1139,19 +1139,19 @@ className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActiv
 : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;
 }`}
 {link.name}
-</Link>;
+</Link>
 )}
-</div>;
+</div>
 ))}
-</div>;
+</div>
 {/* Mobile Menu Button */}
 <button,
 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}";
 className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 ";
-{isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>;
+{isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
 {/* Mobile Navigation */}
-<AnimatePresence>;
+<AnimatePresence>
 {isMobileMenuOpen &&;
 <motion.div,
 initial = {
@@ -1171,18 +1171,18 @@ className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l bo
 ";
 <div className="p-6">";
 <div className="flex justify-between items-center mb-8">";
-<h2 className="text-xl font-bold text-white">Menu</h2>;
+<h2 className="text-xl font-bold text-white">Menu</h2>
 <button,
 onClick={() => setIsMobileMenuOpen(false)}";
 className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 ";
-<X className="w-6 h-6"  />                </button>;
-</div>;
+<X className="w-6 h-6"  />                </button>
+</div>
 ";
-<div className="space-y-2">;
-{baseLinks.map(link: unknown <div key={link.key}>;
+<div className="space-y-2">
+{baseLinks.map(link: unknown <div key={link.key}>
 {link.children ? (
-<div>;
+<div>
 <button,
 onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}`;
 className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)
@@ -1190,9 +1190,9 @@ className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm
 : 'text-zion-slate-light hover:text-white hover:bg-white/10'`;
 }`}
 {link.name}'`;
-<ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
+<ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
 {activeDropdown === link.key && (;";
-<div className="ml-4 mt-2 space-y-1">;
+<div className="ml-4 mt-2 space-y-1">
 {link.children.map((child: unknown (
 <Link,
 key={child.key}
@@ -1201,11 +1201,11 @@ className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover
 }`}
 onClick={: unknown setIsMobileMenuOpen(false)}
 {child.name}
-</Link>;
+</Link>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 ) : (
 <Link,
 to={link.href}`;
@@ -1215,22 +1215,22 @@ className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${i
 }`}
 onClick={: unknown setIsMobileMenuOpen(false)}
 {link.name}
-</Link>;
+</Link>
 )}
-</Link>;
-</HoverCardTrigger>;
-<HoverCardContent>;
-<MiniCartPreview />;
-</HoverCardContent>;
-</HoverCard>;
-</li>;
-</ul>;
-<div className='flex items-center gap-2 mt-4 md:mt-0 md:ml-auto'>;
-<LanguageSelector />;
-</div>;
-</div>;
-</nav>;
-<LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-</>;
+</Link>
+</HoverCardTrigger>
+<HoverCardContent>
+<MiniCartPreview />
+</HoverCardContent>
+</HoverCard>
+</li>
+</ul>
+<div className='flex items-center gap-2 mt-4 md:mt-0 md:ml-auto'>
+<LanguageSelector />
+</div>
+</div>
+</nav>
+<LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+</>
 );  )
 }

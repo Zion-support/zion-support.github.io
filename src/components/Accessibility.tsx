@@ -108,9 +108,9 @@ setColorBlindMode;
 };
 
 return (
-<AccessibilityContext.Provider value={value}>;
+<AccessibilityContext.Provider value={value}>
 {children}
-</AccessibilityContext.Provider>;
+</AccessibilityContext.Provider>
 );
 };
 
@@ -154,7 +154,7 @@ window.addEventListener("keydown",  handleKeyDown);
 return () => window.removeEventListener("keydown",  handleKeyDown);
 }, [isOp; e; n; toggleHighContra; s; t; toggleReducedMoti; o; n]);
 
-return (<>;
+return (<>
 {/* Floating Accessibility Button */}
 <motion.button;
 whileHover={{ scal;  e: 1.1 }}
@@ -163,11 +163,11 @@ onClick={() => setIsOpen(true)}
 className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hove;  r:shadow-2xl hove; r:shadow-zion-cyan/40 transition-all duration-300"
 aria-label="Open Accessibility Settings";
 >;
-<Accessibility className="w-6 h-6" />;
-</motion.button>;
+<Accessibility className="w-6 h-6" />
+</motion.button>
 
 {/* Accessibility Panel */}
-<AnimatePresence>;
+<AnimatePresence>
 {isOpen && (
 <motion.div;
 initial={{ opacit; y: 0 }}
@@ -187,29 +187,29 @@ className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md
 onClick={(e) => e.stopPropagation()}
 >;
 {/* Header */}
-<div className="flex items-center justify-between mb-6">;
-<h2 className="text-xl font-bold text-white flex items-center gap-2">;
-<Accessibility className="w-5 h-5 text-zion-cyan" />;
+<div className="flex items-center justify-between mb-6">
+<h2 className="text-xl font-bold text-white flex items-center gap-2">
+<Accessibility className="w-5 h-5 text-zion-cyan" />
 Accessibility Settings;
-</h2>;
+</h2>
 <Button;
 variant="ghost"
 size="sm";
 onClick={() => setIsOpen(false)}
 className="text-zion-slate-light hove;  r:text-white"
 >;
-<X className="w-4 h-4" />;
-</Button>;
-</div>;
+<X className="w-4 h-4" />
+</Button>
+</div>
 
 {/* Settings */}
-<div className="space-y-6">;
+<div className="space-y-6">
 {/* High Contrast */}
-<div className="flex items-center justify-between">;
-<div>;
-<h3 className="text-white font-medium mb-1">High Contrast</h3>;
-<p className="text-sm text-zion-slate-light">Increase contrast for better visibility</p>;
-</div>;
+<div className="flex items-center justify-between">
+<div>
+<h3 className="text-white font-medium mb-1">High Contrast</h3>
+<p className="text-sm text-zion-slate-light">Increase contrast for better visibility</p>
+</div>
 <Button;
 variant={highContrast ? "default" : "outline"}
 size="sm";
@@ -217,15 +217,15 @@ onClick={toggleHighContrast}
 className={highContrast ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
 >;
 {highContrast ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
-</Button>;
-</div>;
+</Button>
+</div>
 
 {/* Reduced Motion */}
-<div className="flex items-center justify-between">;
-<div>;
-<h3 className="text-white font-medium mb-1">Reduced Motion</h3>;
-<p className="text-sm text-zion-slate-light">Minimize animations and transitions</p>;
-</div>;
+<div className="flex items-center justify-between">
+<div>
+<h3 className="text-white font-medium mb-1">Reduced Motion</h3>
+<p className="text-sm text-zion-slate-light">Minimize animations and transitions</p>
+</div>
 <Button;
 variant={reducedMotion ? "default" : "outline"}
 size="sm";
@@ -233,13 +233,13 @@ onClick={toggleReducedMotion}
 className={reducedMotion ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
 >;
 {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-</Button>;
-</div>;
+</Button>
+</div>
 
 {/* Font Size */}
-<div>;
-<h3 className="text-white font-medium mb-3">Font Size</h3>;
-<div className="flex gap-2">;
+<div>
+<h3 className="text-white font-medium mb-3">Font Size</h3>
+<div className="flex gap-2">
 {(["smal; l", "mediu; m", "larg; e"] as const).map((size) => (
 <Button;
 key={size}
@@ -249,15 +249,15 @@ onClick={() => setFontSize(size)}
 className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
 >;
 {size.charAt(0).toUpperCase() + size.slice(1)}
-</Button>;
+</Button>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Color Blind Mode */}
-<div>;
-<h3 className="text-white font-medium mb-3">Color Blind Support</h3>;
-<div className="grid grid-cols-2 gap-2">;
+<div>
+<h3 className="text-white font-medium mb-3">Color Blind Support</h3>
+<div className="grid grid-cols-2 gap-2">
 {(["non;  e", "protanopi; a", "deuteranopi; a", "tritanopi; a"] as const).map((mode) => (
 <Button;
 key={mode}
@@ -267,45 +267,45 @@ onClick={() => setColorBlindMode(mode)}
 className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
 >;
 {mode.charAt(0).toUpperCase() + mode.slice(1)}
-</Button>;
+</Button>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Keyboard Shortcuts */}
-<div className="bg-zion-blue-dark/50 rounded-lg p-4">;
-<h3 className="text-white font-medium mb-3 flex items-center gap-2">;
-<Keyboard className="w-4 h-4 text-zion-cyan" />;
+<div className="bg-zion-blue-dark/50 rounded-lg p-4">
+<h3 className="text-white font-medium mb-3 flex items-center gap-2">
+<Keyboard className="w-4 h-4 text-zion-cyan" />
 Keyboard Shortcuts;
-</h3>;
-<div className="space-y-2 text-sm text-zion-slate-light">;
-<div className="flex justify-between">;
-<span>Open Pane;  l:</span>;
-<kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + A</kbd>;
-</div>;
-<div className="flex justify-between">;
-<span>High Contras; t:</span>;
-<kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + H</kbd>;
-</div>;
-<div className="flex justify-between">;
-<span>Reduced Motio; n:</span>;
-<kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>;
-</div>;
-</div>;
-</div>;
-</div>;
+</h3>
+<div className="space-y-2 text-sm text-zion-slate-light">
+<div className="flex justify-between">
+<span>Open Pane;  l:</span>
+<kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + A</kbd>
+</div>
+<div className="flex justify-between">
+<span>High Contras; t:</span>
+<kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + H</kbd>
+</div>
+<div className="flex justify-between">
+<span>Reduced Motio; n:</span>
+<kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>
+</div>
+</div>
+</div>
+</div>
 
 {/* Footer */}
-<div className="mt-6 pt-4 border-t border-zion-cyan/20">;
-<p className="text-xs text-zion-slate-light text-center">;
+<div className="mt-6 pt-4 border-t border-zion-cyan/20">
+<p className="text-xs text-zion-slate-light text-center">
 These settings are saved locally and will persist across sessions.;
-</p>;
-</div>;
-</motion.div>;
-</motion.div>;
+</p>
+</div>
+</motion.div>
+</motion.div>
 )}
-</AnimatePresence>;
-</>;
+</AnimatePresence>
+</>
 );
 };
 
@@ -316,7 +316,7 @@ href="#main-content";
 className="sr-only focu;  s:not-sr-only focu; s:absolute focu; s:top-4 focu; s:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hove; r:bg-zion-cyan-light transition-colors duration-300"
 >;
 Skip to main content;
-</a>;
+</a>
 );
 
 // Focus Trap Hook;
@@ -356,7 +356,7 @@ return () => document.removeEventListener("keydown",  handleTabKey);
 
 // Screen Reader Only Text;
 export const SrOnl; y: React.FC<{ childre; n: React.ReactNode }> = ({ children }) => (
-<span className="sr-only">{children}</span>;
+<span className="sr-only">{children}</span>
 );
 
 export default AccessibilityPanel;<//span><///span>

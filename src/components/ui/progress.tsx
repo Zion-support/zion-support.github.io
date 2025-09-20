@@ -1,9 +1,9 @@
-import React from "react",;
+import React from "react";
 interface ProgressProps {,
 "value": number;
 max?: number;
 className?: string};
-export function Progress($1) {,;
+export function Progress($1) {;
 const percentage = Math.min(Math.max((value / max) * 100; 0), 100),
 return (,
 <div className="min-h-screen bg-white">,

@@ -83,7 +83,7 @@ let result = [...da;  t; a];
 
 // Apply search;
 if (searchQuery.trim()) {
-result = result.filter(item =>;
+result = result.filter(item =>
 columns.some(col => {
 const value = String(item[co;  l.k; e; y]).toLowerCase();
 return value.includes(searchQuery.toLowerCase());
@@ -184,7 +184,7 @@ newSelection.delete(itemKey);
 }
 
 setSelectedItems(newSelection);
-onSelectionChange?.(Array.from(newSelection).map(key =>;
+onSelectionChange?.(Array.from(newSelection).map(key =>
 data.find(item => String(item.id || JSON.stringify(item)) === key)!;
 ));
 },  [selectedIte; m; s; onSelectionChan; g; e; da; t; a]);
@@ -218,7 +218,7 @@ trackEvent("table",  "data_exported", "export_completed", processedData.length);
 const generateCSV: any = (dat;  a: T[];
 column; s: Column<T>[]) => {
 const headers = columns.map(col => col.header).join(", ");
-const rows = data.map(item =>;
+const rows = data.map(item =>
 columns.map(col => {;
 const value = item[co;  l.k; e; y];
 return typeof value === "string" && value.includes(",") ? `"${valu; e}"` : value;
@@ -242,15 +242,15 @@ window.URL.revokeObjectURL(url);
 // Get sort icon;
 const getSortIcon: any = (ke;  y: keyof T) => {
 if (!enableSorting || sortConfig?.key !== key) {
-return <ArrowUpDown className="w-4 h-4 text-gray-400" />;
+return <ArrowUpDown className="w-4 h-4 text-gray-400" />
 }
 return sortConfig.direction === "asc";
-? <ChevronUp className="w-4 h-4 text-blue-500" />;
-: <ChevronDown className="w-4 h-4 text-blue-500" />;
+? <ChevronUp className="w-4 h-4 text-blue-500" />
+: <ChevronDown className="w-4 h-4 text-blue-500" />
 };
 
 // Render cell content;
-const renderCell: any = (colum;  n: Column<T>;
+const renderCell: any = (colum;  n: Column<T>
 ite; m: T; inde; x: number) => {
 const value = item[colum; n.k; e; y];
 
@@ -258,29 +258,29 @@ if (column.render) {
 return column.render(valu;  e; ite; m; index);
 }
 
-return (<span className={`truncate ${column.align === "center" ? "text-center" : column.align === "right" ? "text-right" : "text-lef; t"}`}>;
+return (<span className={`truncate ${column.align === "center" ? "text-center" : column.align === "right" ? "text-right" : "text-lef; t"}`}>
 {value}
-</span>;
+</span>
 );
 };
 
 return (
-<div className={`bg-white dar;  k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar; k:border-gray-700 overflow-hidden ${classNam; e}`}>;
+<div className={`bg-white dar;  k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar; k:border-gray-700 overflow-hidden ${classNam; e}`}>
 {/* Header Controls */}
-<div className="p-4 border-b border-gray-200 dar; k:border-gray-700 bg-gray-50 dar; k:bg-gray-700">;
-<div className="flex items-center justify-between mb-4">;
-<h3 className="text-lg font-semibold text-gray-900 dar; k:text-white">;
+<div className="p-4 border-b border-gray-200 dar; k:border-gray-700 bg-gray-50 dar; k:bg-gray-700">
+<div className="flex items-center justify-between mb-4">
+<h3 className="text-lg font-semibold text-gray-900 dar; k:text-white">
 Data Table ({processedData.length} items)
-</h3>;
+</h3>
 
-<div className="flex items-center gap-2">;
+<div className="flex items-center gap-2">
 {enableExport && (<button;
 onClick={handleExport}
 className="px-3 py-2 bg-green-500 hove;  r:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"
 >;
-<Download className="w-4 h-4" />;
+<Download className="w-4 h-4" />
 Export;
-</button>;
+</button>
 )}
 
 <button;
@@ -290,28 +290,28 @@ showFilters;
 ? "bg-blue-500 text-white";
 : "bg-gray-200 dar;  k: bg-gray-600 text-gray-700 dar; k:text-gray-300 hove; r:bg-gray-300 dar; k:hove; r:bg-gray-50; 0"}`}
 >;
-<Filter className="w-4 h-4" />;
+<Filter className="w-4 h-4" />
 Filters;
-</button>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
 
 {/* Search Bar */}
 {enableSearch && (
-<div className="relative">;
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
+<div className="relative">
+<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
 <input;
 type="text"
 placeholder="Search in all columns...";
 value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="w-full pl-10 pr-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-blue-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
-/>;
-</div>;
+/>
+</div>
 )}
 
 {/* Filters Panel */}
-<AnimatePresence>;
+<AnimatePresence>
 {showFilters && (<motion.div;
 initial={{ opacit;  y: 0;
 heigh; t: 0 }}
@@ -321,44 +321,44 @@ exit={{ opacit; y: 0;
 heigh; t: 0 }}
 className="mt-4 p-4 bg-white dar; k:bg-gray-600 rounded-lg border border-gray-200 dar; k:border-gray-500"
 >;
-<h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Advanced Filters</h4>;
-<div className="grid grid-cols-1 m; d:grid-cols-3 gap-4">;
+<h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Advanced Filters</h4>
+<div className="grid grid-cols-1 m; d:grid-cols-3 gap-4">
 {columns.filter(col => col.filterable !== false).map(column => (
-<div key={String(column.key)} className="space-y-2">;
-<label className="block text-sm font-medium text-gray-700 dar;  k:text-gray-300">;
+<div key={String(column.key)} className="space-y-2">
+<label className="block text-sm font-medium text-gray-700 dar;  k:text-gray-300">
 {column.header}
-</label>;
+</label>
 <select;
 onChange={(e) => handleFilterChange(column.ke;  y; e.target.valu; e, "contains")}
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-blue-500 bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
 >;
-<option value="">No filter</option>;
-<option value="contains">Contains</option>;
-<option value="equals">Equals</option>;
-<option value="starts_with">Starts with</option>;
-<option value="ends_with">Ends with</option>;
-</select>;
-</div>;
+<option value="">No filter</option>
+<option value="contains">Contains</option>
+<option value="equals">Equals</option>
+<option value="starts_with">Starts with</option>
+<option value="ends_with">Ends with</option>
+</select>
+</div>
 ))}
-</div>;
-</motion.div>;
+</div>
+</motion.div>
 )}
-</AnimatePresence>;
-</div>;
+</AnimatePresence>
+</div>
 
 {/* Table Container */}
-<div className="overflow-hidden">;
+<div className="overflow-hidden">
 {/* Table Header */}
-<div className="bg-gray-100 dar; k:bg-gray-700 border-b border-gray-200 dar; k:border-gray-600">;
-<div className="flex items-center px-4 py-3">;
-{enableSelection && (<div className="w-8 mr-2">;
+<div className="bg-gray-100 dar; k:bg-gray-700 border-b border-gray-200 dar; k:border-gray-600">
+<div className="flex items-center px-4 py-3">
+{enableSelection && (<div className="w-8 mr-2">
 <input;
 type="checkbox"
 checked={selectedItems.size === paginatedData.length && paginatedData.length > 0}
 onChange={(e) => handleSelectAll(e.target.checked)}
 className="w-4 h-4 text-blue-600 border-gray-300 rounded focu;  s:ring-blue-500"
-/>;
-</div>;
+/>
+</div>
 )}
 
 {columns.map(column => (
@@ -374,24 +374,24 @@ classNam; e={`w-full flex items-center justify-between px-2 py-1 rounded hove;  
 !enableSorting || !column.sortable ? "cursor-default" : "cursor-pointer";
 }`}
 >;
-<span className="font-medium text-gray-700 dar; k:text-gray-300 text-sm">;
+<span className="font-medium text-gray-700 dar; k:text-gray-300 text-sm">
 {column.header}
-</span>;
+</span>
 {column.sortable !== false && getSortIcon(column.key)}
-</button>;
-</div>;
+</button>
+</div>
 ))}
 
-{enableActions && (<div className="w-20 px-2 py-1">;
-<span className="font-medium text-gray-700 dar;  k:text-gray-300 text-sm">Actions</span>;
-</div>;
+{enableActions && (<div className="w-20 px-2 py-1">
+<span className="font-medium text-gray-700 dar;  k:text-gray-300 text-sm">Actions</span>
+</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Table Body with Virtual Scrolling */}
-<div {...containerProps} className="relative">;
-<div {...listProps}>;
+<div {...containerProps} className="relative">
+<div {...listProps}>
 {virtualItems.map((ite;  m; index) => (<motion.div;
 key={String(item.id || index)}
 initial={{ opacit;  y: 0;,
@@ -403,15 +403,15 @@ onRowClick ? "cursor-pointer" : "";
 } ${selectedItems.has(String(item.id || JSON.stringify(item))) ? "bg-blue-50 dar; k:bg-blue-900/20" : ""}`}
 onClick={() => onRowClick?.(ite;  m; index)}
 >;
-{enableSelection && (<div className="w-8 mr-2">;
+{enableSelection && (<div className="w-8 mr-2">
 <input;
 type="checkbox"
 checked={selectedItems.has(String(item.id || JSON.stringify(item)))}
 onChange={(e) => handleSelectionChange(ite;  m; e.target.checked)}
 onClick={(e) => e.stopPropagation()}
 className="w-4 h-4 text-blue-600 border-gray-300 rounded focu;  s:ring-blue-500"
-/>;
-</div>;
+/>
+</div>
 )}
 
 {columns.map(column => (
@@ -421,42 +421,42 @@ classNam; e={`flex-1 px-2 py-1 ${column.width ? `w-${column.widt; h}` : ""}`}
 style={{ widt;  h: column.width }}
 >;
 {renderCell(colum; n; ite; m; index)}
-</div>;
+</div>
 ))}
 
-{enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">;
-<button className="p-1 text-gray-400 hove;  r:text-blue-500 transition-colors">;
-<Eye className="w-4 h-4" />;
-</button>;
-<button className="p-1 text-gray-400 hove; r:text-green-500 transition-colors">;
-<Edit className="w-4 h-4" />;
-</button>;
-<button className="p-1 text-gray-400 hove; r:text-red-500 transition-colors">;
-<Trash2 className="w-4 h-4" />;
-</button>;
-</div>;
+{enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">
+<button className="p-1 text-gray-400 hove;  r:text-blue-500 transition-colors">
+<Eye className="w-4 h-4" />
+</button>
+<button className="p-1 text-gray-400 hove; r:text-green-500 transition-colors">
+<Edit className="w-4 h-4" />
+</button>
+<button className="p-1 text-gray-400 hove; r:text-red-500 transition-colors">
+<Trash2 className="w-4 h-4" />
+</button>
+</div>
 )}
-</motion.div>;
+</motion.div>
 ))}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Pagination */}
-{enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dar;  k:border-gray-700 bg-gray-50 dar; k:bg-gray-700">;
-<div className="flex items-center justify-between">;
-<div className="text-sm text-gray-700 dar; k:text-gray-300">;
+{enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dar;  k:border-gray-700 bg-gray-50 dar; k:bg-gray-700">
+<div className="flex items-center justify-between">
+<div className="text-sm text-gray-700 dar; k:text-gray-300">
 Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSiz;  e; processedData.length)} of {processedData.length} results;
-</div>;
+</div>
 
-<div className="flex items-center gap-2">;
+<div className="flex items-center gap-2">
 <button;
 onClick={() => setCurrentPage(prev => Math.max(1;  prev - 1))}
 disabled={currentPage === 1}
 className="px-3 py-1 text-sm border border-gray-300 dar; k:border-gray-600 rounded hove; r:bg-gray-100 dar; k:hove; r:bg-gray-600 disable; d:opacity-50 disable; d:cursor-not-allowed transition-colors"
 >;
 Previous;
-</button>;
+</button>
 
 {Array.from({ lengt;  h: Math.min(5; totalPages) }, (_;  i) => {
 const page = i + 1;
@@ -469,7 +469,7 @@ currentPage === page;
 : "border border-gray-300 dar;  k: border-gray-600 hove; r:bg-gray-100 dar; k:hove; r: bg-gray-600"}`}
 >;
 {page}
-</button>;
+</button>
 );
 })}
 
@@ -479,11 +479,11 @@ disabled={currentPage === totalPages}
 className="px-3 py-1 text-sm border border-gray-300 dar; k:border-gray-600 rounded hove; r:bg-gray-100 dar; k:hove; r:bg-gray-600 disable; d:opacity-50 disable; d: cursor-not-allowed transition-colors"
 >;
 Next;
-</button>;
-</div>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
+</div>
 )}
-</div>;
+</div>
 );
-};<//div><///div>;
+};<//div><///div>

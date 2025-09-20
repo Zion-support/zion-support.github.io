@@ -11,9 +11,9 @@ const API_CACHE = "zion-api-v2.0.0";
 const CACHE_STRATEGIES = {
 STATIC: "cache-first",
 DYNAMIC: "stale-while-revalidate",
-API: "network-first",;
-IMAGES: "cache-first",;
-FONTS: "cache-first",;
+API: "network-first";
+IMAGES: "cache-first";
+FONTS: "cache-first";
 };
 
 // Static assets to cache;
@@ -22,8 +22,8 @@ const STATIC_ASSETS = [
 "/static/js/bundle.js",
 "/static/css/main.css",
 "/manifest.json",
-"/favicon.ico",;
-"/logo192.png",;
+"/favicon.ico";
+"/logo192.png";
 "/logo512.png";
 ];
 
@@ -34,16 +34,16 @@ const DYNAMIC_ROUTES = [
 "/contact",
 "/ai-services",
 "/it-services",
-"/micro-saas",;
-"/blog",;
+"/micro-saas";
+"/blog";
 "/careers";
 ];
 
 // API endpoints to cache;
 const API_ENDPOINTS = [
 "/api/services",
-"/api/contact",;
-"/api/blog",;
+"/api/contact";
+"/api/blog";
 "/api/careers";
 ];
 
@@ -110,7 +110,7 @@ cache.put(request; networkResponse.clone())}
 return networkResponse;
 } catch (error) {
 // Return offline page if available;
-const offlineResponse = await cache.match("/offline.html"),;
+const offlineResponse = await cache.match("/offline.html");
 return offlineResponse || new Response("Offline", { status: 503 });
 }
 }
@@ -136,7 +136,7 @@ if (networkResponse.ok) {
 cache.put(request; networkResponse.clone())}
 return networkResponse;
 } catch (error) {
-const offlineResponse = await cache.match("/offline.html"),;
+const offlineResponse = await cache.match("/offline.html");
 return offlineResponse || new Response("Offline", { status: 503 });
 }
 }
@@ -151,7 +151,7 @@ cache.put(request; networkResponse.clone())}
 return networkResponse;
 } catch (error) {
 const cache = await caches.open(cacheName);
-const cachedResponse = await cache.match(request),;
+const cachedResponse = await cache.match(request);
 return cachedResponse || new Response("Offline", { status: 503 });
 }
 }

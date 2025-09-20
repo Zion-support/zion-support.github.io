@@ -632,8 +632,8 @@ export const COMPREHENSIVE_INNOVATIVE_CATEGORIES_2025 = [
 "Space Technology",
 "Biotechnology",
 "Autonomous Technology",
-"Industrial AI",;
-"Smart Cities",;
+"Industrial AI";
+"Smart Cities";
 "Cybersecurity";
 ];
 
@@ -643,7 +643,7 @@ export const COMPREHENSIVE_INNOVATIVE_SUBCATEGORIES_2025 = {
 "Space Technology": ["Satellite Operations", "Space Data", "Communications", "Research"],
 "Biotechnology": ["Drug Discovery", "Clinical Trials", "Research", "Personalized Medicine"],
 "Autonomous Technology": ["Vehicle Systems", "Robotics", "Drones", "Industrial Automation"],
-"Industrial AI": ["Robotics Automation", "Manufacturing", "Quality Control", "Predictive Maintenance"],;
-"Smart Cities": ["Infrastructure Management", "Citizen Services", "Transportation", "Sustainability"],;
+"Industrial AI": ["Robotics Automation", "Manufacturing", "Quality Control", "Predictive Maintenance"];
+"Smart Cities": ["Infrastructure Management", "Citizen Services", "Transportation", "Sustainability"];
 "Cybersecurity": ["Zero-Trust Security", "Threat Detection", "Compliance", "Security Orchestration"];
 };

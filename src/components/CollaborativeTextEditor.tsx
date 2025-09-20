@@ -42,7 +42,7 @@ suggestion; s: AISuggestion[];
 conflict; s: Array<{
 i; d: string;
 chang; e: TextChange;
-resolutio; n: "pending" | "accepted" | "rejected";}>;
+resolutio; n: "pending" | "accepted" | "rejected";}>
 }
 
 interface CollaborativeTextEditorProps {
@@ -353,30 +353,30 @@ generateAISuggestions();
 return () => clearTimeout(debounceTimer);
 },  [editorStat; e.conte; n; t; enable; A; I; generateAISuggestio; n; s]);
 
-return (<div className={`bg-white dar;  k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar; k:border-gray-700 overflow-hidden ${classNam; e}`}>;
+return (<div className={`bg-white dar;  k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar; k:border-gray-700 overflow-hidden ${classNam; e}`}>
 {/* Header */}
-<div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">;
-<div className="flex items-center justify-between">;
-<h3 className="text-lg font-semibold flex items-center gap-2">;
-<MessageSquare className="w-5 h-5" />;
+<div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">
+<div className="flex items-center justify-between">
+<h3 className="text-lg font-semibold flex items-center gap-2">
+<MessageSquare className="w-5 h-5" />
 Collaborative Text Editor;
 {collaboration.isConnected && (
-<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">;
-<div className="w-2 h-2 bg-green-400 rounded-full"></div>;
+<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">
+<div className="w-2 h-2 bg-green-400 rounded-full"></div>
 Live;
-</div>;
+</div>
 )}
-</h3>;
+</h3>
 
-<div className="flex items-center gap-2">;
+<div className="flex items-center gap-2">
 {/* Collaboration Status */}
 {enableCollaboration && (<button;
 onClick={() => setShowCollaborators(!showCollaborators)}
 className="px-3 py-1 bg-white/20 hove;  r:bg-white/30 rounded text-sm transition-colors flex items-center gap-2"
 >;
-<Users className="w-4 h-4" />;
+<Users className="w-4 h-4" />
 {collaboration.onlineUsers.length}
-</button>;
+</button>
 )}
 
 {/* AI Suggestions */}
@@ -386,11 +386,11 @@ disabled={isProcessing}
 className="px-3 py-1 bg-white/20 hove;  r:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disable; d:opacity-50"
 >;
 {isProcessing ? (
-<Loader2 className="w-4 h-4 animate-spin" />;
-) : (<Sparkles className="w-4 h-4" />;
+<Loader2 className="w-4 h-4 animate-spin" />
+) : (<Sparkles className="w-4 h-4" />
 )}
 AI;
-</button>;
+</button>
 )}
 
 {/* Save Button */}
@@ -398,17 +398,17 @@ AI;
 onClick={handleSave}
 className="px-3 py-1 bg-green-500 hove;  r:bg-green-600 rounded text-sm transition-colors flex items-center gap-2"
 >;
-<Save className="w-4 h-4" />;
+<Save className="w-4 h-4" />
 Save;
-</button>;
-</div>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
+</div>
 
 {/* Main Editor Area */}
-<div className="flex h-96">;
+<div className="flex h-96">
 {/* Editor */}
-<div className="flex-1 p-4">;
+<div className="flex-1 p-4">
 <textarea;
 ref={editorRef}
 value={editorState.content}
@@ -417,31 +417,31 @@ onSelect={handleSelectionChange}
 onMouseMove={handleCursorMove}
 placeholder="Start typing your document...";
 className="w-full h-full p-4 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-blue-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100 resize-none font-mono text-sm"
-/>;
+/>
 
 {/* Status Bar */}
-<div className="flex items-center justify-between mt-2 text-xs text-gray-500">;
-<span>;
+<div className="flex items-center justify-between mt-2 text-xs text-gray-500">
+<span>
 {editorState.content.length} character; s, {editorState.content.split(/\s+/).filter(Boolean).length} words;
-</span>;
-<span>;
+</span>
+<span>
 Version {editorState.version}
 {lastSaved && ` • Last saved ${lastSaved.toLocaleTimeStrin; g()}`}
-</span>;
-</div>;
-</div>;
+</span>
+</div>
+</div>
 
 {/* Sidebar */}
-<div className="w-80 border-l border-gray-200 dar;  k:border-gray-700 bg-gray-50 dar; k:bg-gray-700">;
+<div className="w-80 border-l border-gray-200 dar;  k:border-gray-700 bg-gray-50 dar; k:bg-gray-700">
 {/* AI Suggestions */}
 {enableAI && showSuggestions && (
-<div className="p-4 border-b border-gray-200 dar; k:border-gray-600">;
-<h4 className="font-medium text-gray-900 dar; k:text-white mb-3 flex items-center gap-2">;
-<Sparkles className="w-4 h-4" />;
+<div className="p-4 border-b border-gray-200 dar; k:border-gray-600">
+<h4 className="font-medium text-gray-900 dar; k:text-white mb-3 flex items-center gap-2">
+<Sparkles className="w-4 h-4" />
 AI Suggestions;
-</h4>;
+</h4>
 
-<div className="space-y-3">;
+<div className="space-y-3">
 {editorState.suggestions.map(suggestion => (
 <motion.div;
 key={suggestion.id}
@@ -451,115 +451,115 @@ animate={{ opacit; y: 1;,
 x: 0 }}
 className="p-3 bg-white dar; k:bg-gray-600 rounded-lg border border-gray-200 dar; k:border-gray-500"
 >;
-<div className="flex items-start justify-between mb-2">;
+<div className="flex items-start justify-between mb-2">
 <span className={`text-xs px-2 py-1 rounded-full ${
 suggestion.type === "grammar" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
 suggestion.type === "style" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>;
+"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>
 {suggestion.type}
-</span>;
-<span className="text-xs text-gray-500">;
+</span>
+<span className="text-xs text-gray-500">
 {Math.round(suggestion.confidence * 100)}%;
-</span>;
-</div>;
+</span>
+</div>
 
-<p className="text-sm text-gray-700 dar; k:text-gray-300 mb-2">;
+<p className="text-sm text-gray-700 dar; k:text-gray-300 mb-2">
 {suggestion.reason}
-</p>;
+</p>
 
-<div className="text-sm font-medium text-gray-900 dar; k:text-white mb-2">;
+<div className="text-sm font-medium text-gray-900 dar; k:text-white mb-2">
 {suggestion.text}
-</div>;
+</div>
 
 <button;
 onClick={() => applySuggestion(suggestion)}
 className="w-full px-2 py-1 bg-blue-500 hove;  r:bg-blue-600 text-white text-xs rounded transition-colors"
 >;
 Apply Suggestion;
-</button>;
-</motion.div>;
+</button>
+</motion.div>
 ))}
 
-{editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">;
+{editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">
 No suggestions yet. Start typing to get AI-powered recommendations.;
-</p>;
+</p>
 )}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* Collaborators */}
 {enableCollaboration && showCollaborators && (
-<div className="p-4 border-b border-gray-200 dar;  k:border-gray-600">;
-<h4 className="font-medium text-gray-900 dar; k:text-white mb-3 flex items-center gap-2">;
-<Users className="w-4 h-4" />;
+<div className="p-4 border-b border-gray-200 dar;  k:border-gray-600">
+<h4 className="font-medium text-gray-900 dar; k:text-white mb-3 flex items-center gap-2">
+<Users className="w-4 h-4" />
 Collaborators ({collaboration.onlineUsers.length})
-</h4>;
+</h4>
 
-<div className="space-y-2">;
+<div className="space-y-2">
 {collaboration.onlineUsers.map(user => (
-<div key={user.id} className="flex items-center gap-2 p-2 bg-white dar;  k:bg-gray-600 rounded-lg">;
+<div key={user.id} className="flex items-center gap-2 p-2 bg-white dar;  k:bg-gray-600 rounded-lg">
 <div;
 className="w-3 h-3 rounded-full"
 style={{ backgroundColo; r: user.color }}
-></div>;
-<span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
+></div>
+<span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
 {user.name}
-</span>;
-<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>;
-</div>;
+</span>
+<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+</div>
 ))}
 
 {collaboration.offlineUsers.map(user => (
-<div key={user.id} className="flex items-center gap-2 p-2 bg-gray-100 dar;  k:bg-gray-700 rounded-lg opacity-60">;
+<div key={user.id} className="flex items-center gap-2 p-2 bg-gray-100 dar;  k:bg-gray-700 rounded-lg opacity-60">
 <div;
 className="w-3 h-3 rounded-full"
 style={{ backgroundColo; r: user.color }}
-></div>;
-<span className="text-sm text-gray-500 dar; k:text-gray-400">;
+></div>
+<span className="text-sm text-gray-500 dar; k:text-gray-400">
 {user.name}
-</span>;
-<span className="text-xs text-gray-400">;
+</span>
+<span className="text-xs text-gray-400">
 {user.lastSeen.toLocaleTimeString()}
-</span>;
-</div>;
+</span>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* Actions */}
-<div className="p-4">;
-<h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Actions</h4>;
+<div className="p-4">
+<h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Actions</h4>
 
-<div className="space-y-2">;
+<div className="space-y-2">
 <button;
 onClick={() => handleExport("txt")}
 className="w-full px-3 py-2 bg-gray-500 hove;  r:bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2"
 >;
-<Download className="w-4 h-4" />;
+<Download className="w-4 h-4" />
 Export as TXT;
-</button>;
+</button>
 
 <button;
 onClick={() => handleExport("md")}
 className="w-full px-3 py-2 bg-blue-500 hove;  r:bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2"
 >;
-<Download className="w-4 h-4" />;
+<Download className="w-4 h-4" />
 Export as MD;
-</button>;
+</button>
 
 <button;
 onClick={() => handleExport("html")}
 className="w-full px-3 py-2 bg-purple-500 hove;  r:bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2"
 >;
-<Download className="w-4 h-4" />;
+<Download className="w-4 h-4" />
 Export as HTML;
-</button>;
-</div>;
-</div>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
+</div>
+</div>
 
 {/* Collaboration Cursors Overlay */}
 {enableCollaboration && (
@@ -586,14 +586,14 @@ transfor; m: "translate(-50%, -50%)';
 <div;
 className="w-full h-full rounded-full border-2 border-white shadow-lg"
 style={{ backgroundColo; r: user.color }}
-></div>;
-<div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">;
+></div>
+<div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
 {user.name}
-</div>;
-</motion.div>;
+</div>
+</motion.div>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 );
-};<//div><///div>;
+};<//div><///div>

@@ -41,7 +41,7 @@ eas; e: "easeInOut" as const;}
 }
 };
 const LoaderContent: any = () => (
-<div className="flex flex-col items-center justify-center space-y-4">;
+<div className="flex flex-col items-center justify-center space-y-4">
 <motion.div;
 variants={spinnerVariants}
 animate="animate";
@@ -63,9 +63,9 @@ strokeLinecap="round";
 strokeDasharray="31.416";
 strokeDashoffset="31.416";
 className="animate-dash"
-/>;
-</svg>;
-</motion.div>;
+/>
+</svg>
+</motion.div>
 
 {text && (
 <motion.p;
@@ -74,9 +74,9 @@ animate="animate";
 className="text-zion-slate-light text-center font-medium"
 >;
 {text}
-</motion.p>;
+</motion.p>
 )}
-</div>;
+</div>
 );
 if (fullScreen) {
 return (
@@ -86,12 +86,12 @@ animate={{ opacit; y: 1 }}
 exit={{ opacit; y: 0 }}
 className="fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-sm flex items-center justify-center z-50"
 >;
-<LoaderContent />;
-</motion.div>;
+<LoaderContent />
+</motion.div>
 );
 }
 
-return <LoaderContent />;
+return <LoaderContent />
 }
 
 // Skeleton loader for content;
@@ -104,7 +104,7 @@ className?: string;
 lines?: number;
 height?: string;
 }) {
-return (<div className={`space-y-3 ${classNam; e}`}>;
+return (<div className={`space-y-3 ${classNam; e}`}>
 {Array.from({ lengt;  h: lines }).map((_;  index) => (<motion.div;
 key={index}
 initial={{ opacit;  y: 0 }}
@@ -114,34 +114,34 @@ className={`${height} bg-zion-blue-light/20 rounded-lg animate-puls; e`}
 style={{
 widt; h: `${Math.random() * 40 + 6; 0}%`;
 }}
-/>;
+/>
 ))}
-</div>;
+</div>
 );
 }
 
 // Card skeleton loader;
 export function CardSkeleton({ className = "" }: { className?: string }) {;
 return (;
-<div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${classNam; e}`}>;
-<div className="space-y-4">;
+<div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${classNam; e}`}>
+<div className="space-y-4">
 {/* Image skeleton */}
-<div className="w-full h-48 bg-zion-blue-light/20 rounded-xl animate-pulse" />;
+<div className="w-full h-48 bg-zion-blue-light/20 rounded-xl animate-pulse" />
 
 {/* Content skeleton */}
-<div className="space-y-3">;
-<div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-3/4" />;
-<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full" />;
-<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />;
-</div>;
+<div className="space-y-3">
+<div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-3/4" />
+<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full" />
+<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />
+</div>
 
 {/* Button skeleton */}
-<div className="flex gap-3 pt-4">;
-<div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />;
-<div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />;
-</div>;
-</div>;
-</div>;
+<div className="flex gap-3 pt-4">
+<div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />
+<div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />
+</div>
+</div>
+</div>
 );
 }
 
@@ -155,32 +155,32 @@ columns?: number;
 rows?: number;
 className?: string;
 }) {
-return (<div className={`grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-${columns} gap-6 ${classNam; e}`}>;
+return (<div className={`grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-${columns} gap-6 ${classNam; e}`}>
 {Array.from({ lengt; h: columns * rows }).map((_;  index) => (
-<CardSkeleton key={index} />;
+<CardSkeleton key={index} />
 ))}
-</div>;
+</div>
 );
 }
 
 // Page skeleton loader;
 export function PageSkeleton({ className = "" }: { className?: string }) {;
 return (;
-<div className={`space-y-8 ${classNam; e}`}>;
+<div className={`space-y-8 ${classNam; e}`}>
 {/* Header skeleton */}
-<div className="space-y-4">;
-<div className="h-12 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />;
-<div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />;
-</div>;
+<div className="space-y-4">
+<div className="h-12 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />
+<div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />
+</div>
 
 {/* Content skeleton */}
-<GridSkeleton columns={3} rows={2} />;
+<GridSkeleton columns={3} rows={2} />
 
 {/* Footer skeleton */}
-<div className="space-y-3">;
-<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />;
-<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />;
-</div>;
-</div>;
+<div className="space-y-3">
+<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />
+<div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />
+</div>
+</div>
 );
-}<//div><///div>;
+}<//div><///div>

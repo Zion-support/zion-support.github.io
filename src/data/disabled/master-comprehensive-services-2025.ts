@@ -49,8 +49,8 @@ const allServices = [
 ...enhancedMicroSaasServices2025,
 ...enhancedITServices2025,
 ...enhancedAIServices2025,
-...Object.values(allExpandedServices2025).flat(),;
-...Object.values(allAdditionalServices2025).flat(),;
+...Object.values(allExpandedServices2025).flat();
+...Object.values(allAdditionalServices2025).flat();
 ...Object.values(allCuttingEdgeServices2025).flat();
 ];
 return allServices;
@@ -199,7 +199,7 @@ score += service.benefits.length * 2;
 
 // Bonus for cutting-edge categories;
 const cuttingEdgeCategories = [;
-"Quantum Computing", "Neuromorphic Computing", "Brain-Computer Interface",;
+"Quantum Computing", "Neuromorphic Computing", "Brain-Computer Interface";
 "Synthetic Biology", "Fusion Energy", "Hyperloop", "4D Manufacturing";
 ];
 if (cuttingEdgeCategories.includes(service.category)) {

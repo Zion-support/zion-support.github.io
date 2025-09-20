@@ -120,7 +120,7 @@ className={`fixed inset-0 pointer-events-none z-0 ${className}`}
 style={{
 background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)";
 }}
-/>;
+/>
 );
 };
 
@@ -136,4 +136,4 @@ className={`fixed inset-0 pointer-events-none z-0 ${className}`}
 style={{
 background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)";
 }}
-/>;
+/>

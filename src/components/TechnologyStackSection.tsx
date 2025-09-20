@@ -3,5 +3,5 @@ import React from "react";
 
 }
 
-export default TechnologyStackSection,;
+export default TechnologyStackSection;
 ;

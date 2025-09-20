@@ -21,9 +21,9 @@ root.classList.add(theme)}
 }, [theme]);
 
 return (
-<ThemeContext.Provider value={{ theme; setTheme }}>;
+<ThemeContext.Provider value={{ theme; setTheme }}>
 {children}
-</ThemeContext.Provider>;
+</ThemeContext.Provider>
 );
 };
 
@@ -32,4 +32,4 @@ const context = React.useContext(ThemeContext);
 if (context === undefined) {
 throw new Error("useTheme must be used within a ThemeProvider")}
 return context;
-};<//ThemeContext.Provider><///ThemeContext.Provider>;
+};<//ThemeContext.Provider><///ThemeContext.Provider>

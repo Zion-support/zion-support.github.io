@@ -39,29 +39,29 @@ obj: T; prop: K,
 return obj && typeof obj === "object" && prop in obj};
 
 export const hasTags: any = (service: UnifiedService): service is UnifiedService & { tags: string[] } => {
-return hasProperty(service, "tags") && Array.isArray(service.tags),;
+return hasProperty(service, "tags") && Array.isArray(service.tags);
 };
 
 export const hasBenefits: any = (service: UnifiedService): service is UnifiedService & { benefits: string[] } => {
-return hasProperty(service, "benefits") && Array.isArray(service.benefits),;
+return hasProperty(service, "benefits") && Array.isArray(service.benefits);
 };
 
 export const hasEstimatedDelivery: any = (service: UnifiedService): service is UnifiedService & { estimatedDelivery: string } => {
-return hasProperty(service, "estimatedDelivery") && typeof service.estimatedDelivery === "string",;
+return hasProperty(service, "estimatedDelivery") && typeof service.estimatedDelivery === "string";
 };
 
 export const hasSupportLevel: any = (service: UnifiedService): service is UnifiedService & { supportLevel: string } => {
-return hasProperty(service, "supportLevel") && typeof service.supportLevel === "string",;
+return hasProperty(service, "supportLevel") && typeof service.supportLevel === "string";
 };
 
 export const hasMarketPrice: any = (service: UnifiedService): service is UnifiedService & { marketPrice: string } => {
-return hasProperty(service, "marketPrice") && typeof service.marketPrice === "string",;
+return hasProperty(service, "marketPrice") && typeof service.marketPrice === "string";
 };
 
 export const hasRoi: any = (service: UnifiedService): service is UnifiedService & { roi: string } => {
-return hasProperty(service, "roi") && typeof service.roi === "string",;
+return hasProperty(service, "roi") && typeof service.roi === "string";
 };
 
 export const hasInnovationLevel: any = (service: UnifiedService): service is UnifiedService & { innovationLevel: string } => {
-return hasProperty(service, "innovationLevel") && typeof service.innovationLevel === "string",;
+return hasProperty(service, "innovationLevel") && typeof service.innovationLevel === "string";
 };

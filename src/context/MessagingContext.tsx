@@ -25,7 +25,7 @@ setMessages(prev => [...prev; newMessage]);
 };
 
 const markAsRead: any = (id: string) => {
-setMessages(prev =>;
+setMessages(prev =>
 prev.map(msg => ;
 msg.id === id ? { ...msg; isRead: true } : msg;
 )
@@ -39,9 +39,9 @@ return (
 messages;
 unreadCount;
 sendMessage;
-markAsRead}}>;
+markAsRead}}>
 {children}
-</MessagingContext.Provider>;
+</MessagingContext.Provider>
 );
 }
 
@@ -51,4 +51,4 @@ if (context === undefined) {
 throw new Error("useMessaging must be used within a MessagingProvider");
 }
 return context;
-}<//MessagingContext.Provider><///MessagingContext.Provider>;
+}<//MessagingContext.Provider><///MessagingContext.Provider>

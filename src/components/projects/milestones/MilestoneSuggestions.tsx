@@ -9,7 +9,7 @@ projectType;
 onMilestonesGenerated,
 }: MilestoneSuggestionsProps) {
 return (
-<div className='space-y-4'>;
+<div className='space-y-4'>
 {!showSuggestions && (
 <Button,
 variant='outline'
@@ -17,94 +17,94 @@ onClick={handleGenerateMilestones}
 disabled={isGenerating |!scopeSummary |!startDate}
 className='w-full'        >
 {isGenerating ? (
-<>;
+<>
 <Loader2 className='mr-2 h-4 w-4 animate-spin' />              Generating milestones...;
-</>;
+</>
 ) : (
-<>;
+<>
 <Sparkles className='mr-2 h-4 w-4' />              Suggest Project Milestones with AI;
-<Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+<Loader2 className="mr-2 h-4 w-4 animate-spin" />
 variant="outline"
 onClick={handleGenerateMilestones}
 disabled={isGenerating |!scopeSummary |!startDate}
 className="w-full"
 >;
 {isGenerating ? (
-<>;
-<Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+<>
+<Loader2 className="mr-2 h-4 w-4 animate-spin" />
 Generating milestones...;
-</>;
+</>
 ) : (
-<>;
-<Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />;
+<>
+<Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />
 Suggest Project Milestones with AI;
-</>;
+</>
 )}
-</Button>;
+</Button>
 )}
 {showSuggestions && generatedMilestones.length > 0 && (
-<Card>;
-<CardHeader className='pb-3'>;
-<CardTitle className='text-lg flex items-center'>;
+<Card>
+<CardHeader className='pb-3'>
+<CardTitle className='text-lg flex items-center'>
 <Sparkles className='h-5 w-5 mr-2 text-primary' />              AI-Suggested Milestones;
-</CardTitle>;
-</CardHeader>;
-<CardContent>;
-<div className='space-y-3'>          <CardHeader className="pb-3">;
-<CardTitle className="text-lg flex items-center">;
-<Sparkles className="h-5 w-5 mr-2 text-primary" />;
+</CardTitle>
+</CardHeader>
+<CardContent>
+<div className='space-y-3'>          <CardHeader className="pb-3">
+<CardTitle className="text-lg flex items-center">
+<Sparkles className="h-5 w-5 mr-2 text-primary" />
 AI-Suggested Milestones;
-</CardTitle>;
-</CardHeader>;
-<CardContent>;
-<div className='space-y-3'>;
+</CardTitle>
+</CardHeader>
+<CardContent>
+<div className='space-y-3'>
 {generatedMilestones.map((milestone index) => (
-<div key={index} className='p-3 border rounded-lg bg-muted/10'>;
-<div className='flex items-center justify-between mb-1'>;
+<div key={index} className='p-3 border rounded-lg bg-muted/10'>
+<div className='flex items-center justify-between mb-1'>
 <div className='font-medium flex items-center'>                      {milestone.title}
-<Badge variant='secondary' className='ml-2 text-xs'>;
+<Badge variant='secondary' className='ml-2 text-xs'>
 AI Suggested;
-</Badge>;
-</div>;
-<div className='text-sm text-muted-foreground'>;
+</Badge>
+</div>
+<div className='text-sm text-muted-foreground'>
 Due: {formatDate(milestone.dueDate)}
-</div>;
-</div>;
-<p className='text-sm text-muted-foreground'>;
+</div>
+</div>
+<p className='text-sm text-muted-foreground'>
 {milestone.description}
-</p>;
-<div className='flex justify-between items-center mt-2 text-sm'>                    <span>Estimated: {milestone.estimatedHours} hours</span>;
-<p className="text-sm text-muted-foreground">{milestone.description}</p>;
-<div className="flex justify-between items-center mt-2 text-sm">;
+</p>
+<div className='flex justify-between items-center mt-2 text-sm'>                    <span>Estimated: {milestone.estimatedHours} hours</span>
+<p className="text-sm text-muted-foreground">{milestone.description}</p>
+<div className="flex justify-between items-center mt-2 text-sm">
 {generatedMilestones.map((milestone index) => (
-<div key={index} className="p-3 border rounded-lg bg-muted/10">;
-<div className="flex items-center justify-between mb-1">;
-<div className="font-medium flex items-center">;
+<div key={index} className="p-3 border rounded-lg bg-muted/10">
+<div className="flex items-center justify-between mb-1">
+<div className="font-medium flex items-center">
 {milestone.title}
-<Badge variant="secondary" className="ml-2 text-xs">;
+<Badge variant="secondary" className="ml-2 text-xs">
 AI Suggested;
-</Badge>;
-</div>;
-<div className="text-sm text-muted-foreground">;
+</Badge>
+</div>
+<div className="text-sm text-muted-foreground">
 Due: {formatDate(milestone.dueDate)}
-</div>;
-</div>;
-<p className="text-sm text-muted-foreground">{milestone.description}</p>;
-<div className="flex justify-between items-center mt-2 text-sm">;
-<span>Estimated: {milestone.estimatedHours} hours</span>;
-</div>;
-</div>;
+</div>
+</div>
+<p className="text-sm text-muted-foreground">{milestone.description}</p>
+<div className="flex justify-between items-center mt-2 text-sm">
+<span>Estimated: {milestone.estimatedHours} hours</span>
+</div>
+</div>
 ))}
-<div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>;
-<Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">;
-<Check className="h-4 w-4 mr-1 text-green-500" />;
+<div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>
+<Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+<Check className="h-4 w-4 mr-1 text-green-500" />
 These milestones will be added to your contract;
-</div>;
-</div>;
-</CardContent>;
-</Card>;
+</div>
+</div>
+</CardContent>
+</Card>
 )}
-</div>;
+</div>
 )
 }
 <Button variant="outline" onClick={

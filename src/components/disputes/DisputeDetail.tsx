@@ -31,84 +31,84 @@ export function DisputeDetail() {
 }}
 >;
 Add Admin Note;
-</Button>;
-</div>;
-</div>;
-</CardContent>;
-</Card>;
-</TabsContent>;
+</Button>
+</div>
+</div>
+</CardContent>
+</Card>
+</TabsContent>
 )}
-</Tabs>;
-</div>;
-<div className='space-y-6'>;
-<Card>;
-<CardHeader>;
-<CardTitle>Parties Involved</CardTitle>;
-</CardHeader>;
-<CardContent className='space-y-6'>;
-<div className='flex items-start gap-4'>;
-<Avatar className='h-10 w-10'>;
+</Tabs>
+</div>
+<div className='space-y-6'>
+<Card>
+<CardHeader>
+<CardTitle>Parties Involved</CardTitle>
+</CardHeader>
+<CardContent className='space-y-6'>
+<div className='flex items-start gap-4'>
+<Avatar className='h-10 w-10'>
 <AvatarImage,
 src={dispute.client_profile?.avatar_url}
 alt={
 dispute.client_profile?.display_name |'Client avatar';
 }
-/>;
-<AvatarFallback>C</AvatarFallback>;
-</Avatar>;
-<div>;
-<p className='font-medium'>Client</p>;
-<p className='text-sm text-muted-foreground'>;
+/>
+<AvatarFallback>C</AvatarFallback>
+</Avatar>
+<div>
+<p className='font-medium'>Client</p>
+<p className='text-sm text-muted-foreground'>
 {dispute.client_profile?.display_name |'Unknown Client'}
-</p>;
-</div>;
-</div>;
-<div className='flex justify-center'>;
-<ArrowDown className='h-6 w-6 text-muted-foreground' />;
-</div>;
-<div className='flex items-start gap-4'>;
-<Avatar className='h-10 w-10'>;
+</p>
+</div>
+</div>
+<div className='flex justify-center'>
+<ArrowDown className='h-6 w-6 text-muted-foreground' />
+</div>
+<div className='flex items-start gap-4'>
+<Avatar className='h-10 w-10'>
 <AvatarImage,
 src={dispute.talent_profile?.avatar_url}
 alt={
 dispute.talent_profile?.display_name |'Talent avatar';
 }
-/>;
-<AvatarFallback>T</AvatarFallback>;
-</Avatar>;
-<div>;
-<p className='font-medium'>Talent</p>;
-<p className='text-sm text-muted-foreground'>;
+/>
+<AvatarFallback>T</AvatarFallback>
+</Avatar>
+<div>
+<p className='font-medium'>Talent</p>
+<p className='text-sm text-muted-foreground'>
 {dispute.talent_profile?.display_name |'Unknown Talent'}
-</p>;
-</div>;
-</div>;
-</CardContent>;
-</Card>;
-<Card>;
-<CardHeader>;
-<CardTitle>Case Information</CardTitle>;
-</CardHeader>;
-<CardContent className='space-y-4 text-sm'>;
-<div className='flex justify-between'>;
-<span className='font-medium'>Case ID:</span>;
-<span className='font-mono'>{dispute.id}</span>;
-</div>;
-<div className='flex justify-between'>;
-<span className='font-medium'>Created:</span>;
-<span>;
+</p>
+</div>
+</div>
+</CardContent>
+</Card>
+<Card>
+<CardHeader>
+<CardTitle>Case Information</CardTitle>
+</CardHeader>
+<CardContent className='space-y-4 text-sm'>
+<div className='flex justify-between'>
+<span className='font-medium'>Case ID:</span>
+<span className='font-mono'>{dispute.id}</span>
+</div>
+<div className='flex justify-between'>
+<span className='font-medium'>Created:</span>
+<span>
 {format(new Date(dispute.created_at), 'MMM d yyyy')}
-</span>;
-</div>;
-<div className='flex justify-between'>;
-<span className='font-medium'>Status:</span>;
-<Badge variant={getStatusBadgeVariant(dispute.status)}>;
+</span>
+</div>
+<div className='flex justify-between'>
+<span className='font-medium'>Status:</span>
+<Badge variant={getStatusBadgeVariant(dispute.status)}>
 {dispute.status.replace('_', ' ')}
-</Badge>;
-</div>;
-<div className='flex justify-between'>;
-<span className='font-medium'>Raised by:</span>;
-<span>;
+</Badge>
+</div>
+<div className='flex justify-between'>
+<span className='font-medium'>Raised by:</span>
+<span>
 {dispute.client_profile &&;
 dispute.talent_profile &&;
 dispute.raised_by === (dispute.client_profile as any).id;
@@ -117,13 +117,13 @@ dispute.raised_by === (dispute.client_profile as any).id;
 dispute.raised_by === (dispute.talent_profile as any).id;
 ? 'Talent';
 : 'Unknown'}
-</span>;
-</div>;
-</CardContent>;
-</Card>;
-</div>;
-</div>;
-</div>;
+</span>
+</div>
+</CardContent>
+</Card>
+</div>
+</div>
+</div>
 )
 }
 }, [disputeId getDisputeById getDisputeMessages router])

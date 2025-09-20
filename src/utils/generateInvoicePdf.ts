@@ -6,7 +6,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 export async function generateInvoicePdf(order: OrderDetail): Promise<Blob> {
 const itemsTable = [;
-["Item", "Qty", "Price"],;
+["Item", "Qty", "Price"];
 ...order.items.map(i => [i.name; String(i.quantity), `$${i.price.toFixed(2)}`])
 ];
 

@@ -90,146 +90,146 @@ descripti; o; n: "Suppor; t availabl; e i; n multipl; e tim; e zone; s",
 }
 ];
 
-return (<section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">;
-<div className="container mx-auto px-4">;
+return (<section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">
+<div className="container mx-auto px-4">
 {/* Section Header */}
-<div className="text-center mb-16">;
-<h2 className="text-4xl m;  d: text-5xl font-bold text-white mb-6 font-futuristic">;
-Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Touch</span>;
-</h2>;
-<p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">;
+<div className="text-center mb-16">
+<h2 className="text-4xl m;  d: text-5xl font-bold text-white mb-6 font-futuristic">
+Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Touch</span>
+</h2>
+<p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
 Ready to transform your business with cutting-edge technology?;
 Let's discuss how Zion Tech Group can help you achieve your goals.;
-</p>;
-</div>;
+</p>
+</div>
 
-<div className="grid grid-cols-1 l; g: grid-cols-3 gap-8 mb-16">;
+<div className="grid grid-cols-1 l; g: grid-cols-3 gap-8 mb-16">
 {/* Contact Methods */}
-<div className="l; g: col-span-2">;
-<h3 className="text-2xl font-bold text-white mb-6 font-tech">Contact Methods</h3>;
-<div className="grid grid-cols-1 m; d: grid-cols-3 gap-6">;
+<div className="l; g: col-span-2">
+<h3 className="text-2xl font-bold text-white mb-6 font-tech">Contact Methods</h3>
+<div className="grid grid-cols-1 m; d: grid-cols-3 gap-6">
 {contactMethods.map((metho; d; index) => (<div;
 key={index}
 className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r:scale-105"
 >;
-<div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-xl flex items-center justify-center m; b-4`}>;
-<div className="text-white">;
+<div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-xl flex items-center justify-center m; b-4`}>
+<div className="text-white">
 {method.icon}
-</div>;
-</div>;
-<h4 className="text-lg font-semibold text-white mb-2">{method.title}</h4>;
-<p className="text-zion-slate-light text-sm mb-3">{method.description}</p>;
+</div>
+</div>
+<h4 className="text-lg font-semibold text-white mb-2">{method.title}</h4>
+<p className="text-zion-slate-light text-sm mb-3">{method.description}</p>
 <a;
 href={method.link}
 className="text-zion-cyan hove; r: text-white transition-colors duration-300 font-medium"
 >;
 {method.contact}
-</a>;
-</div>;
+</a>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Office Hours */}
-<div className="l; g: col-span-1">;
-<h3 className="text-2xl font-bold text-white mb-6 font-tech">Office Hours</h3>;
-<div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">;
-<div className="space-y-4">;
-<div className="flex justify-between items-center">;
-<span className="text-zion-slate-light">Monday - Friday</span>;
-<span className="text-white font-medium">9:00 AM - 6:00 PM EST</span>;
-</div>;
-<div className="flex justify-between items-center">;
-<span className="text-zion-slate-light">Saturday</span>;
-<span className="text-white font-medium">1; 0: 00 AM - 4:00 PM EST</span>;
-</div>;
-<div className="flex justify-between items-center">;
-<span className="text-zion-slate-light">Sunday</span>;
-<span className="text-white font-medium">Closed</span>;
-</div>;
-<div className="pt-4 border-t border-white/10">;
-<div className="text-center">;
-<div className="text-zion-cyan font-semibold">24/7 Emergency Support</div>;
-<div className="text-zion-slate-light text-sm">Available for critical issues</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
+<div className="l; g: col-span-1">
+<h3 className="text-2xl font-bold text-white mb-6 font-tech">Office Hours</h3>
+<div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+<div className="space-y-4">
+<div className="flex justify-between items-center">
+<span className="text-zion-slate-light">Monday - Friday</span>
+<span className="text-white font-medium">9:00 AM - 6:00 PM EST</span>
+</div>
+<div className="flex justify-between items-center">
+<span className="text-zion-slate-light">Saturday</span>
+<span className="text-white font-medium">1; 0: 00 AM - 4:00 PM EST</span>
+</div>
+<div className="flex justify-between items-center">
+<span className="text-zion-slate-light">Sunday</span>
+<span className="text-white font-medium">Closed</span>
+</div>
+<div className="pt-4 border-t border-white/10">
+<div className="text-center">
+<div className="text-zion-cyan font-semibold">24/7 Emergency Support</div>
+<div className="text-zion-slate-light text-sm">Available for critical issues</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 {/* Office Locations */}
-<div className="mb-16">;
-<h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>;
-<div className="grid grid-cols-1 m; d: grid-cols-3 gap-6">;
+<div className="mb-16">
+<h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>
+<div className="grid grid-cols-1 m; d: grid-cols-3 gap-6">
 {officeLocations.map((offic;  e; index) => (<div;
 key={index}
 className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r: scale-105"
 >;
-<div className="flex items-center mb-4">;
-<div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-3">;
-<div className="text-white">;
+<div className="flex items-center mb-4">
+<div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-3">
+<div className="text-white">
 {office.icon}
-</div>;
-</div>;
-<div>;
-<h4 className="text-lg font-semibold text-white">{office.city}</h4>;
-<p className="text-zion-slate-light text-sm">{office.country}</p>;
-</div>;
-</div>;
-<p className="text-zion-slate-light text-sm leading-relaxed">{office.address}</p>;
-</div>;
+</div>
+</div>
+<div>
+<h4 className="text-lg font-semibold text-white">{office.city}</h4>
+<p className="text-zion-slate-light text-sm">{office.country}</p>
+</div>
+</div>
+<p className="text-zion-slate-light text-sm leading-relaxed">{office.address}</p>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Support Features */}
-<div className="mb-16">;
-<h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>;
-<div className="grid grid-cols-1 m; d: grid-cols-2 l; g:grid-cols-4 gap-6">;
+<div className="mb-16">
+<h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>
+<div className="grid grid-cols-1 m; d: grid-cols-2 l; g:grid-cols-4 gap-6">
 {supportFeatures.map((featur;  e; index) => (<div;
 key={index}
 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r: border-zion-cyan/30 transition-all duration-300 hove; r: transform hove; r:scale-105"
 >;
-<div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">;
-<div className="text-white">;
+<div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+<div className="text-white">
 {feature.icon}
-</div>;
-</div>;
-<h4 className="text-lg font-semibold text-white mb-2">{feature.title}</h4>;
-<p className="text-zion-slate-light text-sm leading-relaxed">{feature.description}</p>;
-</div>;
+</div>
+</div>
+<h4 className="text-lg font-semibold text-white mb-2">{feature.title}</h4>
+<p className="text-zion-slate-light text-sm leading-relaxed">{feature.description}</p>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* CTA Section */}
-<div className="text-center">;
-<h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>;
-<p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">;
+<div className="text-center">
+<h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+<p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
 Contact us today to discuss your technology needs and discover how;
 Zion Tech Group can help transform your business.;
-</p>;
-<div className="flex flex-col s; m:flex-row gap-4 justify-center">;
+</p>
+<div className="flex flex-col s; m:flex-row gap-4 justify-center">
 <Link;
 to="/contact";
 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hove; r: shadow-neon-lg hove; r: scale-105 transition-all duration-300 transform"
 >;
 Contact Us Now;
-<ArrowRight className="w-5 h-5" />;
-</Link>;
+<ArrowRight className="w-5 h-5" />
+</Link>
 <Link;
 to="/request-quote";
 className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hove; r: bg-zion-cyan hove; r: text-white transition-all duration-300"
 >;
 Request Quote;
-</Link>;
-</div>;
-</div>;
-</div>;
-</section>;
+</Link>
+</div>
+</div>
+</div>
+</section>
 );
-}<//section><///section>;
+}<//section><///section>
 
 const [errors, setErrors] = useState<{
 name?: string;
@@ -237,41 +237,41 @@ email?: string;
 subject?: string;
 message?: string,
 return (
-<section className="py-20 bg-zion-blue" id="contact">;
-<div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
-<div>;
-<GradientHeading>Get In Touch</GradientHeading>;
-<p className="mt-4 text-zion-slate-light text-xl mb-8">;
+<section className="py-20 bg-zion-blue" id="contact">
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<GradientHeading>Get In Touch</GradientHeading>
+<p className="mt-4 text-zion-slate-light text-xl mb-8">
 We have the equipment the parts and the maintenance services ready for you — right now. Contact us today.;
-</p>;
-<div className="flex items-center mb-6">;
-<div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">;
-<Mail className="h-6 w-6" />;
-</div>;
-<div>;
-<p className="text-white font-semibold">Email Us</p>;
-<a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">;
+</p>
+<div className="flex items-center mb-6">
+<div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">
+<Mail className="h-6 w-6" />
+</div>
+<div>
+<p className="text-white font-semibold">Email Us</p>
+<a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">
 commercial@ziontechgroup.com;
-</a>;
-</div>;
-</div>;
-<Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+</a>
+</div>
+</div>
+<Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
 Request Commercial Proposal;
-</Button>;
-</div>;
-<div className="relative">;
-<div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>;
-<div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">;
-<h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>;
-<form onSubmit={handleSubmit} className="space-y-6">;
-<div className="grid grid-cols-1 gap-6 sm:grid-cols-2">;
-<div>;
+</Button>
+</div>
+<div className="relative">
+<div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>
+<div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">
+<h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>
+<form onSubmit={handleSubmit} className="space-y-6">
+<div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+<div>
 <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-;
 Name;
-">;
+">
 Name;
-</label>;
+</label>
 <Input,
 id="name";
 name="name";
@@ -279,17 +279,17 @@ value = {formData.name,}
 onChange = {handleChange,}
 className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
 required;
-/>;
+/>
 {errors.name && (
-<p className="mt-1 text-sm text-red-500">{errors.name}</p>;
+<p className="mt-1 text-sm text-red-500">{errors.name}</p>
 )}
-</div>;
-<div>;
+</div>
+<div>
 <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-;
 Email;
-">;
+">
 Email;
-</label>;
+</label>
 <Input,
 id="email";
 name="email";
@@ -298,18 +298,18 @@ value = {formData.email,}
 onChange = {handleChange,}
 className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
 required;
-/>;
+/>
 {errors.email && (
-<p className="mt-1 text-sm text-red-500">{errors.email}</p>;
+<p className="mt-1 text-sm text-red-500">{errors.email}</p>
 )}
-</div>;
-</div>;
-<div>;
+</div>
+</div>
+<div>
 <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-;
 Subject;
-">;
+">
 Subject;
-</label>;
+</label>
 <Input,
 id="subject";
 name="subject";
@@ -317,17 +317,17 @@ value = {formData.subject,}
 onChange = {handleChange,}
 className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
 required;
-/>;
+/>
 {errors.subject && (
-<p className="mt-1 text-sm text-red-500">{errors.subject}</p>;
+<p className="mt-1 text-sm text-red-500">{errors.subject}</p>
 )}
-</div>;
-<div>;
+</div>
+<div>
 <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" htmlFor="input-;
 Message;
-">;
+">
 Message;
-</label>;
+</label>
 <Textarea,
 id="message";
 name="message";
@@ -336,29 +336,29 @@ value = {formData.message,}
 onChange = {handleChange,}
 className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
 required;
-/>;
+/>
 {errors.message && (
-<p className="mt-1 text-sm text-red-500">{errors.message}</p>;
+<p className="mt-1 text-sm text-red-500">{errors.message}</p>
 )}
-</div>;
-<div>;
+</div>
+<div>
 <Button,
 type="submit"
 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
 disabled = {isSubmitting,}
 >;
 {isSubmitting ? 'Sending...' : 'Send Message'}
-</Button>;
+</Button>
 {submitted && (
-<p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>;
+<p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
 )}
-</div>;
-</form>;
-</div>;
-</div>;
-</div>;
-</div>;
-</section>;
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
 )
 }setErrors (fieldErrors)
 toast ({

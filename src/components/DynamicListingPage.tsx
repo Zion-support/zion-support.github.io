@@ -11,13 +11,13 @@ import { captureException,  } from "@/utils/sentry";
 interface PriceRange {
 >;
 Clear All;
-</Button>;
-</div>;
+</Button>
+</div>
 )}
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 )
 }
 if (typeof window !== 'undefined') {';
@@ -39,7 +39,7 @@ selectedAvailability,
 (value: string) => setSelectedAvailability (value) ";
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) )
 }</SelectContent> </Select> </div>) ";
-}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label>;
+}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label>
 }aria-pressed= {
 selectedRating === rating,
 }className= {

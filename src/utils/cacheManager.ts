@@ -25,7 +25,7 @@ CacheManager.instance = new CacheManager(options);
 return CacheManager.instance;
 };public set<T>(key: string; data: T; customTTL?: number): void {;
 const now = Date.now();
-const ttl = customTTL || this.options.ttl || 0,;
+const ttl = customTTL || this.options.ttl || 0;
 // Remove; oldest; items if; cache; is full;
 if (this.cache.size >= (this.options.maxSize || 10o0)) {
 this.evictOldest();

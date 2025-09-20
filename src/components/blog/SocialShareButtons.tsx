@@ -6,7 +6,7 @@ interface SocialShareButtonsProps {
 title: string,
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 return (
-<div className='mt-12 flex flex-wrap gap-2'>;
+<div className='mt-12 flex flex-wrap gap-2'>
 {buttons.map(btn => (
 <Button,
 key={btn.label}
@@ -15,10 +15,10 @@ size='sm';
 onClick={btn.onClick}
 aria-label={btn.label}
 >          {btn.icon}
-<span>{btn.label}</span>;
-</Button>;
+<span>{btn.label}</span>
+</Button>
 ))}
-</div>;
+</div>
 )
 }
 }

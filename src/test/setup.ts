@@ -52,6 +52,6 @@ originalWarn.call(console, ...args)
 }
 })
 afterAll(() => {
-console.error = originalError,;
-console.warn = originalWarn,;
+console.error = originalError;
+console.warn = originalWarn;
 })

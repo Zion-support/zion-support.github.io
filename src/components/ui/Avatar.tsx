@@ -8,19 +8,19 @@ import { cn } from "@/lib/utils, ";
 
 const Avatar = React.forwardRef<;
 HTMLDivElement;
-React.HTMLAttributes<HTMLDivElement>;
+React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
 <div;
 ref={ref}
 className={cn("relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full", className)}
 {...props}
-/>;
+/>
 ));
 Avatar.displayName = "Avatar";
 
 const AvatarImage = React.forwardRef<;
 HTMLImageElement;
-React.ImgHTMLAttributes<HTMLImageElement>;
+React.ImgHTMLAttributes<HTMLImageElement>
 >(({ className; src; alt = "", ...props }, ref) => (
 <img;
 ref={ref}
@@ -28,13 +28,13 @@ className={cn("aspect-square h-full w-full", className)}
 src={src}
 alt={alt}
 {...props}
-/>;
+/>
 ));
 AvatarImage.displayName = "AvatarImage";
 
 const AvatarFallback = React.forwardRef<;
 HTMLDivElement;
-React.HTMLAttributes<HTMLDivElement>;
+React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
 <div;
 ref={ref}
@@ -43,7 +43,7 @@ className={cn(
 className,
 )}
 {...props}
-/>;
+/>
 ));
 AvatarFallback.displayName = "AvatarFallback";
 
@@ -61,4 +61,4 @@ className={cn(
 className,
 )}
 {...props}
-/>;
+/>

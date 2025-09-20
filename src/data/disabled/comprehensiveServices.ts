@@ -603,8 +603,8 @@ export const SERVICE_CATEGORIES = [
 "E-commerce",
 "Digital Marketing",
 "Healthcare",
-"FinTech",;
-"IoT Solutions",;
+"FinTech";
+"IoT Solutions";
 "Education";
 ];
 
@@ -615,8 +615,8 @@ export const SERVICE_SUBCATEGORIES = {
 "E-commerce": ["AI Optimization", "Platform Development", "Payment Systems", "Inventory Management", "Customer Experience"],
 "Digital Marketing": ["Automation", "SEO", "Social Media", "Content Strategy", "Analytics"],
 "Healthcare": ["AI Diagnostics", "Patient Management", "Telemedicine", "Medical Imaging", "Clinical Support"],
-"FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],;
-"IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],;
+"FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"];
+"IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"];
 "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"];
 };
 
@@ -816,8 +816,8 @@ id: "micro-saas",
 name: "Micro SAAS",
 description: "Specialized software-as-a-service solutions for business needs",
 icon: "🚀",
-color: "from-emerald-500 to-green-600",;
-services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS"),;
+color: "from-emerald-500 to-green-600";
+services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS");
 };
 ];
 
@@ -830,8 +830,8 @@ period: "month",
 description: "Perfect for small businesses and startups",
 features: [
 "Basic features and functionality",
-"Email support",;
-"Standard integrations",;
+"Email support";
+"Standard integrations";
 "Up to 5 users";
 ];
 },
@@ -869,7 +869,7 @@ export const CONTACT_INFO = {
 mobile: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 address: "364 E Main St STE 1008 Middletown DE 19709",
-website: "https://ziontechgroup.com",;
-businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
-responseTime: "24-48 hours for initial response",;
+website: "https://ziontechgroup.com";
+businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST";
+responseTime: "24-48 hours for initial response";
 };

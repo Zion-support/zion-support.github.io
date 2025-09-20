@@ -18,11 +18,11 @@ router.push("/login?next=/community/new")}
 if (!isLoggedIn) {
 return null}
 
-return <Component {...props} />;
+return <Component {...props} />
 };
 
 return Wrapped;
 }
 
 export default withAuth;
-</Component {...props} /><//Component {...props} />;
+</Component {...props} /><//Component {...props} />

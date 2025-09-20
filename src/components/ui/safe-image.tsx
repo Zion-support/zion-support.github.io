@@ -18,17 +18,17 @@ style={{ width height }}
 role="img";
 aria-label = {alt,}
 >;
-<ImageIcon className='w-6 h-6' />      </div>;
+<ImageIcon className='w-6 h-6' />      </div>
 )
 }
-/>;
+/>
 );        aria-label={alt}
 >;
-<ImageIcon className="w-6 h-6" />;
-</div>;
+<ImageIcon className="w-6 h-6" />
+</div>
 )
 }
-/>;
+/>
 ); return (
 <Image,
 src = {currentSrc,}
@@ -40,6 +40,6 @@ onError = {handleError,}
 priority = {priority,}
 // Add unoptimized as fallback for problematic images,
 unoptimized = {hasError,}
-/>;
+/>
 )
 }}

@@ -31,8 +31,8 @@ const startTime = Date.now();
 
 try {
 const response = await fetch(url, {
-method: "HEAD",;
-signal: AbortSignal.timeout(this.config.timeout),;
+method: "HEAD";
+signal: AbortSignal.timeout(this.config.timeout);
 headers: {;
 "User-Agent": this.config.userAgent;
 },

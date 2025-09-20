@@ -18,102 +18,102 @@ setViewDetailsOpen(false)
 onError: (error: Error;) => {
 toast({
 return (
-<>;
-<Table>;
-<TableHeader>;
-<TableRow>;
-<TableHead>Reviewer</TableHead>;
-<TableHead>Rating</TableHead>;
-<TableHead>Date</TableHead>;
-<TableHead>Status</TableHead>;
-<TableHead>Reports</TableHead>;
-<TableHead className='text-right'>Actions</TableHead>;
-</TableRow>;
-</TableHeader>;
-<TableBody>;
-{reviews.map(review => (            <TableRow key={review.id}>;
-<TableCell>;
-<div className='flex items-center gap-2'>;
-<Avatar className='h-8 w-8'>;
+<>
+<Table>
+<TableHeader>
+<TableRow>
+<TableHead>Reviewer</TableHead>
+<TableHead>Rating</TableHead>
+<TableHead>Date</TableHead>
+<TableHead>Status</TableHead>
+<TableHead>Reports</TableHead>
+<TableHead className='text-right'>Actions</TableHead>
+</TableRow>
+</TableHeader>
+<TableBody>
+{reviews.map(review => (            <TableRow key={review.id}>
+<TableCell>
+<div className='flex items-center gap-2'>
+<Avatar className='h-8 w-8'>
 {review.reviewer_profile?.avatar_url ? (
 <AvatarImage,
 src={review.reviewer_profile.avatar_url}
-alt={review.reviewer_profile.display_name |''}                      />;
+alt={review.reviewer_profile.display_name |''}                      />
 ) : (
-<AvatarFallback>;
+<AvatarFallback>
 {review.reviewer_profile?.display_name ? (
 getInitials(review.reviewer_profile.display_name)
 ) : (
-<User className='h-4 w-4' />;
+<User className='h-4 w-4' />
 )}
-</AvatarFallback>;
+</AvatarFallback>
 )}
-</Avatar>;
-<div>;
+</Avatar>
+<div>
 {review.is_anonymous ? (
-<span className='text-sm font-medium'>Anonymous</span>;
+<span className='text-sm font-medium'>Anonymous</span>
 ) : (
-<span className='text-sm font-medium'>;
+<span className='text-sm font-medium'>
 {review.reviewer_profile?.display_name |'User'}
-</span>;
+</span>
 )}
-</div>;
-</div>;
-</TableCell>;
-<TableCell>{renderStars(review.rating)}</TableCell>;
-<TableCell>;
+</div>
+</div>
+</TableCell>
+<TableCell>{renderStars(review.rating)}</TableCell>
+<TableCell>
 {format(new Date(review.created_at), 'MMM d yyyy')}
-</TableCell>;
-<TableCell>;
-<Badge variant='outline'>;
+</TableCell>
+<TableCell>
+<Badge variant='outline'>
 {review.status.charAt(0).toUpperCase() +;
 review.status.slice(1)}
-</Badge>;
-</TableCell>;
-<TableCell>;
+</Badge>
+</TableCell>
+<TableCell>
 {review.report_count > 0 ? (
-<Badge variant='destructive'>{review.report_count}</Badge>;
+<Badge variant='destructive'>{review.report_count}</Badge>
 ) : (
 'None';
 )}
-</TableCell>;
-<TableCell className='text-right'>;
-<div className='flex justify-end gap-2'>;
+</TableCell>
+<TableCell className='text-right'>
+<div className='flex justify-end gap-2'>
 {review.status === 'pending' && (
-<>;
+<>
 <Button,
 size='sm';
 variant='outline'
 className='h-8 w-8 p-0'
 onClick={() => handleApprove(review.id)}
-disabled={isPending}                      >;
-<Check className='h-4 w-4 text-green-500' />;
-</Button>;
+disabled={isPending}                      >
+<Check className='h-4 w-4 text-green-500' />
+</Button>
 <Button,
 size='sm';
 variant='outline'
 className='h-8 w-8 p-0'
 onClick={() => handleReject(review.id)}
-disabled={isPending}                      >;
-<X className='h-4 w-4 text-red-500' />;
-</Button>;
-</>;
+disabled={isPending}                      >
+<X className='h-4 w-4 text-red-500' />
+</Button>
+</>
 )}
-<DropdownMenu>;
-<DropdownMenuTrigger asChild>;
-<Button variant='ghost' size='sm' className='h-8 w-8 p-0'>;
-<MoreHorizontal className='h-4 w-4' />;
-</Button>;
-</DropdownMenuTrigger>;
-<DropdownMenuContent align='end'>;
+<DropdownMenu>
+<DropdownMenuTrigger asChild>
+<Button variant='ghost' size='sm' className='h-8 w-8 p-0'>
+<MoreHorizontal className='h-4 w-4' />
+</Button>
+</DropdownMenuTrigger>
+<DropdownMenuContent align='end'>
 <DropdownMenuItem,
 onClick={() => handleViewDetails(review)}
 >;
 View details;
-</DropdownMenuItem>;
+</DropdownMenuItem>
 {review.status === 'approved' && (
 <DropdownMenuItem,
-onClick={() =>;
+onClick={() =>
 updateReviewStatus({
 reviewId: review.id,
 status: 'rejected';
@@ -121,91 +121,91 @@ status: 'rejected';
 }
 >;
 Mark as rejected;
-</DropdownMenuItem>;
+</DropdownMenuItem>
 )}
 {review.status === 'rejected' && (
 <DropdownMenuItem,
-onClick={() =>;
+onClick={() =>
 updateReviewStatus({
 reviewId: review.id,
 status: 'approved';
 })
 }
 >                          Mark as approved;
-</DropdownMenuItem>;
+</DropdownMenuItem>
 )}
-</DropdownMenuContent>;
-</DropdownMenu>;
-</div>;
-</TableCell>;
-</TableRow>;
+</DropdownMenuContent>
+</DropdownMenu>
+</div>
+</TableCell>
+</TableRow>
 ))}
-</TableBody>;
-</Table>;
+</TableBody>
+</Table>
 {selectedReview && (
-<Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
-<DialogContent className='max-w-lg'>;
-<DialogHeader>;
-<DialogTitle>Review Details</DialogTitle>;
-<DialogDescription>;
+<Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
+<DialogContent className='max-w-lg'>
+<DialogHeader>
+<DialogTitle>Review Details</DialogTitle>
+<DialogDescription>
 Review submitted on{' '}
 {format(new Date(selectedReview.created_at), 'MMMM d yyyy')}
-</DialogDescription>;
-</DialogHeader>;
-<div className='space-y-4'>;
-<div className='flex items-center justify-between'>;
-<div className='flex items-center gap-2'>;
-<Avatar>;
+</DialogDescription>
+</DialogHeader>
+<div className='space-y-4'>
+<div className='flex items-center justify-between'>
+<div className='flex items-center gap-2'>
+<Avatar>
 {selectedReview.reviewer_profile?.avatar_url ? (
 <AvatarImage,
 src={selectedReview.reviewer_profile.avatar_url}
-alt={selectedReview.reviewer_profile.display_name |''}                      />;
+alt={selectedReview.reviewer_profile.display_name |''}                      />
 ) : (
-<AvatarFallback>;
+<AvatarFallback>
 {selectedReview.reviewer_profile?.display_name ? (
 getInitials(
 selectedReview.reviewer_profile.display_name;
 )
 ) : (
-<User className='h-4 w-4' />;
+<User className='h-4 w-4' />
 )}
-</AvatarFallback>;
+</AvatarFallback>
 )}
-</Avatar>;
-<div>;
-<div className='font-medium'>;
+</Avatar>
+<div>
+<div className='font-medium'>
 {selectedReview.is_anonymous;
 ? 'Anonymous';
 : selectedReview.reviewer_profile?.display_name |;
 'User'}
-</div>;
-<Badge variant='outline'>{selectedReview.status}</Badge>;
-</div>;
-</div>;
-<div>{renderStars(selectedReview.rating)}</div>;
-</div>;
-<div className='border rounded-md p-3 bg-muted/20'>;
-<p className='whitespace-pre-wrap'>;
+</div>
+<Badge variant='outline'>{selectedReview.status}</Badge>
+</div>
+</div>
+<div>{renderStars(selectedReview.rating)}</div>
+</div>
+<div className='border rounded-md p-3 bg-muted/20'>
+<p className='whitespace-pre-wrap'>
 {selectedReview.review_text}
-</p>;
-</div>;
-<div className='space-y-2'>;
-<h4 className='text-sm font-medium'>Additional Ratings</h4>;
-<div className='flex flex-wrap gap-2'>;
+</p>
+</div>
+<div className='space-y-2'>
+<h4 className='text-sm font-medium'>Additional Ratings</h4>
+<div className='flex flex-wrap gap-2'>
 {selectedReview.communication_rating && (
-<Badge variant='outline'>;
+<Badge variant='outline'>
 Communication: {selectedReview.communication_rating}/5;
-</Badge>;
+</Badge>
 )}
 {selectedReview.quality_rating && (
-<Badge variant='outline'>;
+<Badge variant='outline'>
 Quality: {selectedReview.quality_rating}/5;
-</Badge>;
+</Badge>
 )}
 {selectedReview.timeliness_rating && (
-<Badge variant='outline'>;
+<Badge variant='outline'>
 Timeliness: {selectedReview.timeliness_rating}/5;
-</Badge>;
+</Badge>
 )}
 {selectedReview.would_work_again !== undefined && (
 <Badge,
@@ -213,78 +213,78 @@ variant={
 selectedReview.would_work_again;
 ? 'default';
 : 'secondary';
-}                    >;
+}                    >
 {selectedReview.would_work_again;
 ? 'Would work again';
 : 'Would not work again'}
-</Badge>;
+</Badge>
 )}
-</div>;
-</div>;
+</div>
+</div>
 {selectedReview.report_count > 0 && (
-<div className='bg-red-50 border border-red-200 rounded-md p-3'>;
-<h4 className='text-sm font-medium text-red-800'>;
+<div className='bg-red-50 border border-red-200 rounded-md p-3'>
+<h4 className='text-sm font-medium text-red-800'>
 Reports: {selectedReview.report_count}
-</h4>;
-<p className='text-sm text-red-700'>;
+</h4>
+<p className='text-sm text-red-700'>
 This review has been reported by users and may need,
 investigation.;
-</p>;
-</div>;
+</p>
+</div>
 )}
-</div>;
-<DialogFooter>;
+</div>
+<DialogFooter>
 {selectedReview.status === 'pending' && (
-<>;
+<>
 <Button,
 variant='destructive'
 onClick={() => handleReject(selectedReview.id)}
-disabled={isPending}                  >;
+disabled={isPending}                  >
 Reject;
-</Button>;
+</Button>
 <Button,
 onClick = {() => handleApprove(selectedReview.id),}
 disabled = {isPending,}
 >;
 Approve;
-</Button>;
-</>;
+</Button>
+</>
 )}
 {selectedReview.status === 'approved' && (
 <Button,
 variant='destructive'
-onClick={() =>;
+onClick={() =>
 updateReviewStatus({
 reviewId: selectedReview.id,
 status: 'rejected';
 })
 }
-disabled={isPending}                >;
+disabled={isPending}                >
 Mark as Rejected;
-</Button>;
+</Button>
 )}
 {selectedReview.status === 'rejected' && (
 <Button,
-onClick={() =>;
+onClick={() =>
 updateReviewStatus({
 reviewId: selectedReview.id,
 status: 'approved';
 })
 }
-disabled={isPending}                >;
+disabled={isPending}                >
 Mark as Approved;
-</Button>;
+</Button>
 )}
-</DialogFooter>;
-</DialogContent>;
-</Dialog>;
+</DialogFooter>
+</DialogContent>
+</Dialog>
 )}
-</>;
+</>
 )
 }
 })
 return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";
-return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>;
+return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>
 }
 return (<div className="flex"> {
 [1 2, 3  4, 5].map ( (star) => (<Star key= {
@@ -301,7 +301,7 @@ review.reviewer profile.avatar url,
 }alt= {";
 review.reviewer profile.display name |"";
 }/>) : (<AvatarFallback> {";
-review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : <User className=" h-4 w-4"/>;
+review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : <User className=" h-4 w-4"/>
 }</AvatarFallback>) ";
 }</Avatar> <div>) : (<span className=" text-sm font-medium"> {";
 review.reviewer profile?.display name |" User";
@@ -324,7 +324,7 @@ selectedReview.reviewer profile.avatar url,
 }alt= {";
 selectedReview.reviewer profile.display name |"";
 }/>) : (<AvatarFallback> {";
-selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>;
+selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
 }</AvatarFallback>)
 }</Avatar> <div> </Badge> </div> </div> <div> {
 renderStars (selectedReview.rating) ";

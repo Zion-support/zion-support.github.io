@@ -95,8 +95,8 @@ ctx.restore();
 function getParticleColor(): string {
 const colors = {
 cyberpunk: ["#00ffff", "#ff00ff", "#ffff00", "#ff0080", "#00ff80"],
-quantum: ["#4facfe", "#00f2fe", "#43e97b", "#38f9d7", "#fa709a"],;
-neon: ["#ff006e", "#8338ec", "#3a86ff", "#06ffa5", "#ffbe0b"],;
+quantum: ["#4facfe", "#00f2fe", "#43e97b", "#38f9d7", "#fa709a"];
+neon: ["#ff006e", "#8338ec", "#3a86ff", "#06ffa5", "#ffbe0b"];
 matrix: ["#00ff41", "#00ff00", "#39ff14", "#7fff00", "#bfff00"];
 };
 return colors[variant][Math.floor(Math.random() * colors[variant].length)];
@@ -229,7 +229,7 @@ cancelAnimationFrame(animationRef.current);
 }, [variant; intensity]);
 
 return (
-<div className={`fixed inset-0 -z-10 overflow-hidden ${className}`}>;
+<div className={`fixed inset-0 -z-10 overflow-hidden ${className}`}>
 <canvas;
 ref={canvasRef}
 className="w-full h-full"
@@ -242,26 +242,26 @@ background: variant === "matrix";
 ? "linear-gradient(45deg, #000428 0%, #004e92 50%, #000428 100%)";
 : "linear-gradient(180deg, #000000 0%, #1a0033 50%, #000000 100%)";
 }}
-/>;
+/>
 
 {/* Overlay effects */}
-<div className="absolute inset-0 pointer-events-none">;
+<div className="absolute inset-0 pointer-events-none">
 {variant === "cyberpunk" && (
-<div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse" />;
+<div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse" />
 )}
 {variant === "quantum" && (
-<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />;
+<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10" />
 )}
 {variant === "neon" && (
-<div className="absolute inset-0 bg-gradient-to-t from-pink-500/5 via-transparent to-yellow-500/5" />;
+<div className="absolute inset-0 bg-gradient-to-t from-pink-500/5 via-transparent to-yellow-500/5" />
 )}
 {variant === "matrix" && (
-<div className="absolute inset-0 bg-gradient-to-b from-green-500/10 via-transparent to-transparent" />;
+<div className="absolute inset-0 bg-gradient-to-b from-green-500/10 via-transparent to-transparent" />
 )}
-</div>;
+</div>
 
 {/* Floating geometric shapes */}
-<div className="absolute inset-0 pointer-events-none">;
+<div className="absolute inset-0 pointer-events-none">
 <motion.div;
 className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
 animate={{
@@ -272,7 +272,7 @@ transition={{
 duration: 8;,
 repeat: Infinity;,
 ease: "linear"}}
-/>;
+/>
 <motion.div;
 className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full"
 animate={{
@@ -282,7 +282,7 @@ transition={{
 duration: 6;,
 repeat: Infinity;,
 ease: "easeInOut"}}
-/>;
+/>
 <motion.div;
 className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45"
 animate={{
@@ -292,9 +292,9 @@ transition={{
 duration: 10;,
 repeat: Infinity;,
 ease: "linear"}}
-/>;
-</div>;
-</div>;
+/>
+</div>
+</div>
 );
 };
 

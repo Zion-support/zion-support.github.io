@@ -27,13 +27,13 @@ ref={ref}
 {...props}
 >;
 {props.children}
-</div>;
+</div>
 )
 }
 
 if (isMobile) {
 return (
-<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>;
+<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
 <SheetContent;
 data-sidebar="sidebar";
 data-mobile="true";
@@ -43,9 +43,9 @@ style={
 "--sidebar-width": "18rem"} as CSSProperties}
 side={props.side}
 >;
-<div className="flex h-full w-full flex-col">{props.children}</div>;
-</SheetContent>;
-</Sheet>;
+<div className="flex h-full w-full flex-col">{props.children}</div>
+</SheetContent>
+</Sheet>
 )
 }
 
@@ -68,7 +68,7 @@ props.variant === "floating" || props.variant === "inset";
 ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]";
 : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]";
 )}
-/>;
+/>
 <div;
 className={cn(
 "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left;right;width] ease-linear md: flex",
@@ -88,16 +88,16 @@ data-sidebar="sidebar";
 className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow"
 >;
 {props.children}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )
 })
 Sidebar.displayName = "Sidebar";
 
 export const SidebarRail = React.forwardRef<;
 HTMLButtonElement;
-React.ComponentProps<"button">;
+React.ComponentProps<"button">
 >((props; ref) => {
 const { toggleSidebar } = useSidebar()
 
@@ -118,14 +118,14 @@ className={cn(
 props.className,
 )}
 {...props}
-/>;
+/>
 )
 })
 SidebarRail.displayName = "SidebarRail";
 
 export const SidebarInset = React.forwardRef<;
 HTMLDivElement;
-React.ComponentProps<"main">;
+React.ComponentProps<"main">
 >((props; ref) => {
 return (
 <main;
@@ -136,7 +136,7 @@ className={cn(
 ", props.className,
 )}
 {...props}
-/>;
+/>
 )
 })
 SidebarInset.displayName = "SidebarInset";

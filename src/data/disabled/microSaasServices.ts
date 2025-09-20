@@ -749,13 +749,13 @@ icon: "⚡"}
 ];
 
 export const getMicroSaasServiceById: any = (id: string): MicroSaasService | undefined => {
-return MICRO_SAAS_SERVICES.find(service => service.id === id),;
+return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
 
 export const getMicroSaasServicesByCategory: any = (category: string): MicroSaasService[] => {
-return MICRO_SAAS_SERVICES.filter(service => service.category === category),;
+return MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
 
 export const getMicroSaasCategories: any = (): string[] => {
-return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))],;
+return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
 };

@@ -155,50 +155,50 @@ const filteredMetrics = selectedCategory === "all" ;
 const categories = ["all", "revenue", "growth", "efficiency", "customer"];
 
 return (
-<div className="p-6 bg-gray-900 min-h-screen">;
+<div className="p-6 bg-gray-900 min-h-screen">
 <motion.div;
 initial={{ opacity: 0; y: 20 }}
 animate={{ opacity: 1; y: 0 }}
 className="max-w-7xl mx-auto"
 >;
 {/* Header */}
-<div className="flex justify-between items-center mb-8">;
-<div>;
-<h1 className="text-4xl font-bold text-white mb-2">Business Intelligence Dashboard</h1>;
-<p className="text-gray-400">Comprehensive business analytics and performance insights</p>;
-</div>;
-<div className="flex space-x-4">;
+<div className="flex justify-between items-center mb-8">
+<div>
+<h1 className="text-4xl font-bold text-white mb-2">Business Intelligence Dashboard</h1>
+<p className="text-gray-400">Comprehensive business analytics and performance insights</p>
+</div>
+<div className="flex space-x-4">
 <select;
 value={selectedTimeframe}
 onChange={(e) => setSelectedTimeframe(e.target.value)}
 className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 >;
-<option value="1m">Last Month</option>;
-<option value="3m">Last 3 Months</option>;
-<option value="6m">Last 6 Months</option>;
-<option value="1y">Last Year</option>;
-</select>;
+<option value="1m">Last Month</option>
+<option value="3m">Last 3 Months</option>
+<option value="6m">Last 6 Months</option>
+<option value="1y">Last Year</option>
+</select>
 <select;
 value={selectedCategory}
 onChange={(e) => setSelectedCategory(e.target.value)}
 className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 >;
 {categories.map(category => (
-<option key={category} value={category}>;
+<option key={category} value={category}>
 {category === "all" ? "All Categories" : category.charAt(0).toUpperCase() + category.slice(1)}
-</option>;
+</option>
 ))}
-</select>;
-<button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">;
+</select>
+<button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
 Export Report;
-</button>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
 
 {/* Key Metrics */}
-<div className="mb-8">;
-<h2 className="text-2xl font-semibold text-white mb-6">Key Performance Metrics</h2>;
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">;
+<div className="mb-8">
+<h2 className="text-2xl font-semibold text-white mb-6">Key Performance Metrics</h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
 {filteredMetrics.map((metric; index) => (
 <motion.div;
 key={metric.id}
@@ -207,25 +207,25 @@ animate={{ opacity: 1; y: 0 }}
 transition={{ delay: index * 0.1 }}
 className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${getCategoryColor(metric.category)} p-6`}
 >;
-<div className="flex items-center justify-between mb-4">;
-<div className="text-3xl">{metric.icon}</div>;
-<div className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>;
+<div className="flex items-center justify-between mb-4">
+<div className="text-3xl">{metric.icon}</div>
+<div className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>
 {getTrendIcon(metric.trend)} {metric.change}
-</div>;
-</div>;
-<div>;
-<h3 className="text-sm font-medium text-white/80 mb-1">{metric.title}</h3>;
-<p className="text-2xl font-bold text-white">{metric.value}</p>;
-</div>;
-</motion.div>;
+</div>
+</div>
+<div>
+<h3 className="text-sm font-medium text-white/80 mb-1">{metric.title}</h3>
+<p className="text-2xl font-bold text-white">{metric.value}</p>
+</div>
+</motion.div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* KPI Tracking */}
-<div className="mb-8">;
-<h2 className="text-2xl font-semibold text-white mb-6">KPI Progress Tracking</h2>;
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
+<div className="mb-8">
+<h2 className="text-2xl font-semibold text-white mb-6">KPI Progress Tracking</h2>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 {kpis.map((kpi; index) => (
 <motion.div;
 key={kpi.metric}
@@ -234,70 +234,70 @@ animate={{ opacity: 1; x: 0 }}
 transition={{ delay: index * 0.1 }}
 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 >;
-<div className="flex justify-between items-center mb-4">;
-<h3 className="text-lg font-semibold text-white">{kpi.metric}</h3>;
-<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(kpi.status)}`}>;
+<div className="flex justify-between items-center mb-4">
+<h3 className="text-lg font-semibold text-white">{kpi.metric}</h3>
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(kpi.status)}`}>
 {kpi.status.replace("-", " ")}
-</span>;
-</div>;
+</span>
+</div>
 
-<div className="mb-4">;
-<div className="flex justify-between text-sm text-gray-400 mb-2">;
+<div className="mb-4">
+<div className="flex justify-between text-sm text-gray-400 mb-2">
 <span>Current: {typeof kpi.current === "number" && kpi.current > 1000000,
 ? `$${(kpi.current / 1000000).toFixed(1)}M`;
-: kpi.current}</span>;
+: kpi.current}</span>
 <span>Target: {typeof kpi.target === "number" && kpi.target > 1000000,
 ? `$${(kpi.target / 1000000).toFixed(1)}M`;
-: kpi.target}</span>;
-</div>;
-<div className="w-full bg-gray-700 rounded-full h-2">;
+: kpi.target}</span>
+</div>
+<div className="w-full bg-gray-700 rounded-full h-2">
 <div;
 className={`h-2 rounded-full ${
 kpi.progress >= 80 ? "bg-green-500" :
 kpi.progress >= 60 ? "bg-yellow-500" : "bg-red-500";
 }`}
 style={{ width: `${kpi.progress}%` }}
-/>;
-</div>;
-<div className="text-right text-sm text-gray-400 mt-1">{kpi.progress}%</div>;
-</div>;
-</motion.div>;
+/>
+</div>
+<div className="text-right text-sm text-gray-400 mt-1">{kpi.progress}%</div>
+</div>
+</motion.div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Revenue Analysis */}
-<div className="mb-8">;
-<h2 className="text-2xl font-semibold text-white mb-6">Revenue Analysis</h2>;
-<div className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
-<div className="h-64 bg-gray-700 rounded-md flex items-center justify-center text-gray-400">;
-<div className="text-center">;
-<div className="text-4xl mb-2">📊</div>;
-<p>Revenue Trend Chart</p>;
-<p className="text-sm">Interactive revenue and growth visualization</p>;
-</div>;
-</div>;
-<div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">;
-<div className="text-center">;
-<div className="text-green-400 font-semibold">$12.4M</div>;
-<div className="text-gray-400">Total Revenue</div>;
-</div>;
-<div className="text-center">;
-<div className="text-blue-400 font-semibold">+18.5%</div>;
-<div className="text-gray-400">Growth Rate</div>;
-</div>;
-<div className="text-center">;
-<div className="text-purple-400 font-semibold">$3.7M</div>;
-<div className="text-gray-400">Net Profit</div>;
-</div>;
-</div>;
-</div>;
-</div>;
+<div className="mb-8">
+<h2 className="text-2xl font-semibold text-white mb-6">Revenue Analysis</h2>
+<div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+<div className="h-64 bg-gray-700 rounded-md flex items-center justify-center text-gray-400">
+<div className="text-center">
+<div className="text-4xl mb-2">📊</div>
+<p>Revenue Trend Chart</p>
+<p className="text-sm">Interactive revenue and growth visualization</p>
+</div>
+</div>
+<div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+<div className="text-center">
+<div className="text-green-400 font-semibold">$12.4M</div>
+<div className="text-gray-400">Total Revenue</div>
+</div>
+<div className="text-center">
+<div className="text-blue-400 font-semibold">+18.5%</div>
+<div className="text-gray-400">Growth Rate</div>
+</div>
+<div className="text-center">
+<div className="text-purple-400 font-semibold">$3.7M</div>
+<div className="text-gray-400">Net Profit</div>
+</div>
+</div>
+</div>
+</div>
 
 {/* Customer Insights */}
-<div className="mb-8">;
-<h2 className="text-2xl font-semibold text-white mb-6">Customer Segment Analysis</h2>;
-<div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+<div className="mb-8">
+<h2 className="text-2xl font-semibold text-white mb-6">Customer Segment Analysis</h2>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 {customerInsights.map((insight; index) => (
 <motion.div;
 key={insight.segment}
@@ -306,35 +306,35 @@ animate={{ opacity: 1; y: 0 }}
 transition={{ delay: index * 0.1 }}
 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 >;
-<div className="flex items-center justify-between mb-4">;
-<h3 className="text-lg font-semibold text-white">{insight.segment}</h3>;
-<div className="text-2xl">👥</div>;
-</div>;
+<div className="flex items-center justify-between mb-4">
+<h3 className="text-lg font-semibold text-white">{insight.segment}</h3>
+<div className="text-2xl">👥</div>
+</div>
 
-<div className="space-y-3">;
-<div className="flex justify-between">;
-<span className="text-gray-400">Customers</span>;
-<span className="text-white font-semibold">{insight.count.toLocaleString()}</span>;
-</div>;
-<div className="flex justify-between">;
-<span className="text-gray-400">Revenue</span>;
-<span className="text-green-400 font-semibold">;
+<div className="space-y-3">
+<div className="flex justify-between">
+<span className="text-gray-400">Customers</span>
+<span className="text-white font-semibold">{insight.count.toLocaleString()}</span>
+</div>
+<div className="flex justify-between">
+<span className="text-gray-400">Revenue</span>
+<span className="text-green-400 font-semibold">
 ${(insight.revenue / 1000000).toFixed(1)}M;
-</span>;
-</div>;
-<div className="flex justify-between">;
-<span className="text-gray-400">Growth</span>;
-<span className="text-blue-400 font-semibold">+{insight.growth}%</span>;
-</div>;
-<div className="flex justify-between">;
-<span className="text-gray-400">Satisfaction</span>;
-<span className="text-yellow-400 font-semibold">{insight.satisfaction}/5</span>;
-</div>;
-</div>;
-</motion.div>;
+</span>
+</div>
+<div className="flex justify-between">
+<span className="text-gray-400">Growth</span>
+<span className="text-blue-400 font-semibold">+{insight.growth}%</span>
+</div>
+<div className="flex justify-between">
+<span className="text-gray-400">Satisfaction</span>
+<span className="text-yellow-400 font-semibold">{insight.satisfaction}/5</span>
+</div>
+</div>
+</motion.div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Strategic Insights */}
 <motion.div;
@@ -342,32 +342,32 @@ initial={{ opacity: 0; y: 20 }}
 animate={{ opacity: 1; y: 0 }}
 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 >;
-<h3 className="text-xl font-semibold text-white mb-6">Strategic Insights & Recommendations</h3>;
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-<div>;
-<h4 className="text-lg font-semibold text-green-400 mb-3">✅ Opportunities</h4>;
-<ul className="space-y-2 text-gray-300">;
-<li>• Mid-market segment showing 22.1% growth - focus expansion</li>;
-<li>• Operational efficiency at 94.2% - optimize further</li>;
-<li>• Cost reduction of $2.1M - continue initiatives</li>;
-<li>• Customer satisfaction high at 4.8/5 - leverage for referrals</li>;
-</ul>;
-</div>;
-<div>;
-<h4 className="text-lg font-semibold text-yellow-400 mb-3">⚠️ Areas of Attention</h4>;
-<ul className="space-y-2 text-gray-300">;
-<li>• Product launch KPI at 60% - needs acceleration</li>;
-<li>• SMB segment growth slowing to 8.7%</li>;
-<li>• April revenue dip of -4.2% - investigate causes</li>;
-<li>• Employee satisfaction below target at 4.2/4.5</li>;
-</ul>;
-</div>;
-</div>;
-</motion.div>;
-</motion.div>;
-</div>;
+<h3 className="text-xl font-semibold text-white mb-6">Strategic Insights & Recommendations</h3>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h4 className="text-lg font-semibold text-green-400 mb-3">✅ Opportunities</h4>
+<ul className="space-y-2 text-gray-300">
+<li>• Mid-market segment showing 22.1% growth - focus expansion</li>
+<li>• Operational efficiency at 94.2% - optimize further</li>
+<li>• Cost reduction of $2.1M - continue initiatives</li>
+<li>• Customer satisfaction high at 4.8/5 - leverage for referrals</li>
+</ul>
+</div>
+<div>
+<h4 className="text-lg font-semibold text-yellow-400 mb-3">⚠️ Areas of Attention</h4>
+<ul className="space-y-2 text-gray-300">
+<li>• Product launch KPI at 60% - needs acceleration</li>
+<li>• SMB segment growth slowing to 8.7%</li>
+<li>• April revenue dip of -4.2% - investigate causes</li>
+<li>• Employee satisfaction below target at 4.2/4.5</li>
+</ul>
+</div>
+</div>
+</motion.div>
+</motion.div>
+</div>
 );
 };
 
 export default BusinessIntelligenceDashboard;
-<//div><///div>;
+<//div><///div>

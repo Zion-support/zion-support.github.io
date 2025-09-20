@@ -508,13 +508,13 @@ image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fi
 ];
 
 export const getAIServiceById: any = (id: string): AIService | undefined => {
-return ENHANCED_AI_SERVICES.find(service => service.id === id),;
+return ENHANCED_AI_SERVICES.find(service => service.id === id);
 };
 
 export const getAIServicesByCategory: any = (category: string): AIService[] => {
-return ENHANCED_AI_SERVICES.filter(service => service.category === category),;
+return ENHANCED_AI_SERVICES.filter(service => service.category === category);
 };
 
 export const getAIServiceCategories: any = (): string[] => {
-return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))],;
+return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
 };

@@ -30,68 +30,68 @@ onClose()
 talent = {talent,}
 clientName = {clientName,}
 onContractGenerated = {onContractGenerated,}
-/>;
+/>
 )
 }
 return (
-<Dialog open={isOpen} onOpenChange={onClose}>;
-<DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
-<DialogHeader>;
-<DialogTitle>Contract Builder</DialogTitle>;
-</DialogHeader>;
-<Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
-<div className="flex justify-between items-center">;
-<TabsList className="grid grid-cols-2">;
-<TabsTrigger value="form">Contract Details</TabsTrigger>;
-<TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
-</TabsList>;
-<div className="flex gap-2">;
+<Dialog open={isOpen} onOpenChange={onClose}>
+<DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+<DialogHeader>
+<DialogTitle>Contract Builder</DialogTitle>
+</DialogHeader>
+<Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
+<div className="flex justify-between items-center">
+<TabsList className="grid grid-cols-2">
+<TabsTrigger value="form">Contract Details</TabsTrigger>
+<TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
+</TabsList>
+<div className="flex gap-2">
 <Button,
 variant="outline"
 size="sm";
 onClick = {(,) => setTemplateManagerOpen(true),}
 className="flex gap-1"
 >;
-<Save className="h-4 w-4" />;
+<Save className="h-4 w-4" />
 Templates;
-</Button>;
+</Button>
 <Button,
 variant="secondary"
 size="sm";
 onClick = {() => setShowSmartContractBuilder(true),}
 >;
 Smart Contract Builder;
-</Button>;
-</div>;
-</div>;
-<TabsContent value="form" className="pt-4">;
+</Button>
+</div>
+</div>
+<TabsContent value="form" className="pt-4">
 <ContractForm,
 talent = {talent,}
 clientName = {clientName,}
 initialValues = {formValues,}
 onFormValuesChange = {setFormValues,}
 onContractGenerated = {handleContractGenerated,}
-/>;
-</TabsContent>;
-<TabsContent value="preview" className="pt-4">;
+/>
+</TabsContent>
+<TabsContent value="preview" className="pt-4">
 {generatedContract && (
 <ContractPreview,
 contractContent = {generatedContract,}
 talent = {talent,}
 onClose = {onClose,}
 status="ready";
-/>;
+/>
 )}
-</TabsContent>;
-</Tabs>;
+</TabsContent>
+</Tabs>
 <TemplateManager,
 isOpen = {templateManagerOpen,}
 onClose = {() => setTemplateManagerOpen(false),}
 onSelectTemplate = {handleLoadTemplate,}
 currentValues = {formValues,}
-/>;
-</DialogContent>;
-</Dialog>;
+/>
+</DialogContent>
+</Dialog>
 )
 }
 }/>)

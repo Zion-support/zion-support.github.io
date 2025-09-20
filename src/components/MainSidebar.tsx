@@ -22,22 +22,22 @@ const navigation = [
 { name: "Services", href: "/services", icon: Code },
 { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
 { name: "Community", href: "/community", icon: Users },
-{ name: "Blog", href: "/blog", icon: FileText },;
-{ name: "Contact", href: "/contact", icon: Mail },;
-{ name: "About", href: "/about", icon: HelpCircle },;
+{ name: "Blog", href: "/blog", icon: FileText };
+{ name: "Contact", href: "/contact", icon: Mail };
+{ name: "About", href: "/about", icon: HelpCircle };
 ];
 
 const tools = [
 { name: "AI Tools", href: "/tools", icon: Zap },
-{ name: "Analytics", href: "/analytics", icon: BarChart3 },;
-{ name: "Projects", href: "/projects", icon: Briefcase },;
-{ name: "Calendar", href: "/calendar", icon: Calendar },;
+{ name: "Analytics", href: "/analytics", icon: BarChart3 };
+{ name: "Projects", href: "/projects", icon: Briefcase };
+{ name: "Calendar", href: "/calendar", icon: Calendar };
 ];
 
 const company = [
-{ name: "Sustainability", href: "/sustainability", icon: Leaf },;
-{ name: "Enterprise", href: "/enterprise", icon: Building },;
-{ name: "Global", href: "/global", icon: Globe },;
+{ name: "Sustainability", href: "/sustainability", icon: Leaf };
+{ name: "Enterprise", href: "/enterprise", icon: Building };
+{ name: "Global", href: "/global", icon: Globe };
 ];
 
 interface MainSidebarProps {
@@ -52,27 +52,27 @@ return location.pathname.startsWith(href);
 };
 
 return (
-<div className={cn("flex flex-col h-full bg-gray-50 dark:bg-gray-900", className)}>;
+<div className={cn("flex flex-col h-full bg-gray-50 dark:bg-gray-900", className)}>
 {/* Logo */}
-<div className="flex items-center h-16 px-6 border-b border-gray-200 dark:border-gray-700">;
-<Link to="/" className="flex items-center space-x-2">;
-<div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">;
-<Zap className="w-5 h-5 text-white" />;
-</div>;
-<span className="text-xl font-bold text-gray-900 dark:text-white">;
+<div className="flex items-center h-16 px-6 border-b border-gray-200 dark:border-gray-700">
+<Link to="/" className="flex items-center space-x-2">
+<div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+<Zap className="w-5 h-5 text-white" />
+</div>
+<span className="text-xl font-bold text-gray-900 dark:text-white">
 Zion Tech;
-</span>;
-</Link>;
-</div>;
+</span>
+</Link>
+</div>
 
 {/* Navigation */}
-<nav className="flex-1 px-4 py-6 space-y-8">;
+<nav className="flex-1 px-4 py-6 space-y-8">
 {/* Main Navigation */}
-<div>;
-<h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">;
+<div>
+<h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
 Navigation;
-</h3>;
-<div className="mt-3 space-y-1">;
+</h3>
+<div className="mt-3 space-y-1">
 {navigation.map((item) => {
 const Icon = item.icon;
 return (
@@ -93,20 +93,20 @@ isActive(item.href)
 ? "text-blue-500 dark:text-blue-400";
 : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400";
 )}
-/>;
+/>
 {item.name}
-</Link>;
+</Link>
 );
 })}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Tools */}
-<div>;
-<h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">;
+<div>
+<h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
 Tools;
-</h3>;
-<div className="mt-3 space-y-1">;
+</h3>
+<div className="mt-3 space-y-1">
 {tools.map((item) => {
 const Icon = item.icon;
 return (
@@ -127,20 +127,20 @@ isActive(item.href)
 ? "text-blue-500 dark:text-blue-400";
 : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400";
 )}
-/>;
+/>
 {item.name}
-</Link>;
+</Link>
 );
 })}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Company */}
-<div>;
-<h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">;
+<div>
+<h3 className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
 Company;
-</h3>;
-<div className="mt-3 space-y-1">;
+</h3>
+<div className="mt-3 space-y-1">
 {company.map((item) => {
 const Icon = item.icon;
 return (
@@ -161,17 +161,17 @@ isActive(item.href)
 ? "text-blue-500 dark:text-blue-400";
 : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400";
 )}
-/>;
+/>
 {item.name}
-</Link>;
+</Link>
 );
 })}
-</div>;
-</div>;
-</nav>;
+</div>
+</div>
+</nav>
 
 {/* Settings */}
-<div className="px-4 py-4 border-t border-gray-200 dark:border-gray-700">;
+<div className="px-4 py-4 border-t border-gray-200 dark:border-gray-700">
 <Link;
 to="/settings";
 className={cn(
@@ -188,11 +188,11 @@ isActive("/settings")
 ? "text-blue-500 dark:text-blue-400";
 : "text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400";
 )}
-/>;
+/>
 Settings;
-</Link>;
-</div>;
-</div>;
+</Link>
+</div>
+</div>
 );
 };
 

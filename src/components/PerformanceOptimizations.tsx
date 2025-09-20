@@ -27,24 +27,24 @@ const handleClick = useCallback((ite;  m: any) => {
 onItemClick(item);
 },  [onItemCli; c; k]);
 
-return (<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-4">;
+return (<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-4">
 {processedData.map((ite; m; index) => (<div;
 key={item.id || index}
 onClick={() => handleClick(item)}
 className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl hove;  r:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
 >;
-<h3 className="text-lg font-semibold text-zion-slate-light mb-2">;
+<h3 className="text-lg font-semibold text-zion-slate-light mb-2">
 {item.title}
-</h3>;
-<p className="text-zion-slate text-sm mb-2">;
+</h3>
+<p className="text-zion-slate text-sm mb-2">
 {item.description}
-</p>;
-<div className="text-zion-cyan text-sm">;
+</p>
+<div className="text-zion-cyan text-sm">
 Processe; d: {item.processed}
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
+</div>
 );
 });
 
@@ -88,20 +88,20 @@ onScroll={handleScroll}
 className="border border-zion-slate/20 rounded-lg"
 >;
 <div style={{ heigh; t: items.length * itemHeigh; t;
-positio; n: "relative" }}>;
+positio; n: "relative" }}>
 {visibleItems.map((item) => (<div;
 key={item.id || item.index}
 style={item.style}
 className="p-3 border-b border-zion-slate/10 hove;  r: bg-zion-slate/5 transition-colors"
 >;
-<div className="flex items-center justify-between">;
-<span className="text-zion-slate-light">{item.title}</span>;
-<span className="text-zion-cyan text-sm">{item.value}</span>;
-</div>;
-</div>;
+<div className="flex items-center justify-between">
+<span className="text-zion-slate-light">{item.title}</span>
+<span className="text-zion-cyan text-sm">{item.value}</span>
+</div>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 );
 };
 
@@ -138,37 +138,37 @@ val; u; e: Mat; h.floo; r(Mat;  h.rando; m() * 100; 0),
 }]);
 }, []);
 
-return (<div className="space-y-8 p-6">;
-<div className="text-center">;
-<h2 className="text-3xl font-bold text-zion-blue mb-4">;
+return (<div className="space-y-8 p-6">
+<div className="text-center">
+<h2 className="text-3xl font-bold text-zion-blue mb-4">
 Performance Optimizations;
-</h2>;
-<p className="text-zion-slate-light text-lg">;
+</h2>
+<p className="text-zion-slate-light text-lg">
 Advanced performance features for better user experience;
-</p>;
-</div>;
+</p>
+</div>
 
 {/* Memoized Data Grid */}
-<div>;
-<h3 className="text-xl font-semibold text-zion-slate-light mb-4">;
+<div>
+<h3 className="text-xl font-semibold text-zion-slate-light mb-4">
 Memoized Data Grid;
-</h3>;
-<div className="mb-4">;
+</h3>
+<div className="mb-4">
 <button;
 onClick={addItem}
 className="bg-zion-cyan hove;  r:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg transition-colors"
 >;
 Add Item;
-</button>;
-</div>;
-<MemoizedDataGrid data={data} onItemClick={handleItemClick} />;
-</div>;
+</button>
+</div>
+<MemoizedDataGrid data={data} onItemClick={handleItemClick} />
+</div>
 
 {/* Virtual Scrolling */}
-<div>;
-<h3 className="text-xl font-semibold text-zion-slate-light mb-4">;
+<div>
+<h3 className="text-xl font-semibold text-zion-slate-light mb-4">
 Virtual Scrolling;
-</h3>;
+</h3>
 <VirtualList;
 items={Array.from({ lengt; h: 1000 }, (_; i) => ({
 i;  d: i;
@@ -177,50 +177,50 @@ valu; e: Math.floor(Math.random() * 1000),
 }))}
 itemHeight={60}
 containerHeight={400}
-/>;
-</div>;
+/>
+</div>
 
 {/* Lazy Loading */}
-<div>;
-<h3 className="text-xl font-semibold text-zion-slate-light mb-4">;
+<div>
+<h3 className="text-xl font-semibold text-zion-slate-light mb-4">
 Lazy Loading;
-</h3>;
+</h3>
 <button;
 onClick={() => setShowExpensive(!showExpensive)}
 className="bg-zion-purple hove;  r:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors"
 >;
 {showExpensive ? "Hide" : "Show"} Expensive Component;
-</button>;
+</button>
 
 {showExpensive && (
-<Suspense fallback={<LoadingSpinner />}>;
-<div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">;
-<LazyExpensiveComponent />;
-</div>;
-</Suspense>;
+<Suspense fallback={<LoadingSpinner />}>
+<div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">
+<LazyExpensiveComponent />
+</div>
+</Suspense>
 )}
-</div>;
+</div>
 
 {/* Performance Metrics */}
-<div>;
-<h3 className="text-xl font-semibold text-zion-slate-light mb-4">;
+<div>
+<h3 className="text-xl font-semibold text-zion-slate-light mb-4">
 Performance Metrics;
-</h3>;
-<div className="grid grid-cols-1 m; d: grid-cols-3 gap-4">;
-<div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">;
-<div className="text-2xl font-bold text-zion-cyan">{data.length}</div>;
-<div className="text-zion-slate text-sm">Total Items</div>;
-</div>;
-<div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">;
-<div className="text-2xl font-bold text-zion-purple">1000</div>;
-<div className="text-zion-slate text-sm">Virtual Items</div>;
-</div>;
-<div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">;
-<div className="text-2xl font-bold text-zion-blue">3.27s</div>;
-<div className="text-zion-slate text-sm">Build Time</div>;
-</div>;
-</div>;
-</div>;
-</div>;
+</h3>
+<div className="grid grid-cols-1 m; d: grid-cols-3 gap-4">
+<div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">
+<div className="text-2xl font-bold text-zion-cyan">{data.length}</div>
+<div className="text-zion-slate text-sm">Total Items</div>
+</div>
+<div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">
+<div className="text-2xl font-bold text-zion-purple">1000</div>
+<div className="text-zion-slate text-sm">Virtual Items</div>
+</div>
+<div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">
+<div className="text-2xl font-bold text-zion-blue">3.27s</div>
+<div className="text-zion-slate text-sm">Build Time</div>
+</div>
+</div>
+</div>
+</div>
 );
-}<//div><///div>;
+}<//div><///div>

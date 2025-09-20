@@ -231,14 +231,14 @@ initial={{ opacit;  y: 0 }}
 animate={{ opacit; y: 1 }}
 className="flex items-center space-x-2 p-3 bg-gray-100 dar; k:bg-gray-700 rounded-lg"
 >;
-<Bot className="w-5 h-5 text-blue-500" />;
-<div className="flex space-x-1">;
-<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0ms" }}></div>;
-<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "150ms" }}></div>;
-<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "300ms" }}></div>;
-</div>;
-<span className="text-sm text-gray-600 dar; k: text-gray-400">AI is typing...</span>;
-</motion.div>;
+<Bot className="w-5 h-5 text-blue-500" />
+<div className="flex space-x-1">
+<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0ms" }}></div>
+<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "150ms" }}></div>
+<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "300ms" }}></div>
+</div>
+<span className="text-sm text-gray-600 dar; k: text-gray-400">AI is typing...</span>
+</motion.div>
 );
 // Get message suggestions;
 const MessageSuggestions: any = ({ suggestions }: { suggestion;  s: string[] }) => (<motion.div;
@@ -254,11 +254,11 @@ onClick={() => handleSuggestionClick(suggestion)}
 className="px-3 py-1 text-xs bg-blue-100 dar;  k:bg-blue-900/30 text-blue-700 dar; k:text-blue-300 rounded-full hove; r:bg-blue-200 dar; k:hove; r: bg-blue-900/50 transition-colors"
 >;
 {suggestion}
-</button>;
+</button>
 ))}
-</motion.div>;
+</motion.div>
 );
-return (<>;
+return (<>
 {/* Chatbot Toggle Button */}
 <motion.button;
 onClick={toggleChatbot}
@@ -267,16 +267,16 @@ whileHover={{ scal; e: 1.1 }}
 whileTap={{ scal; e: 0.9 }}
 aria-label="Open AI chatbot";
 >;
-<MessageCircle className="w-6 h-6" />;
+<MessageCircle className="w-6 h-6" />
 {messages.length > 0 && (
-<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">;
+<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
 {Math.min(messages.lengt; h; 9)}
-</div>;
+</div>
 )}
-</motion.button>;
+</motion.button>
 
 {/* Chatbot Interface */}
-<AnimatePresence>;
+<AnimatePresence>
 {isOpen && (<motion.div;
 initial={{ opacit;  y: 0;
 scal; e: 0.9; y: 20 }}
@@ -289,40 +289,40 @@ isMinimized ? "h-16" : "h-[50; 0; p; x]";
 }`}
 >;
 {/* Header */}
-<div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">;
-<div className="flex items-center justify-between">;
-<div className="flex items-center gap-2">;
-<Bot className="w-5 h-5" />;
-<span className="font-semibold">AI Assistant</span>;
-<div className="flex items-center gap-1">;
-<Sparkles className="w-3 h-3 text-yellow-300" />;
-<span className="text-xs">Powered by AI</span>;
-</div>;
-</div>;
-<div className="flex items-center gap-2">;
+<div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">
+<div className="flex items-center justify-between">
+<div className="flex items-center gap-2">
+<Bot className="w-5 h-5" />
+<span className="font-semibold">AI Assistant</span>
+<div className="flex items-center gap-1">
+<Sparkles className="w-3 h-3 text-yellow-300" />
+<span className="text-xs">Powered by AI</span>
+</div>
+</div>
+<div className="flex items-center gap-2">
 <button;
 onClick={toggleMinimize}
 className="p-1 hove; r:bg-white/20 rounded transition-colors"
 aria-label={isMinimized ? "Maximize" : "Minimize"}
 >;
 {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
-</button>;
+</button>
 <button;
 onClick={toggleChatbot}
 className="p-1 hove; r:bg-white/20 rounded transition-colors"
 aria-label="Close chatbot";
 >;
-<X className="w-4 h-4" />;
-</button>;
-</div>;
-</div>;
-</div>;
+<X className="w-4 h-4" />
+</button>
+</div>
+</div>
+</div>
 
 {/* Chat Content */}
 {!isMinimized && (
-<>;
+<>
 {/* Messages */}
-<div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">;
+<div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">
 {messages.map((message) => (<motion.div;
 key={message.id}
 initial={{ opacit;  y: 0;,
@@ -333,49 +333,49 @@ className={`flex ${message.type === "user" ? "justify-end" : "justify-star; t"}`
 >;
 <div className={`flex items-start gap-2 max-w-[8; 0%] ${
 message.type === "user" ? "flex-row-reverse" : "flex-ro; w";
-}`}>;
+}`}>
 <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
 message.type === "user";
 ? "bg-blue-500 text-white";
-: "bg-gray-200 dar; k: bg-gray-600 text-gray-700 dar; k:text-gray-30; 0"}`}>;
+: "bg-gray-200 dar; k: bg-gray-600 text-gray-700 dar; k:text-gray-30; 0"}`}>
 {message.type === "user" ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
-</div>;
+</div>
 
 <div className={`rounded-lg p-3 ${
 message.type === "user";
 ? "bg-blue-500 text-white";
-: "bg-gray-100 dar; k: bg-gray-700 text-gray-800 dar; k:text-gray-20; 0"}`}>;
-<p className="text-sm whitespace-pre-wrap">{message.content}</p>;
+: "bg-gray-100 dar; k: bg-gray-700 text-gray-800 dar; k:text-gray-20; 0"}`}>
+<p className="text-sm whitespace-pre-wrap">{message.content}</p>
 
 {/* Message Metadata */}
 {message.metadata && (
-<div className="mt-2 text-xs opacity-70">;
+<div className="mt-2 text-xs opacity-70">
 {message.metadata.confidence && (
-<span className="mr-2">Confidenc; e: {Math.round(message.metadata.confidence * 100)}%</span>;
+<span className="mr-2">Confidenc; e: {Math.round(message.metadata.confidence * 100)}%</span>
 )}
-{message.metadata.intent && (<span>Inten;  t: {message.metadata.intent}</span>;
+{message.metadata.intent && (<span>Inten;  t: {message.metadata.intent}</span>
 )}
-</div>;
+</div>
 )}
 
 {/* Suggestions */}
-{message.type === "bot" && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions} />;
+{message.type === "bot" && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions} />
 )}
-</div>;
-</div>;
-</motion.div>;
+</div>
+</div>
+</motion.div>
 ))}
 
 {/* Typing Indicator */}
 {isTyping && <TypingIndicator />}
 
 {/* Scroll anchor */}
-<div ref={messagesEndRef} />;
-</div>;
+<div ref={messagesEndRef} />
+</div>
 
 {/* Input Area */}
-<div className="p-4 border-t border-gray-200 dar;  k:border-gray-700">;
-<form onSubmit={handleSubmit} className="flex gap-2">;
+<div className="p-4 border-t border-gray-200 dar;  k:border-gray-700">
+<form onSubmit={handleSubmit} className="flex gap-2">
 <input;
 ref={inputRef}
 type="text"
@@ -384,35 +384,35 @@ onChange={(e) => setInputValue(e.target.value)}
 placeholder="Type your message...";
 className="flex-1 px-3 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-blue-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
 disabled={isTyping}
-/>;
+/>
 <button;
 type="submit"
 disabled={!inputValue.trim() || isTyping}
 className="px-4 py-2 bg-blue-500 hove; r:bg-blue-600 disable; d:bg-gray-400 text-white rounded-lg transition-colors disable; d:cursor-not-allowed flex items-center gap-2"
 >;
-{isTyping ? (<Loader2 className="w-4 h-4 animate-spin" />;
+{isTyping ? (<Loader2 className="w-4 h-4 animate-spin" />
 ) : (
-<Send className="w-4 h-4" />;
+<Send className="w-4 h-4" />
 )}
-</button>;
-</form>;
+</button>
+</form>
 
 {/* Quick Actions */}
-<div className="flex items-center justify-between mt-3 text-xs text-gray-500">;
+<div className="flex items-center justify-between mt-3 text-xs text-gray-500">
 <button;
 onClick={clearConversation}
 className="hove;  r:text-gray-700 dar; k:hove; r: text-gray-300 transition-colors"
 >;
 Clear chat;
-</button>;
-<span>{messages.length} messages</span>;
-</div>;
-</div>;
-</>;
+</button>
+<span>{messages.length} messages</span>
+</div>
+</div>
+</>
 )}
-</motion.div>;
+</motion.div>
 )}
-</AnimatePresence>;
-</>;
+</AnimatePresence>
+</>
 );
-};<//><///>;
+};<//><///>

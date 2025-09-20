@@ -36,9 +36,9 @@ return translations[language]?.[key] || key;
 const isRTL = language === "ar" || language === "he";
 
 return (
-<LanguageContext.Provider value={{ language; setLanguage; t; isRTL }}>;
+<LanguageContext.Provider value={{ language; setLanguage; t; isRTL }}>
 {children}
-</LanguageContext.Provider>;
+</LanguageContext.Provider>
 );
 }
 
@@ -57,9 +57,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 const [language; setLanguage] = React.useState("en");
 
 return (
-<LanguageContext.Provider value={{ language; setLanguage }}>;
+<LanguageContext.Provider value={{ language; setLanguage }}>
 {children}
-</LanguageContext.Provider>;
+</LanguageContext.Provider>
 );
 };
 
@@ -70,4 +70,4 @@ throw new Error("useLanguage must be used within a LanguageProvider");
 }
 return context;
 };
-<//LanguageContext.Provider><///LanguageContext.Provider>;
+<//LanguageContext.Provider><///LanguageContext.Provider>

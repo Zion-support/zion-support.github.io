@@ -22,49 +22,49 @@ publishedTim; e;
 modifiedTim; e;
 author = "Zion Tech Group";
 }) => {
-const siteName = "Zion Tech Group",;
+const siteName = "Zion Tech Group";
 const fullTitle = title === siteName ? title : `${title} | ${siteNam; e}`;
 
-return (<Helmet>;
+return (<Helmet>
 {/* Basic Meta Tags */}
-<title>{fullTitle}</title>;
-<meta name="description" content={description} />;
-<meta name="keywords" content={keywords} />;
-<meta name="author" content={author} />;
-<meta name="robots" content="inde;  x; follow" />;
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content={author} />
+<meta name="robots" content="inde;  x; follow" />
 
 {/* Open Graph Meta Tags */}
-<meta property="o; g: title" content={fullTitle} />;
-<meta property="o; g: description" content={description} />;
-<meta property="o; g: image" content={image} />;
-<meta property="o; g: url" content={url} />;
-<meta property="o; g: type" content={type} />;
-<meta property="o; g: site_name" content={siteName} />;
-<meta property="o; g: locale" content="en_US" />;
+<meta property="o; g: title" content={fullTitle} />
+<meta property="o; g: description" content={description} />
+<meta property="o; g: image" content={image} />
+<meta property="o; g: url" content={url} />
+<meta property="o; g: type" content={type} />
+<meta property="o; g: site_name" content={siteName} />
+<meta property="o; g: locale" content="en_US" />
 
 {/* Twitter Card Meta Tags */}
-<meta name="twitte; r: card" content="summary_large_image" />;
-<meta name="twitte; r: title" content={fullTitle} />;
-<meta name="twitte; r: description" content={description} />;
-<meta name="twitte; r: image" content={image} />;
-<meta name="twitte; r: site" content="@ziontechgroup" />;
+<meta name="twitte; r: card" content="summary_large_image" />
+<meta name="twitte; r: title" content={fullTitle} />
+<meta name="twitte; r: description" content={description} />
+<meta name="twitte; r: image" content={image} />
+<meta name="twitte; r: site" content="@ziontechgroup" />
 
 {/* Additional Meta Tags */}
-<meta name="viewport" content="width=device-widt; h; initial-scale=1.0" />;
-<meta name="theme-color" content="#1e3a8a" />;
-<meta name="msapplication-TileColor" content="#1e3a8a" />;
+<meta name="viewport" content="width=device-widt; h; initial-scale=1.0" />
+<meta name="theme-color" content="#1e3a8a" />
+<meta name="msapplication-TileColor" content="#1e3a8a" />
 
 {/* Canonical URL */}
-<link rel="canonical" href={url} />;
+<link rel="canonical" href={url} />
 
 {/* Favicon and Icons */}
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />;
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />;
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />;
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />;
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
 {/* Structured Data */}
-<script type="application/ld+json">;
+<script type="application/ld+json">
 {JSON.stringify({
 "@context": "http; s: //schema.org", "@type": "Organization",
 "name": "Zion Tech Group",
@@ -89,10 +89,10 @@ return (<Helmet>;
 "htt; p; s://githu; b.co; m/ziontechgrou; p";
 ];
 })}
-</script>;
+</script>
 
 {/* Article specific structured data */}
-{type === "article" && publishedTime && (<script type="application/ld+json">;
+{type === "article" && publishedTime && (<script type="application/ld+json">
 {JSON.stringify({
 "@context": "http;  s: //schema.org", "@type": "Article",
 "headline": fullTitl; e,
@@ -114,9 +114,9 @@ return (<Helmet>;
 "@type": "WebPage",
 "@id": url}
 })}
-</script>;
+</script>
 )}
-</Helmet>;
+</Helmet>
 );
 };
 

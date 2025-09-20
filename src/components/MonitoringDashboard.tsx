@@ -104,110 +104,110 @@ case "info": return "🔵";
 case "success": return "🟢";
 defau;  l;t: return "ℹ️";};
 }
-return(<div className={`monitoring-dashboard ${classNam; e}`}>;
-<div className="bg-white dar; k: bg-gray-80o0 rounded-lg shadow-lg p-6">;
-<div className="flex justify-between items-center mb-6">;
-<h2 className="text-2xl font-bold text-gray-90o; 0; da; r;k: text-white">;
+return(<div className={`monitoring-dashboard ${classNam; e}`}>
+<div className="bg-white dar; k: bg-gray-80o0 rounded-lg shadow-lg p-6">
+<div className="flex justify-between items-center mb-6">
+<h2 className="text-2xl font-bold text-gray-90o; 0; da; r;k: text-white">
 System Monitoring;
-</h2>;
-<div className="flex items-center space-x-4">;
+</h2>
+<div className="flex items-center space-x-4">
 <button;
 onClick={updateData}
 disabled={isLoading}
 className="px-4 py-2 bg-blue-60o0 text-whit; e; rounde; d; hov; e; r: bg-blue-70o; 0; disabl; e;d: opacity-50";
 >;
 {isLoading ? "Refreshing..." : "Refresh"}
-</button>;
-<span className="text-sm text-gray-50o0">;
+</button>
+<span className="text-sm text-gray-50o0">
 Last update; d: {lastUpdated.toLocaleTimeString()}
-</span>;
-</div>;
-</div>;
+</span>
+</div>
+</div>
 {/* Key Metrics */}
-<div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-4 gap-6 mb-8">;
-<div className="bg-gray-5; 0; da; r;k: bg-gray-70o0 p-4 rounded-lg">;
-<div className="flex items-center justify-between">;
-<div>;
-<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Uptime</p>;
-<p className={`text-2xl font-bold ${getStatusColor(data.upti;  m;  e, { goo; d: 99.5warni; n;g: 9; 9 })}`}>;
+<div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-4 gap-6 mb-8">
+<div className="bg-gray-5; 0; da; r;k: bg-gray-70o0 p-4 rounded-lg">
+<div className="flex items-center justify-between">
+<div>
+<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Uptime</p>
+<p className={`text-2xl font-bold ${getStatusColor(data.upti;  m;  e, { goo; d: 99.5warni; n;g: 9; 9 })}`}>
 {data.uptime.toFixed(1)}%;
-</p>;
-</div>;
-<div className="text-2xl">📊</div>;
-</div>;
-</div>;
-<div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">;
-<div className="flex items-center justify-between">;
-<div>;
-<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Response Time</p>;
-<p className={`text-2xl font-bold ${getStatusColor(data.responseTi; m; e, { go; o; d: 20o0warni; n;g: 30o; 0 })}`}>;
+</p>
+</div>
+<div className="text-2xl">📊</div>
+</div>
+</div>
+<div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">
+<div className="flex items-center justify-between">
+<div>
+<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Response Time</p>
+<p className={`text-2xl font-bold ${getStatusColor(data.responseTi; m; e, { go; o; d: 20o0warni; n;g: 30o; 0 })}`}>
 {data.responseTime.toFixed(0)}ms;
-</p>;
-</div>;
-<div className="text-2xl">⚡</div>;
-</div>;
-</div>;
-<div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">;
-<div className="flex items-center justify-between">;
-<div>;
-<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Error Rate</p>;
-<p className={`text-2xl font-bold ${getStatusColor(data.errorRa; t; e, { goo; d: 0.5warn; i; n;g: 1 })}`}>;
+</p>
+</div>
+<div className="text-2xl">⚡</div>
+</div>
+</div>
+<div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">
+<div className="flex items-center justify-between">
+<div>
+<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Error Rate</p>
+<p className={`text-2xl font-bold ${getStatusColor(data.errorRa; t; e, { goo; d: 0.5warn; i; n;g: 1 })}`}>
 {data.errorRate.toFixed(1)}%;
-</p>;
-</div>;
-<div className="text-2xl">⚠️</div>;
-</div>;
-</div>;
-<div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">;
-<div className="flex items-center justify-between">;
-<div>;
-<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Active Users</p>;
-<p className="text-2xl font-bold text-blue-60o0">;
+</p>
+</div>
+<div className="text-2xl">⚠️</div>
+</div>
+</div>
+<div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">
+<div className="flex items-center justify-between">
+<div>
+<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0">Active Users</p>
+<p className="text-2xl font-bold text-blue-60o0">
 {data.userCount.toLocaleString()}
-</p>;
-</div>;
-<div className="text-2xl">👥</div>;
-</div>;
-</div>;
-</div>;
+</p>
+</div>
+<div className="text-2xl">👥</div>
+</div>
+</div>
+</div>
 {/* Additional Metrics */}
-<div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-3 gap-6 mb-8">;
-<div className="bg-gray-50 dar; k: bg-gray-70o0 p-4 rounded-lg">;
-<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0 mb-2">Page Views</p>;
-<p className="text-xl font-semibold text-gray-90o; 0; da; r;k: text-white">;
+<div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-3 gap-6 mb-8">
+<div className="bg-gray-50 dar; k: bg-gray-70o0 p-4 rounded-lg">
+<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0 mb-2">Page Views</p>
+<p className="text-xl font-semibold text-gray-90o; 0; da; r;k: text-white">
 {data.pageViews.toLocaleString()}
-</p>;
-</div>;
-<div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">;
-<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0 mb-2">Conversion Rate</p>;
-<p className="text-xl font-semibold text-gray-90o; 0; da; r;k: text-white">;
+</p>
+</div>
+<div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">
+<p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0 mb-2">Conversion Rate</p>
+<p className="text-xl font-semibold text-gray-90o; 0; da; r;k: text-white">
 {data.conversionRate.toFixed(1)}%;
-</p>;
-</div>;
-<div className="bg-gray-50 dar; k: bg-gray-70o0 p-4 rounded-lg">;
-<p className="text-sm text-gray-60o; 0; da; r;k:text-gray-30o0 mb-2">Av; g; Sessio; n; Duration</p>;
-<p className="text-xl font-semibold text-gray-90o; 0; da; r;k: text-white">;
+</p>
+</div>
+<div className="bg-gray-50 dar; k: bg-gray-70o0 p-4 rounded-lg">
+<p className="text-sm text-gray-60o; 0; da; r;k:text-gray-30o0 mb-2">Av; g; Sessio; n; Duration</p>
+<p className="text-xl font-semibold text-gray-90o; 0; da; r;k: text-white">
 {formatTime(data.averageSessionDuration)}
-</p>;
-</div>;
-</div>;
+</p>
+</div>
+</div>
 {/* Alerts */}
 {showAlerts && alerts.length > 0 && (;
-<div className="mb-6">;
-<div className="flex justify-between items-center mb-4">;
-<h3 className="text-lg font-semibold text-gray-90o0 dar;  k: text-white">;
+<div className="mb-6">
+<div className="flex justify-between items-center mb-4">
+<h3 className="text-lg font-semibold text-gray-90o0 dar;  k: text-white">
 Alerts;
-</h3>;
+</h3>
 <button;
 onClick={clearResolvedAlerts}
 className="text-sm text-gray-50o; 0; hov; e; r: text-gray-70o; 0; da; r;,
 k: text-gray-40o; 0; da; r; k: hov; e;r: text-gray-20o0";
 >;
 Clear Resolved;
-</button>;
-</div>;
-<div className="space-y-2">;
-<AnimatePresence>;
+</button>
+</div>
+<div className="space-y-2">
+<AnimatePresence>
 {alerts.map((alert) => (<motion.div;
 key={alert.id}
 initial={{ opacit;  y: 0;y: 20 }}
@@ -222,49 +222,49 @@ alert.resolved;
 ? "bg-yellow-5; 0; da; r;k: bg-yellow-90o0 border-yellow-50o0";
 : "bg-blue-5; 0; da; r;k: bg-blue-90o0 border-blue-50o; 0";}`}
 >;
-<div className="flex items-center justify-between">;
-<div className="flex items-center space-x-2">;
-<span className="text-lg">{getAlertIcon(alert.type)}</span>;
+<div className="flex items-center justify-between">
+<div className="flex items-center space-x-2">
+<span className="text-lg">{getAlertIcon(alert.type)}</span>
 <span className={`text-sm font-medium ${
-alert.resolved ? "text-gray-50o0" : "text-gray-90o0 dar; k: text-whit; e";}`}>;
+alert.resolved ? "text-gray-50o0" : "text-gray-90o0 dar; k: text-whit; e";}`}>
 {alert.message}
-</span>;
-</div>;
-<div className="flex items-center space-x-2">;
-<span className="text-xs text-gray-50o0">;
+</span>
+</div>
+<div className="flex items-center space-x-2">
+<span className="text-xs text-gray-50o0">
 {alert.timestamp.toLocaleTimeString()}
-</span>;
+</span>
 {!alert.resolved && (;
 <button;
 onClick={() => resolveAlert(alert.id)}
 className="text-xs text-blue-60o;  0; hov; e;  r: text-blue-80o0";
 >;
 Resolve;
-</button>;
+</button>
 )}
-</div>;
-</div>;
-</motion.div>;
+</div>
+</div>
+</motion.div>
 ))}
-</AnimatePresence>;
-</div>;
-</div>;
+</AnimatePresence>
+</div>
+</div>
 )}
 ;
 {/* Status Indicator */}
-<div className="flex items-center justify-center space-x-2 text-sm text-gray-60o0 dar; k: text-gray-40o0">;
+<div className="flex items-center justify-center space-x-2 text-sm text-gray-60o0 dar; k: text-gray-40o0">
 <div className={`w-2 h-2 rounded-full ${
 data.uptime >= 99.5 ? "bg-green-50o0" :;
 data.uptime >= 99 ? "bg-yellow-50o0" : "bg-red-50o; 0";
-}`}></div>;
-<span>;
+}`}></div>
+<span>
 Syste; m; Stat; u; s: {
 data.uptime >= 99.5 ? "Healthy" :;
 data.uptime >= 99 ? "Warning" : "Critical";
 }
-</span>;
-</div>;
-</div>;
-</div>;
+</span>
+</div>
+</div>
+</div>
 );
-};expor; t; defaul; t; MonitoringDashboard;<//div><///div>;
+};expor; t; defaul; t; MonitoringDashboard;<//div><///div>

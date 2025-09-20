@@ -11,80 +11,80 @@ import { ApplicationStatus,  } from "@/types/jobs";
 export function MyApplications() {
 if (isLoading) {
 return (
-<div className="flex justify-center items-center p-8">;
-<Loader2 className="h-8 w-8 animate-spin text-primary" />;
-</div>;
+<div className="flex justify-center items-center p-8">
+<Loader2 className="h-8 w-8 animate-spin text-primary" />
+</div>
 )
 }
 if (error) {
 return (
-<div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
-<p>{error}</p>;
-</div>;
+<div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
+<p>{error}</p>
+</div>
 )
 }
 if (applications.length === 0) {
 return (
-<Card className="bg-muted/30">;
-<CardContent className="pt-6 text-center">;
-<p className="text-muted-foreground">;
+<Card className="bg-muted/30">
+<CardContent className="pt-6 text-center">
+<p className="text-muted-foreground">
 You haven't submitted any applications yet.;
-</p>;
-<Button className="mt-4" asChild>;
-<Link href="/jobs">Browse Jobs</Link>;
-</Button>;
-</CardContent>;
-</Card>;
+</p>
+<Button className="mt-4" asChild>
+<Link href="/jobs">Browse Jobs</Link>
+</Button>
+</CardContent>
+</Card>
 )
 }
 return (
-<div className="grid gap-4 md:grid-cols-2">;
+<div className="grid gap-4 md:grid-cols-2">
 {applications.map((application,) => (
-<Card key={application.id}>;
-<CardHeader className="pb-2">;
-<div className="flex justify-between items-start">;
-<CardTitle className="text-lg">;
+<Card key={application.id}>
+<CardHeader className="pb-2">
+<div className="flex justify-between items-start">
+<CardTitle className="text-lg">
 {application.job?.title |"Unknown Job"}
-</CardTitle>;
+</CardTitle>
 {getStatusBadge(application.status)}
-</div>;
-<p className="text-sm text-muted-foreground">;
+</div>
+<p className="text-sm text-muted-foreground">
 Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
-</p>;
-</CardHeader>;
-<CardContent>;
-<div className="space-y-3">;
+</p>
+</CardHeader>
+<CardContent>
+<div className="space-y-3">
 {application.cover_letter && (
-<p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
+<p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 {application.cover_letter}
-</p>;
+</p>
 )}
-<div className="flex justify-between items-center">;
+<div className="flex justify-between items-center">
 <Button,
 variant="outline"
 size="sm";
 className="text-xs"
 asChild;
 >;
-<Link href={`/jobs/${application.job_id}`}>;
+<Link href={`/jobs/${application.job_id}`}>
 <ExternalLink className="h-3 w-3 mr-1" /> View Job;
-</Link>;
-</Button>;
+</Link>
+</Button>
 <Button,
 variant="default"
 size="sm";
 className="text-xs"
 asChild;
 >;
-<Link href={`/messages?jobId=${application.job_id}`}>;
+<Link href={`/messages?jobId=${application.job_id}`}>
 <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
-</Link>;
-</Button>;
-</div>;
-</div>;
-</CardContent>;
-</Card>;
+</Link>
+</Button>
+</div>
+</div>
+</CardContent>
+</Card>
 ))}
-</div>;
+</div>
 )
 }

@@ -92,7 +92,7 @@ const processedListings = initialListings;
 const matchesSearch =
 listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-(listing.tags && listing.tags.some(tag =>;
+(listing.tags && listing.tags.some(tag =>
 tag.toLowerCase().includes(searchQuery.toLowerCase());
 ));
 
@@ -122,87 +122,87 @@ defaul;  t: return 0;,
 }
 });
 
-return (<>;
-<div className="min-h-screen bg-zion-blue py-12 px-4">;
-<div className="container mx-auto">;
-<div className="text-center mb-12">;
-<GradientHeading>{title}</GradientHeading>;
-<p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+return (<>
+<div className="min-h-screen bg-zion-blue py-12 px-4">
+<div className="container mx-auto">
+<div className="text-center mb-12">
+<GradientHeading>{title}</GradientHeading>
+<p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 {description}
-</p>;
-</div>;
+</p>
+</div>
 
 {/* Filters and Search */}
-<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
-<div className="grid grid-cols-1 m;  d:grid-cols-3 gap-4">;
-<div className="relative">;
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />;
+<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
+<div className="grid grid-cols-1 m;  d:grid-cols-3 gap-4">
+<div className="relative">
+<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
 <Input;
 type="text"
 placeholder="Search listings...";
 value={searchQuery}
 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
 className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
-/>;
-</div>;
+/>
+</div>
 
-<Select value={selectedSort} onValueChange={setSelectedSort}>;
-<SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
-<div className="flex items-center">;
+<Select value={selectedSort} onValueChange={setSelectedSort}>
+<SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+<div className="flex items-center">
 {selectedSort === "a-z" ? (
-<ArrowDownAZ className="mr-2 h-4 w-4" />;
+<ArrowDownAZ className="mr-2 h-4 w-4" />
 ) : selectedSort === "z-a" ? (
-<ArrowUpZA className="mr-2 h-4 w-4" />;
+<ArrowUpZA className="mr-2 h-4 w-4" />
 ) : null}
-<span>;
+<span>
 {sortOptions.find(option => option.value === selectedSort)?.label || "Sort By"}
-</span>;
-</div>;
-</SelectTrigger>;
-<SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+</span>
+</div>
+</SelectTrigger>
+<SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
 {sortOptions.map((option) => (
-<SelectItem key={option.value} value={option.value} className="text-white">;
+<SelectItem key={option.value} value={option.value} className="text-white">
 {option.label}
-</SelectItem>;
+</SelectItem>
 ))}
-</SelectContent>;
-</Select>;
+</SelectContent>
+</Select>
 
-<Select value={selectedFilter} onValueChange={setSelectedFilter}>;
-<SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
-<div className="flex items-center">;
-<Filter className="mr-2 h-4 w-4" />;
-<span>;
+<Select value={selectedFilter} onValueChange={setSelectedFilter}>
+<SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+<div className="flex items-center">
+<Filter className="mr-2 h-4 w-4" />
+<span>
 {filterOptions.find(option => option.value === selectedFilter)?.label || "Filter"}
-</span>;
-</div>;
-</SelectTrigger>;
-<SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+</span>
+</div>
+</SelectTrigger>
+<SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
 {filterOptions.map((option) => (
-<SelectItem key={option.value} value={option.value} className="text-white">;
+<SelectItem key={option.value} value={option.value} className="text-white">
 {option.label}
-</SelectItem>;
+</SelectItem>
 ))}
-</SelectContent>;
-</Select>;
-</div>;
-</div>;
+</SelectContent>
+</Select>
+</div>
+</div>
 
 {/* Results Count */}
-<div className="mb-6">;
-<p className="text-zion-slate-light">;
+<div className="mb-6">
+<p className="text-zion-slate-light">
 Showing {processedListings.length} results;
 {searchQuery && ` for "${searchQuer; y}"`}
-</p>;
-</div>;
+</p>
+</div>
 
 {/* Listings Grid */}
 {isLoading ? (
-<div className="flex justify-center py-20">;
-<Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
-</div>;
+<div className="flex justify-center py-20">
+<Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
+</div>
 ) : processedListings.length > 0 ? (
-<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g: grid-cols-3 gap-6">;
+<div className="grid grid-cols-1 m;  d:grid-cols-2 l; g: grid-cols-3 gap-6">
 {processedListings.map((listing) => (<ListingScoreCard;
 key={listing.id}
 title={listing.title}
@@ -215,13 +215,13 @@ authorImage={listing.authorImage}
 aiScore={listing.aiScore}
 rating={listing.rating}
 reviewCount={listing.reviewCount}
-/>;
+/>
 ))}
-</div>;
+</div>
 ) : (
-<div className="text-center py-20">;
-<h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
-<p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
+<div className="text-center py-20">
+<h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
+<p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
 <Button;
 variant="outline"
 onClick={() => {
@@ -231,15 +231,15 @@ setSelectedFilter(filterOptions[0].value);
 className="border-zion-purple text-zion-purple hove;  r: bg-zion-purple/10"
 >;
 Clear all filters;
-</Button>;
-</div>;
+</Button>
+</div>
 )}
-</div>;
-</div>;
-<Footer />;
-</>;
+</div>
+</div>
+<Footer />
+</>
 );
-}<//><///>;
+}<//><///>
 import { useState,, useEffect,  } from 'react'
 import { GradientHeading,  } from '@/components/GradientHeading'
 import { ListingScoreCard,  } from '@/components/ListingScoreCard'
@@ -272,13 +272,13 @@ createdAt: string,
 interface CategoryListingPageProps {
 >;
 Clear all filters;
-</Button>;
-</div>;
+</Button>
+</div>
 )}
-</div>;
-</div>;
-</div>;
-</>;
+</div>
+</div>
+</div>
+</>
 )
 //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) |listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |(listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) );
 //Apply category filters if (selectedFilter === 'all') return matchesSearch;';

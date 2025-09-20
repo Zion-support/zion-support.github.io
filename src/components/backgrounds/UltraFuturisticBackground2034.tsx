@@ -65,8 +65,8 @@ color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
 }
 };
 const colors = {
-quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"],;
-neon: ["#ff0080", "#8000ff", "#00ffff", "#ffff00"],;
+quantum: ["#00ffff", "#ff00ff", "#ffff00", "#00ff00"];
+neon: ["#ff0080", "#8000ff", "#00ffff", "#ffff00"];
 holographic: ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"];
 };
 
@@ -219,20 +219,20 @@ cancelAnimationFrame(animationFrameId);
 }, []);
 
 return (
-<div className={`relative min-h-screen overflow-hidden ${className}`}>;
+<div className={`relative min-h-screen overflow-hidden ${className}`}>
 <canvas;
 ref={canvasRef}
 className="absolute inset-0 w-full h-full pointer-events-none"
 style={{ zIndex: -1 }}
-/>;
+/>
 
 {/* Overlay gradient */}
-<div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-purple-900/20 pointer-events-none" />;
+<div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-purple-900/20 pointer-events-none" />
 
 {/* Content */}
-<div className="relative z-10">;
+<div className="relative z-10">
 {children}
-</div>;
+</div>
 
 {/* Floating elements */}
 <motion.div;
@@ -244,7 +244,7 @@ transition={{
 duration: 3;,
 repeat: Infinity;,
 ease: "easeInOut"}}
-/>;
+/>
 
 <motion.div;
 className="absolute top-40 right-32 w-1 h-1 bg-cyan-400 rounded-full opacity-80"
@@ -255,7 +255,7 @@ transition={{
 duration: 2.5;,
 repeat: Infinity;,
 ease: "easeInOut"}}
-/>;
+/>
 
 <motion.div;
 className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full opacity-70"
@@ -266,8 +266,8 @@ transition={{
 duration: 4;,
 repeat: Infinity;,
 ease: "easeInOut"}}
-/>;
-</div>;
+/>
+</div>
 // Add quantum effects;
 if (theme === "quantum") {
 ctx.save();
@@ -362,7 +362,7 @@ className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;,
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
-/>;
+/>
 );
 };
 

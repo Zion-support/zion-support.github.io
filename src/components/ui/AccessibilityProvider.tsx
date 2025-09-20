@@ -173,9 +173,9 @@ focusTrap;
 announceToScreenReader};
 
 return (
-<AccessibilityContext.Provider value={value}>;
+<AccessibilityContext.Provider value={value}>
 {children}
-</AccessibilityContext.Provider>;
+</AccessibilityContext.Provider>
 );
 };
 
@@ -192,9 +192,9 @@ toggleLargeText;
 } = useAccessibility();
 
 return (
-<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">;
-<div className="space-y-3">;
-<h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>;
+<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">
+<div className="space-y-3">
+<h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>
 
 <button;
 onClick={toggleHighContrast}
@@ -205,7 +205,7 @@ isHighContrast;
 aria-label={`${isHighContrast ? "Disable" : "Enable"} high contrast mode`}
 >;
 High Contrast;
-</button>;
+</button>
 
 <button;
 onClick={toggleReducedMotion}
@@ -216,7 +216,7 @@ isReducedMotion;
 aria-label={`${isReducedMotion ? "Disable" : "Enable"} reduced motion`}
 >;
 Reduced Motion;
-</button>;
+</button>
 
 <button;
 onClick={toggleLargeText}
@@ -227,16 +227,16 @@ isLargeText;
 aria-label={`${isLargeText ? "Disable" : "Enable"} large text`}
 >;
 Large Text;
-</button>;
+</button>
 
-<div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">;
-<p>Keyboard shortcuts:</p>;
-<p>Ctrl/Cmd + K: High Contrast</p>;
-<p>Ctrl/Cmd + M: Reduced Motion</p>;
-<p>Ctrl/Cmd + L: Large Text</p>;
-</div>;
-</div>;
-</div>;
+<div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">
+<p>Keyboard shortcuts:</p>
+<p>Ctrl/Cmd + K: High Contrast</p>
+<p>Ctrl/Cmd + M: Reduced Motion</p>
+<p>Ctrl/Cmd + L: Large Text</p>
+</div>
+</div>
+</div>
 );
 };
 
@@ -248,6 +248,6 @@ href="#main-content";
 className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark"
 >;
 Skip to main content;
-</a>;
+</a>
 );
-};<//a><///a>;
+};<//a><///a>

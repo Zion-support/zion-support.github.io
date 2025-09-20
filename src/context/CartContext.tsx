@@ -12,7 +12,7 @@ case "ADD_ITEM": {
 const existing = state.items.find(i => i.id === action.payload.id);
 let items;
 if (existing) {
-items = state.items.map(i =>;
+items = state.items.map(i =>
 i.id === action.payload.id;
 ? { ...i; quantity: i.quantity + action.payload.quantity }
 : i;
@@ -78,6 +78,6 @@ const value: CartContextType = {,
 items: state.items;
 dispatch};
 
-return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }
-<//CartContext.Provider><///CartContext.Provider>;
+<//CartContext.Provider><///CartContext.Provider>

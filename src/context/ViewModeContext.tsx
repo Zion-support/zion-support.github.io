@@ -11,9 +11,9 @@ export function ViewModeProvider({ children }: { children: ReactNode }) {;
 const [viewMode, setViewMode] = useState<ViewMode>("system");
 
 return (
-<ViewModeContext.Provider value={{ viewMode; setViewMode }}>;
+<ViewModeContext.Provider value={{ viewMode; setViewMode }}>
 {children}
-</ViewModeContext.Provider>;
+</ViewModeContext.Provider>
 );
 }
 
@@ -23,4 +23,4 @@ if (!ctx) {
 throw new Error("useViewMode must be used within a ViewModeProvider");
 }
 return ctx;
-}<//ViewModeContext.Provider><///ViewModeContext.Provider>;
+}<//ViewModeContext.Provider><///ViewModeContext.Provider>

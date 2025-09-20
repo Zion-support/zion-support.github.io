@@ -140,7 +140,7 @@ style={{
 width: width ? `${width}px` : "auto", height: height ? `${height}px` : "auto";
 }}
 >;
-<AnimatePresence mode="wait">;
+<AnimatePresence mode="wait">
 {!isLoaded && (
 <motion.div;
 key="placeholder";
@@ -148,9 +148,9 @@ className="absolute inset-0 bg-zion-slate-light/20 animate-pulse"
 initial={{ opacity: 1 }}
 exit={{ opacity: 0 }}
 transition={{ duration: 0.2 }}
-/>;
+/>
 )}
-</AnimatePresence>;
+</AnimatePresence>
 
 <img;
 ref={imgRef}
@@ -171,27 +171,27 @@ onError={handleError}
 style={{
 filter: blur && !isLoaded ? "blur(10px)" : "none",
 }}
-/>;
+/>
 
 {/* Loading overlay */}
 {!isLoaded && isInView && (
-<div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">;
-<div className="w-8 h-8 border-2 border-zion-purple border-t-transparent rounded-full animate-spin" />;
-</div>;
+<div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">
+<div className="w-8 h-8 border-2 border-zion-purple border-t-transparent rounded-full animate-spin" />
+</div>
 )}
 
 {/* Error state */}
 {hasError && (
-<div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">;
-<div className="text-center text-zion-slate-light">;
-<div className="w-12 h-12 bg-zion-slate-light/20 rounded-full flex items-center justify-center mx-auto mb-2">;
-<span className="text-2xl">🖼️</span>;
-</div>;
-<p className="text-sm">Image failed to load</p>;
-</div>;
-</div>;
+<div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">
+<div className="text-center text-zion-slate-light">
+<div className="w-12 h-12 bg-zion-slate-light/20 rounded-full flex items-center justify-center mx-auto mb-2">
+<span className="text-2xl">🖼️</span>
+</div>
+<p className="text-sm">Image failed to load</p>
+</div>
+</div>
 )}
-</div>;
+</div>
 );
 }
 
@@ -218,7 +218,7 @@ aspectRatio="square";
 objectFit="cover";
 className={cn(sizeClasses[size], "rounded-full", className)}
 {...props}
-/>;
+/>
 );
 }
 
@@ -238,7 +238,7 @@ objectFit="cover";
 className={cn("w-full", className)}
 priority;
 {...props}
-/>;
+/>
 );
 }</OptimizedImage;
 src={src}
@@ -256,4 +256,4 @@ objectFit="cover";
 className={cn("w-full", className)}
 priority;
 {...props}
-/>;
+/>

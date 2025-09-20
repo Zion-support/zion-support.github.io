@@ -79,40 +79,40 @@ setIsExporting(false);
 };
 
 return (
-<Card>;
-<CardHeader>;
-<CardTitle className="flex items-center gap-2">;
+<Card>
+<CardHeader>
+<CardTitle className="flex items-center gap-2">
 {isConnected ? (
-<Wallet aria-hidden="true" className="h-5 w-5 text-primary" />;
+<Wallet aria-hidden="true" className="h-5 w-5 text-primary" />
 ) : (
-<Wallet aria-hidden="true" className="h-5 w-5" />;
+<Wallet aria-hidden="true" className="h-5 w-5" />
 )}
 On-chain Export;
-<TooltipProvider>;
-<Tooltip>;
-<TooltipTrigger asChild>;
-<Info aria-label="More info" className="h-4 w-4 text-muted-foreground cursor-help" />;
-</TooltipTrigger>;
-<TooltipContent>;
-<p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
-</TooltipContent>;
-</Tooltip>;
-</TooltipProvider>;
-</CardTitle>;
-<CardDescription>Export your ZION$ to an external wallet</CardDescription>;
-</CardHeader>;
-<CardContent>;
+<TooltipProvider>
+<Tooltip>
+<TooltipTrigger asChild>
+<Info aria-label="More info" className="h-4 w-4 text-muted-foreground cursor-help" />
+</TooltipTrigger>
+<TooltipContent>
+<p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>
+</TooltipContent>
+</Tooltip>
+</TooltipProvider>
+</CardTitle>
+<CardDescription>Export your ZION$ to an external wallet</CardDescription>
+</CardHeader>
+<CardContent>
 {isConnected ? (
-<div className="space-y-4">;
-<div className="flex justify-between text-sm">;
-<span>Available to export: </span>;
-<span className="font-medium">250 ZION$</span>;
-</div>;
+<div className="space-y-4">
+<div className="flex justify-between text-sm">
+<span>Available to export: </span>
+<span className="font-medium">250 ZION$</span>
+</div>
 {exportStatus === "success" ? (
-<Button className="w-full bg-green-600 hover:bg-green-700" disabled>;
-<Check aria-hidden="true" className="mr-2 h-4 w-4" />;
+<Button className="w-full bg-green-600 hover:bg-green-700" disabled>
+<Check aria-hidden="true" className="mr-2 h-4 w-4" />
 Tokens Exported;
-</Button>;
+</Button>
 ) : (
 <Button;
 className="w-full"
@@ -121,26 +121,26 @@ disabled={isExporting}
 >;
 {isExporting ? "Processing..." : "Export Tokens"}
 {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4" />}
-</Button>;
+</Button>
 )}
-</div>;
+</div>
 ) : (
-<div className="space-y-2">;
-<p className="text-sm text-muted-foreground mb-3">;
+<div className="space-y-2">
+<p className="text-sm text-muted-foreground mb-3">
 Connect your web3 wallet to export tokens to the blockchain.;
-</p>;
-<Button onClick={handleConnectWallet} className="w-full">;
+</p>
+<Button onClick={handleConnectWallet} className="w-full">
 Connect Wallet;
-</Button>;
-</div>;
+</Button>
+</div>
 )}
-</CardContent>;
-</Card>;
+</CardContent>
+</Card>
 );
 }
-<//Card><///Card>;
+<//Card><///Card>
 
-import React, { useState } from "react",;
+import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRightArrowUpRight } from 'lucide-react';

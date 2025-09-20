@@ -12,7 +12,7 @@ availabilityType: string;
 }
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
 // Format availability status;
-<span>{getAvailabilityLabel(availabilityType)}</span>;
-</div>;
+<span>{getAvailabilityLabel(availabilityType)}</span>
+</div>
 )
 }}}}

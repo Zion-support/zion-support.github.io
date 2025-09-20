@@ -3,5 +3,5 @@ import React from "react";
 
 }
 
-export default SecurityComplianceSection,;
+export default SecurityComplianceSection;
 ;

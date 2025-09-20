@@ -677,6 +677,6 @@ securityFeatures: ["Fleet security", "Data encryption", "Access control", "Real-
 
 // Export all services combined;
 export const allEnhancedServices = [;
-...enhanced2025ComprehensiveServices,;
+...enhanced2025ComprehensiveServices;
 ...specializedIndustryServices;
 ];

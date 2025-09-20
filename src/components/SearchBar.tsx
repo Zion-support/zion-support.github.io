@@ -33,21 +33,21 @@ placeholder?: string,
 */;
 }
 }}
-/>;
+/>
 {value && (
 <button,
 className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
 onClick={() => onChange('')}
-aria-label='Clear search'          >;
-<X className='h-4 w-4' />          </button>;
-<X className="h-4 w-4" />;
+aria-label='Clear search'          >
+<X className='h-4 w-4' />          </button>
+<X className="h-4 w-4" />
 onClick={() => onChange('')}
 aria-label="Clear search";
 >;
-<X className="h-4 w-4" />;
-</button>;
+<X className="h-4 w-4" />
+</button>
 )}
-</div>;
+</div>
 <AutocompleteSuggestions,
 suggestions = {suggestions,}
 searchTerm = {value,}
@@ -55,8 +55,8 @@ onSelectSuggestion = {handleSelect,}
 visible = {focused,}
 highlightedIndex = {highlightedIndex,}
 listId = {listId,}
-/>;
-</div>;
+/>
+</div>
 )
 }/> onClick={';
 () => onChange ('') ";

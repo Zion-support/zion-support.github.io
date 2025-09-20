@@ -189,51 +189,51 @@ const departments = ["all", "sales", "marketing", "operations", "finance", "hr"]
 const priorities = ["all", "high", "medium", "low"];
 
 return (
-<div className="p-6 bg-gray-900 min-h-screen">;
+<div className="p-6 bg-gray-900 min-h-screen">
 <motion.div;
 initial={{ opacity: 0; y: 20 }}
 animate={{ opacity: 1; y: 0 }}
 className="max-w-7xl mx-auto"
 >;
 {/* Header */}
-<div className="flex justify-between items-center mb-8">;
-<div>;
-<h1 className="text-4xl font-bold text-white mb-2">Enterprise Analytics Suite</h1>;
-<p className="text-gray-400">Comprehensive enterprise performance and project management</p>;
-</div>;
-<div className="flex space-x-4">;
+<div className="flex justify-between items-center mb-8">
+<div>
+<h1 className="text-4xl font-bold text-white mb-2">Enterprise Analytics Suite</h1>
+<p className="text-gray-400">Comprehensive enterprise performance and project management</p>
+</div>
+<div className="flex space-x-4">
 <select;
 value={selectedDepartment}
 onChange={(e) => setSelectedDepartment(e.target.value)}
 className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 >;
 {departments.map(dept => (
-<option key={dept} value={dept}>;
+<option key={dept} value={dept}>
 {dept === "all" ? "All Departments" : dept.charAt(0).toUpperCase() + dept.slice(1)}
-</option>;
+</option>
 ))}
-</select>;
+</select>
 <select;
 value={selectedPriority}
 onChange={(e) => setSelectedPriority(e.target.value)}
 className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 >;
 {priorities.map(priority => (
-<option key={priority} value={priority}>;
+<option key={priority} value={priority}>
 {priority === "all" ? "All Priorities" : priority.charAt(0).toUpperCase() + priority.slice(1)}
-</option>;
+</option>
 ))}
-</select>;
-<button className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">;
+</select>
+<button className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700">
 Generate Report;
-</button>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
 
 {/* Key Metrics */}
-<div className="mb-8">;
-<h2 className="text-2xl font-semibold text-white mb-6">Enterprise KPIs</h2>;
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+<div className="mb-8">
+<h2 className="text-2xl font-semibold text-white mb-6">Enterprise KPIs</h2>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 {filteredMetrics.map((metric; index) => (
 <motion.div;
 key={metric.id}
@@ -242,30 +242,30 @@ animate={{ opacity: 1; y: 0 }}
 transition={{ delay: index * 0.1 }}
 className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${getDepartmentColor(metric.department)} p-6`}
 >;
-<div className="flex items-center justify-between mb-4">;
-<div className="text-3xl">{metric.icon}</div>;
-<div className="flex space-x-2">;
-<span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(metric.priority)}`}>;
+<div className="flex items-center justify-between mb-4">
+<div className="text-3xl">{metric.icon}</div>
+<div className="flex space-x-2">
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(metric.priority)}`}>
 {metric.priority}
-</span>;
-<div className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>;
+</span>
+<div className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>
 {getTrendIcon(metric.trend)} {metric.change}
-</div>;
-</div>;
-</div>;
-<div>;
-<h3 className="text-sm font-medium text-white/80 mb-1">{metric.title}</h3>;
-<p className="text-2xl font-bold text-white">{metric.value}</p>;
-</div>;
-</motion.div>;
+</div>
+</div>
+</div>
+<div>
+<h3 className="text-sm font-medium text-white/80 mb-1">{metric.title}</h3>
+<p className="text-2xl font-bold text-white">{metric.value}</p>
+</div>
+</motion.div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Department Performance */}
-<div className="mb-8">;
-<h2 className="text-2xl font-semibold text-white mb-6">Department Performance</h2>;
-<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">;
+<div className="mb-8">
+<h2 className="text-2xl font-semibold text-white mb-6">Department Performance</h2>
+<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
 {departmentPerformance.map((dept; index) => (
 <motion.div;
 key={dept.department}
@@ -274,41 +274,41 @@ animate={{ opacity: 1; x: 0 }}
 transition={{ delay: index * 0.1 }}
 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 >;
-<div className="flex items-center justify-between mb-4">;
-<h3 className="text-lg font-semibold text-white">{dept.department}</h3>;
-<div className={`w-4 h-4 rounded-full bg-${dept.color}-500`} />;
-</div>;
+<div className="flex items-center justify-between mb-4">
+<h3 className="text-lg font-semibold text-white">{dept.department}</h3>
+<div className={`w-4 h-4 rounded-full bg-${dept.color}-500`} />
+</div>
 
-<div className="space-y-3">;
-<div className="flex justify-between">;
-<span className="text-gray-400">Revenue</span>;
-<span className="text-green-400 font-semibold">;
+<div className="space-y-3">
+<div className="flex justify-between">
+<span className="text-gray-400">Revenue</span>
+<span className="text-green-400 font-semibold">
 ${(dept.revenue / 1000000).toFixed(1)}M;
-</span>;
-</div>;
-<div className="flex justify-between">;
-<span className="text-gray-400">Growth</span>;
-<span className="text-blue-400 font-semibold">+{dept.growth}%</span>;
-</div>;
-<div className="flex justify-between">;
-<span className="text-gray-400">Efficiency</span>;
-<span className="text-purple-400 font-semibold">{dept.efficiency}%</span>;
-</div>;
-<div className="flex justify-between">;
-<span className="text-gray-400">Satisfaction</span>;
-<span className="text-yellow-400 font-semibold">{dept.satisfaction}/5</span>;
-</div>;
-</div>;
-</motion.div>;
+</span>
+</div>
+<div className="flex justify-between">
+<span className="text-gray-400">Growth</span>
+<span className="text-blue-400 font-semibold">+{dept.growth}%</span>
+</div>
+<div className="flex justify-between">
+<span className="text-gray-400">Efficiency</span>
+<span className="text-purple-400 font-semibold">{dept.efficiency}%</span>
+</div>
+<div className="flex justify-between">
+<span className="text-gray-400">Satisfaction</span>
+<span className="text-yellow-400 font-semibold">{dept.satisfaction}/5</span>
+</div>
+</div>
+</motion.div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Project Status */}
-<div className="mb-8">;
-<h2 className="text-2xl font-semibold text-white mb-6">Project Status Overview</h2>;
-<div className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
-<div className="space-y-4">;
+<div className="mb-8">
+<h2 className="text-2xl font-semibold text-white mb-6">Project Status Overview</h2>
+<div className="bg-gray-800 p-6 rounded-lg border border-gray-700">
+<div className="space-y-4">
 {projectStatus.map((project; index) => (
 <motion.div;
 key={project.name}
@@ -317,32 +317,32 @@ animate={{ opacity: 1; x: 0 }}
 transition={{ delay: index * 0.1 }}
 className="p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
 >;
-<div className="flex items-center justify-between mb-3">;
-<h3 className="text-lg font-semibold text-white">{project.name}</h3>;
-<div className="flex items-center space-x-3">;
-<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>;
+<div className="flex items-center justify-between mb-3">
+<h3 className="text-lg font-semibold text-white">{project.name}</h3>
+<div className="flex items-center space-x-3">
+<span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
 {project.status.replace("-", " ")}
-</span>;
-<span className="text-gray-400 text-sm">{project.deadline}</span>;
-</div>;
-</div>;
+</span>
+<span className="text-gray-400 text-sm">{project.deadline}</span>
+</div>
+</div>
 
-<div className="flex items-center justify-between mb-2">;
-<span className="text-gray-400">Team: {project.team}</span>;
-<span className="text-white font-semibold">{project.progress}%</span>;
-</div>;
+<div className="flex items-center justify-between mb-2">
+<span className="text-gray-400">Team: {project.team}</span>
+<span className="text-white font-semibold">{project.progress}%</span>
+</div>
 
-<div className="w-full bg-gray-600 rounded-full h-2">;
+<div className="w-full bg-gray-600 rounded-full h-2">
 <div;
 className={`h-2 rounded-full ${getProgressColor(project.progress)}`}
 style={{ width: `${project.progress}%` }}
-/>;
-</div>;
-</motion.div>;
+/>
+</div>
+</motion.div>
 ))}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Executive Summary */}
 <motion.div;
@@ -350,29 +350,29 @@ initial={{ opacity: 0; y: 20 }}
 animate={{ opacity: 1; y: 0 }}
 className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 >;
-<h3 className="text-xl font-semibold text-white mb-6">Executive Summary</h3>;
-<div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-<div className="text-center">;
-<div className="text-3xl mb-2">📈</div>;
-<div className="text-green-400 font-semibold text-2xl">+23.1%</div>;
-<div className="text-gray-400">Overall Growth</div>;
-</div>;
-<div className="text-center">;
-<div className="text-3xl mb-2">🎯</div>;
-<div className="text-blue-400 font-semibold text-2xl">94.2%</div>;
-<div className="text-gray-400">Efficiency Rate</div>;
-</div>;
-<div className="text-center">;
-<div className="text-3xl mb-2">✅</div>;
-<div className="text-purple-400 font-semibold text-2xl">4.6/5</div>;
-<div className="text-gray-400">Satisfaction Score</div>;
-</div>;
-</div>;
-</motion.div>;
-</motion.div>;
-</div>;
+<h3 className="text-xl font-semibold text-white mb-6">Executive Summary</h3>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div className="text-center">
+<div className="text-3xl mb-2">📈</div>
+<div className="text-green-400 font-semibold text-2xl">+23.1%</div>
+<div className="text-gray-400">Overall Growth</div>
+</div>
+<div className="text-center">
+<div className="text-3xl mb-2">🎯</div>
+<div className="text-blue-400 font-semibold text-2xl">94.2%</div>
+<div className="text-gray-400">Efficiency Rate</div>
+</div>
+<div className="text-center">
+<div className="text-3xl mb-2">✅</div>
+<div className="text-purple-400 font-semibold text-2xl">4.6/5</div>
+<div className="text-gray-400">Satisfaction Score</div>
+</div>
+</div>
+</motion.div>
+</motion.div>
+</div>
 );
 };
 
 export default EnterpriseAnalyticsSuite;
-<//div><///div>;
+<//div><///div>

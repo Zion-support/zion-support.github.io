@@ -39,16 +39,16 @@ className;
 
 if (href) {
 return (
-<a href={href} className={classes} onClick={onClick}>;
+<a href={href} className={classes} onClick={onClick}>
 {children}
-</a>;
+</a>
 );
 }
 
 return (
-<Component className={classes} onClick={onClick}>;
+<Component className={classes} onClick={onClick}>
 {children}
-</Component>;
+</Component>
 );
 }
 
@@ -61,9 +61,9 @@ children: React.ReactNode;
 className?: string;
 }) {
 return (
-<div className={cn("p-6 pb-0", className)}>;
+<div className={cn("p-6 pb-0", className)}>
 {children}
-</div>;
+</div>
 );
 }
 
@@ -76,9 +76,9 @@ children: React.ReactNode;
 className?: string;
 }) {
 return (
-<div className={cn("p-6", className)}>;
+<div className={cn("p-6", className)}>
 {children}
-</div>;
+</div>
 );
 }
 
@@ -91,8 +91,8 @@ children: React.ReactNode;
 className?: string;
 }) {
 return (
-<div className={cn("p-6 pt-0", className)}>;
+<div className={cn("p-6 pt-0", className)}>
 {children}
-</div>;
+</div>
 );
-}<//div><///div>;
+}<//div><///div>

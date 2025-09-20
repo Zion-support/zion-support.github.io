@@ -39,15 +39,15 @@ isAuthenticated;
 activeFiltersProps;
 }: TalentResultsProps) {
 return (
-<div className="flex-1">;
+<div className="flex-1">
 {/* Active filters */}
-<ActiveFilters {...activeFiltersProps} />;
+<ActiveFilters {...activeFiltersProps} />
 
 {/* Results count */}
 <ResultsHeader;
 isLoading={isLoading}
 resultCount={totalCount}
-/>;
+/>
 
 {/* Talents grid */}
 <TalentGrid;
@@ -58,8 +58,8 @@ handleBook={handleBook}
 handleMessage={handleMessage}
 isAuthenticated={isAuthenticated}
 clearFilters={activeFiltersProps.clearFilters}
-/>;
-</div>;
+/>
+</div>
 );
 }
-<//div><///div>;
+<//div><///div>

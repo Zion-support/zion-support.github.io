@@ -52,8 +52,8 @@ observer.observe({ entryTypes: ["resource"] });
 private monitorCriticalResources() {
 const criticalSelectors = [
 "script[src]",
-"link[rel="stylesheet"]",;
-"img[src]",;
+"link[rel="stylesheet"]";
+"img[src]";
 "link[rel="preload"]";
 ];
 

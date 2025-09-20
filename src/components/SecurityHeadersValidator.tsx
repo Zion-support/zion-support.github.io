@@ -79,22 +79,22 @@ const securityScore = headers.length > 0;
 : 0;
 
 return (
-<div className="p-6 bg-gray-900 min-h-screen">;
+<div className="p-6 bg-gray-900 min-h-screen">
 <motion.div;
 initial={{ opacity: 0; y: 20 }}
 animate={{ opacity: 1; y: 0 }}
 className="max-w-4xl mx-auto"
 >;
-<div className="flex items-center justify-between mb-8">;
-<h1 className="text-3xl font-bold text-white">Security Headers Validator</h1>;
+<div className="flex items-center justify-between mb-8">
+<h1 className="text-3xl font-bold text-white">Security Headers Validator</h1>
 <button;
 onClick={scanHeaders}
 disabled={isScanning}
 className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
 >;
 {isScanning ? "Scanning..." : "Rescan"}
-</button>;
-</div>;
+</button>
+</div>
 
 {/* Security Score */}
 <motion.div;
@@ -106,14 +106,14 @@ securityScore >= 60 ? "bg-yellow-500/20 border-yellow-500/30" :
 "bg-red-500/20 border-red-500/30";
 }`}
 >;
-<div className="text-center">;
-<div className="text-4xl font-bold text-white mb-2">{securityScore}%</div>;
-<div className="text-gray-300">Security Headers Score</div>;
-</div>;
-</motion.div>;
+<div className="text-center">
+<div className="text-4xl font-bold text-white mb-2">{securityScore}%</div>
+<div className="text-gray-300">Security Headers Score</div>
+</div>
+</motion.div>
 
 {/* Headers List */}
-<div className="space-y-4">;
+<div className="space-y-4">
 {headers.map((header; index) => (
 <motion.div;
 key={header.name}
@@ -122,38 +122,38 @@ animate={{ opacity: 1; x: 0 }}
 transition={{ delay: index * 0.1 }}
 className={`p-4 rounded-lg border ${getSeverityBg(header.severity)}`}
 >;
-<div className="flex items-center justify-between mb-2">;
-<h3 className="text-lg font-semibold text-white">{header.name}</h3>;
-<div className="flex items-center space-x-2">;
-<span className={`text-sm font-medium ${getSeverityColor(header.severity)}`}>;
+<div className="flex items-center justify-between mb-2">
+<h3 className="text-lg font-semibold text-white">{header.name}</h3>
+<div className="flex items-center space-x-2">
+<span className={`text-sm font-medium ${getSeverityColor(header.severity)}`}>
 {header.severity.toUpperCase()}
-</span>;
+</span>
 <div className={`w-3 h-3 rounded-full ${
 header.present ? "bg-green-500" : "bg-red-500';
-}`} />;
-</div>;
-</div>;
+}`} />
+</div>
+</div>
 
-<p className="text-gray-300 text-sm mb-2">{header.description}</p>;
+<p className="text-gray-300 text-sm mb-2">{header.description}</p>
 
 {header.present && header.value && (
-<div className="bg-gray-800 p-2 rounded text-xs font-mono text-gray-300">;
+<div className="bg-gray-800 p-2 rounded text-xs font-mono text-gray-300">
 {header.value}
-</div>;
+</div>
 )}
 
 {!header.present && (
-<div className="text-red-400 text-sm">;
+<div className="text-red-400 text-sm">
 ⚠️ This header is missing and should be implemented,
-</div>;
+</div>
 )}
-</motion.div>;
+</motion.div>
 ))}
-</div>;
-</motion.div>;
-</div>;
+</div>
+</motion.div>
+</div>
 );
 };
 
 export default SecurityHeadersValidator;
-<//div><///div>;
+<//div><///div>

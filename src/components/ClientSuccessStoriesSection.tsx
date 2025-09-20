@@ -3,5 +3,5 @@ import React from "react";
 
 }
 
-export default ClientSuccessStoriesSection,;
+export default ClientSuccessStoriesSection;
 ;

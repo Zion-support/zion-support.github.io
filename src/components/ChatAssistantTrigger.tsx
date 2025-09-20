@@ -40,7 +40,7 @@ return Promise.resolve();
 };
 
 return (
-<>;
+<>
 <Button;
 onClick={() => setIsOpen(true)}
 size="icon";
@@ -48,8 +48,8 @@ variant="outline"
 className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hove;  r:bg-zion-purple-light z-50"
 aria-label="Open chat assistant";
 >;
-<MessageSquare aria-hidden="true" className="h-5 w-5" />;
-</Button>;
+<MessageSquare aria-hidden="true" className="h-5 w-5" />
+</Button>
 
 {isOpen && (
 <ChatAssistant;
@@ -62,12 +62,12 @@ avatarUr; l: "http; s: //placehold.co/64x64?text=AI";
 rol; e: "Virtual Assistant",
 }}
 onSendMessage={handleSendMessage}
-/>;
+/>
 )}
-</>;
+</>
 );
 }
-<//><///>;
+<//><///>
 import { useState,  } from "react",
 import { MessageSquare,  } from 'lucide-react'
 import { Button,  } from "@/components/ui/button",
@@ -77,8 +77,8 @@ export function ChatAssistantTrigger() {
 role: 'Virtual Assistant';
 }}
 onSendMessage = {handleSendMessage,}
-/>;
+/>
 )}
-</>;
+</>
 )
 }

@@ -1,9 +1,9 @@
 import { useState,  } from 'react'
 import { BookOpen,, Terminal,  } from 'lucide-react'
 return (
-<div className='border border-zinc-800 rounded-md'>;
-<div className='p-4'>;
-<div className='flex items-center'>;
+<div className='border border-zinc-800 rounded-md'>
+<div className='p-4'>
+<div className='flex items-center'>
 <Badge,
 variant='outline'
 className={
@@ -14,30 +14,30 @@ method === 'GET';
 : method === 'PUT';
 ? 'border-yellow-500 text-yellow-400 font-mono';
 : 'border-red-500 text-red-400 font-mono';
-}          >;
+}          >
 {method}
-</Badge>;
-<span className='ml-2 font-mono text-sm text-white'>{endpoint}</span>;
+</Badge>
+<span className='ml-2 font-mono text-sm text-white'>{endpoint}</span>
 {note && (
-<Badge className='ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800'>;
+<Badge className='ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800'>
 {note}
-</Badge>;
+</Badge>
 )}
-</div>;
-<p className='mt-2 text-zinc-400'>{description}</p>;
-</div>;
+</div>
+<p className='mt-2 text-zinc-400'>{description}</p>
+</div>
 {params.length > 0 && (
-<div className='border-t border-zinc-800 p-4'>;
-<h4 className='font-medium mb-2'>Parameters</h4>;
-<table className='w-full'>;
-<thead>;
-<tr className='text-left border-b border-zinc-800 text-sm'>;
-<th className='pb-2'>Name</th>;
-<th className='pb-2'>Type</th>;
-<th className='pb-2'>Description</th>;
-</tr>;
-</thead>;
-<tbody>;
+<div className='border-t border-zinc-800 p-4'>
+<h4 className='font-medium mb-2'>Parameters</h4>
+<table className='w-full'>
+<thead>
+<tr className='text-left border-b border-zinc-800 text-sm'>
+<th className='pb-2'>Name</th>
+<th className='pb-2'>Type</th>
+<th className='pb-2'>Description</th>
+</tr>
+</thead>
+<tbody>
 {params.map((param index) => (
 <tr,
 key={index}
@@ -47,22 +47,22 @@ index < params.length - 1 ? 'border-b border-zinc-800' : '';
 >;
 <td className='py-2 font-mono text-sm'>                    {param.name}
 {param.required && <span className='text-red-500'>*</span>}
-</td>;
-<td className='py-2 text-sm text-zinc-400'>{param.type}</td>;
-<td className='py-2 text-sm text-zinc-400'>;
+</td>
+<td className='py-2 text-sm text-zinc-400'>{param.type}</td>
+<td className='py-2 text-sm text-zinc-400'>
 {param.description}
-</td>;
-</tr>;
+</td>
+</tr>
 ))}
-</tbody>;
-</table>;
-</div>;
+</tbody>
+</table>
+</div>
 )}
 {codeExamples && (
-<div className='border-t border-zinc-800 p-4'>;
-<div className='flex items-center mb-2'>;
-<h4 className='font-medium'>Request Example</h4>;
-<div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>;
+<div className='border-t border-zinc-800 p-4'>
+<div className='flex items-center mb-2'>
+<h4 className='font-medium'>Request Example</h4>
+<div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
 {Object.keys(codeExamples).map(lang => (                <button,
 key = {lang,}
 className={`px-3 py-1 text-xs font-medium ${
@@ -77,20 +77,20 @@ onClick = {(,) => setActiveTab(lang),}
 : lang === 'javascript';
 ? 'JavaScript';
 : 'Python'}
-</button>;
+</button>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 <CodeBlock,
 code={codeExamples[activeTab] |'// Code example not available'}
-language={activeTab === 'curl' ? 'bash' : activeTab}          />;
-</div>;
+language={activeTab === 'curl' ? 'bash' : activeTab}          />
+</div>
 )}
 {responseExamples && (
-<div className='border-t border-zinc-800 p-4'>;
-<h4 className='font-medium mb-2'>Response</h4>;
-<CodeBlock code={responseExamples.success} language='json' />        </div>;
+<div className='border-t border-zinc-800 p-4'>
+<h4 className='font-medium mb-2'>Response</h4>
+<CodeBlock code={responseExamples.success} language='json' />        </div>
 )}
-</div>;
+</div>
 )
 }

@@ -473,13 +473,13 @@ compliance: ["FERPA", "COPPA", "SOC 2", "ISO 27001", "Accessibility standards"],
 roi: "300% within 12 months"}
 ];
 export const getServiceById: any = (id: string) => {
-return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id),;
+return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
 
 export const getServicesByCategory: any = (category: string) => {
-return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.category === category),;
+return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
 
 export const getServicesByTag: any = (tag: string) => {
-return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.tags.includes(tag)),;
+return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.tags.includes(tag));
 };

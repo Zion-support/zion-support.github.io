@@ -1,22 +1,22 @@
 import { ChevronDown,, ChevronUp,  } from 'lucide-react'
 export function RegionFilter({ selectedRegions toggleRegion expanded toggleSection isMobileFilterOpen }: RegionFilterProps) {
 return (
-<div className="mb-6 border-b border-zion-blue-light pb-6">;
+<div className="mb-6 border-b border-zion-blue-light pb-6">
 <button,
 onClick={toggleSection}
 className="flex w-full items-center justify-between text-white font-medium"
 >;
-<span>Region</span>;
+<span>Region</span>
 {expanded ? (
-<ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+<ChevronUp className="h-4 w-4 text-zion-slate-light" />
 ) : (
-<ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+<ChevronDown className="h-4 w-4 text-zion-slate-light" />
 )}
-</button>;
+</button>
 {expanded && (
-<div className="mt-4 space-y-2">;
+<div className="mt-4 space-y-2">
 {REGION_OPTIONS.map(region => (
-<div key={region.id} className="flex items-center">;
+<div key={region.id} className="flex items-center">
 <Checkbox,
 id={`region-${region.id}`}
 checked={selectedRegions.includes(region.id)}
@@ -28,13 +28,13 @@ className='ml-2 text-sm text-zion-slate-light cursor-pointer'
 >                {region.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
 htmlFor="input-;
 {region.label}
-">;
-</label>;
-</div>;
+">
+</label>
+</div>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 )
 toggleSection,
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)

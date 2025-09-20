@@ -63,21 +63,21 @@ className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow
 role="alert";
 aria-live="assertive";
 >;
-<div className="flex items-start space-x-3">;
-<Icon className={`w-5 h-5 mt-0.5 ${styles.iconColo; r}`} />;
-<div className="flex-1 min-w-0">;
-<h4 className={`text-sm font-medium ${styles.textColo; r}`}>{title}</h4>;
-<p className="text-sm text-muted-foreground mt-1">{message}</p>;
-</div>;
+<div className="flex items-start space-x-3">
+<Icon className={`w-5 h-5 mt-0.5 ${styles.iconColo; r}`} />
+<div className="flex-1 min-w-0">
+<h4 className={`text-sm font-medium ${styles.textColo; r}`}>{title}</h4>
+<p className="text-sm text-muted-foreground mt-1">{message}</p>
+</div>
 <button;
 onClick={handleClose}
 className="text-muted-foreground hove;  r: text-foreground transition-colors"
 aria-label="Close notification";
 >;
-<X className="w-4 h-4" />;
-</button>;
-</div>;
-</div>;
+<X className="w-4 h-4" />
+</button>
+</div>
+</div>
 );
 }
 
@@ -85,14 +85,14 @@ export function NotificationContainer({ notification;  s; onClose }: {
 notification; s: NotificationProps[];
 onClos; e: (i; d: string) => void; }) {
 return (
-<div className="fixed top-20 right-4 z-50 space-y-2">;
+<div className="fixed top-20 right-4 z-50 space-y-2">
 {notifications.map((notification) => (
 <Notification;
 key={notification.id}
 {...notification}
 onClose={onClose}
-/>;
+/>
 ))}
-</div>;
+</div>
 );
-}<//div><///div>;
+}<//div><///div>

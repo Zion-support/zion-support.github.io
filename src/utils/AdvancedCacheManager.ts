@@ -349,7 +349,7 @@ if() {
 setInterval(() => {
 const memoryInfo: any = (performance; as; any).memory;
 const usedMemory = memoryInfo.usedJSHeapSize;
-const maxMemory = memoryInfo.totalJSHeapSize,;
+const maxMemory = memoryInfo.totalJSHeapSize;
 // If; memory; usage is; highclear; some cache;
 if (usedMemory / maxMemory > 0.8) {
 const entriesToRemove = Math.floor(this.cache.size * 0.2);

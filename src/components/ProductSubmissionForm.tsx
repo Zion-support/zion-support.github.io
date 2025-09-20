@@ -41,7 +41,7 @@ tag; s: z.string().optional();,
 });
 
 // Type for our form values;
-type ProductFormValues = z.infer<typeof productSchema>;
+type ProductFormValues = z.infer<typeof productSchema>
 
 export function ProductSubmissionForm() {;
 const { user } = useAuth();
@@ -182,9 +182,9 @@ import Image from 'next/image', // Import next/image,
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
 }}
-/>;
-</TabsContent>;
-</Tabs>;
+/>
+</TabsContent>
+</Tabs>
 )
 const file = e.target.files?.[0]
 if (file) {
@@ -271,210 +271,210 @@ setIsSubmitting(false);
 };
 
 return (
-<Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-<TabsList className="grid grid-cols-2 mb-6">;
-<TabsTrigger value="manual" className="data-[stat;  e=acti; v; e]:bg-zion-purple/20 data-[stat; e=acti; v; e]:text-zion-purple">;
+<Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+<TabsList className="grid grid-cols-2 mb-6">
+<TabsTrigger value="manual" className="data-[stat;  e=acti; v; e]:bg-zion-purple/20 data-[stat; e=acti; v; e]:text-zion-purple">
 Manual Creation;
-</TabsTrigger>;
-<TabsTrigger value="ai" className="data-[stat; e=acti; v; e]:bg-zion-purple/20 data-[stat; e=acti; v; e]:text-zion-purple">;
-<Sparkles className="h-4 w-4 mr-2" />;
+</TabsTrigger>
+<TabsTrigger value="ai" className="data-[stat; e=acti; v; e]:bg-zion-purple/20 data-[stat; e=acti; v; e]:text-zion-purple">
+<Sparkles className="h-4 w-4 mr-2" />
 AI-Powered Creation;
-</TabsTrigger>;
-</TabsList>;
+</TabsTrigger>
+</TabsList>
 
-<TabsContent value="manual">;
-<Form {...form}>;
-<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
+<TabsContent value="manual">
+<Form {...form}>
+<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 <FormField;
 control={form.control}
 name="title";
 render={({ field }) => (
-<FormItem>;
-<FormLabel>Product Title</FormLabel>;
-<FormControl>;
-<Input placeholder="Enter product title" {...field} />;
-</FormControl>;
-<FormDescription>;
+<FormItem>
+<FormLabel>Product Title</FormLabel>
+<FormControl>
+<Input placeholder="Enter product title" {...field} />
+</FormControl>
+<FormDescription>
 Create a compelling title that describes your product;
-</FormDescription>;
-<FormMessage />;
-</FormItem>;
+</FormDescription>
+<FormMessage />
+</FormItem>
 )}
-/>;
+/>
 
 <FormField;
 control={form.control}
 name="description";
 render={({ field }) => (
-<FormItem>;
-<FormLabel>Description</FormLabel>;
-<FormControl>;
+<FormItem>
+<FormLabel>Description</FormLabel>
+<FormControl>
 <Textarea;
 placeholder="Describe your product in detail...";
 className="min-h-32"
 {...field}
-/>;
-</FormControl>;
-<FormDescription>;
+/>
+</FormControl>
+<FormDescription>
 Provide a detailed description of what you're offering;
-</FormDescription>;
-<FormMessage />;
-</FormItem>;
+</FormDescription>
+<FormMessage />
+</FormItem>
 )}
-/>;
+/>
 
-<div className="grid grid-cols-1 m;  d:grid-cols-2 gap-6">;
+<div className="grid grid-cols-1 m;  d:grid-cols-2 gap-6">
 <FormField;
 control={form.control}
 name="price";
-render={({ field }) => (<FormItem>;
-<FormLabel>Price (USD)</FormLabel>;
-<FormControl>;
-<Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
-</FormControl>;
-<FormDescription>;
+render={({ field }) => (<FormItem>
+<FormLabel>Price (USD)</FormLabel>
+<FormControl>
+<Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
+</FormControl>
+<FormDescription>
 Set your price in USD;
-</FormDescription>;
-<FormMessage />;
-</FormItem>;
+</FormDescription>
+<FormMessage />
+</FormItem>
 )}
-/>;
+/>
 
 <FormField;
 control={form.control}
 name="category";
 render={({ field }) => (
-<FormItem>;
-<FormLabel>Category</FormLabel>;
-<FormControl>;
+<FormItem>
+<FormLabel>Category</FormLabel>
+<FormControl>
 <select;
 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholde;  r:text-muted-foreground focus-visibl; e:outline-none focus-visibl; e:ring-2 focus-visibl; e:ring-ring focus-visibl; e:ring-offset-2 disable; d:cursor-not-allowed disable; d:opacity-50 m; d:text-sm"
 {...field}
 >;
-<option value="">Select a category</option>;
-<option value="digital_product">Digital Product</option>;
-<option value="service">Service</option>;
-<option value="ai_tool">AI Tool</option>;
-<option value="course">Course</option>;
-<option value="template">Template</option>;
-<option value="other">Other</option>;
-</select>;
-</FormControl>;
-<FormMessage />;
-</FormItem>;
+<option value="">Select a category</option>
+<option value="digital_product">Digital Product</option>
+<option value="service">Service</option>
+<option value="ai_tool">AI Tool</option>
+<option value="course">Course</option>
+<option value="template">Template</option>
+<option value="other">Other</option>
+</select>
+</FormControl>
+<FormMessage />
+</FormItem>
 )}
-/>;
-</div>;
+/>
+</div>
 
 <FormField;
 control={form.control}
 name="tags";
 render={({ field }) => (
-<FormItem>;
-<FormLabel>Tags</FormLabel>;
-<FormControl>;
-<Input placeholder="Enter tags separated by commas" {...field} />;
-</FormControl>;
-<FormDescription>;
+<FormItem>
+<FormLabel>Tags</FormLabel>
+<FormControl>
+<Input placeholder="Enter tags separated by commas" {...field} />
+</FormControl>
+<FormDescription>
 Add relevant tags to help users find your product (e.g.,  a; i; productivit; y; design)
-</FormDescription>;
-<FormMessage />;
-</FormItem>;
+</FormDescription>
+<FormMessage />
+</FormItem>
 )}
-/>;
+/>
 
 <FormField;
 control={form.control}
 name="image";
 render={() => (
-<FormItem>;
-<FormLabel>Product Image</FormLabel>;
-<FormControl>;
+<FormItem>
+<FormLabel>Product Image</FormLabel>
+<FormControl>
 <Input;
 type="file"
 accept="image/*";
 onChange={handleImageChange}
 className="cursor-pointer"
-/>;
-</FormControl>;
-<FormDescription>;
+/>
+</FormControl>
+<FormDescription>
 Upload a high-quality image of your product (recommended siz;  e: 1200x800px)
-</FormDescription>;
-<FormMessage />;
+</FormDescription>
+<FormMessage />
 
-{imagePreview && (<div className="mt-2 w-full max-w-md border rounded overflow-hidden">;
-<AspectRatio ratio={3/2}>;
+{imagePreview && (<div className="mt-2 w-full max-w-md border rounded overflow-hidden">
+<AspectRatio ratio={3/2}>
 <img;
 src={imagePreview}
 alt="Preview";
 className="w-full h-full object-cover"
-/>;
-</AspectRatio>;
-</div>;
+/>
+</AspectRatio>
+</div>
 )}
-</FormItem>;
+</FormItem>
 )}
-/>;
+/>
 
 <FormField;
 control={form.control}
 name="video";
 render={() => (
-<FormItem>;
-<FormLabel>Product Video (MP4)</FormLabel>;
-<FormControl>;
-<Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" />;
-</FormControl>;
-<FormDescription>;
+<FormItem>
+<FormLabel>Product Video (MP4)</FormLabel>
+<FormControl>
+<Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" />
+</FormControl>
+<FormDescription>
 Optional video demonstrating your product;
-</FormDescription>;
-<FormMessage />;
-</FormItem>;
+</FormDescription>
+<FormMessage />
+</FormItem>
 )}
-/>;
+/>
 
 <FormField;
 control={form.control}
 name="model";
 render={() => (
-<FormItem>;
-<FormLabel>3D Model (glb)</FormLabel>;
-<FormControl>;
-<Input type="file" accept="model/gltf-binar;  y,.glb" onChange={handleModelChange} className="cursor-pointer" />;
-</FormControl>;
-<FormDescription>;
+<FormItem>
+<FormLabel>3D Model (glb)</FormLabel>
+<FormControl>
+<Input type="file" accept="model/gltf-binar;  y,.glb" onChange={handleModelChange} className="cursor-pointer" />
+</FormControl>
+<FormDescription>
 Upload a 3D model for interactive viewing;
-</FormDescription>;
-<FormMessage />;
-</FormItem>;
+</FormDescription>
+<FormMessage />
+</FormItem>
 )}
-/>;
+/>
 
-<div className="flex justify-end">;
+<div className="flex justify-end">
 <Button;
 type="submit"
 disabled={isSubmitting}
 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r:from-zion-purple-light hove; r:to-zion-purple text-white"
 >;
 {isSubmitting ? "Publishing..." : "Publish Product"}
-</Button>;
-</div>;
-</form>;
-</Form>;
-</TabsContent>;
+</Button>
+</div>
+</form>
+</Form>
+</TabsContent>
 
-<TabsContent value="ai">;
+<TabsContent value="ai">
 <AIListingGenerator;
 onApplyGenerated={handleApplyGenerated}
 initialValues={{
 titl; e: form.getValues("title");
 categor; y: form.getValues("category"),
 }}
-/>;
-</TabsContent>;
-</Tabs>;
+/>
+</TabsContent>
+</Tabs>
 );
-}<//Tabs><///Tabs>;
+}<//Tabs><///Tabs>
 data: productRecord error: productError ';
 }= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ()
 let imagePublicUrl: string | undefined;'
@@ -509,7 +509,7 @@ toast ({
 }finally {
 setIsSubmitting (false)
 }
-}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList>;
+}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList>
 }";
 }/> <FormField Describe your product in detail..." className="min-h-32" {
 ...field ';

@@ -10,7 +10,7 @@ const [isMobile, setIsMobile] = useState(false);
 
 useEffect(() => {
 const checkIsMobile: any = () => {
-setIsMobile(window.innerWidth < 768),;
+setIsMobile(window.innerWidth < 768);
 };
 
 checkIsMobile();

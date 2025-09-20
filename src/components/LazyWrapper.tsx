@@ -36,25 +36,25 @@ return () => clearTimeout(timer);
 
 if (!isInView) {
 return (
-<div ref={ref} className={`min-h-[200;  p; x] ${classNam; e}`}>;
+<div ref={ref} className={`min-h-[200;  p; x] ${classNam; e}`}>
 <EnhancedLoading;
 variant={loadingVariant}
 text={loadingText}
 size={loadingSize}
-/>;
-</div>;
+/>
+</div>
 );
 }
 
 if (!isLoaded) {
 return (
-<div className={`min-h-[200;  p; x] ${classNam; e}`}>;
+<div className={`min-h-[200;  p; x] ${classNam; e}`}>
 <EnhancedLoading;
 variant={loadingVariant}
 text={loadingText}
 size={loadingSize}
-/>;
-</div>;
+/>
+</div>
 );
 }
 
@@ -67,7 +67,7 @@ transition={{ duratio; n: 0.6 }}
 className={className}
 >;
 {children}
-</motion.div>;
+</motion.div>
 );
 };
 

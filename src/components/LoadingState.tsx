@@ -15,15 +15,15 @@ color = 'blue',
 text;
 }) => {
 const sizeClasses = {;
-sm: 'w-4 h-4',;
-md: 'w-8 h-8',;
+sm: 'w-4 h-4';
+md: 'w-8 h-8';
 lg: 'w-12 h-12';};
 
 const colorClasses = {
 blue: 'border-blue-500',
-green: 'border-green-500',;
-purple: 'border-purple-500',;
-red: 'border-red-500',;
+green: 'border-green-500';
+purple: 'border-purple-500';
+red: 'border-red-500';
 };
 
 const renderLoading: any = () => {
@@ -34,15 +34,15 @@ return (
 className={\`border-4 border-gray-200 border-t-4 \${colorClasses[color as keyof typeof colorClasses]} \${sizeClasses[size]} rounded-full\`}
 animate={{ rotate: 360 }}
 transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-/>;
+/>
 );
 
 case 'skeleton':
 return (
-<div className="animate-pulse">;
-<div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>;
-<div className="h-4 bg-gray-300 rounded w-1/2"></div>;
-</div>;
+<div className="animate-pulse">
+<div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
+<div className="h-4 bg-gray-300 rounded w-1/2"></div>
+</div>
 );
 
 case 'pulse':
@@ -51,12 +51,12 @@ return (
 className={\`\${sizeClasses[size]} bg-${color}-500 rounded-full\`}
 animate={{ scale: [1, 1.2, 1] }}
 transition={{ duration: 1, repeat: Infinity }}
-/>;
+/>
 );
 
 case 'dots':
 return (
-<div className="flex space-x-1">;
+<div className="flex space-x-1">
 {[0, 1, 2].map((i) => (
 <motion.div;
 key={i}
@@ -66,16 +66,16 @@ transition={{
 duration: 0.6,
 repeat: Infinity,
 delay: i * 0.2}}
-/>;
+/>
 ))}
-</div>;
+</div>
 );
 
 default: return null;}
 };
 
 return (
-<div className="flex flex-col items-center justify-center space-y-4">;
+<div className="flex flex-col items-center justify-center space-y-4">
 {renderLoading()}
 {text && (
 <motion.p;
@@ -84,11 +84,11 @@ animate={{ opacity: 1 }}
 className="text-gray-600 text-sm"
 >;
 {text}
-</motion.p>;
+</motion.p>
 )}
-</div>;
+</div>
 );
 };
 
 export default LoadingState;
-<//div><///div>;
+<//div><///div>

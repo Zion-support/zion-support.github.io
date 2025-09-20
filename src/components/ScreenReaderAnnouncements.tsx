@@ -22,11 +22,11 @@ height: '1px',
 overflow: 'hidden'}}
 >;
 {announcements.map((announcement, index) => (
-<div key={index}>{announcement}</div>;
+<div key={index}>{announcement}</div>
 ))};
-</div>;
+</div>
 );
 };
 
 export default ScreenReaderAnnouncements;
-<//div><///div>;
+<//div><///div>

@@ -44,12 +44,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 private retryTimeouts: NodeJS.Timeout[] = [];
 constructor(props: ErrorBoundaryProps) {
 super(props)
-errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>;
+errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>
 ,) => {
 const WrappedComponent: any = (props: P;) => (
-<GlobalErrorBoundary {...errorBoundaryProps}>;
-<Component {...props} />;
-</GlobalErrorBoundary>;
+<GlobalErrorBoundary {...errorBoundaryProps}>
+<Component {...props} />
+</GlobalErrorBoundary>
 )
 WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`;
 return WrappedComponent,

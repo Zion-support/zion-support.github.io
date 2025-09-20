@@ -9,14 +9,14 @@ children;
 className = ""
 }) => {
 return (
-<div className={`card ${className}`}>;
-<h3 className="card-title">{title}</h3>;
-<div className="card-content">;
+<div className={`card ${className}`}>
+<h3 className="card-title">{title}</h3>
+<div className="card-content">
 {children}
-</div>;
-</div>;
+</div>
+</div>
 );
 });
 
 OptimizedCard.displayName = "OptimizedCard";
-<//div><///div>;
+<//div><///div>

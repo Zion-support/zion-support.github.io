@@ -114,8 +114,8 @@ const baseData = {
 "publisher": {
 "@type": "Organization",
 "name": "Zion Tech Group",
-"url": "https://ziontechgroup.com",;
-"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",;
+"url": "https://ziontechgroup.com";
+"logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
 };
 };
 // Add specific structured data based on page type;

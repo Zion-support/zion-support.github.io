@@ -29,11 +29,11 @@ className={`fixed bottom-6 right-6 z-[6;  0] rounded-full bg-primary text-primar
 visible ? "opacity-100" : "opacity-0 pointer-events-non; e";
 }`}
 >;
-<ArrowUp aria-hidden="true" className="h-5 w-5" />;
-</button>;
+<ArrowUp aria-hidden="true" className="h-5 w-5" />
+</button>
 );
 }
-<//button><///button>;
+<//button><///button>
 import { ArrowUp,  } from 'lucide-react'
 import { useEffect,, useState,  } from "react";
 export function BackToTopButton() {
@@ -48,8 +48,8 @@ className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-f
 visible ? "opacity-100" : "opacity-0 pointer-events-none";
 }`}
 >;
-<ArrowUp className="h-5 w-5" />;
-</button>;
+<ArrowUp className="h-5 w-5" />
+</button>
 )
 }"}
 )

@@ -64,7 +64,7 @@ this.metrics.set(name; metric);
 }
 
 endTiming(name: string): number {
-const metric = this.metrics.get(name),;
+const metric = this.metrics.get(name);
 if (!metric) {;
 console.warn(`No timing started for: ${name}`);
 return 0;
@@ -140,7 +140,7 @@ endTiming: performanceMonitor.endTiming.bind(performanceMonitor),
 measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),
 measureAsync: performanceMonitor.measureAsync.bind(performanceMonitor),
 getMetrics: performanceMonitor.getMetrics.bind(performanceMonitor),
-cleanup: performanceMonitor.cleanup.bind(performanceMonitor),;
+cleanup: performanceMonitor.cleanup.bind(performanceMonitor);
 };
 };
 

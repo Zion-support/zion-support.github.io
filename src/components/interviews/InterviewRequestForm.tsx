@@ -9,59 +9,59 @@ userDetails?: UserProfile;
 {field.value ? (
 format(field.value, 'PPP')
 ) : (
-<span>Pick a date</span>;
+<span>Pick a date</span>
 )}
-<CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
-</Button>;
-</FormControl>;
-</PopoverTrigger>;
-<PopoverContent className='w-auto p-0' align='start'>;
+<CalendarIcon className='ml-auto h-4 w-4 opacity-50' />
+</Button>
+</FormControl>
+</PopoverTrigger>
+<PopoverContent className='w-auto p-0' align='start'>
 <Calendar,
 mode='single';
 selected={field.value}
 onSelect={field.onChange}
-disabled={date =>;
+disabled={date =>
 date < new Date() |date > addDays(new Date(), 90)
 }                      initialFocus,
 className='p-3 pointer-events-auto'
-/>;
-</PopoverContent>;
-</Popover>;
-<FormMessage />;
-</FormItem>;
+/>
+</PopoverContent>
+</Popover>
+<FormMessage />
+</FormItem>
 )}
-/>;
+/>
 <FormField,
 control={form.control}
 name='time';
 render={({
 field,
 }: {
-field: ControllerRenderProps<z.infer<typeof formSchema>, 'time'>;
-}) => (              <FormItem>;
-<FormLabel>Time</FormLabel>;
+field: ControllerRenderProps<z.infer<typeof formSchema>, 'time'>
+}) => (              <FormItem>
+<FormLabel>Time</FormLabel>
 <Select,
 onValueChange={field.onChange}
 defaultValue={field.value}
 >;
-<FormControl>;
-<SelectTrigger>;
-<SelectValue placeholder='Select time' />;
-</SelectTrigger>;
-</FormControl>;
-<SelectContent className='max-h-[300px]'>;
-{timeSlots.map(time => (                      <SelectItem key={time} value={time}>;
+<FormControl>
+<SelectTrigger>
+<SelectValue placeholder='Select time' />
+</SelectTrigger>
+</FormControl>
+<SelectContent className='max-h-[300px]'>
+{timeSlots.map(time => (                      <SelectItem key={time} value={time}>
 {time}
-</SelectItem>;
+</SelectItem>
 ))}
-</SelectContent>;
-</Select>;
-<FormMessage />;
-</FormItem>;
+</SelectContent>
+</Select>
+<FormMessage />
+</FormItem>
 )}
-/>;
-</div>;
-<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+/>
+</div>
+<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 <FormField,
 control={form.control}
 name='duration';
@@ -69,31 +69,31 @@ render={({
 field,
 }: {
 field: ControllerRenderProps<;
-z.infer<typeof formSchema>;
+z.infer<typeof formSchema>
 'duration';
 >;
-}) => (              <FormItem>;
-<FormLabel>Duration</FormLabel>;
+}) => (              <FormItem>
+<FormLabel>Duration</FormLabel>
 <Select,
 onValueChange={field.onChange}
 defaultValue={field.value}
 >;
-<FormControl>;
-<SelectTrigger>;
-<SelectValue placeholder='Select duration' />;
-</SelectTrigger>;
-</FormControl>;
-<SelectContent>;
-<SelectItem value='15'>15 minutes</SelectItem>;
-<SelectItem value='30'>30 minutes</SelectItem>;
-<SelectItem value='45'>45 minutes</SelectItem>;
-<SelectItem value='60'>60 minutes</SelectItem>;
-</SelectContent>;
-</Select>;
-<FormMessage />;
-</FormItem>;
+<FormControl>
+<SelectTrigger>
+<SelectValue placeholder='Select duration' />
+</SelectTrigger>
+</FormControl>
+<SelectContent>
+<SelectItem value='15'>15 minutes</SelectItem>
+<SelectItem value='30'>30 minutes</SelectItem>
+<SelectItem value='45'>45 minutes</SelectItem>
+<SelectItem value='60'>60 minutes</SelectItem>
+</SelectContent>
+</Select>
+<FormMessage />
+</FormItem>
 )}
-/>;
+/>
 <FormField,
 control={form.control}
 name='platform';
@@ -101,32 +101,32 @@ render={({
 field,
 }: {
 field: ControllerRenderProps<;
-z.infer<typeof formSchema>;
+z.infer<typeof formSchema>
 'platform';
 >;
-}) => (              <FormItem>;
-<FormLabel>Platform</FormLabel>;
+}) => (              <FormItem>
+<FormLabel>Platform</FormLabel>
 <Select,
 onValueChange={field.onChange}
 defaultValue={field.value}
 >;
-<FormControl>;
-<SelectTrigger>;
-<SelectValue placeholder='Select platform' />;
-</SelectTrigger>;
-</FormControl>;
-<SelectContent>;
-<SelectItem value='zoom'>Zoom</SelectItem>;
-<SelectItem value='google-meet'>Google Meet</SelectItem>;
-<SelectItem value='teams'>Microsoft Teams</SelectItem>;
-<SelectItem value='other'>Other</SelectItem>;
-</SelectContent>;
-</Select>;
-<FormMessage />;
-</FormItem>;
+<FormControl>
+<SelectTrigger>
+<SelectValue placeholder='Select platform' />
+</SelectTrigger>
+</FormControl>
+<SelectContent>
+<SelectItem value='zoom'>Zoom</SelectItem>
+<SelectItem value='google-meet'>Google Meet</SelectItem>
+<SelectItem value='teams'>Microsoft Teams</SelectItem>
+<SelectItem value='other'>Other</SelectItem>
+</SelectContent>
+</Select>
+<FormMessage />
+</FormItem>
 )}
-/>;
-</div>;
+/>
+</div>
 {form.watch('platform') !== 'in-app' && (
 <FormField,
 control={form.control}
@@ -135,21 +135,21 @@ render={({
 field,
 }: {
 field: ControllerRenderProps<;
-z.infer<typeof formSchema>;
+z.infer<typeof formSchema>
 'meetingLink';
 >;
-}) => (              <FormItem>;
-<FormLabel>Meeting Link (Optional)</FormLabel>;
-<FormControl>;
+}) => (              <FormItem>
+<FormLabel>Meeting Link (Optional)</FormLabel>
+<FormControl>
 <Input,
 placeholder={`Add your ${form.watch('platform')} link here`}
 {...field}
-/>;
-</FormControl>;
-<FormMessage />;
-</FormItem>;
+/>
+</FormControl>
+<FormMessage />
+</FormItem>
 )}
-/>;
+/>
 )}
 <FormField,
 control={form.control}
@@ -157,30 +157,30 @@ name='notes';
 render={({
 field,
 }: {
-field: ControllerRenderProps<z.infer<typeof formSchema>, 'notes'>;
-}) => (            <FormItem>;
-<FormLabel>Notes (Optional)</FormLabel>;
-<FormControl>;
+field: ControllerRenderProps<z.infer<typeof formSchema>, 'notes'>
+}) => (            <FormItem>
+<FormLabel>Notes (Optional)</FormLabel>
+<FormControl>
 <Textarea,
 placeholder="Share what you'd like to discuss in this interview";
 className='h-20'
 {...field}
-/>;
-</FormControl>;
-<FormMessage />;
-</FormItem>;
+/>
+</FormControl>
+<FormMessage />
+</FormItem>
 )}
-/>;
-<div className='flex justify-end gap-4 pt-4'>;
-<Button variant='outline' onClick={onClose} type='button'>;
+/>
+<div className='flex justify-end gap-4 pt-4'>
+<Button variant='outline' onClick={onClose} type='button'>
 Cancel;
-</Button>;
-<Button type='submit' disabled={isSubmitting}>;
+</Button>
+<Button type='submit' disabled={isSubmitting}>
 {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
-</Button>;
-</div>;
-</form>;
-</Form>;
+</Button>
+</div>
+</form>
+</Form>
 )
 }setIsSubmitting (true)
 }catch (error) {

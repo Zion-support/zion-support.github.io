@@ -1,92 +1,92 @@
 interface ApplicationsTableProps {
 applications: JobApplication[];,
 processingId: string | null;,
-onViewApplication: (applicationId: string) => Promise<void>;,
-onStatusChange: (applicationId: string newStatus: string) => Promise<void>;,
+onViewApplication: (applicationId: string) => Promise<void>,
+onStatusChange: (applicationId: string newStatus: string) => Promise<void>,
 onViewScore: (application: JobApplication) => void,
 }
 // Sub-component for avatar to handle its own error state,
 return (
-<>;
-<div className='rounded-md border'>;
-<Table>;
-<TableHeader>;
-<TableRow>;
-<TableHead>Candidate</TableHead>;
-<TableHead className='hidden md:table-cell'>Applied</TableHead>;
-<TableHead className='hidden md:table-cell'>Status</TableHead>;
-<TableHead className='hidden lg:table-cell'>;
+<>
+<div className='rounded-md border'>
+<Table>
+<TableHeader>
+<TableRow>
+<TableHead>Candidate</TableHead>
+<TableHead className='hidden md:table-cell'>Applied</TableHead>
+<TableHead className='hidden md:table-cell'>Status</TableHead>
+<TableHead className='hidden lg:table-cell'>
 Match Score;
-</TableHead>;
-<TableHead className='text-right'>Actions</TableHead>;
-</TableRow>;
-</TableHeader>;
-<TableBody>;
-{applications.map(application => (              <TableRow key={application.id}>;
-<TableCell>;
-<div className='flex items-center gap-3'>;
+</TableHead>
+<TableHead className='text-right'>Actions</TableHead>
+</TableRow>
+</TableHeader>
+<TableBody>
+{applications.map(application => (              <TableRow key={application.id}>
+<TableCell>
+<div className='flex items-center gap-3'>
 <ApplicationAvatar application={application} />{' '}
 {/* Use sub-component */}
-<div>;
-<div className='font-medium'>;
+<div>
+<div className='font-medium'>
 {application.talent_profile?.full_name |'Candidate'}
-</div>;
-<div className='text-xs text-muted-foreground mt-0.5'>;
+</div>
+<div className='text-xs text-muted-foreground mt-0.5'>
 {application.talent_profile?.professional_title |;
 'Applicant'}
-</div>;
-</div>;
-</div>;
-</TableCell>;
-<TableCell className='hidden md:table-cell'>;
+</div>
+</div>
+</div>
+</TableCell>
+<TableCell className='hidden md:table-cell'>
 {format(new Date(application.created_at), 'PP')}
-</TableCell>;
-<TableCell className='hidden md:table-cell'>;
-<StatusBadge status={application.status} />;
-</TableCell>;
-<TableCell className='hidden lg:table-cell'>;
+</TableCell>
+<TableCell className='hidden md:table-cell'>
+<StatusBadge status={application.status} />
+</TableCell>
+<TableCell className='hidden lg:table-cell'>
 {application.match_score !== undefined &&;
 application.match_score !== null ? (
 <ClickableBadge,
 variant='outline'
 className='cursor-pointer'
-onClick={() => onViewScore(application)}                    >;
+onClick={() => onViewScore(application)}                    >
 {application.match_score}%;
-</ClickableBadge>;
+</ClickableBadge>
 ) : (
-<span className='text-muted-foreground text-sm'>;
+<span className='text-muted-foreground text-sm'>
 Not scored;
-</span>;
+</span>
 )}
-</TableCell>;
-<TableCell className='text-right'>;
-<div className='flex items-center justify-end gap-2'>;
+</TableCell>
+<TableCell className='text-right'>
+<div className='flex items-center justify-end gap-2'>
 <ClickableBadge,
 variant='outline'
 className='cursor-pointer bg-green-50 hover:bg-green-100 text-green-700'
-onClick={() => handleHireClick(application)}                    >;
+onClick={() => handleHireClick(application)}                    >
 <Briefcase className='h-3 w-3 mr-1' /> Hire;
-</ClickableBadge>;
+</ClickableBadge>
 <ApplicationActions,
 application = {application,}
 processingId = {processingId,}
 onViewApplication = {onViewApplication,}
 onStatusChange = {onStatusChange,}
-/>;
-</div>;
-</TableCell>;
-</TableRow>;
+/>
+</div>
+</TableCell>
+</TableRow>
 ))}
-</TableBody>;
-</Table>;
-</div>;
+</TableBody>
+</Table>
+</div>
 <HireConfirmationModal,
 isOpen = {hireModalOpen,}
 onClose = {() => setHireModalOpen(false),}
 application = {selectedApplication |undefined,}
 onConfirm = {handleHireConfirmed,}
-/>;
-</>;
+/>
+</>
 )
 /* Using Renamed AvatarPrimitive */;
 }{

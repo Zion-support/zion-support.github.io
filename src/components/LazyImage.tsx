@@ -12,8 +12,8 @@ onError?: () => void;
 };
 export const LazyImage: React.FC<LazyImageProps> = ({
 src,
-alt,;
-className = '',;
+alt;
+className = '';
 placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
 onLoad,
 onError;
@@ -50,7 +50,7 @@ onError?.();
 };
 
 return (
-<div ref={imgRef} className={className}>;
+<div ref={imgRef} className={className}>
 {isInView && (
 <motion.img;
 src={isLoaded ? src : placeholder}
@@ -61,14 +61,14 @@ initial={{ opacity: 0 }}
 animate={{ opacity: isLoaded ? 1 : 0.3 }}
 transition={{ duration: 0.3 }}
 className="w-full h-full object-cover"
-/>;
+/>
 )}
 {!isInView && (
-<div className="w-full h-full bg-gray-200 animate-pulse" />;
+<div className="w-full h-full bg-gray-200 animate-pulse" />
 )}
-</div>;
+</div>
 );
 };
 
 export default LazyImage;
-<//div><///div>;
+<//div><///div>

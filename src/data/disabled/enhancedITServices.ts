@@ -527,13 +527,13 @@ image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fi
 ];
 
 export const getITServiceById: any = (id: string): ITService | undefined => {
-return ENHANCED_IT_SERVICES.find(service => service.id === id),;
+return ENHANCED_IT_SERVICES.find(service => service.id === id);
 };
 
 export const getITServicesByCategory: any = (category: string): ITService[] => {
-return ENHANCED_IT_SERVICES.filter(service => service.category === category),;
+return ENHANCED_IT_SERVICES.filter(service => service.category === category);
 };
 
 export const getITServiceCategories: any = (): string[] => {
-return [...new Set(ENHANCED_IT_SERVICES.map(service => service.category))],;
+return [...new Set(ENHANCED_IT_SERVICES.map(service => service.category))];
 };

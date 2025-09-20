@@ -914,8 +914,8 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 "AI & Manufacturing",
 "AI & Education",
 "AI & Agriculture",
-"AI & Transportation",;
-"AI & Insurance",;
+"AI & Transportation";
+"AI & Insurance";
 "AI & Gaming";
 ];
 
@@ -932,7 +932,7 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = [
 "Quality Control",
 "Personalized Learning",
 "Precision Farming",
-"Logistics Optimization",;
-"Risk Assessment",;
+"Logistics Optimization";
+"Risk Assessment";
 "Entertainment";
 ];

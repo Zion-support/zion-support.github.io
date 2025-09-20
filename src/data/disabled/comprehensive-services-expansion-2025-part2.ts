@@ -482,7 +482,7 @@ export const allAdditionalServices2025 = {;
 advancedAI: additionalAdvancedAIServices2025; blockchain: advancedBlockchainServices2025; cybersecurity: advancedCybersecurityServices2025; cloudDevOps: advancedCloudDevOpsServices2025; healthcare: advancedHealthcareServices2025; iot: advancedIoTServices2025; quantum: advancedQuantumServices2025; space: advancedSpaceServices2025; sustainability: advancedSustainabilityServices2025; fintech: advancedFintechServices2025};
 // Combined services export;
 export const allComprehensiveServices2025 = {;
-...allAdditionalServices2025,;
+...allAdditionalServices2025;
 };
 
 // Helper functions for additional services;

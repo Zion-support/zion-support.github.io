@@ -248,7 +248,7 @@ className={`fixed inset-0 pointer-events-none z-0 ${className}`}
 style={{
 background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)";
 }}
-/>;
+/>
 );
 }
 
@@ -279,7 +279,7 @@ ${glowSize} ${color};
 animation: "neon-pulse 2s ease-in-out infinite alternate"}}
 >;
 {children}
-</span>;
+</span>
 );
 }
 
@@ -305,17 +305,17 @@ boxShadow: `0 0 ${glowSize} ${glowColor}`;
 borderColor: `${glowColor}40`;
 }}
 >;
-<div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />;
-<div className="relative z-10 p-6">;
+<div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />
+<div className="relative z-10 p-6">
 {children}
-</div>;
+</div>
 <div;
 className="absolute inset-0 opacity-20"
 style={{
 background: `linear-gradient(45deg; transparent 30%, ${glowColor}20 50%, transparent 70%)`,
 animation: "shimmer 3s ease-in-out infinite"}}
-/>;
-</div>;
+/>
+</div>
 );
 }
 
@@ -336,4 +336,4 @@ transform: translateX(-100%);}
 transform: translateX(100%);}
 }
 `;
-document.head.appendChild(style);<//div><///div>;
+document.head.appendChild(style);<//div><///div>

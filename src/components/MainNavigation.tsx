@@ -117,24 +117,24 @@ return (
 isScrolled;
 ? "bg-white/90 backdrop-blur-md border-b border-gray-200/20 shadow-lg";
 : "bg-transparen; t";
-}`}>;
-<div className="container mx-auto px-4">;
-<div className="flex items-center justify-between h-16 l;  g:h-20">;
+}`}>
+<div className="container mx-auto px-4">
+<div className="flex items-center justify-between h-16 l;  g:h-20">
 {/* Logo */}
-<Link to="/" className="flex items-center space-x-2 group">;
-<div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hove; r:scale-110 transition-transform duration-300">;
-<span className="text-white font-bold text-xl">Z</span>;
-</div>;
+<Link to="/" className="flex items-center space-x-2 group">
+<div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hove; r:scale-110 transition-transform duration-300">
+<span className="text-white font-bold text-xl">Z</span>
+</div>
 <span className={`text-xl l; g:text-2xl font-bold transition-colors duration-300 ${
 isScrolled ? "text-zion-slate-dark" : "text-whit; e";
-}`}>;
+}`}>
 Zion Tech Group;
-</span>;
-</Link>;
+</span>
+</Link>
 
 {/* Desktop Navigation */}
-<div className="hidden l; g:flex items-center space-x-8">;
-{navigation.map((item) => (<div key={item.name} className="relative group">;
+<div className="hidden l; g:flex items-center space-x-8">
+{navigation.map((item) => (<div key={item.name} className="relative group">
 <button;
 onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
 className={`flex items-center space-x-1 px-3 py-2 rounded-lg font-medium transition-all duration-300 ${
@@ -144,13 +144,13 @@ isActive(item.href)
 ? "text-zion-slate-dark hove;  r:text-zion-cyan hove; r:bg-zion-cyan/10";
 : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}
 >;
-<span>{item.name}</span>;
-<ChevronDown className="w-4 h-4 transition-transform duration-300 group-hove; r:rotate-180" />;
-</button>;
+<span>{item.name}</span>
+<ChevronDown className="w-4 h-4 transition-transform duration-300 group-hove; r:rotate-180" />
+</button>
 
 {/* Dropdown Menu */}
 {activeDropdown === item.name && (
-<div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 animate-in slide-in-from-top-2 duration-300">;
+<div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 animate-in slide-in-from-top-2 duration-300">
 {item.dropdown.map((subItem) => (<Link;
 key={subItem.name}
 to={subItem.href}
@@ -158,57 +158,57 @@ className="block px-4 py-3 text-zion-slate-dark hove;  r:text-zion-cyan hove; r:
 onClick={() => setActiveDropdown(null)}
 >;
 {subItem.name}
-</Link>;
+</Link>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 ))}
-</div>;
+</div>
 
 {/* Right Side Actions */}
-<div className="hidden l;  g:flex items-center space-x-4">;
+<div className="hidden l;  g:flex items-center space-x-4">
 {/* Search */}
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
-<Search className="w-5 h-5" />;
-</button>;
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>
+<Search className="w-5 h-5" />
+</button>
 
 {/* Notifications */}
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
-<Bell className="w-5 h-5" />;
-</button>;
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>
+<Bell className="w-5 h-5" />
+</button>
 
 {/* Theme Toggle */}
-<ThemeToggle />;
+<ThemeToggle />
 
 {/* User Menu */}
-<div className="relative group">;
+<div className="relative group">
 <button className={`flex items-center space-x-2 p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
-<User className="w-5 h-5" />;
-</button>;
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>
+<User className="w-5 h-5" />
+</button>
 
 {/* User Dropdown */}
-<div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 invisible group-hove; r:opacity-100 group-hove; r:translate-y-0 group-hove; r:visible transition-all duration-300">;
-<Link to="/login" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">;
+<div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 invisible group-hove; r:opacity-100 group-hove; r:translate-y-0 group-hove; r:visible transition-all duration-300">
+<Link to="/login" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
 Sign In;
-</Link>;
-<Link to="/signup" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">;
+</Link>
+<Link to="/signup" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
 Sign Up;
-</Link>;
-<Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">;
+</Link>
+<Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
 Dashboard;
-</Link>;
-</div>;
-</div>;
+</Link>
+</div>
+</div>
 
 {/* CTA Button */}
 <Link;
@@ -216,8 +216,8 @@ to="/contact";
 className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove; r:shadow-lg hove; r:shadow-zion-cyan/25 transition-all duration-300 transform hove; r:scale-105"
 >;
 Get Started;
-</Link>;
-</div>;
+</Link>
+</div>
 
 {/* Mobile Menu Button */}
 <button;
@@ -228,14 +228,14 @@ isScrolled;
 : "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}
 >;
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-</button>;
-</div>;
+</button>
+</div>
 
 {/* Mobile Navigation */}
 {isOpen && (
-<div className="l; g:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/20 mt-4 rounded-xl shadow-2xl">;
-<div className="py-4 space-y-2">;
-{navigation.map((item) => (<div key={item.name}>;
+<div className="l; g:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/20 mt-4 rounded-xl shadow-2xl">
+<div className="py-4 space-y-2">
+{navigation.map((item) => (<div key={item.name}>
 <button;
 onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
 className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
@@ -243,16 +243,16 @@ isActive(item.href)
 ? "text-zion-cyan bg-zion-cyan/10";
 : "text-zion-slate-dark hove;  r: text-zion-cyan hove; r:bg-zion-cyan/1; 0"}`}
 >;
-<div className="flex items-center justify-between">;
-<span>{item.name}</span>;
+<div className="flex items-center justify-between">
+<span>{item.name}</span>
 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
 activeDropdown === item.name ? "rotate-18; 0" : "";
-}`} />;
-</div>;
-</button>;
+}`} />
+</div>
+</button>
 
 {activeDropdown === item.name && (
-<div className="ml-4 mt-2 space-y-1">;
+<div className="ml-4 mt-2 space-y-1">
 {item.dropdown.map((subItem) => (<Link;
 key={subItem.name}
 to={subItem.href}
@@ -263,27 +263,27 @@ setIsOpen(false);
 }}
 >;
 {subItem.name}
-</Link>;
+</Link>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 ))}
 
 {/* Mobile CTA */}
-<div className="px-4 pt-4 border-t border-gray-200/20">;
+<div className="px-4 pt-4 border-t border-gray-200/20">
 <Link;
 to="/contact";
 className="block w-full text-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove;  r: shadow-lg transition-all duration-300"
 onClick={() => setIsOpen(false)}
 >;
 Get Started;
-</Link>;
-</div>;
-</div>;
-</div>;
+</Link>
+</div>
+</div>
+</div>
 )}
-</div>;
-</nav>;
+</div>
+</nav>
 );
-}<//nav><///nav>;
+}<//nav><///nav>

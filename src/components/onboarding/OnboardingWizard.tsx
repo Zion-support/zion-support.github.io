@@ -17,37 +17,37 @@ className?: string
 : index < currentStep;
 ? 'bg-zion-cyan';
 : 'bg-zion-blue-light';
-)}              />;
+)}              />
 ))}
-</div>;
-</div>;
-<div className='flex flex-col items-center text-center p-4'>;
-<div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
+</div>
+</div>
+<div className='flex flex-col items-center text-center p-4'>
+<div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>
 {steps[currentStep]?.icon}
-</div>;
-<h3 className='text-xl font-bold text-white mb-2'>;
+</div>
+<h3 className='text-xl font-bold text-white mb-2'>
 {steps[currentStep]?.title}
-</h3>;
-<p className='text-zion-slate-light mb-6'>;
+</h3>
+<p className='text-zion-slate-light mb-6'>
 {steps[currentStep]?.description}
-</p>;
-</div>;
-</CardContent>;
-<CardFooter className='flex flex-col space-y-2'>;
+</p>
+</div>
+</CardContent>
+<CardFooter className='flex flex-col space-y-2'>
 <Button,
 className='w-full bg-zion-purple hover:bg-zion-purple-light'
-onClick={handleAction}        >;
+onClick={handleAction}        >
 {steps[currentStep]?.action.text}
-</Button>;
+</Button>
 {steps[currentStep]?.skipText && (
 <Button,
 variant='ghost'
 className='text-zion-slate-light hover:text-white'
-onClick={handleSkip}          >;
+onClick={handleSkip}          >
 {steps[currentStep]?.skipText}
-</Button>;
+</Button>
 )}
-</CardFooter>;
-</Card>;
+</CardFooter>
+</Card>
 )
 }

@@ -3,4 +3,4 @@ return (,
 <h3 className="text-xl font-bold mb-4">EnhancedHeaderNew</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>,
 </div>)},
-<//div><///div>;
+<//div><///div>

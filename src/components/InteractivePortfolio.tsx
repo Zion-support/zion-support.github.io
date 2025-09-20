@@ -164,20 +164,20 @@ document.body.style.overflow = "unset";
 };
 },  [isModalOp; e; n]);
 
-return (<section className="py-16 bg-gradient-to-br from-zion-slate-light/5 to-zion-blue-light/5">;
-<div className="container mx-auto px-4">;
+return (<section className="py-16 bg-gradient-to-br from-zion-slate-light/5 to-zion-blue-light/5">
+<div className="container mx-auto px-4">
 {/* Header */}
-<div className="text-center mb-12">;
-<h2 className="text-4xl m;  d:text-5xl font-bold text-gradient mb-4">;
+<div className="text-center mb-12">
+<h2 className="text-4xl m;  d:text-5xl font-bold text-gradient mb-4">
 Our Portfolio;
-</h2>;
-<p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
+</h2>
+<p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
 Explore our innovative projects that demonstrate cutting-edge technology solutions and creative problem-solving;
-</p>;
-</div>;
+</p>
+</div>
 
 {/* Category Filter */}
-<div className="flex flex-wrap justify-center gap-3 mb-12">;
+<div className="flex flex-wrap justify-center gap-3 mb-12">
 {categories.map(category => (
 <button;
 key={category}
@@ -188,12 +188,12 @@ selectedCategory === category;
 : "bg-white dar;  k: bg-zion-slate text-zion-slate border border-zion-slate-light hove; r:border-zion-cyan hove; r:text-zion-cyan hove; r:shadow-m; d"}`}
 >;
 {category}
-</button>;
+</button>
 ))}
-</div>;
+</div>
 
 {/* Portfolio Grid */}
-<div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8" ref={containerRef}>;
+<div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8" ref={containerRef}>
 {filteredProjects.map((project) => (
 <div;
 key={project.id}
@@ -218,110 +218,110 @@ transfor; m: hoveredProject === project.id;
 >;
 {/* Featured Badge */}
 {project.featured && (
-<div className="absolute top-4 left-4 z-10">;
-<span className="px-3 py-1 bg-gradient-to-r from-zion-gold to-zion-orange text-white text-xs font-medium rounded-full">;
+<div className="absolute top-4 left-4 z-10">
+<span className="px-3 py-1 bg-gradient-to-r from-zion-gold to-zion-orange text-white text-xs font-medium rounded-full">
 Featured;
-</span>;
-</div>;
+</span>
+</div>
 )}
 
 {/* Project Image */}
-<div className="relative h-48 overflow-hidden">;
+<div className="relative h-48 overflow-hidden">
 <img;
 src={project.image}
 alt={project.title}
 className="w-full h-full object-cover transition-transform duration-500 group-hove;  r:scale-110"
-/>;
-<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hove; r:opacity-100 transition-opacity duration-300" />;
+/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hove; r:opacity-100 transition-opacity duration-300" />
 
 {/* Quick Actions */}
-<div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hove; r:opacity-100 transition-opacity duration-300">;
-<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r:bg-white/30 transition-colors">;
-<Eye className="w-5 h-5" />;
-</button>;
+<div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hove; r:opacity-100 transition-opacity duration-300">
+<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r:bg-white/30 transition-colors">
+<Eye className="w-5 h-5" />
+</button>
 {project.liveUrl && (
-<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r:bg-white/30 transition-colors">;
-<ExternalLink className="w-5 h-5" />;
-</button>;
+<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r:bg-white/30 transition-colors">
+<ExternalLink className="w-5 h-5" />
+</button>
 )}
-{project.githubUrl && (<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove;  r:bg-white/30 transition-colors">;
-<Github className="w-5 h-5" />;
-</button>;
+{project.githubUrl && (<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove;  r:bg-white/30 transition-colors">
+<Github className="w-5 h-5" />
+</button>
 )}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Project Info */}
-<div className="p-6">;
-<div className="flex items-center gap-2 mb-3">;
-<span className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full">;
+<div className="p-6">
+<div className="flex items-center gap-2 mb-3">
+<span className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full">
 {project.category}
-</span>;
-<div className="flex items-center gap-1 text-zion-gold">;
-<Star className="w-3 h-3 fill-current" />;
-<span className="text-xs">{project.rating}</span>;
-</div>;
-</div>;
+</span>
+<div className="flex items-center gap-1 text-zion-gold">
+<Star className="w-3 h-3 fill-current" />
+<span className="text-xs">{project.rating}</span>
+</div>
+</div>
 
-<h3 className="text-xl font-bold text-zion-slate mb-3 group-hove; r:text-zion-cyan transition-colors">;
+<h3 className="text-xl font-bold text-zion-slate mb-3 group-hove; r:text-zion-cyan transition-colors">
 {project.title}
-</h3>;
+</h3>
 
-<p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-3">;
+<p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-3">
 {project.description}
-</p>;
+</p>
 
 {/* Technologies */}
-<div className="flex flex-wrap gap-2 mb-4">;
+<div className="flex flex-wrap gap-2 mb-4">
 {project.technologies.slice(0;  3).map((tec;  h; index) => (<span;
 key={index}
 className="px-2 py-1 bg-zion-slate-light/10 text-zion-slate text-xs rounded"
 >;
 {tech}
-</span>;
+</span>
 ))}
 {project.technologies.length > 3 && (
-<span className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate text-xs rounded">;
+<span className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate text-xs rounded">
 +{project.technologies.length - 3}
-</span>;
+</span>
 )}
-</div>;
+</div>
 
 {/* Project Stats */}
-<div className="flex items-center justify-between text-xs text-zion-slate-light">;
-<div className="flex items-center gap-1">;
-<Users className="w-3 h-3" />;
-<span>{project.users.toLocaleString()}</span>;
-</div>;
-<div className="flex items-center gap-1">;
-<Calendar className="w-3 h-3" />;
-<span>{new Date(project.completionDate).toLocaleDateString()}</span>;
-</div>;
-</div>;
-</div>;
+<div className="flex items-center justify-between text-xs text-zion-slate-light">
+<div className="flex items-center gap-1">
+<Users className="w-3 h-3" />
+<span>{project.users.toLocaleString()}</span>
+</div>
+<div className="flex items-center gap-1">
+<Calendar className="w-3 h-3" />
+<span>{new Date(project.completionDate).toLocaleDateString()}</span>
+</div>
+</div>
+</div>
 
 {/* Hover Effect Overlay */}
-<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hove;  r:opacity-100" />;
-</div>;
-</div>;
+<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hove;  r:opacity-100" />
+</div>
+</div>
 ))}
-</div>;
+</div>
 
 {/* CTA Section */}
-<div className="text-center mt-16">;
-<div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">;
-<h3 className="text-2xl font-bold text-zion-slate mb-4">;
+<div className="text-center mt-16">
+<div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
+<h3 className="text-2xl font-bold text-zion-slate mb-4">
 Ready to Start Your Project?;
-</h3>;
-<p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">;
+</h3>
+<p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
 Let's collaborate to bring your vision to life with cutting-edge technology and innovative solutions;
-</p>;
-<button className="bg-gradient-to-r from-zion-cyan to-zion-purple hove; r:from-zion-cyan-light hove; r:to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hove; r:shadow-lg hove; r:shadow-zion-cyan/30 hove; r:-translate-y-1">;
+</p>
+<button className="bg-gradient-to-r from-zion-cyan to-zion-purple hove; r:from-zion-cyan-light hove; r:to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hove; r:shadow-lg hove; r:shadow-zion-cyan/30 hove; r:-translate-y-1">
 Start Your Project;
-</button>;
-</div>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
+</div>
 
 {/* Project Modal */}
 {isModalOpen && selectedProject && (<div;
@@ -335,100 +335,100 @@ className="bg-white dar;  k:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90
 onClick={(e) => e.stopPropagation()}
 >;
 {/* Modal Header */}
-<div className="flex items-center justify-between p-6 border-b border-zion-slate-light">;
-<h2 className="text-2xl font-bold text-zion-slate">{selectedProject.title}</h2>;
+<div className="flex items-center justify-between p-6 border-b border-zion-slate-light">
+<h2 className="text-2xl font-bold text-zion-slate">{selectedProject.title}</h2>
 <button;
 onClick={closeModal}
 className="text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 >;
-<X className="w-6 h-6" />;
-</button>;
-</div>;
+<X className="w-6 h-6" />
+</button>
+</div>
 
 {/* Modal Content */}
-<div className="p-6">;
+<div className="p-6">
 {/* Project Image */}
-<div className="relative mb-6">;
+<div className="relative mb-6">
 <img;
 src={selectedProject.image}
 alt={selectedProject.title}
 className="w-full h-64 object-cover rounded-lg"
-/>;
-<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg" />;
+/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg" />
 
 {/* Navigation Arrows */}
 <button;
 onClick={prevImage}
 className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r:bg-white/30 transition-colors"
 >;
-<ChevronLeft className="w-5 h-5" />;
-</button>;
+<ChevronLeft className="w-5 h-5" />
+</button>
 <button;
 onClick={nextImage}
 className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r:bg-white/30 transition-colors"
 >;
-<ChevronRight className="w-5 h-5" />;
-</button>;
-</div>;
+<ChevronRight className="w-5 h-5" />
+</button>
+</div>
 
 {/* Project Details */}
-<div className="grid grid-cols-1 l; g:grid-cols-3 gap-6">;
-<div className="l; g:col-span-2">;
-<h3 className="text-lg font-semibold text-zion-slate mb-3">Description</h3>;
-<p className="text-zion-slate-light leading-relaxed mb-6">;
+<div className="grid grid-cols-1 l; g:grid-cols-3 gap-6">
+<div className="l; g:col-span-2">
+<h3 className="text-lg font-semibold text-zion-slate mb-3">Description</h3>
+<p className="text-zion-slate-light leading-relaxed mb-6">
 {selectedProject.description}
-</p>;
+</p>
 
-<h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used</h3>;
-<div className="flex flex-wrap gap-2 mb-6">;
+<h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used</h3>
+<div className="flex flex-wrap gap-2 mb-6">
 {selectedProject.technologies.map((tec; h; index) => (<span;
 key={index}
 className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium"
 >;
 {tech}
-</span>;
+</span>
 ))}
-</div>;
+</div>
 
-<h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>;
-<div className="flex flex-wrap gap-2">;
+<h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>
+<div className="flex flex-wrap gap-2">
 {selectedProject.tags.map((ta;  g; index) => (<span;
 key={index}
 className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm"
 >;
 #{tag}
-</span>;
+</span>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Project Stats */}
-<div className="space-y-6">;
-<div className="bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 p-6 rounded-xl border border-zion-cyan/20">;
-<h4 className="text-lg font-semibold text-zion-slate mb-4">Project Stats</h4>;
-<div className="space-y-4">;
-<div className="flex items-center justify-between">;
-<span className="text-zion-slate-light">Rating</span>;
-<div className="flex items-center gap-1">;
-<Star className="w-4 h-4 text-zion-gold fill-current" />;
-<span className="font-semibold">{selectedProject.rating}</span>;
-</div>;
-</div>;
-<div className="flex items-center justify-between">;
-<span className="text-zion-slate-light">Users</span>;
-<span className="font-semibold">{selectedProject.users.toLocaleString()}</span>;
-</div>;
-<div className="flex items-center justify-between">;
-<span className="text-zion-slate-light">Completed</span>;
-<span className="font-semibold">;
+<div className="space-y-6">
+<div className="bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 p-6 rounded-xl border border-zion-cyan/20">
+<h4 className="text-lg font-semibold text-zion-slate mb-4">Project Stats</h4>
+<div className="space-y-4">
+<div className="flex items-center justify-between">
+<span className="text-zion-slate-light">Rating</span>
+<div className="flex items-center gap-1">
+<Star className="w-4 h-4 text-zion-gold fill-current" />
+<span className="font-semibold">{selectedProject.rating}</span>
+</div>
+</div>
+<div className="flex items-center justify-between">
+<span className="text-zion-slate-light">Users</span>
+<span className="font-semibold">{selectedProject.users.toLocaleString()}</span>
+</div>
+<div className="flex items-center justify-between">
+<span className="text-zion-slate-light">Completed</span>
+<span className="font-semibold">
 {new Date(selectedProject.completionDate).toLocaleDateString()}
-</span>;
-</div>;
-</div>;
-</div>;
+</span>
+</div>
+</div>
+</div>
 
 {/* Action Buttons */}
-<div className="space-y-3">;
+<div className="space-y-3">
 {selectedProject.liveUrl && (
 <a;
 href={selectedProject.liveUrl}
@@ -436,9 +436,9 @@ target="_blank";
 rel="noopener noreferrer";
 className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hove;  r:from-zion-cyan-light hove; r:to-zion-purple-light transition-all duration-200"
 >;
-<ExternalLink className="w-4 h-4" />;
+<ExternalLink className="w-4 h-4" />
 View Live Demo;
-</a>;
+</a>
 )}
 {selectedProject.githubUrl && (<a;
 href={selectedProject.githubUrl}
@@ -446,17 +446,17 @@ target="_blank";
 rel="noopener noreferrer";
 className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate text-white rounded-lg hove;  r: bg-zion-slate-light transition-all duration-200"
 >;
-<Github className="w-4 h-4" />;
+<Github className="w-4 h-4" />
 View Source Code;
-</a>;
+</a>
 )}
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 )}
-</section>;
+</section>
 );
-}<//section><///section>;
+}<//section><///section>

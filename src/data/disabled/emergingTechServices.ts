@@ -1112,11 +1112,11 @@ innovationScore: 96;}
 ];
 
 export const getEmergingTechServiceByCategory: any = (category: string) => {
-return EMERGING_TECH_SERVICES.filter(service => service.category === category),;
+return EMERGING_TECH_SERVICES.filter(service => service.category === category);
 };
 
 export const getEmergingTechServiceBySubcategory: any = (subcategory: string) => {
-return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory),;
+return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory);
 };
 
 export const getFeaturedEmergingTechServices: any = () => {;

@@ -28,18 +28,18 @@ className={`p-3 rounded-full ${isSelected ? 'bg-zion-purple' : 'bg-zion-blue'}`}
 >;
 <Icon,
 className={`h-6 w-6 ${isSelected ? 'text-white' : 'text-zion-slate-light'}`}
-/>;
-</div>;
-<div className='text-center'>;
-<h4 className='font-medium'>{type.name}</h4>;
-<p className='text-sm text-zion-slate-light mt-1'>;
+/>
+</div>
+<div className='text-center'>
+<h4 className='font-medium'>{type.name}</h4>
+<p className='text-sm text-zion-slate-light mt-1'>
 {type.description}
-</p>;
-</div>;
-</Button>;
+</p>
+</div>
+</Button>
 )
 })}
-</div>;
-</div>;
+</div>
+</div>
 )
 }}

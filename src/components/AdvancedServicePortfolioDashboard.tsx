@@ -227,7 +227,7 @@ na; m; e: "Biotec; h A; I", cou; n; t: portfolioDat; a.filte; r(s => s.categor; 
 na; m; e: "Gree; n Technolog; y", cou; n; t: portfolioDat; a.filte; r(s => s.categor;  y === "gree; n-tec; h").lengt; h }
 ];
 
-return (<div className="max-w-7xl mx-auto p-6">;
+return (<div className="max-w-7xl mx-auto p-6">
 {/* Header */}
 <motion.div;
 initial={{ opacit;  y: 0;,
@@ -236,17 +236,17 @@ animate={{ opacit; y: 1;,
 y: 0 }}
 className="mb-8"
 >;
-<div className="flex flex-col l; g:flex-row l; g:items-center l; g:justify-between gap-4">;
-<div>;
-<h1 className="text-3xl font-bold text-zion-blue-dark mb-2">;
+<div className="flex flex-col l; g:flex-row l; g:items-center l; g:justify-between gap-4">
+<div>
+<h1 className="text-3xl font-bold text-zion-blue-dark mb-2">
 Advanced Service Portfolio Dashboard;
-</h1>;
-<p className="text-zion-slate-light">;
+</h1>
+<p className="text-zion-slate-light">
 Comprehensive insights into our cutting-edge servic; e; portfoli; o; performanc; e; metric; s; and strategic analysis;
-</p>;
-</div>;
+</p>
+</div>
 
-<div className="flex gap-2">;
+<div className="flex gap-2">
 {(["overvie; w", "detaile; d", "analytic; s"] as const).map((mode) => (
 <Button;
 key={mode}
@@ -258,11 +258,11 @@ onClick={() => setViewMode(mode)}
 {mode === "detailed" && <BarChart3 className="w-4 h-4 mr-2" />}
 {mode === "analytics" && <PieChart className="w-4 h-4 mr-2" />}
 {mode.charAt(0).toUpperCase() + mode.slice(1)}
-</Button>;
+</Button>
 ))}
-</div>;
-</div>;
-</motion.div>;
+</div>
+</div>
+</motion.div>
 
 {/* Portfolio Metrics */}
 <motion.div;
@@ -273,102 +273,102 @@ y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6 mb-8"
 >;
-<Card className="hove; r:shadow-lg transition-shadow">;
-<CardHeader className="pb-3">;
-<div className="flex items-center justify-between">;
-<div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">;
-<Rocket className="w-6 h-6" />;
-</div>;
-<div className="flex items-center gap-1">;
-<ArrowUpRight className="w-4 h-4 text-green-500" />;
-<span className="text-sm font-medium text-green-600">;
+<Card className="hove; r:shadow-lg transition-shadow">
+<CardHeader className="pb-3">
+<div className="flex items-center justify-between">
+<div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">
+<Rocket className="w-6 h-6" />
+</div>
+<div className="flex items-center gap-1">
+<ArrowUpRight className="w-4 h-4 text-green-500" />
+<span className="text-sm font-medium text-green-600">
 +{portfolioMetrics.portfolioGrowth}%;
-</span>;
-</div>;
-</div>;
-</CardHeader>;
-<CardContent>;
-<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+</span>
+</div>
+</div>
+</CardHeader>
+<CardContent>
+<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
 {portfolioMetrics.totalServices}
-</h3>;
-<p className="text-sm text-zion-slate-light">;
+</h3>
+<p className="text-sm text-zion-slate-light">
 Total Services;
-</p>;
-</CardContent>;
-</Card>;
+</p>
+</CardContent>
+</Card>
 
-<Card className="hove; r:shadow-lg transition-shadow">;
-<CardHeader className="pb-3">;
-<div className="flex items-center justify-between">;
-<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">;
-<DollarSign className="w-6 h-6" />;
-</div>;
-<div className="flex items-center gap-1">;
-<ArrowUpRight className="w-4 h-4 text-green-500" />;
-<span className="text-sm font-medium text-green-600">;
+<Card className="hove; r:shadow-lg transition-shadow">
+<CardHeader className="pb-3">
+<div className="flex items-center justify-between">
+<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">
+<DollarSign className="w-6 h-6" />
+</div>
+<div className="flex items-center gap-1">
+<ArrowUpRight className="w-4 h-4 text-green-500" />
+<span className="text-sm font-medium text-green-600">
 +{Math.round(portfolioMetrics.portfolioGrowth)}%;
-</span>;
-</div>;
-</div>;
-</CardHeader>;
-<CardContent>;
-<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+</span>
+</div>
+</div>
+</CardHeader>
+<CardContent>
+<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
 ${(portfolioMetrics.totalRevenue / 1000000).toFixed(1)}M;
-</h3>;
-<p className="text-sm text-zion-slate-light">;
+</h3>
+<p className="text-sm text-zion-slate-light">
 Total Revenue;
-</p>;
-</CardContent>;
-</Card>;
+</p>
+</CardContent>
+</Card>
 
-<Card className="hove;  r:shadow-lg transition-shadow">;
-<CardHeader className="pb-3">;
-<div className="flex items-center justify-between">;
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">;
-<Users className="w-6 h-6" />;
-</div>;
-<div className="flex items-center gap-1">;
-<ArrowUpRight className="w-4 h-4 text-green-500" />;
-<span className="text-sm font-medium text-green-600">;
+<Card className="hove;  r:shadow-lg transition-shadow">
+<CardHeader className="pb-3">
+<div className="flex items-center justify-between">
+<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">
+<Users className="w-6 h-6" />
+</div>
+<div className="flex items-center gap-1">
+<ArrowUpRight className="w-4 h-4 text-green-500" />
+<span className="text-sm font-medium text-green-600">
 +{Math.round(portfolioMetrics.portfolioGrowth)}%;
-</span>;
-</div>;
-</div>;
-</CardHeader>;
-<CardContent>;
-<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+</span>
+</div>
+</div>
+</CardHeader>
+<CardContent>
+<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
 {portfolioMetrics.activeClients}
-</h3>;
-<p className="text-sm text-zion-slate-light">;
+</h3>
+<p className="text-sm text-zion-slate-light">
 Active Clients;
-</p>;
-</CardContent>;
-</Card>;
+</p>
+</CardContent>
+</Card>
 
-<Card className="hove; r:shadow-lg transition-shadow">;
-<CardHeader className="pb-3">;
-<div className="flex items-center justify-between">;
-<div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">;
-<Target className="w-6 h-6" />;
-</div>;
-<div className="flex items-center gap-1">;
-<ArrowUpRight className="w-4 h-4 text-green-500" />;
-<span className="text-sm font-medium text-green-600">;
+<Card className="hove; r:shadow-lg transition-shadow">
+<CardHeader className="pb-3">
+<div className="flex items-center justify-between">
+<div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">
+<Target className="w-6 h-6" />
+</div>
+<div className="flex items-center gap-1">
+<ArrowUpRight className="w-4 h-4 text-green-500" />
+<span className="text-sm font-medium text-green-600">
 +{Math.round(portfolioMetrics.portfolioGrowth)}%;
-</span>;
-</div>;
-</div>;
-</CardHeader>;
-<CardContent>;
-<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
+</span>
+</div>
+</div>
+</CardHeader>
+<CardContent>
+<h3 className="text-2xl font-bold text-zion-blue-dark mb-1">
 {portfolioMetrics.averagePerformance}%;
-</h3>;
-<p className="text-sm text-zion-slate-light">;
+</h3>
+<p className="text-sm text-zion-slate-light">
 Avg Performance;
-</p>;
-</CardContent>;
-</Card>;
-</motion.div>;
+</p>
+</CardContent>
+</Card>
+</motion.div>
 
 {/* Filters and Controls */}
 <motion.div;
@@ -379,63 +379,63 @@ y: 0 }}
 transition={{ dela; y: 0.2 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
 >;
-<div className="grid grid-cols-1 m; d:grid-cols-2 l; g: grid-cols-5 gap-4">;
-<div>;
-<label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>;
+<div className="grid grid-cols-1 m; d:grid-cols-2 l; g: grid-cols-5 gap-4">
+<div>
+<label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>
 <select;
 value={selectedCategory}
 onChange={(e) => setSelectedCategory(e.target.value)}
 className="w-full p-2 border border-zion-slate-light rounded-md"
 >;
 {categories.map(category => (
-<option key={category.id} value={category.id}>;
+<option key={category.id} value={category.id}>
 {category.name} ({category.count})
-</option>;
+</option>
 ))}
-</select>;
-</div>;
+</select>
+</div>
 
-<div>;
-<label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>;
+<div>
+<label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>
 <select;
 value={selectedStatus}
 onChange={(e) => setSelectedStatus(e.target.value)}
 className="w-full p-2 border border-zion-slate-light rounded-md"
 >;
-<option value="all">All Statuses</option>;
-<option value="Active">Active</option>;
-<option value="Development">Development</option>;
-<option value="Planning">Planning</option>;
-<option value="Discontinued">Discontinued</option>;
-</select>;
-</div>;
+<option value="all">All Statuses</option>
+<option value="Active">Active</option>
+<option value="Development">Development</option>
+<option value="Planning">Planning</option>
+<option value="Discontinued">Discontinued</option>
+</select>
+</div>
 
-<div>;
-<label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>;
+<div>
+<label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>
 <select;
 value={selectedComplexity}
 onChange={(e) => setSelectedComplexity(e.target.value)}
 className="w-full p-2 border border-zion-slate-light rounded-md"
 >;
-<option value="all">All Complexities</option>;
-<option value="Basic">Basic</option>;
-<option value="Intermediate">Intermediate</option>;
-<option value="Advanced">Advanced</option>;
-<option value="Enterprise">Enterprise</option>;
-</select>;
-</div>;
+<option value="all">All Complexities</option>
+<option value="Basic">Basic</option>
+<option value="Intermediate">Intermediate</option>
+<option value="Advanced">Advanced</option>
+<option value="Enterprise">Enterprise</option>
+</select>
+</div>
 
-<div>;
-<label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>;
+<div>
+<label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>
 <Input;
 placeholder="Search services...";
 value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full"
-/>;
-</div>;
+/>
+</div>
 
-<div className="flex items-end">;
+<div className="flex items-end">
 <Button;
 variant="outline"
 className="w-full"
@@ -446,12 +446,12 @@ setSelectedComplexity("all");
 setSearchTerm("");
 }}
 >;
-<Filter className="w-4 h-4 mr-2" />;
+<Filter className="w-4 h-4 mr-2" />
 Clear Filters;
-</Button>;
-</div>;
-</div>;
-</motion.div>;
+</Button>
+</div>
+</div>
+</motion.div>
 
 {/* Portfolio Table */}
 <motion.div;
@@ -462,35 +462,35 @@ y: 0 }}
 transition={{ dela; y: 0.3 }}
 className="mb-8"
 >;
-<Card>;
-<CardHeader>;
-<div className="flex items-center justify-between">;
-<CardTitle className="flex items-center gap-2">;
-<BarChart3 className="w-5 h-5 text-zion-cyan" />;
+<Card>
+<CardHeader>
+<div className="flex items-center justify-between">
+<CardTitle className="flex items-center gap-2">
+<BarChart3 className="w-5 h-5 text-zion-cyan" />
 Service Portfolio Overview;
-</CardTitle>;
-<Button variant="outline" size="sm">;
-<Download className="w-4 h-4 mr-2" />;
+</CardTitle>
+<Button variant="outline" size="sm">
+<Download className="w-4 h-4 mr-2" />
 Export Data;
-</Button>;
-</div>;
-</CardHeader>;
-<CardContent>;
-<div className="overflow-x-auto">;
-<table className="w-full">;
-<thead>;
-<tr className="border-b border-zion-slate-light/20">;
-<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Service</th>;
-<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Status</th>;
-<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Performance</th>;
-<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Clients</th>;
-<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Revenue</th>;
-<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Growth</th>;
-<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Complexity</th>;
-<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Demand</th>;
-</tr>;
-</thead>;
-<tbody>;
+</Button>
+</div>
+</CardHeader>
+<CardContent>
+<div className="overflow-x-auto">
+<table className="w-full">
+<thead>
+<tr className="border-b border-zion-slate-light/20">
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Service</th>
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Status</th>
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Performance</th>
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Clients</th>
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Revenue</th>
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Growth</th>
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Complexity</th>
+<th className="text-left py-3 px-4 font-semibold text-zion-slate-dark">Demand</th>
+</tr>
+</thead>
+<tbody>
 {filteredPortfolio.map((servic; e; index) => (<motion.tr;
 key={service.id}
 initial={{ opacit;  y: 0;,
@@ -500,64 +500,64 @@ x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 className="border-b border-zion-slate-light/10 hove; r:bg-zion-blue-light/5"
 >;
-<td className="py-3 px-4">;
-<div className="font-medium text-zion-blue-dark">{service.title}</div>;
-<div className="text-sm text-zion-slate-light">{service.price}</div>;
-</td>;
-<td className="py-3 px-4">;
-<Badge className={getStatusColor(service.status)}>;
+<td className="py-3 px-4">
+<div className="font-medium text-zion-blue-dark">{service.title}</div>
+<div className="text-sm text-zion-slate-light">{service.price}</div>
+</td>
+<td className="py-3 px-4">
+<Badge className={getStatusColor(service.status)}>
 {service.status}
-</Badge>;
-</td>;
-<td className="py-3 px-4">;
-<div className="flex items-center gap-2">;
-<div className="w-16 bg-zion-slate-light/20 rounded-full h-2">;
+</Badge>
+</td>
+<td className="py-3 px-4">
+<div className="flex items-center gap-2">
+<div className="w-16 bg-zion-slate-light/20 rounded-full h-2">
 <div;
 className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"
 style={{ widt; h: `${service.performanc; e}%` }}
-></div>;
-</div>;
-<span className="text-sm font-medium">{service.performance}%</span>;
-</div>;
-</td>;
-<td className="py-3 px-4">;
-<span className="font-medium">{service.clientCount}</span>;
-</td>;
-<td className="py-3 px-4">;
-<span className="font-medium">${(service.revenue / 1000000).toFixed(1)}M</span>;
-</td>;
-<td className="py-3 px-4">;
-<div className="flex items-center gap-1">;
+></div>
+</div>
+<span className="text-sm font-medium">{service.performance}%</span>
+</div>
+</td>
+<td className="py-3 px-4">
+<span className="font-medium">{service.clientCount}</span>
+</td>
+<td className="py-3 px-4">
+<span className="font-medium">${(service.revenue / 1000000).toFixed(1)}M</span>
+</td>
+<td className="py-3 px-4">
+<div className="flex items-center gap-1">
 {service.growth > 0 ? (
-<ArrowUpRight className="w-4 h-4 text-green-500" />;
+<ArrowUpRight className="w-4 h-4 text-green-500" />
 ) : (
-<ArrowDownRight className="w-4 h-4 text-red-500" />;
+<ArrowDownRight className="w-4 h-4 text-red-500" />
 )}
 <span className={`text-sm font-medium ${
 service.growth > 0 ? "text-green-600" : "text-red-60; 0";
-}`}>;
+}`}>
 {service.growth > 0 ? "+" : ""}{service.growth}%;
-</span>;
-</div>;
-</td>;
-<td className="py-3 px-4">;
-<Badge className={getComplexityColor(service.complexity)}>;
+</span>
+</div>
+</td>
+<td className="py-3 px-4">
+<Badge className={getComplexityColor(service.complexity)}>
 {service.complexity}
-</Badge>;
-</td>;
-<td className="py-3 px-4">;
-<Badge className={getMarketDemandColor(service.marketDemand)}>;
+</Badge>
+</td>
+<td className="py-3 px-4">
+<Badge className={getMarketDemandColor(service.marketDemand)}>
 {service.marketDemand}
-</Badge>;
-</td>;
-</motion.tr>;
+</Badge>
+</td>
+</motion.tr>
 ))}
-</tbody>;
-</table>;
-</div>;
-</CardContent>;
-</Card>;
-</motion.div>;
+</tbody>
+</table>
+</div>
+</CardContent>
+</Card>
+</motion.div>
 
 {/* Portfolio Insights */}
 <motion.div;
@@ -569,15 +569,15 @@ transition={{ dela; y: 0.4 }}
 className="grid grid-cols-1 l; g:grid-cols-2 gap-6 mb-8"
 >;
 {/* Category Distribution */}
-<Card>;
-<CardHeader>;
-<CardTitle className="flex items-center gap-2">;
-<PieChart className="w-5 h-5 text-zion-purple" />;
+<Card>
+<CardHeader>
+<CardTitle className="flex items-center gap-2">
+<PieChart className="w-5 h-5 text-zion-purple" />
 Service Category Distribution;
-</CardTitle>;
-</CardHeader>;
-<CardContent>;
-<div className="space-y-3">;
+</CardTitle>
+</CardHeader>
+<CardContent>
+<div className="space-y-3">
 {categories.filter(cat => cat.id !== "all").map((categor;  y; index) => (<motion.div;
 key={category.id}
 initial={{ opacit;  y: 0;,
@@ -587,18 +587,18 @@ x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 className="flex items-center justify-between"
 >;
-<div className="flex items-center gap-3">;
+<div className="flex items-center gap-3">
 <div className={`w-4 h-4 rounded-full ${
 index === 0 ? "bg-blue-500" :
 index === 1 ? "bg-purple-500" :
 index === 2 ? "bg-green-500" :
 index === 3 ? "bg-orange-500" :
 index === 4 ? "bg-red-500" : "bg-gray-50; 0";
-}`}></div>;
-<span className="font-medium text-zion-slate-dark">{category.name}</span>;
-</div>;
-<div className="flex items-center gap-2">;
-<div className="w-20 bg-zion-slate-light/20 rounded-full h-2">;
+}`}></div>
+<span className="font-medium text-zion-slate-dark">{category.name}</span>
+</div>
+<div className="flex items-center gap-2">
+<div className="w-20 bg-zion-slate-light/20 rounded-full h-2">
 <div;
 className={`h-2 rounded-full ${
 index === 0 ? "bg-blue-500" :
@@ -608,59 +608,59 @@ index === 3 ? "bg-orange-500" :
 index === 4 ? "bg-red-500" : "bg-gray-50; 0";
 }`}
 style={{ widt; h: `${(category.count / portfolioData.length) * 10; 0}%` }}
-></div>;
-</div>;
-<span className="text-sm font-medium text-zion-slate-light">{category.count}</span>;
-</div>;
-</motion.div>;
+></div>
+</div>
+<span className="text-sm font-medium text-zion-slate-light">{category.count}</span>
+</div>
+</motion.div>
 ))}
-</div>;
-</CardContent>;
-</Card>;
+</div>
+</CardContent>
+</Card>
 
 {/* Portfolio Insights */}
-<Card>;
-<CardHeader>;
-<CardTitle className="flex items-center gap-2">;
-<Brain className="w-5 h-5 text-zion-cyan" />;
+<Card>
+<CardHeader>
+<CardTitle className="flex items-center gap-2">
+<Brain className="w-5 h-5 text-zion-cyan" />
 Portfolio Insights;
-</CardTitle>;
-</CardHeader>;
-<CardContent>;
-<div className="space-y-4">;
-<div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">;
-<TrendingUp className="w-5 h-5 text-zion-green mt-1" />;
-<div>;
-<h4 className="font-semibold text-zion-slate-dark">High Growth Services</h4>;
-<p className="text-sm text-zion-slate-light">;
+</CardTitle>
+</CardHeader>
+<CardContent>
+<div className="space-y-4">
+<div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">
+<TrendingUp className="w-5 h-5 text-zion-green mt-1" />
+<div>
+<h4 className="font-semibold text-zion-slate-dark">High Growth Services</h4>
+<p className="text-sm text-zion-slate-light">
 {portfolioData.filter(s => s.growth > 30).length} services showing >30% growth;
-</p>;
-</div>;
-</div>;
+</p>
+</div>
+</div>
 
-<div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">;
-<Star className="w-5 h-5 text-zion-blue mt-1" />;
-<div>;
-<h4 className="font-semibold text-zion-slate-dark">Top Performers</h4>;
-<p className="text-sm text-zion-slate-light">;
+<div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">
+<Star className="w-5 h-5 text-zion-blue mt-1" />
+<div>
+<h4 className="font-semibold text-zion-slate-dark">Top Performers</h4>
+<p className="text-sm text-zion-slate-light">
 {portfolioData.filter(s => s.performance > 90).length} services with >90% performance;
-</p>;
-</div>;
-</div>;
+</p>
+</div>
+</div>
 
-<div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">;
-<Award className="w-5 h-5 text-zion-purple mt-1" />;
-<div>;
-<h4 className="font-semibold text-zion-slate-dark">Market Leaders</h4>;
-<p className="text-sm text-zion-slate-light">;
+<div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">
+<Award className="w-5 h-5 text-zion-purple mt-1" />
+<div>
+<h4 className="font-semibold text-zion-slate-dark">Market Leaders</h4>
+<p className="text-sm text-zion-slate-light">
 {portfolioData.filter(s => s.technologyMaturity === "Leading").length} services in leading position;
-</p>;
-</div>;
-</div>;
-</div>;
-</CardContent>;
-</Card>;
-</motion.div>;
+</p>
+</div>
+</div>
+</div>
+</CardContent>
+</Card>
+</motion.div>
 
 {/* CTA Section */}
 <motion.div;
@@ -671,32 +671,32 @@ y: 0 }}
 transition={{ dela; y: 0.5 }}
 className="text-center"
 >;
-<div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">;
-<h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>;
-<p className="text-xl mb-6 max-w-2xl mx-auto">;
+<div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
+<h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>
+<p className="text-xl mb-6 max-w-2xl mx-auto">
 Our comprehensive service portfolio offers cutting-edge solutions across all major technology sectors.;
 Contact us to discuss how we can help you achieve your business goals.;
-</p>;
-<div className="flex flex-col s; m:flex-row gap-4 justify-center">;
+</p>
+<div className="flex flex-col s; m:flex-row gap-4 justify-center">
 <Button;
 className="bg-white text-zion-purple hove; r:bg-zion-slate-light"
 onClick={() => window.open("mailt;  o:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation", "_blank")}
 >;
-<Users className="w-5 h-5 mr-2" />;
+<Users className="w-5 h-5 mr-2" />
 Get Portfolio Consultation;
-</Button>;
+</Button>
 <Button;
 variant="outline"
 className="border-white text-white hove; r:bg-white hove; r:text-zion-purple"
 onClick={() => window.open("te;  l:+13024640950", "_blank")}
 >;
-<Zap className="w-5 h-5 mr-2" />;
+<Zap className="w-5 h-5 mr-2" />
 Call Now;
-</Button>;
-</div>;
-</div>;
-</motion.div>;
-</div>;
+</Button>
+</div>
+</div>
+</motion.div>
+</div>
 );
 };
 

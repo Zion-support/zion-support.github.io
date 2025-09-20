@@ -5,7 +5,7 @@ import { RadioGroupRadioGroupItem } from "@/components/ui/radio-group",
 import { Label } from "@/components/ui/label",
 import { PlusLoader2 } from 'lucide-react'
 import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",;
+import { exportResumeToPDF } from "@/utils/pdfExport";
 import { toast } from "@/components/ui/use-toast";
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { UploadSection } from './UploadSection';

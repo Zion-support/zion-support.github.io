@@ -12,59 +12,59 @@ category: string;,
 keyFeatures: string;,
 targetAudience: string,
 return (
-<div className='space-y-4'>;
-<div className='space-y-2'>;
+<div className='space-y-4'>
+<div className='space-y-2'>
 <label,
 htmlFor='title';
 className='text-sm font-medium text-zion-slate-light'
 >;
 Title;
-</label>;
+</label>
 <Input,
 id='title';
 value={title}
 onChange={e => setTitle(e.target.value)}
 placeholder='Enter your product or service title';
 className='bg-zion-blue border border-zion-blue-light text-white'
-disabled={isLoading}        />;
-</div>;
-<div className='space-y-2'>;
+disabled={isLoading}        />
+</div>
+<div className='space-y-2'>
 <label,
 htmlFor='category';
 className='text-sm font-medium text-zion-slate-light'
 >;
 Category;
-</label>;
+</label>
 <Input,
 id='category';
 value={category}
 onChange={e => setCategory(e.target.value)}
 placeholder='e.g. AI Tool Digital Product Service';
 className='bg-zion-blue border border-zion-blue-light text-white'
-disabled={isLoading}        />;
-</div>;
-<div className='space-y-2'>;
+disabled={isLoading}        />
+</div>
+<div className='space-y-2'>
 <label,
 htmlFor='keyFeatures';
 className='text-sm font-medium text-zion-slate-light'
 >;
 Key Features (Optional)
-</label>;
+</label>
 <Textarea,
 id='keyFeatures';
 value={keyFeatures}
 onChange={e => setKeyFeatures(e.target.value)}
 placeholder='Briefly describe the main features or benefits';
 className='bg-zion-blue border border-zion-blue-light text-white min-h-20'
-disabled={isLoading}        />;
-</div>;
-<div className='space-y-2'>;
+disabled={isLoading}        />
+</div>
+<div className='space-y-2'>
 <label,
 htmlFor='targetAudience';
 className='text-sm font-medium text-zion-slate-light'
 >;
 Target Audience (Optional)
-</label>;
+</label>
 <Input,
 id='targetAudience';
 value={targetAudience}
@@ -72,8 +72,8 @@ onChange={e => setTargetAudience(e.target.value)}
 placeholder='e.g. Developers Marketers Startups';
 className='bg-zion-blue border border-zion-blue-light text-white'
 disabled={isLoading}
-/>;
-</div>;
+/>
+</div>
 <Button,
 onClick={handleSubmit}
 disabled={isLoading |!title |!category}
@@ -84,10 +84,10 @@ onChange={(e) => setTitle(e.target.value)}
 placeholder="Enter your product or service title";
 className="bg-zion-blue border border-zion-blue-light text-white"
 disabled={isLoading}
-/>;
-</div>;
-<div className="space-y-2">;
-<label htmlFor="category" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Category">Category</label>;
+/>
+</div>
+<div className="space-y-2">
+<label htmlFor="category" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Category">Category</label>
 <Input,
 id="category";
 value={category}
@@ -95,10 +95,10 @@ onChange={(e) => setCategory(e.target.value)}
 placeholder="e.g. AI Tool Digital Product Service";
 className="bg-zion-blue border border-zion-blue-light text-white"
 disabled={isLoading}
-/>;
-</div>;
-<div className="space-y-2">;
-<label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>;
+/>
+</div>
+<div className="space-y-2">
+<label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>
 <Textarea,
 id="keyFeatures";
 value={keyFeatures}
@@ -106,10 +106,10 @@ onChange={(e) => setKeyFeatures(e.target.value)}
 placeholder="Briefly describe the main features or benefits";
 className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
 disabled={isLoading}
-/>;
-</div>;
-<div className="space-y-2">;
-<label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Target Audience (Optional)">Target Audience (Optional)</label>;
+/>
+</div>
+<div className="space-y-2">
+<label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Target Audience (Optional)">Target Audience (Optional)</label>
 <Input,
 id="targetAudience";
 value={targetAudience}
@@ -117,23 +117,23 @@ onChange={(e) => setTargetAudience(e.target.value)}
 placeholder="e.g. Developers Marketers Startups";
 className="bg-zion-blue border border-zion-blue-light text-white"
 disabled={isLoading}
-/>;
-</div>;
+/>
+</div>
 <Button,
 onClick={handleSubmit}
 disabled={isLoading |!title |!category}
 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
 >;
 {isLoading ? (
-<>Generating Optimized Content...</>;
+<>Generating Optimized Content...</>
 ) : (
-<>;
-<Sparkles className='h-4 w-4 mr-2' />            Generate Optimized Content            <Sparkles className="h-4 w-4 mr-2" />;
+<>
+<Sparkles className='h-4 w-4 mr-2' />            Generate Optimized Content            <Sparkles className="h-4 w-4 mr-2" />
 Generate Optimized Content;
-</>;
+</>
 )}
-</Button>;
-</div>;
+</Button>
+</div>
 )
 }: AIListingFormProps) {
 if (!title |!category) {

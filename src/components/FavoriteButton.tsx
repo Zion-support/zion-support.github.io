@@ -7,13 +7,13 @@ interface FavoriteButtonProps {
 itemId: string;
 className?: string,
 export function FavoriteButton({ itemId className }: FavoriteButtonProps) {
-</button>;
-</TooltipTrigger>;
+</button>
+</TooltipTrigger>
 {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
-</Tooltip>;
-</TooltipProvider>;
-<LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-</>;
+</Tooltip>
+</TooltipProvider>
+<LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+</>
 )
 }
 // Add to favorites`;
@@ -31,12 +31,12 @@ aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
 className={`w-4 h-4 transition-all duration-300 ${
 isFavorited ? 'fill-current' : ''`;
 }`}
-/>    </button>;
+/>    </button>
 )};`;
 className: {`w-4 h-4 transition-all duration-300 ${
 isFavorited ? 'fill-current' : '';`;
 }`}
-/>;
-</button>;) }
+/>
+</button>) }
 '`;
 }

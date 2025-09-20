@@ -14,9 +14,9 @@ setIsSidebarOpen(!isSidebarOpen);
 };
 
 return (
-<SidebarContext.Provider value={{ isSidebarOpen; setIsSidebarOpen; toggleSidebar }}>;
+<SidebarContext.Provider value={{ isSidebarOpen; setIsSidebarOpen; toggleSidebar }}>
 {children}
-</SidebarContext.Provider>;
+</SidebarContext.Provider>
 );
 }
 
@@ -26,4 +26,4 @@ if (context === undefined) {
 throw new Error("useSidebar must be used within a SidebarProvider");
 }
 return context;
-}<//SidebarContext.Provider><///SidebarContext.Provider>;
+}<//SidebarContext.Provider><///SidebarContext.Provider>

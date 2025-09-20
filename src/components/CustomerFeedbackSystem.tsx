@@ -3,5 +3,5 @@ import React from "react";
 
 }
 
-export default CustomerFeedbackSystem,;
+export default CustomerFeedbackSystem;
 ;

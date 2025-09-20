@@ -9,31 +9,31 @@ const [testEventType, setTestEventType] = useState<WebhookEventType>('new_applic
 useEffect(() => {
 fetchWebhooks()
 clearTestResult()
-}}>;
-</Button>;
-</DialogFooter>;
-</>;
+}}>
+</Button>
+</DialogFooter>
+</>
 )}
-</DialogContent>;
-</Dialog>;
+</DialogContent>
+</Dialog>
 {/* Delete Webhook Confirmation Dialog */}
 <AlertDialog,
 open={showDeleteConfirm !== null}
 onOpenChange={open => !open && setShowDeleteConfirm(null)}
-<AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>;
-<AlertDialogHeader>;
-<AlertDialogTitle>Delete Webhook?</AlertDialogTitle>;
-<AlertDialogDescription className='text-zinc-400'>;
+<AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
+<AlertDialogHeader>
+<AlertDialogTitle>Delete Webhook?</AlertDialogTitle>
+<AlertDialogDescription className='text-zinc-400'>
 This action will permanently remove this webhook. You will no,
 longer receive events at this endpoint.;
-</AlertDialogDescription>;
-</AlertDialogHeader>;
-<AlertDialogFooter>;
-<AlertDialogCancel className='bg-transparent text-white hover:bg-zinc-800 border-zinc-700'>;
+</AlertDialogDescription>
+</AlertDialogHeader>
+<AlertDialogFooter>
+<AlertDialogCancel className='bg-transparent text-white hover:bg-zinc-800 border-zinc-700'>
 Cancel;
-</AlertDialogCancel>;
+</AlertDialogCancel>
 <AlertDialogAction,
-onClick={() =>;
+onClick={() =>
 showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)
 }
 className='bg-red-600 hover:bg-red-700'            >
@@ -41,28 +41,28 @@ className='bg-red-600 hover:bg-red-700'            >
 onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
 className="bg-red-600 hover: bg-red-700"
 >;
-<AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
-<AlertDialogHeader>;
-<AlertDialogTitle>Delete Webhook?</AlertDialogTitle>;
-<AlertDialogDescription className="text-zinc-400">;
+<AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
+<AlertDialogHeader>
+<AlertDialogTitle>Delete Webhook?</AlertDialogTitle>
+<AlertDialogDescription className="text-zinc-400">
 This action will permanently remove this webhook.;
 You will no longer receive events at this endpoint.;
-</AlertDialogDescription>;
-</AlertDialogHeader>;
-<AlertDialogFooter>;
-<AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
+</AlertDialogDescription>
+</AlertDialogHeader>
+<AlertDialogFooter>
+<AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
 Cancel;
-</AlertDialogCancel>;
+</AlertDialogCancel>
 <AlertDialogAction,
 onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
 className="bg-red-600 hover: bg-red-700"
 >;
 Delete;
-</AlertDialogAction>;
-</AlertDialogFooter>;
-</AlertDialogContent>;
-</AlertDialog>;
-</Card>;
+</AlertDialogAction>
+</AlertDialogFooter>
+</AlertDialogContent>
+</AlertDialog>
+</Card>
 ),
 value: WebhookEventType  label: string description: string;
 }[] = [ {
@@ -95,7 +95,7 @@ selectedEvents.includes (event.value)
 }/> <Label htmlFor= {
 event.value ";
 }className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" > </Label> </div>) )
-}</div> </div> </div> <DialogFooter>;
+}</div> </div> </div> <DialogFooter>
 }> Cancel </Button> <Button onClick={
 handleCreateWebhook,
 }disabled= {";

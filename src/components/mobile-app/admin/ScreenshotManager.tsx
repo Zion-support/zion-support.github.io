@@ -88,11 +88,11 @@ addScreenshots(Array.from(e.dataTransfer.files));
 };
 
 return (
-<Card className="bg-zion-blue border-zion-purple/30">;
-<CardHeader>;
-<CardTitle className="text-lg">App Screenshots</CardTitle>;
-</CardHeader>;
-<CardContent>;
+<Card className="bg-zion-blue border-zion-purple/30">
+<CardHeader>
+<CardTitle className="text-lg">App Screenshots</CardTitle>
+</CardHeader>
+<CardContent>
 <div;
 className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
 isDragging;
@@ -103,8 +103,8 @@ onDragOver={handleDragOver}
 onDragLeave={handleDragLeave}
 onDrop={handleDrop}
 >;
-<Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />;
-<p className="text-sm mb-2">Drag & drop screenshots here</p>;
+<Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" />
+<p className="text-sm mb-2">Drag & drop screenshots here</p>
 <input;
 ref={fileInputRef}
 type="file"
@@ -112,46 +112,46 @@ multiple;
 accept="image/*";
 onChange={handleFileSelect}
 className="hidden"
-/>;
+/>
 <Button;
 variant="outline"
 onClick={() => fileInputRef.current?.click()}
 className="mt-2"
 >;
-<Plus className="mr-2 h-4 w-4" />;
+<Plus className="mr-2 h-4 w-4" />
 Select Files;
-</Button>;
-</div>;
+</Button>
+</div>
 
-<div className="text-xs text-gray-300 mb-4">;
+<div className="text-xs text-gray-300 mb-4">
 {platform === "ios";
 ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";
 : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
 }
-</div>;
+</div>
 
-<div className="grid grid-cols-2 gap-3">;
+<div className="grid grid-cols-2 gap-3">
 {screenshots.map((screenshot) => (
-<div key={screenshot.id} className="relative group">;
+<div key={screenshot.id} className="relative group">
 <img loading="lazy";
 src={screenshot.url}
 alt="App screenshot";
 className="w-full h-auto rounded border border-zion-purple/20"
-/>;
+/>
 <button;
 onClick={() => removeScreenshot(screenshot.id)}
 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
 >;
-<Trash2 className="h-3 w-3" />;
-</button>;
-</div>;
+<Trash2 className="h-3 w-3" />
+</button>
+</div>
 ))}
-</div>;
-</CardContent>;
-</Card>;
+</div>
+</CardContent>
+</Card>
 );
 };
-<//Card><///Card>;
+<//Card><///Card>
 import React { useState useRef } from "react",
 import { Card, CardHeader, CardTitleCardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",

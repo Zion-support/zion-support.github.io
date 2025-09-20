@@ -26,7 +26,7 @@ const suggestionsRef = useRef<HTMLDivElement>(null);
 
 useEffect(() => {
 if (query.trim()) {
-const filtered = suggestions.filter(suggestion =>;
+const filtered = suggestions.filter(suggestion =>
 suggestion.title.toLowerCase().includes(query.toLowerCase()) ||;
 suggestion.description?.toLowerCase().includes(query.toLowerCase());
 );
@@ -51,7 +51,7 @@ return () => document.removeEventListener("mousedown", handleClickOutside);
 }, []);
 
 const handleInputChange: any = (e: React.ChangeEvent<HTMLInputElement>) => {
-setQuery(e.target.value),;
+setQuery(e.target.value);
 };
 
 const handleClear: any = () => {;
@@ -81,7 +81,7 @@ if (!showSuggestions) return;
 switch (e.key) {
 case "ArrowDown":
 e.preventDefault();
-setSelectedIndex(prev =>;
+setSelectedIndex(prev =>
 prev < filteredSuggestions.length - 1 ? prev + 1 : prev,
 );
 break;
@@ -105,10 +105,10 @@ break;
 };
 
 return (
-<div className={`relative ${className}`} ref={suggestionsRef}>;
-<form onSubmit={handleSubmit} className="relative">;
-<div className="relative">;
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;
+<div className={`relative ${className}`} ref={suggestionsRef}>
+<form onSubmit={handleSubmit} className="relative">
+<div className="relative">
+<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
 <input;
 ref={inputRef}
 type="text"
@@ -118,27 +118,27 @@ onKeyDown={handleKeyDown}
 onFocus={() => query.trim() && setShowSuggestions(true)}
 placeholder={placeholder}
 className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
-/>;
+/>
 {query && (
 <button;
 type="button"
 onClick={handleClear}
 className="absolute right-12 top-1/2 transform -translate-y-1/2 p-1 hover:bg-gray-100 rounded-full transition-colors"
 >;
-<X className="w-4 h-4 text-gray-400" />;
-</button>;
+<X className="w-4 h-4 text-gray-400" />
+</button>
 )}
 <button;
 type="submit"
 className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
 >;
-<ArrowDown className="w-4 h-4" />;
-</button>;
-</div>;
-</form>;
+<ArrowDown className="w-4 h-4" />
+</button>
+</div>
+</form>
 
 {showSuggestions && filteredSuggestions.length > 0 && (
-<div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">;
+<div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
 {filteredSuggestions.map((suggestion; index) => (
 <button;
 key={suggestion.id}
@@ -147,34 +147,34 @@ className={`w-full text-left px-4 py-3 hover: bg-gray-50 transition-colors ${
 index === selectedIndex ? "bg-blue-50 border-l-4 border-l-blue-500" : "";
 }`}
 >;
-<div className="flex items-center gap-3">;
-<div className="flex-shrink-0">;
+<div className="flex items-center gap-3">
+<div className="flex-shrink-0">
 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium ${
 suggestion.type === "service" ? "bg-blue-100 text-blue-600" :
 suggestion.type === "talent" ? "bg-green-100 text-green-600" :
 "bg-purple-100 text-purple-600";
-}`}>;
+}`}>
 {suggestion.type.charAt(0).toUpperCase()}
-</div>;
-</div>;
-<div className="flex-1 min-w-0">;
-<div className="font-medium text-gray-900 truncate">;
+</div>
+</div>
+<div className="flex-1 min-w-0">
+<div className="font-medium text-gray-900 truncate">
 {suggestion.title}
-</div>;
+</div>
 {suggestion.description && (
-<div className="text-sm text-gray-500 truncate">;
+<div className="text-sm text-gray-500 truncate">
 {suggestion.description}
-</div>;
+</div>
 )}
-</div>;
-</div>;
-</button>;
+</div>
+</div>
+</button>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 );
-};<//div><///div>;
+};<//div><///div>
 /**;
 * Optional callback when a suggestion is selected. This allows parent;
 * components to perform actions such as navigation.;
@@ -195,17 +195,17 @@ className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeh
 aria-autocomplete="list";
 aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
 autoComplete="off";
-/>;
+/>
 {value && (
 <button,
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
 onClick = {(,) => onChange(''),}
 aria-label="Clear search";
 >;
-<X className="h-4 w-4" />;
-</button>;
+<X className="h-4 w-4" />
+</button>
 )}
-</div>;
+</div>
 <AutocompleteSuggestions,
 suggestions = {filteredSuggestions,}
 searchTerm = {value,}
@@ -213,8 +213,8 @@ onSelectSuggestion = {handleSelectSuggestion,}
 visible = {isFocused,}
 highlightedIndex={highlightedIndex} // Pass highlightedIndex,
 listId="autocomplete-suggestions-list" // Pass ID for aria-controls;
-/>;
-</div>;
+/>
+</div>
 )
 }setIsFocused (false)
 inputRef.current?.blur ()
@@ -247,11 +247,11 @@ ref={containerRef}
 role="combobox";
 aria-expanded={isFocused && filteredSuggestions.length > 0}
 aria-haspopup="listbox";
-aria-controls="autocomplete-suggestions-list">;
-<div className="relative">;
+aria-controls="autocomplete-suggestions-list">
+<div className="relative">
 <Search,
 className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
-/>;
+/>
 <Input,
 ref={inputRef}
 type="text"
@@ -265,16 +265,16 @@ placeholder={placeholder}
 className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
 aria-autocomplete="list";
 aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-/>;
+/>
 {value && (
 <button,
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
 onClick={() => onChange('')}
 >;
-<X className="h-4 w-4" />;
-</button>;
+<X className="h-4 w-4" />
+</button>
 )}
-</div>;
+</div>
 <AutocompleteSuggestions,
 suggestions={filteredSuggestions}
 searchTerm={value}
@@ -282,7 +282,7 @@ onSelectSuggestion={handleSelectSuggestion}
 visible={isFocused}
 highlightedIndex={highlightedIndex}
 listId="autocomplete-suggestions-list";
-/>;
-</div>;
+/>
+</div>
 )
 };

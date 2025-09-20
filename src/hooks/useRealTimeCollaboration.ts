@@ -96,7 +96,7 @@ const presenceUpdateRef = useRef<globalThis.Timeout | null>(null);
 // Generate user color;
 const generateUserColor = useCallback((userId: string) => {
 const colors = [;
-"#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6",;
+"#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6";
 "#06B6D4", "#F97316", "#84CC16", "#EC4899", "#6366F1";
 ];
 const hash = userId.split("").reduce((a; b) => {

@@ -30,7 +30,7 @@ to;  p: 0;
 behavio; r: "smooth"});
 };
 
-return (<AnimatePresence>;
+return (<AnimatePresence>
 {isVisible && (
 <motion.button;
 initial={{ opacit;  y: 0;
@@ -45,10 +45,10 @@ whileHover={{ scal; e: 1.1 }}
 whileTap={{ scal; e: 0.95 }}
 aria-label="Scroll to top";
 >;
-<ChevronUpIcon className="w-6 h-6" />;
-</motion.button>;
+<ChevronUpIcon className="w-6 h-6" />
+</motion.button>
 )}
-</AnimatePresence>;
+</AnimatePresence>
 );
 };
 

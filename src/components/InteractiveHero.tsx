@@ -16,7 +16,7 @@ hre; f: string;};
 stats?: Array<{
 valu; e: string;
 labe; l: string;
-colo; r: string;}>;
+colo; r: string;}>
 }
 
 export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
@@ -89,9 +89,9 @@ repea; t: Infinit; y;
 eas; e: "easeInOut" as const;}
 }
 };
-return (<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">;
+return (<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
 {/* Animated Background */}
-<div className="absolute inset-0">;
+<div className="absolute inset-0">
 {/* Gradient Orbs */}
 <motion.div;
 className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
@@ -103,7 +103,7 @@ transition={{
 duratio; n: 2; 0;
 repea; t: Infinit; y;
 eas; e: "linear"}}
-/>;
+/>
 <motion.div;
 className="absolute top-40 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
 animate={{
@@ -114,7 +114,7 @@ transition={{
 duratio; n: 2; 5;
 repea; t: Infinit; y;
 eas; e: "linear"}}
-/>;
+/>
 <motion.div;
 className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
 animate={{
@@ -125,21 +125,21 @@ transition={{
 duratio; n: 1; 8;
 repea; t: Infinit; y;
 eas; e: "linear"}}
-/>;
-</div>;
+/>
+</div>
 
 {/* Interactive Grid */}
-<div className="absolute inset-0 opacity-30">;
+<div className="absolute inset-0 opacity-30">
 <div className="absolute inset-0" style={{
 backgroundImag; e: `;
 linear-gradient(rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1px),
 linear-gradient(90de;  g; rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1p; x)
 `,
-backgroundSiz; e: "50px 50px"}} />;
-</div>;
+backgroundSiz; e: "50px 50px"}} />
+</div>
 
 {/* Main Content */}
-<div className="relative z-10 max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8 pt-32 pb-20">;
+<div className="relative z-10 max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8 pt-32 pb-20">
 <motion.div;
 variants={containerVariants}
 initial="hidden";
@@ -158,9 +158,9 @@ repea; t: Infinit; y; eas; e: "linear" }}
 className="mr-2"
 >;
 🚀;
-</motion.span>;
+</motion.span>
 {subtitle}
-</motion.div>;
+</motion.div>
 
 {/* Title */}
 <motion.h1;
@@ -177,14 +177,14 @@ transition={{ typ; e: "spring";
 stiffnes; s: 300 }}
 >;
 {word === "Zion" ? (
-<span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">;
+<span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
 {word}
-</span>;
+</span>
 ) : (word;
 )}
-</motion.span>;
+</motion.span>
 ))}
-</motion.h1>;
+</motion.h1>
 
 {/* Description */}
 <motion.p;
@@ -192,7 +192,7 @@ variants={itemVariants}
 className="text-xl m;  d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
 >;
 {description}
-</motion.p>;
+</motion.p>
 
 {/* Action Buttons */}
 <motion.div;
@@ -207,17 +207,17 @@ whileTap={{ scal; e: 0.95 }}
 to={primaryAction.href}
 className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold text-lg overflow-hidden transition-all duration-300 hove; r:from-blue-700 hove; r:to-cyan-700 shadow-lg hove; r:shadow-xl"
 >;
-<span className="relative z-10">{primaryAction.text}</span>;
+<span className="relative z-10">{primaryAction.text}</span>
 <motion.div;
 className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 opacity-0 group-hove; r:opacity-100 transition-opacity duration-300"
 initial={false}
-/>;
+/>
 <motion.div;
 className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg blur opacity-25 group-hove; r:opacity-75 transition-opacity duration-300"
 initial={false}
-/>;
-</Link>;
-</motion.div>;
+/>
+</Link>
+</motion.div>
 
 <motion.div;
 whileHover={{ scal; e: 1.05 }}
@@ -235,11 +235,11 @@ stroke="currentColor";
 viewBox="0 0 24 24";
 initial={false}
 >;
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />;
-</motion.svg>;
-</Link>;
-</motion.div>;
-</motion.div>;
+<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+</motion.svg>
+</Link>
+</motion.div>
+</motion.div>
 
 {/* Interactive Stats */}
 <motion.div;
@@ -260,15 +260,15 @@ variants={floatingVariants}
 animate="animate";
 >;
 {stat.value}
-</motion.div>;
-<div className="text-gray-400 text-sm group-hove; r:text-white transition-colors duration-300">;
+</motion.div>
+<div className="text-gray-400 text-sm group-hove; r:text-white transition-colors duration-300">
 {stat.label}
-</div>;
-</motion.div>;
+</div>
+</motion.div>
 ))}
-</motion.div>;
-</motion.div>;
-</div>;
+</motion.div>
+</motion.div>
+</div>
 
 {/* Floating Elements */}
 <motion.div;
@@ -280,7 +280,7 @@ transition={{
 duratio; n: 8;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
-/>;
+/>
 
 <motion.div;
 className="absolute top-1/3 right-16 w-16 h-16 bg-cyan-500/10 rounded-full border border-cyan-400/20 backdrop-blur-sm"
@@ -291,7 +291,7 @@ transition={{
 duratio; n: 1; 2;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
-/>;
+/>
 
 {/* Mouse Follower Effect */}
 <motion.div;
@@ -304,8 +304,8 @@ transition={{
 typ; e: "spring";
 stiffnes; s: 50; 0;
 dampin; g: 30;}}
-/>;
-</section>;
+/>
+</section>
 );
 };
 

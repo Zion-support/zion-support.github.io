@@ -202,8 +202,8 @@ tokens;
 };
 
 return (
-<AuthContext.Provider value={authContextValue}>;
+<AuthContext.Provider value={authContextValue}>
 {children}
-</AuthContext.Provider>;
+</AuthContext.Provider>
 );
-};<//AuthContext.Provider><///AuthContext.Provider>;
+};<//AuthContext.Provider><///AuthContext.Provider>

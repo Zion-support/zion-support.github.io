@@ -20,7 +20,7 @@ className={cn(
 )}
 ref={ref}
 {...props}
-/>;
+/>
 )
 }
 )
@@ -41,4 +41,4 @@ className={cn(
 )}
 ref={ref}
 {...props}
-/>;
+/>

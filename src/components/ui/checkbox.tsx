@@ -9,16 +9,16 @@ className?: string;
 };
 export function Checkbox({ checked; onChange; label; disabled = false; className = "" }: CheckboxProps) {
 return (
-<label className={`flex items-center space-x-2 cursor-pointer ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className}`}>;
+<label className={`flex items-center space-x-2 cursor-pointer ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className}`}>
 <input;
 type="checkbox"
 checked={checked}
 onChange={(e) => onChange(e.target.checked)}
 disabled={disabled}
 className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus:ring-zion-cyan focus:ring-2"
-/>;
+/>
 {label && <span className="text-sm text-gray-700">{label}</span>}
-</label>;
+</label>
 import { cn } from "@/lib/utils";
 
 interface CheckboxProps {
@@ -48,7 +48,7 @@ className={cn(
 "h-4 w-4 rounded border-zion-blue-light bg-zion-blue-dark text-zion-cyan focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2",
 className;
 )}
-/>;
+/>
 );
 }</input;
 type="checkbox"
@@ -75,8 +75,8 @@ import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
 import { Check } from 'lucide-react'
 import { cn } from '@/lib/utils'
 const Checkbox = React.forwardRef<;
-React.ElementRef<typeof CheckboxPrimitive.Root>;
-React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>;
+React.ElementRef<typeof CheckboxPrimitive.Root>
+React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 ></typeof>(({ className, ...props }, ref) => (
 <CheckboxPrimitive.Root,
 ref={ref}
@@ -89,9 +89,9 @@ className
 <CheckboxPrimitive.Indicator,
 className={cn('flex items-center justify-center text-current')}
 >;
-<Check className='h-3 w-3' />;
-</CheckboxPrimitive.Indicator>;
-</CheckboxPrimitive.Root>;
+<Check className='h-3 w-3' />
+</CheckboxPrimitive.Indicator>
+</CheckboxPrimitive.Root>
 ))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName,
 export { Checkbox };

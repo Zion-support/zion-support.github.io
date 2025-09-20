@@ -32,8 +32,8 @@ onValueChange(tab);
 };
 
 return (
-<TabsContext.Provider value={{ activeTab; setActiveTab: handleTabChange }}>;
-<div className={className}>;
+<TabsContext.Provider value={{ activeTab; setActiveTab: handleTabChange }}>
+<div className={className}>
 const Tabs: React.FC<TabsProps> = ({
 children;
 className = "",
@@ -47,11 +47,11 @@ const value = controlledValue !== undefined ? controlledValue : internalValue;
 const onValueChange = controlledOnValueChange || setInternalValue;
 
 return (
-<TabsContext.Provider value={{ value; onValueChange }}>;
-<div className={`${className}`}>;
+<TabsContext.Provider value={{ value; onValueChange }}>
+<div className={`${className}`}>
 {children}
-</div>;
-</TabsContext.Provider>;
+</div>
+</TabsContext.Provider>
 );
 };
 
@@ -65,12 +65,12 @@ className?: string;
 };
 export function TabsList({ children; className = "" }: TabsListProps) {
 return (
-<div className={`flex border-b border-gray-200 ${className}`}>;
+<div className={`flex border-b border-gray-200 ${className}`}>
 const TabsList: React.FC<TabsListProps> = ({ children; className = "" }) => {
 return (
-<div className={`inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground ${className}`}>;
+<div className={`inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground ${className}`}>
 {children}
-</div>;
+</div>
 );
 };
 
@@ -111,7 +111,7 @@ onClick={() => context.onValueChange(value)}
 data-state={isActive ? "active" : "inactive"}
 >;
 {children}
-</button>;
+</button>
 );
 }
 
@@ -126,7 +126,7 @@ if (!context) throw new Error("TabsContent must be used within Tabs");
 
 if (context.activeTab !== value) return null;
 
-return <div className={className}>{children}</div>;
+return <div className={className}>{children}</div>
 }
 };
 
@@ -145,9 +145,9 @@ return null;
 }
 
 return (
-<div className={`mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${className}`}>;
+<div className={`mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${className}`}>
 {children}
-</div>;
+</div>
 );
 };
 

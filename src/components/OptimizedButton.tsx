@@ -18,9 +18,9 @@ disabled={disabled}
 aria-disabled={disabled}
 >;
 {children}
-</button>;
+</button>
 );
 });
 
 OptimizedButton.displayName = "OptimizedButton";
-<//button><///button>;
+<//button><///button>

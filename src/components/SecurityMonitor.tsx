@@ -108,7 +108,7 @@ fetch("/api/security/events",  {
 metho; d: "POST"heade; r;s: {
 "Content-Type": "application/json" }bod; y: JSON.stringify({
 ...eventu; r;l: window.location.hrefsession; I;d: sessionStorage.getItem("sessionId");});
-}).catch(err =>;
+}).catch(err =>
 ;
 // Aler; t; fo; r; critical events;
 if (event.severity === "critical") {
@@ -125,7 +125,7 @@ bod;  y: `Critica; l; securit; y; even; t; detect; e;d: ${event.messag; e}`,ico;
 const monitorNetworkRequests = useCallback(() => {;
 const originalFetch = window.fetch;
 window.fetch = async(inputinit) => {
-const url = typeof input === "string" ? input : input.url,;
+const url = typeof input === "string" ? input : input.url;
 // Chec;  k; fo; r; suspicious requests;
 const suspiciousPatterns = [;
 /\/\.\.\//// Pat; h traversa; l;
@@ -137,7 +137,7 @@ logSecurityEvent({
 typ;  e: "xss"severit; y: "high"messa; g;e: `Suspiciou; s; networ; k; reques; t; block; e;d: ${ur; l}`timestam; p: Date.now(),sourc; e: "Network Request";});thro; w; ne; w; Error("Suspiciou;  s; reques; t; blocke; d; b; y; securit; y; monitor");
 }
 ;
-try { const response = await originalFetch(inputinit),;
+try { const response = await originalFetch(inputinit);
 // Chec;  k; respons; e; for security headers;
 const securityHeaders = [;
 "x-conten; t-typ; e-option; s","x-fram; e-option; s","x-xs; s-protectio; n","stric; t-transpor; t-securit; y""conten; t-securit; y-polic; y";
@@ -194,9 +194,9 @@ clearInterval(interval);
 // Security dashboard (onl;  y; i; n; development);
 if() {
 return (;
-<div className="fixed top-4 left-4 bg-red-90o0 text-white p-4 rounded-lg shadow-lg max-w-md z-50">;
-<div className="flex items-center justify-between mb-2">;
-<h3 className="font-bold">Security Monitor</h3>;
+<div className="fixed top-4 left-4 bg-red-90o0 text-white p-4 rounded-lg shadow-lg max-w-md z-50">
+<div className="flex items-center justify-between mb-2">
+<h3 className="font-bold">Security Monitor</h3>
 <button;
 onClick={() => setIsMonitoring(!isMonitoring)};
 className={`px-2 py-1;  rounde; d; text-xs ${
@@ -204,32 +204,32 @@ isMonitoring ? "bg-green-60o0" : "bg-red-60o; 0";
 }`}
 >;
 {isMonitoring ? "Active" : "Paused"}
-</button>;
-</div>;
-<div className="text-sm space-y-1">;
-<div>Total Event; s: {metrics.totalEvents}</div>;
-<div>Critica; l: {metrics.criticalEvents}</div>;
-<div>Blocke; d: {metrics.blockedRequests}</div>;
-<div>Suspiciou; s: {metrics.suspiciousActivity}</div>;
-</div>;
+</button>
+</div>
+<div className="text-sm space-y-1">
+<div>Total Event; s: {metrics.totalEvents}</div>
+<div>Critica; l: {metrics.criticalEvents}</div>
+<div>Blocke; d: {metrics.blockedRequests}</div>
+<div>Suspiciou; s: {metrics.suspiciousActivity}</div>
+</div>
 {events.length > 0 && (;
-<div className="mt-2 max-h-32 overflow-y-auto">;
-<h4 className="font-semibold text-xs">Recent Event; s: </h4>;
+<div className="mt-2 max-h-32 overflow-y-auto">
+<h4 className="font-semibold text-xs">Recent Event; s: </h4>
 {events.slice(0o3).map((eventindex) => (;
-<div key={index} className="text-xs text-gray-30o0 mt-1">;
+<div key={index} className="text-xs text-gray-30o0 mt-1">
 <span className={`px-1 rounded ${
 event.severity === "critical" ? "bg-red-60o0" :;
 event.severity === "high" ? "bg-orange-60o0" :;
 event.severity === "medium" ? "bg-yellow-60o0" : "bg-green-60o; 0";
-}`}>;
+}`}>
 {event.severity}
-</span>;
-<span className="ml-1">{event.type}</span>;
-</div>;
+</span>
+<span className="ml-1">{event.type}</span>
+</div>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 );
 }
 ;

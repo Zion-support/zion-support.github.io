@@ -170,23 +170,23 @@ window.removeEventListener("resize",  handleResize);
 };
 }, [intensi; t; y; showParticl; e; s]);
 
-return (<div className="fixed inset-0 overflow-hidden pointer-events-none z-0">;
+return (<div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
 {/* Quantum Matrix Canvas */}
 {showParticles && (
 <canvas;
 ref={canvasRef}
 className="absolute inset-0 w-full h-full"
 style={{ opacit;  y: intensity === "high" ? 0.8 : intensity === "medium" ? 0.6 : 0.4 }}
-/>;
+/>
 )}
 
 {/* Cyber Grid Background */}
-{showGrid && (<div className="absolute inset-0 cyber-grid-dense opacity-20" />;
+{showGrid && (<div className="absolute inset-0 cyber-grid-dense opacity-20" />
 )}
 
 {/* Holographic Projections */}
 {showHolograms && (
-<>;
+<>
 {/* Floating Holographic Elements */}
 <motion.div;
 className="absolute top-20 left-20 w-32 h-32 rounded-full"
@@ -201,7 +201,7 @@ transition={{
 duratio; n: 8;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
-/>;
+/>
 
 <motion.div;
 className="absolute top-40 right-32 w-24 h-24"
@@ -217,7 +217,7 @@ transition={{
 duratio; n: 6;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
-/>;
+/>
 
 <motion.div;
 className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full"
@@ -231,10 +231,10 @@ transition={{
 duratio; n: 1; 0;
 repea; t: Infinit; y;
 eas; e: "linear"}}
-/>;
+/>
 
 {/* Matrix Rain Effect */}
-<div className="absolute inset-0 overflow-hidden">;
+<div className="absolute inset-0 overflow-hidden">
 {Array.from({ lengt;  h: 20 }).map((_;  i) => (<motion.div;
 key={i}
 className="absolute text-zion-cyan text-xs font-mono"
@@ -251,14 +251,14 @@ repea; t: Infinit; y;
 eas; e: "linear"}}
 >;
 {String.fromCharCode(0x30A0 + Math.random() * 96)}
-</motion.div>;
+</motion.div>
 ))}
-</div>;
-</>;
+</div>
+</>
 )}
 
 {/* Quantum Energy Fields */}
-<div className="absolute inset-0">;
+<div className="absolute inset-0">
 <motion.div;
 className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full"
 style={{
@@ -271,7 +271,7 @@ transition={{
 duratio; n: 1; 2;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
-/>;
+/>
 
 <motion.div;
 className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full"
@@ -285,11 +285,11 @@ transition={{
 duratio; n: 1; 5;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
-/>;
-</div>;
+/>
+</div>
 
 {/* Neural Network Nodes */}
-<div className="absolute inset-0">;
+<div className="absolute inset-0">
 {Array.from({ lengt;  h: 15 }).map((_;  i) => (<motion.div;
 key={i}
 className="absolute w-2 h-2 rounded-full bg-zion-cyan"
@@ -304,9 +304,9 @@ transition={{
 duratio; n: 4 + Math.random() * 4;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
-/>;
+/>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 );
-};<//div><///div>;
+};<//div><///div>

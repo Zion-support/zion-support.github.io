@@ -58,7 +58,7 @@ dampin; g: 17; }}
 >;
 <svg;
 className="w-6 h-6"
-<>;
+<>
 {isVisible && (<button;
 onClick={scrollToTop}
 className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove;  r:shadow-xl transform hove; r:-translate-y-1 transition-all duration-300 focu; s:outline-none focu; s:ring-2 focu; s:ring-blue-500 focu; s:ring-offset-2"
@@ -75,11 +75,11 @@ strokeLinecap="round";
 strokeLinejoin="round";
 strokeWidth={2}
 d="M5 10l7-7m0 0l7 7m-7-7v18";
-/>;
-</svg>;
-</button>;
+/>
+</svg>
+</button>
 )}
-</>;
+</>
 );
 };
 

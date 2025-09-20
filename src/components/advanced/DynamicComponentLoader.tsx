@@ -20,7 +20,7 @@ isOnline: boolean,
 interface DynamicLoaderProps {
 importFn: () => Promise<{ default: ComponentType<any> }>
 fallback?: React.ReactNode,
-errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>;
+errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
 loadingComponent?: React.ComponentType,
 enableRetry?: boolean,
 maxRetries?: number,
@@ -35,9 +35,9 @@ message?: string,
 showProgress?: boolean;
 //   {
 //     loadingComponent: () => (
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>;
-//       </div>;
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       </div>
 //     )
 //   }
 // )

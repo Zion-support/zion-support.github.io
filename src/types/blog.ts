@@ -11,7 +11,7 @@ const titles = [
 "Cybersecurity Best Practices",
 "Cloud Computing Trends",
 "Digital Transformation Strategies",
-],;
+];
 ;
 const authors = [;
 { name: "John Doe", avatar: "/avatars/john.jpg" };
