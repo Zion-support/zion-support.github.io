@@ -6,18 +6,19 @@ import { ChatAssistant } from "@/components/ChatAssistant";
 import { apiClient } from "@/utils/apiClient";
 
 export function ChatAssistantTrigger() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOp,  e, n, setIsOp, e, n] = useState(false);
 
   // Handle sending messages to the AI chat assistant
-  const handleSendMessage = async (message: string): Promise<void> => {
+  const handleSendMessage = async (messag,  e: string): Promise<void> => {
     try {
-      const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST",
-        headers: {
+      const response = await apiClient("http,  s://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
+        metho, d: "POST",
+    header, s: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          messages: [{ role: "user", content: message }]
+        bod, y: JSON.stringify({
+          message, s: [{ ro, l, e: "use, r",
+    conte, n, t: messag, e }]
         }),
       });
       
@@ -27,7 +28,7 @@ export function ChatAssistantTrigger() {
       
       return Promise.resolve();
     } catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI cha,  t:", error);
       return Promise.resolve();
     }
   };
@@ -38,7 +39,7 @@ export function ChatAssistantTrigger() {
         onClick={() => setIsOpen(true)}
         size="icon"
         variant="outline"
-        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
+        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hove,  r:bg-zion-purple-light z-50"
         aria-label="Open chat assistant"
       >
         <MessageSquare aria-hidden="true" className="h-5 w-5" />
@@ -49,10 +50,10 @@ export function ChatAssistantTrigger() {
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           recipient={{
-            id: 'ai-assistant',
-            name: 'AI Assistant',
-            avatarUrl: 'https://placehold.co/64x64?text=AI',
-            role: 'Virtual Assistant'
+            i,  d: 'ai-assistant',
+    nam, e: 'AI Assistant',
+            avatarUr, l: 'http, s://placehold.co/64x64?text=AI',
+    rol, e: 'Virtual Assistant'
           }}
           onSendMessage={handleSendMessage}
         />

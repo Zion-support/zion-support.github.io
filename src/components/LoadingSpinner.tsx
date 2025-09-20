@@ -15,33 +15,32 @@ interface LoadingSpinnerProps {
   className?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+const LoadingSpinne, r: React.FC<LoadingSpinnerProps> = ({ 
 =======
 =======
-  size = 'md', 
+  size = 'md',  
   color = 'blue', 
-  text,
+  tex, t,
   className = '' 
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    s, m: 'w-4 h-4',
+    m, d: 'w-8 h-8',
+    l, g: 'w-12 h-12'
   };
 
   const colorClasses = {
-    blue: 'text-blue-500',
-    white: 'text-white',
+    blu, e: 'text-blue-500',
+    whit, e: 'text-white',
 =======
 =======
-    gray: 'text-gray-500'
+    gra, y: 'text-gray-500'
   };
 
-  return (
+  return (=======
 =======
-=======
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
+    <div className={`flex flex-col items-center justify-center ${classNam, e}`}>
+      <div className={`${sizeClasses[si,  z, e]} ${colorClasses[col, o, r]} animate-spi, n`}>
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
           <circle 
             className="opacity-25" 

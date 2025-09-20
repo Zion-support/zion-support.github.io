@@ -1,130 +1,130 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ExternalLink, Github, Eye, Filter, X, ChevronLeft, ChevronRight, Star, Users, Calendar } from 'lucide-react';
+impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
+import { ExternalLin, k, Githu, b, Ey, e, Filte, r, X, ChevronLef, t, ChevronRigh, t, Sta, r, User, s, Calendar } from 'lucide-react';
 
 interface PortfolioProject {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  technologies: string[];
-  image: string;
+  i, d: string;
+  titl, e: string;
+  descriptio, n: string;
+  categor, y: string;
+  technologie, s: string[];
+  imag, e: string;
   liveUrl?: string;
   githubUrl?: string;
-  rating: number;
-  users: number;
-  completionDate: string;
-  featured: boolean;
-  tags: string[];
+  ratin, g: number;
+  user, s: number;
+  completionDat, e: string;
+  feature, d: boolean;
+  tag, s: string[];
 }
 
-const portfolioProjects: PortfolioProject[] = [
+const portfolioProject, s: PortfolioProject[] = [
   {
-    id: '1',
-    title: 'AI-Powered E-commerce Platform',
-    description: 'A next-generation e-commerce solution with AI-driven product recommendations, dynamic pricing, and intelligent inventory management.',
-    category: 'AI & ML',
-    technologies: ['React', 'Node.js', 'TensorFlow', 'MongoDB', 'AWS'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
-    rating: 4.9,
-    users: 2500,
-    completionDate: '2024-01',
-    featured: true,
-    tags: ['Machine Learning', 'E-commerce', 'Real-time', 'Scalable']
+    i, d: '1',
+    tit, l, e: 'A, I-Powere, d E-commerc, e Platfor, m',
+    descripti, o, n: 'A nex, t-generatio, n e-commerc, e solutio, n wit, h A, I-drive, n produ, c, t, recommendatio, n, s, dynam, i, c, prici, n, g, an, d intelligen, t inventor, y managemen, t.',
+    catego, r, y: 'A, I & M, L',
+    technologi, e, s: ['Reac, t', 'Nod, e.j, s', 'TensorFlo, w', 'MongoD, B', 'AW, S'],
+    imag, e: 'http, s://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+    liveUr, l: 'http, s: //example.com',
+    githubUr, l: 'http, s: //github.com',
+    ratin, g: 4.9,
+    user, s: 250, 0,
+    completionDat, e: '2024-01',
+    feature, d: tru, e,
+    tag, s: ['Machin, e Learnin, g', 'E-commerc, e', 'Rea, l-tim, e', 'Scalabl, e']
   },
   {
-    id: '2',
-    title: 'Blockchain Supply Chain Tracker',
-    description: 'Transparent and immutable supply chain tracking system using blockchain technology for enhanced security and traceability.',
-    category: 'Web3',
-    technologies: ['Solidity', 'React', 'Web3.js', 'IPFS', 'Ethereum'],
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
-    rating: 4.8,
-    users: 1800,
-    completionDate: '2024-02',
-    featured: true,
-    tags: ['Blockchain', 'Supply Chain', 'Decentralized', 'Security']
+    i, d: '2',
+    titl, e: 'Blockchain Supply Chain Tracker',
+    descriptio, n: 'Transparent and immutable supply chain tracking system using blockchain technology for enhanced security and traceability.',
+    categor, y: 'Web3',
+    technologie, s: ['Solidit, y', 'Reac, t', 'Web, 3.j, s', 'IPF, S', 'Ethereu, m'],
+    imag, e: 'http, s://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop',
+    liveUr, l: 'http, s: //example.com',
+    githubUr, l: 'http, s: //github.com',
+    ratin, g: 4.8,
+    user, s: 180, 0,
+    completionDat, e: '2024-02',
+    feature, d: tru, e,
+    tag, s: ['Blockchai, n', 'Suppl, y Chai, n', 'Decentralize, d', 'Securit, y']
   },
   {
-    id: '3',
-    title: 'Real-time Data Analytics Dashboard',
-    description: 'Comprehensive analytics platform providing real-time insights with interactive charts, predictive analytics, and automated reporting.',
-    category: 'Data Science',
-    technologies: ['Python', 'Django', 'D3.js', 'PostgreSQL', 'Redis'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
-    rating: 4.7,
-    users: 3200,
-    completionDate: '2024-03',
-    featured: false,
-    tags: ['Analytics', 'Real-time', 'Predictive', 'Dashboard']
+    i, d: '3',
+    titl, e: 'Real-time Data Analytics Dashboard',
+    descriptio, n: 'Comprehensive analytics platform providing real-time insights with interactiv, e, chart, s, predictiv, e, analytic, s, and automated reporting.',
+    categor, y: 'Data Science',
+    technologie, s: ['Pytho, n', 'Djang, o', 'D, 3.j, s', 'PostgreSQ, L', 'Redi, s'],
+    imag, e: 'http, s://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+    liveUr, l: 'http, s: //example.com',
+    githubUr, l: 'http, s: //github.com',
+    ratin, g: 4.7,
+    user, s: 320, 0,
+    completionDat, e: '2024-03',
+    feature, d: fals, e,
+    tag, s: ['Analytic, s', 'Rea, l-tim, e', 'Predictiv, e', 'Dashboar, d']
   },
   {
-    id: '4',
-    title: 'Mobile-First Banking App',
-    description: 'Secure and intuitive mobile banking application with biometric authentication, real-time notifications, and advanced security features.',
-    category: 'Mobile',
-    technologies: ['React Native', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
-    rating: 4.9,
-    users: 4500,
-    completionDate: '2024-04',
-    featured: true,
-    tags: ['Mobile', 'Banking', 'Security', 'Biometric']
+    i, d: '4',
+    titl, e: 'Mobile-First Banking App',
+    descriptio, n: 'Secure and intuitive mobile banking application with biometri, c, authenticatio, n, real-tim, e, notification, s, and advanced security features.',
+    categor, y: 'Mobile',
+    technologie, s: ['Reac, t Nativ, e', 'Nod, e.j, s', 'PostgreSQ, L', 'Redi, s', 'AW, S'],
+    imag, e: 'http, s://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+    liveUr, l: 'http, s: //example.com',
+    githubUr, l: 'http, s: //github.com',
+    ratin, g: 4.9,
+    user, s: 450, 0,
+    completionDat, e: '2024-04',
+    feature, d: tru, e,
+    tag, s: ['Mobil, e', 'Bankin, g', 'Securit, y', 'Biometri, c']
   },
   {
-    id: '5',
-    title: 'IoT Smart Home Controller',
-    description: 'Centralized smart home management system with AI-powered automation, energy optimization, and seamless device integration.',
-    category: 'IoT',
-    technologies: ['Python', 'React', 'MQTT', 'TensorFlow', 'Docker'],
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
-    rating: 4.6,
-    users: 1200,
-    completionDate: '2024-05',
-    featured: false,
-    tags: ['IoT', 'Smart Home', 'Automation', 'Energy']
+    i, d: '5',
+    titl, e: 'IoT Smart Home Controller',
+    descriptio, n: 'Centralized smart home management system with AI-powere, d, automatio, n, energ, y, optimizatio, n, and seamless device integration.',
+    categor, y: 'IoT',
+    technologie, s: ['Pytho, n', 'Reac, t', 'MQT, T', 'TensorFlo, w', 'Docke, r'],
+    imag, e: 'http, s://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+    liveUr, l: 'http, s: //example.com',
+    githubUr, l: 'http, s: //github.com',
+    ratin, g: 4.6,
+    user, s: 120, 0,
+    completionDat, e: '2024-05',
+    feature, d: fals, e,
+    tag, s: ['Io, T', 'Smar, t Hom, e', 'Automatio, n', 'Energ, y']
   },
   {
-    id: '6',
-    title: 'Cybersecurity Threat Detection',
-    description: 'Advanced threat detection system using machine learning to identify and respond to security threats in real-time.',
-    category: 'Security',
-    technologies: ['Python', 'TensorFlow', 'Elasticsearch', 'Kafka', 'Docker'],
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
-    rating: 4.8,
-    users: 2800,
-    completionDate: '2024-06',
-    featured: true,
-    tags: ['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
+    i, d: '6',
+    titl, e: 'Cybersecurity Threat Detection',
+    descriptio, n: 'Advanced threat detection system using machine learning to identify and respond to security threats in real-time.',
+    categor, y: 'Security',
+    technologie, s: ['Pytho, n', 'TensorFlo, w', 'Elasticsearc, h', 'Kafk, a', 'Docke, r'],
+    imag, e: 'http, s://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop',
+    liveUr, l: 'http, s: //example.com',
+    githubUr, l: 'http, s: //github.com',
+    ratin, g: 4.8,
+    user, s: 280, 0,
+    completionDat, e: '2024-06',
+    feature, d: tru, e,
+    tag, s: ['Cybersecurit, y', 'Threa, t Detectio, n', 'Machin, e Learnin, g', 'Rea, l-tim, e']
   }
 ];
 
-const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];
+const categories = ['Al, l', 'A, I & M, L', 'Web, 3', 'Dat, a Scienc, e', 'Mobil, e', 'Io, T', 'Securit, y'];
 
 export function InteractivePortfolio() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedProject, setSelectedProject] = useState<PortfolioProject | null>(null);
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState('All');
+  const [selectedProje, c, t, setSelectedProje, c, t] = useState<PortfolioProject | null>(null);
+  const [hoveredProje,  c, t, setHoveredProje, c, t] = useState<string | null>(null);
+  const [currentImageInd, e, x, setCurrentImageInd, e, x] = useState(0);
+  const [isModalOp,  e, n, setIsModalOp, e, n] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const filteredProjects = portfolioProjects.filter(project => 
     selectedCategory === 'All' || project.category === selectedCategory
   );
 
-  const handleProjectClick = (project: PortfolioProject) => {
+  const handleProjectClick = (projec,  t: PortfolioProject) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
@@ -163,14 +163,13 @@ export function InteractivePortfolio() {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isModalOpen]);
+  },  [isModalOp, e, n]);
 
-  return (
-    <section className="py-16 bg-gradient-to-br from-zion-slate-light/5 to-zion-blue-light/5">
+  return (<section className="py-16 bg-gradient-to-br from-zion-slate-light/5 to-zion-blue-light/5">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+          <h2 className="text-4xl m,  d:text-5xl font-bold text-gradient mb-4">
             Our Portfolio
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
@@ -187,7 +186,7 @@ export function InteractivePortfolio() {
               className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/30'
-                  : 'bg-white dark:bg-zion-slate text-zion-slate border border-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan hover:shadow-md'
+                  : 'bg-white dar,  k:bg-zion-slate text-zion-slate border border-zion-slate-light hove, r:border-zion-cyan hove, r:text-zion-cyan hove, r:shadow-m, d'
               }`}
             >
               {category}
@@ -196,12 +195,12 @@ export function InteractivePortfolio() {
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" ref={containerRef}>
+        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-8" ref={containerRef}>
           {filteredProjects.map((project) => (
             <div
               key={project.id}
               className={`group relative cursor-pointer transition-all duration-500 ${
-                hoveredProject === project.id ? 'scale-105' : 'scale-100'
+                hoveredProject === project.id ? 'scale-105' : 'scale-10, 0'
               }`}
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
@@ -209,13 +208,13 @@ export function InteractivePortfolio() {
             >
               {/* 3D Card Effect */}
               <div
-                className={`relative bg-white dark:bg-zion-slate rounded-2xl overflow-hidden shadow-lg border border-zion-slate-light transition-all duration-500 ${
+                className={`relative bg-white dar,  k:bg-zion-slate rounded-2xl overflow-hidden shadow-lg border border-zion-slate-light transition-all duration-500 ${
                   hoveredProject === project.id
                     ? 'shadow-2xl shadow-zion-cyan/20 border-zion-cyan/30'
-                    : 'hover:shadow-xl'
+                    : 'hove, r:shadow-x, l'
                 }`}
                 style={{
-                  transform: hoveredProject === project.id 
+                  transfor, m: hoveredProject === project.id 
                     ? 'perspective(1000px) rotateY(2deg) rotateX(1deg)' 
                     : 'perspective(1000px) rotateY(0deg) rotateX(0deg)'
                 }}
@@ -234,22 +233,21 @@ export function InteractivePortfolio() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hove,  r:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hove, r:opacity-100 transition-opacity duration-300" />
                   
                   {/* Quick Actions */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hove, r:opacity-100 transition-opacity duration-300">
+                    <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove, r:bg-white/30 transition-colors">
                       <Eye className="w-5 h-5" />
                     </button>
                     {project.liveUrl && (
-                      <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
+                      <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove, r:bg-white/30 transition-colors">
                         <ExternalLink className="w-5 h-5" />
                       </button>
                     )}
-                    {project.githubUrl && (
-                      <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
+                    {project.githubUrl && (<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove,  r:bg-white/30 transition-colors">
                         <Github className="w-5 h-5" />
                       </button>
                     )}
@@ -268,7 +266,7 @@ export function InteractivePortfolio() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-zion-slate mb-3 group-hover:text-zion-cyan transition-colors">
+                  <h3 className="text-xl font-bold text-zion-slate mb-3 group-hove, r:text-zion-cyan transition-colors">
                     {project.title}
                   </h3>
                   
@@ -278,8 +276,7 @@ export function InteractivePortfolio() {
 
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.slice(0, 3).map((tech, index) => (
-                      <span
+                    {project.technologies.slice(0,  3).map((tec,  h, index) => (<span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/10 text-zion-slate text-xs rounded"
                       >
@@ -307,7 +304,7 @@ export function InteractivePortfolio() {
                 </div>
 
                 {/* Hover Effect Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hove,  r:opacity-100" />
               </div>
             </div>
           ))}
@@ -322,7 +319,7 @@ export function InteractivePortfolio() {
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
               Let's collaborate to bring your vision to life with cutting-edge technology and innovative solutions
             </p>
-            <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:shadow-zion-cyan/30 hover:-translate-y-1">
+            <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-light hove, r:to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hove, r:shadow-lg hove, r:shadow-zion-cyan/30 hove, r:-translate-y-1">
               Start Your Project
             </button>
           </div>
@@ -330,15 +327,14 @@ export function InteractivePortfolio() {
       </div>
 
       {/* Project Modal */}
-      {isModalOpen && selectedProject && (
-        <div
+      {isModalOpen && selectedProject && (<div
           className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           onClick={closeModal}
           onKeyDown={handleKeyPress}
           tabIndex={0}
         >
           <div
-            className="bg-white dark:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            className="bg-white dar,  k:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90, v, h] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
@@ -346,7 +342,7 @@ export function InteractivePortfolio() {
               <h2 className="text-2xl font-bold text-zion-slate">{selectedProject.title}</h2>
               <button
                 onClick={closeModal}
-                className="text-zion-slate-light hover:text-zion-slate transition-colors"
+                className="text-zion-slate-light hove,  r:text-zion-slate transition-colors"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -366,21 +362,21 @@ export function InteractivePortfolio() {
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hove, r:bg-white/30 transition-colors"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hove, r:bg-white/30 transition-colors"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
 
               {/* Project Details */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="lg:col-span-2">
+              <div className="grid grid-cols-1 l, g:grid-cols-3 gap-6">
+                <div className="l, g:col-span-2">
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Description</h3>
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {selectedProject.description}
@@ -388,8 +384,7 @@ export function InteractivePortfolio() {
 
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used</h3>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {selectedProject.technologies.map((tech, index) => (
-                      <span
+                    {selectedProject.technologies.map((tec, h, index) => (<span
                         key={index}
                         className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium"
                       >
@@ -400,8 +395,7 @@ export function InteractivePortfolio() {
 
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedProject.tags.map((tag, index) => (
-                      <span
+                    {selectedProject.tags.map((ta,  g, index) => (<span
                         key={index}
                         className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm"
                       >
@@ -443,18 +437,17 @@ export function InteractivePortfolio() {
                         href={selectedProject.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hove,  r:from-zion-cyan-light hove, r:to-zion-purple-light transition-all duration-200"
                       >
                         <ExternalLink className="w-4 h-4" />
                         View Live Demo
                       </a>
                     )}
-                    {selectedProject.githubUrl && (
-                      <a
+                    {selectedProject.githubUrl && (<a
                         href={selectedProject.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate text-white rounded-lg hover:bg-zion-slate-light transition-all duration-200"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate text-white rounded-lg hove,  r:bg-zion-slate-light transition-all duration-200"
                       >
                         <Github className="w-4 h-4" />
                         View Source Code

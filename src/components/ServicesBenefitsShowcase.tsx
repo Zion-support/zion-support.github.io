@@ -1,21 +1,21 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { 
-  Brain, 
-  Cloud, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Clock, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
+  Brai, n, 
+  Clou, d, 
+  Za, p, 
+  Shiel, d, 
+  TrendingU, p, 
+  User, s, 
+  Glob, e, 
+  Cloc, k, 
+  CheckCircl, e, 
+  Sta, r,
+  ArrowRigh, t,
+  Phon, e,
+  Mai, l,
   ExternalLink
 } from 'lucide-react';
 import { CONTACT_INFO } from '@/data/comprehensiveServices';
@@ -23,102 +23,106 @@ import { CONTACT_INFO } from '@/data/comprehensiveServices';
 export function ServicesBenefitsShowcase() {
   const serviceBenefits = [
     {
-      category: "AI Services",
-      icon: <Brain className="w-12 h-12" />,
-      color: "from-purple-500 to-indigo-600",
-      description: "Transform your business with cutting-edge artificial intelligence and machine learning solutions",
-      benefits: [
-        "Advanced AI algorithms and models",
-        "Real-time data processing and insights",
-        "Scalable machine learning infrastructure",
-        "Custom AI model development",
-        "Natural language processing capabilities",
-        "Computer vision and image recognition",
-        "Predictive analytics and forecasting",
-        "AI-powered automation workflows"
+      catego,  r, y: "A, I Service, s",
+    ic, o, n: <Brai, n classNam, e="w-1, 2 h-1, 2" />,
+      col, o, r: "fro, m-purpl, e-50, 0 t, o-indig, o-60, 0",
+    descripti, o, n: "Transfor, m you, r busines, s wit, h cuttin, g-edg, e artificia, l intelligenc, e an, d machin, e learnin, g solution, s",
+      benefi, t, s: [
+        "Advance, d A, I algorithm, s an, d model, s",
+        "Rea, l-tim, e dat, a processin, g an, d insight, s",
+        "Scalabl, e machin, e learnin, g infrastructur, e",
+        "Custo, m A, I mode, l developmen, t",
+        "Natura, l languag, e processin, g capabilitie, s",
+        "Compute, r visio, n an, d imag, e recognitio, n",
+        "Predictiv, e analytic, s an, d forecastin, g",
+        "A, I-powere, d automatio, n workflow, s"
       ],
-      useCases: [
-        "Customer service chatbots",
-        "Predictive maintenance systems",
-        "Fraud detection and prevention",
-        "Content generation and optimization",
-        "Recommendation engines",
-        "Process automation",
-        "Data analysis and insights",
-        "Intelligent document processing"
+      useCase, s: [
+        "Custome, r servic, e chatbot, s",
+        "Predictiv, e maintenanc, e system, s",
+        "Frau, d detectio, n an, d preventio, n",
+        "Conten, t generatio, n an, d optimizatio, n",
+        "Recommendatio, n engine, s",
+        "Proces, s automatio, n",
+        "Dat, a analysi, s an, d insight, s",
+        "Intelligen, t documen, t processin, g"
       ],
-      marketPosition: "Industry-leading AI solutions with proven ROI",
-      startingPrice: "$299",
-      implementationTime: "1-6 weeks",
-      support: "24/7 expert support included"
+      marketPositio, n: "Industry-leading AI solutions with proven ROI",
+    startingPric, e: "$299",
+      implementationTim, e: "1-6 weeks",
+    suppor, t: "24/7 expert support included"
     },
     {
-      category: "IT Services",
-      icon: <Cloud className="w-12 h-12" />,
-      color: "from-cyan-500 to-blue-600",
-      description: "Enterprise-grade IT infrastructure and consulting services for modern businesses",
-      benefits: [
-        "Cloud migration and optimization",
-        "Cybersecurity and compliance",
-        "DevOps automation and CI/CD",
-        "Infrastructure as code",
-        "24/7 monitoring and support",
-        "Disaster recovery planning",
-        "Performance optimization",
-        "Scalable architecture design"
+      categor, y: "IT Services",
+    ico, n: <Cloud className="w-12 h-12" />,
+      colo, r: "from-cyan-500 to-blue-600",
+    descriptio, n: "Enterprise-grade IT infrastructure and consulting services for modern businesses",
+      benefit, s: [
+        "Clou, d migratio, n an, d optimizatio, n",
+        "Cybersecurit, y an, d complianc, e",
+        "DevOp, s automatio, n an, d C, I/C, D",
+        "Infrastructur, e a, s cod, e",
+        "2, 4/7 monitorin, g an, d suppor, t",
+        "Disaste, r recover, y plannin, g",
+        "Performanc, e optimizatio, n",
+        "Scalabl, e architectur, e desig, n"
       ],
-      useCases: [
-        "Digital transformation initiatives",
-        "Cloud infrastructure setup",
-        "Security audits and compliance",
-        "Application modernization",
-        "Data center consolidation",
-        "Business continuity planning",
-        "Performance monitoring",
-        "Cost optimization strategies"
+      useCase, s: [
+        "Digita, l transformatio, n initiative, s",
+        "Clou, d infrastructur, e setu, p",
+        "Securit, y audit, s an, d complianc, e",
+        "Applicatio, n modernizatio, n",
+        "Dat, a cente, r consolidatio, n",
+        "Busines, s continuit, y plannin, g",
+        "Performanc, e monitorin, g",
+        "Cos, t optimizatio, n strategie, s"
       ],
-      marketPosition: "Trusted IT partner for enterprise transformation",
-      startingPrice: "$4,499",
-      implementationTime: "2-6 weeks",
-      support: "24/7 dedicated support team"
+      marketPositio, n: "Trusted IT partner for enterprise transformation",
+    startingPric, e: "$4,499",
+      implementationTim, e: "2-6 weeks",
+    suppor, t: "24/7 dedicated support team"
     },
     {
-      category: "Micro SAAS",
-      icon: <Zap className="w-12 h-12" />,
-      color: "from-emerald-500 to-green-600",
-      description: "Specialized software-as-a-service solutions designed for specific business needs",
-      benefits: [
-        "Ready-to-use business applications",
-        "Cloud-based accessibility",
-        "Automatic updates and maintenance",
-        "Scalable user management",
-        "API integrations",
-        "Customizable workflows",
-        "Real-time collaboration",
-        "Mobile-first design"
+      categor, y: "Micro SAAS",
+    ico, n: <Zap className="w-12 h-12" />,
+      colo, r: "from-emerald-500 to-green-600",
+    descriptio, n: "Specialized software-as-a-service solutions designed for specific business needs",
+      benefit, s: [
+        "Read, y-t, o-us, e busines, s application, s",
+        "Clou, d-base, d accessibilit, y",
+        "Automati, c update, s an, d maintenanc, e",
+        "Scalabl, e use, r managemen, t",
+        "AP, I integration, s",
+        "Customizabl, e workflow, s",
+        "Rea, l-tim, e collaboratio, n",
+        "Mobil, e-firs, t desig, n"
       ],
-      useCases: [
-        "Inventory management",
-        "Project management",
-        "Customer support automation",
-        "HR and employee management",
-        "Financial analytics",
-        "Supply chain optimization",
-        "Marketing automation",
-        "Sales pipeline management"
+      useCase, s: [
+        "Inventor, y managemen, t",
+        "Projec, t managemen, t",
+        "Custome, r suppor, t automatio, n",
+        "H, R an, d employe, e managemen, t",
+        "Financia, l analytic, s",
+        "Suppl, y chai, n optimizatio, n",
+        "Marketin, g automatio, n",
+        "Sale, s pipelin, e managemen, t"
       ],
-      marketPosition: "Affordable, scalable solutions for growing businesses",
-      startingPrice: "$199",
-      implementationTime: "Immediate - 3 weeks",
-      support: "Business hours support with priority options"
+      marketPositio, n: "Affordabl, e, scalable solutions for growing businesses",
+      startingPric, e: "$199",
+    implementationTim, e: "Immediate - 3 weeks",
+      suppor, t: "Business hours support with priority options"
     }
   ];
 
   const industryStats = [
-    { metric: "95%", label: "Client Satisfaction Rate" },
-    { metric: "24/7", label: "Support Availability" },
-    { metric: "50+", label: "Countries Served" },
-    { metric: "10+", label: "Years Experience" }
+    { metr, i, c: "9, 5%",
+    lab, e, l: "Clien, t Satisfactio, n Rat, e" },
+    { metr, i, c: "2, 4/7",
+    lab, e, l: "Suppor, t Availabilit, y" },
+    { metr, i, c: "5, 0+",
+    lab, e, l: "Countrie, s Serve, d" },
+    { metr, i, c: "1, 0+",
+    lab, e, l: "Year, s Experienc, e" }
   ];
 
   return (
@@ -126,31 +130,29 @@ export function ServicesBenefitsShowcase() {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl m, d:text-5xl font-bold text-white mb-6">
             Why Choose Our Services?
           </h2>
           <p className="text-xl text-slate-300 max-w-4xl mx-auto">
             Discover the unique advantages and proven benefits that make our services the preferred choice 
-            for businesses worldwide. From cutting-edge AI to enterprise IT solutions, we deliver results.
+            for businesses worldwide. From cutting-edge AI to enterprise I, T, solution, s, we deliver results.
           </p>
         </div>
 
         {/* Industry Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {industryStats.map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
+        <div className="grid grid-cols-2 m, d:grid-cols-4 gap-6 mb-16">
+          {industryStats.map((sta, t, index) => (<div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
+              <div className="text-3xl m,  d:text-4xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
               <div className="text-slate-300 text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
 
         {/* Service Benefits Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {serviceBenefits.map((service, index) => (
-            <Card key={service.category} className="bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
+        <div className="grid grid-cols-1 l, g:grid-cols-3 gap-8 mb-16">
+          {serviceBenefits.map((servic,  e, index) => (<Card key={service.category} className="bg-slate-800/50 border border-slate-700 hove,  r:border-cyan-500/50 transition-all duration-300 hove, r:scale-105">
               <CardHeader className="text-center pb-4">
-                <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 text-white`}>
+                <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 text-whit, e`}>
                   {service.icon}
                 </div>
                 <CardTitle className="text-2xl text-white mb-2">{service.category}</CardTitle>
@@ -167,8 +169,7 @@ export function ServicesBenefitsShowcase() {
                     Key Benefits
                   </h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-slate-300 text-sm flex items-start gap-2">
+                    {service.benefits.map((benefi, t, benefitIndex) => (<li key={benefitIndex} className="text-slate-300 text-sm flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -183,8 +184,7 @@ export function ServicesBenefitsShowcase() {
                     Common Use Cases
                   </h4>
                   <ul className="space-y-2">
-                    {service.useCases.map((useCase, useCaseIndex) => (
-                      <li key={useCaseIndex} className="text-slate-300 text-sm flex items-start gap-2">
+                    {service.useCases.map((useCas,  e, useCaseIndex) => (<li key={useCaseIndex} className="text-slate-300 text-sm flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />
                         {useCase}
                       </li>
@@ -198,22 +198,22 @@ export function ServicesBenefitsShowcase() {
                   <p className="text-slate-300 text-sm mb-3">{service.marketPosition}</p>
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div>
-                      <span className="text-slate-400">Starting Price:</span>
+                      <span className="text-slate-400">Starting Pric,  e:</span>
                       <div className="text-cyan-400 font-semibold">{service.startingPrice}</div>
                     </div>
                     <div>
-                      <span className="text-slate-400">Implementation:</span>
+                      <span className="text-slate-400">Implementatio, n:</span>
                       <div className="text-cyan-400 font-semibold">{service.implementationTime}</div>
                     </div>
                   </div>
                   <div className="mt-3 text-xs">
-                    <span className="text-slate-400">Support:</span>
+                    <span className="text-slate-400">Suppor, t:</span>
                     <div className="text-cyan-400 font-semibold">{service.support}</div>
                   </div>
                 </div>
 
                 {/* CTA Button */}
-                <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
+                <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hove, r:from-cyan-600 hove, r:to-blue-700">
                   Explore {service.category}
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -227,13 +227,13 @@ export function ServicesBenefitsShowcase() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Competitive Advantages
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h4 className="text-white font-semibold mb-2">Enterprise Security</h4>
-              <p className="text-slate-300 text-sm">SOC 2, ISO 27001, GDPR compliant with enterprise-grade security</p>
+              <p className="text-slate-300 text-sm">SO, C, 2, IS, O, 2700, 1, GDPR compliant with enterprise-grade security</p>
             </div>
             <div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -264,7 +264,7 @@ export function ServicesBenefitsShowcase() {
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Proven ROI and Success Metrics
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 m, d:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
               <h4 className="text-white font-semibold mb-2">Cost Reduction</h4>
@@ -292,15 +292,15 @@ export function ServicesBenefitsShowcase() {
             Join hundreds of satisfied clients who have transformed their businesses with our innovative solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
+            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hove, r:from-cyan-600 hove, r:to-blue-700">
               <Phone className="w-4 h-4 mr-2" />
               {CONTACT_INFO.mobile}
             </Button>
-            <Button size="lg" variant="outline" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white">
+            <Button size="lg" variant="outline" className="border-cyan-400 text-cyan-400 hove, r:bg-cyan-400 hove, r:text-white">
               <Mail className="w-4 h-4 mr-2" />
               {CONTACT_INFO.email}
             </Button>
-            <Button size="lg" variant="ghost" className="text-cyan-400 hover:text-white">
+            <Button size="lg" variant="ghost" className="text-cyan-400 hove, r:text-white">
               <ExternalLink className="w-4 h-4 mr-2" />
               Schedule Demo
             </Button>

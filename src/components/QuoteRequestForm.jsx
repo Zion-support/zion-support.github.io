@@ -1,46 +1,47 @@
-impor, t, Reac, t, { useState } from "react";
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeaderCardTitle } from "@/components/ui/card";
+impo, r, t, Rea, c, t, { useState } from "react";
+import { Ca, r, d, CardConte, n, t, CardDescripti, o, n, CardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/Input";
-import { Selec, t, SelectConten, t, SelectIte, m, SelectTriggerSelectValue } from "@/components/ui/select";
+import { Sele, c, t, SelectConte, n, t, SelectIt, e, m, SelectTriggerSelectValue } from "@/components/ui/select";
 import { CheckCircleSend } from "lucide-react";
-export, const, QuoteRequestForm = () => {
-  const [formDa,  t, a, setFormDa,, ta] = useState({
-    nam, e: '',;
-    emai, l: '',compan, y: '',;
-    phon, e: '',servic, e: '',;
-    budge, t: '',timeline: ''descriptio,;
+expor, t, cons, t, QuoteRequestForm = () => {
+  const [form,  D, a,  t, a, setForm, D, a,, t, a] = useState({
+    na, m, e: '',;
+    ema, i, l: '',compa, n, y: '',;
+    pho, n, e: '',servi, c, e: '',;
+    budg, e, t: '',
+    timelin, e: ''descripti, o,;
   n: '';
   });
-  const [isSubmitti, n, g, setIsSubmitti,, ng] = useState(false);
-  const [isSubmitt,  e, d, setIsSubmitt,, ed] = useState(false);
+  const [isSubmit, t, i, n, g, setIsSubmit, t, i,, n, g] = useState(false);
+  const [isSubmi,  t, t,  e, d, setIsSubmi, t, t,, e, d] = useState(false);
 ;
   const handleChange = (e) => {
-    const { namevalue } = e.targe, t,;
+    const { namevalue } = e.targ,  e, t,;
     setFormData(prev => ({;
-      ...pre, v[name]: value;
+      ...pr, e, v[na, m, e]: value;
     })),;
   },;
-  const handleSelectChange = (nam,  e, value) => {
+  const handleSelectChange = (na,  m,  e, value) => {
     setFormData(prev => ({;
-      ...pre,  v[name]: value;
+      ...pr,  e,  v[na, m, e]: value;
     })),;
   },;
   const handleSubmit = async (e) => {;
     e.preventDefault();
     setIsSubmitting(true);
 ;
-    // Simulate, form, submission;
-    await, new, Promise(resolve => setTimeout(resolve10o00))setIsSubmitting(false);
+    // Simulat,  e, for, m, submission;
+    awai, t, ne, w, Promise(resolve => setTimeout(resolve10o00))setIsSubmitting(false);
     setIsSubmitted(true);
-  },;
+  }, ;
   if (isSubmitted) {
     return (<Card className="bg-zion-blue-dark border-zion-purple/20 text-white">;
         <CardContent className="text-center py-12">;
           <CheckCircle className="h-16 w-16 text-zion-cyan mx-auto mb-6" />;
           <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>;
           <p className="text-zion-slate-light text-lg">;
-            Your, quote, request has, been, submitted successfully. We'll, get, back to, you, within 24, hours, with a, detailed, quote.;
+            You,  r, quot, e, reques, t, ha, s, bee, n, submitted successfully. We'l, l, ge, t, bac, k, t, o, yo, u, withi, n, 2, 4, hour, s, wit, h, a, detaile, d, quote.;
           </p>;
         </CardContent>;
       </Card>;
@@ -50,14 +51,14 @@ export, const, QuoteRequestForm = () => {
   return (;
     <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">;
       <CardHeader>;
-        <CardTitle className="text-2xl text-zion-cyan">Quote, Request, Form</CardTitle>;
+        <CardTitle className="text-2xl text-zion-cyan">Quot,  e, Reques, t, Form</CardTitle>;
         <CardDescription className="text-zion-slate-light">;
-          Please, provide, your details, and, requirements for, a, customized quote;
+          Pleas, e, provid, e, you, r, detail, s, an, d, requirement, s, fo, r, a, customized quote;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
         <form onSubmit={handleSubmit} className="space-y-6">;
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">;
+          <div className="grid grid-cols-1 m, d: grid-cols-2 gap-6">;
             <div>;
               <label className="block text-sm font-medium text-zion-slate-light mb-2">;
                 Full Name *;
@@ -67,8 +68,8 @@ export, const, QuoteRequestForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required;
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan";
-                placeholder="Enter, your, full name";
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focu, s: border-zion-cyan";
+                placeholder="Ente, r, you, r, full name";
               />;
             </div>;
             <div>;
@@ -81,12 +82,12 @@ export, const, QuoteRequestForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required;
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan";
-                placeholder="Enter, your, email";
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focu, s: border-zion-cyan";
+                placeholder="Ente, r, you, r, email";
               />;
             </div>;
           </div>;
-          <div className="grid grid-cols-1 m,;
+          <div className="grid grid-cols-1, m,;
   d:grid-cols-2 gap-6">;
             <div>;
               <label className="block text-sm font-medium text-zion-slate-light mb-2">;
@@ -96,8 +97,8 @@ export, const, QuoteRequestForm = () => {
                 name="company";
                 value={formData.company}
                 onChange={handleChange}
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan";
-                placeholder="Enter, company, name";
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focu, s: border-zion-cyan";
+                placeholder="Ente, r, compan, y, name";
               />;
             </div>;
             <div>;
@@ -108,20 +109,20 @@ export, const, QuoteRequestForm = () => {
                 name="phone";
                 value={formData.phone}
                 onChange={handleChange}
-                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan";
-                placeholder="Enter, phone, number";
+                className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focu, s: border-zion-cyan";
+                placeholder="Ente, r, phon, e, number";
               />;
             </div>;
           </div>;
-          <div className="grid grid-cols-1 m,;
+          <div className="grid grid-cols-1, m,;
   d:grid-cols-2 gap-6">;
             <div>;
               <label className="block text-sm font-medium text-zion-slate-light mb-2">;
                 Service Type *;
               </label>;
               <Select value={formData.service} onValueChange={(value) => handleSelectChange('service'value)}>;
-                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus:border-zion-cyan">;
-                  <SelectValue placeholder="Select, a, service" />;
+                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focu,  s:border-zion-cyan">;
+                  <SelectValue placeholder="Selec, t, a, service" />;
                 </SelectTrigger>;
                 <SelectContent className="bg-zion-blue border-zion-purple/30">;
                   <SelectItem value="ai-services">AI & Machine Learning</SelectItem>;
@@ -139,16 +140,16 @@ export, const, QuoteRequestForm = () => {
                 Budget Range;
               </label>;
               <Select value={formData.budget} onValueChange={(value) => handleSelectChange('budget'value)}>;
-                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus: border-zion-cyan">;
-                  <SelectValue placeholder="Select, budget, range" />;
+                <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focu,  s: border-zion-cyan">;
+                  <SelectValue placeholder="Selec, t, budge, t, range" />;
                 </SelectTrigger>;
                 <SelectContent className="bg-zion-blue border-zion-purple/30">;
                   <SelectItem value="under-10k">Under $1, 0,0o00</SelectItem>;
                   <SelectItem value="10k-50k">$1, 0,0o00 - $5, 0,0o00</SelectItem>;
-                  <SelectItem value="50k-10o0k">$5, 0,0o00 - $10, 0,0o00</SelectItem>;
-                  <SelectItem value="10o0k-50o0k">$10, 0,0o00 - $50, 0,0o00</SelectItem>;
-                  <SelectItem value="over-50o0k">Over $50, 0,0o00</SelectItem>;
-                  <SelectItem value="not-sure">Not, sure, yet</SelectItem>;
+                  <SelectItem value="50k-10o0k">$5, 0,0o00 - $1, 0, 0,0o00</SelectItem>;
+                  <SelectItem value="10o0k-50o0k">$1, 0, 0,0o00 - $5, 0, 0,0o00</SelectItem>;
+                  <SelectItem value="over-50o0k">Over $5, 0, 0,0o00</SelectItem>;
+                  <SelectItem value="not-sure">No, t, sur, e, yet</SelectItem>;
                 </SelectContent>;
               </Select>;
             </div>;
@@ -158,7 +159,7 @@ export, const, QuoteRequestForm = () => {
               Timeline;
             </label>;
             <Select value={formData.timeline} onValueChange={(value) => handleSelectChange('timeline'value)}>;
-              <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus: border-zion-cyan">;
+              <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focu,  s: border-zion-cyan">;
                 <SelectValue placeholder="Select timeline" />;
               </SelectTrigger>;
               <SelectContent className="bg-zion-blue border-zion-purple/30">;
@@ -166,7 +167,7 @@ export, const, QuoteRequestForm = () => {
                 <SelectItem value="1-3-months">1-3 months</SelectItem>;
                 <SelectItem value="3-6-months">3-6 months</SelectItem>;
                 <SelectItem value="6-12-months">6-12 months</SelectItem>;
-                <SelectItem value="over-12-months">Over, 12, months</SelectItem>;
+                <SelectItem value="over-12-months">Ove, r, 1, 2, months</SelectItem>;
                 <SelectItem value="flexible">Flexible</SelectItem>;
               </SelectContent>;
             </Select>;
@@ -181,15 +182,15 @@ export, const, QuoteRequestForm = () => {
               onChange={handleChange}
               required;
               rows={6}
-              className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focu, s: border-zion-cyan w-full p-3 rounded-md resize-none";
-              placeholder="Please, describe, your projec, t, requirement, s, goal, sand, any, specific details, that, would help, us, provide an, accurate, quote...";
+              className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-ligh, t, foc, u, s: border-zion-cyan w-full p-3 rounded-md resize-none";
+              placeholder="Pleas, e, describ, e, you, r, proje, c, t, requiremen, t, s, goa, l, san, d, an, y, specifi, c, detail, s, tha, t, woul, d, hel, p, u, s, provid, e, a, n, accurat, e, quote...";
             />;
           </div>;
           <div className="text-center">;
             <Button;
               type="submit";
               disabled={isSubmitting}
-              className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan/90 px-8 py-3 text-lg font-semibold";
+              className="bg-zion-cyan text-zion-blue-dark hove, r: bg-zion-cyan/90 px-8 py-3 text-lg font-semibold";
             >;
               {isSubmitting ? (;
                 <>;
@@ -199,7 +200,7 @@ export, const, QuoteRequestForm = () => {
               ) : (;
                 <>;
                   <Send className="h-5 w-5 mr-2" />;
-                  Submit, Quote, Request;
+                  Submi,  t, Quot, e, Request;
                 </>;
               )}
             </Button>;

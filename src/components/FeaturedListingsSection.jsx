@@ -1,94 +1,99 @@
-impor, t, Reac, t, { useState } from "react";
+impo, r, t, Rea, c, t, { useState } from "react";
 import { motionAnimatePresence } from "framer-motion";
-import { Sta, r, Ey, e, Hear, t, ArrowRigh, t, Cloc, k, User, s, Awar, d, Za, p, Shiel, d, Rocke, t, Brai, n, TrendingU, p, PhoneCheckCircle } from "lucide-react";
+import { St, a, r, E, y, e, Hea, r, t, ArrowRig, h, t, Clo, c, k, Use, r, s, Awa, r, d, Z, a, p, Shie, l, d, Rock, e, t, Bra, i, n, Trending, U, p, PhoneCheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 const featuredListings = [;
   {
     i, d: 1,;
-    tit, l, e: "A, I-Powere, d E-commerc, e Platfor, m",catego, r, y: "We, b Developmen, t",;
-    descripti, o, n: "Moder, n e-commerc, e solutio, n wit, h A, I-drive, n produc, t recommendation, s an, d personalize, d shoppin, g experienc, e",rati, n, g: 4.9,;
-    revie, w, s: 1, 2, 7,vie, w, s: 28, 4, 7,;
-    lik, e, s: 1, 5, 6,ima, g, e: "htt, p, s: //image, s.unsplas, h.co, m/phot, o-155143467, 8-e0o76c223a69, 2?ixli, b=r, b-4.0.3&ixi, d=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8f, A%3, D%3, D&aut, o=forma, t&fi, t=cro, p&w=20o7, 0&q=8, 0",;
-    pri, c, e: "$1, 5,0o0, 0",;
-    ta, g, s: ["Reac, t", "Nod, e.j, s", "A, I/M, L",, "E-commerce"],;
-    duratio, n: "3-4 months",;
-    tea, m: "5 experts",locatio, n: "Remote",;
-    feature, d: tru, e,technologie, s: ["Reac, t", "Nod, e.j, s", "MongoD, B", "A, I/M, L",, "AWS"],;
-    highlight, s: ["A, I Recommendation, s", "Rea, l-tim, e Analytic, s", "Mobil, e Responsiv, e", "SE, O, Optimized"]link: "/services/ai-ecommerce";
+    t, i, t, l, e: "A, I-Powe, r, e, d E-comme, r, c, e, Platf, o, r, m",cate, g, o, r, y: "W, e, b, Developm, e, n, t",;
+    descrip, t, i, o, n: "Mod, e, r, n e-comme, r, c, e, solut, i, o, n, w, i, t, h, A, I-dri, v, e, n, prod, u, c, t, recommendati, o, n, s, a, n, d, personali, z, e, d, shopp, i, n, g, experie, n, c, e",ra, t, i, n, g: 4.9,;
+    rev, i, e, w, s: 1, 2, 7,v, i, e, w, s: 2, 8, 4, 7,;
+    l, i, k, e, s: 1, 5, 6,i, m, a, g, e: "h, t, t, p, s: //ima, g, e, s.unspl, a, s, h.c, o, m/ph, o, t, o-1551434, 6, 7, 8-e0o76c223a, 6, 9, 2?ix, l, i, b=r, b-4.0.3&i, x, i, d=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx, 8, f, A%3, D%3, D&a, u, t, o=for, m, a, t&f, i, t=c, r, o, p&w=20, o, 7, 0&q=8, 0",;
+    p, r, i, c, e: "$1, 5,0, o, 0, 0",;
+    t, a, g, s: ["Re, a, c, t", "N, o, d, e.j, s", "A, I/M, L",, "E-commerc, e"],;
+    durati, o, n: "3-4 months",;
+    te, a, m: "5 experts",locati, o, n: "Remote",;
+    featur, e, d: tr, u, e,technologi, e, s: ["Re, a, c, t", "N, o, d, e.j, s", "Mong, o, D, B", "A, I/M, L",, "AW, S"],;
+    highligh, t, s: ["A, I, Recommendati, o, n, s", "R, e, a, l-t, i, m, e, Analyt, i, c, s", "Mob, i, l, e, Respons, i, v, e", "S, E, O, Optimize, d"]lin, k: "/services/ai-ecommerce";
   };
   {
     i, d: 2,;
-    titl, e: "Mobile, Banking, Application",categor, y: "Mobile Development",;
-    descriptio, n: "Secure, and, user-friendly, mobile, banking app, with, biometric authentication, and, real-time transactions",ratin, g: 4.8,;
-    review, s: 8, 9,view, s: 195, 6,;
-    like, s: 13, 4,imag, e: "http, s: //images.unsplash.com/photo-15630o13544-824ae1b70o4d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=20o70&q=80",;
-    pric, e: "$2, 2,0o00",;
-    tag, s: ["Reac, t Nativ, e", "Securit, y", "FinTec, h",, "Biometrics"],;
-    duratio, n: "4-5 months",;
-    tea, m: "6 experts",locatio, n: "Hybrid",;
-    feature, d: tru, e,technologie, s: ["Reac, t Nativ, e", "Nod, e.j, s", "PostgreSQ, L", "Biometric, s",, "Security"],;
-    highlight, s: ["Biometri, c Aut, h", "Rea, l-tim, e Transaction, s", "Securit, y Complianc, e", "Cros,, s-platform"]link: "/services/mobile-banking";
+    tit, l, e: "Mobil, e, Bankin, g, Application",catego, r, y: "Mobile Development",;
+    descripti, o, n: "Secur, e, an, d, user-friendl, y, mobil, e, bankin, g, ap, p, wit, h, biometri, c, authenticatio, n, an, d, real-time transactions",rati, n, g: 4.8,;
+    revie, w, s: 8, 9,vie, w, s: 19, 5, 6,;
+    lik, e, s: 1, 3, 4,ima, g, e: "htt, p,
+    s: //images.unsplash.com/photo-15630o13544-824ae1b70o4d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=20o70&q=80",;
+    pri, c, e: "$2, 2,0o00",;
+    ta, g, s: ["Re, a, c, t, Nat, i, v, e", "Secur, i, t, y", "FinT, e, c, h",, "Biometric, s"],;
+    durati, o, n: "4-5 months",;
+    te, a, m: "6 experts",locati, o, n: "Hybrid",;
+    featur, e, d: tr, u, e,technologi, e, s: ["Re, a, c, t, Nat, i, v, e", "N, o, d, e.j, s", "Postgre, S, Q, L", "Biometr, i, c, s",, "Securit, y"],;
+    highligh, t, s: ["Biomet, r, i, c, A, u, t, h", "R, e, a, l-t, i, m, e, Transacti, o, n, s", "Secur, i, t, y, Complia, n, c, e", "Cr, o, s,, s-platfor, m"]lin, k: "/services/mobile-banking";
   };
   {
     i, d: 3,;
-    titl, e: "Cloud, Infrastructure, Migration",categor, y: "Cloud & DevOps",;
-    descriptio, n: "Complete, migration, from on-premise, to, cloud with, automated, CI/CD, pipelines, and monitoring",ratin, g: 4.7,;
-    review, s: 15, 6,view, s: 324, 1,;
-    like, s: 18, 9,imag, e: "http, s: //images.unsplash.com/photo-1451187580o459-43490o279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=20o72&q=80",;
-    pric, e: "$1, 8,50o0",;
-    tag, s: ["AW, S", "Docke, r", "Kubernete, s", "C,, I/CD"],;
-    duratio, n: "2-3 months",;
-    tea, m: "4 experts",locatio, n: "On-site",;
-    feature, d: tru, e,technologie, s: ["AW, S", "Docke, r", "Kubernete, s", "Jenkin, s",, "Prometheus"],;
-    highlight, s: ["Zer, o Downtim, e", "Aut, o-scalin, g", "Monitorin, g",, "Security"]link: "/services/cloud-migration";
+    tit, l, e: "Clou, d, Infrastructur, e, Migration",catego, r, y: "Cloud & DevOps",;
+    descripti, o, n: "Complet, e, migratio, n, from on-premis, e, t, o, clou, d, wit, h, automate, d, CI/C, D, pipeline, s, and monitoring",rati, n, g: 4.7,;
+    revie, w, s: 1, 5, 6,vie, w, s: 32, 4, 1,;
+    lik, e, s: 1, 8, 9,ima, g, e: "htt, p,
+    s: //images.unsplash.com/photo-1451187580o459-43490o279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=20o72&q=80",;
+    pri, c, e: "$1, 8,50o0",;
+    ta, g, s: ["A, W, S", "Doc, k, e, r", "Kuberne, t, e, s", "C,, I/C, D"],;
+    durati, o, n: "2-3 months",;
+    te, a, m: "4 experts",locati, o, n: "On-site",;
+    featur, e, d: tr, u, e,technologi, e, s: ["A, W, S", "Doc, k, e, r", "Kuberne, t, e, s", "Jenk, i, n, s",, "Prometheu, s"],;
+    highligh, t, s: ["Z, e, r, o, Downt, i, m, e", "A, u, t, o-scal, i, n, g", "Monitor, i, n, g",, "Securit, y"]lin, k: "/services/cloud-migration";
   };
   {
     i, d: 4,;
-    titl, e: "Healthcare, AI, Diagnostic System",categor, y: "AI & Machine Learning",;
-    descriptio, n: "Advanced, medical, diagnostic platform, using, computer vision, and, machine learning, for, accurate disease detection",ratin, g: 4.9,;
-    review, s: 20, 3,view, s: 456, 7,;
-    like, s: 27, 8,imag, e: "http, s: //images.unsplash.com/photo-15760o91160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o70&q=80",;
-    pric, e: "$3, 5,0o00",;
-    tag, s: ["Pytho, n", "TensorFlo, w", "Compute, r Visio, n",, "Healthcare"],;
-    duratio, n: "6-8 months",;
-    tea, m: "8 experts",locatio, n: "Remote",;
-    feature, d: tru, e,technologie, s: ["Pytho, n", "TensorFlo, w", "OpenC, V", "Docke, r",, "AWS"],;
-    highlight, s: ["A, I Diagnostic, s", "Medica, l Imagin, g", "HIPA, A Complian, t", "Rea, l-tim, e, Analysis"]link: "/services/healthcare-ai";
+    tit, l, e: "Healthcar, e, A, I, Diagnostic System",catego, r, y: "AI & Machine Learning",;
+    descripti, o, n: "Advance, d, medica, l, diagnosti, c, platfor, m, usin, g, compute, r, visio, n, an, d, machin, e, learnin, g, fo, r, accurate disease detection",rati, n, g: 4.9,;
+    revie, w, s: 2, 0, 3,vie, w, s: 45, 6, 7,;
+    lik, e, s: 2, 7, 8,ima, g, e: "htt, p,
+    s: //images.unsplash.com/photo-15760o91160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o70&q=80",;
+    pri, c, e: "$3, 5,0o00",;
+    ta, g, s: ["Pyt, h, o, n", "TensorF, l, o, w", "Compu, t, e, r, Vis, i, o, n",, "Healthcar, e"],;
+    durati, o, n: "6-8 months",;
+    te, a, m: "8 experts",locati, o, n: "Remote",;
+    featur, e, d: tr, u, e,technologi, e, s: ["Pyt, h, o, n", "TensorF, l, o, w", "Ope, n, C, V", "Doc, k, e, r",, "AW, S"],;
+    highligh, t, s: ["A, I, Diagnost, i, c, s", "Medi, c, a, l, Imag, i, n, g", "HI, P, A, A, Compli, a, n, t", "R, e, a, l-t, i, m, e, Analysi, s"]lin, k: "/services/healthcare-ai";
   };
   {
     i, d: 5,;
-    titl, e: "IoT, Smart, City Platform",categor, y: "IoT & Smart Cities",;
-    descriptio, n: "Comprehensive, IoT, platform for, smart, city management includin, g, traffi, c, utilitie, s, and, public, services",;
-    ratin, g: 4.6,;
-    review, s: 7, 8,view, s: 189, 0,;
-    like, s: 11, 2,imag, e: "http, s: //images.unsplash.com/photo-148640o6146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=20o70&q=80",;
-    pric, e: "$2, 8,0o00",;
-    tag, s: ["Io, T", "Smar, t Citie, s", "Rea, l-tim, e Dat, a",, "Analytics"],;
-    duratio, n: "5-7 months",;
-    tea, m: "7 experts",locatio, n: "Hybrid",;
-    feature, d: fals, e,technologie, s: ["Io, T Sensor, s", "Apach, e Kafk, a", "Elasticsearc, h", "Reac, t", "Nod,, e.js"],;
-    highlight, s: ["Rea, l-tim, e Monitorin, g", "Predictiv, e Analytic, s", "Scalabl, e Architectur, e",, "Dashboard"]link: "/services/iot-smart-city";
+    tit, l, e: "Io, T, Smar, t, City Platform",catego, r, y: "IoT & Smart Cities",;
+    descripti, o, n: "Comprehensiv, e, Io, T, platfor, m, fo, r, smar, t, city managemen, t, includi, n, g, traff, i, c, utiliti, e, s, an, d, publi, c, services",;
+    rati, n, g: 4.6,;
+    revie, w, s: 7, 8,vie, w, s: 18, 9, 0,;
+    lik, e, s: 1, 1, 2,ima, g, e: "htt, p,
+    s: //images.unsplash.com/photo-148640o6146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=20o70&q=80",;
+    pri, c, e: "$2, 8,0o00",;
+    ta, g, s: ["I, o, T", "Sm, a, r, t, Cit, i, e, s", "R, e, a, l-t, i, m, e, D, a, t, a",, "Analytic, s"],;
+    durati, o, n: "5-7 months",;
+    te, a, m: "7 experts",locati, o, n: "Hybrid",;
+    featur, e, d: fal, s, e,technologi, e, s: ["I, o, T, Sens, o, r, s", "Apa, c, h, e, Ka, f, k, a", "Elasticsea, r, c, h", "Re, a, c, t", "N, o, d,, e.j, s"],;
+    highligh, t, s: ["R, e, a, l-t, i, m, e, Monitor, i, n, g", "Predict, i, v, e, Analyt, i, c, s", "Scala, b, l, e, Architect, u, r, e",, "Dashboar, d"]lin, k: "/services/iot-smart-city";
   };
 ];
-export, function, FeaturedListingsSection() {
-  const [hoveredListi,  n, g, setHoveredListi,, ng] = useState(null);
+expor, t, functio, n, FeaturedListingsSection() {
+  const [hoveredLis,  t, i,  n, g, setHoveredLis, t, i,, n, g] = useState(null);
   const containerVariants = {
-    hidden: { opacit,;
+    hidde, n: { opaci, t,;
   y: 0 },;
-    visibl, e: {,;
-    opacit, y: 1,transitio, n: {staggerChildre,;
+    visib, l, e: {,;
+    opaci, t, y: 1,transiti, o, n: {staggerChildr, e,;
   n: 0.1;
       }
     }
   };
   const itemVariants = {
-    hidde, n: { ,;
-  y: 2, 0opacity: 0 },;
-    visibl, e: {,;
-    y: 0,opacit, y: 1,;
-    transitio, n: {duratio,;
+    hidd, e, n: { ,;
+  y: 2,
+    0opacit, y: 0 },;
+    visib, l, e: {,;
+    y: 0,opaci, t, y: 1,;
+    transiti, o, n: {durati, o,;
   n: 0.5;
       }
     }
@@ -97,40 +102,40 @@ export, function, FeaturedListingsSection() {
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
           <motion.h2;
-            initial={{ opacity: 0,;
+            initial={{ opacit,  y: 0,;
   y: 20 }};
-            whileInView={{ opacity: 1,;
+            whileInView={{ opacit, y: 1,;
   y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-6";
+            transition={{ duratio, n: 0.6 }}
+            className="text-4xl m, d: text-5xl font-bold text-gray-90o0 mb-6";
           >;
             Featured Solutions;
           </motion.h2>;
           <motion.p;
-            initial={{ opacit,;
+            initial={{ opaci, t,;
     y: 0,;
   y: 20 }};
-            whileInView={{ opacity: 1,;
+            whileInView={{ opacit, y: 1,;
   y: 0 }}
-            transition={{ duration: 0.6dela,;
+            transition={{ duratio, n: 0.6del, a,;
   y: 0.1 }}
             className="text-xl text-gray-60o0 max-w-3xl mx-auto";
           >;
-            Discover, our, most popular, and, innovative solutions, that, are transforming, businesses, worldwide;
+            Discove, r, ou, r, mos, t, popula, r, an, d, innovativ, e, solution, s, tha, t, ar, e, transformin, g, businesse, s, worldwide;
           </motion.p>;
         </div>;
         <motion.div;
           variants={containerVariants}
           initial="hidden";
           whileInView="visible";
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md: grid-cols-2 l,;
+          viewport={{ onc, e: true }}
+          className="grid grid-cols-1 m, d: grid-cols-2, l,;
   g:grid-cols-3 gap-8";
         >;
           {featuredListings.map((listingindex) => (<motion.div;
               key={listing.id};
               variants={itemVariants}
-              className="group, relative, bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 overflow-hidden";
+              className="grou,  p, relativ, e, bg-white rounded-2xl shadow-lg hove, r: shadow-2xl transition-all duration-30o0 overflow-hidden";
               onMouseEnter={() => setHoveredListing(listing.id)}
               onMouseLeave={() => setHoveredListing(null)}
             >;
@@ -139,7 +144,7 @@ export, function, FeaturedListingsSection() {
                 <img;
                   src={listing.image}
                   alt={listing.title}
-                  className="w-full h-full object-cover group-hover: scale-110 transition-transform duration-50o0";
+                  className="w-full h-full object-cover group-hove,  r: scale-110 transition-transform duration-50o0";
                 />;
                 {listing.featured && (;
                   <div className="absolute top-4 left-4">;
@@ -148,7 +153,7 @@ export, function, FeaturedListingsSection() {
                     </Badge>;
                   </div>;
                 )}
-                <div className="absolute top-4 right-4, flex, items-center gap-2">;
+                <div className="absolute top-4 right-4, fle, x, items-center gap-2">;
                   <div className="flex items-center bg-black/20 backdrop-blur-sm rounded-full px-3 py-1">;
                     <Star className="w-4 h-4 text-yellow-40o0 fill-current" />;
                     <span className="text-white text-sm font-medium ml-1">{listing.rating}</span>;
@@ -166,7 +171,7 @@ export, function, FeaturedListingsSection() {
                     <span>{listing.duration}</span>;
                   </div>;
                 </div>;
-                <h3 className="text-xl font-semibold text-gray-90o0 mb-2 group-hover: text-blue-60o0 transition-colors">;
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-2 group-hove, r: text-blue-60o0 transition-colors">;
                   {listing.title}
                 </h3>;
                 <p className="text-gray-60o0 mb-4 line-clamp-2">;
@@ -210,7 +215,7 @@ export, function, FeaturedListingsSection() {
                 </div>;
                 {/* Highlights */}
                 <div className="mb-6">;
-                  <h4 className="text-sm font-semibold text-gray-70o0 mb-2">Key Feature,  s: </h4>;
+                  <h4 className="text-sm font-semibold text-gray-70o0 mb-2">Ke,  y, Featur, e,  s: </h4>;
                   <ul className="space-y-1">;
                     {listing.highlights.slice(0o3).map((highlighthighlightIndex) => (<li key={highlightIndex} className="flex items-center gap-2 text-sm text-gray-60o0">;
                         <CheckCircle className="w-3 h-3 text-green-50o0 flex-shrink-0" />;
@@ -221,32 +226,32 @@ export, function, FeaturedListingsSection() {
                 </div>;
                 {/* CTA */}
                 <div className="flex gap-3">;
-                  <Button className="flex-1 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hove,  r: from-blue-70o0 hove,;
+                  <Button className="flex-1 bg-gradient-to-r from-blue-60o0 to-purple-60o,  0, hov, e,  r: from-blue-70o, 0, hov, e,;
   r:to-purple-70o0 text-white">;
                     <Link to={listing.link} className="flex items-center gap-2">;
                       View Details;
                       <ArrowRight className="w-4 h-4" />;
                     </Link>;
                   </Button>;
-                  <Button variant="outline" size="icon" className="group-hover: bg-blue-50">;
-                    <Heart className="w-4 h-4 group-hove,;
+                  <Button variant="outline" size="icon" className="group-hove, r: bg-blue-50">;
+                    <Heart className="w-4 h-4 group-hov, e,;
   r:text-red-50o0 transition-colors" />;
                   </Button>;
                 </div>;
               </div>;
-              {/* Hover, Effect, Overlay */}
+              {/* Hove, r, Effec, t, Overlay */}
               <AnimatePresence>;
                 {hoveredListing === listing.id && (;
                   <motion.div;
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="absolute inset-0 bg-gradient-to-t from-blue-60o0/90 to-purple-60o0/90, flex, items-center justify-center";
+                    initial={{ opacit, y: 0 }}
+                    animate={{ opacit, y: 1 }}
+                    exit={{ opacit, y: 0 }}
+                    className="absolute inset-0 bg-gradient-to-t from-blue-60o0/90 to-purple-60o0/9, 0, fle, x, items-center justify-center";
                   >;
                     <div className="text-center text-white p-6">;
                       <h3 className="text-xl font-bold mb-2">{listing.title}</h3>;
                       <p className="text-sm mb-4 opacity-90">{listing.description}</p>;
-                      <Button className="bg-white text-blue-60o0 hover:bg-gray-10o0">;
+                      <Button className="bg-white text-blue-60o0 hove, r:bg-gray-10o0">;
                         <Link to={listing.link} className="flex items-center gap-2">;
                           Explore Now;
                           <ArrowRight className="w-4 h-4" />;
@@ -261,32 +266,32 @@ export, function, FeaturedListingsSection() {
         </motion.div>;
         {/* CTA Section */}
         <motion.div;
-          initial={{ opacity: 0,;
+          initial={{ opacit, y: 0,;
   y: 20 }};
-          whileInView={{ opacity: 1,;
+          whileInView={{ opacit, y: 1,;
   y: 0 }}
-          transition={{ duration: 0.6dela,;
+          transition={{ duratio, n: 0.6del, a,;
   y: 0.2 }}
           className="text-center mt-16";
         >;
           <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white">;
-            <h3 className="text-3xl font-bold mb-4">Ready, to, Get Started?</h3>;
+            <h3 className="text-3xl font-bold mb-4">Read, y, t, o, Get Started?</h3>;
             <p className="text-xl mb-6 opacity-90">;
-              Join, thousands, of businesses, already, using our solutions;
+              Joi, n, thousand, s, o, f, businesse, s, alread, y, using our solutions;
             </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-              <Button size="lg" className="bg-white text-blue-60o0 hove,;
+            <div className="flex flex-col s, m: flex-row gap-4 justify-center">;
+              <Button size="lg" className="bg-white text-blue-60o, 0, hov, e,;
   r:bg-gray-10o0">;
                 <Link to="/contact" className="flex items-center gap-2">;
                   <Phone className="w-5 h-5" />;
                   Contact Sales;
                 </Link>;
               </Button>;
-              <Button size="lg" variant="outline" className="border-white text-white hove, r: bg-white hove,;
+              <Button size="lg" variant="outline" className="border-white text-whit, e, hov, e, r: bg-whit, e, hov, e,;
   r:text-blue-60o0">;
                 <Link to="/services" className="flex items-center gap-2">;
                   <Rocket className="w-5 h-5" />;
-                  Browse, All, Services;
+                  Brows, e, Al, l, Services;
                 </Link>;
               </Button>;
             </div>;

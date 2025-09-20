@@ -1,35 +1,37 @@
-impor, t, Reac, t, { useEffectuseState } from "react";
+impo, r, t, Rea, c, t, { useEffectuseState } from "react";
 import { motionAnimatePresence } from "framer-motion";
-import { Downloa, d, Wif, i, WifiOf, f, CheckCircleAlertCircle } from "lucide-react";
+import { Downlo, a, d, Wi, f, i, WifiO, f, f, CheckCircleAlertCircle } from "lucide-react";
 interface ServiceWorkerState {
-  isInstalle, d: boolea, n,;
-    isOnlin, e: boolea, n,hasUpdat, e: boolea, nisInstalling: boolean;
+  isInstall, e, d: boole, a, n,;
+    isOnli, n, e: boole, a, n,hasUpda, t, e: boole, a,
+    nisInstallin, g: boolean;
 };
-export, function, ServiceWorker() {
-  const [swSta,  t, e, setSwSta,, te] = useState<ServiceWorkerState>({
-    isInstalle, d: fals, e,;
-    isOnlin, e: navigator.onLin, e,hasUpdat, e: fals, eisInstalling: false;
+expor, t, functio, n, ServiceWorker() {
+  const [swS,  t, a,  t, e, setSwS, t, a,, t, e] = useState<ServiceWorkerState>({
+    isInstall, e, d: fal, s, e,;
+    isOnli, n, e: navigator.onLi, n, e,hasUpda, t, e: fal, s,
+    eisInstallin, g: false;
   });
   useEffect(() => {
-    // Check, if, service worker, is, supported;
+    // Chec,  k, i, f, servic, e, worke, r, i, s, supported;
     if ('serviceWorker' in navigator) {
-      // Register, service, worker;
+      // Registe, r, servic, e, worker;
       navigator.serviceWorker;
         .register('/sw.js');
         .then((registration) => {
-          console.log('SW registere,  d: 'registration);
-          setSwState(prev => ({ ...previsInstalle,;
+          console.log('S,  W, register, e,  d: 'registration);
+          setSwState(prev => ({ ...previsInstall,  e,;
   d: true }));
-          // Check, for, updates;
+          // Chec, k, fo, r, updates;
           registration.addEventListener('updatefound'() => {
             const newWorker = registration.installing;
             if (newWorker) {
-              setSwState(prev => ({ ...previsInstalling: true }));
+              setSwState(prev => ({ ...previsInstallin,  g: true }));
               newWorker.addEventListener('statechange'() => {
                 if (newWorker.state === 'installed') {
                   setSwState(prev => ({ ;
-                    ...pre,  v,;
-                    isInstallin, g: falsehasUpdat,;
+                    ...pr,  e,  v,;
+                    isInstalli, n, g: falsehasUpda, t,;
   e: true;
                   }));
                 }
@@ -39,28 +41,28 @@ export, function, ServiceWorker() {
           // Handle updates;
           navigator.serviceWorker.addEventListener('controllerchange'() => {
             window.location.reload();
-          }),;
+          }), ;
         });
         .catch((registrationError) => {
-          console.log('SW, registration, failed: 'registrationError);
+          console.log('S,  W, registratio, n, faile, d: 'registrationError);
         }),;
     }
 ;
     // Online/offline detection;
-    const handleOnline = () => setSwState(prev => ({ ...previsOnline: true }));
-    const handleOffline = () => setSwState(prev => ({ ...previsOnline: false }));
+    const handleOnline = () => setSwState(prev => ({ ...previsOnlin,  e: true }));
+    const handleOffline = () => setSwState(prev => ({ ...previsOnlin,  e: false }));
     window.addEventListener('online'handleOnline);
     window.addEventListener('offline'handleOffline);
 ;
     return () => {;
       window.removeEventListener('online'handleOnline);
       window.removeEventListener('offline'handleOffline);
-    },;
+    }, ;
   }, []),;
   const handleUpdate = () => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then((registration) => {;
-        registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
+        registration.waiting?.postMessage({ typ,  e: 'SKIP_WAITING' });
       }),;
     }
   },;
@@ -69,13 +71,13 @@ export, function, ServiceWorker() {
   return(<AnimatePresence>;
       {swState.hasUpdate && (;
         <motion.div;
-          initial={{ opacity: 0,;
+          initial={{ opacit,  y: 0,;
   y: -50 }}
-          animate={{ opacity: 1,;
+          animate={{ opacit, y: 1,;
   y: 0 }}
-          exit={{ opacity: 0,;
+          exit={{ opacit, y: 0,;
   y: -50 }}
-          className="fixed top-4 right-4 z-50 bg-white dark: bg-gray-80o0 rounded-lg shadow-lg, border, border-gray-20o0 dar,;
+          className="fixed top-4 right-4 z-50 bg-white dar, k: bg-gray-80o0 rounded-lg shadow-l, g, borde, r, border-gray-20o, 0, da, r,;
   k:border-gray-70o0 p-4 max-w-sm";
         >;
           <div className="flex items-center space-x-3">;
@@ -86,17 +88,17 @@ export, function, ServiceWorker() {
               )}
             </div>;
             <div className="flex-1 min-w-0">;
-              <p className="text-sm font-medium text-gray-90o0 dark:text-white">;
+              <p className="text-sm font-medium text-gray-90o0 dar,  k:text-white">;
                 {swState.isOnline ? 'Online' : 'Offline'}
               </p>;
-              <p className="text-sm text-gray-50o0 dark:text-gray-40o0">;
-                {swState.hasUpdate ? 'Update available' : 'Up, to, date'}
+              <p className="text-sm text-gray-50o0 dar, k:text-gray-40o0">;
+                {swState.hasUpdate ? 'Update available' : 'U, p, t, o, date'}
               </p>;
             </div>;
             {swState.hasUpdate && (;
               <button;
                 onClick={handleUpdate}
-                className="flex-shrink-0 bg-blue-60o0 hover: bg-blue-70o0 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors";
+                className="flex-shrink-0 bg-blue-60o0 hove, r: bg-blue-70o0 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors";
               >;
                 Update;
               </button>;

@@ -1,7 +1,7 @@
-impor, t, Reac, t, { useStateuseEffect } from "react";
+impo, r, t, Rea, c, t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion";
-export, function, ScrollToTop() {
-  const [isVisib,  l,, esetIsVisible] = useState(false);
+expor, t, functio, n, ScrollToTop() {
+  const [isVis,  i, b,  l,, esetIsVisib, l, e] = useState(false);
 ;
   useEffect(() => {
     const toggleVisibility = () => {
@@ -10,13 +10,13 @@ export, function, ScrollToTop() {
       } else {
         setIsVisible(false);
       };
-    },;
+    }, ;
     window.addEventListener('scroll'toggleVisibility);
     return () => window.removeEventListener('scroll'toggleVisibility);
-  }, []);
+  },  []);
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0behavio,;
+      to,  p: 0behavi, o,;
   r: 'smooth';
     });
   },;
@@ -24,30 +24,32 @@ export, function, ScrollToTop() {
       {isVisible && (;
         <motion.button;
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white rounded-full shadow-lg hove,  r: shadow-xl, transform, hove, r: -translate-y-1 transition-all duration-30o0 focu, s: outline-none focu, s: ring-2 focu, s: ring-blue-50o0 focu, s: ring-offset-2";
-          aria-label="Scroll, to, top";
-          initial={{ opacit, y: 0,;
-    scale: 0,;
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white rounded-full shadow-l,  g, hov, e,  r: shadow-x, l, transfor, m, hov, e, r: -translate-y-1 transition-all duration-30o, 0, foc, u,
+    s: outline-non, e, foc, u, s: ring-2, foc, u,
+    s: ring-blue-50o, 0, foc, u, s: ring-offset-2";
+          aria-label="Scrol, l, t, o, top";
+          initial={{ opaci, t, y: 0,;
+    scal, e: 0,;
   y: 20 }}
-          animate={{ opacit, y: 1,;
-    scale: 1,;
+          animate={{ opaci, t, y: 1,;
+    scal, e: 1,;
   y: 0 }}
-          exit={{ opacit, y: 0,;
-    scale: 0,;
+          exit={{ opaci, t, y: 0,;
+    scal, e: 0,;
   y: 20 }};
           whileHover={{ ;
-            scal, e: 1.1,;
-    y: -2,boxShado, w: "0, 20px, 25px -5px rgba(5, 9, 13, 0, 24, 60.3), 0, 10px, 10px -5px rgba(5,  9, 13, 0o2460.2)";
+            sca, l, e: 1.1,;
+    y: -2,boxShad, o, w: "0, 20p, x, 25px -5px rgba(5, 9, 1, 3, 0, 2, 4, 60.3), 0, 10p, x, 10px -5px rgba(5,   9, 1, 3, 0o2460.2)";
           }};
-          whileTap={{ scale: 0.95 }}
+          whileTap={{ scal, e: 0.95 }}
           transition={{
-            typ, e: "spring",;
-    stiffnes, s: 40o0dampin,;
+            ty, p, e: "spring",;
+    stiffne, s, s: 40o0dampi, n,;
   g: 17;
           }}
         >;
           <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0, 0, 24 24">;
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0, 0l7, 7m-7-7v18"/>;
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m, 0, 0l, 7, 7m-7-7v18"/>;
           </svg>;
         </motion.button>;
       )}
@@ -55,5 +57,5 @@ export, function, ScrollToTop() {
   );
 };
 ;
-export, default, ScrollToTop;
+expor, t, defaul, t, ScrollToTop;
 ;

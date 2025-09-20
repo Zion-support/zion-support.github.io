@@ -2,50 +2,79 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Sitemap = () => {
     const sitemapData = {
-        main: [
-            { path: '/', label: 'Home', description: 'Welcome to Zion Tech Group' },
-            { path: '/about', label: 'About Us', description: 'Learn about our company and mission' },
-            { path: '/contact', label: 'Contact', description: 'Get in touch with our team' },
-            { path: '/careers', label: 'Careers', description: 'Join our innovative team' },
-            { path: '/blog', label: 'Blog', description: 'Latest insights and technology trends' }
+        mai,  n: [
+            { pa, t, h: '/',
+    lab, e, l: 'Hom, e', descripti, o, n: 'Welcom, e t, o Zio, n Tec, h Grou, p' },
+            { pa, t, h: '/abou, t',
+    lab, e, l: 'Abou, t U, s', descripti, o, n: 'Lear, n abou, t ou, r compan, y an, d missio, n' },
+            { pa, t, h: '/contac, t',
+    lab, e, l: 'Contac, t', descripti, o, n: 'Ge, t i, n touc, h wit, h ou, r tea, m' },
+            { pa, t, h: '/career, s',
+    lab, e, l: 'Career, s', descripti, o, n: 'Joi, n ou, r innovativ, e tea, m' },
+            { pa, t, h: '/blo, g',
+    lab, e, l: 'Blo, g', descripti, o, n: 'Lates, t insight, s an, d technolog, y trend, s' }
         ],
-        services: [
-            { path: '/services', label: 'All Services', description: 'Complete overview of our services' },
-            { path: '/services/ai', label: 'AI Solutions', description: 'Artificial Intelligence & Machine Learning' },
-            { path: '/services/cloud', label: 'Cloud & DevOps', description: 'Cloud Infrastructure & DevOps Automation' },
-            { path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Advanced Security Solutions' },
-            { path: '/services/infrastructure', label: 'Infrastructure', description: 'IT Infrastructure & Management' },
-            { path: '/services/consulting', label: 'Consulting', description: 'Strategic Technology Consulting' },
-            { path: '/services/transformation', label: 'Digital Transformation', description: 'Business Process Transformation' }
+        service, s: [
+            { pa, t, h: '/service, s',
+    lab, e, l: 'Al, l Service, s', descripti, o, n: 'Complet, e overvie, w o, f ou, r service, s' },
+            { pa, t, h: '/service, s/a, i',
+    lab, e, l: 'A, I Solution, s', descripti, o, n: 'Artificia, l Intelligenc, e & Machin, e Learnin, g' },
+            { pa, t, h: '/service, s/clou, d',
+    lab, e, l: 'Clou, d & DevOp, s', descripti, o, n: 'Clou, d Infrastructur, e & DevOp, s Automatio, n' },
+            { pa, t, h: '/service, s/cybersecurit, y',
+    lab, e, l: 'Cybersecurit, y', descripti, o, n: 'Advance, d Securit, y Solution, s' },
+            { pa, t, h: '/service, s/infrastructur, e',
+    lab, e, l: 'Infrastructur, e', descripti, o, n: 'I, T Infrastructur, e & Managemen, t' },
+            { pa, t, h: '/service, s/consultin, g',
+    lab, e, l: 'Consultin, g', descripti, o, n: 'Strategi, c Technolog, y Consultin, g' },
+            { pa, t, h: '/service, s/transformatio, n',
+    lab, e, l: 'Digita, l Transformatio, n', descripti, o, n: 'Busines, s Proces, s Transformatio, n' }
         ],
-        aiAutonomous: [
-            { path: '/ai-autonomous-analytics', label: 'AI Analytics', description: 'Advanced data analytics powered by AI' },
-            { path: '/ai-autonomous-automation', label: 'AI Automation', description: 'Intelligent process automation' },
-            { path: '/ai-autonomous-security', label: 'AI Security', description: 'AI-powered security solutions' },
-            { path: '/ai-autonomous-development', label: 'AI Development', description: 'AI application development' },
-            { path: '/ai-autonomous-research', label: 'AI Research', description: 'Cutting-edge AI research services' },
-            { path: '/ai-autonomous-innovation', label: 'AI Innovation', description: 'AI innovation consulting' },
-            { path: '/ai-autonomous-architecture', label: 'AI Architecture', description: 'AI system architecture design' },
-            { path: '/ai-autonomous-data', label: 'AI Data', description: 'AI data processing and management' },
-            { path: '/ai-autonomous-engineering', label: 'AI Engineering', description: 'AI engineering solutions' },
-            { path: '/ai-autonomous-integration', label: 'AI Integration', description: 'AI system integration services' }
+        aiAutonomou, s: [
+            { pa, t, h: '/a, i-autonomou, s-analytic, s',
+    lab, e, l: 'A, I Analytic, s', descripti, o, n: 'Advance, d dat, a analytic, s powere, d b, y A, I' },
+            { pa, t, h: '/a, i-autonomou, s-automatio, n',
+    lab, e, l: 'A, I Automatio, n', descripti, o, n: 'Intelligen, t proces, s automatio, n' },
+            { pa, t, h: '/a, i-autonomou, s-securit, y',
+    lab, e, l: 'A, I Securit, y', descripti, o, n: 'A, I-powere, d securit, y solution, s' },
+            { pa, t, h: '/a, i-autonomou, s-developmen, t',
+    lab, e, l: 'A, I Developmen, t', descripti, o, n: 'A, I applicatio, n developmen, t' },
+            { pa, t, h: '/a, i-autonomou, s-researc, h',
+    lab, e, l: 'A, I Researc, h', descripti, o, n: 'Cuttin, g-edg, e A, I researc, h service, s' },
+            { pa, t, h: '/a, i-autonomou, s-innovatio, n',
+    lab, e, l: 'A, I Innovatio, n', descripti, o, n: 'A, I innovatio, n consultin, g' },
+            { pa, t, h: '/a, i-autonomou, s-architectur, e',
+    lab, e, l: 'A, I Architectur, e', descripti, o, n: 'A, I syste, m architectur, e desig, n' },
+            { pa, t, h: '/a, i-autonomou, s-dat, a',
+    lab, e, l: 'A, I Dat, a', descripti, o, n: 'A, I dat, a processin, g an, d managemen, t' },
+            { pa, t, h: '/a, i-autonomou, s-engineerin, g',
+    lab, e, l: 'A, I Engineerin, g', descripti, o, n: 'A, I engineerin, g solution, s' },
+            { pa, t, h: '/a, i-autonomou, s-integratio, n',
+    lab, e, l: 'A, I Integratio, n', descripti, o, n: 'A, I syste, m integratio, n service, s' }
         ],
-        pricing: [
-            { path: '/comprehensive-pricing-2025', label: 'Pricing 2025', description: 'Current year pricing plans' },
-            { path: '/comprehensive-pricing', label: 'Comprehensive Pricing', description: 'Detailed pricing information' }
+        pricin, g: [
+            { pa, t, h: '/comprehensiv, e-pricin, g-202, 5',
+    lab, e, l: 'Pricin, g 202, 5', descripti, o, n: 'Curren, t yea, r pricin, g plan, s' },
+            { pa, t, h: '/comprehensiv, e-pricin, g',
+    lab, e, l: 'Comprehensiv, e Pricin, g', descripti, o, n: 'Detaile, d pricin, g informatio, n' }
         ],
-        showcase: [
-            { path: '/services-showcase', label: 'Services Showcase', description: 'Showcase of our services' },
-            { path: '/comprehensive-services-showcase', label: 'Comprehensive Services Showcase', description: 'Complete overview of all services' },
-            { path: '/innovative-services-2025', label: 'Innovative Services 2025', description: 'Latest innovative services' }
+        showcas, e: [
+            { pa, t, h: '/service, s-showcas, e',
+    lab, e, l: 'Service, s Showcas, e', descripti, o, n: 'Showcas, e o, f ou, r service, s' },
+            { pa, t, h: '/comprehensiv, e-service, s-showcas, e',
+    lab, e, l: 'Comprehensiv, e Service, s Showcas, e', descripti, o, n: 'Complet, e overvie, w o, f al, l service, s' },
+            { pa, t, h: '/innovativ, e-service, s-202, 5',
+    lab, e, l: 'Innovativ, e Service, s 202, 5', descripti, o, n: 'Lates, t innovativ, e service, s' }
         ],
-        legal: [
-            { path: '/privacy', label: 'Privacy Policy', description: 'Our privacy policy and data handling' },
-            { path: '/terms', label: 'Terms of Service', description: 'Terms and conditions of service' }
+        lega, l: [
+            { pa, t, h: '/privac, y',
+    lab, e, l: 'Privac, y Polic, y', descripti, o, n: 'Ou, r privac, y polic, y an, d dat, a handlin, g' },
+            { pa, t, h: '/term, s',
+    lab, e, l: 'Term, s o, f Servic, e', descripti, o, n: 'Term, s an, d condition, s o, f servic, e' }
         ]
     };
     return (<div className="bg-slate-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 s, m:px-6 l, g:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-slate-900 mb-4">Site Map</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -53,13 +82,13 @@ const Sitemap = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 l, g:grid-cols-2 x, l:grid-cols-3 gap-8">
           {/* Main Pages */}
           <div className="bg-white rounded-lg shadow-sm p-6">
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Main Pages</h3>
             <ul className="space-y-3">
               {sitemapData.main.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
+                  <Link to={item.path} className="block p-3 rounded-lg hove,  r:bg-slate-50 transition-colors duration-200">
                     <div className="font-medium text-slate-900">{item.label}</div>
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
@@ -72,7 +101,7 @@ const Sitemap = () => {
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Core Services</h3>
             <ul className="space-y-3">
               {sitemapData.services.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
+                  <Link to={item.path} className="block p-3 rounded-lg hove,  r:bg-slate-50 transition-colors duration-200">
                     <div className="font-medium text-slate-900">{item.label}</div>
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
@@ -85,7 +114,7 @@ const Sitemap = () => {
             <h3 className="text-xl font-semibold text-slate-900 mb-4">AI Autonomous Services</h3>
             <ul className="space-y-3">
               {sitemapData.aiAutonomous.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
+                  <Link to={item.path} className="block p-3 rounded-lg hove,  r:bg-slate-50 transition-colors duration-200">
                     <div className="font-medium text-slate-900">{item.label}</div>
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
@@ -98,13 +127,13 @@ const Sitemap = () => {
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Pricing & Showcase</h3>
             <ul className="space-y-3">
               {sitemapData.pricing.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
+                  <Link to={item.path} className="block p-3 rounded-lg hove,  r:bg-slate-50 transition-colors duration-200">
                     <div className="font-medium text-slate-900">{item.label}</div>
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
                 </li>))}
               {sitemapData.showcase.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
+                  <Link to={item.path} className="block p-3 rounded-lg hove,  r:bg-slate-50 transition-colors duration-200">
                     <div className="font-medium text-slate-900">{item.label}</div>
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
@@ -117,19 +146,19 @@ const Sitemap = () => {
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Legal & Resources</h3>
             <ul className="space-y-3">
               {sitemapData.legal.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
+                  <Link to={item.path} className="block p-3 rounded-lg hove,  r:bg-slate-50 transition-colors duration-200">
                     <div className="font-medium text-slate-900">{item.label}</div>
                     <div className="text-sm text-slate-600">{item.description}</div>
                   </Link>
                 </li>))}
               <li>
-                <Link to="/ai-consumer-willingness-to-try" className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
+                <Link to="/ai-consumer-willingness-to-try" className="block p-3 rounded-lg hove, r:bg-slate-50 transition-colors duration-200">
                   <div className="font-medium text-slate-900">AI Consumer Research</div>
                   <div className="text-sm text-slate-600">Research on AI consumer adoption</div>
                 </Link>
               </li>
               <li>
-                <Link to="/ai-consumer-willingness-to-use" className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
+                <Link to="/ai-consumer-willingness-to-use" className="block p-3 rounded-lg hove, r:bg-slate-50 transition-colors duration-200">
                   <div className="font-medium text-slate-900">AI Consumer Insights</div>
                   <div className="text-sm text-slate-600">Consumer insights for AI products</div>
                 </Link>
@@ -141,13 +170,13 @@ const Sitemap = () => {
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm p-6">
             <h3 className="text-xl font-semibold text-slate-900 mb-4">Quick Links</h3>
             <div className="space-y-3">
-              <Link to="/contact" className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+              <Link to="/contact" className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300">
                 Get Started
               </Link>
-              <Link to="/comprehensive-pricing-2025" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 border border-slate-200">
+              <Link to="/comprehensive-pricing-2025" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hove, r:bg-slate-50 transition-all duration-300 border border-slate-200">
                 View Pricing
               </Link>
-              <Link to="/services" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 border border-slate-200">
+              <Link to="/services" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hove, r:bg-slate-50 transition-all duration-300 border border-slate-200">
                 Explore Services
               </Link>
             </div>
@@ -157,33 +186,33 @@ const Sitemap = () => {
         {/* Additional AI Services Grid */}
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">All AI Autonomous Services</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 x, l:grid-cols-4 gap-4">
             {[
-            'AI Autonomous Audit', 'AI Autonomous Compliance', 'AI Autonomous Creativity',
-            'AI Autonomous Customer Service', 'AI Autonomous Database Security',
-            'AI Autonomous Decision Engine', 'AI Autonomous Design', 'AI Autonomous DevOps',
-            'AI Autonomous Edge Security', 'AI Autonomous Education', 'AI Autonomous Finance',
-            'AI Autonomous Forensics', 'AI Autonomous Governance', 'AI Autonomous Healthcare',
-            'AI Autonomous Hybrid Security', 'AI Autonomous Identity Security',
-            'AI Autonomous Incident Response', 'AI Autonomous Infrastructure Security',
-            'AI Autonomous Invention', 'AI Autonomous IoT Security', 'AI Autonomous Learning',
-            'AI Autonomous Legal Counsel', 'AI Autonomous Logistics', 'AI Autonomous Malware Analysis',
-            'AI Autonomous Management', 'AI Autonomous Manufacturing', 'AI Autonomous Marketing',
-            'AI Autonomous Microservice Security', 'AI Autonomous Mobile Security',
-            'AI Autonomous Monitoring', 'AI Autonomous Network Security', 'AI Autonomous Optimization',
-            'AI Autonomous Orchestration', 'AI Autonomous Penetration Testing',
-            'AI Autonomous Planning', 'AI Autonomous Prediction', 'AI Autonomous Quality Assurance',
-            'AI Autonomous Reasoning', 'AI Autonomous Recommendation', 'AI Autonomous Risk Management',
-            'AI Autonomous Robotics', 'AI Autonomous Scientific Research', 'AI Autonomous Serverless Security',
-            'AI Autonomous Software Engineering', 'AI Autonomous Speech', 'AI Autonomous Synthesis',
-            'AI Autonomous Systems Platform', 'AI Autonomous Testing', 'AI Autonomous Threat Detection',
-            'AI Autonomous Threat Intelligence', 'AI Autonomous Trading', 'AI Autonomous Translation',
-            'AI Autonomous Virtual Assistant', 'AI Autonomous Vision', 'AI Autonomous Vulnerability Assessment',
-            'AI Autonomous Web Security', 'AI Autonomous Workflow', 'AI Autonomous Writing',
-            'AI Autonomous Zero Trust Security'
+            'A, I Autonomou, s Audi, t', 'A, I Autonomou, s Complianc, e', 'A, I Autonomou, s Creativit, y',
+            'A, I Autonomou, s Custome, r Servic, e', 'A, I Autonomou, s Databas, e Securit, y',
+            'A, I Autonomou, s Decisio, n Engin, e', 'A, I Autonomou, s Desig, n', 'A, I Autonomou, s DevOp, s',
+            'A, I Autonomou, s Edg, e Securit, y', 'A, I Autonomou, s Educatio, n', 'A, I Autonomou, s Financ, e',
+            'A, I Autonomou, s Forensic, s', 'A, I Autonomou, s Governanc, e', 'A, I Autonomou, s Healthcar, e',
+            'A, I Autonomou, s Hybri, d Securit, y', 'A, I Autonomou, s Identit, y Securit, y',
+            'A, I Autonomou, s Inciden, t Respons, e', 'A, I Autonomou, s Infrastructur, e Securit, y',
+            'A, I Autonomou, s Inventio, n', 'A, I Autonomou, s Io, T Securit, y', 'A, I Autonomou, s Learnin, g',
+            'A, I Autonomou, s Lega, l Counse, l', 'A, I Autonomou, s Logistic, s', 'A, I Autonomou, s Malwar, e Analysi, s',
+            'A, I Autonomou, s Managemen, t', 'A, I Autonomou, s Manufacturin, g', 'A, I Autonomou, s Marketin, g',
+            'A, I Autonomou, s Microservic, e Securit, y', 'A, I Autonomou, s Mobil, e Securit, y',
+            'A, I Autonomou, s Monitorin, g', 'A, I Autonomou, s Networ, k Securit, y', 'A, I Autonomou, s Optimizatio, n',
+            'A, I Autonomou, s Orchestratio, n', 'A, I Autonomou, s Penetratio, n Testin, g',
+            'A, I Autonomou, s Plannin, g', 'A, I Autonomou, s Predictio, n', 'A, I Autonomou, s Qualit, y Assuranc, e',
+            'A, I Autonomou, s Reasonin, g', 'A, I Autonomou, s Recommendatio, n', 'A, I Autonomou, s Ris, k Managemen, t',
+            'A, I Autonomou, s Robotic, s', 'A, I Autonomou, s Scientifi, c Researc, h', 'A, I Autonomou, s Serverles, s Securit, y',
+            'A, I Autonomou, s Softwar, e Engineerin, g', 'A, I Autonomou, s Speec, h', 'A, I Autonomou, s Synthesi, s',
+            'A, I Autonomou, s System, s Platfor, m', 'A, I Autonomou, s Testin, g', 'A, I Autonomou, s Threa, t Detectio, n',
+            'A, I Autonomou, s Threa, t Intelligenc, e', 'A, I Autonomou, s Tradin, g', 'A, I Autonomou, s Translatio, n',
+            'A, I Autonomou, s Virtua, l Assistan, t', 'A, I Autonomou, s Visio, n', 'A, I Autonomou, s Vulnerabilit, y Assessmen, t',
+            'A, I Autonomou, s We, b Securit, y', 'A, I Autonomou, s Workflo, w', 'A, I Autonomou, s Writin, g',
+            'A, I Autonomou, s Zer, o Trus, t Securit, y'
         ].map((service) => {
-            const path = '/' + service.toLowerCase().replace(/\s+/g, '-').replace(/ai-autonomous-/, 'ai-autonomous-');
-            return (<Link key={service} to={path} className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-center">
+            const path = '/' + service.toLowerCase().replace(/\s+/g,  '-').replace(/ai-autonomous-/,  'ai-autonomous-');
+            return (<Link key={service} to={path} className="block p-4 bg-white rounded-lg shadow-sm hove,  r:shadow-md transition-all duration-200 text-center">
                   <div className="font-medium text-slate-900 text-sm">{service}</div>
                 </Link>);
         })}

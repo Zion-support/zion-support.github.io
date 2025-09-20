@@ -1,130 +1,132 @@
-impor, t, Reac, t, { useStat, e, useEffectuseRef } from "react";
+impo, r, t, Rea, c, t, { useSta, t, e, useEffectuseRef } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import { LinkuseLocation } from "react-router-dom";
 import {
-  Men, u,;
+  Me, n, u,;
   X,;
-  ChevronDow, n,;
-  Hom, e,;
-  User, s,;
-  Briefcas, e,;
-  Phon, e,;
-  Inf, o,;
-  Setting, s,;
-  HelpCircl, e,;
-  FileTex, t,;
-  Glob, e,;
-  Za, p,;
-  Shiel, d,;
-  Clou, d,;
-  Brai, n,;
-  Smartphon, e,;
-  Monito, r,;
-  Serve, r,;
-  Databas, e,;
-  Loc, k,;
-  Cod, e,;
-  Rocke, t,;
-  Sta, r,;
-  TrendingU, p,;
-  Awar, d,;
-  BookOpe, n,;
-  MessageCircl, e,;
-  Mai, l,;
+  ChevronDo, w, n,;
+  Ho, m, e,;
+  Use, r, s,;
+  Briefca, s, e,;
+  Pho, n, e,;
+  In, f, o,;
+  Settin, g, s,;
+  HelpCirc, l, e,;
+  FileTe, x, t,;
+  Glo, b, e,;
+  Z, a, p,;
+  Shie, l, d,;
+  Clo, u, d,;
+  Bra, i, n,;
+  Smartpho, n, e,;
+  Monit, o, r,;
+  Serv, e, r,;
+  Databa, s, e,;
+  Lo, c, k,;
+  Co, d, e,;
+  Rock, e, t,;
+  St, a, r,;
+  Trending, U, p,;
+  Awa, r, d,;
+  BookOp, e, n,;
+  MessageCirc, l, e,;
+  Ma, i, l,;
   MapPinClock;
 } from "lucide-react";
 interface NavigationItem {
-  labe, l: strin, g,;
-    pat, h: strin, g,icon: React.ComponentType<{ size?: numberclassName?: string }>,;
+  lab, e, l: stri, n, g,;
+    pa, t, h: stri, n, g,ico, n: React.ComponentType<{ size?: numberclassName?: string }>,;
   children?: NavigationItem[],;
-  description?: strin, g,;
+  description?: stri, n, g,;
 };
 ;
-const navigationItem, s: NavigationItem[] = [;
+cons, t, navigationIte, m, s: NavigationItem[] = [;
   {
-    lab, e, l: 'Hom, e',;
-    pa, t, h: '/',ic, o, n: Ho, m, e,;
-    descripti, o, n: 'Welcom, e t, o Zio, n, Tech, Group';
+    l, a, b, e, l: 'H, o, m, e',;
+    p, a, t, h: '/',i, c, o, n: H, o, m, e,;
+    descrip, t, i, o, n: 'Welc, o, m, e, t, o, Z, i, o, n, Te, c, h, Grou, p';
   };
   {
-    lab, e, l: 'Abou, t',;
-    pa, t, h: '/abou, t',ic, o, n: In, f, o,;
-    descripti, o, n: 'Lear, n abou, t ou, r compan, y, and, mission';
+    l, a, b, e, l: 'Ab, o, u, t',;
+    p, a, t, h: '/ab, o, u, t',i, c, o, n: I, n, f, o,;
+    descrip, t, i, o, n: 'Le, a, r, n, ab, o, u, t, o, u, r, comp, a, n, y, a, n, d, missio, n';
   };
   {
-    lab, e, l: 'Service, s',;
-    pa, t, h: '/service, s',ic, o, n: Briefca, s, e,;
-    childr, e, n: [;
+    l, a, b, e, l: 'Servi, c, e, s',;
+    p, a, t, h: '/servi, c, e, s',i, c, o, n: Brief, c, a, s, e,;
+    chil, d, r, e, n: [;
       {
-        lab, e, l: 'A, I & Machin, e Learnin, g',;
-    pa, t, h: '/service, s/a, i',ic, o, n: Bra, i, n,;
-    descripti, o, n: 'Cuttin, g-edg, e, AI, solutions';
+        l, a, b, e, l: 'A, I & Mach, i, n, e, Learn, i, n, g',;
+    p, a, t, h: '/servi, c, e, s/a, i',i, c, o, n: B, r, a, i, n,;
+    descrip, t, i, o, n: 'Cutt, i, n, g-e, d, g, e, A, I, solution, s';
       };
       {
-        lab, e, l: 'Cybersecurit, y',;
-    pa, t, h: '/service, s/cybersecurit, y',ic, o, n: Shie, l, d,;
-    descripti, o, n: 'Advance, d, security, services';
+        l, a, b, e, l: 'Cybersecur, i, t, y',;
+    p, a, t, h: '/servi, c, e, s/cybersecur, i, t, y',i, c, o, n: Sh, i, e, l, d,;
+    descrip, t, i, o, n: 'Advan, c, e, d, securi, t, y, service, s';
       };
       {
-        lab, e, l: 'Clou, d Service, s',;
-    pa, t, h: '/service, s/clou, d',ic, o, n: Clo, u, d,;
-    descripti, o, n: 'Scalabl, e, cloud, solutions';
+        l, a, b, e, l: 'Cl, o, u, d, Servi, c, e, s',;
+    p, a, t, h: '/servi, c, e, s/cl, o, u, d',i, c, o, n: C, l, o, u, d,;
+    descrip, t, i, o, n: 'Scala, b, l, e, clo, u, d, solution, s';
       };
       {
-        lab, e, l: 'Digita, l Transformatio, n',;
-    pa, t, h: '/service, s/transformatio, n',ic, o, n: Z, a, p,;
-    descripti, o, n: 'Busines, s, transformation, services';
+        l, a, b, e, l: 'Digi, t, a, l, Transformat, i, o, n',;
+    p, a, t, h: '/servi, c, e, s/transformat, i, o, n',i, c, o, n: Z, a, p,;
+    descrip, t, i, o, n: 'Busin, e, s, s, transformati, o, n, service, s';
       };
       {
-        lab, e, l: 'Infrastructur, e',;
-    pa, t, h: '/service, s/infrastructur, e',ic, o, n: Serv, e, r,;
-    descripti, o, n: 'I, T, infrastructure, solutions';
+        l, a, b, e, l: 'Infrastruct, u, r, e',;
+    p, a, t, h: '/servi, c, e, s/infrastruct, u, r, e',i, c, o, n: Se, r, v, e, r,;
+    descrip, t, i, o, n: 'I, T, infrastructu, r, e, solution, s';
       },;
       {
-        lab, e, l: 'Consultin, g',;
-    pa, t, h: '/service, s/consultin, g',ic, o, n: Use, r, s,;
-    descripti, o, n: 'Strategic, IT, consulting';
+        l, a, b, e, l: 'Consult, i, n, g',;
+    p, a, t, h: '/servi, c, e, s/consult, i, n, g',i, c, o, n: U, s, e, r, s,;
+    descrip, t, i, o, n: 'Strateg, i, c, I, T, consultin, g';
       }
   ,  ];
   };
   {
-    labe, l: 'Solutions',;
-    pat, h: '/solutions',ico, n: Rocke, tdescription: 'Industry-specific solutions';
+    lab, e, l: 'Solutions',;
+    pa, t, h: '/solutions',ic, o, n: Rock, e,
+    tdescriptio, n: 'Industry-specific solutions';
   };
   {
-    labe, l: 'Contact',;
-    pat, h: '/contact',ico, n: Phon, edescription: 'Get, in, touch with us';
+    lab, e, l: 'Contact',;
+    pa, t, h: '/contact',ic, o, n: Pho, n,
+    edescriptio, n: 'Ge, t, i, n, touch with us';
   };
 ];
 const quickActions = [;
   {
-    lab, e, l: 'Ge, t Quot, e',;
-    pa, t, h: '/reques, t-quot, e',ic, o, n: MessageCirc, l, e,;
-    col, o, r: 'b, g-zion-cyan';
+    l, a, b, e, l: 'G, e, t, Qu, o, t, e',;
+    p, a, t, h: '/requ, e, s, t-qu, o, t, e',i, c, o, n: MessageCi, r, c, l, e,;
+    c, o, l, o, r: 'b, g-zio, n-cya, n';
   };
   {
-    lab, e, l: 'Suppor, t',;
-    pa, t, h: '/hel, p',ic, o, n: HelpCirc, l, e,;
-    col, o, r: 'b, g-zion-purple';
+    l, a, b, e, l: 'Supp, o, r, t',;
+    p, a, t, h: '/h, e, l, p',i, c, o, n: HelpCi, r, c, l, e,;
+    c, o, l, o, r: 'b, g-zio, n-purpl, e';
   },;
   {
-    lab, e, l: 'Documentatio, n',;
-    pa, t, h: '/doc, s',ic, o, n: FileTe, x, t,;
-    col, o, r: 'bg-zion-blue';
+    l, a, b, e, l: 'Documentat, i, o, n',;
+    p, a, t, h: '/d, o, c, s',i, c, o, n: File, T, e, x, t,;
+    c, o, l, o, r: 'b, g-zio, n-blu, e';
  , };
 ];
-export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
-  const [isOp,  e, n, setIsOp,, en] = useState(false);
-  const [expandedIte, m, s, setExpandedIte,, ms] = useState<Set<string>>(new Set());
-  const [activePa,  t,, hsetActivePath] = useState('/');
+expor, t, cons, t, EnhancedMobileNavigati, o, n: React.FC = () => {;
+  const [is,  O, p,  e, n, setIs, O, p,, e, n] = useState(false);
+  const [expandedI, t, e, m, s, setExpandedI, t, e,, m, s] = useState<Set<string>>(new Set());
+  const [active,  P, a,  t,, hsetActivePa, t, h] = useState('/');
   const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     setActivePath(location.pathname);
-  },  [locati,, on]);
+  },   [loca, t, i,, o, n]);
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target, as, Node)) {
+    const handleClickOutside = (even,  t: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.targe,  t, a, s, Node)) {
         setIsOpen(false);
       };
     };
@@ -134,9 +136,9 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
 ;
     return () => {;
       document.removeEventListener('mousedown'handleClickOutside);
-      document.body.style.overflow = 'unset' },;
-  }, [isOp,, en]),;
-  const toggleExpanded = (labe,  l: string) => {;
+      document.body.style.overflow = 'unset' }, ;
+  }, [is, O, p,, e, n]),;
+  const toggleExpanded = (lab,  e,  l: string) => {;
     setExpandedItems(prev => {;
       const newSet = new Set(prev);
       if (newSet.has(label)) {
@@ -144,22 +146,22 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
       } else {
         newSet.add(label);
       };
-      retur,  n, newSe, t,;
+      retu,  r,  n, newS, e, t,;
     }),;
   };
 ;
-  const handleNavigation = (pat,  h: string) => {;
+  const handleNavigation = (pa,  t,  h: string) => {;
     setIsOpen(false);
     setExpandedItems(new Set());
-  },;
-  const isActive = (pat, h: string) => {
+  }, ;
+  const isActive = (pa, t, h: string) => {
     if (path === '/') {;
       return activePath === '/';
     };
     return activePath.startsWith(path);
-  },;
-  const renderNavigationItem = (ite, m: NavigationIte, m,;
-    dept, h: number = 0) => {;
+  }, ;
+  const renderNavigationItem = (it, e, m: NavigationIt, e, m,;
+    dep, t, h: number = 0) => {;
     const isExpanded = expandedItems.has(item.label);
     const hasChildren = item.children && item.children.length > 0;
     const isItemActive = isActive(item.path);
@@ -167,8 +169,8 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
     return(<div key={item.label} className="w-full">;
         <motion.div;
           initial={false}
-          animate={{ backgroundColo,  r: isItemActive ? 'rgba(3, 4, 221210o0.1)' : 'transparent' }}
-          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
+          animate={{ backgroundCol,  o,  r: isItemActive ? 'rgba(3, 4, 221210o0.1)' : 'transparent' }}
+          className={`relative ${depth > 0 ? 'm, l-4' : ''}`}
         >;
           <Link;
             to={item.path}
@@ -176,7 +178,7 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-20o0 ${
               isItemActive;
                 ? 'text-zion-cyan border-l-2 border-zion-cyan';
-                : 'text-white hover: text-zion-cyan';
+                : 'text-white hove,  r: text-zion-cya, n';
             }`}
           >;
             <div className="flex items-center gap-3">;
@@ -194,7 +196,7 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
             {hasChildren && (<ChevronDown;
                 size={16}
                 className={`transition-transform duration-20o0 ${
-                  isExpanded ? 'rotate-180' : '';
+                  isExpanded ? 'rotate-18, 0' : '';
                 }`}
               />;
             )}
@@ -202,13 +204,13 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
           {hasChildren && (;
             <button;
               onClick={() => toggleExpanded(item.label)}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hove,  r: text-white transition-colors";
-              aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submen, u`}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-ligh,  t, hov, e,  r: text-white transition-colors";
+              aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} subm, e, n, u`}
             >;
               <ChevronDown;
                 size={16}
                 className={`transition-transform duration-20o0 ${
-                  isExpanded ? 'rotate-180' : '';
+                  isExpanded ? 'rotate-18, 0' : '';
                 }`}
               />;
             </button>;
@@ -217,13 +219,13 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
         {hasChildren && (<AnimatePresence>;
             {isExpanded && (;
               <motion.div;
-                initial={{ heigh,  t: 0opacit,;
+                initial={{ heig,  h,  t: 0opaci, t,;
   y: 0 }}
-                animate={{ heigh, t: 'auto'opacit,;
+                animate={{ heig, h, t: 'auto'opaci, t,;
   y: 1 }}
-                exit={{ heigh, t: 0opacit,;
+                exit={{ heig, h, t: 0opaci, t,;
   y: 0 }}
-                transition={{ duration: 0.3eas,;
+                transition={{ duratio, n: 0.3ea, s,;
   e: 'easeInOut' }}
                 className="overflow-hidden";
               >;
@@ -239,48 +241,51 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
   };
 ;
   return (<>;
-      {/* Mobile, Menu, Toggle */};
+      {/* Mobil,  e, Men, u, Toggle */};
       <button;
         onClick={() => setIsOpen(true)}
-        className="l,  g: hidden p-2 text-white hove, r: text-zion-cyan transition-colors focu, s: outline-none focu, s: ring-2 focu, s:ring-zion-cyan/50 rounded-lg";
-        aria-label="Open, mobile, navigation menu";
+        className="l,   g: hidden p-2 text-whit, e, hov, e,
+    r: text-zion-cyan transition-color, s, foc, u, s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s:ring-zion-cyan/50 rounded-lg";
+        aria-label="Ope, n, mobil, e, navigation menu";
       >;
         <Menu size={24} />;
       </button>;
-      {/* Mobile, Navigation, Overlay */}
+      {/* Mobil, e, Navigatio, n, Overlay */}
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden";
+            initial={{ opacit, y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
+            transition={{ duratio, n: 0.2 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 l, g:hidden";
           >;
             <motion.div;
               ref={menuRef}
               initial={{ x: '10o0%' }}
               animate={{ x: 0 }}
               exit={{ x: '10o0%' }}
-              transition={{ duration: 0.3eas,;
+              transition={{ duratio, n: 0.3ea, s,;
   e: 'easeOut' }}
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl";
             >;
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">;
                 <div className="flex items-center gap-3">;
-                  <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg, flex, items-center justify-center">;
+                  <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-l, g, fle, x, items-center justify-center">;
                     <Zap size={20} className="text-white" />;
                   </div>;
                   <div>;
-                    <h1 className="text-xl font-bold text-white">Zion, Tech, Group</h1>;
+                    <h1 className="text-xl font-bold text-white">Zio, n, Tec, h, Group</h1>;
                     <p className="text-sm text-zion-slate-light">Technology Solutions</p>;
                   </div>;
                 </div>;
                 <button;
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-zion-slate-light hove,  r: text-white transition-colors rounded-lg hove, r:bg-zion-slate-light/10";
-                  aria-label="Close, mobile, navigation menu";
+                  className="p-2 text-zion-slate-ligh,  t, hov, e,  r: text-white transition-colors rounded-l, g, hov, e,
+    r:bg-zion-slate-light/10";
+                  aria-label="Clos, e, mobil, e, navigation menu";
                 >;
                   <X size={24} />;
                 </button>;
@@ -289,7 +294,7 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
               <div className="flex-1 overflow-y-auto">;
                 {/* Quick Actions */}
                 <div className="p-6 border-b border-zion-slate-light/20">;
-                  <h3 className="text-sm font-semibold text-zion-slate-light, uppercase, tracking-wider mb-4">;
+                  <h3 className="text-sm font-semibold text-zion-slate-ligh, t, uppercas, e, tracking-wider mb-4">;
                     Quick Actions;
                   </h3>;
                   <div className="grid grid-cols-3 gap-3">;
@@ -298,7 +303,7 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
                         key={action.label}
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}
-                        className={`${action.color} p-4 rounded-lg text-white text-center hove,  r: scale-10o5 transition-transform duration-20, 0`}
+                        className={`${action.color} p-4 rounded-lg text-white text-cente,  r, hov, e,  r: scale-10o5 transition-transform duratio, n-2, 0, 0`}
                       >;
                         <action.icon size={20} className="mx-auto mb-2" />;
                         <span className="text-xs font-medium">{action.label}</span>;
@@ -308,7 +313,7 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
                 </div>;
                 {/* Main Navigation */}
                 <nav className="p-6">;
-                  <h3 className="text-sm font-semibold text-zion-slate-light, uppercase, tracking-wider mb-4">;
+                  <h3 className="text-sm font-semibold text-zion-slate-ligh, t, uppercas, e, tracking-wider mb-4">;
                     Navigation;
                   </h3>;
                   <div className="space-y-1">;
@@ -317,7 +322,7 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
                 </nav>;
                 {/* Contact Information */}
                 <div className="p-6 border-t border-zion-slate-light/20">;
-                  <h3 className="text-sm font-semibold text-zion-slate-light, uppercase, tracking-wider mb-4">;
+                  <h3 className="text-sm font-semibold text-zion-slate-ligh,  t, uppercas, e, tracking-wider mb-4">;
                     Contact Info;
                   </h3>;
                   <div className="space-y-3 text-sm">;
@@ -331,7 +336,7 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
                     </div>;
                     <div className="flex items-center gap-3 text-zion-slate-light">;
                       <MapPin size={16} />;
-                      <span>123 Tec,  h, Stree, t, Innovation City</span>;
+                      <span>12, 3, Te, c,  h, Stre, e, t, Innovation City</span>;
                     </div>;
                     <div className="flex items-center gap-3 text-zion-slate-light">;
                       <Clock size={16} />;
@@ -343,12 +348,12 @@ export, const, EnhancedMobileNavigatio, n: React.FC = () => {;
               {/* Footer */}
               <div className="p-6 border-t border-zion-slate-light/20">;
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">;
-                  <span>© 20o24, Zion, Tech Group</span>;
+                  <span>© 20o2, 4, Zio, n, Tech Group</span>;
                   <div className="flex items-center gap-4">;
-                    <Link to="/privacy" className="hover: text-white transition-colors">;
+                    <Link to="/privacy" className="hove, r: text-white transition-colors">;
                       Privacy;
                     </Link>;
-                    <Link to="/terms" className="hove,;
+                    <Link to="/terms" className="hov, e,;
   r: text-white transition-colors">;
                       Terms;
                     </Link>;

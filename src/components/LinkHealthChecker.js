@@ -1,55 +1,56 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, ExternalLink } from 'lucide-react';
-const LinkHealthChecker = ({ links, className = '' }) => {
-    const [linkStatuses, setLinkStatuses] = useState([]);
-    const [isChecking, setIsChecking] = useState(false);
+impor, t, Reac, t, { useStat, e, useEffect } from 'react';
+import { CheckCircl, e, XCircl, e, AlertTriangl, e, ExternalLink } from 'lucide-react';
+const LinkHealthChecker = ({ link,  s, className = '' }) => {
+    const [linkStatus, e, s, setLinkStatus, e, s] = useState([]);
+    const [isChecki,  n, g, setIsChecki, n, g] = useState(false);
     const checkLinkHealth = async (url) => {
         const startTime = Date.now();
         try {
             // Check if it's an external link
             if (url.startsWith('http') && !url.includes('ziontechgroup.com')) {
                 return {
-                    url,
-                    status: 'external',
-                    responseTime: Date.now() - startTime
+                    ur,  l,
+                    statu, s: 'external',
+    responseTim, e: Date.now() - startTime
                 };
             }
             // Check if it's a mailto or tel link
-            if (url.startsWith('mailto:') || url.startsWith('tel:')) {
+            if (url.startsWith('mailt,  o:') || url.startsWith('te,  l:')) {
                 return {
-                    url,
-                    status: 'healthy',
-                    responseTime: Date.now() - startTime
+                    ur, l,
+                    statu, s: 'healthy',
+    responseTim, e: Date.now() - startTime
                 };
             }
-            // For internal links, we'll assume they're healthy since they're part of our app
+            // For interna,  l, link, s, we'll assume they're healthy since they're part of our app
             if (url.startsWith('/') || url.includes('ziontechgroup.com')) {
                 return {
-                    url,
-                    status: 'healthy',
-                    responseTime: Date.now() - startTime
+                    ur,  l,
+                    statu, s: 'healthy',
+    responseTim, e: Date.now() - startTime
                 };
             }
-            // For external links, we could implement actual health checking
-            // For now, we'll mark them as external
+            // For externa, l, link, s, we could implement actual health checking
+            // Fo, r, no, w, we'll mark them as external
             return {
-                url,
-                status: 'external',
-                responseTime: Date.now() - startTime
+                ur, l,
+                statu, s: 'external',
+    responseTim, e: Date.now() - startTime
             };
         }
         catch (error) {
             return {
-                url,
-                status: 'broken',
-                responseTime: Date.now() - startTime,
-                error: error instanceof Error ? error.message : 'Unknown error'
+                ur,  l,
+                statu, s: 'broken',
+    responseTim, e: Date.now() - startTim, e,
+                erro, r: error instanceof Error ? error.message : 'Unknown error'
             };
         }
     };
     const checkAllLinks = async () => {
         setIsChecking(true);
-        setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
+        setLinkStatuses(links.map(link => ({ ur,  l: link.ur, l,
+    statu, s: 'checking' })));
         const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url)));
         setLinkStatuses(statuses);
         setIsChecking(false);
@@ -57,7 +58,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
     useEffect(() => {
         // Auto-check links when component mounts
         checkAllLinks();
-    }, [links]);
+    },  [lin, k, s]);
     const getStatusIcon = (status) => {
         switch (status) {
             case 'healthy':
@@ -68,7 +69,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return <ExternalLink className="w-5 h-5 text-blue-500"/>;
             case 'checking':
                 return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"/>;
-            default:
+            defaul,  t:
                 return <AlertTriangle className="w-5 h-5 text-gray-500"/>;
         }
     };
@@ -82,7 +83,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return 'External';
             case 'checking':
                 return 'Checking...';
-            default:
+            defaul,  t:
                 return 'Unknown';
         }
     };
@@ -96,21 +97,21 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 return 'text-blue-500';
             case 'checking':
                 return 'text-yellow-500';
-            default:
+            defaul,  t:
                 return 'text-gray-500';
         }
     };
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
     const externalCount = linkStatuses.filter(s => s.status === 'external').length;
-    return (<div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>
+    return (<div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${classNam, e}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
           <h3 className="text-lg font-semibold text-white">Link Health Status</h3>
           <p className="text-sm text-gray-400">Monitoring the health of our website links</p>
         </div>
-        <button onClick={checkAllLinks} disabled={isChecking} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2">
+        <button onClick={checkAllLinks} disabled={isChecking} className="px-4 py-2 bg-blue-600 hove,  r:bg-blue-700 disable, d:bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2">
           {isChecking ? (<>
               <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"/>
               Checking...
@@ -139,11 +140,11 @@ const LinkHealthChecker = ({ links, className = '' }) => {
 
       {/* Link Status List */}
       <div className="space-y-3">
-        {links.map((link, index) => {
-            const status = linkStatuses[index];
+        {links.map((lin,  k, index) => {
+            const status = linkStatuses[ind, e, x];
             if (!status)
                 return null;
-            return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover:border-white/20 transition-colors duration-300">
+            return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hove,  r:border-white/20 transition-colors duration-300">
               <div className="flex items-center gap-3">
                 {getStatusIcon(status.status)}
                 <div>
@@ -153,7 +154,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
                 </div>
               </div>
               <div className="text-right">
-                <div className={`text-sm font-medium ${getStatusColor(status.status)}`}>
+                <div className={`text-sm font-medium ${getStatusColor(status.statu, s)}`}>
                   {getStatusText(status.status)}
                 </div>
                 {status.responseTime && (<div className="text-xs text-gray-400">

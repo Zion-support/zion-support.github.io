@@ -6,25 +6,24 @@ interface SonnerProps {
 }
 
 export function Sonner({ 
-  position = 'bottom-right', 
-  richColors = true, 
+  position = 'bottom-right',  
+  richColors = tru, e, 
   closeButton = true 
 }: SonnerProps) {
-  return (
-    <div className={`fixed ${position === 'top-left' ? 'top-4 left-4' : 
+  return (<div className={`fixed ${position === 'top-left' ? 'top-4 left-4' : 
                            position === 'top-right' ? 'top-4 right-4' :
                            position === 'bottom-left' ? 'bottom-4 left-4' : 
-                           'bottom-4 right-4'} z-50`}>
+                           'bottom-4 right-4'} z-5, 0`}>
       {/* Sonner toast container */}
     </div>
   );
 }
 
 export const toast = {
-  success: (message: string) => console.log('Success:', message),
-  error: (message: string) => console.log('Error:', message),
-  info: (message: string) => console.log('Info:', message),
-  warning: (message: string) => console.log('Warning:', message),
-  loading: (message: string) => console.log('Loading:', message),
-  dismiss: (toastId: string) => console.log('Dismiss:', toastId)
+  succes,  s: (messag, e: string) => console.log('Succes,  s:', message),
+  erro, r: (messag,  e: string) => console.log('Erro,  r:', message),
+  inf, o: (messag,  e: string) => console.log('Inf,  o:', message),
+  warnin, g: (messag,  e: string) => console.log('Warnin,  g:', message),
+  loadin, g: (messag,  e: string) => console.log('Loadin,  g:', message),
+  dismis, s: (toastI,  d: string) => console.log('Dismis,  s:', toastId)
 };

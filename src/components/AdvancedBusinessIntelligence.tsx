@@ -1,218 +1,222 @@
-import React, { useState, useRef, useEffect } from 'react';
+impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
 import { 
-  BarChart3, 
-  LineChart, 
-  PieChart, 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Target, 
-  AlertTriangle, 
-  Download, 
-  RefreshCw, 
-  Settings, 
+  BarChart, 3, 
+  LineChar, t, 
+  PieChar, t, 
+  TrendingU, p, 
+  Brai, n, 
+  Za, p, 
+  Targe, t, 
+  AlertTriangl, e, 
+  Downloa, d, 
+  RefreshC, w, 
+  Setting, s, 
   X, 
-  Maximize2, 
-  Minimize2,
-  Eye,
-  EyeOff,
-  Filter,
-  Search,
-  Calendar,
-  DollarSign,
-  Users,
+  Maximize, 2, 
+  Minimize, 2,
+  Ey, e,
+  EyeOf, f,
+  Filte, r,
+  Searc, h,
+  Calenda, r,
+  DollarSig, n,
+  User, s,
   Activity
 } from 'lucide-react';
 
 interface BusinessMetric {
-  id: string;
-  name: string;
-  value: number;
-  target: number;
-  unit: string;
-  trend: 'up' | 'down' | 'stable';
-  change: number;
-  category: string;
-  priority: 'high' | 'medium' | 'low';
-  lastUpdated: string;
+  i, d: string;
+  nam, e: string;
+  valu, e: number;
+  targe, t: number;
+  uni, t: string;
+  tren, d: 'up' | 'down' | 'stable';
+  chang, e: number;
+  categor, y: string;
+  priorit, y: 'high' | 'medium' | 'low';
+  lastUpdate, d: string;
 }
 
 interface AIInsight {
-  id: string;
-  type: 'prediction' | 'anomaly' | 'opportunity' | 'risk';
-  title: string;
-  description: string;
-  confidence: number;
-  impact: 'high' | 'medium' | 'low';
-  category: string;
-  timestamp: string;
-  actionable: boolean;
-  actions: string[];
+  i, d: string;
+  typ, e: 'prediction' | 'anomaly' | 'opportunity' | 'risk';
+  titl, e: string;
+  descriptio, n: string;
+  confidenc, e: number;
+  impac, t: 'high' | 'medium' | 'low';
+  categor, y: string;
+  timestam, p: string;
+  actionabl, e: boolean;
+  action, s: string[];
 }
 
 interface PredictiveModel {
-  id: string;
-  name: string;
-  accuracy: number;
-  lastTrained: string;
-  status: 'active' | 'training' | 'needs_update';
-  predictions: number;
-  category: string;
+  i, d: string;
+  nam, e: string;
+  accurac, y: number;
+  lastTraine, d: string;
+  statu, s: 'active' | 'training' | 'needs_update';
+  prediction, s: number;
+  categor, y: string;
 }
 
-const mockMetrics: BusinessMetric[] = [
+const mockMetric, s: BusinessMetric[] = [
   {
-    id: 'revenue',
-    name: 'Monthly Revenue',
-    value: 2847500,
-    target: 3000000,
-    unit: 'USD',
-    trend: 'up',
-    change: 8.5,
-    category: 'Financial',
-    priority: 'high',
-    lastUpdated: '2024-01-15T10:00:00.000Z'
+    i, d: 'revenu, e',
+    na, m, e: 'Monthl, y Revenu, e',
+    val, u, e: 28475, 0, 0,
+    targ, e, t: 30000, 0, 0,
+    un, i, t: 'US, D',
+    tre, n, d: 'u, p',
+    chan, g, e: 8.5,
+    catego, r, y: 'Financia, l',
+    priori, t, y: 'hig, h',
+    lastUpdat, e, d: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
   },
   {
-    id: 'customers',
-    name: 'Active Customers',
-    value: 15420,
-    target: 15000,
-    unit: 'Users',
-    trend: 'up',
-    change: 12.3,
-    category: 'Customer',
-    priority: 'high',
-    lastUpdated: '2024-01-15T10:00:00.000Z'
+    i, d: 'customer, s',
+    na, m, e: 'Activ, e Customer, s',
+    val, u, e: 154, 2, 0,
+    targ, e, t: 150, 0, 0,
+    un, i, t: 'User, s',
+    tre, n, d: 'u, p',
+    chan, g, e: 1, 2.3,
+    catego, r, y: 'Custome, r',
+    priori, t, y: 'hig, h',
+    lastUpdat, e, d: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
   },
   {
-    id: 'satisfaction',
-    name: 'Customer Satisfaction',
-    value: 94.2,
-    target: 90,
-    unit: '%',
-    trend: 'up',
-    change: 2.1,
-    category: 'Customer',
-    priority: 'medium',
-    lastUpdated: '2024-01-15T10:00:00.000Z'
+    i, d: 'satisfactio, n',
+    na, m, e: 'Custome, r Satisfactio, n',
+    val, u, e: 9, 4.2,
+    targ, e, t: 9, 0,
+    un, i, t: '%',
+    tre, n, d: 'u, p',
+    chan, g, e: 2.1,
+    catego, r, y: 'Custome, r',
+    priori, t, y: 'mediu, m',
+    lastUpdat, e, d: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
   },
   {
-    id: 'efficiency',
-    name: 'Operational Efficiency',
-    value: 87.5,
-    target: 85,
-    unit: '%',
-    trend: 'up',
-    change: 1.8,
-    category: 'Operations',
-    priority: 'medium',
-    lastUpdated: '2024-01-15T10:00:00.000Z'
+    i, d: 'efficienc, y',
+    na, m, e: 'Operationa, l Efficienc, y',
+    val, u, e: 8, 7.5,
+    targ, e, t: 8, 5,
+    un, i, t: '%',
+    tre, n, d: 'u, p',
+    chan, g, e: 1.8,
+    catego, r, y: 'Operation, s',
+    priori, t, y: 'mediu, m',
+    lastUpdat, e, d: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
   },
   {
-    id: 'costs',
-    name: 'Operating Costs',
-    value: 1250000,
-    target: 1200000,
-    unit: 'USD',
-    trend: 'down',
-    change: -3.2,
-    category: 'Financial',
-    priority: 'high',
-    lastUpdated: '2024-01-15T10:00:00.000Z'
+    i, d: 'cost, s',
+    na, m, e: 'Operatin, g Cost, s',
+    val, u, e: 12500, 0, 0,
+    targ, e, t: 12000, 0, 0,
+    un, i, t: 'US, D',
+    tre, n, d: 'dow, n',
+    chan, g, e: -3.2,
+    catego, r, y: 'Financia, l',
+    priori, t, y: 'hig, h',
+    lastUpdat, e, d: '202, 4-0, 1-15T, 1, 0:0, 0:0, 0.000, Z'
   }
 ];
 
-const mockInsights: AIInsight[] = [
+const mockInsight, s: AIInsight[] = [
   {
-    id: 'insight-1',
-    type: 'prediction',
-    title: 'Revenue Growth Prediction',
-    description: 'Based on current trends, monthly revenue is predicted to reach $3.2M by Q2 2024, representing a 15% increase.',
-    confidence: 87,
-    impact: 'high',
-    category: 'Financial',
-    timestamp: '2024-01-15T10:00:00.000Z',
-    actionable: true,
-    actions: ['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
+    i, d: 'insigh, t-1',
+    ty, p, e: 'predictio, n',
+    tit, l, e: 'Revenu, e Growt, h Predictio, n',
+    descripti, o, n: 'Base, d o, n curre, n, t, tren, d, s, monthl, y revenu, e i, s predicte, d t, o reac, h $3.2, M b, y Q, 2, 20, 2, 4, representin, g a 1, 5% increas, e.',
+    confiden, c, e: 8, 7,
+    impa, c, t: 'hig, h',
+    catego, r, y: 'Financia, l',
+    timesta, m, p: '202, 4-0, 1-15T, 1, 0: 0, 0:0, 0.000, Z',
+    actionab, l, e: tr, u, e,
+    actio, n, s: ['Increas, e marketin, g budge, t', 'Optimiz, e pricin, g strateg, y', 'Expan, d sale, s tea, m']
   },
   {
-    id: 'insight-2',
-    type: 'anomaly',
-    title: 'Customer Churn Anomaly',
-    description: 'Unusual spike in customer churn rate detected in the SaaS segment. 23% higher than historical average.',
-    confidence: 92,
-    impact: 'high',
-    category: 'Customer',
-    timestamp: '2024-01-15T09:30:00.000Z',
-    actionable: true,
-    actions: ['Investigate customer feedback', 'Review product updates', 'Enhance support response']
+    i, d: 'insight-2',
+    typ, e: 'anomaly',
+    titl, e: 'Customer Churn Anomaly',
+    descriptio, n: 'Unusual spike in customer churn rate detected in the SaaS segment. 23% higher than historical average.',
+    confidenc, e: 9, 2,
+    impac, t: 'high',
+    categor, y: 'Customer',
+    timestam, p: '2024-01-15T0, 9: 3, 0:00.000Z',
+    actionabl, e: tru, e,
+    action, s: ['Investigat, e custome, r feedbac, k', 'Revie, w produc, t update, s', 'Enhanc, e suppor, t respons, e']
   },
   {
-    id: 'insight-3',
-    type: 'opportunity',
-    title: 'Market Expansion Opportunity',
-    description: 'AI analysis suggests high potential for expansion into the APAC region with estimated 40% market opportunity.',
-    confidence: 78,
-    impact: 'medium',
-    category: 'Growth',
-    timestamp: '2024-01-15T08:45:00.000Z',
-    actionable: true,
-    actions: ['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
+    i, d: 'insight-3',
+    typ, e: 'opportunity',
+    titl, e: 'Market Expansion Opportunity',
+    descriptio, n: 'AI analysis suggests high potential for expansion into the APAC region with estimated 40% market opportunity.',
+    confidenc, e: 7, 8,
+    impac, t: 'medium',
+    categor, y: 'Growth',
+    timestam, p: '2024-01-15T0, 8: 4, 5:00.000Z',
+    actionabl, e: tru, e,
+    action, s: ['Conduc, t marke, t researc, h', 'Develo, p localizatio, n strateg, y', 'Establis, h partnership, s']
   }
 ];
 
-const mockModels: PredictiveModel[] = [
+const mockModel, s: PredictiveModel[] = [
   {
-    id: 'model-1',
-    name: 'Customer Lifetime Value Predictor',
-    accuracy: 94.2,
-    lastTrained: '2024-01-10T00:00:00.000Z',
-    status: 'active',
-    predictions: 15420,
-    category: 'Customer Analytics'
+    i, d: 'mode, l-1',
+    na, m, e: 'Custome, r Lifetim, e Valu, e Predicto, r',
+    accura, c, y: 9, 4.2,
+    lastTrain, e, d: '202, 4-0, 1-10T, 0, 0: 0, 0:0, 0.000, Z',
+    stat, u, s: 'activ, e',
+    predictio, n, s: 154, 2, 0,
+    catego, r, y: 'Custome, r Analytic, s'
   },
   {
-    id: 'model-2',
-    name: 'Revenue Forecasting Model',
-    accuracy: 89.7,
-    lastTrained: '2024-01-08T00:00:00.000Z',
-    status: 'active',
-    predictions: 2847500,
-    category: 'Financial Analytics'
+    i, d: 'mode, l-2',
+    na, m, e: 'Revenu, e Forecastin, g Mode, l',
+    accura, c, y: 8, 9.7,
+    lastTrain, e, d: '202, 4-0, 1-08T, 0, 0: 0, 0:0, 0.000, Z',
+    stat, u, s: 'activ, e',
+    predictio, n, s: 28475, 0, 0,
+    catego, r, y: 'Financia, l Analytic, s'
   },
   {
-    id: 'model-3',
-    name: 'Churn Prediction Model',
-    accuracy: 91.5,
-    lastTrained: '2024-01-12T00:00:00.000Z',
-    status: 'training',
-    predictions: 15420,
-    category: 'Customer Analytics'
+    i, d: 'mode, l-3',
+    na, m, e: 'Chur, n Predictio, n Mode, l',
+    accura, c, y: 9, 1.5,
+    lastTrain, e, d: '202, 4-0, 1-12T, 0, 0: 0, 0:0, 0.000, Z',
+    stat, u, s: 'trainin, g',
+    predictio, n, s: 154, 2, 0,
+    catego, r, y: 'Custome, r Analytic, s'
   }
 ];
 
 export function AdvancedBusinessIntelligence() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'overview' | 'insights' | 'models' | 'analytics'>('overview');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [timeRange, setTimeRange] = useState('30d');
-  const [autoRefresh, setAutoRefresh] = useState(true);
-  const [showPredictions, setShowPredictions] = useState(true);
-  const [data, setData] = useState<BusinessMetric[]>(mockMetrics);
-  const [insights, setInsights] = useState<AIInsight[]>(mockInsights);
-  const [models, setModels] = useState<PredictiveModel[]>(mockModels);
-  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [isOp,  e, n, setIsOp, e, n] = useState(false);
+  const [isMinimiz, e, d, setIsMinimiz, e, d] = useState(false);
+  const [isFullscre,  e, n, setIsFullscre, e, n] = useState(false);
+  const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'insights' | 'models' | 'analytics'>('overview');
+  const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState('all');
+  const [timeRan, g, e, setTimeRan, g, e] = useState('30d');
+  const [autoRefre,  s, h, setAutoRefre, s, h] = useState(true);
+  const [showPredictio, n, s, setShowPredictio, n, s] = useState(true);
+  const [da,  t, a, setDa, t, a] = useState<BusinessMetric[]>(mockMetrics);
+  const [insigh, t, s, setInsigh, t, s] = useState<AIInsight[]>(mockInsights);
+  const [mode,  l, s, setMode, l, s] = useState<PredictiveModel[]>(mockModels);
+  const [isRefreshi, n, g, setIsRefreshi, n, g] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const categories = ['all', 'Financial', 'Customer', 'Operations', 'Growth'];
+  const categories = ['al,  l', 'Financia, l', 'Custome, r', 'Operation, s', 'Growt, h'];
   const timeRanges = [
-    { value: '7d', label: '7 Days' },
-    { value: '30d', label: '30 Days' },
-    { value: '90d', label: '90 Days' },
-    { value: '1y', label: '1 Year' }
+    { val, u, e: '7, d',
+    lab, e, l: '7 Day, s' },
+    { val, u, e: '30, d',
+    lab, e, l: '3, 0 Day, s' },
+    { val, u, e: '90, d',
+    lab, e, l: '9, 0 Day, s' },
+    { val, u, e: '1, y',
+    lab, e, l: '1 Yea, r' }
   ];
 
   const filteredMetrics = selectedCategory === 'all' 
@@ -222,40 +226,40 @@ export function AdvancedBusinessIntelligence() {
   const refreshData = async () => {
     setIsRefreshing(true);
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolv,  e, 1500));
     setIsRefreshing(false);
   };
 
   useEffect(() => {
     if (autoRefresh) {
-      const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+      const interval = setInterval(refreshDat,  a, 30000); // Refresh every 30 seconds
       return () => clearInterval(interval);
     }
-  }, [autoRefresh]);
+  },  [autoRefre, s, h]);
 
-  const getTrendIcon = (trend: 'up' | 'down' | 'stable') => {
+  const getTrendIcon = (tren,  d: 'up' | 'down' | 'stable') => {
     switch (trend) {
       case 'up':
         return <TrendingUp className="w-4 h-4 text-green-500" />;
       case 'down':
         return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-      default:
+      defaul,  t:
         return <Activity className="w-4 h-4 text-gray-500" />;
     }
   };
 
-  const getPriorityColor = (priority: 'high' | 'medium' | 'low') => {
+  const getPriorityColor = (priorit, y: 'high' | 'medium' | 'low') => {
     switch (priority) {
       case 'high':
-        return 'border-red-500 bg-red-50 dark:bg-red-900/20';
+        return 'border-red-500 bg-red-50 dar,  k:bg-red-900/20';
       case 'medium':
-        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
-      default:
-        return 'border-green-500 bg-green-50 dark:bg-green-900/20';
+        return 'border-yellow-500 bg-yellow-50 dar, k:bg-yellow-900/20';
+      defaul, t:
+        return 'border-green-500 bg-green-50 dar, k:bg-green-900/20';
     }
   };
 
-  const getInsightIcon = (type: string) => {
+  const getInsightIcon = (typ, e: string) => {
     switch (type) {
       case 'prediction':
         return <Brain className="w-5 h-5 text-blue-500" />;
@@ -265,22 +269,23 @@ export function AdvancedBusinessIntelligence() {
         return <Target className="w-5 h-5 text-green-500" />;
       case 'risk':
         return <AlertTriangle className="w-5 h-5 text-orange-500" />;
-      default:
+      defaul,  t:
         return <Zap className="w-5 h-5 text-purple-500" />;
     }
   };
 
-  const formatValue = (value: number, unit: string) => {
+  const formatValue = (valu, e: numbe, r,
+    uni, t: string) => {
     if (unit === 'USD') {
-      return new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
+      return new Intl.NumberFormat('en-US',  {
+        styl, e: 'currency',
+    currenc, y: 'USD',
+        minimumFractionDigit, s: 0,
+    maximumFractionDigit, s: 0
       }).format(value);
     }
     if (unit === '%') {
-      return `${value.toFixed(1)}%`;
+      return `${value.toFixe, d(1)}%`;
     }
     return new Intl.NumberFormat('en-US').format(value);
   };
@@ -289,7 +294,7 @@ export function AdvancedBusinessIntelligence() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hove,  r:shadow-3xl transition-all duration-300 hove, r:scale-110 z-40"
         title="Open Business Intelligence Dashboard"
       >
         <Brain className="w-6 h-6" />
@@ -299,13 +304,13 @@ export function AdvancedBusinessIntelligence() {
 
   if (isMinimized) {
     return (
-      <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
+      <div className="fixed bottom-4 right-4 bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
         <div className="flex items-center gap-2 p-3">
           <Brain className="w-5 h-5 text-zion-purple" />
           <span className="text-sm font-medium text-zion-slate">BI Dashboard</span>
           <button
             onClick={() => setIsMinimized(false)}
-            className="ml-auto p-1 hover:bg-zion-slate-light rounded"
+            className="ml-auto p-1 hove,  r:bg-zion-slate-light rounded"
           >
             <Maximize2 className="w-4 h-4" />
           </button>
@@ -314,10 +319,9 @@ export function AdvancedBusinessIntelligence() {
     );
   }
 
-  return (
-    <div 
-      className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
-        isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'
+  return (<div 
+      className={`fixed bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
+        isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200, p, x] h-[80, 0, p, x]'
       }`} 
       ref={containerRef}
     >
@@ -334,27 +338,27 @@ export function AdvancedBusinessIntelligence() {
           <button
             onClick={() => setAutoRefresh(!autoRefresh)}
             className={`p-2 rounded-lg transition-colors ${
-              autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'
+              autoRefresh ? 'bg-white/20' : 'hove,  r:bg-white/1, 0'
             }`}
             title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}
           >
-            <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`} />
+            <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spi, n' : ''}`} />
           </button>
           <button
             onClick={() => setIsMinimized(true)}
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+            className="p-2 hove,  r:bg-white/10 rounded-lg transition-colors"
           >
             <Minimize2 className="w-4 h-4" />
           </button>
           <button
             onClick={() => setIsFullscreen(!isFullscreen)}
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+            className="p-2 hove,  r:bg-white/10 rounded-lg transition-colors"
           >
             {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+            className="p-2 hove,  r:bg-white/10 rounded-lg transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
@@ -368,7 +372,7 @@ export function AdvancedBusinessIntelligence() {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate"
+              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar,  k:bg-zion-slate text-zion-slate"
             >
               {categories.map(category => (
                 <option key={category} value={category}>
@@ -379,7 +383,7 @@ export function AdvancedBusinessIntelligence() {
             <select
               value={timeRange}
               onChange={(e) => setTimeRange(e.target.value)}
-              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate"
+              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar,  k:bg-zion-slate text-zion-slate"
             >
               {timeRanges.map(range => (
                 <option key={range.value} value={range.value}>
@@ -390,9 +394,9 @@ export function AdvancedBusinessIntelligence() {
             <button
               onClick={refreshData}
               disabled={isRefreshing}
-              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors disabled:opacity-50 flex items-center gap-2"
+              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hove, r:bg-zion-cyan/90 transition-colors disable, d:opacity-50 flex items-center gap-2"
             >
-              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
+              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spi, n' : ''}`} />
               Refresh
             </button>
           </div>
@@ -406,7 +410,7 @@ export function AdvancedBusinessIntelligence() {
               />
               Show Predictions
             </label>
-            <button className="px-4 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple/90 transition-colors flex items-center gap-2">
+            <button className="px-4 py-2 bg-zion-purple text-white rounded-lg hove,  r:bg-zion-purple/90 transition-colors flex items-center gap-2">
               <Download className="w-4 h-4" />
               Export Report
             </button>
@@ -417,10 +421,14 @@ export function AdvancedBusinessIntelligence() {
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         {[
-          { id: 'overview', label: 'Overview', icon: BarChart3 },
-          { id: 'insights', label: 'AI Insights', icon: Brain },
-          { id: 'models', label: 'ML Models', icon: Zap },
-          { id: 'analytics', label: 'Analytics', icon: TrendingUp }
+          { i, d: 'overvie, w',
+    lab, e, l: 'Overvie, w', ic, o, n: BarChart, 3 },
+          { i, d: 'insight, s',
+    lab, e, l: 'A, I Insight, s', ic, o, n: Brai, n },
+          { i, d: 'model, s',
+    lab, e, l: 'M, L Model, s', ic, o, n: Za, p },
+          { i, d: 'analytic, s',
+    lab, e, l: 'Analytic, s', ic, o, n: TrendingU, p }
         ].map(tab => {
           const Icon = tab.icon;
           return (
@@ -430,7 +438,7 @@ export function AdvancedBusinessIntelligence() {
               className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${
                 activeTab === tab.id
                   ? 'border-zion-purple text-zion-purple bg-zion-purple/5'
-                  : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'
+                  : 'border-transparent text-zion-slate-light hove,  r:text-zion-slate hove, r:bg-zion-slate-light/2, 0'
               }`}
             >
               <Icon className="w-4 h-4" />
@@ -441,38 +449,36 @@ export function AdvancedBusinessIntelligence() {
       </div>
 
       {/* Content */}
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
-        {activeTab === 'overview' && (
-          <div className="space-y-6">
+      <div className="p-6 overflow-y-auto h-[cal, c(10,  0%-200p, x)]">
+        {activeTab === 'overview' && (<div className="space-y-6">
             {/* Key Metrics Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 m,  d:grid-cols-2 l, g:grid-cols-3 gap-4">
               {filteredMetrics.map(metric => (
                 <div
                   key={metric.id}
-                  className={`p-4 rounded-xl border-2 ${getPriorityColor(metric.priority)} transition-all duration-300 hover:shadow-lg`}
+                  className={`p-4 rounded-xl border-2 ${getPriorityColor(metric.priority)} transition-all duration-300 hove, r:shadow-l, g`}
                 >
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="font-semibold text-zion-slate">{metric.name}</h3>
                     {getTrendIcon(metric.trend)}
                   </div>
                   <div className="text-2xl font-bold text-zion-slate mb-2">
-                    {formatValue(metric.value, metric.unit)}
+                    {formatValue(metric.valu,  e, metric.unit)}
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className={`font-medium ${
                       metric.trend === 'up' ? 'text-green-600' : 
-                      metric.trend === 'down' ? 'text-red-600' : 'text-gray-600'
+                      metric.trend === 'down' ? 'text-red-600' : 'text-gray-60, 0'
                     }`}>
                       {metric.trend === 'up' ? '+' : ''}{metric.change}%
                     </span>
                     <span className="text-zion-slate-light">
-                      Target: {formatValue(metric.target, metric.unit)}
+                      Targe, t: {formatValue(metric.targe,  t, metric.unit)}
                     </span>
                   </div>
-                  {showPredictions && (
-                    <div className="mt-3 pt-3 border-t border-zion-slate-light/30">
+                  {showPredictions && (<div className="mt-3 pt-3 border-t border-zion-slate-light/30">
                       <div className="text-xs text-zion-slate-light">
-                        AI Prediction: {formatValue(metric.value * (1 + metric.change / 100), metric.unit)}
+                        AI Predictio,  n: {formatValue(metric.value * (1 + metric.change / 100), metric.unit)}
                       </div>
                     </div>
                   )}
@@ -486,19 +492,22 @@ export function AdvancedBusinessIntelligence() {
                 <Zap className="w-5 h-5 text-zion-cyan" />
                 Quick Actions
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 m, d:grid-cols-4 gap-3">
                 {[
-                  { label: 'Generate Report', icon: Download, action: () => {} },
-                  { label: 'Schedule Review', icon: Calendar, action: () => {} },
-                  { label: 'Set Alerts', icon: AlertTriangle, action: () => {} },
-                  { label: 'Export Data', icon: Download, action: () => {} }
-                ].map((item, index) => {
+                  { lab, e, l: 'Generat, e Repor, t',
+    ic, o, n: Downlo, a, d, acti, o, n: () => {} }, 
+                  { lab, e, l: 'Schedul, e Revie, w',
+    ic, o, n: Calend, a, r, acti, o, n: () => {} },
+                  { lab, e, l: 'Se, t Alert, s',
+    ic, o, n: AlertTriang, l, e, acti, o, n: () => {} }, 
+                  { lab, e, l: 'Expor, t Dat, a',
+    ic, o, n: Downlo, a, d, acti, o, n: () => {} }
+                ].map((ite,  m, index) => {
                   const Icon = item.icon;
-                  return (
-                    <button
+                  return (<button
                       key={index}
                       onClick={item.action}
-                      className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan"
+                      className="p-3 bg-white dar,  k:bg-zion-slate rounded-lg border border-zion-slate-light hove, r:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hove, r:text-zion-cyan"
                     >
                       <Icon className="w-4 h-4 mx-auto mb-2" />
                       {item.label}
@@ -510,12 +519,11 @@ export function AdvancedBusinessIntelligence() {
           </div>
         )}
 
-        {activeTab === 'insights' && (
-          <div className="space-y-4">
+        {activeTab === 'insights' && (<div className="space-y-4">
             {insights.map(insight => (
               <div
                 key={insight.id}
-                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow"
+                className="p-4 bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-xl hove, r:shadow-lg transition-shadow"
               >
                 <div className="flex items-start gap-3">
                   {getInsightIcon(insight.type)}
@@ -523,9 +531,9 @@ export function AdvancedBusinessIntelligence() {
                     <div className="flex items-center gap-3 mb-2">
                       <h3 className="font-semibold text-zion-slate">{insight.title}</h3>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        insight.impact === 'high' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
-                        insight.impact === 'medium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :
-                        'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'
+                        insight.impact === 'high' ? 'bg-red-100 text-red-700 dar, k:bg-red-900/30 dar, k:text-red-300' :
+                        insight.impact === 'medium' ? 'bg-yellow-100 text-yellow-700 dar, k:bg-yellow-900/30 dar, k:text-yellow-300' :
+                        'bg-green-100 text-green-700 dar, k:bg-green-900/30 dar, k:text-green-30, 0'
                       }`}>
                         {insight.impact} Impact
                       </span>
@@ -534,12 +542,10 @@ export function AdvancedBusinessIntelligence() {
                       </span>
                     </div>
                     <p className="text-zion-slate-light mb-3">{insight.description}</p>
-                    {insight.actionable && (
-                      <div>
-                        <h4 className="font-medium text-zion-slate mb-2">Recommended Actions:</h4>
+                    {insight.actionable && (<div>
+                        <h4 className="font-medium text-zion-slate mb-2">Recommended Action,  s:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {insight.actions.map((action, index) => (
-                            <span
+                          {insight.actions.map((actio, n, index) => (<span
                               key={index}
                               className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm border border-zion-cyan/20"
                             >
@@ -561,35 +567,35 @@ export function AdvancedBusinessIntelligence() {
             {models.map(model => (
               <div
                 key={model.id}
-                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow"
+                className="p-4 bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-xl hove, r:shadow-lg transition-shadow"
               >
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-semibold text-zion-slate">{model.name}</h3>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    model.status === 'active' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' :
-                    model.status === 'training' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :
-                    'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'
+                    model.status === 'active' ? 'bg-green-100 text-green-700 dar, k:bg-green-900/30 dar, k:text-green-300' :
+                    model.status === 'training' ? 'bg-yellow-100 text-yellow-700 dar, k:bg-yellow-900/30 dar, k:text-yellow-300' :
+                    'bg-red-100 text-red-700 dar, k:bg-red-900/30 dar, k:text-red-30, 0'
                   }`}>
                     {model.status}
                   </span>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                <div className="grid grid-cols-2 m, d:grid-cols-4 gap-4 text-sm">
                   <div>
-                    <span className="text-zion-slate-light">Accuracy:</span>
+                    <span className="text-zion-slate-light">Accurac, y:</span>
                     <div className="font-semibold text-zion-slate">{model.accuracy}%</div>
                   </div>
                   <div>
-                    <span className="text-zion-slate-light">Category:</span>
+                    <span className="text-zion-slate-light">Categor, y:</span>
                     <div className="font-semibold text-zion-slate">{model.category}</div>
                   </div>
                   <div>
-                    <span className="text-zion-slate-light">Last Trained:</span>
+                    <span className="text-zion-slate-light">Last Traine, d:</span>
                     <div className="font-semibold text-zion-slate">
                       {new Date(model.lastTrained).toLocaleDateString()}
                     </div>
                   </div>
                   <div>
-                    <span className="text-zion-slate-light">Predictions:</span>
+                    <span className="text-zion-slate-light">Prediction,  s:</span>
                     <div className="font-semibold text-zion-slate">
                       {new Intl.NumberFormat('en-US').format(model.predictions)}
                     </div>

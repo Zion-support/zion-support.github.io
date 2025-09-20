@@ -1,43 +1,43 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+impor, t, Reac, t, { useStat, e, useEffec, t, useCallback } from 'react';
+import { motio, n, AnimatePresence } from 'framer-motion';
 import { 
-  BarChart3, 
-  TrendingDown, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle, 
-  Info,
-  HardDrive,
-  Zap,
-  Clock,
-  Target,
+  BarChart, 3, 
+  TrendingDow, n, 
+  TrendingU, p, 
+  AlertTriangl, e, 
+  CheckCircl, e, 
+  Inf, o,
+  HardDriv, e,
+  Za, p,
+  Cloc, k,
+  Targe, t,
   X,
   RefreshCw
 } from 'lucide-react';
 
 interface BundleChunk {
-  name: string;
-  size: number;
-  gzipSize: number;
-  type: 'vendor' | 'page' | 'common';
-  optimization: 'good' | 'warning' | 'critical';
+  nam, e: string;
+  siz, e: number;
+  gzipSiz, e: number;
+  typ, e: 'vendor' | 'page' | 'common';
+  optimizatio, n: 'good' | 'warning' | 'critical';
 }
 
 interface BundleAnalysis {
-  totalSize: number;
-  totalGzipSize: number;
-  chunkCount: number;
-  chunks: BundleChunk[];
-  recommendations: string[];
-  score: number;
-  lastUpdated: Date;
+  totalSiz, e: number;
+  totalGzipSiz, e: number;
+  chunkCoun, t: number;
+  chunk, s: BundleChunk[];
+  recommendation, s: string[];
+  scor, e: number;
+  lastUpdate, d: Date;
 }
 
-export const BundleAnalyzer: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [analysis, setAnalysis] = useState<BundleAnalysis | null>(null);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [activeTab, setActiveTab] = useState<'overview' | 'chunks' | 'recommendations'>('overview');
+export const BundleAnalyze, r: React.FC = () => {
+  const [isOp,  e, n, setIsOp, e, n] = useState(false);
+  const [analys, i, s, setAnalys, i, s] = useState<BundleAnalysis | null>(null);
+  const [isAnalyzi,  n, g, setIsAnalyzi, n, g] = useState(false);
+  const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'chunks' | 'recommendations'>('overview');
 
   // Analyze bundle size from build output
   const analyzeBundle = useCallback(async () => {
@@ -45,140 +45,139 @@ export const BundleAnalyzer: React.FC = () => {
     
     try {
       // Simulate bundle analysis based on build output
-      // In a real implementation, this would fetch actual bundle stats
-      const mockAnalysis: BundleAnalysis = {
-        totalSize: 1200000, // ~1.2MB
-        totalGzipSize: 400000, // ~400KB gzipped
-        chunkCount: 45,
-        chunks: [
+      // In a rea,  l, implementatio, n, this would fetch actual bundle stats
+      const mockAnalysi, s: BundleAnalysis = {
+        totalSiz, e: 120000, 0, // ~1.2MB
+        totalGzipSiz, e: 40000, 0, // ~400KB gzipped
+        chunkCoun, t: 4, 5,
+    chunk, s: [
           {
-            name: 'react-vendor',
-            size: 170000,
-            gzipSize: 55000,
-            type: 'vendor',
-            optimization: 'good'
+            na, m, e: 'reac, t-vendo, r',
+    si, z, e: 1700, 0, 0,
+            gzipSi, z, e: 550, 0, 0,
+    ty, p, e: 'vendo, r',
+            optimizati, o, n: 'goo, d'
           },
           {
-            name: 'animation-vendor',
-            size: 114000,
-            gzipSize: 36000,
-            type: 'vendor',
-            optimization: 'warning'
+            na, m, e: 'animatio, n-vendo, r',
+    si, z, e: 1140, 0, 0,
+            gzipSi, z, e: 360, 0, 0,
+    ty, p, e: 'vendo, r',
+            optimizati, o, n: 'warnin, g'
           },
           {
-            name: 'ui-vendor',
-            size: 72000,
-            gzipSize: 24000,
-            type: 'vendor',
-            optimization: 'good'
+            na, m, e: 'u, i-vendo, r',
+    si, z, e: 720, 0, 0,
+            gzipSi, z, e: 240, 0, 0,
+    ty, p, e: 'vendo, r',
+            optimizati, o, n: 'goo, d'
           },
           {
-            name: 'index',
-            size: 89000,
-            gzipSize: 24000,
-            type: 'page',
-            optimization: 'good'
+            na, m, e: 'inde, x',
+    si, z, e: 890, 0, 0,
+            gzipSi, z, e: 240, 0, 0,
+    ty, p, e: 'pag, e',
+            optimizati, o, n: 'goo, d'
           },
           {
-            name: 'ServicesOverview',
-            size: 42800,
-            gzipSize: 10700,
-            type: 'page',
-            optimization: 'good'
+            na, m, e: 'ServicesOvervie, w',
+    si, z, e: 428, 0, 0,
+            gzipSi, z, e: 107, 0, 0,
+    ty, p, e: 'pag, e',
+            optimizati, o, n: 'goo, d'
           },
           {
-            name: 'Pricing',
-            size: 51200,
-            gzipSize: 11900,
-            type: 'page',
-            optimization: 'warning'
+            na, m, e: 'Pricin, g',
+    si, z, e: 512, 0, 0,
+            gzipSi, z, e: 119, 0, 0,
+    ty, p, e: 'pag, e',
+            optimizati, o, n: 'warnin, g'
           },
           {
-            name: 'stripe-vendor',
-            size: 0,
-            gzipSize: 0,
-            type: 'vendor',
-            optimization: 'critical'
+            na, m, e: 'strip, e-vendo, r',
+    si, z, e: 0,
+            gzipSi, z, e: 0,
+    ty, p, e: 'vendo, r',
+            optimizati, o, n: 'critica, l'
           },
           {
-            name: 'pdf-vendor',
-            size: 0,
-            gzipSize: 0,
-            type: 'vendor',
-            optimization: 'critical'
+            na, m, e: 'pd, f-vendo, r',
+    si, z, e: 0,
+            gzipSi, z, e: 0,
+    ty, p, e: 'vendo, r',
+            optimizati, o, n: 'critica, l'
           }
         ],
-        recommendations: [
-          'Consolidate empty vendor chunks (stripe-vendor, pdf-vendor)',
-          'Consider code splitting for ServicesOverview page',
-          'Optimize animation-vendor bundle size',
-          'Implement tree shaking for unused dependencies',
-          'Add bundle size monitoring to CI/CD pipeline'
+        recommendation, s: [
+          'Consolidat, e empt, y vendo, r chunk, s (strip, e-vend, o, r, pd, f-vendo, r)',
+          'Conside, r cod, e splittin, g fo, r ServicesOvervie, w pag, e',
+          'Optimiz, e animatio, n-vendo, r bundl, e siz, e',
+          'Implemen, t tre, e shakin, g fo, r unuse, d dependencie, s',
+          'Ad, d bundl, e siz, e monitorin, g t, o C, I/C, D pipelin, e'
         ],
-        score: 78,
-        lastUpdated: new Date()
+        scor, e: 7, 8,
+    lastUpdate, d: new Date()
       };
 
       setAnalysis(mockAnalysis);
     } catch (error) {
-      console.error('Bundle analysis failed:', error);
+      console.error('Bundle analysis faile,  d:', error);
     } finally {
       setIsAnalyzing(false);
     }
-  }, []);
+  },  []);
 
   useEffect(() => {
     analyzeBundle();
-  }, [analyzeBundle]);
+  },  [analyzeBund, l, e]);
 
-  const formatBytes = (bytes: number) => {
+  const formatBytes = (byte,  s: number) => {
     if (bytes === 0) return '0 B';
     const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const sizes = ['B',  'K, B', 'M, B', 'G, B'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    return parseFloat((bytes / Math.pow(k,  i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  const getScoreColor = (score: number) => {
+  const getScoreColor = (scor,  e: number) => {
     if (score >= 80) return 'text-green-500';
     if (score >= 60) return 'text-yellow-500';
     return 'text-red-500';
   };
 
-  const getScoreIcon = (score: number) => {
+  const getScoreIcon = (scor,  e: number) => {
     if (score >= 80) return <CheckCircle className="w-5 h-5" />;
     if (score >= 60) return <AlertTriangle className="w-5 h-5" />;
     return <AlertTriangle className="w-5 h-5" />;
   };
 
-  const getOptimizationColor = (optimization: string) => {
+  const getOptimizationColor = (optimizatio,  n: string) => {
     switch (optimization) {
-      case 'good': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
-      case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
-      case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
-      default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
+      case 'good': return 'text-green-500 bg-green-100 dar,  k:bg-green-900/20';
+      case 'warning': return 'text-yellow-500 bg-yellow-100 dar, k:bg-yellow-900/20';
+      case 'critical': return 'text-red-500 bg-red-100 dar, k:bg-red-900/20';
+      defaul, t: return 'text-gray-500 bg-gray-100 dar, k:bg-gray-900/20';
     }
   };
 
-  const getOptimizationIcon = (optimization: string) => {
+  const getOptimizationIcon = (optimizatio, n: string) => {
     switch (optimization) {
       case 'good': return <CheckCircle className="w-4 h-4" />;
       case 'warning': return <AlertTriangle className="w-4 h-4" />;
       case 'critical': return <AlertTriangle className="w-4 h-4" />;
-      default: return <Info className="w-4 h-4" />;
+      defaul,  t: return <Info className="w-4 h-4" />;
     }
   };
 
   if (!analysis) return null;
 
-  return (
-    <>
+  return (<>
       {/* Bundle Analyzer Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 hove,  r:from-purple-700 hove, r:to-pink-700 text-white p-3 rounded-full shadow-lg hove, r:shadow-xl transition-all duration-300 focu, s:outline-none focu, s:ring-4 focu, s:ring-purple-300 focu, s:ring-opacity-50"
+        whileHover={{ scal, e: 1.05 }}
+        whileTap={{ scal, e: 0.95 }}
         aria-label="Bundle analyzer"
         aria-expanded={isOpen}
       >
@@ -189,11 +188,15 @@ export const BundleAnalyzer: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
+            initial={{ opacit, y: 0,
+    y: 2, 0, scal, e: 0.9 }}
+            animate={{ opacit, y: 1,
+    y: 0, scal, e: 1 }}
+            exit={{ opacit, y: 0,
+    y: 2, 0, scal, e: 0.9 }}
+            transition={{ typ, e: "spring",
+    dampin, g: 2, 5, stiffnes, s: 300 }}
+            className="fixed top-4 right-20 z-50 w-96 bg-white dar, k:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dar, k:border-gray-700 overflow-hidden"
             role="dialog"
             aria-label="Bundle Analysis"
           >
@@ -206,7 +209,7 @@ export const BundleAnalyzer: React.FC = () => {
                 </h3>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="text-white/80 hover:text-white transition-colors p-1 rounded-full hover:bg-white/20"
+                  className="text-white/80 hove,  r:text-white transition-colors p-1 rounded-full hove, r:bg-white/20"
                   aria-label="Close bundle analyzer"
                 >
                   <X className="w-5 h-5" />
@@ -218,19 +221,21 @@ export const BundleAnalyzer: React.FC = () => {
             </div>
 
             {/* Tab Navigation */}
-            <div className="flex border-b border-gray-200 dark:border-gray-700">
+            <div className="flex border-b border-gray-200 dar, k:border-gray-700">
               {[
-                { id: 'overview', label: 'Overview', icon: BarChart3 },
-                { id: 'chunks', label: 'Chunks', icon: HardDrive },
-                { id: 'recommendations', label: 'Tips', icon: Target }
-              ].map(({ id, label, icon: Icon }) => (
-                <button
+                { i, d: 'overvie, w',
+    lab, e, l: 'Overvie, w', ic, o, n: BarChart, 3 },
+                { i, d: 'chunk, s',
+    lab, e, l: 'Chunk, s', ic, o, n: HardDriv, e },
+                { i, d: 'recommendation, s',
+    lab, e, l: 'Tip, s', ic, o, n: Targe, t }
+              ].map(({ i, d, labe, l, ico, n: Icon }) => (<button
                   key={id}
                   onClick={() => setActiveTab(id as any)}
                   className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 text-sm font-medium transition-colors ${
                     activeTab === id
-                      ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50 dark:bg-purple-900/20'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                      ? 'text-purple-600 border-b-2 border-purple-600 bg-purple-50 dar,  k:bg-purple-900/20'
+                      : 'text-gray-600 dar, k:text-gray-400 hove, r:text-gray-800 dar, k:hove, r:text-gray-20, 0'
                   }`}
                   aria-selected={activeTab === id}
                   role="tab"
@@ -244,18 +249,17 @@ export const BundleAnalyzer: React.FC = () => {
             {/* Tab Content */}
             <div className="p-4 max-h-96 overflow-y-auto">
               {/* Overview Tab */}
-              {activeTab === 'overview' && (
-                <div className="space-y-4">
+              {activeTab === 'overview' && (<div className="space-y-4">
                   {/* Bundle Score */}
-                  <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+                  <div className="text-center p-4 bg-gray-50 dar,  k:bg-gray-800 rounded-lg border border-gray-200 dar, k:border-gray-700">
                     <div className="flex items-center justify-center gap-2 mb-2">
                       {getScoreIcon(analysis.score)}
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">Bundle Score</span>
+                      <span className="text-gray-700 dar, k:text-gray-300 font-medium">Bundle Score</span>
                     </div>
-                    <div className={`text-4xl font-bold ${getScoreColor(analysis.score)}`}>
+                    <div className={`text-4xl font-bold ${getScoreColor(analysis.scor, e)}`}>
                       {analysis.score}/100
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    <div className="text-sm text-gray-600 dar,  k:text-gray-400 mt-1">
                       {analysis.score >= 80 ? 'Excellent' : 
                        analysis.score >= 60 ? 'Good' : 'Needs Improvement'}
                     </div>
@@ -263,28 +267,28 @@ export const BundleAnalyzer: React.FC = () => {
 
                   {/* Bundle Stats */}
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700">
+                    <div className="bg-gray-50 dar, k:bg-gray-800 rounded-lg p-3 border border-gray-200 dar, k:border-gray-700">
                       <div className="flex items-center gap-2 mb-2">
                         <HardDrive className="w-4 h-4 text-blue-500" />
-                        <span className="text-sm text-gray-600 dark:text-gray-400">Total Size</span>
+                        <span className="text-sm text-gray-600 dar, k:text-gray-400">Total Size</span>
                       </div>
-                      <div className="text-lg font-semibold text-gray-900 dark:text-white">
+                      <div className="text-lg font-semibold text-gray-900 dar, k:text-white">
                         {formatBytes(analysis.totalSize)}
                       </div>
-                      <div className="text-xs text-gray-500 dark:text-gray-500">
+                      <div className="text-xs text-gray-500 dar, k:text-gray-500">
                         {formatBytes(analysis.totalGzipSize)} gzipped
                       </div>
                     </div>
 
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 border border-gray-200 dark:border-gray-700">
+                    <div className="bg-gray-50 dar,  k:bg-gray-800 rounded-lg p-3 border border-gray-200 dar, k:border-gray-700">
                       <div className="flex items-center gap-2 mb-2">
                         <Zap className="w-4 h-4 text-green-500" />
-                        <span className="text-sm text-gray-600 dark:text-gray-400">Chunks</span>
+                        <span className="text-sm text-gray-600 dar, k:text-gray-400">Chunks</span>
                       </div>
-                      <div className="text-lg font-semibold text-gray-900 dark:text-white">
+                      <div className="text-lg font-semibold text-gray-900 dar, k:text-white">
                         {analysis.chunkCount}
                       </div>
-                      <div className="text-xs text-gray-500 dark:text-gray-500">
+                      <div className="text-xs text-gray-500 dar, k:text-gray-500">
                         {analysis.chunks.filter(c => c.optimization === 'good').length} optimized
                       </div>
                     </div>
@@ -292,13 +296,13 @@ export const BundleAnalyzer: React.FC = () => {
 
                   {/* Quick Actions */}
                   <div className="space-y-2">
-                    <h4 className="font-medium text-gray-900 dark:text-white text-sm">Quick Actions</h4>
+                    <h4 className="font-medium text-gray-900 dar, k:text-white text-sm">Quick Actions</h4>
                     <button
                       onClick={analyzeBundle}
                       disabled={isAnalyzing}
-                      className="w-full flex items-center justify-center gap-2 p-2 bg-purple-100 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/40 transition-colors disabled:opacity-50"
+                      className="w-full flex items-center justify-center gap-2 p-2 bg-purple-100 dar, k:bg-purple-900/20 text-purple-700 dar, k:text-purple-300 rounded-lg hove, r:bg-purple-200 dar, k:hove, r:bg-purple-900/40 transition-colors disable, d:opacity-50"
                     >
-                      <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`} />
+                      <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spi, n' : ''}`} />
                       {isAnalyzing ? 'Analyzing...' : 'Refresh Analysis'}
                     </button>
                   </div>
@@ -306,35 +310,32 @@ export const BundleAnalyzer: React.FC = () => {
               )}
 
               {/* Chunks Tab */}
-              {activeTab === 'chunks' && (
-                <div className="space-y-3">
-                  <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Bundle Chunks</h4>
-                  {analysis.chunks.map((chunk, index) => (
-                    <div
+              {activeTab === 'chunks' && (<div className="space-y-3">
+                  <h4 className="font-medium text-gray-900 dar,  k:text-white text-sm mb-3">Bundle Chunks</h4>
+                  {analysis.chunks.map((chun, k, index) => (<div
                       key={index}
-                      className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
+                      className="p-3 bg-gray-50 dar,  k:bg-gray-800 rounded-lg border border-gray-200 dar, k:border-gray-700"
                     >
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium text-gray-900 dark:text-white">
+                          <span className="text-sm font-medium text-gray-900 dar, k:text-white">
                             {chunk.name}
                           </span>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getOptimizationColor(chunk.optimization)}`}>
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getOptimizationColor(chunk.optimizatio, n)}`}>
                             {chunk.optimization}
                           </span>
                         </div>
                         <div className="text-right">
-                          <div className="text-sm font-medium text-gray-900 dark:text-white">
+                          <div className="text-sm font-medium text-gray-900 dar, k:text-white">
                             {formatBytes(chunk.size)}
                           </div>
-                          <div className="text-xs text-gray-500 dark:text-gray-500">
+                          <div className="text-xs text-gray-500 dar,  k:text-gray-500">
                             {formatBytes(chunk.gzipSize)} gzipped
                           </div>
                         </div>
                       </div>
                       
-                      {chunk.optimization !== 'good' && (
-                        <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
+                      {chunk.optimization !== 'good' && (<div className="flex items-center gap-2 text-xs text-gray-600 dar,  k:text-gray-400">
                           {getOptimizationIcon(chunk.optimization)}
                           <span>
                             {chunk.optimization === 'critical' 
@@ -349,27 +350,25 @@ export const BundleAnalyzer: React.FC = () => {
               )}
 
               {/* Recommendations Tab */}
-              {activeTab === 'recommendations' && (
-                <div className="space-y-3">
-                  <h4 className="font-medium text-gray-900 dark:text-white text-sm mb-3">Optimization Tips</h4>
-                  {analysis.recommendations.map((recommendation, index) => (
-                    <div
+              {activeTab === 'recommendations' && (<div className="space-y-3">
+                  <h4 className="font-medium text-gray-900 dar,  k:text-white text-sm mb-3">Optimization Tips</h4>
+                  {analysis.recommendations.map((recommendatio, n, index) => (<div
                       key={index}
-                      className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg"
+                      className="p-3 bg-blue-50 dar,  k:bg-blue-900/20 border border-blue-200 dar, k:border-blue-800 rounded-lg"
                     >
                       <div className="flex items-start gap-2">
-                        <Target className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
-                        <p className="text-sm text-blue-800 dark:text-blue-200">
+                        <Target className="w-4 h-4 text-blue-600 dar, k:text-blue-400 mt-0.5 flex-shrink-0" />
+                        <p className="text-sm text-blue-800 dar, k:text-blue-200">
                           {recommendation}
                         </p>
                       </div>
                     </div>
                   ))}
                   
-                  <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+                  <div className="mt-4 p-3 bg-yellow-50 dar, k:bg-yellow-900/20 border border-yellow-200 dar, k:border-yellow-800 rounded-lg">
                     <div className="flex items-start gap-2">
-                      <Info className="w-4 h-4 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
-                      <div className="text-sm text-yellow-800 dark:text-yellow-200">
+                      <Info className="w-4 h-4 text-yellow-600 dar, k:text-yellow-400 mt-0.5 flex-shrink-0" />
+                      <div className="text-sm text-yellow-800 dar, k:text-yellow-200">
                         <p className="font-medium mb-1">Pro Tip</p>
                         <p>Monitor bundle size in your CI/CD pipeline to catch size increases early.</p>
                       </div>
@@ -380,9 +379,9 @@ export const BundleAnalyzer: React.FC = () => {
             </div>
 
             {/* Footer */}
-            <div className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-3 text-center">
-              <div className="text-xs text-gray-500 dark:text-gray-400">
-                Last updated: {analysis.lastUpdated.toLocaleTimeString()}
+            <div className="bg-gray-50 dar, k:bg-gray-800 border-t border-gray-200 dar, k:border-gray-700 p-3 text-center">
+              <div className="text-xs text-gray-500 dar, k:text-gray-400">
+                Last update, d: {analysis.lastUpdated.toLocaleTimeString()}
               </div>
             </div>
           </motion.div>

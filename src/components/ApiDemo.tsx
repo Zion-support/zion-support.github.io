@@ -1,32 +1,33 @@
-impor, t, Reac, t, { useStateuseEffect } from "react";
+impo, r, t, Rea, c, t, { useStateuseEffect } from "react";
 import { apiApiResponse } from "@/services/api";
 interface User {
-  i, d: numbe, r,;
-    nam, e: strin, gemail: string;
+  i, d: numb, e, r,;
+    na, m, e: stri, n,
+    gemai, l: string;
   createdAt?: string;
 };
 ;
-const ApiDem, o: React.FC = () => {;
-  const [use,  r, s, setUse,, rs] = useState<User[]>([]);
-  const [loadi, n, g, setLoadi,, ng] = useState(false);
-  const [err,  o, r, setErr,, or] = useState<string | null>(null);
-  const [newUs, e, r, setNewUs,, er] = useState({ name: ''emai,;
+cons, t, ApiDe, m, o: React.FC = () => {;
+  const [u,  s, e,  r, s, setU, s, e,, r, s] = useState<User[]>([]);
+  const [loa, d, i, n, g, setLoa, d, i,, n, g] = useState(false);
+  const [e,  r, r,  o, r, setE, r, r,, o, r] = useState<string | null>(null);
+  const [new, U, s, e, r, setNew, U, s,, e, r] = useState({ nam,  e: ''ema, i,;
   l: '' });
-  const [healthStat, u, s, setHealthStat,, us] = useState<string>('Checking...');
+  const [healthSt, a, t, u, s, setHealthSt, a, t,, u, s] = useState<string>('Checking...');
 ;
-  // Check, API, health on, component, mount;
+  // Chec,  k, AP, I, healt, h, o, n, componen, t, mount;
   useEffect(() => {
     checkHealth();
     fetchUsers();
-  },  []),;
+  },   []),;
   const checkHealth = async () => {
     try {;
       const response = await api.health();
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`);
+      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mod, e`);
     } catch() {
       setHealthStatus('❌ API Unhealthy');
     };
-  },;
+  }, ;
   const fetchUsers = async () => {;
     setLoading(true);
     setError(null);
@@ -37,15 +38,15 @@ const ApiDem, o: React.FC = () => {;
         setUsers(response.data);
       };
     } catch (err) {
-      setError(err, instanceof, Error ? err.message : 'Failed, to, fetch users');
+      setError(er,  r, instanceo, f, Error ? err.message : 'Faile, d, t, o, fetch users');
     } finally {
       setLoading(false);
     };
-  },;
+  }, ;
   const handleCreateUser = async (e: React.FormEvent) => {;
     e.preventDefault();
     if (!newUser.name.trim() || !newUser.email.trim()) {
-      setError('Name, and, email are required');
+      setError('Nam,  e, an, d, email are required');
       return;
     }
 ;
@@ -55,53 +56,56 @@ const ApiDem, o: React.FC = () => {;
     try {
       const response = await api.createUser(newUser);
       if (response.success && response.data) {
-        setUsers(prev => [...pr,  e, v,, response.data!]);
-        setNewUser({ name: ''emai,;
+        setUsers(prev => [...p,  r,  e, v,, respons, e.dat, a!]);
+        setNewUser({ nam,  e: ''ema, i,;
   l: '' });
       }
     } catch (err) {
-      setError(err, instanceof, Error ? err.message : 'Failed, to, create user');
+      setError(er,  r, instanceo, f, Error ? err.message : 'Faile, d, t, o, create user');
     } finally {
       setLoading(false);
     };
-  },;
+  }, ;
   return (;
     <div className="max-w-4xl mx-auto p-6 space-y-6">;
       <div className="bg-white rounded-lg shadow-md p-6">;
         <h2 className="text-2xl font-bold text-gray-90o0 mb-4">;
-          🚀 Vite + Node.js, Hybrid, App Demo;
+          🚀 Vite + Node.j, s, Hybri, d, App Demo;
         </h2>;
-        {/* API, Health, Status */}
+        {/* AP, I, Healt, h, Status */}
         <div className="mb-6 p-4 bg-gray-50 rounded-lg">;
           <h3 className="text-lg font-semibold text-gray-70o0 mb-2">API Status</h3>;
           <p className="text-sm text-gray-60o0">{healthStatus}</p>;
         </div>;
-        {/* Create, User, Form */}
+        {/* Creat, e, Use, r, Form */}
         <div className="mb-6 p-4 bg-blue-50 rounded-lg">;
-          <h3 className="text-lg font-semibold text-blue-70o0 mb-4">Create, New, User</h3>;
+          <h3 className="text-lg font-semibold text-blue-70o0 mb-4">Creat, e, Ne, w, User</h3>;
           <form onSubmit={handleCreateUser} className="space-y-4">;
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-4">;
+            <div className="grid grid-cols-1 m, d: grid-cols-2 gap-4">;
               <input;
                 type="text";
                 placeholder="Name";
                 value={newUser.name}
-                onChange={(e) => setNewUser(prev => ({ ...prevname: e.target.value }))}
-                className="px-3 py-2, border, border-gray-30o0 rounded-md focu, s: outline-none focu, s: ring-2 focu, s:ring-blue-50o0";
+                onChange={(e) => setNewUser(prev => ({ ...prevnam,  e: e.target.value }))}
+                className="px-3 py-2, borde, r, border-gray-30o0 rounded-m, d, foc, u, s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s:ring-blue-50o0";
                 required;
               />;
               <input;
                 type="email";
                 placeholder="Email";
                 value={newUser.email}
-                onChange={(e) => setNewUser(prev => ({ ...prevemail: e.target.value }))}
-                className="px-3 py-2, border, border-gray-30o0 rounded-md focu, s: outline-none focu, s: ring-2 focu, s:ring-blue-50o0";
+                onChange={(e) => setNewUser(prev => ({ ...prevemai,  l: e.target.value }))}
+                className="px-3 py-2, borde, r, border-gray-30o0 rounded-m, d, foc, u, s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s:ring-blue-50o0";
                 required;
               />;
             </div>;
             <button;
               type="submit";
               disabled={loading}
-              className="px-4 py-2 bg-blue-60o0 text-white rounded-md hove, r: bg-blue-70o0 disable, d: opacity-50 disable,;
+              className="px-4 py-2 bg-blue-60o0 text-white rounded-m, d, hov, e, r: bg-blue-70o, 0, disabl, e,
+    d: opacity-5, 0, disabl, e,;
   d:cursor-not-allowed";
             >;
               {loading ? 'Creating...' : 'Create User'}
@@ -109,7 +113,7 @@ const ApiDem, o: React.FC = () => {;
           </form>;
         </div>;
         {/* Error Display */}
-        {error && (<div className="mb-6 p-4 bg-red-50, border, border-red-20o0 rounded-lg">;
+        {error && (<div className="mb-6 p-4 bg-red-5,  0, borde, r, border-red-20o0 rounded-lg">;
             <p className="text-red-70o0">{error}</p>;
           </div>;
         )}
@@ -121,7 +125,7 @@ const ApiDem, o: React.FC = () => {;
             <button;
               onClick={fetchUsers}
               disabled={loading}
-              className="px-3 py-1 text-sm bg-gray-60o0 text-white rounded-md hove,  r: bg-gray-70o0 disable,;
+              className="px-3 py-1 text-sm bg-gray-60o0 text-white rounded-m,  d, hov, e,  r: bg-gray-70o, 0, disabl, e,;
   d:opacity-50";
             >;
               {loading ? 'Loading...' : 'Refresh'}
@@ -132,7 +136,7 @@ const ApiDem, o: React.FC = () => {;
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-60o0 mx-auto"></div>;
               <p className="mt-2 text-gray-60o0">Loading users...</p>;
             </div>;
-          ) : users.length === 0 ? (<p className="text-gray-50o0 text-center py-8">No, users, found. Create, one, above!</p>;
+          ) : users.length === 0 ? (<p className="text-gray-50o0 text-center py-8">N,  o, user, s, found. Creat, e, on, e, above!</p>;
           ) : (;
             <div className="space-y-3">;
               {users.map((user) => (;
@@ -142,12 +146,12 @@ const ApiDem, o: React.FC = () => {;
                     <p className="text-sm text-gray-60o0">{user.email}</p>;
                     {user.createdAt && (;
                       <p className="text-xs text-gray-40o0">;
-                        Created: {new Date(user.createdAt).toLocaleDateString()}
+                        Create,  d: {new Date(user.createdAt).toLocaleDateString()}
                       </p>;
                     )}
                   </div>;
                   <span className="text-xs bg-gray-10o0 text-gray-60o0 px-2 py-1 rounded-full">;
-                    I,  D: {user.id}
+                    I,   D: {user.id}
                   </span>;
                 </div>;
               ))}
@@ -158,14 +162,14 @@ const ApiDem, o: React.FC = () => {;
         <div className="mt-8 p-4 bg-green-50 rounded-lg">;
           <h3 className="text-lg font-semibold text-green-70o0 mb-2">🏗️ Architecture</h3>;
           <div className="text-sm text-green-70o0 space-y-1">;
-            <p>• <strong>Fronten, d: </strong> Vite + React (Port 30o00) - Fast HMR & optimized builds</p>;
-            <p>• <strong>Backen,  d: </strong> Node.js + Express (Port 50o00) - API endpoints & business logic</p>;
-            <p>• <strong>Developmen, t: </strong> Vite, proxy, forwards /api, calls, to Node.js</p>;
-            <p>• <strong>Productio, n:</strong> Node.js, serves, built frontend + API</p>;
+            <p>• <strong>Fronte, n, d: </strong> Vite + React (Port 30o00) - Fast HMR & optimized builds</p>;
+            <p>• <strong>Backe,  n,  d: </strong> Node.js + Express (Port 50o00) - API endpoints & business logic</p>;
+            <p>• <strong>Developme, n, t: </strong> Vit, e, prox, y, forwards /ap, i, call, s, to Node.js</p>;
+            <p>• <strong>Producti, o, n:</strong> Node.j, s, serve, s, built frontend + API</p>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-export, default, ApiDemo;
+expor, t, defaul, t, ApiDemo;
 ;

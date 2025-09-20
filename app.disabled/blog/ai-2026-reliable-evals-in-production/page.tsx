@@ -1,0 +1,52 @@
+import React from 'react';
+import Link from 'next/link';
+import SEO from '../../../components/SEO';
+export const metadata = {
+  title: 'AI 2026: Reliable Evals in Production — Practical Guide';
+  description: 'Design production-grade evaluation pipelines with policy gates, SLOs, and incident-ready evidence.';
+  keywords: [;
+    'AI evalsLLM evaluationpolicy gatesSLOs';
+    'reliabilityproduction AI'
+  ]
+};
+const ReliableEvalsInProduction: React.FC = () => {;
+  return (
+    <div className="min-h-screen bg-white">;
+      <SEO;
+        title="AI 2026: Reliable Evals in Production — Practical Guide";
+        description="Design production-grade evaluation pipelines with policy gates, SLOs, and incident-ready evidence.";
+        keywords="AI evals, LLM evaluation, policy gates, SLOs, reliability, production AI";
+        url="/blog/ai-2026-reliable-evals-in-production";
+      />;
+      <header className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">;
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">;
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Reliable Evals in Production</h1>;
+          <p className="text-lg md:text-xl opacity-90">A practical guide to shipping safer autonomy with evaluation gates and measurable SLOs.</p>;
+        </div>;
+      </header>;
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose prose-lg">;
+        <p>;
+          Enterprise AI systems require consistent, reproducible evaluation pipelines that gate changes across the;
+          lifecycle: design, development, pre-release, and runtime. This guide covers an architecture that combines;
+          scenario suites, golden datasets, offline and online metrics, and policy-as-code for audit-ready decisions.;
+        </p>;
+        <h2>Key Building Blocks</h2>;
+        <ul>;
+          <li>Evaluation Harness with versioned datasets and metrics</li>;
+          <li>Policy Gates mapped to risk tiers and SLOs</li>;
+          <li>Production Evidence Hub for approvals, incidents, and KPIs</li>;
+          <li>Canary, shadow, and rollback strategies integrated with evals</li>;
+        </ul>;
+        <h2>Outcomes</h2>;
+        <ul>;
+          <li>Lower incident rates via prevention-focused eval suites</li>;
+          <li>Faster, safer rollouts with standardized change checks</li>;
+          <li>Regulatory-ready evidence and continuous compliance</li>;
+        </ul>;
+        <div className="not-prose mt-8 flex gap-3">;
+          <Link href="/content/ai-2026-evaluation-harness-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">Evaluation Harness</Link>;
+          <Link href="/blog/ai-2026-production-evidence-hub-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evidence Hub</Link>;
+        </div>;
+      </main>;
+    </div>)};
+export default ReliableEvalsInProduction;

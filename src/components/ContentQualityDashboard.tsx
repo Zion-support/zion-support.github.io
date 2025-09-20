@@ -1,32 +1,32 @@
-import React, { useState, useEffect, useCallback } from 'react';
+impor, t, Reac, t, { useStat, e, useEffec, t, useCallback } from 'react';
 import { 
-  BarChart3, 
-  FileText, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle, 
-  Eye,
-  Target,
-  Zap,
-  RefreshCw,
-  Download,
-  Filter,
-  Search,
+  BarChart, 3, 
+  FileTex, t, 
+  TrendingU, p, 
+  AlertTriangl, e, 
+  CheckCircl, e, 
+  Ey, e,
+  Targe, t,
+  Za, p,
+  RefreshC, w,
+  Downloa, d,
+  Filte, r,
+  Searc, h,
   X
 } from 'lucide-react';
-import ContentQualityAnalyzer, { ContentQualityMetrics, ContentQualityReport } from '../utils/contentQualityAnalyzer';
+impor, t, ContentQualityAnalyze, r, { ContentQualityMetric, s, ContentQualityReport } from '../utils/contentQualityAnalyzer';
 
 interface ContentQualityDashboardProps {
   className?: string;
 }
 
-const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [report, setReport] = useState<ContentQualityReport | null>(null);
-  const [selectedPage, setSelectedPage] = useState<ContentQualityMetrics | null>(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterStatus, setFilterStatus] = useState<'all' | 'excellent' | 'good' | 'poor'>('all');
+const ContentQualityDashboar, d: React.FC<ContentQualityDashboardProps> = ({ className = '' }) => {
+  const [isOp,  e, n, setIsOp, e, n] = useState(false);
+  const [isLoadi, n, g, setIsLoadi, n, g] = useState(false);
+  const [repo,  r, t, setRepo, r, t] = useState<ContentQualityReport | null>(null);
+  const [selectedPa, g, e, setSelectedPa, g, e] = useState<ContentQualityMetrics | null>(null);
+  const [searchTe,  r, m, setSearchTe, r, m] = useState('');
+  const [filterStat, u, s, setFilterStat, u, s] = useState<'all' | 'excellent' | 'good' | 'poor'>('all');
 
   const contentAnalyzer = ContentQualityAnalyzer.getInstance();
 
@@ -34,57 +34,56 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
     setIsLoading(true);
     try {
       // Simulate analyzing all pages in the application
-      // In a real implementation, you would analyze actual page content
+      // In a rea,  l, implementatio, n, you would analyze actual page content
       const samplePages = [
         {
-          url: '/',
-          title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',
-          content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.',
-          metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',
-          images: ['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],
-          links: ['/services', '/ai-solutions', '/about', '/contact']
+          u, r, l: '/',
+    tit, l, e: 'Zio, n Tec, h Grou, p - A, I-Powere, d Technolog, y Solution, s & Enterpris, e Service, s',
+          conte, n, t: 'Leadin, g provide, r o, f A, I-powere, d technolo, g, y, solutio, n, s, quant, u, m, computi, n, g, cybersecuri, t, y, an, d enterpris, e digita, l transformatio, n service, s. Transfor, m you, r busines, s wit, h cuttin, g-edg, e technolog, y.',
+          metaDescripti, o, n: 'Leadin, g provide, r o, f A, I-powere, d technolo, g, y, solutio, n, s, quant, u, m, computi, n, g, cybersecuri, t, y, an, d enterpris, e digita, l transformatio, n service, s.',
+          imag, e, s: ['/image, s/her, o-a, i-solution, s.jp, g', '/image, s/her, o-i, t-service, s.jp, g'],
+          link, s: ['/service, s', '/a, i-solution, s', '/abou, t', '/contac, t']
         },
         {
-          url: '/services',
-          title: 'Our Services - Comprehensive Technology Solutions',
-          content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',
-          metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',
-          images: ['/images/services-overview.jpg'],
-          links: ['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about']
+          ur, l: '/services',
+    titl, e: 'Our Services - Comprehensive Technology Solutions',
+          conten, t: 'We offer a wide range of technology services including A, I, solution, s, clou, d, infrastructur, e, cybersecurit, y, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',
+          metaDescriptio, n: 'Comprehensive technology services including A, I, solution, s, clou, d, infrastructur, e, cybersecurit, y, and digital transformation.',
+          image, s: ['/image, s/service, s-overvie, w.jp, g'],
+    link, s: ['/a, i-solution, s', '/clou, d-devop, s', '/cybersecurit, y', '/abou, t']
         },
         {
-          url: '/ai-solutions',
-          title: 'AI Solutions - Artificial Intelligence Services',
-          content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.',
-          metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',
-          images: ['/images/ai-solutions.jpg'],
-          links: ['/services', '/about', '/contact']
+          ur, l: '/ai-solutions',
+    titl, e: 'AI Solutions - Artificial Intelligence Services',
+          conten, t: 'Cutting-edge artificial intelligence solutions for modern businesses. Machin, e, learnin, g, predictiv, e, analytic, s, and AI automation to drive innovation and efficiency.',
+          metaDescriptio, n: 'Cutting-edge artificial intelligence solutions including machin, e, learnin, g, predictiv, e, analytic, s, and AI automation.',
+          image, s: ['/image, s/a, i-solution, s.jp, g'],
+    link, s: ['/service, s', '/abou, t', '/contac, t']
         },
         {
-          url: '/about',
-          title: 'About Us - Zion Tech Group',
-          content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.',
-          metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',
-          images: ['/images/about-team.jpg'],
-          links: ['/services', '/team', '/contact', '/mission']
+          ur, l: '/about',
+    titl, e: 'About Us - Zion Tech Group',
+          conten, t: 'Learn about Zion Tec, h, Grou, p, ou, r, missio, n, value, s, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.',
+          metaDescriptio, n: 'Learn about Zion Tec, h, Grou, p, ou, r, missio, n, value, s, and commitment to delivering innovative technology solutions.',
+          image, s: ['/image, s/abou, t-tea, m.jp, g'],
+    link, s: ['/service, s', '/tea, m', '/contac, t', '/missio, n']
         },
         {
-          url: '/contact',
-          title: 'Contact Us - Get in Touch',
-          content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',
-          metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',
-          images: ['/images/contact-office.jpg'],
-          links: ['/services', '/about', '/team']
+          ur, l: '/contact',
+    titl, e: 'Contact Us - Get in Touch',
+          conten, t: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',
+    metaDescriptio, n: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',
+          image, s: ['/image, s/contac, t-offic, e.jp, g'],
+    link, s: ['/service, s', '/abou, t', '/tea, m']
         }
       ];
 
       for (const page of samplePages) {
-        contentAnalyzer.analyzePageContent(
-          page.url,
-          page.title,
-          page.content,
-          page.metaDescription,
-          page.images,
+        contentAnalyzer.analyzePageContent(page.ur,  l,
+          page.titl, e,
+          page.conten, t,
+          page.metaDescriptio, n,
+          page.image, s,
           page.links
         );
       }
@@ -92,16 +91,16 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
       const newReport = contentAnalyzer.generateReport();
       setReport(newReport);
     } catch (error) {
-      console.error('Error analyzing pages:', error);
+      console.error('Error analyzing page,  s:', error);
     } finally {
       setIsLoading(false);
     }
-  }, [contentAnalyzer]);
+  },  [contentAnalyz, e, r]);
 
   useEffect(() => {
     // Auto-analyze pages when component mounts
     analyzeAllPages();
-  }, [analyzeAllPages]);
+  },  [analyzeAllPag, e, s]);
 
   const getFilteredPages = () => {
     if (!report) return [];
@@ -126,7 +125,7 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
             return page.overallScore >= 60 && page.overallScore < 80;
           case 'poor':
             return page.overallScore < 40;
-          default:
+          defaul,  t:
             return true;
         }
       });
@@ -135,14 +134,14 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
     return filtered;
   };
 
-  const getStatusColor = (score: number) => {
+  const getStatusColor = (scor,  e: number) => {
     if (score >= 80) return 'text-green-600 bg-green-50 border-green-200';
     if (score >= 60) return 'text-yellow-600 bg-yellow-50 border-yellow-200';
     if (score >= 40) return 'text-orange-600 bg-orange-50 border-orange-200';
     return 'text-red-600 bg-red-50 border-red-200';
   };
 
-  const getStatusText = (score: number) => {
+  const getStatusText = (scor,  e: number) => {
     if (score >= 80) return 'Excellent';
     if (score >= 60) return 'Good';
     if (score >= 40) return 'Fair';
@@ -153,19 +152,19 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
     if (!report) return;
     
     const csvContent = [
-      ['Page URL', 'Title', 'Word Count', 'SEO Score', 'Overall Score', 'Issues', 'Recommendations'],
+      ['Pag,  e UR, L', 'Titl, e', 'Wor, d Coun, t', 'SE, O Scor, e', 'Overal, l Scor, e', 'Issue, s', 'Recommendation, s'],
       ...report.pageMetrics.map(page => [
-        page.pageUrl,
-        page.title,
-        page.wordCount.toString(),
-        page.seoScore.toString(),
-        page.overallScore.toString(),
-        page.issues.join('; '),
-        page.recommendations.join('; ')
+        pag, e.pageU, r, l,
+        pag, e.tit, l, e,
+        pag, e.wordCoun, t.toStrin, g(),
+        pag, e.seoScor, e.toStrin, g(), 
+        pag, e.overallScor, e.toStrin, g(),
+        pag, e.issue, s.joi, n('; '), 
+        pag, e.recommendation, s.joi, n('; ')
       ])
-    ].map(row => row.map(cell => `"${cell}"`).join(',')).join('\n');
+    ].map(row => row.map(cell => `"${cel, l}"`).join(', ')).join('\n');
     
-    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const blob = new Blob([csvConte,  n, t], { typ, e: 'text/csv' });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -177,11 +176,11 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
   const filteredPages = getFilteredPages();
 
   return (
-    <div className={`fixed bottom-6 left-6 z-50 ${className}`}>
+    <div className={`fixed bottom-6 left-6 z-50 ${classNam, e}`}>
       {/* Floating Action Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+        className="bg-gradient-to-r from-green-600 to-blue-600 hove,  r:from-green-700 hove, r:to-blue-700 text-white p-3 rounded-full shadow-lg hove, r:shadow-xl transition-all duration-300 transform hove, r:scale-105"
         aria-label="Toggle Content Quality Dashboard"
       >
         <BarChart3 className="w-6 h-6" />
@@ -189,7 +188,7 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
 
       {/* Dashboard Panel */}
       {isOpen && (
-        <div className="absolute bottom-16 left-0 w-[800px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="absolute bottom-16 left-0 w-[800, p, x] bg-white dar, k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar, k:border-gray-700 overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-4">
             <div className="flex items-center justify-between">
@@ -199,7 +198,7 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
               </h3>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-white/80 hove,  r:text-white transition-colors"
               >
                 ×
               </button>
@@ -229,9 +228,8 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
           </div>
 
           {/* Content */}
-          <div className="p-4 max-h-[600px] overflow-y-auto">
-            {isLoading ? (
-              <div className="flex items-center justify-center py-8">
+          <div className="p-4 max-h-[600, p, x] overflow-y-auto">
+            {isLoading ? (<div className="flex items-center justify-center py-8">
                 <RefreshCw className="w-6 h-6 animate-spin text-green-600" />
                 <span className="ml-2 text-gray-600">Analyzing content...</span>
               </div>
@@ -246,13 +244,13 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
                       placeholder="Search pages..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focu,  s:ring-2 focu, s:ring-green-500 focu, s:border-transparent"
                     />
                   </div>
                   <select
                     value={filterStatus}
                     onChange={(e) => setFilterStatus(e.target.value as any)}
-                    className="px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="px-3 py-2 border border-gray-300 rounded-md focu,  s:ring-2 focu, s:ring-green-500 focu, s:border-transparent"
                   >
                     <option value="all">All Pages</option>
                     <option value="excellent">Excellent (80%+)</option>
@@ -261,7 +259,7 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
                   </select>
                   <button
                     onClick={exportReport}
-                    className="px-3 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors flex items-center gap-2"
+                    className="px-3 py-2 bg-green-600 hove,  r:bg-green-700 text-white rounded-md transition-colors flex items-center gap-2"
                   >
                     <Download className="w-4 h-4" />
                     Export
@@ -270,14 +268,13 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
 
                 {/* Top Issues */}
                 {report.topIssues.length > 0 && (
-                  <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
-                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">
+                  <div className="bg-yellow-50 dar, k:bg-yellow-900/20 p-4 rounded-lg">
+                    <h4 className="font-medium text-yellow-800 dar, k:text-yellow-200 mb-2 flex items-center gap-2">
                       <AlertTriangle className="w-4 h-4" />
                       Top Issues to Address
                     </h4>
                     <div className="space-y-1">
-                      {report.topIssues.slice(0, 3).map((issue, index) => (
-                        <div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">
+                      {report.topIssues.slice(0, 3).map((issu,  e, index) => (<div key={index} className="text-sm text-yellow-700 dar,  k:text-yellow-300">
                           • {issue}
                         </div>
                       ))}
@@ -286,10 +283,10 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
                 )}
 
                 {/* Pages Table */}
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">
+                <div className="bg-gray-50 dar, k:bg-gray-800 rounded-lg overflow-hidden">
                   <div className="overflow-x-auto">
                     <table className="w-full">
-                      <thead className="bg-gray-100 dark:bg-gray-700">
+                      <thead className="bg-gray-100 dar, k:bg-gray-700">
                         <tr>
                           <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                             Page
@@ -308,32 +305,31 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-                        {filteredPages.map((page, index) => (
-                          <tr 
+                      <tbody className="bg-white dar, k:bg-gray-800 divide-y divide-gray-200 dar, k:divide-gray-700">
+                        {filteredPages.map((pag,  e, index) => (<tr 
                             key={index} 
-                            className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
+                            className="hove,  r:bg-gray-50 dar, k:hove, r:bg-gray-700 cursor-pointer"
                             onClick={() => setSelectedPage(page)}
                           >
                             <td className="px-4 py-3">
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">
+                              <div className="text-sm font-medium text-gray-900 dar,  k:text-white">
                                 {page.title}
                               </div>
-                              <div className="text-xs text-gray-500 dark:text-gray-400">
+                              <div className="text-xs text-gray-500 dar, k:text-gray-400">
                                 {page.pageUrl}
                               </div>
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-900 dar, k:text-white">
                               {page.wordCount}
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-900 dar, k:text-white">
                               {page.seoScore}%
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-900 dar, k:text-white">
                               {page.overallScore}%
                             </td>
                             <td className="px-4 py-3">
-                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getStatusColor(page.overallScore)}`}>
+                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getStatusColor(page.overallScor, e)}`}>
                                 {getStatusText(page.overallScore)}
                               </span>
                             </td>
@@ -347,14 +343,14 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
                 {/* Page Details Modal */}
                 {selectedPage && (
                   <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">
+                    <div className="bg-white dar,  k:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80, v, h] overflow-y-auto">
                       <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          Page Analysis: {selectedPage.title}
+                        <h3 className="text-lg font-semibold text-gray-900 dar, k:text-white">
+                          Page Analysi, s: {selectedPage.title}
                         </h3>
                         <button
                           onClick={() => setSelectedPage(null)}
-                          className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                          className="text-gray-400 hove,  r:text-gray-600 dar, k:hove, r:text-gray-300"
                         >
                           <X className="w-5 h-5" />
                         </button>
@@ -362,30 +358,29 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
                       
                       <div className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Word Count</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.wordCount}</div>
+                          <div className="bg-gray-50 dar, k:bg-gray-800 p-3 rounded-lg">
+                            <div className="text-sm text-gray-500 dar, k:text-gray-400">Word Count</div>
+                            <div className="text-lg font-semibold text-gray-900 dar, k:text-white">{selectedPage.wordCount}</div>
                           </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Headings</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.headingCount}</div>
+                          <div className="bg-gray-50 dar, k:bg-gray-800 p-3 rounded-lg">
+                            <div className="text-sm text-gray-500 dar, k:text-gray-400">Headings</div>
+                            <div className="text-lg font-semibold text-gray-900 dar, k:text-white">{selectedPage.headingCount}</div>
                           </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Images</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.imageCount}</div>
+                          <div className="bg-gray-50 dar, k:bg-gray-800 p-3 rounded-lg">
+                            <div className="text-sm text-gray-500 dar, k:text-gray-400">Images</div>
+                            <div className="text-lg font-semibold text-gray-900 dar, k:text-white">{selectedPage.imageCount}</div>
                           </div>
-                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dark:text-gray-400">Links</div>
-                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.linkCount}</div>
+                          <div className="bg-gray-50 dar, k:bg-gray-800 p-3 rounded-lg">
+                            <div className="text-sm text-gray-500 dar, k:text-gray-400">Links</div>
+                            <div className="text-lg font-semibold text-gray-900 dar, k:text-white">{selectedPage.linkCount}</div>
                           </div>
                         </div>
 
                         {selectedPage.issues.length > 0 && (
                           <div>
-                            <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">Issues Found</h4>
+                            <h4 className="font-medium text-red-600 dar, k:text-red-400 mb-2">Issues Found</h4>
                             <div className="space-y-2">
-                              {selectedPage.issues.map((issue, index) => (
-                                <div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">
+                              {selectedPage.issues.map((issu, e, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dar,  k:text-red-400">
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{issue}</span>
                                 </div>
@@ -394,12 +389,10 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
                           </div>
                         )}
 
-                        {selectedPage.recommendations.length > 0 && (
-                          <div>
-                            <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">Recommendations</h4>
+                        {selectedPage.recommendations.length > 0 && (<div>
+                            <h4 className="font-medium text-green-600 dar,  k:text-green-400 mb-2">Recommendations</h4>
                             <div className="space-y-2">
-                              {selectedPage.recommendations.map((rec, index) => (
-                                <div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">
+                              {selectedPage.recommendations.map((re, c, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dar,  k:text-green-400">
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0" />
                                   <span>{rec}</span>
                                 </div>
@@ -412,26 +405,25 @@ const ContentQualityDashboard: React.FC<ContentQualityDashboardProps> = ({ class
                   </div>
                 )}
               </div>
-            ) : (
-              <div className="text-center py-8 text-gray-500">
+            ) : (<div className="text-center py-8 text-gray-500">
                 No content quality data available
               </div>
             )}
           </div>
 
           {/* Footer Actions */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">
+          <div className="bg-gray-50 dar,  k:bg-gray-800 p-3 flex gap-2">
             <button
               onClick={analyzeAllPages}
               disabled={isLoading}
-              className="flex-1 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-green-600 hove, r:bg-green-700 disable, d:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2"
             >
-              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spi, n' : ''}`} />
               {isLoading ? 'Analyzing...' : 'Analyze All Pages'}
             </button>
             <button
               onClick={() => contentAnalyzer.clearCache()}
-              className="px-3 py-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-sm transition-colors"
+              className="px-3 py-2 text-gray-600 hove,  r:text-gray-800 dar, k:text-gray-400 dar, k:hove, r:text-gray-200 text-sm transition-colors"
             >
               Clear Cache
             </button>

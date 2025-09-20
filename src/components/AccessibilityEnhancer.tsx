@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+impor, t, Reac, t, { useEffec, t, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from '@/components/ui/card';
 // Switch component replaced with checkbox
 // Label component replaced with simple label
 // Separator component replaced with simple div
@@ -14,23 +14,23 @@ import * as Label from '@radix-ui/react-label';
 import { Separator } from '@/components/ui/separator';
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusIndicator: boolean;
+  highContras, t: boolean;
+  largeTex, t: boolean;
+  reducedMotio, n: boolean;
+  screenReade, r: boolean;
+  keyboardNavigatio, n: boolean;
+  focusIndicato, r: boolean;
 }
 
 export function AccessibilityEnhancer() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: false,
-    keyboardNavigation: false,
-    focusIndicator: false,
+  const [isOp,  e, n, setIsOp, e, n] = useState(false);
+  const [settin, g, s, setSettin, g, s] = useState<AccessibilitySettings>({
+    highContras,  t: fals, e,
+    largeTex, t: fals, e,
+    reducedMotio, n: fals, e,
+    screenReade, r: fals, e,
+    keyboardNavigatio, n: fals, e,
+    focusIndicato, r: fals, e,
   });
 
   useEffect(() => {
@@ -42,12 +42,12 @@ export function AccessibilityEnhancer() {
         setSettings(parsed);
         applySettings(parsed);
       } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
+        console.error('Failed to parse accessibility setting,  s:', error);
       }
     }
   }, []);
 
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  const applySettings = (newSetting,  s: AccessibilitySettings) => {
     const root = document.documentElement;
     
     if (newSettings.highContrast) {
@@ -75,21 +75,22 @@ export function AccessibilityEnhancer() {
     }
   };
 
-  const handleSettingChange = (key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
+  const handleSettingChange = (ke,  y: keyo, f, AccessibilitySetting, s,
+    valu, e: boolean) => {
+    const newSettings = { ...setting, s, [k, e, y]: value };
     setSettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+    localStorage.setItem('accessibility-settings',  JSON.stringify(newSettings));
     applySettings(newSettings);
   };
 
   const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-      screenReader: false,
-      keyboardNavigation: false,
-      focusIndicator: false,
+    const defaultSetting,  s: AccessibilitySettings = {
+      highContras, t: fals, e,
+    largeTex, t: fals, e,
+      reducedMotio, n: fals, e,
+    screenReade, r: fals, e,
+      keyboardNavigatio, n: fals, e,
+    focusIndicato, r: fals, e,
     };
     setSettings(defaultSettings);
     localStorage.removeItem('accessibility-settings');
@@ -99,7 +100,7 @@ export function AccessibilityEnhancer() {
   return (
     <>
       {/* Skip Links */}
-      <div className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50">
+      <div className="sr-only focu,  s:not-sr-only focu, s:absolute focu, s:top-4 focu, s:left-4 z-50">
         <a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">
           Skip to main content
         </a>
@@ -117,7 +118,7 @@ export function AccessibilityEnhancer() {
         size="icon"
 =======
         size="icon"
-        className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hover:bg-zion-cyan/10"
+        className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hove,  r:bg-zion-cyan/10"
         aria-label="Accessibility Settings"
       >
         <span className="text-zion-cyan">A</span>
@@ -165,10 +166,10 @@ export function AccessibilityEnhancer() {
                 <Switch.Root
                   id="high-contrast"
                   checked={settings.highContrast}
-                  onCheckedChange={(checked) => handleSettingChange('highContrast', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                  onCheckedChange={(checked) => handleSettingChange('highContrast',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
                 </Switch.Root>
               </div>
               
@@ -179,10 +180,10 @@ export function AccessibilityEnhancer() {
                 <Switch.Root
                   id="large-text"
                   checked={settings.largeText}
-                  onCheckedChange={(checked) => handleSettingChange('largeText', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                  onCheckedChange={(checked) => handleSettingChange('largeText',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
                 </Switch.Root>
               </div>
               
@@ -193,10 +194,10 @@ export function AccessibilityEnhancer() {
                 <Switch.Root
                   id="focus-indicator"
                   checked={settings.focusIndicator}
-                  onCheckedChange={(checked) => handleSettingChange('focusIndicator', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                  onCheckedChange={(checked) => handleSettingChange('focusIndicator',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
                 </Switch.Root>
                 <Label htmlFor="high-contrast" className="text-sm">
                   High Contrast
@@ -204,7 +205,7 @@ export function AccessibilityEnhancer() {
                 <Switch
                   id="high-contrast"
                   checked={settings.highContrast}
-                  onCheckedChange={(checked) => handleSettingChange('highContrast', checked)}
+                  onCheckedChange={(checked) => handleSettingChange('highContrast',  checked)}
                 />
               </div>
               
@@ -215,7 +216,7 @@ export function AccessibilityEnhancer() {
                 <Switch
                   id="large-text"
                   checked={settings.largeText}
-                  onCheckedChange={(checked) => handleSettingChange('largeText', checked)}
+                  onCheckedChange={(checked) => handleSettingChange('largeText',  checked)}
                 />
               </div>
               
@@ -226,7 +227,7 @@ export function AccessibilityEnhancer() {
                 <Switch
                   id="focus-indicator"
                   checked={settings.focusIndicator}
-                  onCheckedChange={(checked) => handleSettingChange('focusIndicator', checked)}
+                  onCheckedChange={(checked) => handleSettingChange('focusIndicator',  checked)}
                 />
 =======
               </div>
@@ -240,7 +241,7 @@ export function AccessibilityEnhancer() {
                   type="checkbox"
                   id="high-contrast"
                   checked={settings.highContrast}
-                  onChange={(e) => handleSettingChange('highContrast', e.target.checked)}
+                  onChange={(e) => handleSettingChange('highContrast',  e.target.checked)}
                   className="ml-2"
                 />
               </div>
@@ -253,7 +254,7 @@ export function AccessibilityEnhancer() {
                   type="checkbox"
                   id="large-text"
                   checked={settings.largeText}
-                  onChange={(e) => handleSettingChange('largeText', e.target.checked)}
+                  onChange={(e) => handleSettingChange('largeText',  e.target.checked)}
                   className="ml-2"
                 />
               </div>
@@ -266,7 +267,7 @@ export function AccessibilityEnhancer() {
                   type="checkbox"
                   id="focus-indicator"
                   checked={settings.focusIndicator}
-                  onChange={(e) => handleSettingChange('focusIndicator', e.target.checked)}
+                  onChange={(e) => handleSettingChange('focusIndicator',  e.target.checked)}
                   className="ml-2"
                 />
               </div>
@@ -290,10 +291,10 @@ export function AccessibilityEnhancer() {
                 <Switch.Root
                   id="reduced-motion"
                   checked={settings.reducedMotion}
-                  onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                  onCheckedChange={(checked) => handleSettingChange('reducedMotion',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
                 </Switch.Root>
               </div>
               
@@ -304,10 +305,10 @@ export function AccessibilityEnhancer() {
                 <Switch.Root
                   id="keyboard-nav"
                   checked={settings.keyboardNavigation}
-                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
                 </Switch.Root>
                 <Label htmlFor="reduced-motion" className="text-sm">
                   Reduced Motion
@@ -315,7 +316,7 @@ export function AccessibilityEnhancer() {
                 <Switch
                   id="reduced-motion"
                   checked={settings.reducedMotion}
-                  onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}
+                  onCheckedChange={(checked) => handleSettingChange('reducedMotion',  checked)}
                 />
               </div>
               
@@ -326,7 +327,7 @@ export function AccessibilityEnhancer() {
                 <Switch
                   id="keyboard-nav"
                   checked={settings.keyboardNavigation}
-                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}
+                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation',  checked)}
                 />
 =======
               </div>
@@ -340,7 +341,7 @@ export function AccessibilityEnhancer() {
                   type="checkbox"
                   id="reduced-motion"
                   checked={settings.reducedMotion}
-                  onChange={(e) => handleSettingChange('reducedMotion', e.target.checked)}
+                  onChange={(e) => handleSettingChange('reducedMotion',  e.target.checked)}
                   className="ml-2"
                 />
               </div>
@@ -353,7 +354,7 @@ export function AccessibilityEnhancer() {
                   type="checkbox"
                   id="keyboard-nav"
                   checked={settings.keyboardNavigation}
-                  onChange={(e) => handleSettingChange('keyboardNavigation', e.target.checked)}
+                  onChange={(e) => handleSettingChange('keyboardNavigation',  e.target.checked)}
                   className="ml-2"
                 />
               </div>
@@ -377,10 +378,10 @@ export function AccessibilityEnhancer() {
                 <Switch.Root
                   id="screen-reader"
                   checked={settings.screenReader}
-                  onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                  onCheckedChange={(checked) => handleSettingChange('screenReader',  checked)}
+                  className="w-[42, p, x] h-[25, p, x] bg-zinc-900 rounded-full relative shadow-[0_2px_10, p, x] shadow-zinc-700 focu, s:shadow-[0_0_0_2, p, x] focu, s:shadow-zion-cyan data-[stat, e=check, e, d]:bg-zion-cyan outline-none cursor-default"
                 >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                  <Switch.Thumb className="block w-[21, p, x] h-[21, p, x] bg-white rounded-full shadow-[0_2px_2, p, x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat, e=check, e, d]:translate-x-[19, p, x]" />
                 </Switch.Root>
                 <label htmlFor="screen-reader" className="text-sm">
                   Enhanced Support
@@ -389,7 +390,7 @@ export function AccessibilityEnhancer() {
                   type="checkbox"
                   id="screen-reader"
                   checked={settings.screenReader}
-                  onChange={(e) => handleSettingChange('screenReader', e.target.checked)}
+                  onChange={(e) => handleSettingChange('screenReader',  e.target.checked)}
                   className="ml-2"
                 />
 =======
@@ -399,7 +400,7 @@ export function AccessibilityEnhancer() {
                 <Switch
                   id="screen-reader"
                   checked={settings.screenReader}
-                  onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}
+                  onCheckedChange={(checked) => handleSettingChange('screenReader',  checked)}
                 />
 =======
               </div>
@@ -428,58 +429,58 @@ export function AccessibilityEnhancer() {
 export const accessibilityStyles = `
   /* High Contrast Mode */
   .high-contrast {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --secondary: 0 0% 20%;
-    --muted: 0 0% 20%;
-    --accent: 0 0% 100%;
-    --border: 0 0% 100%;
-    --input: 0 0% 100%;
-    --ring: 0 0% 100%;
+    --backgroun, d: 0 0% 0%;
+    --foregroun, d: 0 0% 100%;
+    --primar, y: 0 0% 100%;
+    --secondar, y: 0 0% 20%;
+    --mute, d: 0 0% 20%;
+    --accen, t: 0 0% 100%;
+    --borde, r: 0 0% 100%;
+    --inpu, t: 0 0% 100%;
+    --rin, g: 0 0% 100%;
   }
   
   /* Large Text Mode */
   .large-text {
-    font-size: 1.2em;
-    line-height: 1.6;
+    font-siz, e: 1.2em;
+    line-heigh, t: 1.6;
   }
   
-  .large-text h1 { font-size: 2.5em; }
-  .large-text h2 { font-size: 2em; }
-  .large-text h3 { font-size: 1.75em; }
-  .large-text p { font-size: 1.2em; }
+  .large-text h1 { font-siz, e: 2.5em; }
+  .large-text h2 { font-siz, e: 2em; }
+  .large-text h3 { font-siz, e: 1.75em; }
+  .large-text p { font-siz, e: 1.2em; }
   
   /* Reduced Motion */
-  .reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  .reduced-motion *, .reduced-motion *::befor, e, .reduced-motion *::after {
+    animation-duratio, n: 0.01ms !important;
+    animation-iteration-coun, t: 1 !important;
+    transition-duratio, n: 0.01ms !important;
+    scroll-behavio, r: auto !important;
   }
   
   /* Focus Indicator */
-  .focus-visible:focus {
-    outline: 3px solid hsl(var(--ring));
-    outline-offset: 2px;
+  .focus-visibl, e:focus {
+    outlin, e: 3px solid hsl(var(--ring));
+    outline-offse,  t: 2px;
   }
   
   /* Screen Reader Only */
   .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    positio, n: absolute;
+    widt, h: 1px;
+    heigh, t: 1px;
+    paddin, g: 0;
+    margi, n: -1px;
+    overflo, w: hidden;
+    cli, p: rect(0, 0, 0, 0);
+    white-spac, e: nowrap;
+    borde, r: 0;
   }
   
   /* Focus visible utility */
-  .focus-visible:focus-visible {
-    outline: 2px solid hsl(var(--ring));
-    outline-offset: 2px;
+  .focus-visibl, e:focus-visible {
+    outlin, e: 2px solid hsl(var(--ring));
+    outline-offse, t: 2p, x;
   }
 `;

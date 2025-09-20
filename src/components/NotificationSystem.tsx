@@ -1,220 +1,222 @@
-impor, t, Reac, t, { useStat, e, useEffec, t, useCallbackuseRef } from "react";
+impo, r, t, Rea, c, t, { useSta, t, e, useEffe, c, t, useCallbackuseRef } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import {
-  CheckCircl, e,;
-  AlertTriangl, e,;
-  Inf, o,;
+  CheckCirc, l, e,;
+  AlertTriang, l, e,;
+  In, f, o,;
   X,;
-  Bel, l,;
-  Setting, s,;
-  Volume, 2,;
-  Volume, X,;
-  Za, p,;
-  Sta, r,;
-  MessageSquar, e,;
+  Be, l, l,;
+  Settin, g, s,;
+  Volum, e, 2,;
+  Volum, e, X,;
+  Z, a, p,;
+  St, a, r,;
+  MessageSqua, r, e,;
   ShieldClock;
 } from "lucide-react";
-export, type, NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
-export, interface, Notification {
-  i, d: strin, g,;
-    typ, e: NotificationTyp, e,titl, e: strin, g,;
-    messag, e: string;
-  duration?: numbe, r,;
-  timestam, p: Dat, e,;
-    rea, d: boolean;
+expor, t, typ, e, NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
+expor, t, interfac, e, Notification {
+  i, d: stri, n, g,;
+    ty, p, e: NotificationTy, p, e,tit, l, e: stri, n, g,;
+    messa, g, e: string;
+  duration?: numb, e, r,;
+  timesta, m, p: Da, t, e,;
+    re, a, d: boolean;
   action?: {
-    labe, l: strin, gonClick: () => void;
-  },;
-  priorit, y: 'low' | 'medium' | 'high';
-  category?: strin, g,;
+    lab, e, l: stri, n,
+    gonClic, k: () => void;
+  }, ;
+  priori, t, y: 'low' | 'medium' | 'high';
+  category?: stri, n, g,;
   icon?: React.ReactNode;
 }
 ;
 interface NotificationSystemProps {
-  maxNotifications?: numbe, r,;
+  maxNotifications?: numb, e, r,;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',;
-  enableSound?: boolea, n,;
-  enableVibration?: boolea, n,;
-  autoDismiss?: boolea, n,;
+  enableSound?: boole, a, n,;
+  enableVibration?: boole, a, n,;
+  autoDismiss?: boole, a, n,;
   defaultDuration?: number;
 };
 interface NotificationSettings {
-  soun, d: boolea, n,;
-    vibratio, n: boolea, n,autoDismis, s: boolea, n,;
-    positio, n: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',maxNotification, s: numbe, rdefaultDuration: number;
+  sou, n, d: boole, a, n,;
+    vibrati, o, n: boole, a, n,autoDismi, s, s: boole, a, n,;
+    positi, o, n: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',maxNotificatio, n, s: numb, e,
+    rdefaultDuratio, n: number;
 };
-export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
+expor, t, cons, t, NotificationSyst, e, m: React.FC<NotificationSystemProps> = ({;
   maxNotifications = 5;
   position = 'top-right',;
-  enableSound = tru, e,;
-  enableVibration = tru, e,;
+  enableSound = tr, u, e,;
+  enableVibration = tr, u, e,;
   autoDismiss = truedefaultDuration = 50o00;
 }) => {
-  const [notificatio, n, s, setNotificatio,, ns] = useState<Notification[]>([]);
-  const [settin,  g, s, setSettin,, gs] = useState<NotificationSettings>({
-    soun, d: enableSoun, d,;
-    vibratio, n: enableVibratio, n,autoDismis, s: autoDismiss;
-    positio, n,;
+  const [notificat, i, o, n, s, setNotificat, i, o,, n, s] = useState<Notification[]>([]);
+  const [sett,  i, n,  g, s, setSett, i, n,, g, s] = useState<NotificationSettings>({
+    sou, n, d: enableSou, n, d,;
+    vibrati, o, n: enableVibrati, o, n,autoDismi, s, s: autoDismiss;
+    positi, o, n,;
     maxNotificationsdefaultDuration;
   });
-  const [showSettin, g, s, setShowSettin,, gs] = useState(false);
-  const [isOp,  e, n, setIsOp,, en] = useState(false);
-  const [unreadCou, n, t, setUnreadCou,, nt] = useState(0);
+  const [showSett, i, n, g, s, setShowSett, i, n,, g, s] = useState(false);
+  const [is,  O, p,  e, n, setIs, O, p,, e, n] = useState(false);
+  const [unreadC, o, u, n, t, setUnreadC, o, u,, n, t] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 ;
-  // Initialize, audio, for notification sounds;
+  // Initializ,  e, audi, o, for notification sounds;
   useEffect(() => {
     if() {
-      audioRef.current = new Audio('/notification-sound.mp3')// You, can, add a, custom, sound file;
+      audioRef.current = new Audio('/notification-sound.mp3')// Yo,  u, ca, n, ad, d, a, custo, m, sound file;
       audioRef.current.volume = 0.3 };
-  }, [setting, s.sou,, nd]),;
-  // Update, unread, count;
+  }, [setti, n, g, s.s, o, u,, n, d]),;
+  // Updat, e, unrea, d, count;
   useEffect(() => {
-    setUnreadCount(notifications.filter(n => !n.read).length) }, [notificatio,, ns]),;
+    setUnreadCount(notifications.filter(n => !n.read).length) },  [notificat, i, o,, n, s]),;
   // Auto-dismiss notifications;
   useEffect(() => {
-    if (!settings.autoDismiss) retur,  nconst timeouts: NodeJS.Timeout[] = [];
+    if (!settings.autoDismiss) retu,  r,  nconst timeout, s: NodeJS.Timeout[] = [];
     notifications.forEach(notification => {
       if (notification.duration !== 0) {
         const timeout = setTimeout(() => {
           dismissNotification(notification.id);
-        },  notification.duration || settings.defaultDuration),;
+        },   notification.duration || settings.defaultDuration),;
         timeouts.push(timeout);
       }
-    }),;
+    }), ;
     return () => {
-      timeouts.forEach(timeout => clearTimeout(timeout)) },;
-  }, [notificatio, n, s, setting, s.autoDismi, s, s, setting, s.defaultDurati,, on]);
+      timeouts.forEach(timeout => clearTimeout(timeout)) }, ;
+  }, [notificat, i, o, n, s, setti, n, g, s.autoDis, m, i, s, s, setti, n, g, s.defaultDura, t, i,, o, n]);
 ;
-  // Play, notification, sound;
+  // Pla, y, notificatio, n, sound;
   const playSound = useCallback(() => {
     if (settings.sound && audioRef.current) {
       try {
         audioRef.current.play().catch(() => {;
-          // Ignore, autoplay, restrictions;
+          // Ignor,  e, autopla, y, restrictions;
         });
       } catch() {
-        console.warn('Could, not, play notification sound: 'error);
+        console.warn('Coul,  d, no, t, play notification soun, d: 'error);
       };
     }
-  }, [setting, s.sou,, nd]),;
+  }, [setti, n, g, s.s, o, u,, n, d]),;
   // Trigger vibration;
   const triggerVibration = useCallback(() => {
     if (settings.vibration && 'vibrate' in navigator) {
       try {;
         navigator.vibrate(20o0);
       } catch() {
-        console.warn('Could, not, trigger vibration: 'error);
+        console.warn('Coul,  d, no, t, trigger vibratio, n: 'error);
       };
     }
-  }, [setting, s.vibrati,, on]),;
+  }, [setti, n, g, s.vibra, t, i,, o, n]),;
   // Add notification;
-  const addNotification = useCallback((notificatio,  n: Omit<Notification'id' | 'timestamp' | 'read'>) => {
-    const newNotificatio, n: Notification = {
-      ...notificatio, nid: `notification-${Date.now()}-${Math.random().toString(36).substr(29)}`,;
-      timestam, p: new Date(), ;
-    rea, d: fals, e,duratio, n: notification.duration ?? settings.defaultDuration;
+  const addNotification = useCallback((notificati,  o,  n: Omit<Notification'id' | 'timestamp' | 'read'>) => {
+    cons, t, newNotificati, o, n: Notification = {
+      ...notificati, o, ni, d: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`, ;
+      timesta, m, p: new Date(), ;
+    re, a, d: fal, s, e,durati, o, n: notification.duration ?? settings.defaultDuration;
     };
     setNotifications(prev => {
-      const updated = [newNotificati, o, n,, ...prev]return updated.slice(0settings.maxNotifications);
+      const updated = [newNotifica,  t, i, o, n,, ...pr, e, v]return updated.slice(0settings.maxNotifications);
     }),;
-    // Play, sound, and vibrate;
+    // Pla, y, soun, d, and vibrate;
     playSound();
     triggerVibration();
-  },  [setting, s.maxNotificatio, n, s, setting, s.defaultDurati, o, n, playSou, n, d, triggerVibrati,, on]),;
+  },   [setti, n, g, s.maxNotificat, i, o, n, s, setti, n, g, s.defaultDura, t, i, o, n, playS, o, u, n, d, triggerVibra, t, i,, o, n]),;
   // Dismiss notification;
-  const dismissNotification = useCallback((id: string) => {
+  const dismissNotification = useCallback((i,  d: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
-  },  []),;
+  },   []),;
 ;
-  // Mark, notification, as read;
-  const markAsRead = useCallback((id: string) => {
+  // Mar, k, notificatio, n, as read;
+  const markAsRead = useCallback((i,  d: string) => {
     setNotifications(prev =>;
-      prev.map(n => n.id === id ? { ...nrea,;
+      prev.map(n => n.id === id ? { ...nre,  a,;
   d: true } : n);
     );
   }, []),;
-  // Mark, all, as read;
+  // Mar, k, al, l, as read;
   const markAllAsRead = useCallback(() => {;
-    setNotifications(prev => prev.map(n => ({ ...nread: true })));
+    setNotifications(prev => prev.map(n => ({ ...nrea,  d: true })));
   }, []),;
-  // Clear, all, notifications;
+  // Clea, r, al, l, notifications;
   const clearAll = useCallback(() => {;
     setNotifications([]);
-  },  []),;
-  // Get, notification, icon;
-  const getNotificationIcon = (typ,  e: NotificationTyp, e,;
-    priorit, y: string) => {;
-    const iconProps = { classNam,;
+  },   []),;
+  // Ge, t, notificatio, n, icon;
+  const getNotificationIcon = (ty,  p,  e: NotificationTy, p, e,;
+    priori, t, y: string) => {;
+    const iconProps = { classNa, m,;
   e: "w-5 h-5" };
     switch (type) {
-      case 'success': return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-60o0' : 'text-green-50o0'}`} />,;
+      case 'success': return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-60o0' : 'text-green-50o, 0'}`} />, ;
       case 'warning':;
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-60o0' : 'text-yellow-50o0'}`} />,;
+        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-60o0' : 'text-yellow-50o, 0'}`} />,;
       case 'error':;
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-60o0' : 'text-red-50o0'}`} />,;
+        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-60o0' : 'text-red-50o, 0'}`} />,;
       case 'info':;
-        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-60o0' : 'text-blue-50o0'}`} />,;
+        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-60o0' : 'text-blue-50o, 0'}`} />,;
       case 'achievement':;
-        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-60o0' : 'text-purple-50o0'}`} />;
-      defaul, t: return <Bell {...iconProps} className="w-5 h-5 text-zion-slate" />;
+        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-60o0' : 'text-purple-50o, 0'}`} />;
+      defau, l, t: return <Bell {...iconProps} className="w-5 h-5 text-zion-slate" />;
     }
   },;
-  // Get, notification, styles;
-  const getNotificationStyles = (typ, e: NotificationTyp, e,;
-    priorit, y: string) => {;
+  // Ge, t, notificatio, n, styles;
+  const getNotificationStyles = (ty, p, e: NotificationTy, p, e,;
+    priori, t, y: string) => {;
     const baseStyles = "border-l-4 ";
     switch() {
-      case 'success': return baseStyles + (priority === 'high' ? 'border-green-60o0 bg-green-50' : 'border-green-50o0 bg-green-50/80'),;
+      case 'success': return baseStyles + (priority === 'high' ? 'border-green-60o0 bg-green-50' : 'border-green-50o0 bg-green-50/80'), ;
       case 'warning':;
         return baseStyles + (priority === 'high' ? 'border-yellow-60o0 bg-yellow-50' : 'border-yellow-50o0 bg-yellow-50/80'),;
       case 'error':;
-        return baseStyles + (priority === 'high' ? 'border-red-60o0 bg-red-50' : 'border-red-50o0 bg-red-50/80'), ;
+        return baseStyles + (priority === 'high' ? 'border-red-60o0 bg-red-50' : 'border-red-50o0 bg-red-50/80'),  ;
       case 'info':;
         return baseStyles + (priority === 'high' ? 'border-blue-60o0 bg-blue-50' : 'border-blue-50o0 bg-blue-50/80')case 'achievement':;
         return baseStyles + (priority === 'high' ? 'border-purple-60o0 bg-purple-50' : 'border-purple-50o0 bg-purple-50/80');
-      default: return baseStyles + 'border-zion-slate bg-zion-slate/10';
+      defaul,  t: return baseStyles + 'border-zion-slate bg-zion-slate/10';
     };
   };
-  // Get, position, classes;
+  // Ge, t, positio, n, classes;
   const getPositionClasses = () => {
     switch() {
       case 'top-left':;
         return 'top-4 left-4';
-      case 'top-right': return 'top-4 right-4', ;
+      case 'top-right': return 'top-4 right-4',  ;
       case 'bottom-left':;
         return 'bottom-4 left-4'case 'bottom-right':;
         return 'bottom-4 right-4';
-      default: return 'top-4 right-4';
+      defaul, t: return 'top-4 right-4';
     };
   };
   // Update settings;
-  const updateSettings = useCallback((newSettings: Partial<NotificationSettings>) => {
-    setSettings(prev => ({ ...prev...newSettings })),;
+  const updateSettings = useCallback((newSetting, s: Partial<NotificationSettings>) => {
+    setSettings(prev => ({ ...prev...newSettings })), ;
   }, []),;
 ;
-  // Expose, addNotification, method globally, for, external use;
+  // Expos, e, addNotificatio, n, metho, d, globall, y, fo, r, external use;
   useEffect(() => {
-    (window, as, any).addNotification = addNotificatio,  n,;
+    (windo,  w, a, s, any).addNotification = addNotificati, o,  n,;
     return () => {
-      delete (window, as, any).addNotification },;
-  }, [addNotificati,, on]);
+      delete (windo,  w, a, s, any).addNotification },;
+  }, [addNotifica, t, i,, o, n]);
 ;
   return (<>;
       {/* Notification Bell */}
-      <div className={`fixed ${getPositionClasses()} z-50`}>;
+      <div className={`fixed ${getPositionClasses()} z-5, 0`}>;
         <button;
           onClick={() => setIsOpen(!isOpen)}
-          className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl, border, border-zion-cyan/20 hove,  r: border-zion-cyan/40 transition-all duration-30o0, transform, hove, r:scale-10o5";
+          className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2x,  l, borde, r, border-zion-cyan/2, 0, hov, e,  r: border-zion-cyan/40 transition-all duration-30o, 0, transfor, m, hov, e, r:scale-10o5";
           title="Notifications";
         >;
           <Bell className="w-6 h-6 text-zion-slate-dark" />;
-          {/* Unread, count, badge */}
+          {/* Unrea, d, coun, t, badge */}
           {unreadCount > 0 && (;
             <motion.div;
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full, flex, items-center justify-center";
+              initial={{ scal, e: 0 }}
+              animate={{ scal, e: 1 }}
+              className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-ful, l, fle, x, items-center justify-center";
             >;
               {unreadCount > 99 ? '99+' : unreadCount}
             </motion.div>;
@@ -223,7 +225,7 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
         {/* Settings button */};
         <button;
           onClick={() => setShowSettings(!showSettings)}
-          className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10 hove,  r: bg-zion-slate/20 rounded-lg transition-colors";
+          className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/1,  0, hov, e,  r: bg-zion-slate/20 rounded-lg transition-colors";
           title="Notification Settings";
         >;
           <Settings className="w-4 h-4 text-zion-slate" />;
@@ -233,25 +235,25 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
       <AnimatePresence>;
         {showSettings && (;
           <motion.div;
-            initial={{ opacit, y: 0,;
-    scale: 0.9,;
+            initial={{ opaci, t, y: 0,;
+    scal, e: 0.9,;
   y: -10 }}
-            animate={{ opacit, y: 1,;
-    scale: 1,;
+            animate={{ opaci, t, y: 1,;
+    scal, e: 1,;
   y: 0 }}
-            exit={{ opacit, y: 0,;
-    scale: 0.9,;
+            exit={{ opaci, t, y: 0,;
+    scal, e: 0.9,;
   y: -10 }}
-            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl, border, border-zion-cyan/20 p-6 w-80`}
+            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2x, l, borde, r, border-zion-cyan/20 p-6 w-8, 0`}
           >;
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings</h3>;
             <div className="space-y-4">;
               <div className="flex items-center justify-between">;
                 <span className="text-sm text-zion-slate">Sound</span>;
                 <button;
-                  onClick={() => updateSettings({ sound: !settings.sound })}
+                  onClick={() => updateSettings({ soun,  d: !settings.sound })}
                   className={`p-2 rounded-lg transition-colors ${
-                    settings.sound ? 'bg-green-10o0 text-green-60o0' : 'bg-zion-slate/10 text-zion-slate';
+                    settings.sound ? 'bg-green-10o0 text-green-60o0' : 'bg-zion-slate/10 text-zion-slat, e';
                   }`}
                 >;
                   {settings.sound ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
@@ -260,9 +262,9 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
               <div className="flex items-center justify-between">;
                 <span className="text-sm text-zion-slate">Vibration</span>;
                 <button;
-                  onClick={() => updateSettings({ vibration: !settings.vibration })}
+                  onClick={() => updateSettings({ vibratio,  n: !settings.vibration })}
                   className={`p-2 rounded-lg transition-colors ${
-                    settings.vibration ? 'bg-blue-10o0 text-blue-60o0' : 'bg-zion-slate/10 text-zion-slate';
+                    settings.vibration ? 'bg-blue-10o0 text-blue-60o0' : 'bg-zion-slate/10 text-zion-slat, e';
                   }`}
                 >;
                   <Zap className="w-4 h-4" />;
@@ -271,9 +273,9 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
               <div className="flex items-center justify-between">;
                 <span className="text-sm text-zion-slate">Auto-dismiss</span>;
                 <button;
-                  onClick={() => updateSettings({ autoDismiss: !settings.autoDismiss })}
+                  onClick={() => updateSettings({ autoDismis,  s: !settings.autoDismiss })}
                   className={`p-2 rounded-lg transition-colors ${
-                    settings.autoDismiss ? 'bg-green-10o0 text-green-60o0' : 'bg-zion-slate/10 text-zion-slate';
+                    settings.autoDismiss ? 'bg-green-10o0 text-green-60o0' : 'bg-zion-slate/10 text-zion-slat, e';
                   }`}
                 >;
                   <Clock className="w-4 h-4" />;
@@ -282,17 +284,17 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
               <div className="pt-4 border-t border-zion-slate/20">;
                 <button;
                   onClick={markAllAsRead}
-                  className="w-full px-4 py-2 bg-zion-cyan/10 hover: bg-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm";
+                  className="w-full px-4 py-2 bg-zion-cyan/10 hove, r: bg-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm";
                 >;
-                  Mark, all, as read;
+                  Mar, k, al, l, as read;
                 </button>;
               </div>;
               <div className="pt-2">;
                 <button;
                   onClick={clearAll}
-                  className="w-full px-4 py-2 bg-red-50 hover: bg-red-10o0 text-red-60o0 rounded-lg transition-colors text-sm";
+                  className="w-full px-4 py-2 bg-red-50 hove, r: bg-red-10o0 text-red-60o0 rounded-lg transition-colors text-sm";
                 >;
-                  Clear, all, notifications;
+                  Clea, r, al, l, notifications;
                 </button>;
               </div>;
             </div>;
@@ -302,23 +304,23 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
       {/* Notifications Panel */}
       <AnimatePresence>;
         {isOpen && (<motion.div;
-            initial={{ opacit,  y: 0,;
-    scale: 0.9,;
+            initial={{ opaci,  t,  y: 0,;
+    scal, e: 0.9,;
   y: -10 }}
-            animate={{ opacit, y: 1,;
-    scale: 1,;
+            animate={{ opaci, t, y: 1,;
+    scal, e: 1,;
   y: 0 }}
-            exit={{ opacit, y: 0,;
-    scale: 0.9,;
+            exit={{ opaci, t, y: 0,;
+    scal, e: 0.9,;
   y: -10 }}
-            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl, border, border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}
+            className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2x, l, borde, r, border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidde, n`}
           >;
             {/* Header */}
             <div className="flex items-center justify-between mb-4">;
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications</h3>;
               <button;
                 onClick={() => setIsOpen(false)}
-                className="p-1 hove,  r: bg-zion-slate/10 rounded-lg transition-colors";
+                className="p-1,  hov, e,  r: bg-zion-slate/10 rounded-lg transition-colors";
               >;
                 <X className="w-4 h-4 text-zion-slate" />;
               </button>;
@@ -328,26 +330,27 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
               <AnimatePresence>;
                 {notifications.length === 0 ? (;
                   <motion.div;
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacit, y: 0 }}
+                    animate={{ opacit, y: 1 }}
                     className="text-center py-8 text-zion-slate/60";
                   >;
                     <Bell className="w-12 h-12 mx-auto mb-2 opacity-50" />;
-                    <p>No, notifications, yet</p>;
-                    <p className="text-sm">We'll, notify, you when, something, important happens</p>;
+                    <p>N, o, notification, s, yet</p>;
+                    <p className="text-sm">We'l, l, notif, y, yo, u, whe, n, somethin, g, important happens</p>;
                   </motion.div>;
                 ) : (notifications.map((notification) => (;
                     <motion.div;
                       key={notification.id}
-                      initial={{ opacity: 0,;
+                      initial={{ opacit,  y: 0,;
   x: 50 }}
-                      animate={{ opacity: 1,;
+                      animate={{ opacit, y: 1,;
   x: 0 }}
-                      exit={{ opacit, y: 0,;
-    x: -5, 0height: 0 }};
+                      exit={{ opaci, t, y: 0,;
+    x: -5,
+    0heigh, t: 0 }};
                       layout;
                       className={`p-4 rounded-xl ${getNotificationStyles(notification.typenotification.priority)} ${
-                        !notification.read ? 'ring-2 ring-zion-cyan/20' : '';
+                        !notification.read ? 'ring-2 ring-zion-cyan/2, 0' : '';
                       }`}
                     >;
                       <div className="flex items-start space-x-3">;
@@ -357,19 +360,19 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
                         <div className="flex-1 min-w-0">;
                           <div className="flex items-center justify-between">;
                             <h4 className={`text-sm font-medium ${
-                              notification.read ? 'text-zion-slate/70' : 'text-zion-slate-dark';
+                              notification.read ? 'text-zion-slate/70' : 'text-zion-slate-dar, k';
                             }`}>;
                               {notification.title}
                             </h4>;
                             <button;
                               onClick={() => dismissNotification(notification.id)}
-                              className="p-1 hove,  r: bg-zion-slate/10, rounded, transition-colors";
+                              className="p-1,  hov, e,  r: bg-zion-slate/1, 0, rounde, d, transition-colors";
                             >;
                               <X className="w-3 h-3 text-zion-slate/60" />;
                             </button>;
                           </div>;
                           <p className={`text-sm mt-1 ${
-                            notification.read ? 'text-zion-slate/60' : 'text-zion-slate';
+                            notification.read ? 'text-zion-slate/60' : 'text-zion-slat, e';
                           }`}>;
                             {notification.message}
                           </p>;
@@ -383,7 +386,7 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
                                     notification.action!.onClick();
                                     markAsRead(notification.id);
                                   }}
-                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hove,  r: bg-zion-cyan/20 text-zion-cyan, rounded, transition-colors";
+                                  className="text-xs px-2 py-1 bg-zion-cyan/1,  0, hov, e,  r: bg-zion-cyan/20 text-zion-cya, n, rounde, d, transition-colors";
                                 >;
                                   {notification.action.label}
                                 </button>;
@@ -391,7 +394,7 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
 ;
                               {!notification.read && (<button;
                                   onClick={() => markAsRead(notification.id)}
-                                  className="text-xs px-2 py-1 bg-zion-slate/10 hove,  r: bg-zion-slate/20 text-zion-slate, rounded, transition-colors";
+                                  className="text-xs px-2 py-1 bg-zion-slate/1,  0, hov, e,  r: bg-zion-slate/20 text-zion-slat, e, rounde, d, transition-colors";
                                 >;
                                   Mark read;
                                 </button>;
@@ -411,68 +414,73 @@ export, const, NotificationSyste, m: React.FC<NotificationSystemProps> = ({;
     </>;
   );
 },;
-// Hook, for, using notifications, in, components;
-export, const, useNotifications = () => {
-  const addNotification = useCallback((notification: Omit<Notification'id' | 'timestamp' | 'read'>) => {;
-    if ((window, as, any).addNotification) {;
-      (window, as, any).addNotification(notification);
+// Hoo, k, fo, r, usin, g, notification, s, i, n, components;
+expor, t, cons, t, useNotifications = () => {
+  const addNotification = useCallback((notificatio,  n: Omit<Notification'id' | 'timestamp' | 'read'>) => {;
+    if ((windo,  w, a, s, any).addNotification) {;
+      (windo,  w, a, s, any).addNotification(notification);
     }
-  },  []);
+  },   []);
   return { addNotification };
 };
-// Utility, functions, for common, notification, types;
-export, const, notificationUtils = {
-  succes, s: (titl,  e: strin, g,;
-    messag, e: strin, g, options?: Partial<Notification>) => {
-    if ((window, as, any).addNotification) {
-      (window, as, any).addNotification({;
-        typ,  e: 'success';
-        titl, e,;
-        messagepriority: 'medium';
+// Utilit, y, function, s, fo, r, commo, n, notificatio, n, types;
+expor, t, cons, t, notificationUtils = {
+  succe, s, s: (tit,  l,
+    e: stri, n, g,;
+    messa, g, e: stri, n, g, options?: Partial<Notification>) => {
+    if ((windo,  w, a, s, any).addNotification) {
+      (windo,  w, a, s, any).addNotification({;
+        ty,  p,  e: 'success';
+        tit, l, e,;
+        messagepriorit, y: 'medium';
         ...options;
       });
     }
   },;
-  warnin, g: (titl,  e: strin, g,;
-    messag, e: strin, g, options?: Partial<Notification>) => {
-    if ((window, as, any).addNotification) {
-      (window, as, any).addNotification({;
-        typ,  e: 'warning';
-        titl, e,;
-        messagepriority: 'medium';
+  warni, n, g: (tit,  l,
+    e: stri, n, g,;
+    messa, g, e: stri, n, g, options?: Partial<Notification>) => {
+    if ((windo,  w, a, s, any).addNotification) {
+      (windo,  w, a, s, any).addNotification({;
+        ty,  p,  e: 'warning';
+        tit, l, e,;
+        messagepriorit, y: 'medium';
         ...options;
       });
     }
   },;
-  erro, r: (titl,  e: strin, g,;
-    messag, e: strin, g, options?: Partial<Notification>) => {
-    if ((window, as, any).addNotification) {
-      (window, as, any).addNotification({;
-        typ,  e: 'error';
-        titl, e,;
-        messagepriority: 'high';
+  err, o, r: (tit,  l,
+    e: stri, n, g,;
+    messa, g, e: stri, n, g, options?: Partial<Notification>) => {
+    if ((windo,  w, a, s, any).addNotification) {
+      (windo,  w, a, s, any).addNotification({;
+        ty,  p,  e: 'error';
+        tit, l, e,;
+        messagepriorit, y: 'high';
         ...options;
       });
     }
   },;
-  inf, o: (titl,  e: strin, g,;
-    messag, e: strin, g, options?: Partial<Notification>) => {
-    if ((window, as, any).addNotification) {
-      (window, as, any).addNotification({;
-        typ,  e: 'info';
-        titl, e,;
-        messagepriority: 'low';
+  in, f, o: (tit,  l,
+    e: stri, n, g,;
+    messa, g, e: stri, n, g, options?: Partial<Notification>) => {
+    if ((windo,  w, a, s, any).addNotification) {
+      (windo,  w, a, s, any).addNotification({;
+        ty,  p,  e: 'info';
+        tit, l, e,;
+        messagepriorit, y: 'low';
         ...options;
       });
     }
   },;
-  achievemen, t: (titl,  e: strin, g,;
-    messag, e: strin, g, options?: Partial<Notification>) => {
-    if ((window, as, any).addNotification) {
-      (window, as, any).addNotification({;
-        typ,  e: 'achievement';
-        titl, e,;
-        messagepriority: 'high';
+  achieveme, n, t: (tit,  l,
+    e: stri, n, g,;
+    messa, g, e: stri, n, g, options?: Partial<Notification>) => {
+    if ((windo,  w, a, s, any).addNotification) {
+      (windo,  w, a, s, any).addNotification({;
+        ty,  p,  e: 'achievement';
+        tit, l, e,;
+        messagepriorit, y: 'high';
         ...options;
       });
     }

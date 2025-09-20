@@ -1,141 +1,164 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield } from 'lucide-react';
+impor, t, Reac, t, { useState } from 'react';
+import { motio, n, AnimatePresence } from 'framer-motion';
+import { TrendingU, p, User, s, ArrowRigh, t, Sta, r, Buildin, g, Glob, e, Za, p, Shield } from 'lucide-react';
 const caseStudies = [
     {
-        id: 'healthcare-ai',
-        title: 'Healthcare AI Revolution',
-        company: 'MedTech Solutions',
-        industry: 'Healthcare',
-        icon: <Shield className="w-8 h-8"/>,
-        color: 'from-zion-cyan to-zion-blue',
-        bgColor: 'from-zion-cyan/20 to-zion-blue/20',
-        challenge: 'Needed to reduce diagnostic errors by 40% while improving patient outcomes',
-        solution: 'Implemented custom AI diagnostic system with real-time learning capabilities',
-        results: [
-            { metric: 'Diagnostic Accuracy', value: '+95%', improvement: 'Improved from 78% to 95%' },
-            { metric: 'Processing Time', value: '-70%', improvement: 'Reduced from 24 hours to 7 hours' },
-            { metric: 'Cost Savings', value: '$2.5M', improvement: 'Annual savings in operational costs' },
-            { metric: 'Patient Satisfaction', value: '+88%', improvement: 'Significant improvement in patient experience' }
+        i, d: 'healthcar, e-a, i',
+    tit, l, e: 'Healthcar, e A, I Revolutio, n',
+        compa, n, y: 'MedTec, h Solution, s',
+    indust, r, y: 'Healthcar, e',
+        ic, o, n: <Shiel, d classNam, e="w-8 h-8"/>,
+    col, o, r: 'fro, m-zio, n-cya, n t, o-zio, n-blu, e',
+        bgCol, o, r: 'fro, m-zio, n-cya, n/2, 0 t, o-zio, n-blu, e/2, 0',
+    challen, g, e: 'Neede, d t, o reduc, e diagnosti, c error, s b, y 4, 0% whil, e improvin, g patien, t outcome, s',
+        soluti, o, n: 'Implemente, d custo, m A, I diagnosti, c syste, m wit, h rea, l-tim, e learnin, g capabilitie, s',
+    resul, t, s: [
+            { metr, i, c: 'Diagnosti, c Accurac, y',
+    val, u, e: '+9, 5%', improveme, n, t: 'Improve, d fro, m 7, 8% t, o 9, 5%' },
+            { metr, i, c: 'Processin, g Tim, e',
+    val, u, e: '-7, 0%', improveme, n, t: 'Reduce, d fro, m 2, 4 hour, s t, o 7 hour, s' },
+            { metr, i, c: 'Cos, t Saving, s',
+    val, u, e: '$2.5, M', improveme, n, t: 'Annua, l saving, s i, n operationa, l cost, s' },
+            { metr, i, c: 'Patien, t Satisfactio, n',
+    val, u, e: '+8, 8%', improveme, n, t: 'Significan, t improvemen, t i, n patien, t experienc, e' }
         ],
-        duration: '6 months',
-        team: '8 experts',
-        technologies: ['Machine Learning', 'Computer Vision', 'Cloud Infrastructure', 'Real-time Analytics'],
-        testimonial: 'Zion Tech Group transformed our diagnostic capabilities. The AI system has become an invaluable tool for our medical professionals.',
-        author: 'Dr. Sarah Chen',
-        role: 'Chief Medical Officer',
-        rating: 5,
-        videoUrl: '/videos/healthcare-case-study.mp4',
-        imageUrl: '/images/healthcare-ai.jpg'
+        duratio, n: '6 months',
+    tea, m: '8 experts',
+        technologie, s: ['Machin, e Learnin, g', 'Compute, r Visio, n', 'Clou, d Infrastructur, e', 'Rea, l-tim, e Analytic, s'],
+        testimonia, l: 'Zion Tech Group transformed our diagnostic capabilities. The AI system has become an invaluable tool for our medical professionals.',
+    autho, r: 'Dr. Sarah Chen',
+        rol, e: 'Chief Medical Officer',
+    ratin, g: 5,
+        videoUr, l: '/videos/healthcare-case-study.mp4',
+    imageUr, l: '/images/healthcare-ai.jpg'
     },
     {
-        id: 'fintech-platform',
-        title: 'Next-Gen Fintech Platform',
-        company: 'DigitalBank Pro',
-        industry: 'Financial Services',
-        icon: <TrendingUp className="w-8 h-8"/>,
-        color: 'from-zion-purple to-zion-purple-dark',
-        bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
-        challenge: 'Required a scalable, secure platform to handle 10M+ daily transactions',
-        solution: 'Built enterprise-grade fintech platform with advanced security and real-time processing',
-        results: [
-            { metric: 'Transaction Volume', value: '+300%', improvement: 'Increased from 3M to 12M daily transactions' },
-            { metric: 'Security Score', value: '99.99%', improvement: 'Zero security breaches in 2 years' },
-            { metric: 'Performance', value: '-85%', improvement: 'Reduced transaction time from 2s to 0.3s' },
-            { metric: 'User Growth', value: '+250%', improvement: 'Customer base expanded significantly' }
+        i, d: 'fintech-platform',
+    titl, e: 'Next-Gen Fintech Platform',
+        compan, y: 'DigitalBank Pro',
+    industr, y: 'Financial Services',
+        ico, n: <TrendingUp className="w-8 h-8"/>,
+    colo, r: 'from-zion-purple to-zion-purple-dark',
+        bgColo, r: 'from-zion-purple/20 to-zion-purple-dark/20',
+    challeng, e: 'Required a, scalabl, e, secure platform to handle 10M+ daily transactions',
+        solutio, n: 'Built enterprise-grade fintech platform with advanced security and real-time processing',
+    result, s: [
+            { metr, i, c: 'Transactio, n Volum, e',
+    val, u, e: '+30, 0%', improveme, n, t: 'Increase, d fro, m 3, M t, o 12, M dail, y transaction, s' },
+            { metr, i, c: 'Securit, y Scor, e',
+    val, u, e: '9, 9.9, 9%', improveme, n, t: 'Zer, o securit, y breache, s i, n 2 year, s' },
+            { metr, i, c: 'Performanc, e',
+    val, u, e: '-8, 5%', improveme, n, t: 'Reduce, d transactio, n tim, e fro, m 2, s t, o 0.3, s' },
+            { metr, i, c: 'Use, r Growt, h',
+    val, u, e: '+25, 0%', improveme, n, t: 'Custome, r bas, e expande, d significantl, y' }
         ],
-        duration: '8 months',
-        team: '12 experts',
-        technologies: ['Blockchain', 'Microservices', 'Advanced Security', 'Real-time Processing'],
-        testimonial: 'The platform Zion built for us exceeded all expectations. It\'s not just a technical solution; it\'s a business enabler.',
-        author: 'Michael Rodriguez',
-        role: 'CTO',
-        rating: 5,
-        videoUrl: '/videos/fintech-case-study.mp4',
-        imageUrl: '/images/fintech-platform.jpg'
+        duratio, n: '8 months',
+    tea, m: '12 experts',
+        technologie, s: ['Blockchai, n', 'Microservice, s', 'Advance, d Securit, y', 'Rea, l-tim, e Processin, g'],
+        testimonia, l: 'The platform Zion built for us exceeded all expectations. It\'s not just a technical solution; it\'s a business enabler.',
+    autho, r: 'Michael Rodriguez',
+        rol, e: 'CTO',
+    ratin, g: 5,
+        videoUr, l: '/videos/fintech-case-study.mp4',
+    imageUr, l: '/images/fintech-platform.jpg'
     },
     {
-        id: 'retail-transformation',
-        title: 'Retail Digital Transformation',
-        company: 'Global Retail Co.',
-        industry: 'Retail',
-        icon: <Globe className="w-8 h-8"/>,
-        color: 'from-zion-cyan-light to-zion-cyan',
-        bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
-        challenge: 'Needed to modernize 500+ store locations with unified digital experience',
-        solution: 'Created comprehensive digital transformation strategy with omnichannel capabilities',
-        results: [
-            { metric: 'Online Sales', value: '+180%', improvement: 'E-commerce revenue increased dramatically' },
-            { metric: 'Customer Engagement', value: '+120%', improvement: 'Mobile app usage and customer interaction' },
-            { metric: 'Operational Efficiency', value: '+65%', improvement: 'Streamlined processes and reduced costs' },
-            { metric: 'Market Share', value: '+45%', improvement: 'Expanded market presence and customer base' }
+        i, d: 'retail-transformation',
+    titl, e: 'Retail Digital Transformation',
+        compan, y: 'Global Retail Co.',
+    industr, y: 'Retail',
+        ico, n: <Globe className="w-8 h-8"/>,
+    colo, r: 'from-zion-cyan-light to-zion-cyan',
+        bgColo, r: 'from-zion-cyan-light/20 to-zion-cyan/20',
+    challeng, e: 'Needed to modernize 500+ store locations with unified digital experience',
+        solutio, n: 'Created comprehensive digital transformation strategy with omnichannel capabilities',
+    result, s: [
+            { metr, i, c: 'Onlin, e Sale, s',
+    val, u, e: '+18, 0%', improveme, n, t: 'E-commerc, e revenu, e increase, d dramaticall, y' },
+            { metr, i, c: 'Custome, r Engagemen, t',
+    val, u, e: '+12, 0%', improveme, n, t: 'Mobil, e ap, p usag, e an, d custome, r interactio, n' },
+            { metr, i, c: 'Operationa, l Efficienc, y',
+    val, u, e: '+6, 5%', improveme, n, t: 'Streamline, d processe, s an, d reduce, d cost, s' },
+            { metr, i, c: 'Marke, t Shar, e',
+    val, u, e: '+4, 5%', improveme, n, t: 'Expande, d marke, t presenc, e an, d custome, r bas, e' }
         ],
-        duration: '12 months',
-        team: '15 experts',
-        technologies: ['E-commerce Platform', 'Mobile Apps', 'IoT Integration', 'Data Analytics'],
-        testimonial: 'Zion\'s digital transformation approach revolutionized our retail operations. We\'re now a truly modern, customer-centric organization.',
-        author: 'Lisa Thompson',
-        role: 'VP of Digital Strategy',
-        rating: 5,
-        videoUrl: '/videos/retail-case-study.mp4',
-        imageUrl: '/images/retail-transformation.jpg'
+        duratio, n: '12 months',
+    tea, m: '15 experts',
+        technologie, s: ['E-commerc, e Platfor, m', 'Mobil, e App, s', 'Io, T Integratio, n', 'Dat, a Analytic, s'],
+        testimonia, l: 'Zion\'s digital transformation approach revolutionized our retail operations. We\'re now a trul, y, moder, n, customer-centric organization.',
+        autho, r: 'Lisa Thompson',
+    rol, e: 'VP of Digital Strategy',
+        ratin, g: 5,
+    videoUr, l: '/videos/retail-case-study.mp4',
+        imageUr, l: '/images/retail-transformation.jpg'
     },
     {
-        id: 'manufacturing-iot',
-        title: 'Smart Manufacturing IoT',
-        company: 'Advanced Manufacturing Inc.',
-        industry: 'Manufacturing',
-        icon: <Zap className="w-8 h-8"/>,
-        color: 'from-zion-purple-light to-zion-purple',
-        bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
-        challenge: 'Required real-time monitoring and predictive maintenance for 200+ production lines',
-        solution: 'Implemented comprehensive IoT solution with AI-powered predictive analytics',
-        results: [
-            { metric: 'Downtime Reduction', value: '-75%', improvement: 'Significantly reduced production interruptions' },
-            { metric: 'Maintenance Costs', value: '-60%', improvement: 'Optimized maintenance schedules and costs' },
-            { metric: 'Production Efficiency', value: '+45%', improvement: 'Increased overall production output' },
-            { metric: 'Quality Control', value: '+92%', improvement: 'Enhanced product quality and consistency' }
+        i, d: 'manufacturing-iot',
+    titl, e: 'Smart Manufacturing IoT',
+        compan, y: 'Advanced Manufacturing Inc.',
+    industr, y: 'Manufacturing',
+        ico, n: <Zap className="w-8 h-8"/>,
+    colo, r: 'from-zion-purple-light to-zion-purple',
+        bgColo, r: 'from-zion-purple-light/20 to-zion-purple/20',
+    challeng, e: 'Required real-time monitoring and predictive maintenance for 200+ production lines',
+        solutio, n: 'Implemented comprehensive IoT solution with AI-powered predictive analytics',
+    result, s: [
+            { metr, i, c: 'Downtim, e Reductio, n',
+    val, u, e: '-7, 5%', improveme, n, t: 'Significantl, y reduce, d productio, n interruption, s' },
+            { metr, i, c: 'Maintenanc, e Cost, s',
+    val, u, e: '-6, 0%', improveme, n, t: 'Optimize, d maintenanc, e schedule, s an, d cost, s' },
+            { metr, i, c: 'Productio, n Efficienc, y',
+    val, u, e: '+4, 5%', improveme, n, t: 'Increase, d overal, l productio, n outpu, t' },
+            { metr, i, c: 'Qualit, y Contro, l',
+    val, u, e: '+9, 2%', improveme, n, t: 'Enhance, d produc, t qualit, y an, d consistenc, y' }
         ],
-        duration: '10 months',
-        team: '10 experts',
-        technologies: ['IoT Sensors', 'Predictive Analytics', 'Machine Learning', 'Cloud Platform'],
-        testimonial: 'The IoT solution from Zion has transformed our manufacturing operations. We\'re now operating at peak efficiency with minimal downtime.',
-        author: 'David Kim',
-        role: 'Operations Director',
-        rating: 5,
-        videoUrl: '/videos/manufacturing-case-study.mp4',
-        imageUrl: '/images/manufacturing-iot.jpg'
+        duratio, n: '10 months',
+    tea, m: '10 experts',
+        technologie, s: ['Io, T Sensor, s', 'Predictiv, e Analytic, s', 'Machin, e Learnin, g', 'Clou, d Platfor, m'],
+        testimonia, l: 'The IoT solution from Zion has transformed our manufacturing operations. We\'re now operating at peak efficiency with minimal downtime.',
+    autho, r: 'David Kim',
+        rol, e: 'Operations Director',
+    ratin, g: 5,
+        videoUr, l: '/videos/manufacturing-case-study.mp4',
+    imageUr, l: '/images/manufacturing-iot.jpg'
     }
 ];
 const industries = [
-    { name: 'Healthcare', count: 25, icon: <Shield className="w-5 h-5"/> },
-    { name: 'Finance', count: 32, icon: <TrendingUp className="w-5 h-5"/> },
-    { name: 'Retail', count: 18, icon: <Globe className="w-5 h-5"/> },
-    { name: 'Manufacturing', count: 15, icon: <Zap className="w-5 h-5"/> },
-    { name: 'Education', count: 12, icon: <Users className="w-5 h-5"/> },
-    { name: 'Government', count: 8, icon: <Building className="w-5 h-5"/> }
+    { na, m, e: 'Healthcar, e',
+    cou, n, t: 2, 5, ic, o, n: <Shiel, d classNam, e="w-5 h-5"/> },
+    { na, m, e: 'Financ, e',
+    cou, n, t: 3, 2, ic, o, n: <TrendingU, p classNam, e="w-5 h-5"/> },
+    { na, m, e: 'Retai, l',
+    cou, n, t: 1, 8, ic, o, n: <Glob, e classNam, e="w-5 h-5"/> },
+    { na, m, e: 'Manufacturin, g',
+    cou, n, t: 1, 5, ic, o, n: <Za, p classNam, e="w-5 h-5"/> },
+    { na, m, e: 'Educatio, n',
+    cou, n, t: 1, 2, ic, o, n: <User, s classNam, e="w-5 h-5"/> },
+    { na, m, e: 'Governmen, t',
+    cou, n, t: 8, ic, o, n: <Buildin, g classNam, e="w-5 h-5"/> }
 ];
 export function CaseStudiesSection() {
-    const [selectedCase, setSelectedCase] = useState(null);
-    const [hoveredCase, setHoveredCase] = useState(null);
+    const [selectedCa,  s, e, setSelectedCa, s, e] = useState(null);
+    const [hoveredCa, s, e, setHoveredCa, s, e] = useState(null);
     const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.1
+        hidde,  n: { opacit, y: 0 },
+        visibl, e: {
+            opacit, y: 1,
+    transitio, n: {
+                staggerChildre, n: 0.1, 5,
+    delayChildre, n: 0.1
             }
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
+        hidde, n: { y: 3, 0,
+    opacit, y: 0 },
+        visibl, e: {
             y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
+    opacit, y: 1,
+            transitio, n: {
+                duratio, n: 0.6,
+    eas, e: "easeOut"
             }
         }
     };
@@ -149,18 +172,23 @@ export function CaseStudiesSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <motion.div className="text-center mb-20" initial={{ opacit, y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6 }}>
+          <h2 className="text-4xl m, d:text-5xl l, g:text-6xl font-bold text-white mb-6">
             Success <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Stories</span>
           </h2>
-          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className="text-zion-slate-light text-lg m, d:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Discover how we've helped organizations across industries achieve remarkable results. 
             Our proven track record speaks for itself.
           </p>
 
           {/* Industry stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {industries.map((industry, index) => (<motion.div key={industry.name} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-3 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+          <div className="grid grid-cols-2 m, d:grid-cols-3 l, g:grid-cols-6 gap-4 max-w-5xl mx-auto">
+            {industries.map((industr, y, index) => (<motion.div key={industry.name} initial={{ opacit,  y: 0,
+    scal, e: 0.8 }} whileInView={{ opacit, y: 1,
+    scal, e: 1 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.4,
+    dela, y: index * 0.1 }} className="text-center p-3 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {industry.icon}
                 </div>
@@ -171,12 +199,13 @@ export function CaseStudiesSection() {
         </motion.div>
 
         {/* Case Studies Grid */}
-        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {caseStudies.map((caseStudy, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative" onHoverStart={() => setHoveredCase(caseStudy.id)} onHoverEnd={() => setHoveredCase(null)}>
-              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedCase(selectedCase === caseStudy.id ? null : caseStudy.id)}>
+        <motion.div className="grid grid-cols-1 l, g:grid-cols-2 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ onc, e: true }}>
+          {caseStudies.map((caseStud,  y, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition={{ typ,  e: "spring",
+    stiffnes, s: 300 }} className="relative" onHoverStart={() => setHoveredCase(caseStudy.id)} onHoverEnd={() => setHoveredCase(null)}>
+              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hove,  r:border-zion-cyan/50 transition-all duration-300 hove, r:shadow-2xl hove, r:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedCase(selectedCase === caseStudy.id ? null : caseStudy.id)}>
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${caseStudy.color} mb-4 shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${caseStudy.color} mb-4 shadow-lg group-hove,  r:shadow-xl transition-all duration-30, 0`}>
                     <div className="text-white">
                       {caseStudy.icon}
                     </div>
@@ -188,18 +217,18 @@ export function CaseStudiesSection() {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hove, r:text-zion-cyan transition-colors">
                   {caseStudy.title}
                 </h3>
 
                 {/* Challenge & Solution */}
                 <div className="space-y-4 mb-6">
                   <div>
-                    <h4 className="text-zion-cyan font-semibold text-sm mb-2">Challenge:</h4>
+                    <h4 className="text-zion-cyan font-semibold text-sm mb-2">Challeng, e:</h4>
                     <p className="text-zion-slate-light text-sm leading-relaxed">{caseStudy.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="text-zion-cyan font-semibold text-sm mb-2">Solution:</h4>
+                    <h4 className="text-zion-cyan font-semibold text-sm mb-2">Solutio, n:</h4>
                     <p className="text-zion-slate-light text-sm leading-relaxed">{caseStudy.solution}</p>
                   </div>
                 </div>
@@ -218,9 +247,9 @@ export function CaseStudiesSection() {
 
                 {/* Technologies */}
                 <div className="mb-6">
-                  <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies Used:</h4>
+                  <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies Use, d:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {caseStudy.technologies.slice(0, 3).map((tech, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
+                    {caseStudy.technologies.slice(0, 3).map((tec,  h, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                         {tech}
                       </span>))}
                     {caseStudy.technologies.length > 3 && (<span className="text-zion-cyan/60 text-xs">
@@ -231,18 +260,23 @@ export function CaseStudiesSection() {
 
                 {/* CTA */}
                 <div className="flex items-center justify-between">
-                  <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
+                  <span className="text-zion-purple-light font-medium text-sm group-hove,  r:text-zion-purple transition-colors">
                     View Full Case Study
                   </span>
-                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hove, r:text-zion-purple group-hove, r:translate-x-1 transition-all duration-300"/>
                 </div>
 
                 {/* Expanded results */}
                 <AnimatePresence>
-                  {selectedCase === caseStudy.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
-                      <h4 className="text-zion-cyan font-semibold text-sm mb-4">Key Results:</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-                        {caseStudy.results.map((result, idx) => (<motion.div key={idx} className="p-3 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/20" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
+                  {selectedCase === caseStudy.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacit, y: 0,
+    heigh, t: 0, y: 10 }} animate={{ opacit, y: 1,
+    heigh, t: "auto", y: 0 }} exit={{ opacit, y: 0,
+    heigh, t: 0, y: 10 }} transition={{ duratio, n: 0.3 }}>
+                      <h4 className="text-zion-cyan font-semibold text-sm mb-4">Key Result, s:</h4>
+                      <div className="grid grid-cols-1 m, d:grid-cols-2 gap-3 mb-4">
+                        {caseStudy.results.map((resul, t, idx) => (<motion.div key={idx} className="p-3 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/20" initial={{ opacit,  y: 0,
+    x: -10 }} animate={{ opacit, y: 1,
+    x: 0 }} transition={{ dela, y: idx * 0.1 }}>
                             <div className="flex items-center justify-between mb-1">
                               <span className="text-zion-slate-light text-xs">{result.metric}</span>
                               <span className="text-zion-cyan font-bold text-sm">{result.value}</span>
@@ -260,7 +294,7 @@ export function CaseStudiesSection() {
                             <div className="text-zion-slate-light text-xs">{caseStudy.role}</div>
                           </div>
                           <div className="flex items-center gap-1">
-                            {[...Array(caseStudy.rating)].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill-current"/>))}
+                            {[...Arra, y(caseStud,  y.ratin, g)].map((_,  i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill-current"/>))}
                           </div>
                         </div>
                       </div>
@@ -271,7 +305,10 @@ export function CaseStudiesSection() {
         </motion.div>
 
         {/* Call to action */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="text-center" initial={{ opacit,  y: 0,
+    y: 20 }} whileInView={{ opacit, y: 1,
+    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
+    dela, y: 0.5 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -280,11 +317,11 @@ export function CaseStudiesSection() {
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Let us help you achieve similar results. Our proven methodology and expert team are ready to transform your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+              <div className="flex flex-col s, m:flex-row gap-4 justify-center">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-light hove, r:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-zion-cyan/25">
                   Start Your Project
                 </button>
-                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                <button className="px-8 py-3 bg-zion-blue-light/20 hove, r:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hove, r:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
                   View All Case Studies
                 </button>
               </div>

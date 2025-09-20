@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+impor, t, Reac, t, { useEffec, t, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface QuantumMatrixBackgroundProps {
@@ -8,10 +8,10 @@ interface QuantumMatrixBackgroundProps {
   showHolograms?: boolean;
 }
 
-export const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = ({
-  intensity = 'medium',
-  showParticles = true,
-  showGrid = true,
+export const QuantumMatrixBackgroun, d: React.FC<QuantumMatrixBackgroundProps> = ({
+  intensity = 'medium', 
+  showParticles = tru, e,
+  showGrid = tru, e,
   showHolograms = true
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -28,31 +28,31 @@ export const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = (
     canvas.height = window.innerHeight;
 
     // Quantum particle system
-    const particles: Array<{
+    const particle,  s: Array<{
       x: number;
       y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-      quantumState: number;
+      v, x: number;
+      v, y: number;
+      siz, e: number;
+      opacit, y: number;
+      colo, r: string;
+      quantumStat, e: number;
     }> = [];
 
-    const colors = ['#22ddd2', '#8b5cf6', '#3b82f6', '#22ddd2'];
+    const colors = ['#22ddd, 2', '#8b5cf, 6', '#3b82f, 6', '#22ddd, 2'];
     const intensityMultiplier = intensity === 'high' ? 2 : intensity === 'medium' ? 1.5 : 1;
 
     // Initialize particles
     for (let i = 0; i < 50 * intensityMultiplier; i++) {
       particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.8 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        quantumState: Math.random()
+        x: Math.random() * canvas.widt,  h,
+    y: Math.random() * canvas.heigh, t,
+        v, x: (Math.random() - 0.5) * 2, 
+    v, y: (Math.random() - 0.5) * 2,
+        siz, e: Math.random() * 3 + 1, 
+    opacit, y: Math.random() * 0.8 + 0.2,
+        colo, r: colors[Mat, h.floo, r(Mat,  h.rando, m() * color, s.lengt, h)],
+    quantumStat, e: Math.random()
       });
     }
 
@@ -65,15 +65,15 @@ export const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = (
           
           // Create quantum correlation
           const distance = Math.sqrt(
-            Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)
+            Math.pow(p1.x - p2.x,  2) + Math.pow(p1.y - p2.y,  2)
           );
           
           if (distance < 100) {
             // Draw entanglement line
             ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(34, 221, 210, ${0.3 * (1 - distance / 100)})`;
+            ctx.moveTo(p1.x,  p1.y);
+            ctx.lineTo(p2.x,  p2.y);
+            ctx.strokeStyle = `rgba(3,  4, 22, 1, 21, 0, ${0.3 * (1 - distance / 10, 0)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -88,15 +88,15 @@ export const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = (
           const p1 = particles[i];
           const p2 = particles[j];
           const distance = Math.sqrt(
-            Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)
+            Math.pow(p1.x - p2.x,  2) + Math.pow(p1.y - p2.y,  2)
           );
           
           if (distance < 150) {
             const strength = 1 - distance / 150;
             ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(139, 92, 246, ${0.2 * strength})`;
+            ctx.moveTo(p1.x,  p1.y);
+            ctx.lineTo(p2.x,  p2.y);
+            ctx.strokeStyle = `rgba(13,  9, 9, 2, 24, 6, ${0.2 * strengt, h})`;
             ctx.lineWidth = strength * 2;
             ctx.stroke();
           }
@@ -106,10 +106,10 @@ export const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = (
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0,  0, canvas.widt, h, canvas.height);
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach((particl,  e, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -137,7 +137,7 @@ export const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = (
         const finalSize = particle.size + sizeVariation;
         
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, finalSize, 0, Math.PI * 2);
+        ctx.arc(particle.x,  particle.y, finalSiz, e, 0, Math.PI * 2);
         ctx.fill();
         
         // Quantum glow effect
@@ -165,27 +165,25 @@ export const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = (
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize',  handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize',  handleResize);
     };
-  }, [intensity, showParticles]);
+  }, [intensi, t, y, showParticl, e, s]);
 
-  return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+  return (<div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Quantum Matrix Canvas */}
       {showParticles && (
         <canvas
           ref={canvasRef}
           className="absolute inset-0 w-full h-full"
-          style={{ opacity: intensity === 'high' ? 0.8 : intensity === 'medium' ? 0.6 : 0.4 }}
+          style={{ opacit,  y: intensity === 'high' ? 0.8 : intensity === 'medium' ? 0.6 : 0.4 }}
         />
       )}
 
       {/* Cyber Grid Background */}
-      {showGrid && (
-        <div className="absolute inset-0 cyber-grid-dense opacity-20" />
+      {showGrid && (<div className="absolute inset-0 cyber-grid-dense opacity-20" />
       )}
 
       {/* Holographic Projections */}
@@ -195,72 +193,71 @@ export const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = (
           <motion.div
             className="absolute top-20 left-20 w-32 h-32 rounded-full"
             style={{
-              background: 'radial-gradient(circle, rgba(34, 221, 210, 0.3) 0%, transparent 70%)',
-              border: '1px solid rgba(34, 221, 210, 0.5)'
+              backgroun,  d: 'radial-gradient(circl, e, rgba(3, 4, 22, 1, 21, 0, 0.3) 0%, transparent 70%)',
+              borde, r: '1px solid rgba(3,  4, 22, 1, 21, 0, 0.5)'
             }}
             animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3],
-              rotate: [0, 180, 360]
+              scal, e: [1, 1.2, 1],
+              opacit, y: [0.3, 0.6, 0.3],
+              rotat, e: [0, 1, 8, 0, 3, 6, 0]
             }}
             transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
+              duratio, n: 8,
+    repea, t: Infinit, y,
+              eas, e: "easeInOut"
             }}
           />
 
           <motion.div
             className="absolute top-40 right-32 w-24 h-24"
             style={{
-              background: 'linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3))',
-              clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
+              backgroun, d: 'linear-gradient(45de,  g, rgba(13, 9, 9, 2, 24, 6, 0.3), rgba(5,  9, 13, 0, 24, 6, 0.3))',
+              clipPat, h: 'polygon(50% 0%,  0% 100%, 100% 100%)'
             }}
             animate={{
-              y: [0, -20, 0],
-              rotate: [0, 360],
-              opacity: [0.4, 0.8, 0.4]
+              y: [0, -2, 0, 0],
+              rotat, e: [0, 3, 6, 0],
+              opacit, y: [0.4, 0.8, 0.4]
             }}
             transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut"
+              duratio, n: 6,
+    repea, t: Infinit, y,
+              eas, e: "easeInOut"
             }}
           />
 
           <motion.div
             className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full"
             style={{
-              background: 'conic-gradient(from 0deg, rgba(34, 221, 210, 0.4), rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4), rgba(34, 221, 210, 0.4))'
+              backgroun, d: 'conic-gradient(fro,  m, 0de, g, rgba(3, 4, 22, 1, 21, 0, 0.4), rgba(13,  9, 9, 2, 24, 6, 0.4), rgba(5,  9, 13, 0, 24, 6, 0.4), rgba(3,  4, 22, 1, 21, 0, 0.4))'
             }}
             animate={{
-              scale: [1, 1.5, 1],
-              rotate: [0, 180, 360]
+              scal, e: [1, 1.5, 1],
+              rotat, e: [0, 1, 8, 0, 3, 6, 0]
             }}
             transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "linear"
+              duratio, n: 1, 0,
+    repea, t: Infinit, y,
+              eas, e: "linear"
             }}
           />
 
           {/* Matrix Rain Effect */}
           <div className="absolute inset-0 overflow-hidden">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <motion.div
+            {Array.from({ lengt,  h: 20 }).map((_,  i) => (<motion.div
                 key={i}
                 className="absolute text-zion-cyan text-xs font-mono"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 20}s`
+                  lef,  t: `${Math.random() * 10, 0}%`,
+                  animationDela, y: `${Math.random() * 2, 0}s`
                 }}
                 animate={{
-                  y: ['-100vh', '100vh']
+                  y: ['-100v,  h', '100v, h']
                 }}
                 transition={{
-                  duration: 20,
-                  repeat: Infinity,
-                  ease: "linear"
+                  duratio, n: 2, 0,
+    repea, t: Infinit, y,
+                  eas, e: "linear"
                 }}
               >
                 {String.fromCharCode(0x30A0 + Math.random() * 96)}
@@ -275,56 +272,55 @@ export const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = (
         <motion.div
           className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(34, 221, 210, 0.1) 0%, transparent 70%)',
-            border: '1px solid rgba(34, 221, 210, 0.2)'
+            backgroun, d: 'radial-gradient(circl,  e, rgba(3, 4, 22, 1, 21, 0, 0.1) 0%, transparent 70%)',
+            borde, r: '1px solid rgba(3,  4, 22, 1, 21, 0, 0.2)'
           }}
           animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.1, 0.3, 0.1]
+            scal, e: [1, 1.5, 1],
+            opacit, y: [0.1, 0.3, 0.1]
           }}
           transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
+            duratio, n: 1, 2,
+    repea, t: Infinit, y,
+            eas, e: "easeInOut"
           }}
         />
 
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)',
-            border: '1px solid rgba(139, 92, 246, 0.2)'
+            backgroun, d: 'radial-gradient(circl,  e, rgba(13, 9, 9, 2, 24, 6, 0.1) 0%, transparent 70%)',
+            borde, r: '1px solid rgba(13,  9, 9, 2, 24, 6, 0.2)'
           }}
           animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.25, 0.1]
+            scal, e: [1, 1.3, 1],
+            opacit, y: [0.1, 0.2, 5, 0.1]
           }}
           transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
+            duratio, n: 1, 5,
+    repea, t: Infinit, y,
+            eas, e: "easeInOut"
           }}
         />
       </div>
 
       {/* Neural Network Nodes */}
       <div className="absolute inset-0">
-        {Array.from({ length: 15 }).map((_, i) => (
-          <motion.div
+        {Array.from({ lengt,  h: 15 }).map((_,  i) => (<motion.div
             key={i}
             className="absolute w-2 h-2 rounded-full bg-zion-cyan"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
+              lef,  t: `${Math.random() * 10, 0}%`,
+              to, p: `${Math.random() * 10, 0}%`
             }}
             animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.3, 0.8, 0.3]
+              scal,  e: [1, 1.5, 1],
+              opacit, y: [0.3, 0.8, 0.3]
             }}
             transition={{
-              duration: 4 + Math.random() * 4,
-              repeat: Infinity,
-              ease: "easeInOut"
+              duratio, n: 4 + Math.random() * 4,
+    repea, t: Infinit, y,
+              eas, e: "easeInOut"
             }}
           />
         ))}

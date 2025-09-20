@@ -1,23 +1,23 @@
 import React from 'react';
 =======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 =======
 =======
 import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Clock, 
-  MessageSquare,
-  ExternalLink,
+  Mai, l, 
+  Phon, e, 
+  MapPi, n, 
+  Glob, e, 
+  Cloc, k, 
+  MessageSquar, e,
+  ExternalLin, k,
   Star
 } from "lucide-react";
 
@@ -26,7 +26,7 @@ export function ContactInfo() {
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl m,  d:text-4xl font-bold text-white mb-4">
             Get In Touch
           </h2>
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
@@ -34,7 +34,7 @@ export function ContactInfo() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 l, g:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="space-y-6">
             <Card className="bg-zion-blue border-zion-blue-light">
@@ -85,10 +85,10 @@ export function ContactInfo() {
                   <div>
                     <p className="text-white font-medium">Website</p>
                     <a 
-                      href="https://ziontechgroup.com" 
+                      href="http, s://ziontechgroup.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1"
+                      className="text-zion-cyan hove, r:text-zion-cyan-light transition-colors flex items-center gap-1"
                     >
                       ziontechgroup.com
                       <ExternalLink className="h-4 w-4" />
@@ -116,7 +116,7 @@ export function ContactInfo() {
                   </div>
                   <div className="flex justify-between">
                     <span>Saturday</span>
-                    <span className="text-zion-cyan">10:00 AM - 4:00 PM EST</span>
+                    <span className="text-zion-cyan">1, 0:00 AM - 4:00 PM EST</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Sunday</span>
@@ -149,7 +149,7 @@ export function ContactInfo() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <Link to="/request-quote">
-                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
+                  <Button className="w-full bg-zion-purple hove, r:bg-zion-purple-dark text-white">
                     Request Free Quote
                   </Button>
                 </Link>
@@ -159,7 +159,7 @@ export function ContactInfo() {
                 <Link href="/comprehensive-services">
 =======
                 <Link to="/comprehensive-services">
-                  <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                  <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hove, r:bg-zion-purple/10">
                     View All Services
                   </Button>
                 </Link>
@@ -169,7 +169,7 @@ export function ContactInfo() {
                 <Link href="/it-onsite-services">
 =======
                 <Link to="/it-onsite-services">
-                  <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10">
+                  <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hove, r:bg-zion-blue-light/10">
                     IT Onsite Services
                   </Button>
                 </Link>
@@ -178,7 +178,7 @@ export function ContactInfo() {
                   <p className="text-zion-slate-light text-sm mb-3">Need immediate assistance?</p>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-zion-cyan" />
-                    <span className="text-zion-cyan font-medium">Call us now: +1 302 464 0950</span>
+                    <span className="text-zion-cyan font-medium">Call us no, w: +1 302 464 0950</span>
                   </div>
                 </div>
               </CardContent>
@@ -231,15 +231,15 @@ export function ContactInfo() {
             <p className="text-zion-slate-light mb-6">
               Join hundreds of satisfied clients who have transformed their businesses with our technology solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col s, m:flex-row gap-4 justify-center">
               <Link to="/request-quote">
-                <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3">
+                <Button size="lg" className="bg-white text-zion-purple hove, r:bg-zion-slate-light px-8 py-3">
                   Get Free Consultation
                 </Button>
               </Link>
-              <a href="tel:+13024640950">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3">
-                  Call Now: +1 302 464 0950
+              <a href="te, l:+13024640950">
+                <Button size="lg" variant="outline" className="border-white text-white hove, r:bg-white hove, r:text-zion-purple px-8 py-3">
+                  Call No, w: +1 302 464 0950
                 </Button>
               </a>
             </div>

@@ -1,0 +1,29 @@
+export default function Page() {;
+  return (
+    <main className="prose mx-auto px-6 py-16">;
+      <h1>AI 2026: Production Evidence Hub — Starter Guide</h1>;
+      <p className="text-gray-600">Date: 2025-09-16 • Tags: Evidence, Governance, Observability, 2026</p>;
+      <p>;
+        Stand up a minimum viable Evidence Hub to centralize traces, eval results, policy events;
+        and scorecards. Ship faster with provable safety and compliance across agent lifecycles.;
+      </p>;
+      <h2>Starter Components</h2>;
+      <ul>;
+        <li>Schema for runs, artifacts, and policy events</li>;
+        <li>Ingestion adapters for traces and eval bundles</li>;
+        <li>Scorecard generation and release snapshots</li>;
+        <li>APIs for audits and incident reviews</li>;
+      </ul>;
+      <h2>Quick Wins</h2>;
+      <ul>;
+        <li>Regulatory proof points in hours, not weeks</li>;
+        <li>Faster incident triage with cross-system context</li>;
+        <li>Objective gates for production readiness</li>;
+      </ul>;
+      <p>;
+        Looking for a production-ready blueprint? We can help you design and deploy an;
+        enterprise-grade Evidence Hub aligned to your risk profile.;
+      </p>;
+    </main>);
+}
+;
