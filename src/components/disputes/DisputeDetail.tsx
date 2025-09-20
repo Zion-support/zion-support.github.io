@@ -13,10 +13,10 @@ import { Button,  } from '@/components/ui/button'
 import { Textarea,  } from '@/components/ui/textarea'
 import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from '@/components/ui/tabs'
   Card,
-CardContent
-  CardDescription,
-CardFooter
-  CardHeader,
+CardContent,
+CardDescription,
+CardFooter,
+CardHeader,
 CardTitle,
 } from '@/components/ui/card'
 import { Badge,  } from '@/components/ui/badge'
@@ -210,7 +210,7 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }<div> <AvatarFallback> {'
   msg.user profile?.display name?.[0] |'A'
 }</AvatarFallback> </Avatar>) "
-}</div> <Separator className="my-4" /> <div className="space-y-4" > <Textarea
+}</div> <Separator className="my-4" /> <div className="space-y-4" > <Textarea,
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) "
 }</Tabs> </div> <div className="space-y-6"> <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> <CardContent className="space-y-6"> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {
   dispute.client profile?.avatar url,

@@ -7,12 +7,12 @@ import { Download,  } from 'lucide-react'
 import { Resume,  } from "@/types/resume";
 interface ResumePreviewCardProps {
   resume: Resume;,
-onDownload: () => void;
-  isLoading: boolean,
+onDownload: () => void;,
+isLoading: boolean,
 export function ResumePreviewCard({
   resume,
-onDownload
-  isLoading,
+onDownload,
+isLoading,
 }: ResumePreviewCardProps) {
   return (
     <Card className='mt-3 bg-zion-blue-dark/30 border-zion-purple/20'>

@@ -6,8 +6,8 @@ totalReviews: number;
   ratingDistribution?: Record<number number>
 export function ReviewStats({
   averageRating,
-totalReviews
-  ratingDistribution,
+totalReviews,
+ratingDistribution,
 }: ReviewStatsProps) {
   // Format the average rating to one decimal place,
 const formattedRating = null;

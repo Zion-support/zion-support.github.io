@@ -17,13 +17,13 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
     id: "nvidia-a100-server";,
-title: "NVIDIA A100 GPU Training Server";
-    description: "High-performance AI training server with 8x A100 GPUs designed for demanding machine learning workloads.",
+title: "NVIDIA A100 GPU Training Server";,
+description: "High-performance AI training server with 8x A100 GPUs designed for demanding machine learning workloads.",
     category: "AI Hardware";,
-price: 85000;
-    currency: "$";,
-brand: "NVIDIA";
-    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
+price: 85000;,
+currency: "$";,
+brand: "NVIDIA";,
+specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
     tags: ["AI", "Machine Learning", "GPU"],
     author: { name: "NVIDIA", id: "nvidia" },
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;

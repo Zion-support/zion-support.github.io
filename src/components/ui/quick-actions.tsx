@@ -1,9 +1,9 @@
 interface QuickAction {
   id: string;,
-label: string;
-  description: string;,
-icon: React.ReactNode;
-  action: () => void;,
+label: string;,
+description: string;,
+icon: React.ReactNode;,
+action: () => void;,
 category: 'performance' | 'development' | 'maintenance';
   dangerous?: boolean,
 export function QuickActions() {

@@ -44,9 +44,9 @@ const distributionChartData: DistributionChartItem[] = React.useMemo ( () => {
   tokenName,
 tokenSupply: tokenSupply.toString ()
 useCases,
-rewardsLogic
+rewardsLogic,
 governanceLogic,
-legalDisclaimers
+legalDisclaimers,
 distributionBreakdown,
 }
 if (processedDistData.length > 0) {

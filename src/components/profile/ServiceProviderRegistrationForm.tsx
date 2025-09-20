@@ -478,8 +478,8 @@ reader.readAsDataURL (file)
   data error,
 }= await supabase.functions.invoke ('service-profile-enhancer', {
   body: {,
-providerData: {
-  name: formData.name title: formData.title bio: formData.bio  services: serviceTags location: formData.location,
+providerData: {,
+name: formData.name title: formData.title bio: formData.bio  services: serviceTags location: formData.location,
 })
 }else {'
   //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content')
@@ -511,8 +511,8 @@ try {
   data: aiData '
 }= await supabase.functions.invoke ('service-profile-enhancer', {
   body: {,
-providerData: {
-  name: values.name title: values.title bio: values.bio  services: serviceTags location: values.location,
+providerData: {,
+name: values.name title: values.title bio: values.bio  services: serviceTags location: values.location,
 })
 //Create the service profile const {
   data: profileData error '

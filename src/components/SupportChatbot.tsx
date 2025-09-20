@@ -59,7 +59,7 @@ role='assistant'
   data: err;
 })
 //Provide a helpful fallback response instead of generic error const errorMsg: Msg = {',
-id: Date.now () .toString () + '-e';'
+id: Date.now () .toString () + '-e';',
 role: 'assistant',
 message: fallbackResponse;
 }

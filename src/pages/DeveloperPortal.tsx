@@ -1,7 +1,7 @@
 interface TabDefinition {
   id: string;,
-label: string;
-  icon: LucideIcon,
+label: string;,
+icon: LucideIcon,
 export function DeveloperPortal() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation"),
@@ -9,8 +9,8 @@ export function DeveloperPortal() {
   // Define the tabs,
 const tabs: TabDefinition[] = [
     { id: 'documentation', label: 'Documentation', icon: BookOpen },
-{ id: 'api-keys', label: 'API Keys', icon: Key }
-    { id: 'webhooks', label: 'Webhooks', icon: Webhook },
+{ id: 'api-keys', label: 'API Keys', icon: Key },
+{ id: 'webhooks', label: 'Webhooks', icon: Webhook },
 { id: 'logs', label: 'Logs', icon: List }
   ]
   return (

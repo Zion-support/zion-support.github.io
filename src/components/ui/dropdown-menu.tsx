@@ -162,17 +162,17 @@ className={cn(&quot;ml-auto text-xs tracking-widest opacity-60&quot;, className)
 DropdownMenuShortcut.displayName = &quot;DropdownMenuShortcut&quot;
 export {
   DropdownMenu,
-DropdownMenuTrigger
-  DropdownMenuContent,
-DropdownMenuItem
-  DropdownMenuCheckboxItem,
-DropdownMenuRadioItem
-  DropdownMenuLabel,
-DropdownMenuSeparator
-  DropdownMenuShortcut,
-DropdownMenuGroup
-  DropdownMenuPortal,
-DropdownMenuSub
-  DropdownMenuSubContent,
-DropdownMenuSubTrigger
-  DropdownMenuRadioGroup}
+DropdownMenuTrigger,
+DropdownMenuContent,
+DropdownMenuItem,
+DropdownMenuCheckboxItem,
+DropdownMenuRadioItem,
+DropdownMenuLabel,
+DropdownMenuSeparator,
+DropdownMenuShortcut,
+DropdownMenuGroup,
+DropdownMenuPortal,
+DropdownMenuSub,
+DropdownMenuSubContent,
+DropdownMenuSubTrigger,
+DropdownMenuRadioGroup}

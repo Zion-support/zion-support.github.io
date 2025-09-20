@@ -6,7 +6,7 @@ poweredByHeader: false,
 eslint: {,
 ignoreDuringBuilds: true,
 }
-  typescript: {
+  typescript: {,
 webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -15,8 +15,8 @@ webpack: (config, { dev, isServer }) => {
     // Exclude apps directory from compilation,
 config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/,
-include: /apps\//
-      use: "ignore-loader"
+include: /apps\//,
+use: "ignore-loader"
     });
     return config;
   }

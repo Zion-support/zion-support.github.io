@@ -4,8 +4,8 @@ import { Briefcase,, Star,, User,  } from 'lucide-react'
 import { Button,  } from "@/components/ui/button";
 interface UserTypeOption {
   id: "serviceProvider" | "talent" | "client";,
-name: string;
-  description: string;,
+name: string;,
+description: string;,
 icon: React.ElementType,
 interface UserTypeSelectionProps {
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void;,

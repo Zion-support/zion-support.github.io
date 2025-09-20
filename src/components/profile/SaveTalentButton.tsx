@@ -8,8 +8,8 @@ onSave: (talentId: string) => void,
 isSaved: boolean,
 export function SaveTalentButton({
   talentId,
-onSave
-  isSaved,
+onSave,
+isSaved,
 }: SaveTalentButtonProps) {
       onClick={() => onSave(talentId)}
       variant={isSaved ? 'default' : 'outline'}

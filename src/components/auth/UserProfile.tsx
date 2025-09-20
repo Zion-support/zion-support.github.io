@@ -8,8 +8,8 @@ import { User, LogOut, LogIn } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import type {
   User as SupabaseUser,
-AuthChangeEvent
-  Session,
+AuthChangeEvent,
+Session,
 } from '@supabase/supabase-js'
 interface UserProfileProps {
   onUserChange?: (user: SupabaseUser | null) => void,

@@ -4,14 +4,14 @@ import { NextSeo,, ,  } from '@/components/NextSeo';
 import { Globe,, MapPin,  } from 'lucide-react'
 interface Instance {
   id: number;,
-name: string;
-  lat: number;,
-lng: number;
-  talent: number;,
-governance: 'admin' | 'hybrid' | 'vote';
-  votesPassed: number;,
-votesPending: number;
-  region: string,
+name: string;,
+lat: number;,
+lng: number;,
+talent: number;,
+governance: 'admin' | 'hybrid' | 'vote';,
+votesPassed: number;,
+votesPending: number;,
+region: string,
 const INSTANCES: Instance[] = [
   {
 interface FeedItem {

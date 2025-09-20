@@ -26,7 +26,7 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
   featuredPost.title "
 }</h3> <p className=" text-zion-slate-light mb-6"> {
   featuredPost.excerpt "
-}flex items-center mb-6" > <img
+}flex items-center mb-6" > <img,
 }"
 }/> <div> <p className="text-white font-medium" > {
   featuredPost.author.name "
@@ -56,7 +56,7 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
   post.title "
 }</h3> <p className=" text-zion-slate-light mb-4 line-clamp-3"> {
   post.excerpt "
-}flex items-center" > <img
+}flex items-center" > <img,
 }"
 }/> <span className="text-sm text-white" > {
   post.author.name "

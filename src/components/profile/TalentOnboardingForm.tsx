@@ -15,27 +15,27 @@ import { Input,  } from '@/components/ui/input'
 import { Textarea,  } from '@/components/ui/textarea'
 import { Button,  } from '@/components/ui/button'
   Select,
-SelectContent
-  SelectItem,
-SelectTrigger
-  SelectValue,
+SelectContent,
+SelectItem,
+SelectTrigger,
+SelectValue,
 } from '@/components/ui/select'
 import { AspectRatio,  } from '@/components/ui/aspect-ratio'
 import { Separator,  } from '@/components/ui/separator'
 import { toast,  } from '@/components/ui/use-toast'
   User,
-Briefcase
-  Star,
-Calendar
-  Globe,
-DollarSign
-  FileText,
-Link
-  Upload,
-ArrowRight
-  ArrowLeft,
-Trash2
-  Plus,
+Briefcase,
+Star,
+Calendar,
+Globe,
+DollarSign,
+FileText,
+Link,
+Upload,
+ArrowRight,
+ArrowLeft,
+Trash2,
+Plus,
 CheckCircle2,
 } from 'lucide-react'
 import { useAuth,  } from '@/hooks/useAuth'
@@ -68,8 +68,8 @@ cv: z.any () .optional ()
 type TalentFormValues = z.infer<typeof talentSchema>
 const form = useForm<TalentFormValues> ({
   resolver: zodResolver (talentSchema), defaultValues: {,
-basicInfo: {
-  cv: undefined;
+basicInfo: {,
+cv: undefined;
 }
 //Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
   const file = e.target.files?.[0]

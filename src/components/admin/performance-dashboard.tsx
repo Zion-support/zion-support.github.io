@@ -1,9 +1,9 @@
 interface BundleChunk {
   name: string;,
-size: number;
-  loadTime: number;,
-cached: boolean;
-  type: string,
+size: number;,
+loadTime: number;,
+cached: boolean;,
+type: string,
 export function PerformanceDashboard() {
 return (
     <div className='space-y-6'>

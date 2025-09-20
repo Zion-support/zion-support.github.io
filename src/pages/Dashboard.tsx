@@ -211,7 +211,7 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
   /* Test notification buttons */ "
 }<div className="flex flex-col gap-2 mt-4"> <Button > <Send size= {
   16 "
-}className="text-zion-cyan" /> Send Test Notification </Button> <Button
+}className="text-zion-cyan" /> Send Test Notification </Button> <Button,
 }> <Settings size= {
   16 "
 }className="text-zion-purple" /> async () => {

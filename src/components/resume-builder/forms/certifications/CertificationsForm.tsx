@@ -14,8 +14,8 @@ import { CertificationFormFields,, ,  } from './CertificationFormFields';
 import { CertificationFormValues,, certificationSchema,  } from './types';
 interface CertificationsFormProps {
   resumeId: string;,
-certifications: Certification[];
-  onComplete: () => void;,
+certifications: Certification[];,
+onComplete: () => void;,
 onBack: () => void,
 } else {
                     onBack()

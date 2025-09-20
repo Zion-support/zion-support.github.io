@@ -8,10 +8,10 @@ import { toast,  } from '@/hooks/use-toast';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5,
 interface Notification {
   id: string;,
-type: 'message' | 'order' | 'system' | 'promotion';
-  title: string;,
-message: string;
-  timestamp: Date;,
+type: 'message' | 'order' | 'system' | 'promotion';,
+title: string;,
+message: string;,
+timestamp: Date;,
 read: boolean;
   actionUrl?: string;
 }
@@ -48,28 +48,28 @@ export default function Notifications() {
 const mockNotifications: Notification[] = [
       {
         id: '1',
-type: 'message'
-        title: 'New Message',
-message: 'You have received a new message from John Doe'
-        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago,
+type: 'message',
+title: 'New Message',
+message: 'You have received a new message from John Doe',
+timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago,
 read: false,
 actionUrl: '/messaging'
       }
       {
         id: '2',
-type: 'order'
-        title: 'Order Update',
-message: 'Your order #12345 has been shipped'
-        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago,
+type: 'order',
+title: 'Order Update',
+message: 'Your order #12345 has been shipped',
+timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago,
 read: true,
 actionUrl: '/orders'
       }
       {
         id: '3',
-type: 'system'
-        title: 'System Maintenance',
-message: 'Scheduled maintenance will occur tonight at 2 AM'
-        timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago,
+type: 'system',
+title: 'System Maintenance',
+message: 'Scheduled maintenance will occur tonight at 2 AM',
+timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago,
 read: false;
 }
     ];

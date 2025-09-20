@@ -17,6 +17,6 @@ return { success: true, message: 'Placeholder connection' }
     return { status: 'placeholder', message: 'Not implemented yet' }
   }
 }
-// Export for use in other modules
+// Export for use in other modules,
 client.connect()
 }

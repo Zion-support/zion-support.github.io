@@ -14,8 +14,8 @@ import { safeStorage,  } from "@/utils/safeStorage";
 // Example listing type,
 interface Listing {
   id: string;,
-title: string;
-  description: string;,
+title: string;,
+description: string;,
 category: string;
   subcategory?: string;
   image?: string;
@@ -115,7 +115,7 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }reviewCount= {
   listing.reviewCount,
 }/>) ) "
-}</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button
+}</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button,
 }"
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 }</div> </div> </div> </>)

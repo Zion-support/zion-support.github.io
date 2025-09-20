@@ -450,15 +450,15 @@ type='submit'
   data error '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {
   body: {,
-talentData: {
-  name: formData.name title: formData.title bio: formData.bio  skills: skillTags location: formData.location,
+talentData: {,
+name: formData.name title: formData.title bio: formData.bio  skills: skillTags location: formData.location,
 })
 }else {'
   //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content')
 setGeneratedContent ({"
   summary: "Experienced professional with expertise in modern technologies and best practices.",
-categorizedSkills: {"
-  programming: ["JavaScript", "TypeScript", "React" ];"
+categorizedSkills: {",
+programming: ["JavaScript", "TypeScript", "React" ];"
 devops: ["Docker", "CI/CD", "AWS" ];"
 platforms: ["Node.js", "Next.js", "Vercel" ];"
 softSkills: ["Communication", "Problem Solving",  "Team Leadership" ];"
@@ -502,8 +502,8 @@ try {
   data: aiData '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {
   body: {,
-talentData: {
-  name: values.name title: values.title bio: values.bio  skills: skillTags location: values.location,
+talentData: {,
+name: values.name title: values.title bio: values.bio  skills: skillTags location: values.location,
 });'
 //Extract skills from each category and ensure they're strings Object.values (categorizedSkills) .forEach (categorySkills => {
   if (Array.isArray (categorySkills) ) {

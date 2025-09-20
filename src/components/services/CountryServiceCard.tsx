@@ -5,8 +5,8 @@ isPopular?: boolean,
 }
 export function CountryServiceCard({
   country,
-onSelect
-  onQuote,
+onSelect,
+onQuote,
 isPopular,
 }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
@@ -61,8 +61,8 @@ variant='outline'
           Get Quote
         </Button>
         <Button,
-asChild
-          variant='ghost'
+asChild,
+variant='ghost'
           className='w-full text-zion-cyan hover:text-zion-purple'
         >
           <Link href='/contact'>Contact Sales</Link>

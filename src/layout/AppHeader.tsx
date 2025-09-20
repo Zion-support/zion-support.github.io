@@ -327,15 +327,15 @@ onClick={() => {
             {/* Search */}
             <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [
     { name: 'Home', href: '/', current: true },
-{ name: 'About', href: '/about', current: false }
-    { name: 'Contact', href: '/contact', current: false }
+{ name: 'About', href: '/about', current: false },
+{ name: 'Contact', href: '/contact', current: false }
   ]
   const services = [
     { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
-{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' }
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
-{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' }
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
+{ name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
+{ name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
+{ name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
+{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
 { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' }
   ]
   return (

@@ -8,14 +8,14 @@ import { AlertTriangle,, Package,, Zap,  } from 'lucide-react'
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface BundleInfo {
   totalSize: number;,
-gzippedSize: number;
-  chunkCount: number;,
-loadTime: number;
-  cacheHitRate: number,
+gzippedSize: number;,
+chunkCount: number;,
+loadTime: number;,
+cacheHitRate: number,
 interface ChunkInfo {
   name: string;,
-size: number;
-  loadTime: number;,
+size: number;,
+loadTime: number;,
 cached: boolean,
 export function BundleAnalyzer() {
 if (!shouldShow) {

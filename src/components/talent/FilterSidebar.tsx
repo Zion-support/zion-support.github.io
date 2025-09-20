@@ -16,24 +16,24 @@ return (
       <div className='flex items-center justify-between mb-6'>
         <h3 className='text-lg font-semibold text-white flex items-center'>
           <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm,
-setSearchTerm
-  selectedSkills,
-toggleSkill
-  selectedAvailability,
-toggleAvailability
-  selectedRegions,
-toggleRegion
-  priceRange,
-setPriceRange
-  experienceRange,
-setExperienceRange
-  expandedSections,
-toggleSection
-  sortOption,
-setSortOption
-  clearFilters,
-isMobileFilterOpen
-  return (
+setSearchTerm,
+selectedSkills,
+toggleSkill,
+selectedAvailability,
+toggleAvailability,
+selectedRegions,
+toggleRegion,
+priceRange,
+setPriceRange,
+experienceRange,
+setExperienceRange,
+expandedSections,
+toggleSection,
+sortOption,
+setSortOption,
+clearFilters,
+isMobileFilterOpen,
+return (
     <>
       {/* Filter header */}
       <div className='flex items-center justify-between mb-6'>

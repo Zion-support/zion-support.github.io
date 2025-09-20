@@ -6,8 +6,8 @@ import { useWhitelabel,, ,  } from '@/context/WhitelabelContext';
 import { JobDetailsSkeleton,  } from '@/components/jobs';
 interface Job {
   id: string;,
-title: string;
-  description: string;
+title: string;,
+description: string;
   company_name?: string;
 client_id: string;
   skills?: string[];

@@ -251,15 +251,15 @@ export default function GreenIT(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Solutions', count: 12 },
-{ id: 'energy', name: 'Energy Efficiency', count: 4 }
-    { id: 'hardware', name: 'Green Hardware', count: 3 },    { id: 'software', name: 'Sustainable Software', count: 3 },
+{ id: 'energy', name: 'Energy Efficiency', count: 4 },
+{ id: 'hardware', name: 'Green Hardware', count: 3 },    { id: 'software', name: 'Sustainable Software', count: 3 },
 { id: 'data', name: 'Data Centers', count: 2 }
   ]
   const greenSolutions: unknown = [{},
-id: 'energy - monitoring'
-      name: 'Smart Energy Monitoring',
-category: 'energy'
-      icon: Activity,
+id: 'energy - monitoring',
+name: 'Smart Energy Monitoring',
+category: 'energy',
+icon: Activity,
 description: 'Real - time energy consumption tracking and optimization',
 features: []
         'Real - time energy consumption monitoring'
@@ -276,13 +276,13 @@ features: []
         'Comply with energy regulations'
       ]
       savings: '15 - 25% energy reduction',
-implementation: '2 - 4 weeks'
-      pricing: 'Starting from $5000'
+implementation: '2 - 4 weeks',
+pricing: 'Starting from $5000'
 }
     {}
       id: 'virtualization',
-name: 'Server Virtualization'
-      category: 'hardware',
+name: 'Server Virtualization',
+category: 'hardware',
 icon: Server,
 description: 'Consolidate physical servers to reduce power consumption',
 features: ['Server consolidation and virtualization'
@@ -299,13 +299,13 @@ features: ['Server consolidation and virtualization'
         'Reduce carbon footprint'
       ]
       savings: '60 - 80% power reduction',
-implementation: '4 - 8 weeks'
-      pricing: 'Starting from $15000'
+implementation: '4 - 8 weeks',
+pricing: 'Starting from $15000'
 }
     {}
       id: 'cloud - optimization',
-name: 'Cloud Infrastructure Optimization'
-      category: 'software',
+name: 'Cloud Infrastructure Optimization',
+category: 'software',
 icon: Cloud,
 description: 'Optimize cloud resources for maximum efficiency',
 features: ['Cloud resource optimization'
@@ -322,13 +322,13 @@ features: ['Cloud resource optimization'
         'Scalable and flexible infrastructure'
       ]
       savings: '20 - 40% cost reduction',
-implementation: '3 - 6 weeks'
-      pricing: 'Starting from $8000'
+implementation: '3 - 6 weeks',
+pricing: 'Starting from $8000'
 }
     {}
       id: 'data - center - efficiency',
-name: 'Data Center Efficiency'
-      category: 'data',
+name: 'Data Center Efficiency',
+category: 'data',
 icon: Database,
 description: 'Optimize data center operations for sustainability',
 features: ['Cooling system optimization'
@@ -345,13 +345,13 @@ features: ['Cooling system optimization'
         'Reduce carbon footprint'
       ]
       savings: '30 - 50% energy reduction',
-implementation: '8 - 16 weeks'
-      pricing: 'Starting from $25000'
+implementation: '8 - 16 weeks',
+pricing: 'Starting from $25000'
 }
     {}
       id: 'smart - lighting',
-name: 'Smart Lighting Systems'
-      category: 'energy',
+name: 'Smart Lighting Systems',
+category: 'energy',
 icon: Lightbulb,
 description: 'Intelligent lighting control for energy savings',
 features: ['Motion - sensing controls'
@@ -368,13 +368,13 @@ features: ['Motion - sensing controls'
         'Smart building integration'
       ]
       savings: '40 - 60% energy reduction',
-implementation: '2 - 3 weeks'
-      pricing: 'Starting from $3000'
+implementation: '2 - 3 weeks',
+pricing: 'Starting from $3000'
 }
     {}
       id: 'green - software',
-name: 'Sustainable Software Development'
-      category: 'software',
+name: 'Sustainable Software Development',
+category: 'software',
 icon: Code,
 description: 'Eco - friendly software development practices',
 features: ['Energy - efficient algorithms'
@@ -391,16 +391,16 @@ features: ['Energy - efficient algorithms'
         'Environmental responsibility'
       ]
       savings: '20 - 35% energy reduction',
-implementation: 'Ongoing'
-      pricing: 'Starting from $10000'
+implementation: 'Ongoing',
+pricing: 'Starting from $10000'
 }
     {}
       id: 'renewable - energy',
-name: 'Renewable Energy Integration'
-      category: 'energy',
+name: 'Renewable Energy Integration',
+category: 'energy',
 icon: Sun,
-description: 'Integrate solar wind and other renewable sources'
-      features: ['Solar panel installation'
+description: 'Integrate solar wind and other renewable sources',
+features: ['Solar panel installation'
         'Wind turbine integration'
         'Energy storage systems'
         'Grid connection management'
@@ -414,13 +414,13 @@ description: 'Integrate solar wind and other renewable sources'
         'Government incentives and tax credits'
       ]
       savings: '40 - 80% energy costs',
-implementation: '12 - 24 weeks'
-      pricing: 'Starting from $50000'
+implementation: '12 - 24 weeks',
+pricing: 'Starting from $50000'
 }
     {}
       id: 'green - hardware',
-name: 'Energy - Efficient Hardware'
-      category: 'hardware',
+name: 'Energy - Efficient Hardware',
+category: 'hardware',
 icon: Cpu,
 description: 'Select and deploy energy - efficient computing equipment',
 features: ['Energy Star certified equipment'
@@ -437,13 +437,13 @@ features: ['Energy Star certified equipment'
         'Improve corporate sustainability'
       ]
       savings: '25 - 40% power reduction',
-implementation: '1 - 2 weeks'
-      pricing: 'Starting from $2000'
+implementation: '1 - 2 weeks',
+pricing: 'Starting from $2000'
 }
     {}
       id: 'waste - reduction',
-name: 'Electronic Waste Reduction'
-      category: 'hardware',
+name: 'Electronic Waste Reduction',
+category: 'hardware',
 icon: Recycle,
 description: 'Comprehensive e - waste management and recycling',
 features: ['E - waste assessment and audit'
@@ -460,13 +460,13 @@ features: ['E - waste assessment and audit'
         'Support circular economy'
       ]
       savings: 'Varies by program',
-implementation: '2 - 4 weeks'
-      pricing: 'Starting from $1000'
+implementation: '2 - 4 weeks',
+pricing: 'Starting from $1000'
 }
     {}
       id: 'carbon - tracking',
-name: 'Carbon Footprint Tracking'
-      category: 'software',
+name: 'Carbon Footprint Tracking',
+category: 'software',
 icon: BarChart3,
 description: 'Monitor and reduce carbon emissions',
 features: ['Carbon emission calculation'
@@ -483,13 +483,13 @@ features: ['Carbon emission calculation'
         'Enhance brand reputation'
       ]
       savings: 'Measurable impact',
-implementation: '4 - 6 weeks'
-      pricing: 'Starting from $6000'
+implementation: '4 - 6 weeks',
+pricing: 'Starting from $6000'
 }
     {}
       id: 'green - networking',
-name: 'Energy - Efficient Networking'
-      category: 'data',
+name: 'Energy - Efficient Networking',
+category: 'data',
 icon: Network,
 description: 'Optimize network infrastructure for energy efficiency',
 features: ['Network equipment optimization'
@@ -506,13 +506,13 @@ features: ['Network equipment optimization'
         'Environmental responsibility'
       ]
       savings: '20 - 35% energy reduction',
-implementation: '3 - 5 weeks'
-      pricing: 'Starting from $12000'
+implementation: '3 - 5 weeks',
+pricing: 'Starting from $12000'
 }
     {}
       id: 'sustainability - reporting',
-name: 'Sustainability Reporting Platform'
-      category: 'software',
+name: 'Sustainability Reporting Platform',
+category: 'software',
 icon: FileText,
 description: 'Comprehensive sustainability reporting and analytics',
 features: ['Environmental data collection'
@@ -529,8 +529,8 @@ features: ['Environmental data collection'
         'Track progress toward goals'
       ]
       savings: 'Time and resource savings',
-implementation: '6 - 8 weeks'
-      pricing: 'Starting from $8000'
+implementation: '6 - 8 weeks',
+pricing: 'Starting from $8000'
 }
   ]
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {}

@@ -7,9 +7,9 @@ content: [
     './src/**/*.{js,ts,jsx,tsx}'
   ]
   theme: {,
-extend: {
-      colors: {,
-primary: {
+extend: {,
+colors: {,
+primary: {,
 fontFamily: {,
 sans: ['Inter', 'system-ui', 'sans-serif']
         mono: ['JetBrains Mono', 'Fira Code', 'monospace']

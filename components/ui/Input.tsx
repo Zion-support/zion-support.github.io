@@ -9,13 +9,13 @@ interface InputProps {
   required?: boolean;
 }
 const Input: React.FC<InputProps> = ({
-  type = "text"
-  placeholder
-  value
-  onChange
-  className = ""
-  disabled = false
-  required = false
+  type = "text",
+  placeholder,
+  value,
+  onChange,
+  className = "",
+  disabled = false,
+  required = false,
   ...props
 }) => {
   const baseClasses =

@@ -21,16 +21,16 @@ onClose: () => void;
   onSubmitSuccess?: () => void,
 export function HireRequestForm({
   talent,
-onClose
-  initialJobTitle,
-userDetails
-  onSubmitSuccess,
+onClose,
+initialJobTitle,
+userDetails,
+onSubmitSuccess,
 }: HireRequestFormProps) {
   const { form isSubmitting onSubmit } = useHireRequestForm({
     talent,
 onClose: onSubmitSuccess |onClose,
-initialJobTitle
-    userDetails,
+initialJobTitle,
+userDetails,
 })
   return (
     <Form {...form}>

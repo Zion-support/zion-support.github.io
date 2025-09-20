@@ -225,8 +225,8 @@ export default function Page() {
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {
       year: 'numeric',
-month: 'long'
-      day: 'numeric',
+month: 'long',
+day: 'numeric',
 })
 }
   const getCategoryIcon = (category: string) => {
@@ -243,12 +243,12 @@ emerging: Zap;
 }
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {,
-ai: 'Artificial Intelligence'
-      quantum: 'Quantum Computing',
-security: 'Cybersecurity'
-      cloud: 'Cloud & DevOps',
-business: 'Business Insights'
-      iot: 'IoT & Edge',
+ai: 'Artificial Intelligence',
+quantum: 'Quantum Computing',
+security: 'Cybersecurity',
+cloud: 'Cloud & DevOps',
+business: 'Business Insights',
+iot: 'IoT & Edge',
 emerging: 'Emerging Tech',
 }
     return categoryNames[category] |'Uncategorized'

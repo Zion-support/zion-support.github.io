@@ -19,9 +19,9 @@ interface ServiceLandingTemplateProps {
 subtitle: string;
   heroImage?: string;
   description: string;,
-benefits: Benefit[];
-  testimonials: Testimonial[];,
-ctaText: string;
-  ctaLink: string;
+benefits: Benefit[];,
+testimonials: Testimonial[];,
+ctaText: string;,
+ctaLink: string;
 }
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({

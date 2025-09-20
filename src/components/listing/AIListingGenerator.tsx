@@ -54,7 +54,7 @@ const [isLoading, setIsLoading] = useState (false)
 const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null> (null)
 const handleGenerate = async ({
   title,
-category
+category,
 keyFeatures,
 targetAudience,
 }: {

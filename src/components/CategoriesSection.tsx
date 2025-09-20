@@ -9,31 +9,31 @@ itemCount?: number, // Example field for number of items in a category
 function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 const categories = [{
     title: "AI Services",
-description: "Cutting - edge AI solutions chatbots and machine learning"
-    icon: "🤖",
-link: "/ai - services"
-    color: "from - purple - 500 to - indigo - 600",
+description: "Cutting - edge AI solutions chatbots and machine learning",
+icon: "🤖",
+link: "/ai - services",
+color: "from - purple - 500 to - indigo - 600",
 }
   {
     title: "Micro SAAS",
-description: "Cloud - based software solutions for modern businesses"
-    icon: "☁️",
-link: "/micro - saas"
-    color: "from - cyan - 500 to - blue - 600",
+description: "Cloud - based software solutions for modern businesses",
+icon: "☁️",
+link: "/micro - saas",
+color: "from - cyan - 500 to - blue - 600",
 }
   {
     title: "IT Services",
-description: "Infrastructure security and technical consulting"
-    icon: "⚡",
-link: "/all - services"
-    color: "from - amber - 500 to - orange - 600",
+description: "Infrastructure security and technical consulting",
+icon: "⚡",
+link: "/all - services",
+color: "from - amber - 500 to - orange - 600",
 }
   {
     title: "Digital Transformation",
-description: "Business modernization and digital strategy"
-    icon: "📈",
-link: "/all - services"
-    color: "from - emerald - 500 to - green - 600",
+description: "Business modernization and digital strategy",
+icon: "📈",
+link: "/all - services",
+color: "from - emerald - 500 to - green - 600",
 }
 ]
 const specialServices = [{
@@ -123,7 +123,7 @@ href="/categories/all"
   switch (iconName) {
 }
 const getSpecialServices = (t: any) => [ {,
-title: t ('categories.it onsite services')
+title: t ('categories.it onsite services'),
 link: "/it-onsite-services"
 }]
 interface CategoriesSectionProps {
@@ -133,7 +133,7 @@ style?: React.CSSProperties,
 categories?: CategoryType[], //Accept categories as a prop,
 }export function CategoriesSection ({
   showTitle = true,
-className
+className,
 style,
 categories: fetchedCategories; //Rename prop for clarity,
 }: CategoriesSectionProps) {

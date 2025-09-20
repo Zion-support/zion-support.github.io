@@ -2,17 +2,17 @@ import { Rocket,, FileText,, Users,, Calendar,, Eye,, MessageSquare,  } from 'lu
 import { cn,  } from '@/lib/utils';
 interface WizardStep {
   title: string;,
-description: string;
-  icon: React.ReactNode;,
-action: {
-    text: string;,
+description: string;,
+icon: React.ReactNode;,
+action: {,
+text: string;,
 url: string;
 }
   skipText?: string,
 interface OnboardingWizardProps {
   type: 'client' | 'talent';,
-onComplete: () => void;
-  onSkip: () => void;
+onComplete: () => void;,
+onSkip: () => void;
   className?: string
                     : index < currentStep
                       ? 'bg-zion-cyan'

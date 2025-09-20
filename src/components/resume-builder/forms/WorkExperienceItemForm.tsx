@@ -5,7 +5,7 @@ import { AIEnhancementDialog,  } from "@/components/ai-enhancement/AIEnhancement
     </>
   )
 is current: z.boolean () .default (false),
-description: z.string () .optional ()
+description: z.string () .optional (),
 location: z.string () .optional ()
 })
 type FormValues = z.infer<typeof formSchema>

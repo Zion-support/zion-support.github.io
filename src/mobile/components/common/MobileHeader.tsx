@@ -41,8 +41,8 @@ variant="ghost"
   showBack = false,
 showNotifications = false,
 showSettings = false,
-className
-  onNotificationsClick,
+className,
+onNotificationsClick,
 onSettingsClick,
 }: MobileHeaderProps) {
   const router = useRouter()

@@ -1,8 +1,8 @@
 import React from 'react';
-import { FooterNewsletter,  } from "@/components/FooterNewsletter";
-import { Twitter,, Linkedin,, Facebook,, Instagram,, Github,, ChevronUp,  } from 'lucide-react';
-import Link from "next/link";
-import { FeedbackWidget,  } from "@/components/feedback/FeedbackWidget";
+import { FooterNewsletter } from "./FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
+import { Link } from "react-router-dom";
+import FeedbackWidget from "../../components/feedback/FeedbackWidget";
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "undefined") {
@@ -31,8 +31,8 @@ behavior: 'smooth'
 and comprehensive digital transformation services.
             </p>
             <div className="flex space-x-4">
-              <a,
-href={resolveUrl(process.env.NEXT_PUBLIC_TWITTER_URL, "https://twitter.com/ziontechgroup")}
+              <a
+                href={resolveUrl(process.env.NEXT_PUBLIC_TWITTER_URL, "https://twitter.com/ziontechgroup")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors"
@@ -40,8 +40,8 @@ href={resolveUrl(process.env.NEXT_PUBLIC_TWITTER_URL, "https://twitter.com/ziont
               >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a,
-href={resolveUrl(process.env.NEXT_PUBLIC_LINKEDIN_URL, "https://linkedin.com/company/ziontechgroup")}
+              <a
+                href={resolveUrl(process.env.NEXT_PUBLIC_LINKEDIN_URL, "https://linkedin.com/company/ziontechgroup")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors"
@@ -49,8 +49,8 @@ href={resolveUrl(process.env.NEXT_PUBLIC_LINKEDIN_URL, "https://linkedin.com/com
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a,
-href={resolveUrl(process.env.NEXT_PUBLIC_FACEBOOK_URL, "https://facebook.com/ziontechgroup")}
+              <a
+                href={resolveUrl(process.env.NEXT_PUBLIC_FACEBOOK_URL, "https://facebook.com/ziontechgroup")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors"
@@ -58,8 +58,8 @@ href={resolveUrl(process.env.NEXT_PUBLIC_FACEBOOK_URL, "https://facebook.com/zio
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a,
-href={resolveUrl(process.env.NEXT_PUBLIC_INSTAGRAM_URL, "https://instagram.com/ziontechgroup")}
+              <a
+                href={resolveUrl(process.env.NEXT_PUBLIC_INSTAGRAM_URL, "https://instagram.com/ziontechgroup")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors"
@@ -67,8 +67,8 @@ href={resolveUrl(process.env.NEXT_PUBLIC_INSTAGRAM_URL, "https://instagram.com/z
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a,
-href={resolveUrl(process.env.NEXT_PUBLIC_GITHUB_URL, "https://github.com/ziontechgroup")}
+              <a
+                href={resolveUrl(process.env.NEXT_PUBLIC_GITHUB_URL, "https://github.com/ziontechgroup")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors"
@@ -84,32 +84,32 @@ href={resolveUrl(process.env.NEXT_PUBLIC_GITHUB_URL, "https://github.com/ziontec
             <h4 className="text-lg font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link,
-href="/services"
+                <Link
+                  href="/services"
                   className="text-foreground/80 hover:text-primary text-sm transition-colors"
                 >
                   All Services
                 </Link>
               </li>
               <li>
-                <Link,
-href="/services/ai"
+                <Link
+                  href="/services/ai"
                   className="text-foreground/80 hover:text-primary text-sm transition-colors"
                 >
                   AI Solutions
                 </Link>
               </li>
               <li>
-                <Link,
-href="/services/cloud"
+                <Link
+                  href="/services/cloud"
                   className="text-foreground/80 hover:text-primary text-sm transition-colors"
                 >
                   Cloud Services
                 </Link>
               </li>
               <li>
-                <Link,
-href="/services/automation"
+                <Link
+                  href="/services/automation"
                   className="text-foreground/80 hover:text-primary text-sm transition-colors"
                 >
                   Automation
@@ -123,7 +123,7 @@ href="/services/automation"
             <h4 className="text-lg font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link,
+                <Link
 href="/about"
                   className="text-foreground/80 hover:text-primary text-sm transition-colors"
                 >
@@ -131,7 +131,7 @@ href="/about"
                 </Link>
               </li>
               <li>
-                <Link,
+                <Link
 href="/contact"
                   className="text-foreground/80 hover:text-primary text-sm transition-colors"
                 >
@@ -139,7 +139,7 @@ href="/contact"
                 </Link>
               </li>
               <li>
-                <Link,
+                <Link
 href="/blog"
                   className="text-foreground/80 hover:text-primary text-sm transition-colors"
                 >
@@ -147,7 +147,7 @@ href="/blog"
                 </Link>
               </li>
               <li>
-                <Link,
+                <Link
 href="/careers"
                   className="text-foreground/80 hover:text-primary text-sm transition-colors"
                 >
@@ -165,8 +165,8 @@ href="/careers"
 
         {/* Back to Top */}
         <div className="mt-8 flex justify-center">
-          <button,
-onClick={scrollToTop}
+          <button
+            onClick={scrollToTop}
             className="flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer"
             aria-label="Back to top"
           >
@@ -181,19 +181,19 @@ onClick={scrollToTop}
               &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link,
+              <Link
 href="/privacy"
                 className="text-foreground/80 hover:text-primary text-sm transition-colors"
               >
                 Privacy Policy
               </Link>
-              <Link,
+              <Link
 href="/terms"
                 className="text-foreground/80 hover:text-primary text-sm transition-colors"
               >
                 Terms of Service
               </Link>
-              <Link,
+              <Link
 href="/status"
                 className="text-foreground/80 hover:text-primary text-sm transition-colors"
               >

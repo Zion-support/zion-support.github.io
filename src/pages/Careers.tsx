@@ -122,8 +122,8 @@ key={index}
                             </p>
                           </div>
                           <Button,
-asChild
-                            className='w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
+asChild,
+className='w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
                           >
                             <Link href={`/careers/${job.id}`}>
                               View Details
@@ -154,8 +154,8 @@ href={`mailto:${applyEmail}`}
               .
             </p>
             <Button,
-asChild
-              className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
+asChild,
+className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
             >
               <a href={`mailto:${applyEmail}`}>Send General Application</a>
             </Button>

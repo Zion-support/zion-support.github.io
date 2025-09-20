@@ -1,9 +1,9 @@
 interface ResourceItem {
   id: string;,
-title: string;
-  description: string;,
-type: 'image' | 'video' | 'document' | 'link';
-  icon: JSX.Element;,
+title: string;,
+description: string;,
+type: 'image' | 'video' | 'document' | 'link';,
+icon: JSX.Element;,
 url: string,
 export function PartnerResources() {
   const resources: ResourceItem[] = [

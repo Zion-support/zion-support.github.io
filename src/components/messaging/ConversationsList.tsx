@@ -6,8 +6,8 @@ import { ConversationItem,, ,  } from './ConversationItem';
 import { FixedSizeList,, as,, List,, ListChildComponentProps,  } from 'react-window';
 interface ConversationsListProps {
   conversations: Conversation[];,
-activeConversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;,
+activeConversation: Conversation | null;,
+setActiveConversation: (conversation: Conversation) => void;,
 markAsRead: (conversationId: string) => Promise<void>
 export function ConversationsList({
 return (

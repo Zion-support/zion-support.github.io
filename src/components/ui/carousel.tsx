@@ -17,8 +17,8 @@ orientation?: &quot;horizontal&quot; | &quot;vertical&quot;
 }
 type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0],
-api: ReturnType<typeof useEmblaCarousel>[1]
-  scrollPrev: () => void,
+api: ReturnType<typeof useEmblaCarousel>[1],
+scrollPrev: () => void,
 scrollNext: () => void,
 canScrollPrev: boolean,
 canScrollNext: boolean;
@@ -33,10 +33,10 @@ React.HTMLAttributes<HTMLDivElement> & CarouselProps
     {
       orientation = &quot;horizontal&quot;
       opts,
-setApi
-      plugins,
-className
-      children
+setApi,
+plugins,
+className,
+children
       ...props,
 }
     ref
@@ -94,12 +94,12 @@ onSelect(api)
 value={{
           carouselRef,
 api: api,
-opts
+opts,
 orientation:
             orientation |(opts && opts.axis === &quot;y&quot; ? &quot;vertical&quot; : &quot;horizontal&quot;)
           scrollPrev,
-scrollNext
-          canScrollPrev,
+scrollNext,
+canScrollPrev,
 canScrollNext}}
       >;
         <div;
@@ -215,8 +215,8 @@ ref={ref}
 CarouselNext.displayName = &quot;CarouselNext&quot;
 export {
   type CarouselApi,
-Carousel
-  CarouselContent,
-CarouselItem
-  CarouselPrevious,
+Carousel,
+CarouselContent,
+CarouselItem,
+CarouselPrevious,
 CarouselNext}

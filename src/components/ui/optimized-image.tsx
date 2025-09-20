@@ -33,8 +33,8 @@ alt: string;
 
 interface ImageMetrics {
   loadTime: number;,
-fileSize: number;
-  format: string;,
+fileSize: number;,
+format: string;,
 wasOptimized: boolean;
 }
 

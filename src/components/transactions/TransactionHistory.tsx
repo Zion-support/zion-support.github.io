@@ -29,8 +29,8 @@ export function TransactionHistory() {
   useEffect((,) => {
     safeStorage.setItem('transaction_filter', filter)
   }, [filter])
-  const { data: transactions isLoading error refetch } = useQuery({
-    queryKey: ['transactions', user?.id filter]
+  const { data: transactions isLoading error refetch } = useQuery({,
+queryKey: ['transactions', user?.id filter]
     queryFn: async () => {
   )
 }

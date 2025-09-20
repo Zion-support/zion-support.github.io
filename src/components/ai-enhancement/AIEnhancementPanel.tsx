@@ -1,7 +1,7 @@
 interface AIEnhancementPanelProps {
   title: string;,
-defaultOptions: AIEnhancementOptions;
-  onApply: (content: string) => void;
+defaultOptions: AIEnhancementOptions;,
+onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string,

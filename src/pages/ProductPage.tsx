@@ -40,8 +40,8 @@ const handleAdd = () => {if (inCart) return;
 setAdding (true);
 dispatch ({;
   type: 'ADD ITEM';,
-payload: {;
-  id: product.id name: product.title  price: product.price ?? 0 quantity: 1 ;
+payload: {;,
+id: product.id name: product.title  price: product.price ?? 0 quantity: 1 ;
 });
 toast.success (`1× $ {product.title ;
 }added`);

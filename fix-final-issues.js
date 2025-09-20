@@ -241,8 +241,8 @@ const typeTemplate = (fileName) => "// ${fileName} types;
 export interface ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Type {
   "id": string;
   name: string;,
-createdAt: Date;
-  updatedAt: Date}
+createdAt: Date;,
+updatedAt: Date}
 export default ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Type;
 ";
 // Function to extract component name from file path;

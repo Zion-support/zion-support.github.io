@@ -30,8 +30,8 @@ className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full trans
             </div>
             {!step.completed && step.action && (
               <Button,
-asChild
-                variant="ghost"
+asChild,
+variant="ghost"
                 size="sm"
                 className="text-zion-purple hover:text-zion-cyan hover:bg-zion-blue"
               >

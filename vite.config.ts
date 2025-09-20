@@ -4,8 +4,8 @@ import path from 'node:path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-resolve: {
-    alias: {
+resolve: {,
+alias: {
       '@': path.resolve(__dirname, './src')
       '@components': path.resolve(__dirname, './src/components')
       '@pages': path.resolve(__dirname, './src/pages')
@@ -20,22 +20,22 @@ resolve: {
 postcss: false,
 }
   esbuild: {,
-loader: 'tsx'
-    include: /src\/.*\.[jt]sx?$/,
+loader: 'tsx',
+include: /src\/.*\.[jt]sx?$/,
 exclude: []
   }
   build: {,
-target: 'esnext'
-    minify: 'terser',
+target: 'esnext',
+minify: 'terser',
 sourcemap: false,
 rollupOptions: {,
-output: {
-        manualChunks: {
+output: {,
+manualChunks: {
           'react-vendor': ['react', 'react-dom']
         }
         chunkFileNames: 'js/[name]-[hash].js',
-entryFileNames: 'js/[name]-[hash].js'
-        assetFileNames: (assetInfo) => {
+entryFileNames: 'js/[name]-[hash].js',
+assetFileNames: (assetInfo) => {
           const name = assetInfo.name |'';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';

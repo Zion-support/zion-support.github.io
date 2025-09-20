@@ -7,6 +7,6 @@ import { format,  } from "date-fns";
 import { useTheme,  } from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string;,
-isUser: boolean;
-  timestamp: Date,
+isUser: boolean;,
+timestamp: Date,
 export const ChatMessage: React.FC<ChatMessageProps> = ({

@@ -40,8 +40,8 @@ isActive?: boolean,
 }
 const PaginationLink = ({
   className,
-isActive
-  size = &quot;icon&quot;
+isActive,
+size = &quot;icon&quot;
   ...props,
 }: PaginationLinkProps) => (
   <a,
@@ -121,10 +121,10 @@ className={cn("flex h-9 w-9 items-center justify-center", className)}
 PaginationEllipsis.displayName = &quot;PaginationEllipsis"
 export {
   Pagination,
-PaginationContent
-  PaginationEllipsis,
-PaginationItem
-  PaginationLink,
-PaginationButton
-  PaginationNext,
+PaginationContent,
+PaginationEllipsis,
+PaginationItem,
+PaginationLink,
+PaginationButton,
+PaginationNext,
 PaginationPrevious}

@@ -4,8 +4,8 @@ import { MapPin,  } from 'lucide-react'
 import { TalentCardSkills,  } from "./TalentCardSkills";
 interface TalentCardContentProps {
   summary: string | undefined;,
-bio: string;
-  timezone: string | undefined;,
+bio: string;,
+timezone: string | undefined;,
 skills: string[] | undefined,
 return (
     <div>

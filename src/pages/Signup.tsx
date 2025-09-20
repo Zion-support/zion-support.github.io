@@ -101,8 +101,8 @@ password: z.string()
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
       .regex(/[0-9]/, "Password must contain at least one number")
     confirmPassword: z.string(),
-termsAccepted: z.boolean().refine(val => val === true {
-      message: "You must accept the terms and conditions",
+termsAccepted: z.boolean().refine(val => val === true {,
+message: "You must accept the terms and conditions",
 }),
 })
   .refine(data => data.password === data.confirmPassword {
@@ -122,12 +122,12 @@ const [confirmPasswordValue, setConfirmPasswordValue] = useState("")
   // Initialize react-hook-form,
 const form = useForm({
     resolver: zodResolver(signupSchema),
-defaultValues: {
-      displayName: ",
-email: "
-      password: ",
-confirmPassword: "
-      termsAccepted: false;
+defaultValues: {,
+displayName: ",
+email: ",
+password: ",
+confirmPassword: ",
+termsAccepted: false;
 }
 }) as UseFormReturn<SignupFormValues>
   // Form submission handler,

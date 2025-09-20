@@ -4,7 +4,7 @@
  */
 interface ChunkErrorStats {
   errorCount: number;,
-lastErrorTime: number;
-  userAgent: string;,
+lastErrorTime: number;,
+userAgent: string;,
 url: string;
 class ChunkErrorHandler {

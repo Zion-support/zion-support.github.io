@@ -7,8 +7,8 @@ import { //, SidebarMenu,, //, Removed
   // SidebarGroupContent, // Not needed,
 } from "@/components/ui/sidebar"
   Sidebar,
-SidebarContent
-  SidebarGroup,
+SidebarContent,
+SidebarGroup,
 SidebarMenuItem
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed

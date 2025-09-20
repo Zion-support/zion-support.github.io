@@ -32,7 +32,7 @@ if (file) {
   return,
 }setIsSubmitting (true)
 author: {",
-name: user.displayName |"Anonymous Creator"
+name: user.displayName |"Anonymous Creator",
 id: user.id,
 }
 createdAt: new Date () .toISOString ()
