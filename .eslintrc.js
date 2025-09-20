@@ -2,26 +2,21 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2021: true,
-    node: true,
+    es2020: true,
+    node: true
   },
   extends: [
     "eslint:recommended"
   ],
   parserOptions: {
-    ecmaVersion: "latest",
+    ecmaVersion: 2020,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   rules: {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": [
-      "warn",
-      { argsIgnorePattern: "^_" }
-    ],
+    "no-unused-vars": "warn",
     "no-undef": "off"
   }
 };
