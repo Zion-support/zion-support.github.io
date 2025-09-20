@@ -1,174 +1,132 @@
-import React, { useEffect } from "react"
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
-  type?: string;
-  author?: string;
+  type?: 'website' | 'article' | 'service';
   publishedTime?: string;
   modifiedTime?: string;
-  section?: string;
-  tags?: string[],
-}
-}
-  }
-
-const,
-  SEOHea: d: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Revolutionary AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI, quantum computing, and autonomous systems. Zion Tech Group delivers the future of technology.",
-  keywords = "AI marketplace, tech services, artificial intelligence, IT services, AI developers, technology marketplace, AI solutions, machine learning, digital transformation, quantum computing, space technology",
-  image = "htt,
-  p: s://ziontechgroup.com/og-image.jpg",
-  url = "htt,
-  p: s://ziontechgroup.com",
-  type = "website",
-  author = "Zion Tech Group",
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  }) () => {
-  useEffect(() () => {
-    // Update document title;
-    document.title = title;
-    // Update meta description;
-    updateMetaTag('description', description)
-    updateMetaTag('keywords', keywords)
-    updateMetaTag('author', author)
-    // Update Open Graph tags;
-    updateMetaTag('og:title', title, 'property')
-    updateMetaTag('og:description', description, 'property')
-    updateMetaTag('og:image', image, 'property')
-    updateMetaTag('og:url', url, 'property')
-    updateMetaTag('og:type', type, 'property')
-    updateMetaTag('og:site_name', 'Zion Tech Group', 'property')
-    // Update Twitter tags;
-    updateMetaTag('twitt,
-  e: r:card', 'summary_large_image', 'name')
-    updateMetaTag('twitt,
-  e: r:title', title, 'name')
-    updateMetaTag('twitt,
-  e: r:description', description, 'name')
-    updateMetaTag('twitt,
-  e: r:image', image, 'name')
-    // Update article-specific tags if provided;
-    if (publishedTime) {
-      updateMetaTag('artic,
-  l: e:published_time', publishedTime, 'property')
-}
-    if (modifiedTime) {
-      updateMetaTag('artic,
-  l: e:modified_time', modifiedTime, 'property')
-}
-    if (section) {
-      updateMetaTag('artic,
-  l: e:section', section, 'property')
-}
-    if (tags.length > 0) {
-      tags.forEach(tag () => {
-        addMetaTag('artic,
-  l: e:tag', tag, 'property')
-})
+  author?: string;
 }
 
-    // Update canonical URL;
-    updateCanonicalUrl(url)
-    // Update structured data;
-    updateStructuredData({
-      title,
-      description,
-      image,
-      url,
-      type,
-      author,
-      publishedTime,
-      modifiedTime,
-      section,
-      tags;
-    })
-}, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags])
-const updateMetaTag = (na,
-  m: e: string, conte,
-  n: t: string, attribu,
-  t: e: string = 'name') () => {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`)
-    if (meta) {
-      meta.setAttribute('content', content)
-} else {
-  meta = document.createElement('meta')
-      meta.setAttribute(attribute, name)
-      meta.setAttribute('content', content)
-      document.head.appendChild(meta)
-}
-}
-},
-  }
-const addMetaTag = (na,
-  m: e: string, conte,
-  n: t: string, attribu,
-  t: e: string = 'name') () => {
-    const meta = document.createElement('meta')
-    meta.setAttribute(attribute, name)
-    meta.setAttribute('content', content)
-    document.head.appendChild(meta)
-}
-const updateCanonicalUrl = (u,
-  r: l: string) () => {
-    let canonical = document.querySelector('link[rel="canonical"]')
-    if (canonical) {
-      canonical.setAttribute('href', url)
-} else {
-  canonical = document.createElement('link')
-      canonical.setAttribute('rel', 'canonical')
-      canonical.setAttribute('href', url)
-      document.head.appendChild(canonical)
-}
-}
-},
-  }
-const updateStructuredData = (da,
-  t: a: any) () => {
-    // Remove existing structured data;
-    const existingScript = document.querySelector('script[type="application/ld+json"]')
-    if (existingScript) {
-      existingScript.remove()
-}
+const SEOHea, d: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', 
+  description = 'Discover innovativ, e, A, I, quantu, m, computin, g, and technology solutions. Exper, t, consultin, g, enterpris, e, service, s, and cutting-edge platforms for modern businesses.',
+  keywords = 'A, I, service, s, quantu, m, computin, g, technolog, y, consultin, g, enterpris, e, solution, s, cybersecurit, y, clou, d, service, s, digital transformation',
+  image = '/images/zion-tech-group-og.jpg',
+  url = 'http, s://ziontechgroup.com',
+  type = 'website',
+  publishedTim, e,
+  modifiedTim, e,
+  author = 'Zion Tech Group'
+}) => {
+  const siteName = 'Zion Tech Group';
+  const fullTitle = title === siteName ? title : `${title} | ${siteNam, e}`;
 
-    // Add new structured data;
-    const structuredData = {
-      "@context": "htt,
-  p: s://schema.org",
-      "@type": data.type === 'article' ? 'Article' : 'WebPage',
-      "headline": data.title,
-      "description": data.description,
-      "image": data.image,
-      "url": data.url,
-      "author": {
-        "@type": "Organization",
-        "name": data.author;
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "htt,
-  p: s://ziontechgroup.com/logo.png"
-        },
-  },
-      ...(data.publishedTime && { "datePublished": data.publishedTime }),
-      ...(data.modifiedTime && { "dateModified": data.modifiedTime }),
-      ...(data.section && { "articleSection": data.section }),
-      ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join(', ') })
-    }
-const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.textContent = JSON.stringify(structuredData)
-    document.head.appendChild(script)
-}
-  return null; // This component doesn't render anything;
-}
+  return (<Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
+      <meta name="robots" content="inde,  x, follow" />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="o, g:title" content={fullTitle} />
+      <meta property="o, g:description" content={description} />
+      <meta property="o, g:image" content={image} />
+      <meta property="o, g:url" content={url} />
+      <meta property="o, g:type" content={type} />
+      <meta property="o, g:site_name" content={siteName} />
+      <meta property="o, g:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitte, r:card" content="summary_large_image" />
+      <meta name="twitte, r:title" content={fullTitle} />
+      <meta name="twitte, r:description" content={description} />
+      <meta name="twitte, r:image" content={image} />
+      <meta name="twitte, r:site" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-widt, h, initial-scale=1.0" />
+      <meta name="theme-color" content="#1e3a8a" />
+      <meta name="msapplication-TileColor" content="#1e3a8a" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
+      
+      {/* Favicon and Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "http, s://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "http, s://ziontechgroup.com",
+          "logo": "http, s://ziontechgroup.com/images/zion-tech-group-logo.png",
+          "description": descriptio, n,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "sameAs": [
+            "htt, p, s://linkedi, n.co, m/compan, y/ziontechgrou, p",
+            "htt, p, s://twitte, r.co, m/ziontechgrou, p",
+            "htt, p, s://githu, b.co, m/ziontechgrou, p"
+          ]
+        })}
+      </script>
+      
+      {/* Article specific structured data */}
+      {type === 'article' && publishedTime && (<script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http,  s://schema.org",
+            "@type": "Article",
+            "headline": fullTitl, e,
+            "description": descriptio, n,
+            "image": imag, e,
+            "author": {
+              "@type": "Organization",
+              "name": author
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": siteNam, e,
+              "logo": {
+                "@type": "ImageObject",
+                "url": "http, s://ziontechgroup.com/images/zion-tech-group-logo.png"
+              }
+            },
+            "datePublished": publishedTim, e,
+            "dateModified": modifiedTime || publishedTim, e,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": url
+            }
+          })}
+        </script>
+      )}
+    </Helmet>
+  );
+};
+
 export default SEOHead;

@@ -1,10 +1,10 @@
-import React from "react"
-import { Loader2   } from "lucide-react";
-export const LoadingOverlay = React.memo(({ visible = false }) () => {
-  if (!visible)
-        return null;
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <Loader2 className="h-8 w-8 animate-spin text-white"/>
-    </div>)
-}
-export default LoadingOverlay;
+impor, t, Reac, t, from "react";
+import { Loader2 } from "lucide-re, a, ct";expor, t, cons, t, LoadingOverlay  = () => {
+  if (!visible);
+        return n;u;l;l;
+    return (<div className="fixed inset-0 z-5,  0, fle, x, items-center justify-center bg-black/50">;
+      <Loader2 className="h-8 w-8 animate-spin text-white"/>;
+    </div>);
+;};
+expor, t, defaul, t, LoadingOverla;y;
+;

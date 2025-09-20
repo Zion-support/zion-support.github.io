@@ -1,427 +1,422 @@
-import React from "react"
-import { motion   } from "framer-motion";
-import { Link   } from "react-router-dom";
-import {
-  Brain;
-  Shield;
-  Rocket;
-  Lock;
-  Cpu;
-  Code;
-  Users;
-  Globe;
-  Heart;
-  TrendingUp;
-  Zap;
-  Database;
-  Network;
-  Server;
-  Cloud;
-  FileText;
-  BarChart3;
-  MessageCircle;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Star;
-  CheckCircle;
-  Clock;
-}
-}
- } from "lucide-react";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES   } from "@/data/innovativeMicroSaasServices2025";
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { 
+  Za, p, 
+  Shiel, d, 
+  Clou, d, 
+  Databas, e, 
+  Cod, e, 
+  ShoppingCar, t, 
+  BarChart, 3, 
+  Link a, s, LinkIco, n,
+  Networ, k,
+  Monito, r,
+  Smartphon, e,
+  CheckCircl, e,
+  Sta, r,
+  Cloc, k,
+  User, s,
+  Globe
+} from "lucide-react";
+
+// Service categories with detailed information
+const serviceCategories = [
+  {
+    tit, l, e: "A, I Service, s",
+    descripti, o, n: "Cuttin, g-edg, e artificia, l intelligenc, e solution, s tha, t transfor, m busines, s operation, s",
+    ic, o, n: <Za, p classNam, e="w-8 h-8 tex, t-zio, n-cya, n" />,
+    servic, e, s: [
+      {
+        na, m, e: "A, I Chatbo, t Builde, r Pr, o",
+    pri, c, e: "$29, 9",
+        featur, e, s: ["N, o-cod, e platfor, m", "Mult, i-languag, e suppor, t", "Analytic, s dashboar, d", "Platfor, m integratio, n"],
+        benefit, s: ["2, 4/7 custome, r suppor, t", "Reduce, d respons, e tim, e", "Scalabl, e automatio, n", "Cos, t-effectiv, e solutio, n"]
+      },
+      {
+        nam, e: "AI Content Generator Suite",
+    pric, e: "$199",
+        feature, s: ["SE, O optimizatio, n", "Ton, e adjustmen, t", "Plagiaris, m detectio, n", "10, 0+ conten, t piece, s/mont, h"],
+        benefit, s: ["Faste, r conten, t creatio, n", "Improve, d SE, O ranking, s", "Consisten, t bran, d voic, e", "Tim, e saving, s"]
+      },
+      {
+        nam, e: "AI Image Generator Pro",
+    pric, e: "$399",
+        feature, s: ["Custo, m styl, e trainin, g", "4, K resolutio, n", "Commercia, l licensin, g", "Desig, n too, l integratio, n"],
+        benefit, s: ["Uniqu, e visua, l conten, t", "Bran, d consistenc, y", "Cos, t-effectiv, e desig, n", "Rapi, d prototypin, g"]
+      }
+    ],
+    marketPric, e: "$150-500",
+    deliveryTim, e: "Immediate",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "Business Solutions",
+    descriptio, n: "Data-driven insights and analytics to drive business growth and decision-making",
+    ico, n: <BarChart3 className="w-8 h-8 text-zion-purple" />,
+    service, s: [
+      {
+        na, m, e: "Busines, s Intelligenc, e Dashboar, d",
+    pri, c, e: "$59, 9",
+        featur, e, s: ["Rea, l-tim, e analytic, s", "5, 0+ dat, a source, s", "Custo, m dashboard, s", "Automate, d reportin, g"],
+        benefit, s: ["Dat, a-drive, n decision, s", "Performanc, e insight, s", "Operationa, l efficienc, y", "Competitiv, e advantag, e"]
+      },
+      {
+        nam, e: "Predictive Analytics Engine",
+    pric, e: "$799",
+        feature, s: ["Sale, s forecastin, g", "Custome, r behavio, r analysi, s", "Ris, k assessmen, t", "M, L model, s"],
+        benefit, s: ["Futur, e plannin, g", "Custome, r insight, s", "Ris, k mitigatio, n", "Revenu, e optimizatio, n"]
+      }
+    ],
+    marketPric, e: "$500-1500",
+    deliveryTim, e: "1-3 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "Cybersecurity",
+    descriptio, n: "Comprehensive security solutions to protect your digital assets and ensure compliance",
+    ico, n: <Shield className="w-8 h-8 text-zion-red" />,
+    service, s: [
+      {
+        na, m, e: "2, 4/7 Cybersecurit, y Monitorin, g",
+    pri, c, e: "$89, 9",
+        featur, e, s: ["Threa, t detectio, n", "SIE, M integratio, n", "Complianc, e reportin, g", "2, 4/7 SO, C suppor, t"],
+        benefit, s: ["Continuou, s protectio, n", "Complianc, e assuranc, e", "Inciden, t respons, e", "Peac, e o, f min, d"]
+      },
+      {
+        nam, e: "Penetration Testing Service",
+    pric, e: "$2,499",
+        feature, s: ["We, b ap, p testin, g", "Networ, k securit, y", "Mobil, e ap, p testin, g", "Complianc, e documentatio, n"],
+        benefit, s: ["Vulnerabilit, y identificatio, n", "Securit, y validatio, n", "Complianc, e readines, s", "Ris, k assessmen, t"]
+      }
+    ],
+    marketPric, e: "$800-3000",
+    deliveryTim, e: "Immediate - 2 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "Cloud Services",
+    descriptio, n: "Scalable cloud solutions for modern business infrastructure and digital transformation",
+    ico, n: <Cloud className="w-8 h-8 text-zion-blue" />,
+    service, s: [
+      {
+        na, m, e: "Clou, d Migratio, n Exper, t",
+    pri, c, e: "$3,99, 9",
+        featur, e, s: ["AW, S/Azur, e/GC, P", "Architectur, e desig, n", "Dat, a migratio, n", "9, 9.9% uptim, e guarante, e"],
+        benefit, s: ["Reduce, d cost, s", "Improve, d scalabilit, y", "Enhance, d securit, y", "Bette, r performanc, e"]
+      },
+      {
+        nam, e: "DevOps Automation Platform",
+    pric, e: "$699",
+        feature, s: ["C, I/C, D pipeline, s", "Kubernete, s suppor, t", "Infrastructur, e a, s cod, e", "Monitorin, g & alertin, g"],
+        benefit, s: ["Faste, r deployment, s", "Reduce, d error, s", "Tea, m productivit, y", "Cos, t optimizatio, n"]
+      }
+    ],
+    marketPric, e: "$700-5000",
+    deliveryTim, e: "1-4 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "Data Services",
+    descriptio, n: "Enterprise-grade data solutions fo, r, analytic, s, warehousin, g, and business intelligence",
+    ico, n: <Database className="w-8 h-8 text-zion-green" />,
+    service, s: [
+      {
+        na, m, e: "Dat, a Warehous, e Solutio, n",
+    pri, c, e: "$1,29, 9",
+        featur, e, s: ["ET, L pipeline, s", "Dat, a modelin, g", "B, I integratio, n", "Dat, a governanc, e"],
+        benefit, s: ["Centralize, d dat, a", "Bette, r insight, s", "Improve, d reportin, g", "Dat, a qualit, y"]
+      },
+      {
+        nam, e: "Database Performance Optimization",
+    pric, e: "$899",
+        feature, s: ["Quer, y optimizatio, n", "Indexin, g strategie, s", "Performanc, e monitorin, g", "Capacit, y plannin, g"],
+        benefit, s: ["Faste, r querie, s", "Bette, r performanc, e", "Reduce, d cost, s", "Improve, d use, r experienc, e"]
+      }
+    ],
+    marketPric, e: "$900-2000",
+    deliveryTim, e: "1-3 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "Development",
+    descriptio, n: "Custom software development solutions fo, r, we, b, mobil, e, and enterprise applications",
+    ico, n: <Code className="w-8 h-8 text-zion-orange" />,
+    service, s: [
+      {
+        na, m, e: "Progressiv, e We, b Ap, p Developmen, t",
+    pri, c, e: "$2,99, 9",
+        featur, e, s: ["Offlin, e functionalit, y", "Pus, h notification, s", "Ap, p-lik, e experienc, e", "SE, O optimizatio, n"],
+        benefit, s: ["Bette, r use, r engagemen, t", "Improve, d performanc, e", "Cros, s-platfor, m compatibilit, y", "Enhance, d SE, O"]
+      },
+      {
+        nam, e: "Cross-Platform Mobile App",
+    pric, e: "$4,999",
+        feature, s: ["Reac, t Nativ, e/Flutte, r", "U, I/U, X desig, n", "Backen, d integratio, n", "Ap, p stor, e deploymen, t"],
+        benefit, s: ["Cos, t-effectiv, e developmen, t", "Faste, r tim, e t, o marke, t", "Nativ, e performanc, e", "Eas, y maintenanc, e"]
+      },
+      {
+        nam, e: "Custom API Development",
+    pric, e: "$1,999",
+        feature, s: ["RES, T/GraphQ, L API, s", "Documentatio, n", "Testin, g", "Develope, r porta, l"],
+        benefit, s: ["Syste, m integratio, n", "Scalabl, e architectur, e", "Develope, r experienc, e", "AP, I monetizatio, n"]
+      }
+    ],
+    marketPric, e: "$2000-8000",
+    deliveryTim, e: "3-8 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "E-commerce",
+    descriptio, n: "Complete e-commerce solutions for online businesses and digital marketplaces",
+    ico, n: <ShoppingCart className="w-8 h-8 text-zion-pink" />,
+    service, s: [
+      {
+        na, m, e: "E-commerc, e Platfor, m Developmen, t",
+    pri, c, e: "$5,99, 9",
+        featur, e, s: ["Paymen, t processin, g", "Inventor, y managemen, t", "Orde, r fulfillmen, t", "CR, M integratio, n"],
+        benefit, s: ["Increase, d sale, s", "Bette, r custome, r experienc, e", "Operationa, l efficienc, y", "Scalabl, e growt, h"]
+      }
+    ],
+    marketPric, e: "$5000-15000",
+    deliveryTim, e: "8-10 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "Marketing",
+    descriptio, n: "AI-powered marketing automation and analytics solutions for business growth",
+    ico, n: <BarChart3 className="w-8 h-8 text-zion-yellow" />,
+    service, s: [
+      {
+        na, m, e: "Marketin, g Automatio, n Platfor, m",
+    pri, c, e: "$79, 9",
+        featur, e, s: ["Emai, l marketin, g", "Lea, d scorin, g", "Campaig, n managemen, t", "A, I personalizatio, n"],
+        benefit, s: ["Increase, d conversion, s", "Bette, r lea, d qualit, y", "Tim, e saving, s", "RO, I improvemen, t"]
+      }
+    ],
+    marketPric, e: "$500-1500",
+    deliveryTim, e: "2-3 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "Integration",
+    descriptio, n: "Seamless third-party integrations and API synchronization services",
+    ico, n: <LinkIcon className="w-8 h-8 text-zion-indigo" />,
+    service, s: [
+      {
+        na, m, e: "Thir, d-Part, y Integratio, n Servic, e",
+    pri, c, e: "$1,49, 9",
+        featur, e, s: ["Paymen, t gateway, s", "CR, M system, s", "Marketin, g tool, s", "Custo, m webhook, s"],
+        benefit, s: ["Syste, m connectivit, y", "Dat, a consistenc, y", "Workflo, w automatio, n", "Reduce, d manua, l wor, k"]
+      }
+    ],
+    marketPric, e: "$1000-3000",
+    deliveryTim, e: "2-3 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "Blockchain",
+    descriptio, n: "Next-generation blockchain and Web3 development solutions",
+    ico, n: <Network className="w-8 h-8 text-zion-teal" />,
+    service, s: [
+      {
+        na, m, e: "Smar, t Contrac, t Developmen, t",
+    pri, c, e: "$3,99, 9",
+        featur, e, s: ["Ethereu, m/Polygo, n/Solan, a", "Securit, y auditin, g", "DeF, i protocol, s", "NF, T contract, s"],
+        benefit, s: ["Decentralize, d solution, s", "Transparen, t transaction, s", "Automate, d executio, n", "Innovatio, n leadershi, p"]
+      },
+      {
+        nam, e: "Web3 DApp Development",
+    pric, e: "$5,999",
+        feature, s: ["Walle, t integratio, n", "Blockchai, n interactio, n", "Cros, s-chai, n compatibilit, y", "Use, r-friendl, y interface, s"],
+        benefit, s: ["Futur, e-proo, f technolog, y", "Use, r ownershi, p", "Globa, l accessibilit, y", "Reduce, d intermediarie, s"]
+      }
+    ],
+    marketPric, e: "$4000-10000",
+    deliveryTim, e: "4-8 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "IoT",
+    descriptio, n: "Internet of Things platform development and hardware prototyping services",
+    ico, n: <Monitor className="w-8 h-8 text-zion-lime" />,
+    service, s: [
+      {
+        na, m, e: "Io, T Platfor, m Developmen, t",
+    pri, c, e: "$4,99, 9",
+        featur, e, s: ["Devic, e managemen, t", "Rea, l-tim, e monitorin, g", "Edg, e computin, g", "Clou, d integratio, n"],
+        benefit, s: ["Connecte, d device, s", "Dat, a insight, s", "Operationa, l efficienc, y", "Innovatio, n opportunitie, s"]
+      }
+    ],
+    marketPric, e: "$4000-12000",
+    deliveryTim, e: "8-10 weeks",
+    lin, k: "/micro-saas-services"
+  },
+  {
+    titl, e: "Hardware",
+    descriptio, n: "Rapid prototyping and hardware development services for IoT and embedded systems",
+    ico, n: <Smartphone className="w-8 h-8 text-zion-gray" />,
+    service, s: [
+      {
+        na, m, e: "Hardwar, e Prototypin, g Servic, e",
+    pri, c, e: "$2,99, 9",
+        featur, e, s: ["3, D printin, g", "PC, B desig, n", "Componen, t sourcin, g", "Desig, n validatio, n"],
+        benefit, s: ["Faste, r developmen, t", "Cos, t reductio, n", "Desig, n validatio, n", "Marke, t testin, g"]
+      }
+    ],
+    marketPric, e: "$2000-8000",
+    deliveryTim, e: "4-6 weeks",
+    lin, k: "/micro-saas-services"
+  }
+];
+
+// Why choose Zion Tech Group
+const whyChooseUs = [
+  {
+    tit, l, e: "Exper, t Tea, m",
+    descripti, o, n: "Certifie, d professional, s wit, h 1, 0+ year, s o, f experienc, e",
+    ic, o, n: <User, s classNam, e="w-6 h-6 tex, t-zio, n-cya, n" />
+  },
+  {
+    tit, l, e: "Globa, l Reac, h",
+    descripti, o, n: "Servin, g client, s worldwid, e wit, h 2, 4/7 suppor, t",
+    ic, o, n: <Glob, e classNam, e="w-6 h-6 tex, t-zio, n-purpl, e" />
+  },
+  {
+    tit, l, e: "Fas, t Deliver, y",
+    descripti, o, n: "Quic, k turnaroun, d time, s withou, t compromisin, g qualit, y",
+    ic, o, n: <Cloc, k classNam, e="w-6 h-6 tex, t-zio, n-gree, n" />
+  },
+  {
+    tit, l, e: "Prove, n Result, s",
+    descripti, o, n: "Trac, k recor, d o, f successfu, l projec, t deliverie, s",
+    ic, o, n: <Sta, r classNam, e="w-6 h-6 tex, t-zio, n-yello, w" />
+  }
+];
+
 export function ServicesOverview() {
-  const serviceCategories = [
-  {
-  id: 'ai-analytics',na,
-  m: e: 'AI & Analytics',ic,
-  o: n: Brain,col,
-  o: r: 'from-zion-cyan to-zion-purple',descripti,
-  o: n: 'Cutting-edge artificial intelligence and advanced analytics solutions',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('AI'))
-    },
-  {
-  id: 'quantum-computing',na,
-  m: e: 'Quantum Computing',ic,
-  o: n: Rocket,col,
-  o: r: 'from-zion-blue to-zion-cyan',descripti,
-  o: n: 'Next-generation quantum computing and quantum machine learning',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Quantum'))
-    },
-  {
-  id: 'blockchain',na,
-  m: e: 'Blockchain & Web3',ic,
-  o: n: Lock,col,
-  o: r: 'from-zion-purple to-zion-blue',descripti,
-  o: n: 'Decentralized solutions and blockchain technology platforms',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Blockchain'))
-    },
-  {
-  id: 'iot-edge',na,
-  m: e: 'IoT & Edge Computing',ic,
-  o: n: Cpu,col,
-  o: r: 'from-zion-green to-zion-cyan',descripti,
-  o: n: 'Internet of Things and edge computing solutions',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('IoT'))
-    },
-  {
-  id: 'cybersecurity',na,
-  m: e: 'Cybersecurity',ic,
-  o: n: Shield,col,
-  o: r: 'from-zion-purple to-zion-red',descripti,
-  o: n: 'Advanced security and threat protection solutions',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Cybersecurity'))
-    },
-  {
-  id: 'digital-twin',na,
-  m: e: 'Digital Twin',ic,
-  o: n: Server,col,
-  o: r: 'from-zion-blue to-zion-purple',descripti,
-  o: n: 'Virtual replicas and simulation platforms',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Digital Twin'))
-    },
-  {
-  id: 'sustainability',na,
-  m: e: 'Sustainability',ic,
-  o: n: Globe,col,
-  o: r: 'from-zion-green to-zion-blue',descripti,
-  o: n: 'Environmental monitoring and sustainability solutions',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Sustainability'))
-    },
-  {
-  id: 'hr-talent',na,
-  m: e: 'HR & Talent',ic,
-  o: n: Users,col,
-  o: r: 'from-zion-pink to-zion-purple',descripti,
-  o: n: 'Human resources and talent management platforms',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('HR'))
-    },
-  {
-  id: 'content-creation',na,
-  m: e: 'Content Creation',ic,
-  o: n: Code,col,
-  o: r: 'from-zion-orange to-zion-purple',descripti,
-  o: n: 'AI-powered content generation and management',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Content'))
-    },
-  {
-  id: 'legal-tech',na,
-  m: e: 'Legal Tech',ic,
-  o: n: FileText,col,
-  o: r: 'from-zion-purple to-zion-cyan',descripti,
-  o: n: 'Legal technology and compliance solutions',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Legal'))
-    },
-  {
-  id: 'fintech',na,
-  m: e: 'FinTech',ic,
-  o: n: BarChart3,col,
-  o: r: 'from-zion-green to-zion-blue',descripti,
-  o: n: 'Financial technology and advisory platforms',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('FinTech'))
-    },
-  {
-  id: 'healthcare-ai',na,
-  m: e: 'Healthcare AI',ic,
-  o: n: Heart,col,
-  o: r: 'from-zion-pink to-zion-purple',descripti,
-  o: n: 'Healthcare artificial intelligence solutions',servic,
-  e: s: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))
-    },
-  ]
   return (
-    <div className="py-20 bg-futuristic relative overflow-hidden">
-      {/* Background effects */},
-  }
-      <div className="absolute inset-0 opacity-10">
-        <div className="cyber-grid w-full h-full"></div>
-      </div>
-
-      <div className="container-responsive relative z-10">
-        {/* Header */},
-  }
-        <motion.div;
-          className="className="text-center mb-16";"
-          initial={ opaci,
-  t: y: 0, y: 20 },
-  }
-          whileInView={ opaci,
-  t: y: 1, y: 0 },
-  }
-          transition={ durati,
-  o: n: 0.6 },
-  }
-        >
-          <h1 className="heading-responsive font-bold mb-6">
-            <span className="text-gradient neon-text-cyan">Comprehensive Technology</span>
-            <br />
-            <span className="text-white">Services Portfolio</span>
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms.
-            From cutting-edge quantum computing to practical business applications, we provide the technology;
-            solutions your business needs to thrive in the digital age.
+    <div className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl m,  d:text-4xl font-bold text-white mb-4">
+            Comprehensive Technology Services
+          </h2>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            Discover our complete range of professional services designed to accelerate your business growth and digital transformation
           </p>
-        </motion.div>
+        </div>
 
-        {/* Service Categories Grid */},
-  }
-        <div className="grid grid-cols-1,
-  m: d: grid-cols-2,
-  l: g:grid-cols-3 x,
-  l:grid-cols-4 gap-6 mb-16">
-          {serviceCategories.map((category, index) => (
-  <motion.div;
-              key={category.id},
-  }
-              className="className="group";"
-              initial={ opaci,
-  t: y: 0, y: 30 },
-  }
-              whileInView={ opaci,
-  t: y: 1, y: 0 },
-  }
-              transition={ durati,
-  o: n: 0.6, del,
-  a: y: index * 0.1 },
-  }
-              whileHover={ y: -10 },
-  }
-            >
-              <Link to={`/services/${category.id}`} className="block">
-                <div className="card-futuristic h-full,
-  hove: r:border-zion-cyan/50 transition-all duration-300">
-                  {/* Category Icon */},
-  }
-                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hov,
-  e: r:scale-110 transition-transform duration-300`}>
-                    <category.icon className="w-8 h-8 text-white" />
-                  </div>
-
-                  {/* Category Info */},
-  }
-                  <h3 className="text-lg font-bold text-white mb-2 group-hov,
-  e: r:text-zion-cyan transition-colors duration-300 text-center">
-                    {category.name},
-  }
-                  </h3>
-
-                  <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">
-                    {category.description},
-  }
-                  </p>
-
-                  {/* Service Count */},
-  }
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-zion-cyan mb-1">
-                      {category.services.length},
-  }
-                    </div>
-                    <div className="text-xs text-zion-slate-light">
-                      Services Available;
-                    </div>
-                  </div>
-
-                  {/* Hover Arrow */},
-  }
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hov,
-  e: r:opacity-100 transition-opacity duration-300">
-                    <ArrowRight className="w-5 h-5 text-zion-cyan" />
-                  </div>
+        {/* Service Categories Grid */}
+        <div className="grid grid-cols-1 l, g:grid-cols-2 x, l:grid-cols-3 gap-8 mb-16">
+          {serviceCategories.map((categor, y, index) => (<div key={index} className="bg-zion-blue rounded-lg p-6 border border-zion-blue-light hove,  r:border-zion-cyan/50 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="mr-4">
+                  {category.icon}
                 </div>
+                <div>
+                  <h3 className="text-white text-xl font-bold">{category.title}</h3>
+                  <p className="text-zion-slate-light text-sm">{category.description}</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 mb-6">
+                {category.services.map((servic, e, serviceIndex) => (<div key={serviceIndex} className="bg-zion-blue-dark rounded p-4">
+                    <div className="flex justify-between items-start mb-3">
+                      <h4 className="text-white font-semibold">{service.name}</h4>
+                      <span className="text-zion-cyan font-bold">{service.price}</span>
+                    </div>
+                    
+                    <div className="mb-3">
+                      <h5 className="text-zion-slate-light text-sm font-medium mb-2">Key Feature,  s:</h5>
+                      <ul className="space-y-1">
+                        {service.features.map((featur, e, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light text-sm">
+                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h5 className="text-zion-slate-light text-sm font-medium mb-2">Benefit,  s:</h5>
+                      <ul className="space-y-1">
+                        {service.benefits.map((benefi, t, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-zion-slate-light text-sm">
+                            <Star className="w-4 h-4 text-zion-purple mr-2 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="flex items-center justify-between mb-4 text-sm">
+                <div className="text-zion-slate-light">
+                  <span className="font-medium">Market Pric,  e:</span> {category.marketPrice}
+                </div>
+                <div className="text-zion-slate-light">
+                  <span className="font-medium">Deliver, y:</span> {category.deliveryTime}
+                </div>
+              </div>
+              
+              <Link to={category.link}>
+                <Button className="w-full bg-zion-cyan hove, r:bg-zion-cyan-dark text-white">
+                  View {category.title}
+                </Button>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        {/* Featured Services */},
-  }
-        <motion.div;
-          className="className="mb-16";"
-          initial={ opaci,
-  t: y: 0, y: 20 },
-  }
-          whileInView={ opaci,
-  t: y: 1, y: 0 },
-  }
-          transition={ durati,
-  o: n: 0.6 },
-  }
-        >
-          <h2 className="heading-responsive font-bold mb-8 text-center">
-            <span className="text-gradient neon-text-purple">Featured Services</span>
-          </h2>
-
-          <div className="grid grid-cols-1,
-  l: g:grid-cols-2 gap-8">
-            {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
-  <motion.div;
-                key={service.id},
-  }
-                className="className="card-futuristic group";"
-                initial={ opaci,
-  t: y: 0, x: index % 2 === 0 ? -30 : 30 },
-  }
-                whileInView={ opaci,
-  t: y: 1, x: 0 },
-  }
-                transition={ durati,
-  o: n: 0.6, del,
-  a: y: index * 0.1 },
-  }
-                whileHover={ y: -5 },
-  }
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2 group-hov,
-  e: r:text-zion-cyan transition-colors duration-300">
-                      {service.title},
-  }
-                    </h3>
-                    <p className="text-zion-slate-light leading-relaxed mb-3">
-                      {service.description},
-  }
-                    </p>
-                  </div>
-                  <div className="text-right ml-4">
-                    <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</div>
-                    <div className="text-sm text-zion-slate-light">per month</div>
-                  </div>
+        {/* Why Choose Us */}
+        <div className="bg-zion-blue rounded-lg p-8 mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl m, d:text-3xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h3>
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+              We combine technical expertise with business acumen to deliver solutions that drive real results
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-6">
+            {whyChooseUs.map((ite,  m, index) => (<div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  {item.icon}
                 </div>
-
-                <div className="space-y-3 mb-4">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-zion-cyan font-medium">{service.category}</span>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-  service.innovationLevel === 'Cutting-edge'
-                        ? 'bg-zion-cyan/20 text-zion-cyan'
-                        : 'bg-zion-purple/20 text-zion-purple'
-}`}>
-                      {service.innovationLevel},
-  }
-                    </span>
-                  </div>
-
-                  <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center gap-1 text-zion-green">
-                      <TrendingUp className="w-4 h-4" />
-                      <span>R,
-  O: I: {service.roi}</span>
-                    </div>
-                    <div className="text-zion-slate-light">
-                      Mark,
-  e: t: {service.marketPrice},
-  }
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between pt-4 border-t border-zion-cyan/20">
-                  <div className="flex items-center gap-4 text-sm text-zion-slate-light">
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{service.estimatedDelivery}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-zion-cyan" />
-                      <span>{service.supportLevel}</span>
-                    </div>
-                  </div>
-
-                  <Link;
-                    to={`/services/${service.id}`}
-                    className="className="btn-futuristic px-4 py-2 text-sm";"
-                  >
-                    Learn More;
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-              </motion.div>
+                <h4 className="text-white text-lg font-semibold mb-2">{item.title}</h4>
+                <p className="text-zion-slate-light">{item.description}</p>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        {/* CTA Section */},
-  }
-        <motion.div;
-          className="className="text-center";"
-          initial={ opaci,
-  t: y: 0, y: 30 },
-  }
-          whileInView={ opaci,
-  t: y: 1, y: 0 },
-  }
-          transition={ durati,
-  o: n: 0.8 },
-  }
-        >
-          <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">
-            <h2 className="heading-responsive font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Get in touch with our technology experts to discuss your specific needs and discover;
-              how our innovative solutions can drive your business forward.
-            </p>
-
-            <div className="flex flex-col,
-  s: m: flex-row gap-4 justify-center mb-8">
-              <Link;
-                to="/contact"
-                className="className="btn-futuristic px-8 py-4 text-lg";"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Get Free Consultation;
-              </Link>
-
-              <a;
-                href="t,
-  e: l:+13024640950"
-                className="className="btn-neon px-8 py-4 text-lg";"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call No,
-  w: +1 302 464 0950;
-              </a>
-            </div>
-
-            {/* Contact Info Grid */},
-  }
-            <div className="grid grid-cols-1,
-  m: d: grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20">
-                <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
-                <p className="font-medium text-white mb-1">Address</p>
-                <p className="text-sm text-zion-slate-light">364 E Main St STE 1008</p>
-                <p className="text-sm text-zion-slate-light">Middletown DE 19709</p>
-              </div>
-
-              <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-purple/20">
-                <Mail className="w-8 h-8 text-zion-purple mx-auto mb-2" />
-                <p className="font-medium text-white mb-1">Email</p>
-                <a href="mail,
-  t: o:kleber@ziontechgroup.com" className="text-zion-cyan,
-  hove: r:text-zion-purple transition-colors duration-300 text-sm">
-                  kleber@ziontechgroup.com;
-                </a>
-              </div>
-
-              <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-blue/20">
-                <Globe className="w-8 h-8 text-zion-blue mx-auto mb-2" />
-                <p className="font-medium text-white mb-1">Website</p>
-                <a href="htt,
-  p: s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hove,
-  r:text-zion-blue transition-colors duration-300 text-sm">
-                  ziontechgroup.com;
-                </a>
-              </div>
-            </div>
+        {/* Call to Action */}
+        <div className="text-center">
+          <h3 className="text-2xl m,  d:text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h3>
+          <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+            Contact us today for a free consultation and discover how our services can transform your business
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/micro-saas-services">
+              <Button size="lg" className="bg-zion-cyan hove, r:bg-zion-cyan-dark text-white px-8 py-4 text-lg">
+                <Zap className="w-5 h-5 mr-2" />
+                Explore All Services
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hove, r:bg-zion-cyan/10 px-8 py-4 text-lg">
+                Contact Us
+              </Button>
+            </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
-  )
+  );
 }

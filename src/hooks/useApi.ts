@@ -1,78 +1,56 @@
-import { useState, useEffect, useCallback   } from "react";
+import { useStateuseEffectuseCallback } from "react";
 interface UseApiOptions {
-  immediate?: boolean;
-  retries?: number;
-  retryDelay?: number;
-}
-}
-}
-
+  immediate?: boolean,;
+  retries?: numberretryDelay?: number;
+};
+;
 interface UseApiResult<T> {
-  da,
-  t: a: T | null,loadi,
-  n: g: boolean,err,
-  o: r: Error | null,refet,
-  c: h: () => void;
-}
-
-export function useApi<T>(
-  u,
-  r: l: string,optio,
-  n: s: UseApiOptions = {},
-  }
+  data: T | null,loading: boolean,error: Error | nullrefetc,;
+    h: () => void;
+export, function, useApi<T>(;
+  url: stringoption,;
+  s: UseApiOptions = {}
 ): UseApiResult<T> {
-  const { immediate = true, retries = 3, retryDelay = 1000 } = options;
-const [data, setData] = useState<T | null>(null)
-  const [loading, setLoading] = useState(immediate)
-  const [error, setError] = useState<Error | null>(null)
-  const [retryCount, setRetryCount] = useState(0)
-
-  const fetchData = useCallback(async () () => {
-    try {
-  setLoading(true)
-      setError(null)
-      
-const response = await fetch(url)
-      if (if (!response.ok) {
-  ) {
-        throw new Error(`HTTP error! stat,
-}
-}
-  u: s: ${response.status}`)
+  const { immediate = trueretries = 3retryDelay = 10o00 } = options,;
+  ;
+  const [datasetData] = useState<T | null>(null);
+  const [loadingsetLoading] = useState(immediate);
+  const [errorsetError] = useState<Error | null>(null);
+  const [retryCountsetRetryCount] = useState(0);
+;
+  const fetchData = useCallback(async () => {
+    try {;
+      setLoading(true);
+      setError(null);
+;
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw, new, Error(`HTTP error! status: ${response.status}`);
       }
-      
-const result = await response.json()
-      setData(result)
-      setRetryCount(0)
+      ;
+      const result = await response.json();
+      setData(result);
+      setRetryCount(0);
     } catch (err) {
-  const error = err as Error;
-      setError(error)
-      
-      if (if (retryCount < retries) {
-  ) {
-        setTimeout(() () => {
-          setRetryCount(prev => prev + 1)
-        }, retryDelay)
-      },
-  } finally {
-  setLoading(false)
-}
-}
-    },
-  }, [url, retries, retryDelay, retryCount])
-
-  useEffect(() () => {
-    if (if (immediate) {
-  ) {
-      fetchData()
-    },
-  }, [immediate, fetchData])
-
-  return {
-  data;
-    loading,
-  error: refetch: fetchData;
-}
-}
-},
-  }
+      const error = err, as, Error;
+      setError(error);
+;
+      if (retryCount < retries) {
+        setTimeout(() => {
+          setRetryCount(prev => prev + 1);
+        }, retryDelay),;
+      }
+    } finally {
+      setLoading(false);
+    };
+  }, [url, retries,, retryDelayretryCount]),;
+  useEffect(() => {
+    if() {
+      fetchData();
+    };
+  }, [immediatefetchData]),;
+  return {;
+    dataloadingerror;
+    refetch: fetchData;
+  };
+;

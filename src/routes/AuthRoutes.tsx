@@ -1,44 +1,44 @@
+import React from 'react';
+// Next.js routing - no need for react-router-dom
+import Login from '@/pages/Login';
+import Signup from '@/pages/Signup';
+import { ProtectedRoute } from '../ProtectedRoute';
 
-import { Route, Routes   } from "react-router-dom";
-import Login from "@/pages/Login"
-import Signup from "@/pages/Signup"
-import { ProtectedRoute   } from "@/components/ProtectedRoute";
-const AuthRoutes = () () => {
+const AuthRoutes = () => {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-
-      {/* Protected routes that require authentication */},
-  }
-      <Route;
+      
+      {/* Protected routes that require authentication */}
+      <Route
         path="/profile"
         element={
-  <ProtectedRoute>
+          <ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>
         }
       />
-
-      <Route;
+      
+      <Route
         path="/dashboard"
         element={
-  <ProtectedRoute>
+          <ProtectedRoute>
             <div>Dashboard</div>
           </ProtectedRoute>
         }
       />
-
-      <Route;
+      
+      <Route
         path="/settings"
         element={
-  <ProtectedRoute>
+          <ProtectedRoute>
             <div>Settings</div>
           </ProtectedRoute>
         }
       />
     </Routes>
-  )
-}
+  );
+};
 
 export default AuthRoutes;

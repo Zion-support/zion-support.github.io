@@ -1,144 +1,132 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Send, CheckCircle, AlertCircle, User, Mail, Building, DollarSign, MessageSquare } from "lucide-react";
+impor, t, Reac, t, { useState } from 'react';
+import { Button } from './ui/Button';
 
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  service: string;
-  message: string;
-  budget: string;
+  firstNam, e: string;
+  lastNam, e: string;
+  emai, l: string;
+  compan, y: string;
+  phon, e: string;
+  servic, e: string;
+  messag, e: string;
 }
 
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    service: '',
-    message: '',
-    budget: ''
+const ContactFor, m: React.FC = () => {
+  const [formDa,  t, a, setFormDa, t, a] = useState<FormData>({
+    firstNam, e: '',
+    lastNam, e: '',
+    emai, l: '',
+    compan, y: '',
+    phon, e: '',
+    servic, e: '',
+    messag, e: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errors, setErrors] = useState<Partial<FormData>>({});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
-    if (errors[name as keyof FormData]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
-    }
-  };
+  const [isSubmitti, n, g, setIsSubmitti, n, g] = useState(false);
+  const [submitStat,  u, s, setSubmitStat, u, s] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const validateForm = (): boolean => {
-    const newErrors: Partial<FormData> = {};
-    
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
-    if (!formData.email.trim()) newErrors.email = 'Email is required';
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
-    if (!formData.company.trim()) newErrors.company = 'Company is required';
-    if (!formData.service.trim()) newErrors.service = 'Service is required';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
-    if (!formData.budget.trim()) newErrors.budget = 'Budget is required';
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { nam,  e, value } = e.target;
+    setFormData(prev => ({
+      ...pre, v,
+      [na, m, e]: value
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!validateForm()) return;
-
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
+    setSubmitStatus('idle');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolv,  e, 2000));
+      
+      // Reset form on success
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        service: '',
-        message: '',
-        budget: ''
+        firstNam,  e: '',
+    lastNam, e: '',
+        emai, l: '',
+    compan, y: '',
+        phon, e: '',
+    servic, e: '',
+        messag, e: ''
       });
-    }, 2000);
+      
+      setSubmitStatus('success');
+      setTimeout(() => setSubmitStatus('idle'),  5000);
+    } catch (error) {
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'),  5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  if (isSubmitted) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="bg-white rounded-2xl p-8 shadow-xl text-center"
-      >
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
-          Thank You!
-        </h3>
-        <p className="text-gray-600 mb-6">
-          Your message has been sent successfully. Our team will get back to you within 24 hours.
-        </p>
-        <button
-          onClick={() => setIsSubmitted(false)}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-        >
-          Send Another Message
-        </button>
-      </motion.div>
-    );
-  }
+  const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="bg-white rounded-2xl p-8 shadow-xl"
-    >
-      <div className="text-center mb-8">
-        <h3 className="text-3xl font-bold text-gray-900 mb-2">
-          Get In Touch
-        </h3>
-        <p className="text-gray-600">
-          Ready to transform your business with AI? Let's discuss your project.
-        </p>
-      </div>
+    <div className="max-w-2xl mx-auto">
+      {submitStatus === 'success' && (
+        <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+          <div className="flex items-center">
+            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+          </div>
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+          <div className="flex items-center">
+            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+            Something went wrong. Please try again or contact us directly.
+          </div>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 m,  d:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-              <User className="w-4 h-4 inline mr-2" />
-              Full Name *
+            <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+              First Name *
             </label>
             <input
               type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                errors.name ? 'border-red-500' : 'border-gray-300'
-              }`}
-              placeholder="Enter your full name"
+              id="firstName"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleInputChange}
+              required
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300"
+              placeholder="Enter your first name"
             />
-            {errors.name && (
-              <div className="flex items-center gap-1 mt-1 text-red-500 text-sm">
-                <AlertCircle className="w-4 h-4" />
-                {errors.name}
-              </div>
-            )}
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-              <Mail className="w-4 h-4 inline mr-2" />
+            <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+              Last Name *
+            </label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleInputChange}
+              required
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300"
+              placeholder="Enter your last name"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 m, d:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *
             </label>
             <input
@@ -146,149 +134,109 @@ const ContactForm: React.FC = () => {
               id="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
-              className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                errors.email ? 'border-red-500' : 'border-gray-300'
-              }`}
-              placeholder="Enter your email"
+              onChange={handleInputChange}
+              required
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300"
+              placeholder="Enter your email address"
             />
-            {errors.email && (
-              <div className="flex items-center gap-1 mt-1 text-red-500 text-sm">
-                <AlertCircle className="w-4 h-4" />
-                {errors.email}
-              </div>
-            )}
+          </div>
+
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+              Phone Number
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300"
+              placeholder="Enter your phone number"
+            />
           </div>
         </div>
 
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-            <Building className="w-4 h-4 inline mr-2" />
-            Company *
+          <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+            Company Name
           </label>
           <input
             type="text"
             id="company"
             name="company"
             value={formData.company}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-              errors.company ? 'border-red-500' : 'border-gray-300'
-            }`}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300"
             placeholder="Enter your company name"
           />
-          {errors.company && (
-            <div className="flex items-center gap-1 mt-1 text-red-500 text-sm">
-              <AlertCircle className="w-4 h-4" />
-              {errors.company}
-            </div>
-          )}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-              Service Needed *
-            </label>
-            <select
-              id="service"
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                errors.service ? 'border-red-500' : 'border-gray-300'
-              }`}
-            >
-              <option value="">Select a service</option>
-              <option value="ai-development">AI Development</option>
-              <option value="cloud-solutions">Cloud Solutions</option>
-              <option value="cybersecurity">Cybersecurity</option>
-              <option value="data-analytics">Data Analytics</option>
-              <option value="web-development">Web Development</option>
-              <option value="consulting">Consulting</option>
-              <option value="other">Other</option>
-            </select>
-            {errors.service && (
-              <div className="flex items-center gap-1 mt-1 text-red-500 text-sm">
-                <AlertCircle className="w-4 h-4" />
-                {errors.service}
-              </div>
-            )}
-          </div>
-
-          <div>
-            <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-              <DollarSign className="w-4 h-4 inline mr-2" />
-              Budget Range *
-            </label>
-            <select
-              id="budget"
-              name="budget"
-              value={formData.budget}
-              onChange={handleChange}
-              className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-                errors.budget ? 'border-red-500' : 'border-gray-300'
-              }`}
-            >
-              <option value="">Select budget range</option>
-              <option value="under-5k">Under $5,000</option>
-              <option value="5k-15k">$5,000 - $15,000</option>
-              <option value="15k-50k">$15,000 - $50,000</option>
-              <option value="50k-100k">$50,000 - $100,000</option>
-              <option value="over-100k">Over $100,000</option>
-            </select>
-            {errors.budget && (
-              <div className="flex items-center gap-1 mt-1 text-red-500 text-sm">
-                <AlertCircle className="w-4 h-4" />
-                {errors.budget}
-              </div>
-            )}
-          </div>
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-            <MessageSquare className="w-4 h-4 inline mr-2" />
-            Project Details *
+          <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+            Service of Interest
+          </label>
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300"
+          >
+            <option value="">Select a service</option>
+            <option value="ai-solutions">AI & Machine Learning</option>
+            <option value="cloud-devops">Cloud & DevOps</option>
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="it-infrastructure">IT Infrastructure</option>
+            <option value="digital-transformation">Digital Transformation</option>
+            <option value="micro-saas">Micro SAAS Services</option>
+            <option value="consulting">Consulting</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+            Message *
           </label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
-            onChange={handleChange}
-            rows={4}
-            className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none ${
-              errors.message ? 'border-red-500' : 'border-gray-300'
-            }`}
-            placeholder="Tell us about your project requirements, timeline, and any specific needs..."
+            onChange={handleInputChange}
+            required
+            rows={5}
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent transition-all duration-300 resize-none"
+            placeholder="Tell us about your project or how we can help..."
           />
-          {errors.message && (
-            <div className="flex items-center gap-1 mt-1 text-red-500 text-sm">
-              <AlertCircle className="w-4 h-4" />
-              {errors.message}
-            </div>
-          )}
         </div>
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-xl font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-        >
-          {isSubmitting ? (
-            <>
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-              Sending Message...
-            </>
-          ) : (
-            <>
-              <Send className="w-5 h-5" />
-              Send Message
-            </>
-          )}
-        </button>
+        <div className="pt-4">
+          <Button
+            type="submit"
+            size="lg"
+            fullWidth
+            loading={isSubmitting}
+            disabled={!isFormValid}
+            className="w-full"
+          >
+            {isSubmitting ? 'Sending Message...' : 'Send Message'}
+          </Button>
+        </div>
+
+        <p className="text-xs text-gray-400 text-center">
+          By submitting thi, s, for, m, you agree to our{' '}
+          <a href="/privacy" className="text-blue-400 hove, r:text-blue-300 underline">
+            Privacy Policy
+          </a>{' '}
+          and{' '}
+          <a href="/terms" className="text-blue-400 hove, r:text-blue-300 underline">
+            Terms of Service
+          </a>
+          .
+        </p>
       </form>
-    </motion.div>
+    </div>
   );
 };
 

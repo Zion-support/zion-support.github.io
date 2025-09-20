@@ -1,65 +1,51 @@
-import React, { createContext, useContext, useState, ReactNode } from "react"
-interface WhitelabelContextType {
-  isWhitelabel,
-  e: d: boolean,brandNa,
-  m: e: string,brandLo,
-  g: o: string,primaryCol,
-  o: r: string,secondaryCol,
-  o: r: string,setBrandNa,
-  m: e: (nam,
-  e: string) => void,setBrandLo,
-  g: o: (log,
-  o: string) => void,setPrimaryCol,
-  o: r: (colo,
-  r: string) => void,setSecondaryCol,
-  o: r: (colo,
-  r: string) => void;
-}
-}
+import React, { createContext, useContext, ReactNode } from 'react';
+
+interface WhitelabelConfig {
+  companyName: string;
+  logo: string;
+  primaryColor: string;
+  secondaryColor: string;
+  domain: string;
+  isWhitelabel: boolean;
+  contactInfo: {
+    phone: string;
+    email: string;
+    address: string;
+  };
 }
 
-const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined)
-export const useWhitelabel = React.memo(() () => {
-  const context = useContext(WhitelabelContext)
-  if (if (context === undefined) {
-  ) {
-    throw new Error('useWhitelabel must be used within a WhitelabelProvider')
+const defaultConfig: WhitelabelConfig = {
+  companyName: 'Zion Tech Group',
+  logo: '/logo.svg',
+  primaryColor: '#1e40af',
+  secondaryColor: '#7c3aed',
+  domain: 'https://ziontechgroup.com',
+  isWhitelabel: false,
+  contactInfo: {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-  return context;
-}
+};
+
+const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
+
+export const useWhitelabel = () => useContext(WhitelabelContext);
 
 interface WhitelabelProviderProps {
-  childr,
-  e: n: ReactNode;
-}
-}
+  children: ReactNode;
+  config?: Partial<WhitelabelConfig>;
 }
 
-export,
-  const: WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) () => {
-  const [brandName, setBrandName] = useState('Zion Tech Group')
-  const [brandLogo, setBrandLogo] = useState('/logo.svg')
-  const [primaryColor, setPrimaryColor] = useState('#3B82F6')
-  const [secondaryColor, setSecondaryColor] = useState('#8B5CF6')
-  const,
-  const: value: WhitelabelContextType = {
-  = {
-    isWhitelabele,
-  d: false;
-    brandName;
-    brandLogo;
-    primaryColor;
-    secondaryColor;
-    setBrandName;
-    setBrandLogo;
-    setPrimaryColor;
-    setSecondaryColor;
-}
+export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
+  children, 
+  config = {} 
+}) => {
+  const mergedConfig = { ...defaultConfig, ...config };
 
   return (
-    <WhitelabelContext.Provider value={value}>
-      {children},
-  }
+    <WhitelabelContext.Provider value={mergedConfig}>
+      {children}
     </WhitelabelContext.Provider>
-  )
-}
+  );
+};
