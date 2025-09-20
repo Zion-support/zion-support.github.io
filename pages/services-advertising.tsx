@@ -1,5 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import { UltraAdvancedFuturisticBackground } from '../components/ui/UltraFuturisticBackground';
+import { ArrowRight, ExternalLink, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
@@ -18,22 +20,17 @@ export default function ServicesAdvertisingPage() {
     'Flexible deployment: SaaS or self-hosted options'
   ];
 
-	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" url="https://ziontechgroup.com/services-advertising/" />
-			<div className="max-w-6xl mx-auto space-y-10">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
+  const contact = {
+    mobile: '+1 (555) 123-4567',
+    email: 'contact@ziontechgroup.com',
+    address: 'San Francisco, CA'
+  };
 
-				{/* New: Core micro SaaS and AI additions */}
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
-					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $20–$80/mo</li>
-						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
-						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
-					</ul>
-				</section>
+  const anchors = [
+    { title: 'AI Platforms', href: '#ai-platforms' },
+    { title: 'Micro SaaS', href: '#micro-saas' },
+    { title: 'Enterprise IT', href: '#enterprise-it' }
+  ];
 
   const pricingRefs = [
     {
@@ -124,17 +121,10 @@ export default function ServicesAdvertisingPage() {
     }
   ];
 
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
-					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical budget: $10–$30/mo + usage</li>
-						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
-						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
-					</ul>
-				</section>
-
+  return (
+    <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" url="https://ziontechgroup.com/services-advertising/" />
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
@@ -142,12 +132,12 @@ export default function ServicesAdvertisingPage() {
             </h1>
             <p className="text-gray-300 text-lg">AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
+              <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg inline-flex items-center">
                 Talk to Sales <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button href="/market-pricing" variant="outline" className="px-8 py-4 border border-gray-600 text-gray-200">
+              </a>
+              <a href="/market-pricing" className="px-8 py-4 border border-gray-600 text-gray-200 rounded-lg inline-flex items-center">
                 View Market Pricing <ExternalLink className="w-5 h-5 ml-2" />
-              </Button>
+              </a>
             </div>
           </header>
 
@@ -365,7 +355,7 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
             <div className="text-center mt-6">
-              <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
+              <a href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg inline-flex items-center">More Market References</a>
             </div>
           </section>
 
