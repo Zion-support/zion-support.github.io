@@ -1,225 +1,188 @@
-import React from "react"
-import { motion } from "framer-motion"
-import { 
-  DollarSign
-  TrendingDown, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight
-  Play
-  Settings
-  Target
-  Cpu
-  Activity
-  Sparkles
-  Search
-  Zap
-  Globe
-  Building
-  BarChart3
-  TrendingUp
-  Network
-  Key
-  Fingerprint
-  Monitor
-  AlertTriangle
-  ShieldCheck
-  Globe2
-  Server
-  Database
-  Smartphone
-  Code
-  FileText
-  AlertCircle
-  CheckSquare
-  Calculator
-  PieChart
-  LineChart
-  Target2
-  Wallet
-  PiggyBank
-  CreditCard
-  Receipt
-  Cloud
-  Zap
-  Gauge
-  BarChart4
-  TrendingUp
-  Lightbulb
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  DollarSign;
+  TrendingDown,
+  CheckCircle,
+  Users,
+  Clock,
+  ArrowRight;
+  Play;
+  Settings;
+  Target;
+  Cpu;
+  Activity;
+  Sparkles;
+  Search;
+  Zap;
+  Globe;
+  Building;
+  BarChart3;
+  TrendingUp;
+  Network;
+  Key;
+  Fingerprint;
+  Monitor;
+  AlertTriangle;
+  ShieldCheck;
+  Globe2;
+  Server;
+  Database;
+  Smartphone;
+  Code;
+  FileText;
+  AlertCircle;
+  CheckSquare;
+  Calculator;
+  PieChart;
+  LineChart;
+  Target2;
+  Wallet;
+  PiggyBank;
+  CreditCard;
+  Receipt;
+  Cloud;
+  Zap;
+  Gauge;
+  BarChart4;
+  TrendingUp;
+  Lightbulb;
   Rocket
-} from "lucide-react"
-const CloudFinOpsOptimizer = () () => {
+} from "lucide-react";
+const CloudFinOpsOptimizer = () => {
   const features = [
-    {
-      ic,
-  o: n: Cloud,tit,
-  l: e: 'Multi-Cloud Optimization',descripti,
-  o: n: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
-    }, {
-      ic,
-  o: n: Zap2,tit,
-  l: e: 'Automated Optimization',descripti,
-  o: n: 'AI-powered recommendations and automated cost reduction actions'
-    }, {
-      ic,
-  o: n: Gauge,tit,
-  l: e: 'Performance Monitoring',descripti,
-  o: n: 'Real-time performance metrics with cost correlation analysis'
-    }, {
-      ic,
-  o: n: BarChart4,tit,
-  l: e: 'Advanced Analytics',descripti,
-  o: n: 'Deep insights into spending patterns and optimization opportunities'
-    }, {
-      ic,
-  o: n: TrendingUp2,tit,
-  l: e: 'Predictive Modeling',descripti,
-  o: n: 'Forecast future costs and identify optimization trends'
-    }, {
-      ic,
-  o: n: Lightbulb,tit,
-  l: e: 'Smart Recommendations',descripti,
-  o: n: 'Intelligent suggestions for cost savings and efficiency improvements'
-    }
+  {
+  icon: Cloud,title: 'Multi-Cloud Optimization',description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
+},
+  {
+  icon: Zap2,title: 'Automated Optimization',description: 'AI-powered recommendations and automated cost reduction actions'
+},
+  {
+  icon: Gauge,title: 'Performance Monitoring',description: 'Real-time performance metrics with cost correlation analysis'
+},
+  {
+  icon: BarChart4,title: 'Advanced Analytics',description: 'Deep insights into spending patterns and optimization opportunities'
+},
+  {
+  icon: TrendingUp2,title: 'Predictive Modeling',description: 'Forecast future costs and identify optimization trends'
+},
+  {
+  icon: Lightbulb,title: 'Smart Recommendations',description: 'Intelligent suggestions for cost savings and efficiency improvements'
+},
   ]
   const benefits = [
-    'Reduce cloud costs by 40-60%Improve resource efficiency by 50%'
-    'Automate 80% of optimization tasksAchieve 95% cost predictability'
+  'Reduce cloud costs by 40-60%Improve resource efficiency by 50%';
+    'Automate 80% of optimization tasksAchieve 95% cost predictability';
     'Enable real-time cost monitoringMaximize cloud ROI and performance'
-  ]
+]
 
   const services = [
-    {
-      ic,
-  o: n: Calculator,tit,
-  l: e: 'Cost Analysis Engine',descripti,
-  o: n: 'Advanced algorithms for comprehensive cost analysis and optimization'
-    }, {
-      ic,
-  o: n: Rocket,tit,
-  l: e: 'Automated Actions',descripti,
-  o: n: 'Intelligent automation for rightsizing, scheduling, and optimization'
-    }, {
-      ic,
-  o: n: BarChart3,tit,
-  l: e: 'Real-time Dashboards',descripti,
-  o: n: 'Live monitoring and reporting of cloud costs and performance'
-    }, {
-      ic,
-  o: n: Target,tit,
-  l: e: 'Goal Setting & Tracking',descripti,
-  o: n: 'Set cost targets and track progress with automated alerts'
-    }
+  {
+  icon: Calculator,title: 'Cost Analysis Engine',description: 'Advanced algorithms for comprehensive cost analysis and optimization'
+},
+  {
+  icon: Rocket,title: 'Automated Actions',description: 'Intelligent automation for rightsizing, scheduling, and optimization'
+},
+  {
+  icon: BarChart3,title: 'Real-time Dashboards',description: 'Live monitoring and reporting of cloud costs and performance'
+},
+  {
+  icon: Target,title: 'Goal Setting & Tracking',description: 'Set cost targets and track progress with automated alerts'
+},
   ]
   const useCases = [
-    {
-      indust,
-  r: y: 'Enterprise',descripti,
-  o: n: 'Optimize large-scale multi-cloud environments'
-    }, {
-      indust,
-  r: y: 'Startups',descripti,
-  o: n: 'Scale efficiently while controlling costs'
-    }, {
-      indust,
-  r: y: 'E-commerce',descripti,
-  o: n: 'Balance performance with cost optimization'
-    }, {
-      indust,
-  r: y: 'SaaS Platforms',descripti,
-  o: n: 'Optimize costs for multi-tenant applications'
-    }
+  {
+  industry: 'Enterprise',description: 'Optimize large-scale multi-cloud environments'
+},
+  {
+  industry: 'Startups',description: 'Scale efficiently while controlling costs'
+},
+  {
+  industry: 'E-commerce',description: 'Balance performance with cost optimization'
+},
+  {
+  industry: 'SaaS Platforms',description: 'Optimize costs for multi-tenant applications'
+},
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
+      {{/* Hero Section */},
+  }
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4,
-  s: m: px-6,
-  l: g:px-8">
-          <motion.div
-            initial={ opacit,
-  y: 0, y: 20 }
-            animate={ opaci,
-  t: y: 1, y: 0 }
-            transition={ durati,
-  o: n: 0.8 }
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div;
+            initial={{ opacity: 0, y: 20 },
+  }
+            animate={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
               <Cloud className="w-4 h-4 mr-2" />
-              Cloud Financial Optimization
+              Cloud Financial Optimization;
             </div>
-            
-            <h1 className="text-5xl,
-  m: d: text-6xl font-bold text-white mb-6">
-              Cloud
+            ;
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Cloud;
               <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"> FinOps Optimizer</span>
             </h1>
-            
+            ;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Automate cloud cost optimization with our intelligent FinOps platform 
-              that maximizes efficiency while maintaining performance and reliability.
+              Automate cloud cost optimization with our intelligent FinOps platform ;
+              that maximizes efficiency while maintaining performance and reliability.;
             </p>
-            
-            <div className="flex flex-col,
-  s: m:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg,
-  hove: r:from-amber-600,
-  hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center">
+            ;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
+                Start Free Trial;
               </button>
-              <button className="px-8 py-4 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hove,
-  r:bg-amber-500/10 transition-all duration-200 flex items-center justify-center">
+              <button className="px-8 py-4 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hover:bg-amber-500/10 transition-all duration-200 flex items-center justify-center">
                 <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {{/* Features Section */},
+  }
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4,
-  s: m: px-6,
-  l: g:px-8">
-          <motion.div
-            initial={ opacit,
-  y: 0, y: 20 }
-            whileInView={ opaci,
-  t: y: 1, y: 0 }
-            transition={ durati,
-  o: n: 0.8 }
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div;
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Optimization Features
+              Intelligent Optimization Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides advanced automation and intelligence to 
-              optimize your cloud costs and performance.
+              Our platform provides advanced automation and intelligence to ;
+              optimize your cloud costs and performance.;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1,
-  m: d: grid-cols-2 l,
-  g:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={ opaci,
-  t: y: 0, y: 20 }
-                whileInView={ opaci,
-  t: y: 1, y: 0 }
-                transition={ durati,
-  o: n: 0.5, del,
-  a: y: index * 0.1 }
-                className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6,
-  hove: r:border-amber-500/30 transition-all duration-200";"
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -232,43 +195,40 @@ const CloudFinOpsOptimizer = () () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {{/* Services Section */},
+  }
       <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4,
-  s: m: px-6,
-  l: g:px-8">
-          <motion.div
-            initial={ opacit,
-  y: 0, y: 20 }
-            whileInView={ opaci,
-  t: y: 1, y: 0 }
-            transition={ durati,
-  o: n: 0.8 }
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div;
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Core Optimization Services
+              Core Optimization Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From intelligent analysis to automated optimization, we provide 
-              comprehensive solutions for cloud cost management.
+              From intelligent analysis to automated optimization, we provide ;
+              comprehensive solutions for cloud cost management.;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1,
-  m: d:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={ opaci,
-  t: y: 0, x: index % 2 === 0 ? -20 : 20 }
-                whileInView={ opaci,
-  t: y: 1, x: 0 }
-                transition={ durati,
-  o: n: 0.5, del,
-  a: y: index * 0.1 }
-                className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6,
-  hove: r:border-amber-500/30 transition-all duration-200";"
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+  }
+                whileInView={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200";"
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -285,41 +245,39 @@ const CloudFinOpsOptimizer = () () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {{/* Benefits Section */},
+  }
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4,
-  s: m: px-6,
-  l: g:px-8">
-          <motion.div
-            initial={ opacit,
-  y: 0, y: 20 }
-            whileInView={ opaci,
-  t: y: 1, y: 0 }
-            transition={ durati,
-  o: n: 0.8 }
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div;
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Cloud Economics
+              Transform Your Cloud Economics;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in cost efficiency, automation, and ROI optimization.
+              Experience measurable improvements in cost efficiency, automation, and ROI optimization.;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1,
-  m: d:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={ opaci,
-  t: y: 0, x: -20 }
-                  whileInView={ opaci,
-  t: y: 1, x: 0 }
-                  transition={ durati,
-  o: n: 0.5, del,
-  a: y: index * 0.1 }
+  <motion.div;
+                  key={{index},
+  }
+                  initial={{ opacity: 0, x: -20 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                   className="className="flex items-start space-x-3";"
                 >
                   <CheckCircle className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
@@ -329,15 +287,15 @@ const CloudFinOpsOptimizer = () () => {
             </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={ opaci,
-  t: y: 0, x: 20 }
-                  whileInView={ opaci,
-  t: y: 1, x: 0 }
-                  transition={ durati,
-  o: n: 0.5, del,
-  a: y: index * 0.1 }
+  <motion.div;
+                  key={{index + 3},
+  }
+                  initial={{ opacity: 0, x: 20 },
+  }
+                  whileInView={{ opacity: 1, x: 0 },
+  }
+                  transition={{ duration: 0.5, delay: index * 0.1 },
+  }
                   className="className="flex items-start space-x-3";"
                 >
                   <CheckCircle className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
@@ -349,44 +307,40 @@ const CloudFinOpsOptimizer = () () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {{/* Use Cases Section */},
+  }
       <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4,
-  s: m: px-6,
-  l: g:px-8">
-          <motion.div
-            initial={ opacit,
-  y: 0, y: 20 }
-            whileInView={ opaci,
-  t: y: 1, y: 0 }
-            transition={ durati,
-  o: n: 0.8 }
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div;
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our optimization solutions adapt to various industries, providing 
-              tailored automation for your specific cloud needs.
+              Our optimization solutions adapt to various industries, providing ;
+              tailored automation for your specific cloud needs.;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1,
-  m: d: grid-cols-2 l,
-  g:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={ opaci,
-  t: y: 0, y: 20 }
-                whileInView={ opaci,
-  t: y: 1, y: 0 }
-                transition={ durati,
-  o: n: 0.5, del,
-  a: y: index * 0.1 }
-                className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center,
-  hove: r:border-amber-500/30 transition-all duration-200";"
+  <motion.div;
+                key={{index},
+  }
+                initial={{ opacity: 0, y: 20 },
+  }
+                whileInView={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-amber-500/30 transition-all duration-200";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
@@ -399,37 +353,32 @@ const CloudFinOpsOptimizer = () () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {{/* CTA Section */},
+  }
       <section className="py-20 bg-gradient-to-r from-amber-500/10 to-orange-500/10">
-        <div className="max-w-4xl mx-auto px-4,
-  s: m: px-6,
-  l: g:px-8 text-center">
-          <motion.div
-            initial={ opacit,
-  y: 0, y: 20 }
-            whileInView={ opaci,
-  t: y: 1, y: 0 }
-            transition={ durati,
-  o: n: 0.8 }
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div;
+            initial={{ opacity: 0, y: 20 },
+  }
+            whileInView={{ opacity: 1, y: 0 },
+  }
+            transition={{ duration: 0.8 },
+  }
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Optimize Your Cloud Costs Today
+              Optimize Your Cloud Costs Today;
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our optimization platform to 
-              achieve maximum cloud efficiency and cost savings.
+              Join organizations worldwide that use our optimization platform to ;
+              achieve maximum cloud efficiency and cost savings.;
             </p>
-            <div className="flex flex-col,
-  s: m: flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg,
-  hove: r:from-amber-600,
-  hove: r:to-orange-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="px-8 py-4 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hove,
-  r:bg-amber-500/10 transition-all duration-200">
-                Contact Sales
+              <button className="px-8 py-4 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hover:bg-amber-500/10 transition-all duration-200">
+                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -438,4 +387,4 @@ const CloudFinOpsOptimizer = () () => {
     </div>
   )
 }
-export default CloudFinOpsOptimizer
+export default CloudFinOpsOptimizer;

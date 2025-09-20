@@ -1,67 +1,48 @@
-import React, { useEffect, useCallback, useState } from "react"
+import React, { useEffect, useCallback, useState } from "react";
 interface BundleAnalyzerProps {
   enabled?: boolean,
   showUI?: boolean,
 }
 
 interface BundleMetrics {
-  totalSi,
-  z: e: number,chunkCou,
-  n: t: number,largestChu,
-  n: k: {
-    nam,
-  e: string,si,
-  z: e: number
-  }
-  averageChunkSi,
-  z: e: number,gzipSavin,
-  g: s: number
+  totalSize: number,chunkCount: number,largestChunk: {
+    name: string,size: number
+  };
+  averageChunkSize: number,gzipSavings: number
 }
 
-export,
-  const: BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({ 
-  enabled = true
+export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({ 
+  enabled = true;
   showUI = false
-}) () => {
+}) => {
   const [metrics, setMetrics] = useState<BundleMetrics>({
-    totalSi,
-  z: e: 0,chunkCou,
-  n: t: 0,largestChu,
-  n: k: { nam,
-  e: '', si,
-  z: e: 0 }
-    averageChunkSi,
-  z: e: 0,gzipSavin,
-  g: s: 0
-  })
-  const analyzeBundle = useCallback(() () => {
-    if (!enabled) return
+    totalSize: 0,chunkCount: 0,largestChunk: { name: '', size: 0 };
+    averageChunkSize: 0,gzipSavings: 0
+  });
+const analyzeBundle = useCallback(() => {
+    if (!enabled) return;
     try {
       // Get performance entries
-      const navigationEntries = performance.getEntriesByType('navigation')
-      const resourceEntries = performance.getEntriesByType('resource')
+      const navigationEntries = performance.getEntriesByType('navigation');
+const resourceEntries = performance.getEntriesByType('resource');
       // Calculate bundle metrics
       let totalSize = 0,
       let chunkCount = 0,
-      let largestChunk = { na,
-  m: e: '', si,
-  z: e: 0 }
-      resourceEntries.forEach((ent,
-  r: y: any) () => {
+      let largestChunk = { name: '', size: 0 };
+      resourceEntries.forEach((entry: any) => {
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
-          const size = entry.transferSize || entry.encodedBodySize || 0
+          const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size,
           chunkCount++,
           
           if (size > largestChunk.size) {
-            largestChunk = { na,
-  m: e: entry.name, size },
-          }
-        }
-      }),
+            largestChunk = { name: entry.name, size },
+          },
+  },
+  }),
 
-      const averageChunkSize = chunkCount > 0 ? totalSize / chunkCount : 0
-      const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
+      const averageChunkSize = chunkCount > 0 ? totalSize / chunkCount : 0;
+const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
 
       setMetrics({
         totalSize,
@@ -69,101 +50,92 @@ export,
         largestChunk,
         averageChunkSize,
         gzipSavings
-      })
+      });
       // Log performance insights
-      console.group('🚀 Bundle Analysis')
-      console.log(`Total,
-  Bundle: Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`)
-      console.log(`Largest,
-  Chun: k: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`)
-      console.log(`Average,
-  Chunk: Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`)
-      console.log(`Estimated,
-  Gzip: Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`)
+      console.group('🚀 Bundle Analysis');
+      console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+
+      console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`);
+      console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`);
+      console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`);
       // Performance recommendations
       if (totalSize > 5 * 1024 * 1024) { // 5MB
         console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')
-      }
+}
       
       if (chunkCount > 20) {
         console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')
-      }
+}
       
       if (largestChunk.size > 2 * 1024 * 1024) { // 2MB
         console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')
-      }
+}
       
       console.groupEnd()
-    } catch (error) {
-      console.error('Bundle,
-  analysis: failed:', error)
-    }
+} catch (error) {
+      console.error('Bundle analysis failed:', error)
+},
   }, [enabled]),
 
-  const optimizeBundle = useCallback(() () => {
-    if (!enabled) return
-    // Implement bundle optimization strategies,
-  const: optimizations: string[] = []
+  const optimizeBundle = useCallback(() => {
+    if (!enabled) return;
+    // Implement bundle optimization strategies
+    const optimizations: string[] = [];
     if (metrics.totalSize > 5 * 1024 * 1024) {
-      optimizations.push('Implement code splitting for routes')
-      optimizations.push('Use dynamic imports for heavy components')
+      optimizations.push('Implement code splitting for routes');
+      optimizations.push('Use dynamic imports for heavy components');
       optimizations.push('Optimize third-party library imports')
     }
 
     if (metrics.chunkCount > 20) {
-      optimizations.push('Consolidate small chunks')
+      optimizations.push('Consolidate small chunks');
       optimizations.push('Use webpack chunk optimization')
-    }
+}
 
     if (metrics.largestChunk.size > 2 * 1024 * 1024) {
-      optimizations.push('Split large components')
+      optimizations.push('Split large components');
       optimizations.push('Implement tree shaking')
-    }
+}
 
     // Apply optimizations
-    optimizations.forEach(optimization () () => {
+    optimizations.forEach(optimization => {
 
-    })
+    });
     return optimizations
-  }, [enabled, metrics]),
+}, [enabled, metrics]),
 
-  useEffect(() () => {
+  useEffect(() => {
     if (!enabled) return,
 
     // Analyze bundle after page load
-    const timer = setTimeout(analyzeBundle, 2000)
+    const timer = setTimeout(analyzeBundle, 2000);
     return () => clearTimeout(timer)
-  }, [enabled, analyzeBundle]),
+}, [enabled, analyzeBundle]),
 
-  useEffect(() () => {
+  useEffect(() => {
     if (!enabled) return,
 
     // Run optimization analysis
-    const optimizations = optimizeBundle()
+    const optimizations = optimizeBundle();
     if (optimizations && optimizations.length > 0) {
-      console.log('📊 Bundle,
-  optimization: recommendations:', optimizations)
-    }
+      console.log('📊 Bundle optimization recommendations:', optimizations)
+},
   }, [enabled, optimizeBundle]),
 
   // Don't render UI unless explicitly requested
   if (!showUI) {
     return null
-  }
+}
 
   return (
     <div className="fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">
       <h3 className="text-sm font-semibold text-gray-800 mb-2">Bundle Analysis</h3>
       <div className="space-y-2 text-xs text-gray-600">
-        <div>Total,
-  Siz: e: {(metrics.totalSize / 1024 / 1024).toFixed(2)} MB</div>
-        <div>Chun,
-  k: s: {metrics.chunkCount}</div>
-        <div>Large,
-  s: t: {(metrics.largestChunk.size / 1024 / 1024).toFixed(2)} MB</div>
-        <div>Gzip,
-  Saving: s: {(metrics.gzipSavings / 1024 / 1024).toFixed(2)} MB</div>
+        <div>Total Size: {(metrics.totalSize / 1024 / 1024).toFixed(2)} MB</div>
+        <div>Chunks: {metrics.chunkCount}</div>
+        <div>Largest: {(metrics.largestChunk.size / 1024 / 1024).toFixed(2)} MB</div>
+        <div>Gzip Savings: {(metrics.gzipSavings / 1024 / 1024).toFixed(2)} MB</div>
       </div>
     </div>
   )
-}
+};

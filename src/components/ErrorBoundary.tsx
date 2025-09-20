@@ -1,36 +1,27 @@
-import React, { Component, ErrorInfo, ReactNode } from "react"
+import React, { Component, ErrorInfo, ReactNode } from "react";
 interface Props {
-  childr,
-  e: n: ReactNode
+  children: ReactNode;
   fallback?: ReactNode
 }
 
 interface State {
-  hasErr,
-  o: r: boolean
+  hasError: boolean;
   error?: Error
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(pro,
-  p: s: Props) {
-    super(props)
-    this.state = { hasErro,
-  r: false }
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false },
   }
 
-  static getDerivedStateFromError(err,
-  o: r: Error): State {
-    return { hasErro,
-  r: true, error },
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error },
   }
 
-  componentDidCatch(err,
-  o: r: Error, errorIn,
-  f: o: ErrorInfo) {
-    console.error('ErrorBoundary caught an erro,
-  r:', error, errorInfo)
-  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo)
+}
 
   render() {
     if (this.state.hasError) {
@@ -41,8 +32,7 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-purple-600,
-  hove: r: bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+              className="bg-purple-600 hover: bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
             >
               Reload Page
             </button>
@@ -52,7 +42,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
 
     return this.props.children
+},
   }
-}
 
-export default ErrorBoundary
+export default ErrorBoundary;

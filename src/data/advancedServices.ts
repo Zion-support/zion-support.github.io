@@ -1,56 +1,33 @@
 export type PricingTier = {
-  id: string,na,
-  m: e: string,priceLab,
-  e: l: string,featur,
-  e: s: string[[];]
-}
-export,
-  const: PRICING_TIERS: PricingTier[] = [
-  { i,
-  d: 'basic', na,
-  m: e: 'Basic', priceLab,
-  e: l: '$', featur,
-  e: s: ['Email supportStandard SLA'] }, { id: 'pro', na,
-  m: e: 'Pro', priceLab,
-  e: l: '$$', featur,
-  e: s: ['Priority supportEnhanced SLA'] }, { id: 'enterprise', na,
-  m: e: 'Enterprise', priceLab,
-  e: l: '$$$', featur,
-  e: s: ['Dedicated managerCustom SLA'] }
-]
+  id: string,name: string,priceLabel: string,features: string[[],
+  ],
+  }
+export const PRICING_TIERS: PricingTier[] = [
+  {{ id: 'basic', name: 'Basic', priceLabel: '$', features: ['Email supportStandard SLA'],
+  },
+  },
+  {{ id: 'pro', name: 'Pro', priceLabel: '$$', features: ['Priority supportEnhanced SLA'],
+  },
+  },
+  {{ id: 'enterprise', name: 'Enterprise', priceLabel: '$$$', features: ['Dedicated managerCustom SLA'],
+  },
+  },
+  ]
 export type AdvancedService = {
-  id: string,tit,
-  l: e: string,catego,
-  r: y: string,pricingTi,
-  e: r: PricingTier['id'],descripti,
-  o: n: string
+  id: string,title: string,category: string,pricingTier: PricingTier['id'],description: string;
   link?: string
 }
 
-export,
-  const: ADVANCED_SERVICES: AdvancedService[] = [
+export const ADVANCED_SERVICES: AdvancedService[] = [
   {
-    i,
-  d: 'ai-business-intelligence',tit,
-  l: e: 'AI Business Intelligence',catego,
-  r: y: 'AI Services',pricingTi,
-  e: r: 'pro',descripti,
-  o: n: 'On-brand AI content and analytics to empower decision-making.',li,
-  n: k: '/services/ai-business-intelligence'
-  }, {
-    id: 'cloud-devops',tit,
-  l: e: 'Cloud & DevOps',catego,
-  r: y: 'IT Services',pricingTi,
-  e: r: 'enterprise',descripti,
-  o: n: 'Infrastructure automation and cloud strategy for scale and reliability.',li,
-  n: k: '/services/cloud-devops'
-  }, {
-    id: 'ai-compliance-copilot',tit,
-  l: e: 'AI Compliance Copilot',catego,
-  r: y: 'Security',pricingTi,
-  e: r: 'enterprise',descripti,
-  o: n: 'SOC2/ISO evidence automation and compliance workflows.',li,
-  n: k: '/services/ai-compliance-copilot'
-  }
-]
-export const SERVICE_CATEGORIES = [['AI ServicesIT Services', 'Security'];]
+  id: 'ai-business-intelligence',title: 'AI Business Intelligence',category: 'AI Services',pricingTier: 'pro',description: 'On-brand AI content and analytics to empower decision-making.',link: '/services/ai-business-intelligence'
+},
+  {
+  id: 'cloud-devops',title: 'Cloud & DevOps',category: 'IT Services',pricingTier: 'enterprise',description: 'Infrastructure automation and cloud strategy for scale and reliability.',link: '/services/cloud-devops'
+},
+  {
+  id: 'ai-compliance-copilot',title: 'AI Compliance Copilot',category: 'Security',pricingTier: 'enterprise',description: 'SOC2/ISO evidence automation and compliance workflows.',link: '/services/ai-compliance-copilot'
+},
+  ]
+export const SERVICE_CATEGORIES = [['AI ServicesIT Services', 'Security'],
+  ]

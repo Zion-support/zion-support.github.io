@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import React, { useState, useEffect, useCallback, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Play,
@@ -22,241 +22,148 @@ import {
   Users,
   BarChart3,
   Lightbulb
-} from "lucide-react"
+} from "lucide-react";
 interface HeroSlide {
-  id: string,tit,
-  l: e: string,subtit,
-  l: e: string,descripti,
-  o: n: string,ima,
-  g: e: string,c,
-  t: a: string,pa,
-  t: h: string,featur,
-  e: s: string[],gradie,
-  n: t: string,ic,
-  o: n: React.ComponentType<any>,sta,
-  t: s: { labe,
-  l: string, val,
-  u: e: string, ic,
-  o: n: React.ComponentType<any> }[]
-}
+  id: string,title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> },
+  [],
+  }
 
-const,
-  heroSlide: s: HeroSlide[] = [
+const heroSlides: HeroSlide[] = [
   {
-    i,
-  d: 'ai-solutions',tit,
-  l: e: "AI-Powered Digital Transformation",subtit,
-  l: e: "Revolutionizing business with cutting-edge artificial intelligence",descripti,
-  o: n: "Transform your organization with Zion's advanced AI solutions. From predictive analytics to automated decision-making, we deliver intelligent systems that drive unprecedented business growth and efficiency.",
-    ima,
-  g: e: "/images/hero-ai-solutions.jpg",
-      c,
-  t: a: "Explore AI Solutions",
-      pa,
-  t: h: "/services/ai-business-intelligence",
-      featur,
-  e: s: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
-    gradie,
-  n: t: "from-cyan-500 via-blue-500 to-purple-600",ic,
-  o: n: Brain,sta,
-  t: s: [
-      { labe,
-  l: "AI Accuracy Rate", val,
-  u: e: "97.3%", ic,
-  o: n: Target }, { lab,
-  e: l: "ROI Increase", val,
-  u: e: "450%", ic,
-  o: n: TrendingUp }, { lab,
-  e: l: "Market Growth", val,
-  u: e: "280%", ic,
-  o: n: Rocket }
-    ]
-  }, {
-    id: 'enterprise-it',tit,
-  l: e: "Enterprise IT Excellence",subtit,
-  l: e: "Comprehensive technology solutions for modern enterprises",descripti,
-  o: n: "Zion Tech Group delivers enterprise-grade IT solutions that scale with your business. From cloud infrastructure to cybersecurity, we ensure your digital foundation is robust, secure, and future-ready.",
-    ima,
-  g: e: "/images/hero-enterprise-it.jpg",
-      c,
-  t: a: "View Enterprise Solutions",
-      pa,
-  t: h: "/services",
-      featur,
-  e: s: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
-    gradie,
-  n: t: "from-blue-500 via-purple-500 to-pink-500",ic,
-  o: n: Shield,sta,
-  t: s: [
-      { labe,
-  l: "System Uptime", val,
-  u: e: "99.99%", ic,
-  o: n: Target }, { lab,
-  e: l: "Cost Savings", val,
-  u: e: "60%", ic,
-  o: n: TrendingUp }, { lab,
-  e: l: "Response Time", val,
-  u: e: "<2min", ic,
-  o: n: Rocket }
-    ]
-  }, {
-    id: 'green-tech',tit,
-  l: e: "Sustainable Technology Solutions",subtit,
-  l: e: "Driving innovation while protecting our planet",descripti,
-  o: n: "Join the green technology revolution with Zion's sustainable IT solutions. We help organizations reduce their carbon footprint while maximizing performance and driving business value.",ima,
-  g: e: "/images/hero-green-tech.jpg",
-      c,
-  t: a: "Discover Green Tech",
-      pa,
-  t: h: "/green-it",
-      featur,
-  e: s: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
-    gradie,
-  n: t: "from-green-500 via-emerald-500 to-teal-500",ic,
-  o: n: Globe,sta,
-  t: s: [
-      { labe,
-  l: "Energy Savings", val,
-  u: e: "75%", ic,
-  o: n: Target }, { lab,
-  e: l: "Carbon Reduction", val,
-  u: e: "85%", ic,
-  o: n: TrendingUp }, { lab,
-  e: l: "Cost Reduction", val,
-  u: e: "40%", ic,
-  o: n: Rocket }
-    ]
-  }, {
-    id: 'digital-innovation',tit,
-  l: e: "Digital Innovation Hub",subtit,
-  l: e: "Accelerating digital transformation for forward-thinking organizations",descripti,
-  o: n: "Zion Tech Group is your strategic partner in digital innovation. We combine cutting-edge technologies with deep industry expertise to create transformative solutions that drive competitive advantage.",ima,
-  g: e: "/images/hero-digital-innovation.jpg",
-      c,
-  t: a: "Start Your Journey",
-      pa,
-  t: h: "/solutions",
-      featur,
-  e: s: ["Digital Strategy", "Technology Consulting", "Innovation Labs", "Digital Products"],
-    gradie,
-  n: t: "from-purple-500 via-pink-500 to-red-500",ic,
-  o: n: Lightbulb,sta,
-  t: s: [
-      { labe,
-  l: "Innovation Rate", val,
-  u: e: "300%", ic,
-  o: n: Target }, { lab,
-  e: l: "Digital Maturity", val,
-  u: e: "95%", ic,
-  o: n: TrendingUp }, { lab,
-  e: l: "Time to Market", val,
-  u: e: "-70%", ic,
-  o: n: Rocket }
-    ]
-  }
-]
+    id: 'ai-solutions',title: "AI-Powered Digital Transformation",subtitle: "Revolutionizing business with cutting-edge artificial intelligence",description: "Transform your organization with Zion's advanced AI solutions. From predictive analytics to automated decision-making, we deliver intelligent systems that drive unprecedented business growth and efficiency.",
+    image: "/images/hero-ai-solutions.jpg",
+      cta: "Explore AI Solutions",
+      path: "/services/ai-business-intelligence",
+      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
+    gradient: "from-cyan-500 via-blue-500 to-purple-600",icon: Brain,stats: [
+      { label: "AI Accuracy Rate", value: "97.3%", icon: Target };
+      { label: "ROI Increase", value: "450%", icon: TrendingUp };
+      { label: "Market Growth", value: "280%", icon: Rocket },
+  ],
+  };
+  {
+    id: 'enterprise-it',title: "Enterprise IT Excellence",subtitle: "Comprehensive technology solutions for modern enterprises",description: "Zion Tech Group delivers enterprise-grade IT solutions that scale with your business. From cloud infrastructure to cybersecurity, we ensure your digital foundation is robust, secure, and future-ready.",
+    image: "/images/hero-enterprise-it.jpg",
+      cta: "View Enterprise Solutions",
+      path: "/services",
+      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
+    gradient: "from-blue-500 via-purple-500 to-pink-500",icon: Shield,stats: [
+      { label: "System Uptime", value: "99.99%", icon: Target };
+      { label: "Cost Savings", value: "60%", icon: TrendingUp };
+      { label: "Response Time", value: "<2min", icon: Rocket },
+  ],
+  };
+  {
+    id: 'green-tech',title: "Sustainable Technology Solutions",subtitle: "Driving innovation while protecting our planet",description: "Join the green technology revolution with Zion's sustainable IT solutions. We help organizations reduce their carbon footprint while maximizing performance and driving business value.",image: "/images/hero-green-tech.jpg",
+      cta: "Discover Green Tech",
+      path: "/green-it",
+      features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
+    gradient: "from-green-500 via-emerald-500 to-teal-500",icon: Globe,stats: [
+      { label: "Energy Savings", value: "75%", icon: Target };
+      { label: "Carbon Reduction", value: "85%", icon: TrendingUp };
+      { label: "Cost Reduction", value: "40%", icon: Rocket },
+  ],
+  };
+  {
+    id: 'digital-innovation',title: "Digital Innovation Hub",subtitle: "Accelerating digital transformation for forward-thinking organizations",description: "Zion Tech Group is your strategic partner in digital innovation. We combine cutting-edge technologies with deep industry expertise to create transformative solutions that drive competitive advantage.",image: "/images/hero-digital-innovation.jpg",
+      cta: "Start Your Journey",
+      path: "/solutions",
+      features: ["Digital Strategy", "Technology Consulting", "Innovation Labs", "Digital Products"],
+    gradient: "from-purple-500 via-pink-500 to-red-500",icon: Lightbulb,stats: [
+      { label: "Innovation Rate", value: "300%", icon: Target };
+      { label: "Digital Maturity", value: "95%", icon: TrendingUp };
+      { label: "Time to Market", value: "-70%", icon: Rocket },
+  ],
+  },
+  ];
 const slideVariants = {
-  ent,
-  e: r: (directi,
-  o: n: number) => ({
-    ,
-  x: direction > 0 ? 1000 : -1000,opaci,
-  t: y: 0
+  enter: (direction: number) => ({
+    x: direction > 0 ? 1000 : -1000,opacity: 0
+  });
+  center: {
+    zIndex: 1,x: 0,opacity: 1
+  };
+  exit: (direction: number) => ({
+    zIndex: 0,x: direction < 0 ? 1000 : -1000,opacity: 0
   })
-  cent,
-  e: r: {
-    zInde,
-  x: 1,x: 0,opaci,
-  t: y: 1
-  }
-  ex,
-  i: t: (directi,
-  o: n: number) => ({
-    zInde,
-  x: 0,x: direction < 0 ? 1000 : -1000,opaci,
-  t: y: 0
-  })
-}
-const swipeConfidenceThreshold = 10000
-const swipePower = (offs,
-  e: t: number, veloci,
-  t: y: number) () => {
+};
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity
-}
+};
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
-  const [direction, setDirection] = useState(0)
-  const [isLoading, setIsLoading] = useState(true)
+  const [currentSlide, setCurrentSlide] = useState(0);
+const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+const [direction, setDirection] = useState(0);
+const [isLoading, setIsLoading] = useState(true);
   // Memoize slides to prevent unnecessary re-renders
   const memoizedSlides = useMemo(() => heroSlides, []),
 
   // Optimized slide navigation with useCallback
-  const nextSlide = useCallback(() () => {
-    setDirection(1)
+  const nextSlide = useCallback(() => {
+    setDirection(1);
     setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),
     setIsAutoPlaying(false)
-  }, [memoizedSlides.length]),
+}, [memoizedSlides.length]),
 
-  const prevSlide = useCallback(() () => {
-    setDirection(-1)
-    setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length)
+  const prevSlide = useCallback(() => {
+    setDirection(-1);
+    setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
     setIsAutoPlaying(false)
-  }, [memoizedSlides.length])
-  const goToSlide = useCallback((ind,
-  e: x: number) () => {
-    setDirection(index > currentSlide ? 1 : -1)
-    setCurrentSlide(index)
+}, [memoizedSlides.length]);
+const goToSlide = useCallback((index: number) => {
+    setDirection(index > currentSlide ? 1 : -1);
+    setCurrentSlide(index);
     setIsAutoPlaying(false)
   }, [currentSlide]),
 
   // Auto-play functionality with pause on hover
-  useEffect(() () => {
+  useEffect(() => {
     if (!isAutoPlaying) return,
 
-    const interval = setInterval(() () => {
-      setDirection(1)
+    const interval = setInterval(() => {
+      setDirection(1);
       setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),
     }, 7000),
 
     return () => clearInterval(interval)
-  }, [isAutoPlaying, memoizedSlides.length]),
+}, [isAutoPlaying, memoizedSlides.length]),
 
   // Handle keyboard navigation
-  useEffect(() () => {
-    const handleKeyDown = (e: KeyboardEvent) () => {
-      if (e.key === 'ArrowLeft') prevSlide()
-      if (e.key === 'ArrowRight') nextSlide()
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {
-        e.preventDefault()
+        e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)
-      }
-    },
+      },
+  },
 
-    window.addEventListener('keydown', handleKeyDown)
+    window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [prevSlide, nextSlide, isAutoPlaying]),
+}, [prevSlide, nextSlide, isAutoPlaying]),
 
   // Handle image loading
-  useEffect(() () => {
-    const preloadImages = async () () => {
-      const imagePromises = memoizedSlides.map(slide () () => {
-        return new Promise((resolve) () => {
-          const img = new Image()
+  useEffect(() => {
+    const preloadImages = async () => {
+      const imagePromises = memoizedSlides.map(slide => {
+        return new Promise((resolve) => {
+          const img = new Image();
           img.onload = resolve,
           img.onerror = resolve,
           img.src = slide.image,
         }),
       }),
 
-      await Promise.all(imagePromises)
+      await Promise.all(imagePromises);
       setIsLoading(false)
-    },
+},
 
     preloadImages()
-  }, [memoizedSlides]),
+}, [memoizedSlides]),
 
-  const currentSlideData = memoizedSlides[currentSlide]
+  const currentSlideData = memoizedSlides[currentSlide];
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -266,26 +173,24 @@ export default function HeroSection() {
         </div>
       </div>
     )
-  }
+}
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('da,
-  t: a:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
 
       {/* Navigation Controls */}
       <div className="absolute top-1/2 left-4 z-20 transform -translate-y-1/2">
         <motion.button
-          whileHover={ sca,
-  l: e: 1.1 }
-          whileTap={ sca,
-  l: e: 0.9 }
+          whileHover={{ scale: 1.1 },
+  }
+          whileTap={{ scale: 0.9 },
+  }
           onClick={prevSlide}
-          className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white,
-  hove: r: bg-white/20 transition-all duration-300"
+          className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
           <ChevronLeft className="w-6 h-6" />
         </motion.button>
@@ -293,13 +198,12 @@ export default function HeroSection() {
 
       <div className="absolute top-1/2 right-4 z-20 transform -translate-y-1/2">
         <motion.button
-          whileHover={ scal,
-  e: 1.1 }
-          whileTap={ sca,
-  l: e: 0.9 }
+          whileHover={{ scale: 1.1 },
+  }
+          whileTap={{ scale: 0.9 },
+  }
           onClick={nextSlide}
-          className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white,
-  hove: r:bg-white/20 transition-all duration-300"
+          className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
           <ChevronRight className="w-6 h-6" />
         </motion.button>
@@ -308,13 +212,12 @@ export default function HeroSection() {
       {/* Auto-play Toggle */}
       <div className="absolute top-4 right-4 z-20">
         <motion.button
-          whileHover={ sca,
-  l: e: 1.1 }
-          whileTap={ sca,
-  l: e: 0.9 }
+          whileHover={{ scale: 1.1 },
+  }
+          whileTap={{ scale: 0.9 },
+  }
           onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-          className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white,
-  hove: r:bg-white/20 transition-all duration-300"
+          className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
           {isAutoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
         </motion.button>
@@ -325,25 +228,22 @@ export default function HeroSection() {
         {memoizedSlides.map((_, index) => (
           <motion.button
             key={index}
-            whileHover={ sca,
-  l: e: 1.2 }
-            whileTap={ sca,
-  l: e: 0.8 }
+            whileHover={{ scale: 1.2 },
+  }
+            whileTap={{ scale: 0.8 },
+  }
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide 
                 ? 'bg-cyan-400 scale-125' 
-                : 'bg-white/30,
-  hove: r:bg-white/50'
+                : 'bg-white/30 hover:bg-white/50'
             }`}
           />
         ))}
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-4,
-  s: m: px-6 l,
-  g:px-8">
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentSlide}
@@ -352,54 +252,45 @@ export default function HeroSection() {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={
-              x: { typ,
-  e: "spring", stiffne,
-  s: s: 300, dampi,
-  n: g: 30 }
-              opaci,
-  t: y: { duratio,
-  n: 0.2 }
-            }
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 };
+              opacity: { duration: 0.2 },
+  },
+  }
             drag="x"
-            dragConstraints={ le,
-  f: t: 0, rig,
-  h: t: 0 }
+            dragConstraints={{ left: 0, right: 0 },
+  }
             dragElastic={1}
-            onDragEnd={(e, { offset, velocity }) () => {
-              const swipe = swipePower(offset.x, velocity.x)
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
               if (swipe < -swipeConfidenceThreshold) {
                 nextSlide()
-              } else if (swipe > swipeConfidenceThreshold) {
+} else if (swipe > swipeConfidenceThreshold) {
                 prevSlide()
-              }
-            }
+},
+  },
+  }
             className="w-full max-w-6xl mx-auto text-center"
           >
-            <div className="grid,
-  l: g:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <motion.div 
-                initial={ opaci,
-  t: y: 0, y: 50 }
-                animate={ opaci,
-  t: y: 1, y: 0 }
-                transition={ durati,
-  o: n: 0.8, del,
-  a: y: 0.2 }
+                initial={{ opacity: 0, y: 50 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.8, delay: 0.2 },
+  }
                 className="space-y-8"
               >
                 <div className="space-y-4">
                   <motion.div
-                    initial={ opaci,
-  t: y: 0, sca,
-  l: e: 0.8 }
-                    animate={ opaci,
-  t: y: 1, sca,
-  l: e: 1 }
-                    transition={ durati,
-  o: n: 0.6, del,
-  a: y: 0.3 }
+                    initial={{ opacity: 0, scale: 0.8 },
+  }
+                    animate={{ opacity: 1, scale: 1 },
+  }
+                    transition={{ duration: 0.6, delay: 0.3 },
+  }
                     className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium"
                   >
                     <currentSlideData.icon className="w-4 h-4 mr-2" />
@@ -407,28 +298,24 @@ export default function HeroSection() {
                   </motion.div>
 
                   <motion.h1
-                    initial={ opaci,
-  t: y: 0, y: 30 }
-                    animate={ opaci,
-  t: y: 1, y: 0 }
-                    transition={ durati,
-  o: n: 0.8, del,
-  a: y: 0.4 }
-                    className="text-4xl,
-  s: m: text-5xl l,
-  g:text-6xl font-bold text-white leading-tight"
+                    initial={{ opacity: 0, y: 30 },
+  }
+                    animate={{ opacity: 1, y: 0 },
+  }
+                    transition={{ duration: 0.8, delay: 0.4 },
+  }
+                    className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
                   >
                     {currentSlideData.title}
                   </motion.h1>
 
                   <motion.p
-                    initial={ opaci,
-  t: y: 0, y: 30 }
-                    animate={ opaci,
-  t: y: 1, y: 0 }
-                    transition={ durati,
-  o: n: 0.8, del,
-  a: y: 0.6 }
+                    initial={{ opacity: 0, y: 30 },
+  }
+                    animate={{ opacity: 1, y: 0 },
+  }
+                    transition={{ duration: 0.8, delay: 0.6 },
+  }
                     className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto"
                   >
                     {currentSlideData.description}
@@ -437,13 +324,12 @@ export default function HeroSection() {
 
                 {/* Features */}
                 <motion.div
-                  initial={ opaci,
-  t: y: 0, y: 30 }
-                  animate={ opaci,
-  t: y: 1, y: 0 }
-                  transition={ durati,
-  o: n: 0.8, del,
-  a: y: 0.8 }
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  animate={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.8, delay: 0.8 },
+  }
                   className="grid grid-cols-2 gap-4"
                 >
                   {currentSlideData.features.map((feature, index) => (
@@ -456,21 +342,16 @@ export default function HeroSection() {
 
                 {/* CTA Button */}
                 <motion.div
-                  initial={ opaci,
-  t: y: 0, y: 30 }
-                  animate={ opaci,
-  t: y: 1, y: 0 }
-                  transition={ durati,
-  o: n: 0.8, del,
-  a: y: 1 }
+                  initial={{ opacity: 0, y: 30 },
+  }
+                  animate={{ opacity: 1, y: 0 },
+  }
+                  transition={{ duration: 0.8, delay: 1 },
+  }
                 >
                   <Link
                     to={currentSlideData.path}
-                    className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg,
-  hove: r: from-cyan-600,
-  hove: r:to-blue-600,
-  transform: hover:scale-105 transition-all duration-300 shadow-lg hove,
-  r:shadow-xl"
+                    className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     {currentSlideData.cta}
                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -480,13 +361,12 @@ export default function HeroSection() {
 
               {/* Visual Content */}
               <motion.div
-                initial={ opaci,
-  t: y: 0, x: 50 }
-                animate={ opaci,
-  t: y: 1, x: 0 }
-                transition={ durati,
-  o: n: 0.8, del,
-  a: y: 0.4 }
+                initial={{ opacity: 0, x: 50 },
+  }
+                animate={{ opacity: 1, x: 0 },
+  }
+                transition={{ duration: 0.8, delay: 0.4 },
+  }
                 className="relative"
               >
                 <div className={`relative p-8 rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} shadow-2xl`}>
@@ -501,15 +381,12 @@ export default function HeroSection() {
                       {currentSlideData.stats.map((stat, index) => (
                         <motion.div
                           key={index}
-                          initial={ opaci,
-  t: y: 0, sca,
-  l: e: 0.8 }
-                          animate={ opaci,
-  t: y: 1, sca,
-  l: e: 1 }
-                          transition={ durati,
-  o: n: 0.6, del,
-  a: y: 0.8 + index * 0.1 }
+                          initial={{ opacity: 0, scale: 0.8 },
+  }
+                          animate={{ opacity: 1, scale: 1 },
+  }
+                          transition={{ duration: 0.6, delay: 0.8 + index * 0.1 },
+  }
                           className="text-center"
                         >
                           <div className="text-2xl font-bold text-white">{stat.value}</div>
@@ -528,4 +405,4 @@ export default function HeroSection() {
   )
 }
 
-export { HeroSection }
+export { HeroSection };

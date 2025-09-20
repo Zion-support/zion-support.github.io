@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   MessageCircle,
   X, 
@@ -19,12 +19,9 @@ import {
   Shield,
   Cloud,
   Rocket
-} from "lucide-react"
+} from "lucide-react";
 interface Message {
-  id: string,ty,
-  p: e: 'user' | 'assistant',conte,
-  n: t: string,timesta,
-  m: p: Date
+  id: string,type: 'user' | 'assistant',content: string,timestamp: Date;
   isLoading?: boolean,
   error?: string
 }
@@ -36,141 +33,117 @@ interface ChatAssistantProps {
   welcomeMessage?: string,
 }
 
-export,
-  const: ChatAssistant: React.FC<ChatAssistantProps> = ({
-  position = 'bottom-right'
+export const ChatAssistant: React.FC<ChatAssistantProps> = ({
+  position = 'bottom-right';
   theme = 'dark',
   maxHeight = '600px',
   welcomeMessage = "Hello! I'm Zion, your AI assistant. How can I help you today?"
-}) () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [messages, setMessages] = useState<Message[]>([
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+const [messages, setMessages] = useState<Message[]>([
     {
-      id: '1',ty,
-  p: e: 'assistant',conte,
-  n: t: welcomeMessage,timesta,
-  m: p: new Date()
-    }
-  ])
-  const [inputValue, setIsInputValue] = useState('')
-  const [isTyping, setIsTyping] = useState(false)
-  const [isListening, setIsListening] = useState(false)
-  const [isMuted, setIsMuted] = useState(false)
-  const [showSettings, setShowSettings] = useState(false)
-  const [isMinimized, setIsMinimized] = useState(false)
-  const messagesEndRef = useRef<HTMLDivElement>(null)
-  const inputRef = useRef<HTMLInputElement>(null)
-  const recognitionRef = useRef<any>(null)
+      id: '1',type: 'assistant',content: welcomeMessage,timestamp: new Date()
+    },
+  ]);
+const [inputValue, setIsInputValue] = useState('');
+const [isTyping, setIsTyping] = useState(false);
+const [isListening, setIsListening] = useState(false);
+const [isMuted, setIsMuted] = useState(false);
+const [showSettings, setShowSettings] = useState(false);
+const [isMinimized, setIsMinimized] = useState(false);
+const messagesEndRef = useRef<HTMLDivElement>(null);
+const inputRef = useRef<HTMLInputElement>(null);
+const recognitionRef = useRef<any>(null);
   // Auto-scroll to bottom when new messages arrive
-  useEffect(() () => {
-    messagesEndRef.current?.scrollIntoView({ behavi,
-  o: r: 'smooth' })
-  }, [messages]),
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+}, [messages]),
 
   // Initialize speech recognition
-  useEffect(() () => {
+  useEffect(() => {
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
-      recognitionRef.current = new SpeechRecognition()
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false,
       recognitionRef.current.interimResults = false,
       recognitionRef.current.lang = 'en-US',
 
-      recognitionRef.current.onresult = (eve,
-  n: t: any) () => {
-        const transcript = event.results[0][0].transcript
-        setIsInputValue(transcript)
+      recognitionRef.current.onresult = (event: any) => {
+        const transcript = event.results[0],
+  [0].transcript;
+        setIsInputValue(transcript);
         setIsListening(false)
       },
 
-      recognitionRef.current.onerror = (eve,
-  n: t: any) () => {
-        console.error('Speech recognition erro,
-  r:', event.error)
+      recognitionRef.current.onerror = (event: any) => {
+        console.error('Speech recognition error:', event.error);
         setIsListening(false)
-      },
-    }
+},
+    },
   }, []),
 
   // Handle speech recognition
-  const toggleListening = useCallback(() () => {
+  const toggleListening = useCallback(() => {
     if (!recognitionRef.current) {
-      alert('Speech recognition is not supported in your browser')
+      alert('Speech recognition is not supported in your browser');
       return,
     }
 
     if (isListening) {
-      recognitionRef.current.stop()
+      recognitionRef.current.stop();
       setIsListening(false)
-    } else {
-      recognitionRef.current.start()
+} else {
+      recognitionRef.current.start();
       setIsListening(true)
-    }
+},
   }, [isListening]),
 
   // Toggle mute
-  const toggleMute = useCallback(() () => {
+  const toggleMute = useCallback(() => {
     setIsMuted(!isMuted)
-  }, [isMuted]),
+}, [isMuted]),
 
   // Send message
-  const sendMessage = useCallback(async (conte,
-  n: t: string) () => {
-    if (!content.trim()) return,
-  const: userMessage: Message = {
-      i,
-  d: Date.now().toString(),ty,
-  p: e: 'user',conte,
-  n: t: content.trim(),timesta,
-  m: p: new Date()
-    }
-    setMessages(prev => [...prev, userMessage])
-    setIsInputValue('')
-    setIsTyping(true)
+  const sendMessage = useCallback(async (content: string) => {
+    if (!content.trim()) return;
+const userMessage: Message = {
+      id: Date.now().toString(),type: 'user',content: content.trim(),timestamp: new Date()
+    };
+    setMessages(prev => [...prev, userMessage]);
+    setIsInputValue('');
+    setIsTyping(true);
     // Simulate AI response (replace with actual AI API call)
     try {
-      const response = await generateAIResponse(content)
-      const,
-  assistantMessag: e: Message = {
-        i,
-  d: (Date.now() + 1).toString(),ty,
-  p: e: 'assistant',conte,
-  n: t: response,timesta,
-  m: p: new Date()
-      }
+      const response = await generateAIResponse(content);
+const assistantMessage: Message = {
+        id: (Date.now() + 1).toString(),type: 'assistant',content: response,timestamp: new Date()
+      };
       setMessages(prev => [...prev, assistantMessage])
-    } catch (error) {
-      const,
-  errorMessag: e: Message = {
-        i,
-  d: (Date.now() + 1).toString(),ty,
-  p: e: 'assistant',conte,
-  n: t: 'Sorry, I encountered an error. Please try again.',
-        timesta,
-  m: p: new Date(),err,
-  o: r: 'Failed to generate response'
-      }
+} catch (error) {
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),type: 'assistant',content: 'Sorry, I encountered an error. Please try again.',
+        timestamp: new Date(),error: 'Failed to generate response'
+      };
       setMessages(prev => [...prev, errorMessage])
-    } finally {
+} finally {
       setIsTyping(false)
-    }
+},
   }, []),
 
   // Generate AI response (simulated)
-  const generateAIResponse = async (userInp,
-  u: t: string): Promise<string> () () => {
+  const generateAIResponse = async (userInput: string): Promise<string> => {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
 
     const responses = [
-      "That's a great question! Let me help you with that."
+      "That's a great question! Let me help you with that.";
       "I understand your inquiry. Here's what I can tell you about that topic.",
       "Based on your question, I'd recommend exploring our services in that area.",
       "That's an interesting point. Let me provide you with some insights.",
       "I'm here to help! Let me guide you through this."
     ],
 
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)]
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
     // Add some context-aware responses
     if (userInput.toLowerCase().includes('ai') || userInput.toLowerCase().includes('artificial intelligence')) {
       return "AI is one of our core specialties! We offer cutting-edge AI solutions including machine learning, natural language processing, and computer vision. Would you like to learn more about our AI services?",
@@ -185,51 +158,40 @@ export,
     }
 
     return randomResponse
-  },
+},
 
   // Handle form submission
-  const handleSubmit = useCallback((e: React.FormEvent) () => {
-    e.preventDefault()
+  const handleSubmit = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
     sendMessage(inputValue)
   }, [inputValue, sendMessage]),
 
   // Quick action buttons
   const quickActions = [
-    { te,
-  x: t: 'AI Services', ic,
-  o: n: Brain, acti,
-  o: n: () => sendMessage('Tell me about your AI services') }, { te,
-  x: t: 'Cloud Solutions', ic,
-  o: n: Cloud, acti,
-  o: n: () => sendMessage('What cloud solutions do you offer?') }, { te,
-  x: t: 'Security', ic,
-  o: n: Shield, acti,
-  o: n: () => sendMessage('Tell me about your security services') }, { te,
-  x: t: 'Innovation', ic,
-  o: n: Rocket, acti,
-  o: n: () => sendMessage('What makes Zion Tech Group innovative?') }
-  ]
+    { text: 'AI Services', icon: Brain, action: () => sendMessage('Tell me about your AI services') };
+    { text: 'Cloud Solutions', icon: Cloud, action: () => sendMessage('What cloud solutions do you offer?') };
+    { text: 'Security', icon: Shield, action: () => sendMessage('Tell me about your security services') };
+    { text: 'Innovation', icon: Rocket, action: () => sendMessage('What makes Zion Tech Group innovative?') },
+  ];
   // Position classes
   const positionClasses = {
     'bottom-right': 'bottom-4 right-4bottom-left': 'bottom-4 left-4top-right': 'top-4 right-4top-left': 'top-4 left-4'
-  }
+  };
   return (
-    <div className={`fixed ${positionClasses[position]} z-50`}>
+    <div className={`fixed ${positionClasses[position],
+  } z-50`}>
       {/* Chat Toggle Button */}
       <motion.button
-        initial={ sca,
-  l: e: 0 }
-        animate={ sca,
-  l: e: 1 }
-        whileHover={ sca,
-  l: e: 1.1 }
-        whileTap={ sca,
-  l: e: 0.9 }
+        initial={{ scale: 0 },
+  }
+        animate={{ scale: 1 },
+  }
+        whileHover={{ scale: 1.1 },
+  }
+        whileTap={{ scale: 0.9 },
+  }
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300,
-  focu: s: outline-none,
-  focu: s:ring-4 focu,
-  s:ring-cyan-300/50"
+        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300/50"
         aria-label="Open chat assistant"
       >
         <MessageCircle className="w-6 h-6" />
@@ -239,19 +201,14 @@ export,
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={ opaci,
-  t: y: 0, sca,
-  l: e: 0.8, y: 20 }
-            animate={ opaci,
-  t: y: 1, sca,
-  l: e: 1, y: 0 }
-            exit={ opaci,
-  t: y: 0, sca,
-  l: e: 0.8, y: 20 }
-            transition={ ty,
-  p: e: "spring", stiffne,
-  s: s: 300, dampi,
-  n: g: 30 }
+            initial={{ opacity: 0, scale: 0.8, y: 20 },
+  }
+            animate={{ opacity: 1, scale: 1, y: 0 },
+  }
+            exit={{ opacity: 0, scale: 0.8, y: 20 },
+  }
+            transition={{ type: "spring", stiffness: 300, damping: 30 },
+  }
             className={`absolute bottom-16 right-0 w-96 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl overflow-hidden ${isMinimized ? 'h-16' : ''}`}
           >
             {/* Header */}
@@ -269,24 +226,21 @@ export,
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setIsMinimized(!isMinimized)}
-                  className="p-1 text-slate-400,
-  hove: r:text-white transition-colors"
+                  className="p-1 text-slate-400 hover:text-white transition-colors"
                   aria-label={isMinimized ? 'Expand chat' : 'Minimize chat'}
                 >
                   {isMinimized ? '□' : '−'}
                 </button>
                 <button
                   onClick={() => setShowSettings(!showSettings)}
-                  className="p-1 text-slate-400,
-  hove: r:text-white transition-colors"
+                  className="p-1 text-slate-400 hover:text-white transition-colors"
                   aria-label="Settings"
                 >
                   <Settings className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-1 text-slate-400,
-  hove: r:text-white transition-colors"
+                  className="p-1 text-slate-400 hover:text-white transition-colors"
                   aria-label="Close chat"
                 >
                   <X className="w-4 h-4" />
@@ -299,16 +253,16 @@ export,
                 {/* Messages */}
                 <div 
                   className="flex-1 overflow-y-auto p-4 space-y-4"
-                  style={ maxHeig,
-  h: t: maxHeight }
+                  style={{ maxHeight: maxHeight },
+  }
                 >
                   {messages.map((message) => (
                     <motion.div
                       key={message.id}
-                      initial={ opaci,
-  t: y: 0, y: 10 }
-                      animate={ opaci,
-  t: y: 1, y: 0 }
+                      initial={{ opacity: 0, y: 10 },
+  }
+                      animate={{ opacity: 1, y: 0 },
+  }
                       className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       <div
@@ -337,12 +291,14 @@ export,
                         </p>
                       </div>
                     </motion.div>
-                  ))}, {/* Typing indicator */}, {isTyping && (
+                  ))},
+  {/* Typing indicator */},
+  {isTyping && (
                     <motion.div
-                      initial={ opaci,
-  t: y: 0, y: 10 }
-                      animate={ opaci,
-  t: y: 1, y: 0 }
+                      initial={{ opacity: 0, y: 10 },
+  }
+                      animate={{ opacity: 1, y: 0 },
+  }
                       className="flex justify-start"
                     >
                       <div className="bg-slate-700/50 text-slate-200 border border-slate-600/50 rounded-2xl p-3">
@@ -350,10 +306,10 @@ export,
                           <Bot className="w-4 h-4 text-cyan-400" />
                           <div className="flex space-x-1">
                             <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={ animationDel,
-  a: y: '0.1s' }></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={ animationDel,
-  a: y: '0.2s' }></div>
+                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' },
+  }></div>
+                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' },
+  }></div>
                           </div>
                         </div>
                       </div>
@@ -363,25 +319,22 @@ export,
                   <div ref={messagesEndRef} />
                 </div>
 
-                {/* Quick Actions */}, {messages.length === 1 && (
+                {/* Quick Actions */},
+  {messages.length === 1 && (
                   <div className="px-4 pb-4">
-                    <p className="text-xs text-slate-400 mb-3">Quick,
-  action: s:</p>
+                    <p className="text-xs text-slate-400 mb-3">Quick actions:</p>
                     <div className="grid grid-cols-2 gap-2">
                       {quickActions.map((action, index) => (
                         <motion.button
                           key={action.text}
-                          initial={ opaci,
-  t: y: 0, sca,
-  l: e: 0.9 }
-                          animate={ opaci,
-  t: y: 1, sca,
-  l: e: 1 }
-                          transition={ del,
-  a: y: index * 0.1 }
+                          initial={{ opacity: 0, scale: 0.9 },
+  }
+                          animate={{ opacity: 1, scale: 1 },
+  }
+                          transition={{ delay: index * 0.1 },
+  }
                           onClick={action.action}
-                          className="flex items-center gap-2 p-2 bg-slate-700/50,
-  hove: r:bg-slate-600/50 text-slate-300 text-xs rounded-lg transition-colors border border-slate-600/50"
+                          className="flex items-center gap-2 p-2 bg-slate-700/50 hover:bg-slate-600/50 text-slate-300 text-xs rounded-lg transition-colors border border-slate-600/50"
                         >
                           <action.icon className="w-3 h-3" />
                           {action.text}
@@ -389,7 +342,8 @@ export,
                       ))}
                     </div>
                   </div>
-                )}, {/* Input Form */}
+                )},
+  {/* Input Form */}
                 <form onSubmit={handleSubmit} className="p-4 border-t border-slate-600/50">
                   <div className="flex items-center gap-2">
                     <div className="flex-1 relative">
@@ -399,19 +353,14 @@ export,
                         value={inputValue}
                         onChange={(e) => setIsInputValue(e.target.value)}
                         placeholder="Type your message..."
-                        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400,
-  focu: s: outline-none,
-  focu: s:ring-2,
-  focu: s:ring-cyan-500/50 focu,
-  s:border-cyan-500"
+                        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500"
                         disabled={isTyping}
                       />
                       {inputValue && (
                         <button
                           type="button"
                           onClick={() => setIsInputValue('')}
-                          className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400,
-  hove: r:text-white"
+                          className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white"
                         >
                           <X className="w-4 h-4" />
                         </button>
@@ -424,10 +373,8 @@ export,
                         onClick={toggleListening}
                         className={`p-2 rounded-lg transition-colors ${
                           isListening
-                            ? 'bg-red-500/20 text-red-400,
-  hove: r: bg-red-500/30'
-                            : 'bg-slate-700/50 text-slate-400 hove,
-  r:bg-slate-600/50'
+                            ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30'
+                            : 'bg-slate-700/50 text-slate-400 hover:bg-slate-600/50'
                         }`}
                         disabled={isTyping}
                         aria-label={isListening ? 'Stop listening' : 'Start voice input'}
@@ -440,10 +387,8 @@ export,
                         onClick={toggleMute}
                         className={`p-2 rounded-lg transition-colors ${
                           isMuted
-                            ? 'bg-red-500/20 text-red-400,
-  hove: r: bg-red-500/30'
-                            : 'bg-slate-700/50 text-slate-400 hove,
-  r:bg-slate-600/50'
+                            ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30'
+                            : 'bg-slate-700/50 text-slate-400 hover:bg-slate-600/50'
                         }`}
                         aria-label={isMuted ? 'Unmute' : 'Mute'}
                       >
@@ -454,14 +399,7 @@ export,
                     <button
                       type="submit"
                       disabled={!inputValue.trim() || isTyping}
-                      className="p-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg,
-  hove: r: from-cyan-600,
-  hove: r:to-blue-700,
-  disable: d:opacity-50,
-  disable: d:cursor-not-allowed transition-all duration-200,
-  focu: s:outline-none,
-  focu: s:ring-2 focu,
-  s:ring-cyan-500/50"
+                      className="p-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
                       aria-label="Send message"
                     >
                       <Send className="w-4 h-4" />
@@ -478,23 +416,19 @@ export,
       <AnimatePresence>
         {showSettings && (
           <motion.div
-            initial={ opaci,
-  t: y: 0, sca,
-  l: e: 0.8 }
-            animate={ opaci,
-  t: y: 1, sca,
-  l: e: 1 }
-            exit={ opaci,
-  t: y: 0, sca,
-  l: e: 0.8 }
+            initial={{ opacity: 0, scale: 0.8 },
+  }
+            animate={{ opacity: 1, scale: 1 },
+  }
+            exit={{ opacity: 0, scale: 0.8 },
+  }
             className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl p-4"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-semibold text-white">Chat Settings</h3>
               <button
                 onClick={() => setShowSettings(false)}
-                className="text-slate-400,
-  hove: r: text-white"
+                className="text-slate-400 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -526,18 +460,15 @@ export,
               
               <div className="pt-4 border-t border-slate-600/50">
                 <button
-                  onClick={() () => {
+                  onClick={() => {
                     setMessages([{
-                      i,
-  d: '1',ty,
-  p: e: 'assistant',conte,
-  n: t: welcomeMessage,timesta,
-  m: p: new Date()
-                    }])
+                      id: '1',type: 'assistant',content: welcomeMessage,timestamp: new Date()
+                    },
+  ]);
                     setShowSettings(false)
-                  }
-                  className="w-full px-4 py-2 bg-slate-700/50,
-  hove: r: bg-slate-600/50 text-white rounded-lg transition-colors"
+},
+  }
+                  className="w-full px-4 py-2 bg-slate-700/50 hover: bg-slate-600/50 text-white rounded-lg transition-colors"
                 >
                   Clear Chat History
                 </button>
@@ -548,4 +479,4 @@ export,
       </AnimatePresence>
     </div>
   )
-}
+};

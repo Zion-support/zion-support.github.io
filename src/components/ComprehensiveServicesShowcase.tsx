@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from "react"
-import { motion } from "framer-motion"
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import {
   Brain,
   Cpu,
@@ -26,77 +26,49 @@ import {
   Mail,
   ExternalLink,
   Search
-} from "lucide-react"
-import { Link } from "react-router-dom"
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025"
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025"
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 interface Service {
-  id: string,tit,
-  l: e: string,descripti,
-  o: n: string,catego,
-  r: y: string,subcatego,
-  r: y: string,pri,
-  c: e: number,curren,
-  c: y: string,pricingMod,
-  e: l: string,featur,
-  e: s: string[],benefi,
-  t: s: string[],useCas,
-  e: s: string[],targetAudien,
-  c: e: string[],ta,
-  g: s: string[],estimatedDelive,
-  r: y: string,supportLev,
-  e: l: string,marketPri,
-  c: e: string,r,
-  o: i: string,innovationLev,
-  e: l: string,contactIn,
-  f: o: {
-    phon,
-  e: string,ema,
-  i: l: string,websi,
-  t: e: string
-  }
+  id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
+    phone: string,email: string,website: string
+  };
   technicalSpecs?: {
-    technolo,
-  g: y: string[],integratio,
-  n: s: string[],apiEndpoin,
-  t: s: number,upti,
-  m: e: string,securi,
-  t: y: string[]
+    technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[],
+  },
   }
-}
-const,
-  ComprehensiveServicesShowcas: e: React.FC = () () => {
+const ComprehensiveServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all'),
   const [searchTerm, setSearchTerm] = useState<string>(''),
-  // Combine all services,
-  const: allServices: Service[] = [
-    ...EXPANDED_INNOVATIVE_SERVICES_2025
+  // Combine all services
+  const allServices: Service[] = [
+    ...EXPANDED_INNOVATIVE_SERVICES_2025;
     ...EMERGING_TECH_SERVICES_2025
   ],
   // Get unique categories
-  const categories = useMemo(() () => {
+  const categories = useMemo(() => {
     const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))],
     return cats
-  }, [allServices]),
+}, [allServices]),
   // Get unique innovation levels
-  const innovationLevels = useMemo(() () => {
+  const innovationLevels = useMemo(() => {
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))],
     return levels
-  }, [allServices]),
+}, [allServices]),
   // Filter services
-  const filteredServices = useMemo(() () => {
-    return allServices.filter(service () () => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-      const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = useMemo(() => {
+    return allServices.filter(service => {
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
+const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch
-    }),
+}),
   }, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]),
-  const getCategoryIcon = (catego,
-  r: y: string) () => {
+  const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Customer Experience':
@@ -105,82 +77,72 @@ const,
       case 'AI & Healthcare':
       case 'AI & Financial Services':
       case 'AI & Content Marketing':
-        return <Brain className="h-6 w-6" />
+        return <Brain className="h-6 w-6" />;
       case 'Cybersecurity & AI':
       case 'Cybersecurity & Quantum':
-        return <Shield className="h-6 w-6" />
+        return <Shield className="h-6 w-6" />;
       case 'Blockchain & Supply Chain':
-        return <Database className="h-6 w-6" />
+        return <Database className="h-6 w-6" />;
       case 'IoT & Edge Computing':
-        return <Network className="h-6 w-6" />
+        return <Network className="h-6 w-6" />;
       case 'Quantum Computing':
-        return <Cpu className="h-6 w-6" />
+        return <Cpu className="h-6 w-6" />;
       case 'AR/VR & Immersive Tech':
-        return <Eye className="h-6 w-6" />
+        return <Eye className="h-6 w-6" />;
       case '5G & Telecommunications':
-        return <Globe className="h-6 w-6" />
+        return <Globe className="h-6 w-6" />;
       case 'Space Technology':
-        return <Rocket className="h-6 w-6" />
+        return <Rocket className="h-6 w-6" />;
       case 'Neuromorphic Computing':
-        return <Brain className="h-6 w-6" />
+        return <Brain className="h-6 w-6" />;
       case 'Digital Twin & Simulation':
-        return <Settings className="h-6 w-6" />
+        return <Settings className="h-6 w-6" />;
       case 'Synthetic Biology':
-        return <Target className="h-6 w-6" />
+        return <Target className="h-6 w-6" />;
       case 'Brain-Computer Interface':
-        return <Brain className="h-6 w-6" />
+        return <Brain className="h-6 w-6" />;
       case 'Sustainability & Energy':
-        return <Zap className="h-6 w-6" />
+        return <Zap className="h-6 w-6" />;
       case 'Autonomous Vehicles & Fleet Management':
-        return <Rocket className="h-6 w-6" />
-      defaul,
-  t: return <Star className="h-6 w-6" />
-    }
-  }
-  const getInnovationLevelColor = (lev,
-  e: l: string) () => {
+        return <Rocket className="h-6 w-6" />;
+      default: return <Star className="h-6 w-6" />
+    },
+  };
+const getInnovationLevelColor = (level: string) => {
     switch (level) {
       case 'Cutting-edge':
-        return 'bg-gradient-to-r from-purple-600 to-pink-600'
+        return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced':
-        return 'bg-gradient-to-r from-blue-600 to-cyan-600'
+        return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Professional':
-        return 'bg-gradient-to-r from-green-600 to-emerald-600'
-      defaul,
-  t: return 'bg-gradient-to-r from-gray-600 to-slate-600'
-    }
-  }
+        return 'bg-gradient-to-r from-green-600 to-emerald-600';
+      default: return 'bg-gradient-to-r from-gray-600 to-slate-600'
+    },
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
-        <div className="container mx-auto px-4,
-  s: m: px-6,
-  l: g:px-8">
+        <div className="container mx-auto px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl,
-  m: d:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Innovative Technology Solutions
             </h1>
-            <p className="text-xl m,
-  d:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Discover our comprehensive portfolio of cutting-edge micro SAAS services
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
+              Discover our comprehensive portfolio of cutting-edge micro SAAS services;
               AI solutions, and emerging technology platforms designed to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg,
-  hove: r: bg-zion-cyan-light transition-colors"
+                className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg,
-  hove: r:bg-white hove,
-  r:text-zion-blue-dark transition-colors"
+                className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
               >
                 Request Quote
               </Link>
@@ -203,12 +165,10 @@ const,
             <div className="flex items-center gap-2">
               <Globe className="h-5 w-5 text-zion-cyan" />
               <a
-                href="htt,
-  p: s: //ziontechgroup.com"
+                href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-zion-blue hove,
-  r:text-zion-cyan transition-colors"
+                className="font-medium text-zion-blue hover:text-zion-cyan transition-colors"
               >
                 ziontechgroup.com
               </a>
@@ -232,25 +192,18 @@ const,
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg,
-  focu: s: ring-2,
-  focu: s:ring-zion-cyan focu,
-  s:border-transparent"
+                  className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
                 <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
               </div>
             </div>
             {/* Category Filter */}
             <div className="flex items-center gap-2">
-              <span className="text-gray-700 font-medium">Catego,
-  r: y:</span>
+              <span className="text-gray-700 font-medium">Category:</span>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg,
-  focu: s: ring-2,
-  focu: s:ring-zion-cyan focu,
-  s:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category => (
                   <option key={category} value={category}>
@@ -261,15 +214,11 @@ const,
             </div>
             {/* Innovation Level Filter */}
             <div className="flex items-center gap-2">
-              <span className="text-gray-700 font-medium">Innovati,
-  o: n:</span>
+              <span className="text-gray-700 font-medium">Innovation:</span>
               <select
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg,
-  focu: s: ring-2,
-  focu: s:ring-zion-cyan focu,
-  s:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {innovationLevels.map(level => (
                   <option key={level} value={level}>
@@ -284,21 +233,17 @@ const,
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1,
-  l: g: grid-cols-2 x,
-  l:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={ opaci,
-  t: y: 0, y: 20 }
-                animate={ opaci,
-  t: y: 1, y: 0 }
-                transition={ durati,
-  o: n: 0.5, del,
-  a: y: index * 0.1 }
-                className="bg-white rounded-xl shadow-lg,
-  hove: r:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ duration: 0.5, delay: index * 0.1 },
+  }
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Service Header */}
                 <div className="p-6 border-b border-gray-100">
@@ -315,7 +260,8 @@ const,
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-zion-blue">
-                        {service.currency}, {service.price.toLocaleString()}
+                        {service.currency},
+  {service.price.toLocaleString()}
                       </div>
                       <div className="text-sm text-gray-500">per {service.pricingModel}</div>
                     </div>
@@ -358,7 +304,8 @@ const,
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                           {feature}
                         </div>
-                      ))}, {service.features.length > 5 && (
+                      ))},
+  {service.features.length > 5 && (
                         <div className="text-sm text-zion-cyan font-medium">
                           +{service.features.length - 5} more features
                         </div>
@@ -396,16 +343,13 @@ const,
                   <div className="flex gap-3">
                     <Link
                       to={`/contact?service=${service.id}`}
-                      className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg,
-  hove: r: bg-zion-cyan-light transition-colors font-medium"
+                      className="flex-1 bg-zion-cyan text-white text-center py-2 px-4 rounded-lg hover: bg-zion-cyan-light transition-colors font-medium"
                     >
                       Get Started
                     </Link>
                     <Link
                       to={`/services/${service.id}`}
-                      className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg,
-  hove: r: bg-zion-cyan hove,
-  r:text-white transition-colors font-medium"
+                      className="flex-1 border border-zion-cyan text-zion-cyan text-center py-2 px-4 rounded-lg hover:bg-zion-cyan hover:text-white transition-colors font-medium"
                     >
                       Learn More
                     </Link>
@@ -418,13 +362,13 @@ const,
             <div className="text-center py-16">
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
               <button
-                onClick={() () => {
-                  setSelectedCategory('all')
-                  setSelectedInnovationLevel('all')
+                onClick={() => {
+                  setSelectedCategory('all');
+                  setSelectedInnovationLevel('all');
                   setSearchTerm('')
-                }
-                className="text-zion-cyan,
-  hove: r: text-zion-cyan-light font-medium"
+},
+  }
+                className="text-zion-cyan hover: text-zion-cyan-light font-medium"
               >
                 Clear all filters
               </button>
@@ -435,8 +379,7 @@ const,
       {/* Call to Action Section */}
       <section className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl,
-  m: d: text-4xl font-bold mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -446,18 +389,14 @@ const,
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg,
-  hove: r:bg-gray-100 transition-colors"
+              className="inline-flex items-center px-8 py-3 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a
-              href="t,
-  e: l:+13024640950"
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg,
-  hove: r:bg-white hove,
-  r:text-zion-blue transition-colors"
+              href="tel:+13024640950"
+              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-colors"
             >
               <Phone className="mr-2 h-5 w-5" />
               Call Now
@@ -467,5 +406,5 @@ const,
       </section>
     </div>
   )
-}
-export default ComprehensiveServicesShowcase
+};
+export default ComprehensiveServicesShowcase;

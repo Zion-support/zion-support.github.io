@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Users,
   MessageCircle,
@@ -64,413 +64,202 @@ import {
   Target,
   BarChart3,
   PieChart
-} from "lucide-react"
+} from "lucide-react";
 interface TeamMember {
-  id: string,na,
-  m: e: string,ro,
-  l: e: string,departme,
-  n: t: string,avat,
-  a: r: string,stat,
-  u: s: 'online' | 'away' | 'busy' | 'offline',lastSe,
-  e: n: string,skil,
-  l: s: string[],projec,
-  t: s: string[],availabili,
-  t: y: 'available' | 'busy' | 'unavailable'
+  id: string,name: string,role: string,department: string,avatar: string,status: 'online' | 'away' | 'busy' | 'offline',lastSeen: string,skills: string[],projects: string[],availability: 'available' | 'busy' | 'unavailable'
 }
 
 interface Project {
-  id: string,na,
-  m: e: string,descripti,
-  o: n: string,stat,
-  u: s: 'planning' | 'active' | 'review' | 'completed' | 'on-hold',priori,
-  t: y: 'low' | 'medium' | 'high' | 'critical',progre,
-  s: s: number,startDa,
-  t: e: string,endDa,
-  t: e: string,teamMembe,
-  r: s: string[],tas,
-  k: s: Task[],budg,
-  e: t: number,clie,
-  n: t: string,ta,
-  g: s: string[]
-}
+  id: string,name: string,description: string,status: 'planning' | 'active' | 'review' | 'completed' | 'on-hold',priority: 'low' | 'medium' | 'high' | 'critical',progress: number,startDate: string,endDate: string,teamMembers: string[],tasks: Task[],budget: number,client: string,tags: string[],
+  }
 
 interface Task {
-  id: string,tit,
-  l: e: string,descripti,
-  o: n: string,stat,
-  u: s: 'todo' | 'in-progress' | 'review' | 'completed',priori,
-  t: y: 'low' | 'medium' | 'high' | 'critical',assign,
-  e: e: string,dueDa,
-  t: e: string,estimatedHou,
-  r: s: number,actualHou,
-  r: s: number,dependenci,
-  e: s: string[],ta,
-  g: s: string[],commen,
-  t: s: Comment[]
-}
+  id: string,title: string,description: string,status: 'todo' | 'in-progress' | 'review' | 'completed',priority: 'low' | 'medium' | 'high' | 'critical',assignee: string,dueDate: string,estimatedHours: number,actualHours: number,dependencies: string[],tags: string[],comments: Comment[],
+  }
 
 interface Comment {
-  id: string,auth,
-  o: r: string,conte,
-  n: t: string,timesta,
-  m: p: string,lik,
-  e: s: number,repli,
-  e: s: Comment[]
-}
+  id: string,author: string,content: string,timestamp: string,likes: number,replies: Comment[],
+  }
 
 interface Message {
-  id: string,send,
-  e: r: string,conte,
-  n: t: string,timesta,
-  m: p: string,ty,
-  p: e: 'text' | 'file' | 'image' | 'link'
+  id: string,sender: string,content: string,timestamp: string,type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[],
-  reactio,
-  n: s: { typ,
-  e: string, cou,
-  n: t: number }[]
-  isRe,
-  a: d: boolean
+  reactions: { type: string, count: number },
+  [];
+  isRead: boolean
 }
 
 interface FileItem {
-  id: string,na,
-  m: e: string,ty,
-  p: e: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other',si,
-  z: e: number,uploaded,
-  B: y: string,uploadDa,
-  t: e: string,lastModifi,
-  e: d: string,ta,
-  g: s: string[],sharedWi,
-  t: h: string[],permissio,
-  n: s: 'view' | 'edit' | 'admin',versi,
-  o: n: string
+  id: string,name: string,type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other',size: number,uploadedBy: string,uploadDate: string,lastModified: string,tags: string[],sharedWith: string[],permissions: 'view' | 'edit' | 'admin',version: string
 }
 
 interface TeamCollaborationToolsProps {
-  showTeamMembers?: boolean
+  showTeamMembers?: boolean;
   showProjects?: boolean,
   showCommunication?: boolean,
   showFileSharing?: boolean,
   maxItems?: number,
 }
 
-export,
-  const: TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
-  showTeamMembers = true
+export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
+  showTeamMembers = true;
   showProjects = true,
   showCommunication = true,
   showFileSharing = true,
   maxItems = 20
-}) () => {
+}) => {
   const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team'),
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]),
   const [projects, setProjects] = useState<Project[]>([]),
   const [messages, setMessages] = useState<Message[]>([]),
   const [files, setFiles] = useState<FileItem[]>([]),
   const [selectedProject, setSelectedProject] = useState<Project | null>(null),
-  const [showProjectForm, setShowProjectForm] = useState(false)
-  const [showTaskForm, setShowTaskForm] = useState(false)
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),
+  const [showProjectForm, setShowProjectForm] = useState(false);
+const [showTaskForm, setShowTaskForm] = useState(false);
+const [searchQuery, setSearchQuery] = useState('');
+const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),
   const [selectedStatus, setSelectedStatus] = useState<string>('all'),
 
   // Sample data
-  useEffect(() () => {
-    const,
-  sampleTeamMember: s: TeamMember[] = [
+  useEffect(() => {
+    const sampleTeamMembers: TeamMember[] = [
       {
-        i,
-  d: '1',na,
-  m: e: 'Sarah Johnson',ro,
-  l: e: 'Senior AI Engineer',departme,
-  n: t: 'Engineering',avat,
-  a: r: 'SJ',stat,
-  u: s: 'online',lastSe,
-  e: n: '2 minutes ago',skil,
-  l: s: ['Machine LearningPython', 'TensorFlowAI/ML'],
-        projec,
-  t: s: ['AI Platform DevelopmentML Model Optimization'],availabili,
-  t: y: 'available'
-      }, {
-        id: '2',na,
-  m: e: 'Michael Chen',ro,
-  l: e: 'Cloud Architect',departme,
-  n: t: 'IT Operations',avat,
-  a: r: 'MC',stat,
-  u: s: 'busy',lastSe,
-  e: n: '15 minutes ago',skil,
-  l: s: ['AWSAzure', 'KubernetesDevOps'],
-        projec,
-  t: s: ['Cloud MigrationInfrastructure Modernization'],availabili,
-  t: y: 'busy'
-      }, {
-        id: '3',na,
-  m: e: 'David Kim',ro,
-  l: e: 'Cybersecurity Specialist',departme,
-  n: t: 'Security',avat,
-  a: r: 'DK',stat,
-  u: s: 'online',lastSe,
-  e: n: '1 minute ago',skil,
-  l: s: ['Penetration TestingThreat Detection', 'Incident Response'],
-        projec,
-  t: s: ['Security AuditThreat Intelligence'],availabili,
-  t: y: 'available'
-      }, {
-        id: '4',na,
-  m: e: 'Lisa Thompson',ro,
-  l: e: 'Project Manager',departme,
-  n: t: 'Management',avat,
-  a: r: 'LT',stat,
-  u: s: 'away',lastSe,
-  e: n: '1 hour ago',skil,
-  l: s: ['AgileScrum', 'Risk ManagementStakeholder Communication'],
-        projec,
-  t: s: ['Digital TransformationProcess Optimization'],availabili,
-  t: y: 'unavailable'
-      }, {
-        id: '5',na,
-  m: e: 'Alex Wong',ro,
-  l: e: 'DevOps Engineer',departme,
-  n: t: 'Engineering',avat,
-  a: r: 'AW',stat,
-  u: s: 'online',lastSe,
-  e: n: '5 minutes ago',skil,
-  l: s: ['DockerJenkins', 'TerraformMonitoring'],
-        projec,
-  t: s: ['CI/CD PipelineInfrastructure as Code'],availabili,
-  t: y: 'available'
-      }
-    ]
-    const,
-  sampleProject: s: Project[] = [
+        id: '1',name: 'Sarah Johnson',role: 'Senior AI Engineer',department: 'Engineering',avatar: 'SJ',status: 'online',lastSeen: '2 minutes ago',skills: ['Machine LearningPython', 'TensorFlowAI/ML'],
+        projects: ['AI Platform DevelopmentML Model Optimization'],availability: 'available'
+      };
       {
-        i,
-  d: '1',na,
-  m: e: 'AI Platform Development',descripti,
-  o: n: 'Building a comprehensive AI platform for enterprise clients with machine learning capabilities',stat,
-  u: s: 'active',priori,
-  t: y: 'high',progre,
-  s: s: 65,startDa,
-  t: e: '2024-01-01',endDa,
-  t: e: '2024-06-30',teamMembe,
-  r: s: ['Sarah JohnsonAlex Wong'],tas,
-  k: s: [],budg,
-  e: t: 500000,clie,
-  n: t: 'TechCorp Inc.',ta,
-  g: s: ['AIMachine Learning', 'Platform']
+        id: '2',name: 'Michael Chen',role: 'Cloud Architect',department: 'IT Operations',avatar: 'MC',status: 'busy',lastSeen: '15 minutes ago',skills: ['AWSAzure', 'KubernetesDevOps'],
+        projects: ['Cloud MigrationInfrastructure Modernization'],availability: 'busy'
+      };
+      {
+        id: '3',name: 'David Kim',role: 'Cybersecurity Specialist',department: 'Security',avatar: 'DK',status: 'online',lastSeen: '1 minute ago',skills: ['Penetration TestingThreat Detection', 'Incident Response'],
+        projects: ['Security AuditThreat Intelligence'],availability: 'available'
+      };
+      {
+        id: '4',name: 'Lisa Thompson',role: 'Project Manager',department: 'Management',avatar: 'LT',status: 'away',lastSeen: '1 hour ago',skills: ['AgileScrum', 'Risk ManagementStakeholder Communication'],
+        projects: ['Digital TransformationProcess Optimization'],availability: 'unavailable'
+      };
+      {
+        id: '5',name: 'Alex Wong',role: 'DevOps Engineer',department: 'Engineering',avatar: 'AW',status: 'online',lastSeen: '5 minutes ago',skills: ['DockerJenkins', 'TerraformMonitoring'],
+        projects: ['CI/CD PipelineInfrastructure as Code'],availability: 'available'
       },
+  ];
+const sampleProjects: Project[] = [
       {
-        id: '2',na,
-  m: e: 'Cloud Migration',descripti,
-  o: n: 'Migrating legacy systems to cloud infrastructure with zero downtime',stat,
-  u: s: 'active',priori,
-  t: y: 'critical',progre,
-  s: s: 45,startDa,
-  t: e: '2024-02-01',endDa,
-  t: e: '2024-08-31',teamMembe,
-  r: s: ['Michael ChenAlex Wong'],tas,
-  k: s: [],budg,
-  e: t: 750000,clie,
-  n: t: 'Global Enterprises',ta,
-  g: s: ['CloudMigration', 'Infrastructure']
-      },
+        id: '1',name: 'AI Platform Development',description: 'Building a comprehensive AI platform for enterprise clients with machine learning capabilities',status: 'active',priority: 'high',progress: 65,startDate: '2024-01-01',endDate: '2024-06-30',teamMembers: ['Sarah JohnsonAlex Wong'],tasks: [],budget: 500000,client: 'TechCorp Inc.',tags: ['AIMachine Learning', 'Platform'],
+  },
       {
-        id: '3',na,
-  m: e: 'Security Audit',descripti,
-  o: n: 'Comprehensive security assessment and vulnerability remediation',stat,
-  u: s: 'review',priori,
-  t: y: 'high',progre,
-  s: s: 90,startDa,
-  t: e: '2024-01-15',endDa,
-  t: e: '2024-03-15',teamMembe,
-  r: s: ['David Kim'],tas,
-  k: s: [],budg,
-  e: t: 150000,clie,
-  n: t: 'SecureBank',ta,
-  g: s: ['SecurityAudit', 'Compliance']
-      }
-    ],
+        id: '2',name: 'Cloud Migration',description: 'Migrating legacy systems to cloud infrastructure with zero downtime',status: 'active',priority: 'critical',progress: 45,startDate: '2024-02-01',endDate: '2024-08-31',teamMembers: ['Michael ChenAlex Wong'],tasks: [],budget: 750000,client: 'Global Enterprises',tags: ['CloudMigration', 'Infrastructure'],
+  },
+      {
+        id: '3',name: 'Security Audit',description: 'Comprehensive security assessment and vulnerability remediation',status: 'review',priority: 'high',progress: 90,startDate: '2024-01-15',endDate: '2024-03-15',teamMembers: ['David Kim'],tasks: [],budget: 150000,client: 'SecureBank',tags: ['SecurityAudit', 'Compliance'],
+  },
+  ],
 
-    const,
-  sampleMessage: s: Message[] = [
+    const sampleMessages: Message[] = [
       {
-        i,
-  d: '1',send,
-  e: r: 'Sarah Johnson',conte,
-  n: t: 'Great progress on the AI model training! The accuracy has improved significantly.',timesta,
-  m: p: '2 minutes ago',ty,
-  p: e: 'text',reactio,
-  n: s: [{ typ,
-  e: 'thumbsUp', cou,
-  n: t: 3 }]
-        isRe,
-  a: d: true
-      }, {
-        id: '2',send,
-  e: r: 'Michael Chen',conte,
-  n: t: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.',timesta,
-  m: p: '15 minutes ago',ty,
-  p: e: 'text',reactio,
-  n: s: [{ typ,
-  e: 'check', cou,
-  n: t: 2 }]
-        isRe,
-  a: d: false
-      }, {
-        id: '3',send,
-  e: r: 'David Kim',conte,
-  n: t: 'Security vulnerabilities identified and patched. Report ready for review.',timesta,
-  m: p: '1 hour ago',ty,
-  p: e: 'text',reactio,
-  n: s: [{ typ,
-  e: 'star', cou,
-  n: t: 1 }]
-        isRe,
-  a: d: true
-      }
-    ]
-    const,
-  sampleFile: s: FileItem[] = [
+        id: '1',sender: 'Sarah Johnson',content: 'Great progress on the AI model training! The accuracy has improved significantly.',timestamp: '2 minutes ago',type: 'text',reactions: [{ type: 'thumbsUp', count: 3 },
+  ];
+        isRead: true
+      };
       {
-        i,
-  d: '1',na,
-  m: e: 'AI_Platform_Architecture.pdf',ty,
-  p: e: 'document',si,
-  z: e: 2.5,uploaded,
-  B: y: 'Sarah Johnson',uploadDa,
-  t: e: '2024-01-15',lastModifi,
-  e: d: '2024-01-15',ta,
-  g: s: ['ArchitectureAI', 'Documentation'],
-        sharedWi,
-  t: h: ['Michael ChenAlex Wong'],permissio,
-  n: s: 'edit',versi,
-  o: n: '1.2'
-      }, {
-        id: '2',na,
-  m: e: 'Cloud_Migration_Plan.xlsx',ty,
-  p: e: 'document',si,
-  z: e: 1.8,uploaded,
-  B: y: 'Michael Chen',uploadDa,
-  t: e: '2024-01-14',lastModifi,
-  e: d: '2024-01-14',ta,
-  g: s: ['MigrationCloud', 'Planning'],
-        sharedWi,
-  t: h: ['Sarah JohnsonDavid Kim'],permissio,
-  n: s: 'view',versi,
-  o: n: '2.1'
-      }, {
-        id: '3',na,
-  m: e: 'Security_Audit_Report.docx',ty,
-  p: e: 'document',si,
-  z: e: 3.2,uploaded,
-  B: y: 'David Kim',uploadDa,
-  t: e: '2024-01-13',lastModifi,
-  e: d: '2024-01-13',ta,
-  g: s: ['SecurityAudit', 'Report'],
-        sharedWi,
-  t: h: ['Lisa Thompson'],permissio,
-  n: s: 'view',versi,
-  o: n: '1.0'
-      }
-    ]
-    setTeamMembers(sampleTeamMembers)
-    setProjects(sampleProjects)
-    setMessages(sampleMessages)
+        id: '2',sender: 'Michael Chen',content: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.',timestamp: '15 minutes ago',type: 'text',reactions: [{ type: 'check', count: 2 },
+  ];
+        isRead: false
+      };
+      {
+        id: '3',sender: 'David Kim',content: 'Security vulnerabilities identified and patched. Report ready for review.',timestamp: '1 hour ago',type: 'text',reactions: [{ type: 'star', count: 1 },
+  ];
+        isRead: true
+      },
+  ];
+const sampleFiles: FileItem[] = [
+      {
+        id: '1',name: 'AI_Platform_Architecture.pdf',type: 'document',size: 2.5,uploadedBy: 'Sarah Johnson',uploadDate: '2024-01-15',lastModified: '2024-01-15',tags: ['ArchitectureAI', 'Documentation'],
+        sharedWith: ['Michael ChenAlex Wong'],permissions: 'edit',version: '1.2'
+      };
+      {
+        id: '2',name: 'Cloud_Migration_Plan.xlsx',type: 'document',size: 1.8,uploadedBy: 'Michael Chen',uploadDate: '2024-01-14',lastModified: '2024-01-14',tags: ['MigrationCloud', 'Planning'],
+        sharedWith: ['Sarah JohnsonDavid Kim'],permissions: 'view',version: '2.1'
+      };
+      {
+        id: '3',name: 'Security_Audit_Report.docx',type: 'document',size: 3.2,uploadedBy: 'David Kim',uploadDate: '2024-01-13',lastModified: '2024-01-13',tags: ['SecurityAudit', 'Report'],
+        sharedWith: ['Lisa Thompson'],permissions: 'view',version: '1.0'
+      },
+  ];
+    setTeamMembers(sampleTeamMembers);
+    setProjects(sampleProjects);
+    setMessages(sampleMessages);
     setFiles(sampleFiles)
-  }, []),
+}, []),
 
   // Get status color and icon
-  const getStatusDisplay = (stat,
-  u: s: string) () => {
+  const getStatusDisplay = (status: string) => {
     switch (status) {
-      case 'online': return { colo,
-  r: 'text-green-400 bg-green-400/20', ic,
-  o: n: <div className="w-2 h-2 bg-green-400 rounded-full"></div> }
-      case 'away': return { col,
-  o: r: 'text-yellow-400 bg-yellow-400/20', ic,
-  o: n: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> }
-      case 'busy': return { col,
-  o: r: 'text-red-400 bg-red-400/20', ic,
-  o: n: <div className="w-2 h-2 bg-red-400 rounded-full"></div> }
-      case 'offline': return { col,
-  o: r: 'text-zinc-400 bg-zinc-400/20', ic,
-  o: n: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }
-      defau,
-  l: t: return { colo,
-  r: 'text-zinc-400 bg-zinc-400/20', ic,
-  o: n: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }
-    }
+      case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
+      case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
+      case 'busy': return { color: 'text-red-400 bg-red-400/20', icon: <div className="w-2 h-2 bg-red-400 rounded-full"></div> };
+      case 'offline': return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
+      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> },
+  },
   },
 
   // Get project status color
-  const getProjectStatusColor = (stat,
-  u: s: string) () => {
+  const getProjectStatusColor = (status: string) => {
     switch (status) {
-      case 'planning': return 'text-blue-400 bg-blue-400/20'
-      case 'active': return 'text-green-400 bg-green-400/20'
-      case 'review': return 'text-yellow-400 bg-yellow-400/20'
-      case 'completed': return 'text-purple-400 bg-purple-400/20'
-      case 'on-hold': return 'text-red-400 bg-red-400/20'
-      defaul,
-  t: return 'text-zinc-400 bg-zinc-400/20'
-    }
-  }
+      case 'planning': return 'text-blue-400 bg-blue-400/20';
+      case 'active': return 'text-green-400 bg-green-400/20';
+      case 'review': return 'text-yellow-400 bg-yellow-400/20';
+      case 'completed': return 'text-purple-400 bg-purple-400/20';
+      case 'on-hold': return 'text-red-400 bg-red-400/20';
+      default: return 'text-zinc-400 bg-zinc-400/20'
+    },
+  };
   // Get priority color
-  const getPriorityColor = (priori,
-  t: y: string) () => {
+  const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'low': return 'text-green-400 bg-green-400/20'
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20'
-      case 'high': return 'text-orange-400 bg-orange-400/20'
-      case 'critical': return 'text-red-400 bg-red-400/20'
-      defaul,
-  t: return 'text-zinc-400 bg-zinc-400/20'
-    }
-  }
+      case 'low': return 'text-green-400 bg-green-400/20';
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
+      case 'high': return 'text-orange-400 bg-orange-400/20';
+      case 'critical': return 'text-red-400 bg-red-400/20';
+      default: return 'text-zinc-400 bg-zinc-400/20'
+    },
+  };
   // Get file type icon
-  const getFileTypeIcon = (ty,
-  p: e: string) () => {
+  const getFileTypeIcon = (type: string) => {
     switch (type) {
-      case 'document': return <FileText className="w-5 h-5" />
-      case 'image': return <Image className="w-5 h-5" />
-      case 'video': return <Video className="w-5 h-5" />
-      case 'audio': return <File className="w-5 h-5" />
-      case 'archive': return <Folder className="w-5 h-5" />
-      defaul,
-  t: return <File className="w-5 h-5" />
-    }
-  }
+      case 'document': return <FileText className="w-5 h-5" />;
+      case 'image': return <Image className="w-5 h-5" />;
+      case 'video': return <Video className="w-5 h-5" />;
+      case 'audio': return <File className="w-5 h-5" />;
+      case 'archive': return <Folder className="w-5 h-5" />;
+      default: return <File className="w-5 h-5" />
+    },
+  };
   // Format file size
-  const formatFileSize = (si,
-  z: e: number) () => {
-    if (size < 1) return `${(size * 1024).toFixed(0)} KB`
-    if (size < 1024) return `${size.toFixed(1)} MB`
+  const formatFileSize = (size: number) => {
+    if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
+    if (size < 1024) return `${size.toFixed(1)} MB`;
     return `${(size / 1024).toFixed(1)} GB`
-  },
+},
 
   // Handle project selection
-  const handleProjectSelect = (proje,
-  c: t: Project) () => {
+  const handleProjectSelect = (project: Project) => {
     setSelectedProject(project)
-  }
+  };
   // Handle message reactions
-  const handleMessageReaction = (message,
-  I: d: string, reactionTy,
-  p: e: string) () => {
-    setMessages(prev => prev.map(msg () () => {
+  const handleMessageReaction = (messageId: string, reactionType: string) => {
+    setMessages(prev => prev.map(msg => {
       if (msg.id === messageId) {
-        const existingReaction = msg.reactions.find(r => r.type === reactionType)
+        const existingReaction = msg.reactions.find(r => r.type === reactionType);
         if (existingReaction) {
           existingReaction.count += 1
         } else {
-          msg.reactions.push({ ty,
-  p: e: reactionType, cou,
-  n: t: 1 })
-        }
-      }
+          msg.reactions.push({ type: reactionType, count: 1 })
+},
+  }
       return msg
-    })),
+})),
   },
 
   return (
@@ -485,49 +274,43 @@ export,
       <div className="flex items-center justify-center mb-8">
         <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
           {[
-            { id: 'team', lab,
-  e: l: 'Team Members', ic,
-  o: n: <Users className="w-4 h-4" /> }, { id: 'projects', lab,
-  e: l: 'Projects', ic,
-  o: n: <Target className="w-4 h-4" /> }, { id: 'communication', lab,
-  e: l: 'Communication', ic,
-  o: n: <MessageCircle className="w-4 h-4" /> }, { id: 'files', lab,
-  e: l: 'File Sharing', ic,
-  o: n: <FileText className="w-4 h-4" /> }
-          ].map((tab) => (
+            { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4" /> };
+            { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4" /> };
+            { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4" /> };
+            { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4" /> },
+  ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as any)}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeTab === tab.id
                   ? 'bg-zion-cyan text-white'
-                  : 'text-zinc-400,
-  hove: r: text-white hove,
-  r:bg-zinc-800/50'
+                  : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
               }`}
             >
-              {tab.icon}, {tab.label}
+              {tab.icon},
+  {tab.label}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Team Members Tab */}, {activeTab === 'team' && showTeamMembers && (
+      {/* Team Members Tab */},
+  {activeTab === 'team' && showTeamMembers && (
         <motion.div
-          initial={ opaci,
-  t: y: 0, y: 20 }
-          animate={ opaci,
-  t: y: 1, y: 0 }
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
           className="space-y-6"
         >
           {/* Team Stats */}
-          <div className="grid grid-cols-1,
-  m: d: grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
-              initial={ opacit,
-  y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{teamMembers.length}</div>
@@ -535,12 +318,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.1 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.1 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-green-400 mb-2">
@@ -550,12 +333,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.2 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.2 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -565,12 +348,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.3 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.3 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -581,20 +364,17 @@ export,
           </div>
 
           {/* Team Members Grid */}
-          <div className="grid grid-cols-1,
-  m: d: grid-cols-2 l,
-  g:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.id}
-                initial={ opaci,
-  t: y: 0, y: 20 }
-                animate={ opaci,
-  t: y: 1, y: 0 }
-                transition={ del,
-  a: y: index * 0.1 }
-                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl,
-  hove: r:bg-zinc-900/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ delay: index * 0.1 },
+  }
+                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
               >
                 {/* Member Header */}
                 <div className="flex items-center gap-4 mb-4">
@@ -638,7 +418,8 @@ export,
                       >
                         {skill}
                       </span>
-                    ))}, {member.skills.length > 3 && (
+                    ))},
+  {member.skills.length > 3 && (
                       <span className="px-2 py-1 bg-zinc-800/50 text-zinc-400 text-xs rounded-full">
                         +{member.skills.length - 3} more
                       </span>
@@ -661,23 +442,16 @@ export,
                 {/* Actions */}
                 <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">
                   <div className="text-xs text-zinc-500">
-                    Last,
-  see: n: {member.lastSeen}
+                    Last seen: {member.lastSeen}
                   </div>
                   <div className="flex items-center gap-2">
-                    <button className="p-2 text-zinc-400,
-  hove: r: text-zion-cyan,
-  hove: r:bg-zion-cyan/20 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                       <MessageCircle className="w-4 h-4" />
                     </button>
-                    <button className="p-2 text-zinc-400,
-  hove: r:text-zion-cyan,
-  hove: r:bg-zion-cyan/20 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                       <Video className="w-4 h-4" />
                     </button>
-                    <button className="p-2 text-zinc-400,
-  hove: r:text-zinc-300 hove,
-  r:bg-zinc-800/50 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-zinc-300 hover:bg-zinc-800/50 rounded-lg transition-colors">
                       <MoreHorizontal className="w-4 h-4" />
                     </button>
                   </div>
@@ -686,22 +460,23 @@ export,
             ))}
           </div>
         </motion.div>
-      )}, {/* Projects Tab */}, {activeTab === 'projects' && showProjects && (
+      )},
+  {/* Projects Tab */},
+  {activeTab === 'projects' && showProjects && (
         <motion.div
-          initial={ opaci,
-  t: y: 0, y: 20 }
-          animate={ opaci,
-  t: y: 1, y: 0 }
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
           className="space-y-6"
         >
           {/* Project Stats */}
-          <div className="grid grid-cols-1,
-  m: d: grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
-              initial={ opacit,
-  y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{projects.length}</div>
@@ -709,12 +484,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.1 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.1 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-green-400 mb-2">
@@ -724,12 +499,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.2 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.2 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -739,12 +514,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.3 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.3 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -759,14 +534,13 @@ export,
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={ opaci,
-  t: y: 0, y: 20 }
-                animate={ opaci,
-  t: y: 1, y: 0 }
-                transition={ del,
-  a: y: index * 0.1 }
-                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl,
-  hove: r:bg-zinc-900/50 transition-all duration-300 cursor-pointer"
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ delay: index * 0.1 },
+  }
+                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer"
                 onClick={() => handleProjectSelect(project)}
               >
                 {/* Project Header */}
@@ -789,19 +563,13 @@ export,
                   </div>
 
                   <div className="flex items-center gap-2 ml-4">
-                    <button className="p-2 text-zinc-400,
-  hove: r: text-white,
-  hove: r:bg-zinc-800/50 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
                       <Eye className="w-4 h-4" />
                     </button>
-                    <button className="p-2 text-zinc-400,
-  hove: r:text-white,
-  hove: r:bg-zinc-800/50 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
                       <Edit className="w-4 h-4" />
                     </button>
-                    <button className="p-2 text-zinc-400,
-  hove: r:text-red-400 hove,
-  r:bg-red-400/20 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-red-400 hover:bg-red-400/20 rounded-lg transition-colors">
                       <Trash2 className="w-4 h-4" />
                     </button>
                   </div>
@@ -815,21 +583,19 @@ export,
                   </div>
                   <div className="w-full bg-zinc-700 rounded-full h-2">
                     <motion.div
-                      initial={ wid,
-  t: h: 0 }
-                      animate={ wid,
-  t: h: `${project.progress}%` }
-                      transition={ durati,
-  o: n: 1, del,
-  a: y: index * 0.1 }
+                      initial={{ width: 0 },
+  }
+                      animate={{ width: `${project.progress}%` },
+  }
+                      transition={{ duration: 1, delay: index * 0.1 },
+  }
                       className="h-2 bg-zion-cyan rounded-full"
                     />
                   </div>
                 </div>
 
                 {/* Project Details */}
-                <div className="grid grid-cols-1,
-  m: d:grid-cols-3 gap-4 mb-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                   <div className="p-3 bg-zinc-800/30 rounded-lg">
                     <div className="text-sm text-zinc-400 mb-1">Timeline</div>
                     <div className="text-white font-medium text-sm">
@@ -867,30 +633,30 @@ export,
           <div className="text-center">
             <button
               onClick={() => setShowProjectForm(true)}
-              className="px-8 py-3 bg-zion-cyan text-white rounded-lg,
-  hove: r:bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
+              className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto"
             >
               <Plus className="w-5 h-5" />
               Add New Project
             </button>
           </div>
         </motion.div>
-      )}, {/* Communication Tab */}, {activeTab === 'communication' && showCommunication && (
+      )},
+  {/* Communication Tab */},
+  {activeTab === 'communication' && showCommunication && (
         <motion.div
-          initial={ opaci,
-  t: y: 0, y: 20 }
-          animate={ opaci,
-  t: y: 1, y: 0 }
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
           className="space-y-6"
         >
           {/* Communication Stats */}
-          <div className="grid grid-cols-1,
-  m: d: grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <motion.div
-              initial={ opacit,
-  y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{messages.length}</div>
@@ -898,12 +664,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.1 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.1 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-green-400 mb-2">
@@ -913,12 +679,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.2 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.2 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -933,14 +699,13 @@ export,
             {messages.map((message, index) => (
               <motion.div
                 key={message.id}
-                initial={ opaci,
-  t: y: 0, y: 20 }
-                animate={ opaci,
-  t: y: 1, y: 0 }
-                transition={ del,
-  a: y: index * 0.1 }
-                className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl,
-  hove: r:bg-zinc-900/50 transition-all duration-300 ${
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ delay: index * 0.1 },
+  }
+                className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${
                   !message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''
                 }`}
               >
@@ -968,29 +733,25 @@ export,
                         <button
                           key={idx}
                           onClick={() => handleMessageReaction(message.id, reaction.type)}
-                          className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full,
-  hove: r:bg-zinc-700/50 transition-colors"
+                          className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-700/50 transition-colors"
                         >
-                          {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1" />}, {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1" />}, {reaction.type === 'star' && <Star className="w-3 h-3 inline mr-1" />}, {reaction.count}
+                          {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1" />},
+  {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1" />},
+  {reaction.type === 'star' && <Star className="w-3 h-3 inline mr-1" />},
+  {reaction.count}
                         </button>
                       ))}
                     </div>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <button className="p-2 text-zinc-400,
-  hove: r: text-zion-cyan,
-  hove: r:bg-zion-cyan/20 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                       <Reply className="w-4 h-4" />
                     </button>
-                    <button className="p-2 text-zinc-400,
-  hove: r:text-zion-cyan,
-  hove: r:bg-zion-cyan/20 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                       <Share2 className="w-4 h-4" />
                     </button>
-                    <button className="p-2 text-zinc-400,
-  hove: r:text-zinc-300 hove,
-  r:bg-zinc-800/50 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-zinc-300 hover:bg-zinc-800/50 rounded-lg transition-colors">
                       <MoreHorizontal className="w-4 h-4" />
                     </button>
                   </div>
@@ -1006,43 +767,38 @@ export,
                 <input
                   type="text"
                   placeholder="Type your message..."
-                  className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400,
-  focu: s: outline-none,
-  focu: s:ring-2,
-  focu: s:ring-zion-cyan,
-  focu: s:border-transparent"
+                  className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
               </div>
 
-              <button className="p-3 bg-zion-cyan text-white rounded-lg,
-  hove: r:bg-zion-cyan/80 transition-colors">
+              <button className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                 <Paperclip className="w-4 h-4" />
               </button>
 
-              <button className="px-6 py-3 bg-zion-cyan text-white rounded-lg hove,
-  r:bg-zion-cyan/80 transition-colors flex items-center gap-2">
+              <button className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2">
                 <Send className="w-4 h-4" />
                 Send
               </button>
             </div>
           </div>
         </motion.div>
-      )}, {/* File Sharing Tab */}, {activeTab === 'files' && showFileSharing && (
+      )},
+  {/* File Sharing Tab */},
+  {activeTab === 'files' && showFileSharing && (
         <motion.div
-          initial={ opaci,
-  t: y: 0, y: 20 }
-          animate={ opaci,
-  t: y: 1, y: 0 }
+          initial={{ opacity: 0, y: 20 },
+  }
+          animate={{ opacity: 1, y: 0 },
+  }
           className="space-y-6"
         >
           {/* File Stats */}
-          <div className="grid grid-cols-1,
-  m: d: grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
-              initial={ opacit,
-  y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{files.length}</div>
@@ -1050,12 +806,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.1 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.1 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-green-400 mb-2">
@@ -1065,12 +821,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.2 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.2 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -1080,12 +836,12 @@ export,
             </motion.div>
 
             <motion.div
-              initial={ opaci,
-  t: y: 0, y: 20 }
-              animate={ opaci,
-  t: y: 1, y: 0 }
-              transition={ del,
-  a: y: 0.3 }
+              initial={{ opacity: 0, y: 20 },
+  }
+              animate={{ opacity: 1, y: 0 },
+  }
+              transition={{ delay: 0.3 },
+  }
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -1100,14 +856,13 @@ export,
             {files.map((file, index) => (
               <motion.div
                 key={file.id}
-                initial={ opaci,
-  t: y: 0, y: 20 }
-                animate={ opaci,
-  t: y: 1, y: 0 }
-                transition={ del,
-  a: y: index * 0.1 }
-                className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl,
-  hove: r:bg-zinc-900/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 },
+  }
+                animate={{ opacity: 1, y: 0 },
+  }
+                transition={{ delay: index * 0.1 },
+  }
+                className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
               >
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-zinc-800/50 rounded-lg text-zion-cyan">
@@ -1117,14 +872,10 @@ export,
                   <div className="flex-1">
                     <h4 className="font-semibold text-white mb-1">{file.name}</h4>
                     <div className="flex items-center gap-4 text-sm text-zinc-400">
-                      <span>Si,
-  z: e: {formatFileSize(file.size)}</span>
-                      <span>Uploaded,
-  b: y: {file.uploadedBy}</span>
-                      <span>Versi,
-  o: n: {file.version}</span>
-                      <span>Modifi,
-  e: d: {new Date(file.lastModified).toLocaleDateString()}</span>
+                      <span>Size: {formatFileSize(file.size)}</span>
+                      <span>Uploaded by: {file.uploadedBy}</span>
+                      <span>Version: {file.version}</span>
+                      <span>Modified: {new Date(file.lastModified).toLocaleDateString()}</span>
                     </div>
 
                     {/* Tags */}
@@ -1141,19 +892,13 @@ export,
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <button className="p-2 text-zinc-400,
-  hove: r: text-zion-cyan,
-  hove: r:bg-zion-cyan/20 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                       <Download className="w-4 h-4" />
                     </button>
-                    <button className="p-2 text-zinc-400,
-  hove: r:text-zion-cyan,
-  hove: r:bg-zion-cyan/20 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                       <Share2 className="w-4 h-4" />
                     </button>
-                    <button className="p-2 text-zinc-400,
-  hove: r:text-white hove,
-  r:bg-zinc-800/50 rounded-lg transition-colors">
+                    <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
                       <MoreHorizontal className="w-4 h-4" />
                     </button>
                   </div>
@@ -1168,8 +913,7 @@ export,
               <FileText className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-zinc-300 mb-2">Upload Files</h3>
               <p className="text-zinc-400 mb-4">Drag and drop files here or click to browse</p>
-              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg,
-  hove: r:bg-zion-cyan/80 transition-colors">
+              <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                 Choose Files
               </button>
             </div>
@@ -1178,4 +922,4 @@ export,
       )}
     </div>
   )
-}
+};

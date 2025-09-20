@@ -1,74 +1,67 @@
-import React, { useState, useEffect } from "react"
-import { api, ApiResponse } from "@/services/api"
+import React, { useState, useEffect } from "react";
+import { api, ApiResponse } from "@/services/api";
 interface User {
-  id: number,na,
-  m: e: string,ema,
-  i: l: string
+  id: number,name: string,email: string;
   createdAt?: string
 }
 
-const,
-  ApiDem: o: React.FC = () () => {
+const ApiDemo: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]),
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null),
-  const [newUser, setNewUser] = useState({ na,
-  m: e: '', ema,
-  i: l: '' })
-  const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
+  const [loading, setLoading] = useState(false);
+const [error, setError] = useState<string | null>(null),
+  const [newUser, setNewUser] = useState({ name: '', email: '' });
+const [healthStatus, setHealthStatus] = useState<string>('Checking...'),
 
   // Check API health on component mount
-  useEffect(() () => {
-    checkHealth()
+  useEffect(() => {
+    checkHealth();
     fetchUsers()
-  }, []),
+}, []),
 
-  const checkHealth = async () () => {
+  const checkHealth = async () => {
     try {
-      const response = await api.health()
+      const response = await api.health();
       setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`)
-    } catch (err) {
+} catch (err) {
       setHealthStatus('❌ API Unhealthy')
-    }
+},
   },
 
-  const fetchUsers = async () () => {
-    setLoading(true)
-    setError(null)
+  const fetchUsers = async () => {
+    setLoading(true);
+    setError(null);
     try {
-      const response = await api.getUsers()
+      const response = await api.getUsers();
       if (response.success && response.data) {
         setUsers(response.data)
-      }
-    } catch (err) {
+},
+  } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch users')
-    } finally {
+} finally {
       setLoading(false)
-    }
+},
   },
 
-  const handleCreateUser = async (e: React.FormEvent) () => {
-    e.preventDefault()
+  const handleCreateUser = async (e: React.FormEvent) => {
+    e.preventDefault();
     if (!newUser.name.trim() || !newUser.email.trim()) {
-      setError('Name and email are required')
+      setError('Name and email are required');
       return
     }
 
-    setLoading(true)
-    setError(null)
+    setLoading(true);
+    setError(null);
     try {
-      const response = await api.createUser(newUser)
+      const response = await api.createUser(newUser);
       if (response.success && response.data) {
-        setUsers(prev => [...prev, response.data!])
-        setNewUser({ na,
-  m: e: '', ema,
-  i: l: '' })
-      }
-    } catch (err) {
+        setUsers(prev => [...prev, response.data!]);
+        setNewUser({ name: '', email: '' })
+},
+  } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to create user')
-    } finally {
+} finally {
       setLoading(false)
-    }
+},
   },
 
   return (
@@ -88,60 +81,48 @@ const,
         <div className="mb-6 p-4 bg-blue-50 rounded-lg">
           <h3 className="text-lg font-semibold text-blue-700 mb-4">Create New User</h3>
           <form onSubmit={handleCreateUser} className="space-y-4">
-            <div className="grid grid-cols-1,
-  m: d:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
-                onChange={(e) => setNewUser(prev => ({ ...prev, na,
-  m: e: e.target.value }))}
-                className="px-3 py-2 border border-gray-300 rounded-md,
-  focu: s: outline-none,
-  focu: s:ring-2 focu,
-  s:ring-blue-500"
+                onChange={(e) => setNewUser(prev => ({ ...prev, name: e.target.value }))}
+                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
               <input
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-                onChange={(e) => setNewUser(prev => ({ ...prev, ema,
-  i: l: e.target.value }))}
-                className="px-3 py-2 border border-gray-300 rounded-md,
-  focu: s: outline-none,
-  focu: s:ring-2 focu,
-  s:ring-blue-500"
+                onChange={(e) => setNewUser(prev => ({ ...prev, email: e.target.value }))}
+                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
             <button
               type="submit"
               disabled={loading}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md,
-  hove: r: bg-blue-700,
-  disable: d:opacity-50 disable,
-  d:cursor-not-allowed"
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
         </div>
 
-        {/* Error Display */}, {error && (
+        {/* Error Display */},
+  {error && (
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
             <p className="text-red-700">{error}</p>
           </div>
-        )}, {/* Users List */}
+        )},
+  {/* Users List */}
         <div className="p-4 bg-gray-50 rounded-lg">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold text-gray-700">Users ({users.length})</h3>
             <button
               onClick={fetchUsers}
               disabled={loading}
-              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md,
-  hove: r: bg-gray-700 disable,
-  d:opacity-50"
+              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
             >
               {loading ? 'Loading...' : 'Refresh'}
             </button>
@@ -163,8 +144,7 @@ const,
                     <p className="text-sm text-gray-600">{user.email}</p>
                     {user.createdAt && (
                       <p className="text-xs text-gray-400">
-                        Creat,
-  e: d: {new Date(user.createdAt).toLocaleDateString()}
+                        Created: {new Date(user.createdAt).toLocaleDateString()}
                       </p>
                     )}
                   </div>
@@ -181,18 +161,14 @@ const,
         <div className="mt-8 p-4 bg-green-50 rounded-lg">
           <h3 className="text-lg font-semibold text-green-700 mb-2">🏗️ Architecture</h3>
           <div className="text-sm text-green-700 space-y-1">
-            <p>• <strong>Fronte,
-  n: d: </strong> Vite + React (Port 3000) - Fast HMR & optimized builds</p>
-            <p>• <strong>Backe,
-  n: d:</strong> Node.js + Express (Port 5000) - API endpoints & business logic</p>
-            <p>• <strong>Developme,
-  n: t:</strong> Vite proxy forwards /api calls to Node.js</p>
-            <p>• <strong>Productio,
-  n:</strong> Node.js serves built frontend + API</p>
+            <p>• <strong>Frontend: </strong> Vite + React (Port 3000) - Fast HMR & optimized builds</p>
+            <p>• <strong>Backend:</strong> Node.js + Express (Port 5000) - API endpoints & business logic</p>
+            <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>
+            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>
           </div>
         </div>
       </div>
     </div>
   )
-}
-export default ApiDemo
+};
+export default ApiDemo;

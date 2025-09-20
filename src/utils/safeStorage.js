@@ -1,87 +1,83 @@
-// In-memory storage for fallback with optimizations
-const inMemoryStore = {}
-let localStorageAvailable = null, // Cache the availability check
-let lastAvailabilityCheck = 0
-const AVAILABILITY_CHECK_INTERVAL = 5000, // Check every 5 seconds max
+// In-memory storage for fallback with optimizations;
+const inMemoryStore = {{},
+  }
+let localStorageAvailable = null, // Cache the availability check;
+let lastAvailabilityCheck = 0;
+const AVAILABILITY_CHECK_INTERVAL = 5000, // Check every 5 seconds max;
 function isLocalStorageAvailable() {
-    const now = Date.now()
-    // Use cached result if checked recently
+  const now = Date.now()
+    // Use cached result if checked recently;
     if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
-        return localStorageAvailable
-    }
-    lastAvailabilityCheck = now
+  return localStorageAvailable
+}
+    lastAvailabilityCheck = now;
     try {
-        if (if (typeof window === 'undefined') {) {
-            localStorageAvailable = false
+  if (if (typeof window === 'undefined') {
+  ) {
+            localStorageAvailable = false;
             return false
-        }
-        const testKey = '__localStorage_test__'
+}
+        const testKey = '__localStorage_test__';
         localStorage.setItem(testKey, 'test')
         localStorage.removeItem(testKey)
-        localStorageAvailable = true
+        localStorageAvailable = true;
         return true
-    }
-    catch {
-        localStorageAvailable = false
-        return false
-    }
 }
+    catch {
+  localStorageAvailable = false;
+        return false
+},
+  }
 
 function safeConsoleError(message, error) {
-    const env = globalThis.process?.env?.NODE_ENV ?? 'production'
-    // Prevent infinite recursion in console logging
-    if (env === 'production') return
+  const env = globalThis.process?.env?.NODE_ENV ?? 'production';
+    // Prevent infinite recursion in console logging;
+    if (env === 'production') return;
+
     try {
-        console.error(message, error)
+  console.error(message, error)
     }
     catch {
-        // Silent fail if console.error causes recursion
-    }
-}
-export const const safeStorage = { = {
-  getIt,
-  e: m: (key) () => {
-    try {
-      return localStorage.getItem(key)
+  // Silent fail if console.error causes recursion
+},
+  }
+export const const safeStorage = {
+  = {
+  getItem: (key) => {
+  try {
+  return localStorage.getItem(key)
     } catch (error) {
-      console.warn('Failed to get item,
-  from: localStorage:', error)
+  console.warn('Failed to get item from localStorage:', error)
       return null
-    }
+},
   }
 
-  setIt,
-  e: m: (key, value) () => {
-    try {
-      localStorage.setItem(key, value)
+  setItem: (key, value) => {
+  try {
+  localStorage.setItem(key, value)
       return true
-    } catch (error) {
-      console.warn('Failed to set item,
-  in: localStorage:', error)
+} catch (error) {
+  console.warn('Failed to set item in localStorage:', error)
       return false
-    }
+},
   }
-  removeIt,
-  e: m: (key) () => {
-    try {
-      localStorage.removeItem(key)
+  removeItem: (key) => {
+  try {
+  localStorage.removeItem(key)
       return true
-    } catch (error) {
-      console.warn('Failed to remove item,
-  from: localStorage:', error)
+} catch (error) {
+  console.warn('Failed to remove item from localStorage:', error)
       return false
-    }
+},
   }
 
-  cle,
-  a: r: () () => {
+  clear: () => {
     try {
-      localStorage.clear()
+  localStorage.clear()
       return true
-    } catch (error) {
-      console.warn('Failed to,
-  clear: localStorage:', error)
+} catch (error) {
+  console.warn('Failed to clear localStorage:', error)
       return false
-    }
+},
+  },
   }
-}

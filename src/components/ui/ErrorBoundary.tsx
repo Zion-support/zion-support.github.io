@@ -1,79 +1,61 @@
-import React, { Component, ErrorInfo, ReactNode } from "react"
-import { AlertTriangle, RefreshCw } from "lucide-react"
+import React, { Component, ErrorInfo, ReactNode } from "react";
+import { AlertTriangle, RefreshCw } from "lucide-react";
 interface Props {
-  childr,
-  e: n: ReactNode
-  onError?: (erro,
-  r: Error) => void
+  children: ReactNode;
+  onError?: (error: Error) => void;
   fallback?: ReactNode
 }
 
 interface State {
-  hasErr,
-  o: r: boolean,err,
-  o: r: Error | null,errorIn,
-  f: o: ErrorInfo | null
+  hasError: boolean,error: Error | null,errorInfo: ErrorInfo | null
 }
 
 export class ErrorBoundary extends Component<Props, State> {
-  constructor(pro,
-  p: s: Props) {
-    super(props)
+  constructor(props: Props) {
+    super(props);
     this.state = {
-      hasErro,
-  r: false,err,
-  o: r: null,errorIn,
-  f: o: null
-    }
+      hasError: false,error: null,errorInfo: null
+    },
   }
 
-  static getDerivedStateFromError(err,
-  o: r: Error): State {
+  static getDerivedStateFromError(error: Error): State {
     return {
-      hasErro,
-  r: true
+      hasError: true;
       error,
-      errorIn,
-  f: o: null
-    }
+      errorInfo: null
+    },
   }
 
-  componentDidCatch(err,
-  o: r: Error, errorIn,
-  f: o: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-error
+error;
       errorInfo
     
-})
+});
     // Call the onError callback if provided
     if (this.props.onError) {
       this.props.onError(error)
-    }
+}
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught,
-  an: error:', error, errorInfo)
-    }
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
+},
   }
 
-  handleRetry = () () => {
+  handleRetry = () => {
     this.setState({
-hasErr,
-  o: r: false,err,
-  o: r: null,errorIn,
-  f: o: null
+hasError: false,error: null,errorInfo: null
     
 })
-  },
+},
 
   render() {
     if (this.state.hasError) {
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback
-      }
+}
 
       // Default error UI
       return (
@@ -89,8 +71,7 @@ hasErr,
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-6 p-4 bg-red-900/20 border border-red-800 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error,
-  Detail: s: </h3>
+                <h3 className="text-red-400 font-semibold mb-2">Error Details: </h3>
                 <pre className="text-xs text-red-300 whitespace-pre-wrap break-words">
                   {this.state.error.message}
                 </pre>
@@ -108,16 +89,14 @@ hasErr,
             <div className="flex gap-3 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center gap-2 px-6 py-3 bg-blue-600,
-  hove: r:bg-blue-700 text-white rounded-lg transition-colors duration-200 font-medium"
+                className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200 font-medium"
               >
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
               <button
                 onClick={() => window.location.reload()}
-                className="px-6 py-3 bg-gray-600,
-  hove: r: bg-gray-700 text-white rounded-lg transition-colors duration-200 font-medium"
+                className="px-6 py-3 bg-gray-600 hover: bg-gray-700 text-white rounded-lg transition-colors duration-200 font-medium"
               >
                 Refresh Page
               </button>
@@ -128,7 +107,7 @@ hasErr,
     }
 
     return this.props.children
+},
   }
-}
 
-export default ErrorBoundary
+export default ErrorBoundary;

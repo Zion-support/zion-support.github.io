@@ -1,81 +1,43 @@
 export interface Listing {
-  id: string,tit,
-  l: e: string,descripti,
-  o: n: string,pri,
-  c: e: number,curren,
-  c: y: string,catego,
-  r: y: string
-  subcategory?: string
-  tag,
-  s: string[],imag,
-  e: s: string[],sell,
-  e: r: {
-    i,
-  d: string,na,
-  m: e: string,rati,
-  n: g: number,revie,
-  w: s: number
-  }
-  locati,
-  o: n: string,created,
-  A: t: string,updated,
-  A: t: string,stat,
-  u: s: 'active' | 'inactive' | 'sold' | 'pending',vie,
-  w: s: number,lik,
-  e: s: number,shar,
-  e: s: number
+  id: string,title: string,description: string,price: number,currency: string,category: string;
+  subcategory?: string;
+  tags: string[],images: string[],seller: {
+  id: string,name: string,rating: number,reviews: number
+}
+  location: string,createdAt: string,updatedAt: string,status: 'active' | 'inactive' | 'sold' | 'pending',views: number,likes: number,shares: number
 }
 
 export interface ProductListing extends Listing {
-  brand?: string
-  model?: string,
-  conditio: n: 'new' | 'used' | 'refurbished'
-  warranty?: string,
-  shippin: g: {
-    cos,
-  t: number,meth,
-  o: d: string,estimatedDa,
-  y: s: number
+  brand?: string;
+  model?: string;
+  condition: 'new' | 'used' | 'refurbished';
+  warranty?: string;
+  shipping: {
+  cost: number,method: string,estimatedDays: number
+},
   }
-}
 
 export interface ServiceListing extends Listing {
-  serviceTy,
-  p: e: 'consulting' | 'development' | 'maintenance' | 'training' | 'support'
-  duration?: string
-  availabilit,
-  y: string[],experien,
-  c: e: number,certificatio,
-  n: s: string[[];]
-  portfolio?: string[[];]
-}
+  serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
+  duration?: string;
+  availability: string[],experience: number,certifications: string[[],
+  ]
+  portfolio?: string[[],
+  ],
+  }
 
 export interface TalentListing extends Listing {
-  skil,
-  l: s: string[],experien,
-  c: e: number,educati,
-  o: n: string[],certificatio,
-  n: s: string[],languag,
-  e: s: string[],availabili,
-  t: y: string[],hourlyRa,
-  t: e: number
+  skills: string[],experience: number,education: string[],certifications: string[],languages: string[],availability: string[],hourlyRate: number;
   portfolio?: string[]
-  references?: string[[];]
-}
+  references?: string[[],
+  ],
+  }
 
 export interface CartItem {
-  id: string,tit,
-  l: e: string,pri,
-  c: e: number,quanti,
-  t: y: number,ty,
-  p: e: 'product' | 'service' | 'talent'
+  id: string,title: string,price: number,quantity: number,type: 'product' | 'service' | 'talent';
   image?: string
 }
 
 export interface WishlistItem {
-  id: string,user,
-  I: d: string,listing,
-  I: d: string,ty,
-  p: e: 'product' | 'service' | 'talent',added,
-  A: t: string
+  id: string,userId: string,listingId: string,type: 'product' | 'service' | 'talent',addedAt: string
 }

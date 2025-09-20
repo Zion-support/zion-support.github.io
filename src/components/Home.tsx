@@ -1,17 +1,18 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react"
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 const Home: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [scrollY, setScrollY] = useState(0)
-  const [hoveredService, setHoveredService] = useState<number | null>(null)
-  const handleScroll = useCallback(() => {
+  const [isLoaded, setIsLoaded] = useState(false);
+const [scrollY, setScrollY] = useState(0);
+const [hoveredService, setHoveredService] = useState<number | null>(null);
+const handleScroll = useCallback(() => {
     setScrollY(window.scrollY)
-  }, [])
+}, []);
+
   useEffect(() => {
-    setIsLoaded(true)
-    window.addEventListener('scroll', handleScroll, { passive: true })
+    setIsLoaded(true);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [handleScroll])
-  const services = useMemo(() => [
+}, [handleScroll]);
+const services = useMemo(() => [
     {
       title: "AI Services",
       description: "Cutting-edge artificial intelligence solutions for your business needs.",
@@ -59,8 +60,9 @@ const Home: React.FC = () => {
       features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"],
       gradient: "from-sky-500 to-blue-500",
       price: "Starting at $15,000/month"
-    }
-  ], [])
+    },
+  ], []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <div className="relative overflow-hidden">
@@ -79,7 +81,8 @@ const Home: React.FC = () => {
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
-              }}
+              }
+            }
             />
           ))}
         </div>
@@ -90,25 +93,17 @@ const Home: React.FC = () => {
           <section className="min-h-screen flex items-center justify-center px-4">
             <div className="max-w-6xl mx-auto text-center">
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h1 className="text-6xl,
-  m: d: text-8xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Zion
                 </h1>
-                <p className="text-2xl m,
-  d:text-3xl mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                <p className="text-2xl md:text-3xl mb-12 text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   The future of technology is here. Transform your business with our cutting-edge AI, quantum computing, and space technology solutions.
                 </p>
-                <div className="flex flex-col,
-  s: m: flex-row gap-6 justify-center">
-                  <button className="bg-gradient-to-r from-purple-600 to-pink-600,
-  hove: r:from-purple-700,
-  hove: r:to-pink-700 px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300,
-  transform: hover:scale-105 shadow-lg">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                  <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Explore Solutions
                   </button>
-                  <button className="border-2 border-purple-400 text-purple-400,
-  hove: r:bg-purple-400 hove,
-  r:text-white px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300">
+                  <button className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-12 py-4 rounded-lg text-xl font-semibold transition-all duration-300">
                     View Portfolio
                   </button>
                 </div>
@@ -120,21 +115,14 @@ const Home: React.FC = () => {
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
               <div className={`transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h2 className="text-5xl,
-  m: d: text-6xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Our Services
                 </h2>
-                <div className="grid grid-cols-1,
-  m: d:grid-cols-2 l,
-  g:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {services.map((service, index) => (
                     <div
                       key={service.title}
-                      className={`group bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8,
-  hove: r: bg-gray-700/50 transition-all duration-500,
-  transform: hover:scale-105,
-  hove: r:shadow-2xl hove,
-  r:shadow-purple-500/25 cursor-pointer transition-all duration-1000 delay-${index * 100} ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                      className={`group bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8 hover:bg-gray-700/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 cursor-pointer transition-all duration-1000 delay-${index * 100} ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                       onMouseEnter={() => setHoveredService(index)}
                       onMouseLeave={() => setHoveredService(null)}
                     >
@@ -144,8 +132,7 @@ const Home: React.FC = () => {
                       <h3 className={`text-2xl font-bold mb-4 bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent transition-all duration-300`}>
                         {service.title}
                       </h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed group-hov,
-  e: r:text-gray-200 transition-colors duration-300">
+                      <p className="text-gray-300 mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                         {service.description}
                       </p>
                       <div className="mb-4">
@@ -155,15 +142,13 @@ const Home: React.FC = () => {
                       </div>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-gray-400 flex items-center group-hov,
-  e: r: text-gray-300 transition-colors duration-300">
+                          <li key={featureIndex} className="text-gray-400 flex items-center group-hover: text-gray-300 transition-colors duration-300">
                             <span className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full mr-3 transition-all duration-300 ${hoveredService === index ? 'scale-125' : ''}`}></span>
                             {feature}
                           </li>
                         ))}
                       </ul>
-                      <div className={`mt-6 h-1 bg-gradient-to-r ${service.gradient} rounded-full transform scale-x-0 group-hov,
-  e: r:scale-x-100 transition-transform duration-300`}></div>
+                      <div className={`mt-6 h-1 bg-gradient-to-r ${service.gradient} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></div>
                     </div>
                   ))}
                 </div>
@@ -175,8 +160,7 @@ const Home: React.FC = () => {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <div className={`transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <div className="grid grid-cols-1,
-  m: d:grid-cols-4 gap-8 text-center">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
                   <div className="bg-gray-800/30 backdrop-blur-sm border border-purple-500/30 rounded-xl p-8">
                     <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>
                     <div className="text-gray-300">Projects Completed</div>
@@ -202,13 +186,10 @@ const Home: React.FC = () => {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <div className={`transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h2 className="text-4xl,
-  m: d: text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Latest News & Updates
                 </h2>
-                <div className="grid grid-cols-1,
-  m: d:grid-cols-2,
-  l: g:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
                     {
                       title: "Zion AI Platform 2.0 Released",
@@ -227,8 +208,8 @@ const Home: React.FC = () => {
                       date: "September 15, 2025",
                       excerpt: "Our research team achieves 99.9% quantum error correction, paving the way for practical quantum applications.",
                       category: "Research"
-                    }
-                  ].map((news, index) => (
+                    },
+  ].map((news, index) => (
                     <div
                       key={index}
                       className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
@@ -239,8 +220,7 @@ const Home: React.FC = () => {
                         </span>
                         <span className="text-sm text-gray-400">{news.date}</span>
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-3 group-hov,
-  e: r:text-purple-300 transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-300">
                         {news.title}
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed">
@@ -257,13 +237,10 @@ const Home: React.FC = () => {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <div className={`transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h2 className="text-4xl,
-  m: d: text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   What Our Clients Say
                 </h2>
-                <div className="grid grid-cols-1,
-  m: d:grid-cols-2,
-  l: g:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
                     {
                       name: "Sarah Johnson",
@@ -282,8 +259,8 @@ const Home: React.FC = () => {
                       role: "VP Engineering, SpaceTech",
                       content: "Outstanding service and cutting-edge technology. Zion is truly ahead of the curve.",
                       rating: 5
-                    }
-                  ].map((testimonial, index) => (
+                    },
+  ].map((testimonial, index) => (
                     <div
                       key={index}
                       className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
@@ -309,22 +286,15 @@ const Home: React.FC = () => {
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className={`transition-all duration-1000 delay-900 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h2 className="text-4xl,
-  m: d: text-5xl font-bold mb-8">Ready to Transform Your Business?</h2>
+                <h2 className="text-4xl md: text-5xl font-bold mb-8">Ready to Transform Your Business?</h2>
                 <p className="text-xl text-gray-300 mb-12">
                   Join hundreds of companies already using our cutting-edge technology solutions
                 </p>
-                <div className="flex flex-col,
-  s: m:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-purple-600 to-pink-600,
-  hove: r:from-purple-700,
-  hove: r:to-pink-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300,
-  transform: hover:scale-105 shadow-lg">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                     Start Your Project
                   </button>
-                  <button className="border-2 border-purple-400 text-purple-400,
-  hove: r:bg-purple-400 hove,
-  r:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
+                  <button className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
                     View Case Studies
                   </button>
                 </div>
@@ -335,5 +305,5 @@ const Home: React.FC = () => {
       </div>
     </div>
   )
-}
-export default Home
+};
+export default Home;

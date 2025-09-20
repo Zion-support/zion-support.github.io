@@ -1,5 +1,5 @@
-import React from "react"
-import { motion } from "framer-motion"
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Award,
   Users,
@@ -11,51 +11,32 @@ import {
   CheckCircle,
   Globe,
   Rocket
-} from "lucide-react"
+} from "lucide-react";
 const teamExpertise = [
   {
-    ic,
-  o: n: "🎓",tit,
-  l: e: "Advanced Degrees",descripti,
-  o: n: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities",
-    cou,
-  n: t: "95%"
-  }, {
-    ic,
-  o: n: "🏆",tit,
-  l: e: "Industry Certifications",descripti,
-  o: n: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies",
-    cou,
-  n: t: "50+"
-  }, {
-    ic,
-  o: n: "🌍",tit,
-  l: e: "Global Experience",descripti,
-  o: n: "Team members with experience working across 25+ countries and diverse industries",cou,
-  n: t: "25+"
-  }, {
-    ic,
-  o: n: "⚡",tit,
-  l: e: "Years of Experience",descripti,
-  o: n: "Combined experience of over 200 years in technology and business solutions",cou,
-  n: t: "200+"
-  }, {
-    ic,
-  o: n: "🔬",tit,
-  l: e: "Research Publications",descripti,
-  o: n: "Published research in leading AI, quantum computing, and blockchain journals",
-    cou,
-  n: t: "30+"
-  }, {
-    ic,
-  o: n: "🚀",tit,
-  l: e: "Successful Projects",descripti,
-  o: n: "Successfully delivered complex technology solutions for Fortune 500 companies",cou,
-  n: t: "500+"
-  }
-]
+    icon: "🎓",title: "Advanced Degrees",description: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities",
+    count: "95%"
+  };
+  {
+    icon: "🏆",title: "Industry Certifications",description: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies",
+    count: "50+"
+  };
+  {
+    icon: "🌍",title: "Global Experience",description: "Team members with experience working across 25+ countries and diverse industries",count: "25+"
+  };
+  {
+    icon: "⚡",title: "Years of Experience",description: "Combined experience of over 200 years in technology and business solutions",count: "200+"
+  };
+  {
+    icon: "🔬",title: "Research Publications",description: "Published research in leading AI, quantum computing, and blockchain journals",
+    count: "30+"
+  };
+  {
+    icon: "🚀",title: "Successful Projects",description: "Successfully delivered complex technology solutions for Fortune 500 companies",count: "500+"
+  },
+  ];
 const coreExpertise = [
-  "Artificial Intelligence & Machine Learning"
+  "Artificial Intelligence & Machine Learning";
   "Quantum Computing & Algorithms",
   "Blockchain & Web3 Technologies",
   "Cloud Infrastructure & DevOps",
@@ -71,17 +52,16 @@ export function TeamExpertiseSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={ opaci,
-  t: y: 0, y: 20 }
-          whileInView={ opaci,
-  t: y: 1, y: 0 }
-          viewport={ on,
-  c: e: true }
-          transition={ durati,
-  o: n: 0.6 }
+          initial={{ opacity: 0, y: 20 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          viewport={{ once: true },
+  }
+          transition={{ duration: 0.6 },
+  }
         >
-          <h2 className="text-4xl,
-  m: d: text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Team Expertise
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -90,38 +70,29 @@ export function TeamExpertiseSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1,
-  m: d:grid-cols-2 l,
-  g:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {teamExpertise.map((expertise, index) => (
             <motion.div
               key={expertise.title}
-              className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center,
-  hove: r: border-blue-500/50 transition-all duration-300,
-  hove: r:shadow-lg,
-  hove: r:shadow-blue-500/25 group"
-              initial={ opacit,
-  y: 0, y: 30 }
-              whileInView={ opaci,
-  t: y: 1, y: 0 }
-              viewport={ on,
-  c: e: true }
-              transition={ durati,
-  o: n: 0.6, del,
-  a: y: index * 0.1 }
+              className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
+              initial={{ opacity: 0, y: 30 },
+  }
+              whileInView={{ opacity: 1, y: 0 },
+  }
+              viewport={{ once: true },
+  }
+              transition={{ duration: 0.6, delay: index * 0.1 },
+  }
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hov,
-  e: r:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl">{expertise.icon}</span>
               </div>
               
-              <div className="text-4xl font-bold text-blue-400 mb-3 group-hov,
-  e: r:text-blue-300 transition-colors duration-200">
+              <div className="text-4xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors duration-200">
                 {expertise.count}
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-3 group-hov,
-  e: r:text-blue-400 transition-colors duration-200">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                 {expertise.title}
               </h3>
               
@@ -134,15 +105,14 @@ export function TeamExpertiseSection() {
 
         <motion.div 
           className="text-center mb-12"
-          initial={ opaci,
-  t: y: 0, y: 20 }
-          whileInView={ opaci,
-  t: y: 1, y: 0 }
-          viewport={ on,
-  c: e: true }
-          transition={ durati,
-  o: n: 0.6, del,
-  a: y: 0.3 }
+          initial={{ opacity: 0, y: 20 },
+  }
+          whileInView={{ opacity: 1, y: 0 },
+  }
+          viewport={{ once: true },
+  }
+          transition={{ duration: 0.6, delay: 0.3 },
+  }
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
@@ -152,16 +122,12 @@ export function TeamExpertiseSection() {
               Our certified professionals are ready to bring their expertise
               to your project and help you achieve exceptional results.
             </p>
-            <div className="flex flex-col,
-  s: m: flex-row gap-4 justify-center">
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600,
-  hove: r:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation
                 <Rocket className="ml-2 h-5 w-5" />
               </button>
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white,
-  hove: r:bg-white hove,
-  r:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 View Team Profiles
                 <Users className="ml-2 h-5 w-5" />
               </button>

@@ -1,469 +1,305 @@
 export const INNOVATIVE_MICRO_SAAS_2025 = [
-  // Emerging Technology Solutions
+  // Emerging Technology Solutions;
   {
-    id: "metaverse-platform",tit,
-  l: e: "Metaverse Business Platform",descripti,
-  o: n: "Comprehensive platform for businesses to establish presence in the metaverse with virtual offices, events, and commerce"
-    catego,
-  r: y: "Metaverse",pri,
-  c: e: "$8,500/month"
-    featur,
-  e: s: [
-      "Virtual office creation"
-      "3D event hosting"
-      "Virtual commerce"
-      "Avatar management"
-      "Cross-platform compatibility"
+  id: "metaverse-platform",title: "Metaverse Business Platform",description: "Comprehensive platform for businesses to establish presence in the metaverse with virtual offices, events, and commerce";
+    category: "Metaverse",price: "$8,500/month";
+    features: [
+  "Virtual office creation";
+      "3D event hosting";
+      "Virtual commerce";
+      "Avatar management";
+      "Cross-platform compatibility";
       "Analytics dashboard"
-    ]
-    benefi,
-  t: s: [
-      "Early metaverse adoption"
-      "Virtual customer engagement"
-      "Cost-effective events"
-      "Global reach"
-    ]
-    lin,
-  k: "/services/metaverse-platform",ima,
-  g: e: "/images/metaverse-platform.jpg",technolo,
-  g: y: "VR/AR + 3D + AI",marketSi,
-  z: e: "$3.8B by 2025",targetIndust,
-  r: y: "Retail, Events, Real Estate, Education"
-  }, {
-    id: "web3-infrastructure",tit,
-  l: e: "Web3 Infrastructure Platform",descripti,
-  o: n: "Complete Web3 infrastructure for decentralized applications, NFTs, and blockchain integration"
-    catego,
-  r: y: "Web3",pri,
-  c: e: "$12,500/month"
-    featur,
-  e: s: [
-      "Smart contract deployment"
-      "NFT marketplace"
-      "DeFi integration"
-      "Wallet management"
-      "Cross-chain bridges"
-      "Security auditing"
-    ]
-    benefi,
-  t: s: [
-      "Decentralized infrastructure"
-      "NFT monetization"
-      "DeFi capabilities"
-      "Future-proof technology"
-    ]
-    lin,
-  k: "/services/web3-infrastructure",ima,
-  g: e: "/images/web3-infrastructure.jpg",technolo,
-  g: y: "Blockchain + Web3 + DeFi",marketSi,
-  z: e: "$4.2B by 2025",targetIndust,
-  r: y: "Finance, Gaming, Art, Real Estate"
-  }
-  
-  // AI-Powered Business Solutions
-  {
-    id: "ai-customer-success",tit,
-  l: e: "AI Customer Success Platform",descripti,
-  o: n: "Intelligent platform that predicts customer churn and automates retention strategies",catego,
-  r: y: "Customer Success",pri,
-  c: e: "$6,500/month"
-    featur,
-  e: s: [
-      "Churn prediction"
-      "Automated retention"
-      "Customer health scoring"
-      "Personalized engagement"
-      "Success metrics tracking"
-      "Integration APIs"
-    ]
-    benefi,
-  t: s: [
-      "Reduce churn by 30%"
-      "Automated retention"
-      "Improved customer satisfaction"
-      "Data-driven insights"
-    ]
-    lin,
-  k: "/services/ai-customer-success",ima,
-  g: e: "/images/ai-customer-success.jpg",technolo,
-  g: y: "AI + ML + Analytics",marketSi,
-  z: e: "$2.8B by 2025",targetIndust,
-  r: y: "SaaS, E-commerce, Services"
-  }, {
-    id: "ai-sales-optimization",tit,
-  l: e: "AI Sales Optimization Platform",descripti,
-  o: n: "Comprehensive platform for optimizing sales processes, lead scoring, and revenue forecasting"
-    catego,
-  r: y: "Sales",pri,
-  c: e: "$7,500/month"
-    featur,
-  e: s: [
-      "Lead scoring AI"
-      "Revenue forecasting"
-      "Sales process optimization"
-      "Pipeline analytics"
-      "Performance tracking"
-      "CRM integration"
-    ]
-    benefi,
-  t: s: [
-      "Increase conversion rates"
-      "Accurate forecasting"
-      "Process optimization"
-      "Revenue growth"
-    ]
-    lin,
-  k: "/services/ai-sales-optimization",ima,
-  g: e: "/images/ai-sales-optimization.jpg",technolo,
-  g: y: "AI + Analytics + CRM",marketSi,
-  z: e: "$3.5B by 2025",targetIndust,
-  r: y: "B2B, Enterprise, Sales Teams"
-  }
-  
-  // Data & Analytics Solutions
-  {
-    id: "real-time-analytics",tit,
-  l: e: "Real-Time Business Analytics Platform",descripti,
-  o: n: "Live analytics platform for instant business insights and decision-making",catego,
-  r: y: "Analytics",pri,
-  c: e: "$5,500/month"
-    featur,
-  e: s: [
-      "Real-time dashboards"
-      "Live data streaming"
-      "Instant alerts"
-      "Predictive analytics"
-      "Custom metrics"
-      "Mobile access"
-    ]
-    benefi,
-  t: s: [
-      "Instant insights"
-      "Real-time decisions"
-      "Proactive alerts"
-      "Competitive advantage"
-    ]
-    lin,
-  k: "/services/real-time-analytics",ima,
-  g: e: "/images/real-time-analytics.jpg",technolo,
-  g: y: "Real-time + Analytics + AI",marketSi,
-  z: e: "$2.4B by 2025",targetIndust,
-  r: y: "E-commerce, Finance, Manufacturing"
-  }, {
-    id: "data-governance-platform",tit,
-  l: e: "AI Data Governance Platform",descripti,
-  o: n: "Intelligent platform for automated data governance, compliance, and quality management"
-    catego,
-  r: y: "Data Governance",pri,
-  c: e: "$9,500/month"
-    featur,
-  e: s: [
-      "Automated compliance"
-      "Data quality monitoring"
-      "Privacy protection"
-      "Audit trails"
-      "Policy enforcement"
-      "Regulatory reporting"
-    ]
-    benefi,
-  t: s: [
-      "Automated compliance"
-      "Data quality improvement"
-      "Risk reduction"
-      "Regulatory adherence"
-    ]
-    lin,
-  k: "/services/data-governance",ima,
-  g: e: "/images/data-governance.jpg",technolo,
-  g: y: "AI + Compliance + Data",marketSi,
-  z: e: "$3.1B by 2025",targetIndust,
-  r: y: "Enterprise, Healthcare, Finance"
-  }
-  
-  // Security & Compliance
-  {
-    id: "zero-trust-security",tit,
-  l: e: "Zero Trust Security Platform",descripti,
-  o: n: "Comprehensive zero trust security platform for modern enterprise environments",catego,
-  r: y: "Security",pri,
-  c: e: "$11,500/month"
-    featur,
-  e: s: [
-      "Identity verification"
-      "Device trust scoring"
-      "Network segmentation"
-      "Continuous monitoring"
-      "Threat detection"
-      "Compliance reporting"
-    ]
-    benefi,
-  t: s: [
-      "Enhanced security"
-      "Reduced attack surface"
-      "Compliance adherence"
-      "Modern security model"
-    ]
-    lin,
-  k: "/services/zero-trust-security",ima,
-  g: e: "/images/zero-trust-security.jpg",technolo,
-  g: y: "Zero Trust + AI + Security",marketSi,
-  z: e: "$4.8B by 2025",targetIndust,
-  r: y: "Enterprise, Government, Healthcare"
-  }, {
-    id: "ai-compliance-automation",tit,
-  l: e: "AI Compliance Automation Platform",descripti,
-  o: n: "Intelligent platform that automates regulatory compliance across multiple industries",catego,
-  r: y: "Compliance",pri,
-  c: e: "$8,500/month"
-    featur,
-  e: s: [
-      "Regulatory monitoring"
-      "Automated reporting"
-      "Compliance scoring"
-      "Risk assessment"
-      "Audit preparation"
-      "Multi-regulation support"
-    ]
-    benefi,
-  t: s: [
-      "Automated compliance"
-      "Reduced manual work"
-      "Risk mitigation"
-      "Cost savings"
-    ]
-    lin,
-  k: "/services/ai-compliance",ima,
-  g: e: "/images/ai-compliance.jpg",technolo,
-  g: y: "AI + Compliance + Automation",marketSi,
-  z: e: "$2.9B by 2025",targetIndust,
-  r: y: "Finance, Healthcare, Legal"
-  }
-  
-  // Collaboration & Productivity
-  {
-    id: "ai-collaboration-platform",tit,
-  l: e: "AI Collaboration Platform",descripti,
-  o: n: "Intelligent platform that enhances team collaboration with AI-powered insights and automation",catego,
-  r: y: "Collaboration",pri,
-  c: e: "$4,500/month"
-    featur,
-  e: s: [
-      "Smart meeting scheduling"
-      "Task automation"
-      "Team analytics"
-      "Knowledge management"
-      "Workflow optimization"
-      "Integration tools"
-    ]
-    benefi,
-  t: s: [
-      "Improved productivity"
-      "Better collaboration"
-      "Automated workflows"
-      "Team insights"
-    ]
-    lin,
-  k: "/services/ai-collaboration",ima,
-  g: e: "/images/ai-collaboration.jpg",technolo,
-  g: y: "AI + Collaboration + Automation",marketSi,
-  z: e: "$3.2B by 2025",targetIndust,
-  r: y: "Enterprise, Remote Teams, Startups"
-  }, {
-    id: "virtual-reality-meetings",tit,
-  l: e: "VR Meeting Platform",descripti,
-  o: n: "Immersive virtual reality platform for remote meetings and collaboration",catego,
-  r: y: "VR Collaboration",pri,
-  c: e: "$6,500/month"
-    featur,
-  e: s: [
-      "VR meeting rooms"
-      "3D presentations"
-      "Virtual whiteboards"
-      "Avatar customization"
-      "Spatial audio"
-      "Cross-platform support"
-    ]
-    benefi,
-  t: s: [
-      "Immersive meetings"
-      "Better engagement"
-      "3D collaboration"
-      "Remote team building"
-    ]
-    lin,
-  k: "/services/vr-meetings",ima,
-  g: e: "/images/vr-meetings.jpg",technolo,
-  g: y: "VR + Collaboration + 3D",marketSi,
-  z: e: "$2.1B by 2025",targetIndust,
-  r: y: "Enterprise, Education, Design"
-  }
-  
-  // Marketing & Growth
-  {
-    id: "ai-marketing-automation",tit,
-  l: e: "AI Marketing Automation Platform",descripti,
-  o: n: "Intelligent marketing platform that automates campaigns and personalizes customer experiences",catego,
-  r: y: "Marketing",pri,
-  c: e: "$7,500/month"
-    featur,
-  e: s: [
-      "Campaign automation"
-      "Personalization engine"
-      "Customer segmentation"
-      "A/B testing"
-      "ROI optimization"
-      "Multi-channel support"
-    ]
-    benefi,
-  t: s: [
-      "Automated campaigns"
-      "Personalized experiences"
-      "Improved ROI"
-      "Scalable marketing"
-    ]
-    lin,
-  k: "/services/ai-marketing",ima,
-  g: e: "/images/ai-marketing.jpg",technolo,
-  g: y: "AI + Marketing + Automation",marketSi,
-  z: e: "$4.5B by 2025",targetIndust,
-  r: y: "E-commerce, B2B, SaaS"
-  }, {
-    id: "voice-search-optimization",tit,
-  l: e: "Voice Search Optimization Platform",descripti,
-  o: n: "Platform for optimizing content and SEO for voice search and virtual assistants",catego,
-  r: y: "Voice SEO",pri,
-  c: e: "$4,500/month"
-    featur,
-  e: s: [
-      "Voice keyword research"
-      "Content optimization"
-      "Schema markup"
-      "Voice analytics"
-      "Performance tracking"
-      "Multi-language support"
-    ]
-    benefi,
-  t: s: [
-      "Voice search visibility"
-      "Improved rankings"
-      "Mobile optimization"
-      "Future-ready SEO"
-    ]
-    lin,
-  k: "/services/voice-seo",ima,
-  g: e: "/images/voice-seo.jpg",technolo,
-  g: y: "Voice + SEO + AI",marketSi,
-  z: e: "$1.8B by 2025",targetIndust,
-  r: y: "E-commerce, Content, Local Business"
-  }
-  
-  // Financial Technology
-  {
-    id: "ai-accounting-platform",tit,
-  l: e: "AI Accounting Platform",descripti,
-  o: n: "Intelligent accounting platform with automated bookkeeping and financial insights",catego,
-  r: y: "FinTech",pri,
-  c: e: "$5,500/month"
-    featur,
-  e: s: [
-      "Automated bookkeeping"
-      "Expense categorization"
-      "Financial insights"
-      "Tax preparation"
-      "Compliance monitoring"
-      "Integration tools"
-    ]
-    benefi,
-  t: s: [
-      "Automated accounting"
-      "Real-time insights"
-      "Cost savings"
-      "Compliance assurance"
-    ]
-    lin,
-  k: "/services/ai-accounting",ima,
-  g: e: "/images/ai-accounting.jpg",technolo,
-  g: y: "AI + Accounting + Automation",marketSi,
-  z: e: "$2.6B by 2025",targetIndust,
-  r: y: "Small Business, Freelancers, Startups"
-  }, {
-    id: "crypto-payment-platform",tit,
-  l: e: "Crypto Payment Platform",descripti,
-  o: n: "Complete platform for accepting and processing cryptocurrency payments",catego,
-  r: y: "Crypto",pri,
-  c: e: "$8,500/month"
-    featur,
-  e: s: [
-      "Multi-crypto support"
-      "Instant settlements"
-      "Fiat conversion"
-      "Security protocols"
-      "Compliance tools"
-      "Analytics dashboard"
-    ]
-    benefi,
-  t: s: [
-      "Crypto acceptance"
-      "Global payments"
-      "Lower fees"
-      "Instant settlements"
-    ]
-    lin,
-  k: "/services/crypto-payments",ima,
-  g: e: "/images/crypto-payments.jpg",technolo,
-  g: y: "Blockchain + Crypto + Payments",marketSi,
-  z: e: "$3.4B by 2025",targetIndust,
-  r: y: "E-commerce, Online Services, Gaming"
-  }
 ]
+    benefits: [
+  "Early metaverse adoption";
+      "Virtual customer engagement";
+      "Cost-effective events";
+      "Global reach"
+]
+    link: "/services/metaverse-platform",image: "/images/metaverse-platform.jpg",technology: "VR/AR + 3D + AI",marketSize: "$3.8B by 2025",targetIndustry: "Retail, Events, Real Estate, Education"
+},
+  {
+  id: "web3-infrastructure",title: "Web3 Infrastructure Platform",description: "Complete Web3 infrastructure for decentralized applications, NFTs, and blockchain integration";
+    category: "Web3",price: "$12,500/month";
+    features: [
+  "Smart contract deployment";
+      "NFT marketplace";
+      "DeFi integration";
+      "Wallet management";
+      "Cross-chain bridges";
+      "Security auditing"
+]
+    benefits: [
+  "Decentralized infrastructure";
+      "NFT monetization";
+      "DeFi capabilities";
+      "Future-proof technology"
+]
+    link: "/services/web3-infrastructure",image: "/images/web3-infrastructure.jpg",technology: "Blockchain + Web3 + DeFi",marketSize: "$4.2B by 2025",targetIndustry: "Finance, Gaming, Art, Real Estate"
+}
+  ;
+  // AI-Powered Business Solutions;
+  {
+  id: "ai-customer-success",title: "AI Customer Success Platform",description: "Intelligent platform that predicts customer churn and automates retention strategies",category: "Customer Success",price: "$6,500/month";
+    features: [
+  "Churn prediction";
+      "Automated retention";
+      "Customer health scoring";
+      "Personalized engagement";
+      "Success metrics tracking";
+      "Integration APIs"
+]
+    benefits: [
+  "Reduce churn by 30%";
+      "Automated retention";
+      "Improved customer satisfaction";
+      "Data-driven insights"
+]
+    link: "/services/ai-customer-success",image: "/images/ai-customer-success.jpg",technology: "AI + ML + Analytics",marketSize: "$2.8B by 2025",targetIndustry: "SaaS, E-commerce, Services"
+},
+  {
+  id: "ai-sales-optimization",title: "AI Sales Optimization Platform",description: "Comprehensive platform for optimizing sales processes, lead scoring, and revenue forecasting";
+    category: "Sales",price: "$7,500/month";
+    features: [
+  "Lead scoring AI";
+      "Revenue forecasting";
+      "Sales process optimization";
+      "Pipeline analytics";
+      "Performance tracking";
+      "CRM integration"
+]
+    benefits: [
+  "Increase conversion rates";
+      "Accurate forecasting";
+      "Process optimization";
+      "Revenue growth"
+]
+    link: "/services/ai-sales-optimization",image: "/images/ai-sales-optimization.jpg",technology: "AI + Analytics + CRM",marketSize: "$3.5B by 2025",targetIndustry: "B2B, Enterprise, Sales Teams"
+}
+  ;
+  // Data & Analytics Solutions;
+  {
+  id: "real-time-analytics",title: "Real-Time Business Analytics Platform",description: "Live analytics platform for instant business insights and decision-making",category: "Analytics",price: "$5,500/month";
+    features: [
+  "Real-time dashboards";
+      "Live data streaming";
+      "Instant alerts";
+      "Predictive analytics";
+      "Custom metrics";
+      "Mobile access"
+]
+    benefits: [
+  "Instant insights";
+      "Real-time decisions";
+      "Proactive alerts";
+      "Competitive advantage"
+]
+    link: "/services/real-time-analytics",image: "/images/real-time-analytics.jpg",technology: "Real-time + Analytics + AI",marketSize: "$2.4B by 2025",targetIndustry: "E-commerce, Finance, Manufacturing"
+},
+  {
+  id: "data-governance-platform",title: "AI Data Governance Platform",description: "Intelligent platform for automated data governance, compliance, and quality management";
+    category: "Data Governance",price: "$9,500/month";
+    features: [
+  "Automated compliance";
+      "Data quality monitoring";
+      "Privacy protection";
+      "Audit trails";
+      "Policy enforcement";
+      "Regulatory reporting"
+]
+    benefits: [
+  "Automated compliance";
+      "Data quality improvement";
+      "Risk reduction";
+      "Regulatory adherence"
+]
+    link: "/services/data-governance",image: "/images/data-governance.jpg",technology: "AI + Compliance + Data",marketSize: "$3.1B by 2025",targetIndustry: "Enterprise, Healthcare, Finance"
+}
+  ;
+  // Security & Compliance;
+  {
+  id: "zero-trust-security",title: "Zero Trust Security Platform",description: "Comprehensive zero trust security platform for modern enterprise environments",category: "Security",price: "$11,500/month";
+    features: [
+  "Identity verification";
+      "Device trust scoring";
+      "Network segmentation";
+      "Continuous monitoring";
+      "Threat detection";
+      "Compliance reporting"
+]
+    benefits: [
+  "Enhanced security";
+      "Reduced attack surface";
+      "Compliance adherence";
+      "Modern security model"
+]
+    link: "/services/zero-trust-security",image: "/images/zero-trust-security.jpg",technology: "Zero Trust + AI + Security",marketSize: "$4.8B by 2025",targetIndustry: "Enterprise, Government, Healthcare"
+},
+  {
+  id: "ai-compliance-automation",title: "AI Compliance Automation Platform",description: "Intelligent platform that automates regulatory compliance across multiple industries",category: "Compliance",price: "$8,500/month";
+    features: [
+  "Regulatory monitoring";
+      "Automated reporting";
+      "Compliance scoring";
+      "Risk assessment";
+      "Audit preparation";
+      "Multi-regulation support"
+]
+    benefits: [
+  "Automated compliance";
+      "Reduced manual work";
+      "Risk mitigation";
+      "Cost savings"
+]
+    link: "/services/ai-compliance",image: "/images/ai-compliance.jpg",technology: "AI + Compliance + Automation",marketSize: "$2.9B by 2025",targetIndustry: "Finance, Healthcare, Legal"
+}
+  ;
+  // Collaboration & Productivity;
+  {
+  id: "ai-collaboration-platform",title: "AI Collaboration Platform",description: "Intelligent platform that enhances team collaboration with AI-powered insights and automation",category: "Collaboration",price: "$4,500/month";
+    features: [
+  "Smart meeting scheduling";
+      "Task automation";
+      "Team analytics";
+      "Knowledge management";
+      "Workflow optimization";
+      "Integration tools"
+]
+    benefits: [
+  "Improved productivity";
+      "Better collaboration";
+      "Automated workflows";
+      "Team insights"
+]
+    link: "/services/ai-collaboration",image: "/images/ai-collaboration.jpg",technology: "AI + Collaboration + Automation",marketSize: "$3.2B by 2025",targetIndustry: "Enterprise, Remote Teams, Startups"
+},
+  {
+  id: "virtual-reality-meetings",title: "VR Meeting Platform",description: "Immersive virtual reality platform for remote meetings and collaboration",category: "VR Collaboration",price: "$6,500/month";
+    features: [
+  "VR meeting rooms";
+      "3D presentations";
+      "Virtual whiteboards";
+      "Avatar customization";
+      "Spatial audio";
+      "Cross-platform support"
+]
+    benefits: [
+  "Immersive meetings";
+      "Better engagement";
+      "3D collaboration";
+      "Remote team building"
+]
+    link: "/services/vr-meetings",image: "/images/vr-meetings.jpg",technology: "VR + Collaboration + 3D",marketSize: "$2.1B by 2025",targetIndustry: "Enterprise, Education, Design"
+}
+  ;
+  // Marketing & Growth;
+  {
+  id: "ai-marketing-automation",title: "AI Marketing Automation Platform",description: "Intelligent marketing platform that automates campaigns and personalizes customer experiences",category: "Marketing",price: "$7,500/month";
+    features: [
+  "Campaign automation";
+      "Personalization engine";
+      "Customer segmentation";
+      "A/B testing";
+      "ROI optimization";
+      "Multi-channel support"
+]
+    benefits: [
+  "Automated campaigns";
+      "Personalized experiences";
+      "Improved ROI";
+      "Scalable marketing"
+]
+    link: "/services/ai-marketing",image: "/images/ai-marketing.jpg",technology: "AI + Marketing + Automation",marketSize: "$4.5B by 2025",targetIndustry: "E-commerce, B2B, SaaS"
+},
+  {
+  id: "voice-search-optimization",title: "Voice Search Optimization Platform",description: "Platform for optimizing content and SEO for voice search and virtual assistants",category: "Voice SEO",price: "$4,500/month";
+    features: [
+  "Voice keyword research";
+      "Content optimization";
+      "Schema markup";
+      "Voice analytics";
+      "Performance tracking";
+      "Multi-language support"
+]
+    benefits: [
+  "Voice search visibility";
+      "Improved rankings";
+      "Mobile optimization";
+      "Future-ready SEO"
+]
+    link: "/services/voice-seo",image: "/images/voice-seo.jpg",technology: "Voice + SEO + AI",marketSize: "$1.8B by 2025",targetIndustry: "E-commerce, Content, Local Business"
+}
+  ;
+  // Financial Technology;
+  {
+  id: "ai-accounting-platform",title: "AI Accounting Platform",description: "Intelligent accounting platform with automated bookkeeping and financial insights",category: "FinTech",price: "$5,500/month";
+    features: [
+  "Automated bookkeeping";
+      "Expense categorization";
+      "Financial insights";
+      "Tax preparation";
+      "Compliance monitoring";
+      "Integration tools"
+]
+    benefits: [
+  "Automated accounting";
+      "Real-time insights";
+      "Cost savings";
+      "Compliance assurance"
+]
+    link: "/services/ai-accounting",image: "/images/ai-accounting.jpg",technology: "AI + Accounting + Automation",marketSize: "$2.6B by 2025",targetIndustry: "Small Business, Freelancers, Startups"
+},
+  {
+  id: "crypto-payment-platform",title: "Crypto Payment Platform",description: "Complete platform for accepting and processing cryptocurrency payments",category: "Crypto",price: "$8,500/month";
+    features: [
+  "Multi-crypto support";
+      "Instant settlements";
+      "Fiat conversion";
+      "Security protocols";
+      "Compliance tools";
+      "Analytics dashboard"
+]
+    benefits: [
+  "Crypto acceptance";
+      "Global payments";
+      "Lower fees";
+      "Instant settlements"
+]
+    link: "/services/crypto-payments",image: "/images/crypto-payments.jpg",technology: "Blockchain + Crypto + Payments",marketSize: "$3.4B by 2025",targetIndustry: "E-commerce, Online Services, Gaming"
+},
+  ]
 
 export const INNOVATIVE_CATEGORIES = [
-    "Business Intelligence"
-    "Customer Experience"
-    "Project Management"
-    "Marketing"
-    "Human Resources"
-    "Sales"
-    "Financial Services"
-    "Data Privacy"
-    "Supply Chain"
+  "Business Intelligence";
+    "Customer Experience";
+    "Project Management";
+    "Marketing";
+    "Human Resources";
+    "Sales";
+    "Financial Services";
+    "Data Privacy";
+    "Supply Chain";
     "Business Automation"
 ]
-export const const INNOVATIVE_PRICING = { = {
-    bas,
-  i: c: {
-        pric,
-  e: 199,curren,
-  c: y: "$",peri,
-  o: d: "month",featur,
-  e: s: [["Core platform access", "Basic AI features", "Standard support"];]
-    }
-    profession,
-  a: l: {
-        pric,
-  e: 449,curren,
-  c: y: "$",peri,
-  o: d: "month",featur,
-  e: s: [["Advanced AI features", "Custom integrations", "Priority support", "Advanced analytics"];]
-    }
-    enterpri,
-  s: e: {
-        pric,
-  e: 999,curren,
-  c: y: "$",peri,
-  o: d: "month",featur,
-  e: s: [["Full platform access", "White-label options", "24/7 support", "Custom development"];]
-    }
-}
+export const const INNOVATIVE_PRICING = {
+  = {
+    basic: {
+  price: 199,currency: "$",period: "month",features: [["Core platform access", "Basic AI features", "Standard support"],
+  ],
+  }
+    professional: {
+  price: 449,currency: "$",period: "month",features: [["Advanced AI features", "Custom integrations", "Priority support", "Advanced analytics"],
+  ],
+  }
+    enterprise: {
+  price: 999,currency: "$",period: "month",features: [["Full platform access", "White-label options", "24/7 support", "Custom development"],
+  ],
+  },
+  }
 
-export const const INNOVATIVE_CONTACT = { = {
-    pho,
-  n: e: "+1 302 464 0950",ema,
-  i: l: "kleber@ziontechgroup.com",addre,
-  s: s: "364 E Main St STE 1008, Middletown DE 19709"
-    websi,
-  t: e: "http,
-  s://ziontechgroup.com",supportHou,
-  r: s: "24/7",responseTi,
-  m: e: "< 2 hours"
+export const const INNOVATIVE_CONTACT = {
+  = {
+    phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709";
+    website: "https://ziontechgroup.com",supportHours: "24/7",responseTime: "< 2 hours"
 }
