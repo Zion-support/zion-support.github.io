@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Targeted Merge Script - Focus on specific important branches
+# Batch Merge Resolver - Process branches in smaller, manageable batches
 set -e
 
-echo "🚀 Starting Targeted Merge for Important Branches..."
+echo "🚀 Starting Batch Merge Resolver for Open PRs..."
 echo "⏰ Started at: $(date)"
 
 # Create backup
-BACKUP_BRANCH="targeted-merge-backup-$(date +%Y%m%d-%H%M%S)"
+BACKUP_BRANCH="batch-merge-backup-$(date +%Y%m%d-%H%M%S)"
 echo "🔒 Creating backup branch: $BACKUP_BRANCH"
 git checkout -b "$BACKUP_BRANCH"
 git push origin "$BACKUP_BRANCH"
@@ -23,6 +23,9 @@ SKIPPED_BRANCHES=0
 resolve_conflicts() {
     local file="$1"
     echo "🔧 Resolving conflicts in $file"
+    
+    # Create backup
+    cp "$file" "${file}.backup.$(date +%s)" 2>/dev/null || true
     
     case "$file" in
         "package.json"|"package-lock.json"|"yarn.lock")
@@ -110,45 +113,55 @@ merge_branch() {
     fi
 }
 
-# Get specific important branches
-echo "📋 Fetching important branches..."
+# Get recent branches (last 50 by commit date)
+echo "📋 Fetching recent branches..."
 git fetch --all
 
-# Target specific important branches
-TARGET_BRANCHES=(
-    "origin/cursor/add-2030q1-services-ui-8deb1aee36d"
-    "origin/cursor/add-and-advertise-new-services-then-build-0357"
-    "origin/cursor/add-and-advertise-new-services-then-build-03b6"
-    "origin/cursor/add-and-advertise-new-services-then-build-06aa"
-    "origin/cursor/add-and-advertise-new-services-then-build-0756"
-    "origin/cursor/add-and-advertise-new-services-then-build-0c04"
-    "origin/cursor/add-and-advertise-new-services-then-build-0cca"
-    "origin/cursor/add-and-advertise-new-services-then-build-174e"
-    "origin/cursor/add-and-advertise-new-services-then-build-17cc"
-    "origin/cursor/add-and-advertise-new-services-then-build-192f"
-)
+# Get branches sorted by commit date (most recent first)
+echo "📊 Getting recent branches sorted by commit date..."
+git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(refname:short)' | \
+    grep -v 'origin/main' | \
+    grep -E '(cursor/|comprehensive-|content-|fix-|improve-|update-|add-|implement-|feature/)' | \
+    head -50 > /tmp/recent_branches.txt
 
-TOTAL_BRANCHES=${#TARGET_BRANCHES[@]}
-echo "📊 Processing $TOTAL_BRANCHES targeted branches..."
+TOTAL_BRANCHES=$(wc -l < /tmp/recent_branches.txt)
+echo "📊 Processing $TOTAL_BRANCHES recent branches..."
 
-# Process each target branch
-for branch in "${TARGET_BRANCHES[@]}"; do
-    echo "🔄 Processing: $branch"
-    
-    if merge_branch "$branch"; then
-        echo "✅ Branch $branch processed successfully"
-    else
-        echo "❌ Failed to process branch $branch"
+# Process branches in small batches
+BATCH_SIZE=5
+BATCH_NUM=1
+CURRENT_BATCH=0
+
+while IFS= read -r branch; do
+    if [ -n "$branch" ]; then
+        echo "🔄 Processing: $branch"
+        
+        if merge_branch "$branch"; then
+            echo "✅ Branch $branch processed successfully"
+        else
+            echo "❌ Failed to process branch $branch"
+        fi
+        
+        ((CURRENT_BATCH++))
+        
+        # Progress update and push every batch
+        if [ $CURRENT_BATCH -eq $BATCH_SIZE ]; then
+            echo "📊 Batch $BATCH_NUM completed: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
+            echo "🚀 Pushing batch $BATCH_NUM changes..."
+            git push origin main
+            CURRENT_BATCH=0
+            ((BATCH_NUM++))
+            echo "---"
+        fi
     fi
-    
-    # Push after each successful merge
-    if [ $SUCCESSFUL_MERGES -gt 0 ] && [ $((SUCCESSFUL_MERGES % 3)) -eq 0 ]; then
-        echo "🚀 Pushing progress..."
-        git push origin main
-    fi
-    
-    echo "---"
-done
+done < /tmp/recent_branches.txt
+
+# Process any remaining branches in the last batch
+if [ $CURRENT_BATCH -gt 0 ]; then
+    echo "📊 Final batch completed: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
+    echo "🚀 Pushing final batch changes..."
+    git push origin main
+fi
 
 # Final push
 echo "🚀 Final push to main..."
@@ -156,7 +169,7 @@ git push origin main
 
 # Summary
 echo ""
-echo "🎉 Targeted Merge completed!"
+echo "🎉 Batch Merge Resolver completed!"
 echo "⏰ Finished at: $(date)"
 echo "📊 Final Summary:"
 echo "✅ Successful merges: $SUCCESSFUL_MERGES"
@@ -165,6 +178,10 @@ echo "🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
 echo "⏭️ Skipped branches: $SKIPPED_BRANCHES"
 echo "📋 Total processed: $((SUCCESSFUL_MERGES + FAILED_MERGES + SKIPPED_BRANCHES))"
 echo "🔒 Backup branch: $BACKUP_BRANCH"
+
+# Clean up
+rm -f /tmp/recent_branches.txt
+echo "🧹 Cleanup completed"
 
 echo ""
 echo "💡 Next steps:"
