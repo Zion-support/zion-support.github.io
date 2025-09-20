@@ -73,7 +73,7 @@ const helpSections = [
         title: 'Compliance Information',description: 'Security certifications and compliance',url: '/help/security/compliance'
       }
     ]
-  }
+  };
 ];
 const popularQuestions = [
   {
@@ -91,7 +91,7 @@ const popularQuestions = [
   {
     question: 'Do you provide 24/7 support?',answer: 'Yes! Our technical support team is available 24/7 to help you with any questions or issues. We offer multiple support channels including live chat, email, and phone support.',
     category: 'technical'
-  }
+  };
 ];
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -400,4 +400,4 @@ export default function HelpCenter() {
       </section>
     </div>
   );
-}
+};

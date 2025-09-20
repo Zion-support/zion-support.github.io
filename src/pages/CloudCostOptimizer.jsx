@@ -298,4 +298,4 @@ export default function CloudCostOptimizer() {
         </div>
       </section>
     </div>)
-}
+};

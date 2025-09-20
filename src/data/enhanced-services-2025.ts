@@ -12,11 +12,10 @@ export interface EnhancedService {
     contactInfo: {,
         mobile: string,email: string,address: string,website: string
     };
-}
+};
 ;
 const CONTACT = {
     mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
-};
 export const enhancedServices2025: EnhancedService[] = [
     {
         id: 'ai-powered-code-review-assistant',name: 'AI-Powered Code Review Assistant',tagline: 'Automated code quality, security scanning, and best-practice guidance',

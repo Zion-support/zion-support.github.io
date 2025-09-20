@@ -28,7 +28,7 @@ export interface ExpandedServicePricing {
   contactInfo: {,
     phone: string,email: string,website: string,address: string
   };
-}
+};
 
 // 1. CYBERSECURITY SERVICES PRICING
 export const cybersecurityPricing: ExpandedServicePricing[] = [
@@ -215,7 +215,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     contactInfo: {,
       phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/ai-compliance-automator',address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  };
 ];
 // 2. DATA ANALYTICS SERVICES PRICING
 export const dataAnalyticsPricing: ExpandedServicePricing[] = [
@@ -308,7 +308,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
     contactInfo: {,
       phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/predictive-insights-engine',address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  };
 ];
 // 3. CLOUD & DEVOPS SERVICES PRICING
 export const cloudDevOpsPricing: ExpandedServicePricing[] = [
@@ -401,7 +401,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
     contactInfo: {,
       phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/multi-cloud-orchestrator',address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  };
 ];
 // 4. IOT & EDGE COMPUTING SERVICES PRICING
 export const iotEdgePricing: ExpandedServicePricing[] = [
@@ -494,7 +494,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
     contactInfo: {,
       phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/industrial-iot-intelligence',address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  };
 ];
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING
 export const finTechPricing: ExpandedServicePricing[] = [
@@ -587,7 +587,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
     contactInfo: {,
       phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/quantum-financial-modeling',address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  };
 ];
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING
 export const healthcarePricing: ExpandedServicePricing[] = [
@@ -680,7 +680,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
     contactInfo: {,
       phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/ai-diagnostic-assistant',address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  }
+  };
 ];
 // Export all pricing data
 export const ALL_EXPANDED_SERVICES_PRICING = [
@@ -694,13 +694,10 @@ export const ALL_EXPANDED_SERVICES_PRICING = [
 // Helper functions
 export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | undefined => {
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)
-};
 export const getPricingByCategory = (category: string): ExpandedServicePricing[] => {
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)
-};
 export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)
-};
 export const searchPricing = (query: string): ExpandedServicePricing[] => {
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
@@ -708,4 +705,3 @@ export const searchPricing = (query: string): ExpandedServicePricing[] => {
     pricing.category.toLowerCase().includes(lowercaseQuery) ||
     pricing.subcategory.toLowerCase().includes(lowercaseQuery)
   )
-};

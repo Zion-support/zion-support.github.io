@@ -2,12 +2,11 @@ import React, { createContext, useContext, useState, ReactNode } from "react";
 interface Notification {
   id: string,message: string,type: 'success' | 'error' | 'warning' | 'info';
   duration?: number
-}
+};
 
 interface NotificationContextType {
   notifications: Notification[],addNotification: (notification: Omit<Notification, 'id'>) => void,
   removeNotification: (id: string) => void,clearNotifications: () => void
-}
 ;
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 export const useNotifications = () => {
@@ -20,7 +19,6 @@ export const useNotifications = () => {
 
 interface NotificationProviderProps {
   children: ReactNode
-}
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -55,4 +53,3 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
       {children}
     </NotificationContext.Provider>
   );
-};

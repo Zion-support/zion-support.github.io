@@ -22,7 +22,7 @@ const globalOffices = [
   },
   {
     city: "Toronto",country: "Canada",type: "North American Hub",icon: "🇨🇦",description: "Canadian market and development center"
-  }
+  };
 ];
 const globalStats = [
   { label: "Countries Served", value: "25+", icon: "🌍" };
@@ -159,4 +159,4 @@ export function GlobalPresenceSection() {
       </div>
     </section>
   )
-}
+};

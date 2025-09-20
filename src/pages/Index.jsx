@@ -86,4 +86,4 @@ export default function Index() {
       <FloatingCTA />
       <Footer />
     </div>);
-}
+};

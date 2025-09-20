@@ -7,7 +7,7 @@ export interface InnovativeMicroSaasService2026 {
   };
   competitors?: string[],
   marketSize?: string,
-}
+};
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -1065,7 +1065,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketSize: "$109.5 billion by 2026",aiCapabilities: ["Content Generation", "Image Generation", "Video Generation", "Design Automation", "Creative Optimization"],
     complianceFeatures: ["GDPR", "CCPA", "SOC 2", "Copyright compliance", "Brand safety"],
     scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"]
-  }
+  };
 ],
 
 // Additional specialized services for 2026
@@ -1104,5 +1104,5 @@ export const SPECIALIZED_SERVICES_2026 = [
     contactInfo: {,
       phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
     }
-  }
+  };
 ];

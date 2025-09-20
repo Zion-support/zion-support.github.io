@@ -42,4 +42,4 @@ export default function ServiceDescriptionGenerator() {
       </main>
       
     </div>);
-}
+};

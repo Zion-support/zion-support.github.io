@@ -36,7 +36,7 @@ const pricingTiers = [
       "SLA Guarantee"
     ],
     popular: false,color: "from-green-500 to-emerald-500"
-  }
+  };
 ];
 export function PricingSection() {
   return (
@@ -132,4 +132,4 @@ export function PricingSection() {
       </div>
     </section>
   )
-}
+};

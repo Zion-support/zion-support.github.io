@@ -461,4 +461,4 @@ export default function ComprehensivePricing2029() {
       </div>
     </div>
   )
-}
+};

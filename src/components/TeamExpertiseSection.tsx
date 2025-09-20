@@ -33,7 +33,7 @@ const teamExpertise = [
   },
   {
     icon: "🚀",title: "Successful Projects",description: "Successfully delivered complex technology solutions for Fortune 500 companies",count: "500+"
-  }
+  };
 ];
 const coreExpertise = [
   "Artificial Intelligence & Machine Learning",
@@ -125,4 +125,4 @@ export function TeamExpertiseSection() {
       </div>
     </section>
   )
-}
+};

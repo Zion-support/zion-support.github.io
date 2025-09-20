@@ -26,14 +26,13 @@ interface ChatMessage {
     relatedServices?: string[],
     estimatedResponseTime?: number
   },
-}
+};
 
 interface AIChatbotSystemProps {
   showHeader?: boolean,
   showSettings?: boolean,
   maxMessages?: number,
   autoScroll?: boolean,
-}
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
@@ -467,4 +466,3 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       </AnimatePresence>
     </>
   );
-};

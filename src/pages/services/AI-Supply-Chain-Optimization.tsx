@@ -591,4 +591,4 @@ export default function AISupplyChainOptimization() {
       </section>
     </div>
   )
-}
+};

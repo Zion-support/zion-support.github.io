@@ -7,7 +7,7 @@ export interface EnhancedInnovativeMicroSaasService {
   };
   competitors?: string[],
   marketSize?: string,
-}
+};
 
 export const ENHANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025: EnhancedInnovativeMicroSaasService[] = [
   // AI-Powered Healthcare Diagnostics Platform
@@ -497,6 +497,6 @@ export const ENHANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025: EnhancedInnovativeMic
     },
     competitors: ["Watershed", "Normative", "Persefoni"],
     marketSize: "$18.9 billion by 2028"
-  }
+  };
 ];
 export default ENHANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025;

@@ -131,5 +131,5 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
     marketPrice: "$12,000-20,000",
     competitors: ["NetApp", "EMC", "HPE"],
     roi: "350% within 10 months",setupTime: "7-9 weeks",integrations: ["SAN", "NAS", "Cloud Storage", "Backup Systems", "Monitoring Tools"]
-  }
+  };
 ];

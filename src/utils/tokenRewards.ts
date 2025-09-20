@@ -19,4 +19,3 @@ export async function earnTokensForReferral(
     method: 'POST',
     body: JSON.stringify({ userId, action: 'referral', referredUserId, amount: 100 })
   })
-}

@@ -150,4 +150,4 @@ export default function JobDetails() {
                 id: job.id,title: job.title,description: job.description,company_name: job.company_name || "Company",budget: job.budget,client_id: job.client_id
             }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>);
-}
+};

@@ -85,4 +85,4 @@ export function EnhancedSearchInput({
       )}
     </div>
   );
-}
+};

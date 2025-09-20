@@ -34,7 +34,7 @@ const successStories = [
       "Enhanced data accuracy by 95%"
     ],
     testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",author: "Dr. Emily Rodriguez",position: "Chief Medical Officer",rating: 5,image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"
-  }
+  };
 ];
 export function ClientSuccessStoriesSection() {
   return (
@@ -198,4 +198,4 @@ export function ClientSuccessStoriesSection() {
       </div>
     </section>
   )
-}
+};

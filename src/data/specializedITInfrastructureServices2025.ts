@@ -9,7 +9,7 @@ export interface SpecializedITInfrastructureService {
   marketSize?: string,
   demoUrl?: string,
   documentationUrl?: string,
-}
+};
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService[] = [
   // Cloud-Native Infrastructure Platform
@@ -451,6 +451,6 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     },
     competitors: ["Veeam", "Commvault", "Veritas", "Dell EMC"],
     marketSize: "$38.9B (2025)",demoUrl: "https://ziontechgroup.com/demo/disaster-recovery",documentationUrl: "https://ziontechgroup.com/docs/disaster-recovery"
-  }
+  };
 ];
 export default SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025;

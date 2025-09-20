@@ -404,4 +404,4 @@ export default function UltimateInnovativeServicesShowcase2025() {
       </div>
     </div>
   )
-}
+};

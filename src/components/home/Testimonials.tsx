@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 interface Testimonial {
   id: number,name: string,role: string,company: string,content: string,rating: number,avatar: string,industry: string
-}
+};
 ;
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -171,5 +171,4 @@ const Testimonials: React.FC = () => {
       </div>
     </section>
   )
-};
 export default Testimonials;

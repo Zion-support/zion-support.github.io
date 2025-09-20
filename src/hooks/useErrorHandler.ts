@@ -6,7 +6,7 @@ interface ErrorHandlerOptions {
   onError?: (error: Error, context?: any) => void;
   showNotification?: boolean;
   fallbackMessage?: string;
-}
+};
 
 interface ErrorContext {
   component?: string;
@@ -14,7 +14,6 @@ interface ErrorContext {
   userId?: string;
   timestamp?: string;
   metadata?: Record<string, any>;
-}
 
 export const useErrorHandler = (options: ErrorHandlerOptions = {}) => {
   const [errors, setErrors] = useState<Map<string, Error>>(new Map());
@@ -180,7 +179,6 @@ export const useErrorHandler = (options: ErrorHandlerOptions = {}) => {
     createErrorBoundaryHandler,
     errors: Array.from(errors.entries()).map(([id, error]) => ({ id, error })),
   };
-};
 
 // Utility function to create error classes
 export class AppError extends Error {
@@ -194,43 +192,37 @@ export class AppError extends Error {
     this.code = code;
     this.context = context;
     this.timestamp = new Date().toISOString();
-  }
-}
+  };
 
 export class ValidationError extends AppError {
   constructor(message: string, field?: string) {
     super(message, 'VALIDATION_ERROR', { field });
     this.name = 'ValidationError';
-  }
-}
+  };
 
 export class NetworkError extends AppError {
   constructor(message: string, statusCode?: number) {
     super(message, 'NETWORK_ERROR', { statusCode });
     this.name = 'NetworkError';
-  }
-}
+  };
 
 export class AuthenticationError extends AppError {
   constructor(message: string = 'Authentication required') {
     super(message, 'AUTHENTICATION_ERROR');
     this.name = 'AuthenticationError';
-  }
-}
+  };
 
 export class AuthorizationError extends AppError {
   constructor(message: string = 'Insufficient permissions') {
     super(message, 'AUTHORIZATION_ERROR');
     this.name = 'AuthorizationError';
-  }
-}
+  };
 
 export class RateLimitError extends AppError {
   constructor(message: string = 'Rate limit exceeded', retryAfter?: number) {
     super(message, 'RATE_LIMIT_ERROR', { retryAfter });
     this.name = 'RateLimitError';
-  }
-}
+  };
 
 // Error recovery strategies
 export const createRetryStrategy = (maxRetries: number = 3, delay: number = 1000) => {
@@ -255,43 +247,37 @@ export const createRetryStrategy = (maxRetries: number = 3, delay: number = 1000
     
     throw lastError!;
   };
-};
 
 // Error reporting utilities
 export const reportError = async (error: Error, context?: any) => {
   // This would integrate with your error reporting service (e.g., Sentry, Bugsnag)
   console.error('Error reported:', error, context);
-};
 
 export const isNetworkError = (error: Error): boolean => {
   return error.name === 'NetworkError' || 
          error.message.includes('fetch') ||
          error.message.includes('network') ||
          error.message.includes('timeout');
-};
 
 export const isValidationError = (error: Error): boolean => {
   return error.name === 'ValidationError' || error.name === 'AppError';
-};
 
 export const getErrorMessage = (error: Error | string): string => {
   if (typeof error === 'string') {
     return error;
-  }
+  };
   
   if (error instanceof AppError) {
     return error.message;
-  }
+  };
   
   return error.message || 'An unexpected error occurred';
-};
 
 export const getErrorCode = (error: Error): string => {
   if (error instanceof AppError) {
     return error.code;
-  }
+  };
   
   return 'UNKNOWN_ERROR';
-};
 
 export default useErrorHandler;

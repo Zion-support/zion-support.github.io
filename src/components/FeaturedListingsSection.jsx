@@ -40,7 +40,7 @@ const featuredListings = [
     duration: "5-7 months",team: "7 experts",location: "Hybrid",featured: false,technologies: ["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
     highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"],
     link: "/services/iot-smart-city"
-  }
+  };
 ];
 export function FeaturedListingsSection() {
   const [hoveredListing, setHoveredListing] = useState(null);
@@ -263,4 +263,4 @@ export function FeaturedListingsSection() {
       </div>
     </section>
   )
-}
+};

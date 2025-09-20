@@ -49,7 +49,7 @@ interface SidebarItem {
   children?: SidebarItem[],
   featured?: boolean,
   description?: string
-}
+};
 
 export function MainSidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -301,4 +301,3 @@ export function MainSidebar() {
       )}
     </>
   );
-}

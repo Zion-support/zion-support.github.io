@@ -161,4 +161,4 @@ export function MainNavigation({ className }) {
         Get Started
       </NavLink>
     </nav>);
-}
+};

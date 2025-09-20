@@ -31,7 +31,7 @@ const testimonials = [
   {
     id: 5,name: "Lisa Wang",position: "Security Director, SecureNet",
     company: "SecureNet",avatar: "👩‍💻",rating: 5,content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",category: "Cybersecurity",results: ["100% compliance", "Zero incidents", "Automated security"]
-  }
+  };
 ],
 
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"],
@@ -125,4 +125,4 @@ export function InteractiveTestimonials() {
       </div>
     </section>
   )
-}
+};

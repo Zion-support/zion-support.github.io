@@ -8,14 +8,12 @@ interface LoadingSpinnerProps {
   showProgress?: boolean,
   progress?: number,
   className?: string,
-}
+};
 ;
 const sizeClasses = {
   sm: 'w-4 h-4',md: 'w-8 h-8',lg: 'w-12 h-12',xl: 'w-16 h-16'
-};
 const iconSizeClasses = {
   sm: 'w-3 h-3',md: 'w-6 h-6',lg: 'w-8 h-8',xl: 'w-12 h-12'
-};
 export const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md';
   variant = 'default',

@@ -7,7 +7,7 @@ export interface InnovativeITService {
   };
   competitors?: string[],
   marketSize?: string,
-}
+};
 
 export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
   // Quantum Cloud Computing Infrastructure
@@ -450,5 +450,5 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     },
     competitors: ["Siemens", "GE Digital", "PTC", "Dassault Systèmes"],
     marketSize: "$86.1 billion by 2027"
-  }
+  };
 ];

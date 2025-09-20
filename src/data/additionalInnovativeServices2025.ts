@@ -7,7 +7,7 @@ export interface AdditionalInnovativeService {
   };
   competitors?: string[],
   marketSize?: string,
-}
+};
 
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService[] = [
   // AI-Powered Quantum Financial Modeling Platform
@@ -156,6 +156,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService[] 
     },
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
     marketSize: "$67.8 billion by 2027"
-  }
+  };
 ];
 export default ADDITIONAL_INNOVATIVE_SERVICES_2025;

@@ -439,7 +439,7 @@ export default function InnovativeServicesShowcase2027() {
       </section>
     </div>
   )
-}
+};
 
 // Helper component for DNA icon
 function Dna({ className }: { className?: string }) {
@@ -448,4 +448,3 @@ function Dna({ className }: { className?: string }) {
       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
     </svg>
   );
-}

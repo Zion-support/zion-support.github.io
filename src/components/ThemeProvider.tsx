@@ -5,7 +5,7 @@ interface ThemeContextType {
   theme: Theme,
   setTheme: (theme: Theme) => void,
   toggleTheme: () => void;
-}
+};
 ;
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 interface ThemeProviderProps {
@@ -52,6 +52,6 @@ export const useTheme = () => {
   const context = React.useContext(ThemeContext);
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider');
-  };
+  }
   return context;
 };

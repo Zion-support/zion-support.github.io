@@ -619,4 +619,4 @@ export default function AIAutonomousResearchAssistant() {
       </section>
     </div>
   )
-}
+};

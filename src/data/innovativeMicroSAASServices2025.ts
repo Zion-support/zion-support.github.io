@@ -124,5 +124,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: ProductListing[] = [
     marketPrice: "$2,200-4,800",
     competitors: ["DreamBox", "Knewton", "Smart Sparrow"],
     roi: "300% within 3 months",setupTime: "2-3 weeks",integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams", "Zoom"]
-  }
+  };
 ];

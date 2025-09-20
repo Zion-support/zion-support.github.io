@@ -750,4 +750,4 @@ export default function RoboticsAutomation() {
       </div>
     </>
   )
-}
+};

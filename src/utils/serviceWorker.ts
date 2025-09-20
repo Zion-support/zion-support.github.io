@@ -80,7 +80,7 @@ self.addEventListener('fetch', (event: FetchEvent) => {
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return,
-  }
+  };
 
   // Handle different types of requests
   if (isStaticAsset(request)) {
@@ -95,7 +95,7 @@ self.addEventListener('fetch', (event: FetchEvent) => {
     event.respondWith(cacheFirst(request, STATIC_CACHE)),
   } else {
     event.respondWith(networkFirst(request, DYNAMIC_CACHE)),
-  }
+  };
 }),
 
 // Cache First Strategy
@@ -105,7 +105,7 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
   
   if (cachedResponse) {
     return cachedResponse
-  }
+  };
   
   try {
     const networkResponse = await fetch(request);
@@ -117,8 +117,7 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
     // Return offline page if available
     const offlineResponse = await cache.match('/offline.html');
     return offlineResponse || new Response('Offline', { status: 503 });
-  }
-}
+  };
 
 // Stale While Revalidate Strategy
 async function staleWhileRevalidate(request: Request, cacheName: string): Promise<Response> {
@@ -137,7 +136,7 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
     }),
     
     return cachedResponse;
-  }
+  };
   
   // Fetch from network if no cache
   try {
@@ -148,8 +147,7 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
     return networkResponse;
   } catch (error) {
     return new Response('Offline', { status: 503 });
-  }
-}
+  };
 
 // Network First Strategy
 async function networkFirst(request: Request, cacheName: string): Promise<Response> {
@@ -170,38 +168,32 @@ async function networkFirst(request: Request, cacheName: string): Promise<Respon
     }
     ;
     return new Response('Offline', { status: 503 });
-  }
-}
+  };
 
 // Helper functions to determine request type
 function isStaticAsset(request: Request): boolean {
   const url = new URL(request.url);
   return STATIC_ASSETS.some(asset => url.pathname === asset)
-}
 ;
 function isDynamicRoute(request: Request): boolean {
   const url = new URL(request.url);
   return DYNAMIC_ROUTES.some(route => url.pathname === route)
-}
 ;
 function isAPIRequest(request: Request): boolean {
   const url = new URL(request.url);
   return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))
-}
 ;
 function isImage(request: Request): boolean {
   return request.destination === 'image'
-}
 ;
 function isFont(request: Request): boolean {
   return request.destination === 'font'
-}
 
 // Background sync for offline actions
 self.addEventListener('sync', (event: SyncEvent) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync())
-  }
+  };
 });
 async function doBackgroundSync() {
   try {
@@ -212,20 +204,17 @@ async function doBackgroundSync() {
     }
   } catch (error) {
     console.error('Background sync failed:', error);
-  }
-}
+  };
 
 // Get offline data from IndexedDB
 async function getOfflineData(): Promise<any[]> {
   // Implementation would depend on your data storage strategy
   return [];
-}
 
 // Sync offline data with server
 async function syncOfflineData(data: any[]): Promise<void> {
   // Implementation would depend on your API structure
   console.log('Syncing offline data:', data);
-}
 
 // Push notification handling
 self.addEventListener('push', (event: PushEvent) => {
@@ -255,22 +244,22 @@ self.addEventListener('notificationclick', (event: NotificationEvent) => {
     event.waitUntil(
       clients.openWindow('/')
     )
-  }
+  };
 }),
 
 // Message handling for communication with main thread
 self.addEventListener('message', (event: ExtendableMessageEvent) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting()
-  }
+  };
   ;
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
-  }
+  };
   ;
   if (event.data && event.data.type === 'CLEAR_CACHE') {
     event.waitUntil(clearAllCaches()),
-  }
+  };
 }),
 
 // Clear all caches
@@ -280,7 +269,6 @@ async function clearAllCaches(): Promise<void> {
     cacheNames.map(cacheName => caches.delete(cacheName))
   ),
   console.log('All caches cleared');
-}
 
 // Periodic cache cleanup
 setInterval(async () => {
@@ -303,7 +291,7 @@ setInterval(async () => {
     }
   } catch (error) {
     console.error('Cache cleanup failed:', error);
-  }
+  };
 }, 24 * 60 * 60 * 1000), // Run once per day
 
 // Export for TypeScript
@@ -333,8 +321,7 @@ export function registerServiceWorker(): void {
           console.log('SW registration failed: ', registrationError);
         });
     });
-  }
-}
+  };
 
 // Unregister service worker
 export function unregisterServiceWorker(): void {
@@ -342,5 +329,4 @@ export function unregisterServiceWorker(): void {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();
     });
-  }
-}
+  };

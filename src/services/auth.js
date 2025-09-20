@@ -6,7 +6,7 @@ class AuthService {
   constructor() {
     this.token = localStorage.getItem('token');
     this.user = JSON.parse(localStorage.getItem('user') || 'null')
-  }
+  };
 
   // Login user
   async login(credentials) {
@@ -37,7 +37,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Login failed');
     }
-  }
+  };
 
   // Register user
   async register(userData) {
@@ -68,7 +68,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Registration failed');
     }
-  }
+  };
 
   // Logout user
   async logout() {
@@ -86,27 +86,27 @@ class AuthService {
     } catch (error) {
       throw new Error('Logout failed');
     }
-  }
+  };
 
   // Get current user
   getCurrentUser() {
     return this.user,
-  }
+  };
 
   // Get current token
   getCurrentToken() {
     return this.token,
-  }
+  };
 
   // Check if user is authenticated
   isAuthenticated() {
     return !!this.token && !!this.user,
-  }
+  };
 
   // Check if user has specific role
   hasRole(role) {
     return this.user && this.user.role === role,
-  }
+  };
 
   // Refresh token
   async refreshToken() {
@@ -127,7 +127,7 @@ class AuthService {
     } catch (error) {
       throw new Error('Token refresh failed');
     }
-  }
+  };
 
   // Forgot password
   async forgotPassword(email) {
@@ -146,7 +146,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Password reset request failed');
     }
-  }
+  };
 
   // Reset password
   async resetPassword(token, newPassword) {
@@ -165,7 +165,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Password reset failed');
     }
-  }
+  };
 
   // Update user profile
   async updateProfile(profileData) {
@@ -190,7 +190,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Profile update failed');
     }
-  }
+  };
 
   // Change password
   async changePassword(currentPassword, newPassword) {
@@ -213,7 +213,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Password change failed');
     }
-  }
+  };
 
   // Verify email
   async verifyEmail(token) {
@@ -238,7 +238,7 @@ class AuthService {
     } catch (error) {
       throw new Error(error.message || 'Email verification failed');
     }
-  }
+  };
 
   // Get user permissions
   getUserPermissions() {
@@ -249,14 +249,14 @@ class AuthService {
       user: ['read:ownwrite:own'],admin: ['read:allwrite:all', 'delete: allmanage:users'],moderator: ['read:allwrite:all', 'moderate: content']
     };
     return permissions[this.user.role] || [];
-  }
+  };
 
   // Check if user has specific permission
   hasPermission(permission) {
     const permissions = this.getUserPermissions();
     return permissions.includes(permission);
-  }
-}
+  };
+};
 
 // Create singleton instance
 const authService = new AuthService();

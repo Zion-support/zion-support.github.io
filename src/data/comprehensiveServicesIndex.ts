@@ -60,20 +60,16 @@ export const SERVICE_STATS = {
 // Helper Functions
 export const getServicesByCategory = (category: string) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)
-};
 export const getServicesByInnovationLevel = (level: string) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)
-};
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   )
-};
 export const getServicesByTags = (tags: string[]) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     tags.some(tag => service.tags.includes(tag))
   )
-};
 export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase();
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
@@ -82,6 +78,5 @@ export const searchServices = (query: string) => {
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
     service.category.toLowerCase().includes(searchTerm)
   )
-};
 
 export default ALL_COMPREHENSIVE_SERVICES;

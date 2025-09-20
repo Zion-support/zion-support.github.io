@@ -24,7 +24,7 @@ interface HeroProps {
   features?: Array<{
     icon: React.ComponentType<any>,text: string,color: string
   }>;
-}
+};
 ;
 const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   title = "Revolutionary AI & Technology Solutions";

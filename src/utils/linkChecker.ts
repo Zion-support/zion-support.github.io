@@ -2,11 +2,10 @@ export interface LinkInfo {
   url: string,status: 'working' | 'broken' | 'missing' | 'external',page: string;
   anchor?: string,
   error?: string
-}
+};
 
 export interface PageInfo {
   path: string,title: string,links: LinkInfo[],exists: boolean
-}
 
 export class LinkChecker {
   private baseUrl: string;
@@ -15,7 +14,7 @@ export class LinkChecker {
   private missingPages: string[] = [];
   constructor(baseUrl: string = 'https://ziontechgroup.com') {
     this.baseUrl = baseUrl
-  }
+  };
 
   // Check if a link is internal or external
   isInternalLink(url: string): boolean {
@@ -25,7 +24,7 @@ export class LinkChecker {
     } catch {
       return false;
     }
-  }
+  };
 
   // Normalize URL to handle relative paths
   normalizeUrl(url: string, basePage: string): string {
@@ -43,7 +42,7 @@ export class LinkChecker {
     } catch {
       return url;
     }
-  }
+  };
 
   // Extract all links from a page
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
@@ -75,7 +74,7 @@ export class LinkChecker {
     }
 ;
     return links;
-  }
+  };
 
   // Check if a page exists
   async checkPageExists(url: string): Promise<boolean> {
@@ -85,7 +84,7 @@ export class LinkChecker {
     } catch {
       return false;
     }
-  }
+  };
 
   // Check all links on a page
   async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {
@@ -116,30 +115,29 @@ export class LinkChecker {
     return {
       path: pagePath,title: this.extractPageTitle(pageContent),links: checkedLinks,exists: true
     };
-  }
+  };
 
   // Extract page title
   private extractPageTitle(content: string): string {
     const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
     return titleMatch ? titleMatch[1].trim() : 'Untitled'
-  }
+  };
 
   // Get analysis summary
   getSummary() {
     return {
       totalLinks: this.visitedUrls.size,brokenLinks: this.brokenLinks.length,missingPages: this.missingPages.length,externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length
     };
-  }
+  };
 
   // Get all broken links
   getBrokenLinks(): LinkInfo[] {
     return this.brokenLinks,
-  }
+  };
 
   // Get all missing pages
   getMissingPages(): string[] {
     return this.missingPages;
-  }
-}
+  };
 
 export default LinkChecker;

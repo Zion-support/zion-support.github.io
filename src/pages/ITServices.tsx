@@ -66,5 +66,5 @@ export default function ITServices() {
       </section>
     </div>
   );
-}
+};
 

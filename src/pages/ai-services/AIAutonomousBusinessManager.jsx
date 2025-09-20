@@ -218,4 +218,4 @@ export default function AIAutonomousBusinessManager() {
         </div>
       </section>
     </div>)
-}
+};

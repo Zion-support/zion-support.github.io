@@ -251,4 +251,3 @@ export default function FuturisticServicesShowcase() {
 			</div>
 		</div>
 	);
-}

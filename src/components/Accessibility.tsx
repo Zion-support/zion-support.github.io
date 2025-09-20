@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 interface AccessibilitySettings {
   fontSize: number,highContrast: boolean,reducedMotion: boolean,soundEnabled: boolean,theme: 'light' | 'dark' | 'auto'
-}
+};
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
@@ -312,4 +312,3 @@ export function Accessibility() {
       </AnimatePresence>
     </>
   );
-}

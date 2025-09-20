@@ -339,4 +339,3 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
       </div>
     </section>
   )
-};

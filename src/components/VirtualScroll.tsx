@@ -10,7 +10,7 @@ interface VirtualScrollProps<T> {
   overscan?: number;
   className?: string;
   onScroll?: (scrollTop: number) => void;
-}
+};
 
 function VirtualScroll<T>({
   items,
@@ -127,6 +127,5 @@ function VirtualScroll<T>({
       )}
     </div>
   );
-}
 
 export default VirtualScroll;

@@ -426,4 +426,4 @@ export default function BlogPost() {
       </section>
     </div>
   )
-}
+};

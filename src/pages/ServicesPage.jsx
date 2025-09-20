@@ -253,7 +253,6 @@ function generateRandomService(idNum) {
         currency: "$",tags: template.tags,author: { name: author, id: author.toLowerCase().replace(/\s+/g, "-") },
         images: [getRandomItem(images)],createdAt: new Date().toISOString(),aiScore: Math.floor(90 + Math.random() * 10),rating: parseFloat((4 + Math.random()).toFixed(1)),reviewCount: Math.floor(50 + Math.random() * 150)
     };
-}
 // Enhanced filter options for all service categories
 const SERVICE_FILTERS = [
     { label: 'AI & ML', value: 'ai-ml' };
@@ -334,4 +333,3 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>);
-}

@@ -467,4 +467,4 @@ export default function DataAnalytics() {
       </section>
     </div>
   )
-}
+};

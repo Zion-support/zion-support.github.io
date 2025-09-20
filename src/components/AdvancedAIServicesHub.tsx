@@ -20,7 +20,7 @@ interface AIService {
     starter: number,professional: number,enterprise: number
   },
   icon: React.ComponentType<any>,route: string,status: 'active' | 'beta' | 'coming-soon'
-}
+};
 ;
 const AdvancedAIServicesHub: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -289,5 +289,4 @@ const AdvancedAIServicesHub: React.FC = () => {
       </section>
     </div>
   )
-};
 export default AdvancedAIServicesHub;

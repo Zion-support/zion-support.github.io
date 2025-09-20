@@ -326,4 +326,4 @@ export default function SpaceTechnology() {
       </section>
     </div>
   );
-}
+};

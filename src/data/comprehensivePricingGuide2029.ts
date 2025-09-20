@@ -4,11 +4,10 @@ export interface PricingTier {
   popular?: boolean,
   aiScore: number,setupTime: string,support: string,integrations: string[];
   limitations?: string[]
-}
+};
 
 export interface ServiceCategory {
   id: string,name: string,description: string,icon: string,services: ProductListing[],pricingTiers: PricingTier[]
-}
 
 export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
   {
@@ -413,6 +412,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
         limitations: []
       }
     ]
-  }
+  };
 ];
 export default COMPREHENSIVE_PRICING_GUIDE_2029;

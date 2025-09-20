@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from "lucide-react";
 interface Benefit {
   title: string,description: string,icon: React.ReactNode,color: string,bgColor: string,stats: string,features: string[]
-}
+};
 ;
 const benefits: Benefit[] = [
   {
@@ -39,7 +39,7 @@ const benefits: Benefit[] = [
       "Bulk discount options",
       "Transparent cost structure"
     ]
-  }
+  };
 ],
 
 export function BenefitsSection() {
@@ -218,4 +218,3 @@ export function BenefitsSection() {
       </div>
     </section>
   );
-}

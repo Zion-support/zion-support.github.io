@@ -343,4 +343,4 @@ export default function UltimateHomepage2025() {
         </div>
       </div>
     </div>)
-}
+};

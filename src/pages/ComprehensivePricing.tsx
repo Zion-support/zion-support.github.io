@@ -36,7 +36,7 @@ const pricingTiers = [
       'SLA guarantees'
     ],
     popular: false
-  }
+  };
 ];
 export default function ComprehensivePricing() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -369,4 +369,3 @@ export default function ComprehensivePricing() {
       </div>
     </div>
   );
-}

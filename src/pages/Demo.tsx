@@ -256,4 +256,4 @@ export default function Demo() {
       `}</style>
     </div>
   );
-}
+};

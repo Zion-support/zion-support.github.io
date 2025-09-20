@@ -24,7 +24,7 @@ interface Service {
   category: string,features: string[],pricing: string,rating: number,reviews: number,color: string;
   popular?: boolean,
   link: string
-}
+};
 ;
 const services: Service[] = [
   {
@@ -65,7 +65,7 @@ const services: Service[] = [
     id: 'healthcare-ai',title: 'Healthcare AI Solutions',description: 'AI-powered diagnostic and patient care optimization',icon: Users,category: 'Healthcare AI',features: ['Medical imaging AIPredictive diagnostics', 'Patient monitoringHIPAA compliant'],
     pricing: '$4,500/month',
     rating: 4.9,reviews: 78,color: 'from-emerald-500 to-teal-500',link: '/ai-services/healthcare'
-  }
+  };
 ];
 const categories = [
   'All ServicesAI & Machine Learning',
@@ -281,4 +281,3 @@ export const EnhancedServiceShowcase: React.FC = () => {
       </div>
     </section>
   )
-};

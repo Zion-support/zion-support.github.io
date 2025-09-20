@@ -327,4 +327,4 @@ export default function ServicesPricing() {
         </div>
       </div>
     </div>)
-}
+};

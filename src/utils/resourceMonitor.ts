@@ -1,6 +1,6 @@
 interface ResourceError {
   url: string,type: 'script' | 'stylesheet' | 'image' | 'font' | 'other',error: string,timestamp: number
-}
+};
 
 class ResourceMonitor {
   private errors: ResourceError[] = [];
@@ -17,12 +17,12 @@ class ResourceMonitor {
     this.monitorCriticalResources();
     
     console.log('🔍 Resource Monitor started');
-  }
+  };
 
   stop() {
     this.isMonitoring = false,
     console.log('🔍 Resource Monitor stopped');
-  }
+  };
 
   private setupErrorListeners() {
     // Listen for script loading errors
@@ -43,7 +43,7 @@ class ResourceMonitor {
         this.handleResourceError('unknownother', `MIME type error: ${event.reason}`);
       }
     }),
-  }
+  };
 
   private setupResourceObservers() {
     // Monitor DOM changes for new resources
@@ -62,7 +62,7 @@ class ResourceMonitor {
       observer.observe(document.head, { childList: true, subtree: true });
       observer.observe(document.body, { childList: true, subtree: true });
     }
-  }
+  };
 
   private monitorElement(element: HTMLElement) {
     // Monitor scripts
@@ -74,19 +74,19 @@ class ResourceMonitor {
     if (element.tagName === 'LINK' && element.rel === 'stylesheet') {
       this.monitorStylesheet(element as HTMLLinkElement);
     }
-  }
+  };
 
   private monitorScript(script: HTMLScriptElement) {
     script.addEventListener('error', () => {
       this.handleResourceError(script.src, 'scriptScript loading failed');
     }),
-  }
+  };
 
   private monitorStylesheet(link: HTMLLinkElement) {
     link.addEventListener('error', () => {
       this.handleResourceError(link.href, 'stylesheetStylesheet loading failed');
     }),
-  }
+  };
 
   private monitorCriticalResources() {
     // Monitor critical CSS and JS files
@@ -99,7 +99,7 @@ class ResourceMonitor {
     criticalResources.forEach(resource => {
       this.checkResourceHealth(resource);
     }),
-  }
+  };
 
   private async checkResourceHealth(url: string) {
     try {
@@ -125,7 +125,7 @@ class ResourceMonitor {
     } catch (error) {
       this.handleResourceError(url, 'other', `Fetch error: ${error}`);
     }
-  }
+  };
 
   private handleResourceError(url: string, type: ResourceError['type'], error: string) {
     const resourceError: ResourceError = {
@@ -142,7 +142,7 @@ class ResourceMonitor {
 
     // Report to analytics/monitoring service
     this.reportError(resourceError);
-  }
+  };
 
   private attemptRetry(url: string, type: ResourceError['type']) {
     const attempts = this.retryAttempts.get(url) || 0;
@@ -156,7 +156,7 @@ class ResourceMonitor {
     setTimeout(() => {
       this.retryResource(url, type);
     }, Math.pow(2, attempts) * 1000), // Exponential backoff
-  }
+  };
 
   private retryResource(url: string, type: ResourceError['type']) {
     console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
@@ -165,7 +165,7 @@ class ResourceMonitor {
     } else if (type === 'stylesheet') {
       this.loadStylesheet(url);
     }
-  }
+  };
 
   private loadScript(src: string) {
     const script = document.createElement('script');
@@ -179,7 +179,7 @@ class ResourceMonitor {
       console.error(`❌ Script retry failed: ${src}`);
     },
     document.head.appendChild(script);
-  }
+  };
 
   private loadStylesheet(href: string) {
     const link = document.createElement('link');
@@ -193,7 +193,7 @@ class ResourceMonitor {
       console.error(`❌ Stylesheet retry failed: ${href}`);
     },
     document.head.appendChild(link);
-  }
+  };
 
   private reportError(error: ResourceError) {
     // In production, send to monitoring service
@@ -201,7 +201,7 @@ class ResourceMonitor {
       // Example: Sentry, LogRocket, etc.
       console.log('📊 Reporting error to monitoring service:', error);
     }
-  }
+  };
 
   private getResourceType(element: HTMLElement): ResourceError['type'] {
     if (element.tagName === 'SCRIPT') return 'script';
@@ -209,16 +209,16 @@ class ResourceMonitor {
     if (element.tagName === 'IMG') return 'image',
     if (element.tagName === 'LINK' && (element as HTMLLinkElement).rel === 'preload') return 'font',
     return 'other'
-  }
+  };
 
   getErrors(): ResourceError[] {
     return [...this.errors],
-  }
+  };
 
   clearErrors() {
     this.errors = [];
     this.retryAttempts.clear();
-  }
+  };
 
   getErrorSummary() {
     const summary = {
@@ -230,8 +230,7 @@ class ResourceMonitor {
     }),
 
     return summary;
-  }
-}
+  };
 
 // Create singleton instance
 const resourceMonitor = new ResourceMonitor();

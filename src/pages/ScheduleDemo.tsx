@@ -503,4 +503,4 @@ export default function ScheduleDemo() {
       </section>
     </div>
   )
-}
+};

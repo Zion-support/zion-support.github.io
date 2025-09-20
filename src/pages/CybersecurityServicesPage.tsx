@@ -45,7 +45,7 @@ const SECURITY_SERVICE_CATEGORIES = [
   },
   {
     id: 'zero-trust',name: 'Zero Trust Security',description: 'Identity verification and access management',icon: Lock,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
-  }
+  };
 ];
 export default function CybersecurityServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -1241,4 +1241,4 @@ export default function CybersecurityServicesPage() {
       <TrustedBySection />
     </div>
   )
-}
+};

@@ -5,7 +5,7 @@ interface SelectProps {
   value?: string,
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   disabled?: boolean
-}
+};
 
 export function Select({
   children,
@@ -25,11 +25,9 @@ export function Select({
       {children}
     </select>
   );
-}
 
 interface SelectItemProps {
   children: React.ReactNode,value: string
-}
 
 export function SelectItem({ children, value }: SelectItemProps) {
   return (
@@ -37,12 +35,10 @@ export function SelectItem({ children, value }: SelectItemProps) {
       {children}
     </option>
   );
-}
 
 interface SelectTriggerProps {
   children: React.ReactNode;
   className?: string
-}
 
 export function SelectTrigger({ children, className = '' }: SelectTriggerProps) {
   return (
@@ -50,20 +46,15 @@ export function SelectTrigger({ children, className = '' }: SelectTriggerProps) 
       {children}
     </div>
   );
-}
 
 interface SelectValueProps {
   placeholder?: string,
-}
 
 export function SelectValue({ placeholder }: SelectValueProps) {
   return <span className="text-sm">{placeholder || 'Select an option'}</span>;
-}
 
 interface SelectContentProps {
   children: React.ReactNode
-}
 
 export function SelectContent({ children }: SelectContentProps) {
   return <div className="relative">{children}</div>;
-}

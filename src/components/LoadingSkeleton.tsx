@@ -6,7 +6,7 @@ interface SkeletonProps {
   width?: string,
   rounded?: boolean,
   animated?: boolean,
-}
+};
 ;
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
@@ -20,7 +20,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   
   if (!animated) {
     return <div className={classes} />;
-  }
+  };
   ;
   return (
     <motion.div
@@ -39,7 +39,6 @@ interface LoadingSkeletonProps {
   type?: 'card' | 'list' | 'hero' | 'table' | 'form',
   count?: number,
   className?: string,
-}
 
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
   type = 'card';
@@ -140,7 +139,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
       {renderSkeleton()}
     </div>
   ),
-};
 
 // Specialized skeleton components
 export const HeroSkeleton: React.FC = () => (

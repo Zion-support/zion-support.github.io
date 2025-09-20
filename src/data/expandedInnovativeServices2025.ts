@@ -5,7 +5,7 @@ export interface ExpandedInnovativeService {
   technicalSpecs?: {
     technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[]
   };
-}
+};
 
 export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
   // AI-Powered Cybersecurity Threat Intelligence
@@ -763,7 +763,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["LLM", "Content", "Workflow", "SEO"],
     estimatedDelivery: "1–2 weeks",supportLevel: "professional",marketPrice: "$499 – $1,999/month",
     roi: "250–500%",innovationLevel: "Advanced",contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
-  }
+  };
   ;
   // Cloud Cost Optimization AI
   {
@@ -973,7 +973,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["SageMaker", "Vertex AI", "Databricks", "MLflow"],
       apiEndpoints: 140,uptime: "99.95%",security: ["SOC 2", "RBAC", "IAM"]
     }
-  }
+  };
 ],
 
 export default EXPANDED_INNOVATIVE_SERVICES_2025;

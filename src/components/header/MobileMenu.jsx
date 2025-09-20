@@ -28,7 +28,7 @@ export function MobileMenu({ className }) {
     navigationItems.push({ 
       href: '/dashboard',label: 'Dashboard',icon: Settings,matches: (path) => path.startsWith('/dashboard') 
     });
-  }
+  };
   ;
   return (
     <div className={cn("md:hidden", className)}>
@@ -134,4 +134,4 @@ export function MobileMenu({ className }) {
       )}
     </div>
   );
-}
+};

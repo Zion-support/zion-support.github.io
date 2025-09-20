@@ -8,12 +8,11 @@ export interface Notification {
   action?: {
     label: string,onClick: () => void
   };
-}
+};
 
 interface NotificationContextType {
   notifications: Notification[],addNotification: (notification: Omit<Notification, 'id'>) => void,
   removeNotification: (id: string) => void,clearAll: () => void
-}
 ;
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 export const useNotifications = () => {
@@ -26,7 +25,6 @@ export const useNotifications = () => {
 
 interface NotificationProviderProps {
   children: React.ReactNode
-}
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -56,7 +54,6 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
       <NotificationContainer />
     </NotificationContext.Provider>
   ),
-};
 
 const NotificationContainer: React.FC = () => {
   const { notifications, removeNotification, clearAll } = useNotifications();
@@ -99,7 +96,6 @@ const NotificationContainer: React.FC = () => {
 
 interface NotificationItemProps {
   notification: Notification,onRemove: (id: string) => void
-}
 ;
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
   const getIcon = (type: NotificationType) => {
@@ -178,7 +174,6 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
       </div>
     </motion.div>
   )
-};
 // Utility functions for easy notification creation
 export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>) => {
@@ -193,5 +188,4 @@ export const notify = {
   };
   info: (title: string, message: string, options?: Partial<Notification>) => {
 
-  }
-};
+  };

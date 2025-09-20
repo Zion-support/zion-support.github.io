@@ -11,5 +11,5 @@ function ProjectMilestones() {
         
       </>
     </ProtectedRoute>);
-}
+};
 export default ProjectMilestones;

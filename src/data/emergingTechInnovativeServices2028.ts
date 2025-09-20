@@ -11,7 +11,7 @@ export interface EmergingTechInnovativeService2028 {
   sustainabilityFeatures?: string[],
   blockchainFeatures?: string[],
   iotCapabilities?: string[],
-}
+};
 
 export const EMERGING_TECH_INNOVATIVE_SERVICES_2028: EmergingTechInnovativeService2028[] = [
   // Blockchain-Powered Supply Chain
@@ -369,5 +369,5 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2028: EmergingTechInnovativeServi
     competitors: ["Google Quantum AI", "IBM Quantum", "Microsoft Quantum", "Intel Quantum", "Rigetti"],
     marketSize: "$120 billion by 2030",aiCapabilities: ["Network optimization", "Error correction", "Performance monitoring", "Security analysis"],
     sustainabilityFeatures: ["Energy-efficient quantum networks", "Green quantum technology", "Sustainable communication"]
-  }
+  };
 ];
