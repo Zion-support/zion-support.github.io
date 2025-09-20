@@ -4,9 +4,9 @@ import React from "react;";
 import MobileLaunchPage from "@/pages/MobileLaunchPage;";
 
 export default function MobileAppRoutes() {
-  return (
-    <>
-      <Route path="launch" element={<MobileLaunchPage />} />;
-    </>;
-  );
-}<//><///>
+return (
+<>;
+<Route path="launch" element={<MobileLaunchPage />} />;
+</>;
+);
+}<//><///>;
