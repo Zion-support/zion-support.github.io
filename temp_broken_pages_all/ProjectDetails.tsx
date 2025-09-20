@@ -14,9 +14,10 @@ import {
   
 return (
     <>
-      <SEO
-title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
-        description='View and manage your project details and collaboration.'
+      <SEO 
+        title="ProjectDetails - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
       />
       <main className='container mx-auto px-4 py-8'>
         <div className='mb-6'>

@@ -93,8 +93,8 @@ href = {profileData.linkedin_url}
           </div>
         </div>
       </div>
-</>
-);
+    </>
+  );
 }
 }, [profileId]);
 <p>Error: {error ;
