@@ -1,8 +1,40 @@
 {
-<<<<<<< HEAD
-=======
-  "timestamp": "2025-09-01T12:00:42.429Z",
-  "buildSize": 0,
-  "largeFiles": [],
-  "summary": "Performance monitoring completed"}
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
+  "timestamp": "2025-09-20T04:57:34.742Z",
+  "summary": {
+    "optimizations": 0,
+    "warnings": 0,
+    "recommendations": 4
+  },
+  "optimizations": [],
+  "warnings": [],
+  "recommendations": [
+    {
+      "category": "Bundle Size",
+      "suggestion": "Total bundle size is optimized. Consider implementing lazy loading for routes.",
+      "impact": "medium"
+    },
+    {
+      "category": "Code Splitting",
+      "suggestion": "Manual chunk splitting is configured. Excellent!",
+      "impact": "high"
+    },
+    {
+      "category": "Images",
+      "suggestion": "Consider implementing lazy loading for images below the fold",
+      "impact": "medium"
+    },
+    {
+      "category": "Dependencies",
+      "suggestion": "Dependencies are well optimized. Keep monitoring for updates.",
+      "impact": "low"
+    }
+  ],
+  "nextSteps": [
+    "Implement lazy loading for route components",
+    "Add image optimization with WebP/AVIF support",
+    "Set up performance monitoring with Web Vitals",
+    "Consider implementing virtual scrolling for large lists",
+    "Add comprehensive caching strategies",
+    "Implement service worker for offline functionality"
+  ]
+}
