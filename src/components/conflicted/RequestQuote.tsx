@@ -25,44 +25,40 @@ import { Calculator;
   Server,
   Wifi;
   FileText,
-  Briefcase;
+  Briefcase,
 } from "lucide-react, ";
 
 export default function RequestQuote() {
-  const [formData; setFormData] = useState({
-    firstName: "";
-    lastName: "";
-    email: "";
-    phone: "";
-    company: "";
-    projectType: "";
-    budget: "";
-    timeline: "";
-    description: "";
+  const [formData, setFormData] = useState({
+    firstName: "", lastName: "";
+    email: "", phone: "";
+    company: "", projectType: "";
+    budget: "", timeline: "",
+    description: "",
     urgency: "medium"
   });
-    const [submissionStatus; setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+    const [submissionStatus, setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const projectTypes = [
-    { value: "web-development", label: "Web Development", icon: Globe; description: "Custom websites and web applications" };
-    { value: "mobile-app", label: "Mobile App Development", icon: Smartphone; description: "iOS and Android applications" };
-    { value: "ai-ml", label: "AI & Machine Learning", icon: Brain; description: "Intelligent automation and analytics" };
-    { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud; description: "AWS; Azure, GCP solutions" },
-    { value: "cybersecurity", label: "Cybersecurity", icon: Shield; description: "Security audits and implementation" };
-    { value: "data-analytics", label: "Data Analytics", icon: BarChart3; description: "Business intelligence and reporting" };
-    { value: "ui-ux-design", label: "UI/UX Design", icon: Palette; description: "User interface and experience design" };
-    { value: "software-development", label: "Custom Software", icon: Code; description: "Enterprise software solutions" };
-    { value: "devops", label: "DevOps & CI/CD", icon: Server; description: "Automation and deployment pipelines" };
-    { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi; description: "Network design and setup" };
-    { value: "database-design", label: "Database Design", icon: Database; description: "Database architecture and optimization" };
-    { value: "consulting", label: "IT Consulting", icon: Briefcase; description: "Strategic technology guidance" }
+    { value: "web-development", label: "Web Development", icon: Globe, description: "Custom websites and web applications" };
+    { value: "mobile-app", label: "Mobile App Development", icon: Smartphone, description: "iOS and Android applications" };
+    { value: "ai-ml", label: "AI & Machine Learning", icon: Brain, description: "Intelligent automation and analytics" };
+    { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud, description: "AWS, Azure, GCP solutions" },
+    { value: "cybersecurity", label: "Cybersecurity", icon: Shield, description: "Security audits and implementation" };
+    { value: "data-analytics", label: "Data Analytics", icon: BarChart3, description: "Business intelligence and reporting" };
+    { value: "ui-ux-design", label: "UI/UX Design", icon: Palette, description: "User interface and experience design" };
+    { value: "software-development", label: "Custom Software", icon: Code, description: "Enterprise software solutions" };
+    { value: "devops", label: "DevOps & CI/CD", icon: Server, description: "Automation and deployment pipelines" };
+    { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi, description: "Network design and setup" };
+    { value: "database-design", label: "Database Design", icon: Database, description: "Database architecture and optimization" },
+    { value: "consulting", label: "IT Consulting", icon: Briefcase, description: "Strategic technology guidance" }
   ];
     const budgetRanges = [
-    { value: "under-10k", label: "Under $10;000", description: "Small projects and MVPs" };
-    { value: "10k-25k", label: "$10;000 - $25;000", description: "Medium-sized applications" };
-    { value: "25k-50k", label: "$25;000 - $50;000", description: "Complex applications" };
-    { value: "50k-100k", label: "$50;000 - $100;000", description: "Enterprise solutions" };
-    { value: "100k-plus", label: "$100;000+", description: "Large-scale projects" };
+    { value: "under-10k", label: "Under $10,000", description: "Small projects and MVPs" };
+    { value: "10k-25k", label: "$10, 000 - $25,000", description: "Medium-sized applications" };
+    { value: "25k-50k", label: "$25, 000 - $50,000", description: "Complex applications" };
+    { value: "50k-100k", label: "$50, 000 - $100,000", description: "Enterprise solutions" };
+    { value: "100k-plus", label: "$100,000+", description: "Large-scale projects" },
     { value: "custom", label: "Custom Pricing", description: "Let\"s discuss your needs" }
   ];
     const timelineOptions = [
@@ -70,20 +66,20 @@ export default function RequestQuote() {
     { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed" };
     { value: "1-month", label: "1 Month", description: "Standard project timeline" };
     { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline" };
-    { value: "3-plus-months", label: "3+ Months", description: "Long-term project" };
+    { value: "3-plus-months", label: "3+ Months", description: "Long-term project" },
     { value: "flexible", label: "Flexible", description: "Timeline can be discussed" }
   ];
     const urgencyLevels = [
     { value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400" };
     { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400" };
-    { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400" };
+    { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400" },
     { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400" }
   ];
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name; value } = e.target;
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value;
+      [name]: value,
     }));
   };
 
@@ -97,15 +93,11 @@ export default function RequestQuote() {
       // Reset form after success;
       setTimeout(() => {
         setFormData({
-          firstName: "";
-          lastName: "";
-          email: "";
-          phone: "";
-          company: "";
-          projectType: "";
-          budget: "";
-          timeline: "";
-          description: "";
+          firstName: "", lastName: "";
+          email: "", phone: "";
+          company: "", projectType: "";
+          budget: "", timeline: "",
+          description: "",
           urgency: "medium"
         });
     setSubmissionStatus("idle");
@@ -121,8 +113,8 @@ export default function RequestQuote() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0; y: 30 }}
-            animate={{ opacity: 1; y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8">
@@ -139,27 +131,27 @@ export default function RequestQuote() {
             {/* Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <motion.div;
-                initial={{ opacity: 0; y: 20 }}
-                animate={{ opacity: 1; y: 0 }}
-                transition={{ duration: 0.6; delay: 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 className="flex items-center justify-center space-x-3 text-white/80"
               >
                 <Clock className="w-5 h-5 text-cyan-400" />
                 <span>24-Hour Response</span>
               </motion.div>
               <motion.div;
-                initial={{ opacity: 0; y: 20 }}
-                animate={{ opacity: 1; y: 0 }}
-                transition={{ duration: 0.6; delay: 0.2 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex items-center justify-center space-x-3 text-white/80"
               >
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>Free Consultation</span>
               </motion.div>
               <motion.div;
-                initial={{ opacity: 0; y: 20 }}
-                animate={{ opacity: 1; y: 0 }}
-                transition={{ duration: 0.6; delay: 0.3 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex items-center justify-center space-x-3 text-white/80"
               >
                 <Calculator className="w-5 h-5 text-purple-400" />
@@ -177,8 +169,8 @@ export default function RequestQuote() {
             {/* Form */}
             <div className="lg:col-span-2">
               <motion.div;
-                initial={{ opacity: 0; x: -30 }}
-                whileInView={{ opacity: 1; x: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
@@ -242,7 +234,7 @@ export default function RequestQuote() {
 
                   <div>
                     <label className="block text-white font-medium mb-2">Company</label>
-                    <input;
+                    <input,
                       type="text"
                       name="company"
                       value={formData.company}
@@ -257,15 +249,15 @@ export default function RequestQuote() {
                     <label className="block text-white font-medium mb-4">Project Type *</label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {projectTypes.map((type) => (
-                        <label;
+                        <label,
                           key={type.value}
                           className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
-                            formData.projectType === type.value;
+                            formData.projectType === type.value,
                               ? "border-cyan-400 bg-cyan-400/20"
                               : "border-white/20 hover:border-cyan-400/50"
                           }`}
                         >
-                          <input;
+                          <input,
                             type="radio"
                             name="projectType"
                             value={type.value}
@@ -328,15 +320,15 @@ export default function RequestQuote() {
                     <label className="block text-white font-medium mb-4">Project Urgency</label>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       {urgencyLevels.map((level) => (
-                        <label;
+                        <label,
                           key={level.value}
                           className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
-                            formData.urgency === level.value;
+                            formData.urgency === level.value,
                               ? "border-cyan-400 bg-cyan-400/20"
                               : "border-white/20 hover:border-cyan-400/50"
                           }`}
                         >
-                          <input;
+                          <input,
                             type="radio"
                             name="urgency"
                             value={level.value}
@@ -398,8 +390,8 @@ export default function RequestQuote() {
                   {/* Status Messages */}
                   {submissionStatus === "success" && (
                     <motion.div;
-                      initial={{ opacity: 0; y: 10 }}
-                      animate={{ opacity: 1; y: 0 }}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
                       className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg"
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -411,8 +403,8 @@ export default function RequestQuote() {
 
                   {submissionStatus === "error" && (
                     <motion.div;
-                      initial={{ opacity: 0; y: 10 }}
-                      animate={{ opacity: 1; y: 0 }}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
                       className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg"
                     >
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3" />
@@ -429,8 +421,8 @@ export default function RequestQuote() {
             <div className="space-y-8">
               {/* Contact Information */}
               <motion.div;
-                initial={{ opacity: 0; x: 30 }}
-                whileInView={{ opacity: 1; x: 0 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
@@ -460,10 +452,10 @@ export default function RequestQuote() {
 
               {/* Why Choose Us */}
               <motion.div;
-                initial={{ opacity: 0; x: 30 }}
-                whileInView={{ opacity: 1; x: 0 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8; delay: 0.2 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>
@@ -501,10 +493,10 @@ export default function RequestQuote() {
 
               {/* Process */}
               <motion.div;
-                initial={{ opacity: 0; x: 30 }}
-                whileInView={{ opacity: 1; x: 0 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8; delay: 0.4 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>

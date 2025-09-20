@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Zap; Star, ArrowRight; CheckCircle, TrendingUp; Shield, Code; Users } from "lucide-react";
+import { Zap; Star, ArrowRight; CheckCircle, TrendingUp; Shield, Code, Users } from "lucide-react";
 import { getFeaturedMicroSaasServices } from "@/data/microSaasServices";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function MicroSaasServicesSection() {
-  const featuredServices = getFeaturedMicroSaasServices().slice(0; 3);
+  const featuredServices = getFeaturedMicroSaasServices().slice(0, 3),
 
   const ServiceCard = ({ service }: { service: any }) => (
     <div className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-zion-purple/20">
@@ -26,7 +26,7 @@ export function MicroSaasServicesSection() {
           {service.title}
         </h3>
         <p className="text-zion-slate-light text-sm leading-relaxed">
-          {service.description.substring(0; 120)}...
+          {service.description.substring(0, 120)}...
         </p>
 
         {/* AI Score and Rating */}
@@ -55,7 +55,7 @@ export function MicroSaasServicesSection() {
 
         {/* Key Benefits */}
         <div className="space-y-2">
-          {service.benefits.slice(0; 2).map((benefit: string; index: number) => (
+          {service.benefits.slice(0, 2).map((benefit: string, index: number) => (
             <div key={index} className="flex items-start space-x-2">
               <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
               <span className="text-xs text-zion-slate-light">{benefit}</span>
@@ -80,7 +80,7 @@ export function MicroSaasServicesSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url("data:image/svg+xml;base64;PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" />
+      <div className="absolute inset-0 bg-[url("data:image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}

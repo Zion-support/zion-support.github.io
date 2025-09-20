@@ -1,18 +1,18 @@
 
-import React, { useEffect; useState } from "react";
-import { Card; CardContent, CardHeader; CardTitle } from "@/components/ui/card, ";
+import React, { useEffect, useState } from "react";
+import { Card; CardContent, CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { useInterviews } from "@/hooks/useInterviews, ";
 import { Interview } from "@/types/interview, ";
-import { format; isPast, parseISO } from "date-fns, ";
+import { format, isPast, parseISO } from "date-fns, ";
 import Link from "next/link";
-import { Calendar; Clock, Video } from "lucide-react, ";
+import { Calendar, Clock, Video } from "lucide-react, ";
 import { Avatar } from "@/components/ui/avatar, ";
 
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
-  const [upcomingInterviews; setUpcomingInterviews] = useState<Interview[]>([]);
-  const [isLoading; setIsLoading] = useState(true);
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadInterviews = async () => {
@@ -26,16 +26,16 @@ export function UpcomingInterviewsCard() {
             interview.status === "confirmed" && 
             !isPast(parseISO(interview.scheduled_date))
           )
-          .sort((a; b) => 
+          .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
-          .slice(0; 3); // Take only the next 3 interviews;
+          .slice(0, 3); // Take only the next 3 interviews;
         
-        setUpcomingInterviews(upcoming);
+        setUpcomingInterviews(upcoming),
       } catch (error) {
         
       } finally {
-        setIsLoading(false);
+        setIsLoading(false),
       }
     };
 
@@ -48,12 +48,12 @@ export function UpcomingInterviewsCard() {
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Video className="h-5 w-5 mr-2 text-zion-purple" />
-            Upcoming Interviews;
+            Upcoming Interviews,
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {[1; 2].map(i => (
+            {[1, 2].map(i => (
               <div key={i} className="flex items-center gap-3 animate-pulse">
                 <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>
                 <div className="flex-1">
@@ -74,7 +74,7 @@ export function UpcomingInterviewsCard() {
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Video className="h-5 w-5 mr-2 text-zion-purple" />
-            Upcoming Interviews;
+            Upcoming Interviews,
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -87,7 +87,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    );
+    ),
   }
 
   return (
@@ -95,20 +95,20 @@ export function UpcomingInterviewsCard() {
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
           <Video className="h-5 w-5 mr-2 text-zion-purple" />
-          Upcoming Interviews;
+          Upcoming Interviews,
         </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
-            const formattedDate = format(interviewDate, "EEE; MMM d");
+            const formattedDate = format(interviewDate, "EEE, MMM d");
             const formattedTime = format(interviewDate, "h: mm a");
     // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
             const isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime();
+              interviewDate.getTime() > now.getTime(),
             
             return (
               <div key={interview.id} className="flex items-center gap-3">
@@ -131,7 +131,7 @@ export function UpcomingInterviewsCard() {
                     </p>
                     {isStartingSoon && (
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
-                        Soon;
+                        Soon,
                       </span>
                     )}
                   </div>

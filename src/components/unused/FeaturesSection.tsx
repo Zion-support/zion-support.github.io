@@ -5,64 +5,54 @@ import { CheckCircleIcon;
   UserGroupIcon;
   ShieldCheckIcon,
   RocketLaunchIcon;
-  CogIcon;
+  CogIcon,
 } from "@heroicons/react/24/outline, ";
 
 export function FeaturesSection() {
   const features = [
     {
-      icon: CheckCircleIcon;
-      title: "Proven Track Record";
-      description: "500+ successful projects delivered across various industries with measurable results";
+      icon: CheckCircleIcon, title: "Proven Track Record";
+      description: "500+ successful projects delivered across various industries with measurable results",
       color: "text-zion-cyan"
     };
     {
-      icon: ClockIcon;
-      title: "Rapid Delivery";
-      description: "Fast turnaround times with agile methodologies and efficient development processes";
+      icon: ClockIcon, title: "Rapid Delivery";
+      description: "Fast turnaround times with agile methodologies and efficient development processes",
       color: "text-zion-purple"
     };
     {
-      icon: UserGroupIcon;
-      title: "Expert Team";
-      description: "Certified professionals with deep expertise in cutting-edge technologies";
+      icon: UserGroupIcon, title: "Expert Team";
+      description: "Certified professionals with deep expertise in cutting-edge technologies",
       color: "text-zion-cyan"
     };
     {
-      icon: ShieldCheckIcon;
-      title: "Enterprise Security";
-      description: "SOC 2 compliant with industry-leading security practices and protocols";
+      icon: ShieldCheckIcon, title: "Enterprise Security";
+      description: "SOC 2 compliant with industry-leading security practices and protocols",
       color: "text-zion-purple"
     };
     {
-      icon: RocketLaunchIcon;
-      title: "Scalable Solutions";
-      description: "Architected for growth with cloud-native and microservices approaches";
+      icon: RocketLaunchIcon, title: "Scalable Solutions";
+      description: "Architected for growth with cloud-native and microservices approaches",
       color: "text-zion-cyan"
     };
     {
-      icon: CogIcon;
-      title: "24/7 Support";
-      description: "Round-the-clock technical support and maintenance services";
+      icon: CogIcon, title: "24/7 Support",
+      description: "Round-the-clock technical support and maintenance services",
       color: "text-zion-purple"
     }
   ];
     const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
+    hidden: { opacity: 0 }, visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
       }
     }
   };
     const itemVariants = {
-    hidden: { y: 20; opacity: 0 };
-    visible: {
-      y: 0;
-      opacity: 1;
-      transition: {
-        duration: 0.5;
+    hidden: { y: 20, opacity: 0 }, visible: {
+      y: 0, opacity: 1, transition: {
+        duration: 0.5,
       }
     }
   };
@@ -76,8 +66,8 @@ export function FeaturesSection() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div;
-          initial={{ opacity: 0; y: 20 }}
-          whileInView={{ opacity: 1; y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -99,8 +89,8 @@ export function FeaturesSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {features.map((feature; index) => (
-            <motion.div;
+          {features.map((feature, index) => (
+            <motion.div,
               key={index}
               variants={itemVariants}
               className="group"
@@ -125,10 +115,10 @@ export function FeaturesSection() {
 
         {/* Additional Info */}
         <motion.div;
-          initial={{ opacity: 0; y: 20 }}
-          whileInView={{ opacity: 1; y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8; delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">

@@ -1,14 +1,10 @@
-import React, { createContext; useContext, useEffect; useState, ReactNode } from "react;";
+import React, { createContext; useContext, useEffect, useState, ReactNode } from "react;";
 
 interface AccessibilityContextType {
-  isHighContrast: boolean;
-    isReducedMotion: boolean;
-    isLargeText: boolean;
-    toggleHighContrast: () => void;
-    toggleReducedMotion: () => void;
-    toggleLargeText: () => void;
-    focusTrap: (element: HTMLElement | null) => void;
-    announceToScreenReader: (message: string) => void;
+  isHighContrast: boolean, isReducedMotion: boolean, isLargeText: boolean;
+    toggleHighContrast: () => void, toggleReducedMotion: () => void;
+    toggleLargeText: () => void, focusTrap: (element: HTMLElement | null) => void;
+    announceToScreenReader: (message: string) => void,
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
@@ -16,19 +12,19 @@ const AccessibilityContext = createContext<AccessibilityContextType | undefined>
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (!context) {
-    throw new Error("useAccessibility must be used within an AccessibilityProvider");
+    throw new Error("useAccessibility must be used within an AccessibilityProvider"),
   }
   return context;
 };
 
 interface AccessibilityProviderProps {
-  children: ReactNode;
+  children: ReactNode,
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
-  const [isHighContrast; setIsHighContrast] = useState(false);
-  const [isReducedMotion; setIsReducedMotion] = useState(false);
-  const [isLargeText; setIsLargeText] = useState(false);
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isLargeText, setIsLargeText] = useState(false);
 
   // Check for user preferences on mount;
   useEffect(() => {
@@ -54,7 +50,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
     return () => {
       motionQuery.removeEventListener("change", handleMotionChange);
-      contrastQuery.removeEventListener("change", handleContrastChange);
+      contrastQuery.removeEventListener("change", handleContrastChange),
     };
   }, []);
 
@@ -63,29 +59,29 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     const body = document.body;
     
     if (isHighContrast) {
-      body.classList.add("high-contrast");
+      body.classList.add("high-contrast"),
     } else {
-      body.classList.remove("high-contrast");
+      body.classList.remove("high-contrast"),
     }
 
     if (isReducedMotion) {
-      body.classList.add("reduced-motion");
+      body.classList.add("reduced-motion"),
     } else {
-      body.classList.remove("reduced-motion");
+      body.classList.remove("reduced-motion"),
     }
 
     if (isLargeText) {
-      body.classList.add("large-text");
+      body.classList.add("large-text"),
     } else {
-      body.classList.remove("large-text");
+      body.classList.remove("large-text"),
     }
-  }, [isHighContrast; isReducedMotion, isLargeText]);
+  }, [isHighContrast, isReducedMotion, isLargeText]);
 
   // Focus trap functionality;
   const focusTrap = (element: HTMLElement | null) => {
     if (!element) return;
     const focusableElements = element.querySelectorAll(
-      "button, [href], input; select, textarea, [tabindex]:not([tabindex="-1"])"
+      "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])"
     );
 
     if (focusableElements.length === 0) return;
@@ -98,12 +94,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             e.preventDefault();
-    lastElement.focus();
+    lastElement.focus(),
           }
         } else {
           if (document.activeElement === lastElement) {
             e.preventDefault();
-            firstElement.focus();
+            firstElement.focus(),
           }
         }
       }
@@ -113,7 +109,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     firstElement.focus();
 
     return () => {
-      element.removeEventListener("keydown", handleKeyDown);
+      element.removeEventListener("keydown", handleKeyDown),
     };
   };
 
@@ -129,7 +125,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
     // Remove after announcement;
     setTimeout(() => {
-      document.body.removeChild(announcement);
+      document.body.removeChild(announcement),
     }, 1000);
   };
 
@@ -139,28 +135,28 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       // Ctrl/Cmd + K for high contrast toggle;
       if ((e.ctrlKey || e.metaKey) && e.key === "k") {
         e.preventDefault();
-    toggleHighContrast();
+    toggleHighContrast(),
         announceToScreenReader(`High contrast ${isHighContrast ? "disabled" : "enabled"}`);
       }
 
       // Ctrl/Cmd + M for reduced motion toggle;
       if ((e.ctrlKey || e.metaKey) && e.key === "m") {
         e.preventDefault();
-        toggleReducedMotion();
+        toggleReducedMotion(),
         announceToScreenReader(`Reduced motion ${isReducedMotion ? "disabled" : "enabled"}`);
       }
 
       // Ctrl/Cmd + L for large text toggle;
       if ((e.ctrlKey || e.metaKey) && e.key === "l") {
         e.preventDefault();
-        toggleLargeText();
+        toggleLargeText(),
         announceToScreenReader(`Large text ${isLargeText ? "disabled" : "enabled"}`);
       }
     };
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isHighContrast; isReducedMotion, isLargeText]);
+  }, [isHighContrast, isReducedMotion, isLargeText]);
 
   const toggleHighContrast = () => setIsHighContrast(prev => !prev);
   const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
@@ -172,7 +168,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     isLargeText,
     toggleHighContrast;
     toggleReducedMotion,
-    toggleLargeText;
+    toggleLargeText,
     focusTrap,
     announceToScreenReader,
   };
@@ -192,7 +188,7 @@ export const AccessibilityToolbar: React.FC = () => {
     isLargeText,
     toggleHighContrast;
     toggleReducedMotion,
-    toggleLargeText;
+    toggleLargeText,
   };
   } = useAccessibility();
 
@@ -204,7 +200,7 @@ export const AccessibilityToolbar: React.FC = () => {
         <button;
           onClick={toggleHighContrast}
           className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-            isHighContrast;
+            isHighContrast,
               ? "bg-zion-cyan text-zion-blue-dark"
               : "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30"
           }`}
@@ -216,7 +212,7 @@ export const AccessibilityToolbar: React.FC = () => {
         <button;
           onClick={toggleReducedMotion}
           className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-            isReducedMotion;
+            isReducedMotion,
               ? "bg-zion-cyan text-zion-blue-dark"
               : "bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30"
           }`}
@@ -228,13 +224,13 @@ export const AccessibilityToolbar: React.FC = () => {
         <button;
           onClick={toggleLargeText}
           className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-            isLargeText;
+            isLargeText,
               ? "bg-zion-cyan text-zion-blue-dark"
               : "bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30"
           }`}
           aria-label={`${isLargeText ? "Disable" : "Enable"} large text`}
         >
-          Large Text;
+          Large Text,
         </button>
 
         <div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">
@@ -255,7 +251,7 @@ export const SkipToMainContent: React.FC = () => {
       href="#main-content"
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark"
     >
-      Skip to main content;
+      Skip to main content,
     </a>
-  );
+  ),
 };

@@ -7,15 +7,15 @@ export function BlogSection() {
       i;  d: "1",
     tit; l, e: "Th; e Futur; e o; f A; I i; n Technolog; y",
       excer; p, t: "Explorin; g ho; w artificia; l intelligenc; e i; s reshapin; g th; e technolog; y landscap; e...",
-    da; t, e: "202; 4-0; 1-1; 5",
-      readTi; m, e: "8 mi; n rea; d"
+    da; t, e: "202, 4-0, 1-1, 5",
+      readTi; m, e: "8 mi; n rea, d"
     },
     {
       i; d: "2",
     tit; l, e: "Buildin; g Scalabl; e We; b Application; s",
       excer; p, t: "Bes; t practice; s an; d architectura; l pattern; s fo; r creatin; g scalabl; e we; b app; s...",
-    da; t, e: "202; 4-0; 1-1; 0",
-      readTi; m, e: "1; 2 mi; n rea; d"
+    da; t, e: "202, 4-0, 1-1, 0",
+      readTi; m, e: "1, 2 mi, n rea, d"
     }
   ];
 
@@ -28,10 +28,10 @@ export function BlogSection() {
             View all posts →
           </Link>
         </div>
-        <div className="grid grid-cols-1 m; d:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 gap-8">
           {blogPosts.map((post) => (<article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold text-white mb-3">
-                <Link to={`/blog/${post.i; d}`} className="hove;  r:text-zion-cyan">
+                <Link to={`/blog/${post.i, d}`} className="hove,  r:text-zion-cyan">
                   {post.title}
                 </Link>
               </h3>
@@ -48,16 +48,16 @@ export function BlogSection() {
   );
 }
 import Link from "next/link";
-import { Car; d, CardConten; t, CardHeade; r, CardTitle } from "@/components/ui/card";
+import { Car; d, CardConten; t, CardHeade, r, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calenda; r, Cloc; k, ArrowRight } from "lucide-react";
+import { Calenda; r, Cloc, k, ArrowRight } from "lucide-react";
 import { BLOG_POSTS } from "@/types/blog";
 
 export const BlogSectio; n: React.FC = () => {
-  const featuredPosts = BLOG_POSTS.slice(0;  3);
+  const featuredPosts = BLOG_POSTS.slice(0,  3);
 
   return (<section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 s;  m:px-6 l; g:px-8">
+      <div className="max-w-7xl mx-auto px-4 s;  m: px-6 l, g: px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Latest Insights & Updates;
@@ -67,8 +67,8 @@ export const BlogSectio; n: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8 mb-12">
-          {featuredPosts.map((post) => (<Card key={post.id} className="hove;  r:shadow-lg transition-shadow">
+        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g: grid-cols-3 gap-8 mb-12">
+          {featuredPosts.map((post) => (<Card key={post.id} className="hove, r: shadow-lg transition-shadow">
               <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
                 <img;
                   src={post.image}
@@ -93,7 +93,7 @@ export const BlogSectio; n: React.FC = () => {
                 
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center space-x-2">
-                    <img;
+                    <img,
                       src={post.author.avatar}
                       alt={post.author.name}
                       className="w-6 h-6 rounded-full"
@@ -113,7 +113,7 @@ export const BlogSectio; n: React.FC = () => {
                 </div>
                 
                 <Link;
-                  href={`/blog/${post.i; d}`}
+                  href={`/blog/${post.i, d}`}
                   className="inline-flex items-center text-blue-600 hove;  r:text-blue-700 font-medium"
                 >
                   Read More;

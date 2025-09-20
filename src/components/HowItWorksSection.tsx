@@ -32,7 +32,7 @@ export const HowItWorksSection = () => {
           </div>
           <div className="text-center">
             <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-              04;
+              04,
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
             <p className="text-gray-600">Ongoing maintenance and continuous optimization</p>
@@ -40,5 +40,5 @@ export const HowItWorksSection = () => {
         </div>
       </div>
     </div>
-  );
+  ),
 };

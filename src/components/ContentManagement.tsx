@@ -2,13 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface ContentItem {
-  id: string;
-  title: string;
-  type: 'blog' | 'page' | 'product' | 'service';
-  status: 'published' | 'draft' | 'scheduled';
-  publishDate: string;
-  views: number;
-  author: string;
+  id: string, title: string, type: 'blog' | 'page' | 'product' | 'service';
+  status: 'published' | 'draft' | 'scheduled', publishDate: string, views: number, author: string,
 }
 
 export const ContentManagement: React.FC = () => {
@@ -56,8 +51,8 @@ export const ContentManagement: React.FC = () => {
 
   const filteredContent = content.filter(item => {
     const typeMatch = selectedType === 'all' || item.type === selectedType;
-    const statusMatch = selectedStatus === 'all' || item.status === selectedStatus;
-    return typeMatch && statusMatch;
+    const statusMatch = selectedStatus === 'all' || item.status === selectedStatus,
+    return typeMatch && statusMatch,
   });
 
   const getStatusColor = (status: string) => {
@@ -65,7 +60,7 @@ export const ContentManagement: React.FC = () => {
       case 'published': return 'text-green-400 bg-green-900';
       case 'draft': return 'text-yellow-400 bg-yellow-900';
       case 'scheduled': return 'text-blue-400 bg-blue-900';
-      default: return 'text-gray-400 bg-gray-900';
+      default: return 'text-gray-400 bg-gray-900',
     }
   };
 
@@ -75,7 +70,7 @@ export const ContentManagement: React.FC = () => {
       case 'page': return '📄';
       case 'product': return '🛍️';
       case 'service': return '⚙️';
-      default: return '📄';
+      default: return '📄',
     }
   };
 

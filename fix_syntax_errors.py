@@ -1,83 +1,72 @@
 #!/usr/bin/env python3
 """
-Script to fix common syntax errors in TypeScript/JavaScript files
+Fix TypeScript syntax errors by replacing semicolons with commas in function parameters
 """
 
 import os
 import re
-import glob
+import subprocess
+from pathlib import Path
 
-def fix_syntax_errors(file_path):
-    """Fix common syntax errors in a file"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        original_content = content
-        
-        # Fix common syntax errors
-        # 1. Replace trailing commas with semicolons in variable declarations
-        content = re.sub(r'(\w+),\s*$', r'\1;', content, flags=re.MULTILINE)
-        
-        # 2. Fix missing semicolons after statements
-        content = re.sub(r'(\w+)\s*,\s*$', r'\1;', content, flags=re.MULTILINE)
-        
-        # 3. Fix comma instead of semicolon in statements
-        content = re.sub(r'(\w+)\s*,\s*(\w+.*)$', r'\1;\n    \2', content, flags=re.MULTILINE)
-        
-        # 4. Fix missing closing parentheses
-        content = re.sub(r'(\w+\([^)]*)\s*,\s*$', r'\1);', content, flags=re.MULTILINE)
-        
-        # 5. Fix property assignment issues
-        content = re.sub(r'(\w+):\s*([^,}]+)\s*,', r'\1: \2,', content)
-        
-        # 6. Fix missing commas in object literals
-        content = re.sub(r'(\w+)\s*:\s*([^,}]+)\s*([^,}]+)', r'\1: \2, \3', content)
-        
-        # 7. Fix expression expected errors
-        content = re.sub(r'^\s*,\s*$', '', content, flags=re.MULTILINE)
-        
-        # 8. Fix missing semicolons after function calls
-        content = re.sub(r'(\w+\([^)]*\))\s*,', r'\1;', content)
-        
-        # 9. Fix missing semicolons after variable assignments
-        content = re.sub(r'(\w+\s*=\s*[^;]+)\s*,', r'\1;', content)
-        
-        # 10. Fix missing semicolons after return statements
-        content = re.sub(r'(return\s+[^;]+)\s*,', r'\1;', content)
-        
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed syntax errors in {file_path}")
-            return True
-        return False
-        
-    except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return False
-
-def main():
-    """Main function to fix syntax errors in all TypeScript/JavaScript files"""
-    # Find all TypeScript and JavaScript files
-    patterns = [
-        'src/**/*.tsx',
-        'src/**/*.ts', 
-        'src/**/*.jsx',
-        'src/**/*.js'
-    ]
+def fix_syntax_errors():
+    """Fix common TypeScript syntax errors"""
     
-    files_to_fix = []
-    for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+    # Find all TypeScript files
+    ts_files = []
+    for root, dirs, files in os.walk('src'):
+        for file in files:
+            if file.endswith(('.ts', '.tsx')):
+                ts_files.append(os.path.join(root, file))
     
-    fixed_count = 0
-    for file_path in files_to_fix:
-        if fix_syntax_errors(file_path):
-            fixed_count += 1
+    print(f"Found {len(ts_files)} TypeScript files to process")
     
-    print(f"Fixed syntax errors in {fixed_count} files")
+    fixed_files = 0
+    total_fixes = 0
+    
+    for file_path in ts_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            original_content = content
+            
+            # Fix function parameter syntax: (param1; param2) -> (param1, param2)
+            content = re.sub(r'\(([^)]*);([^)]*)\)', r'(\1,\2)', content)
+            
+            # Fix object destructuring: { prop1; prop2 } -> { prop1, prop2 }
+            content = re.sub(r'\{([^}]*);([^}]*)\}', r'{\1,\2}', content)
+            
+            # Fix array syntax: [item1; item2] -> [item1, item2]
+            content = re.sub(r'\[([^\]]*);([^\]]*)\]', r'[\1,\2]', content)
+            
+            # Fix specific patterns that are common
+            patterns = [
+                # Function parameters with semicolons
+                (r'(\w+):\s*(\w+);\s*(\w+):\s*(\w+)', r'\1: \2, \3: \4'),
+                # Object properties with semicolons
+                (r'(\w+):\s*([^,;]+);\s*(\w+):\s*([^,;]+)', r'\1: \2, \3: \4'),
+                # Array elements with semicolons
+                (r'(\d+);\s*(\d+)', r'\1, \2'),
+                # String literals with semicolons
+                (r'"([^"]+)";\s*"([^"]+)"', r'"\1", "\2"'),
+            ]
+            
+            for pattern, replacement in patterns:
+                content = re.sub(pattern, replacement, content)
+            
+            # Only write if content changed
+            if content != original_content:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                fixed_files += 1
+                changes = len(re.findall(r';', original_content)) - len(re.findall(r';', content))
+                total_fixes += changes
+                print(f"Fixed {file_path}: {changes} changes")
+        
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+    
+    print(f"\nFixed {total_fixes} syntax errors in {fixed_files} files")
 
 if __name__ == "__main__":
-    main()
+    fix_syntax_errors()

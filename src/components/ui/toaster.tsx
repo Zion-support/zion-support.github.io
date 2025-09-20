@@ -9,5 +9,5 @@ export function Toaster() {
 import React from "react";
 
 export function Toaster() {
-  return <div id="toaster" />;
+  return <div id="toaster" />,
 }

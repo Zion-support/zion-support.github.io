@@ -1,5 +1,5 @@
-import React, { useState; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import React, { useState, useEffect } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { EyeIcon; 
   EyeSlashIcon, 
   SpeakerWaveIcon; 
@@ -10,28 +10,18 @@ import { EyeIcon;
   ArrowUpIcon,
   ArrowDownIcon;
   MagnifyingGlassIcon,
-  CursorArrowRaysIcon;
+  CursorArrowRaysIcon,
 } from "@heroicons/react/24/outline, ";
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-    fontSize: number;
-    reducedMotion: boolean;
-    screenReader: boolean;
-    keyboardNavigation: boolean;
-    focusIndicator: boolean;
-    colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";
+  highContrast: boolean, fontSize: number, reducedMotion: boolean, screenReader: boolean, keyboardNavigation: boolean, focusIndicator: boolean, colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia",
 }
 
 const EnhancedAccessibility: React.FC = () => {
-  const [isOpen; setIsOpen] = useState(false);
-  const [settings; setSettings] = useState<AccessibilitySettings>({
-    highContrast: false;
-    fontSize: 16;
-    reducedMotion: false;
-    screenReader: false;
-    keyboardNavigation: false;
-    focusIndicator: true;
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false, fontSize: 16, reducedMotion: false, screenReader: false, keyboardNavigation: false,
+    focusIndicator: true,
     colorBlindness: "none"
   });
     useEffect(() => {
@@ -39,7 +29,7 @@ const EnhancedAccessibility: React.FC = () => {
     const savedSettings = localStorage.getItem("accessibility-settings");
     if (savedSettings) {
       try {
-        const parsed = JSON.parse(savedSettings);
+        const parsed = JSON.parse(savedSettings),
         setSettings(prev => ({ ...prev, ...parsed }));
         applySettings({ ...settings, ...parsed });
       } catch (error) {
@@ -50,7 +40,7 @@ const EnhancedAccessibility: React.FC = () => {
     // Check for user preferences;
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) {
-      setSettings(prev => ({ ...prev; reducedMotion: true }));
+      setSettings(prev => ({ ...prev, reducedMotion: true }));
      }
   }, []);
 
@@ -58,9 +48,9 @@ const EnhancedAccessibility: React.FC = () => {
     const root = document.documentElement;
     // High contrast mode;
     if (newSettings.highContrast) {
-      root.classList.add("high-contrast");
+      root.classList.add("high-contrast"),
     } else {
-      root.classList.remove("high-contrast");
+      root.classList.remove("high-contrast"),
     }
 
     // Font size;
@@ -68,56 +58,51 @@ const EnhancedAccessibility: React.FC = () => {
 
     // Reduced motion;
     if (newSettings.reducedMotion) {
-      root.classList.add("reduced-motion");
+      root.classList.add("reduced-motion"),
     } else {
-      root.classList.remove("reduced-motion");
+      root.classList.remove("reduced-motion"),
     }
 
     // Color blindness filters;
     root.classList.remove("protanopia", "deuteranopia", "tritanopia");
     if (newSettings.colorBlindness !== "none") {
-      root.classList.add(newSettings.colorBlindness);
+      root.classList.add(newSettings.colorBlindness),
     }
 
     // Focus indicators;
     if (newSettings.focusIndicator) {
-      root.classList.add("show-focus-indicator");
+      root.classList.add("show-focus-indicator"),
     } else {
-      root.classList.remove("show-focus-indicator");
+      root.classList.remove("show-focus-indicator"),
     }
 
     // Save to localStorage;
     localStorage.setItem("accessibility-settings", JSON.stringify(newSettings));
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings; value: any) => {
+  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
   };
 
   const toggleHighContrast = () => {
-    updateSetting("highContrast", !settings.highContrast);
+    updateSetting("highContrast", !settings.highContrast),
   };
 
   const increaseFontSize = () => {
-    const newSize = Math.min(settings.fontSize + 2; 24);
-    updateSetting("fontSize", newSize);
+    const newSize = Math.min(settings.fontSize + 2, 24);
+    updateSetting("fontSize", newSize),
   };
 
   const decreaseFontSize = () => {
-    const newSize = Math.max(settings.fontSize - 2; 12);
-    updateSetting("fontSize", newSize);
+    const newSize = Math.max(settings.fontSize - 2, 12);
+    updateSetting("fontSize", newSize),
   };
 
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
-      highContrast: false;
-      fontSize: 16;
-      reducedMotion: false;
-      screenReader: false;
-      keyboardNavigation: false;
-      focusIndicator: true;
+      highContrast: false, fontSize: 16, reducedMotion: false, screenReader: false, keyboardNavigation: false, focusIndicator: true,
       colorBlindness: "none"
     };
     setSettings(defaultSettings);
@@ -129,7 +114,7 @@ const EnhancedAccessibility: React.FC = () => {
       const utterance = new SpeechSynthesisUtterance(text);
     utterance.rate = 0.9;
       utterance.pitch = 1;
-      speechSynthesis.speak(utterance);
+      speechSynthesis.speak(utterance),
     }
   };
 
@@ -140,7 +125,7 @@ const EnhancedAccessibility: React.FC = () => {
   return (
     <>
       {/* Accessibility Toggle Button */}
-      <button;
+      <button,
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50"
         aria-label="Toggle accessibility settings"
@@ -154,9 +139,9 @@ const EnhancedAccessibility: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div;
-            initial={{ opacity: 0; x: -20 }}
-            animate={{ opacity: 1; x: 0 }}
-            exit={{ opacity: 0; x: -20 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
             id="accessibility-panel"
             className="fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 max-h-96 overflow-y-auto"
@@ -168,7 +153,7 @@ const EnhancedAccessibility: React.FC = () => {
                 <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900 dark:text-white">
                   Accessibility Settings;
                 </h2>
-                <button;
+                <button,
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
                   aria-label="Close accessibility panel"
@@ -390,7 +375,7 @@ const EnhancedAccessibility: React.FC = () => {
 
       {/* Backdrop */}
       {isOpen && (
-        <div;
+        <div,
           className="fixed inset-0 z-40"
           onClick={() => setIsOpen(false)}
           aria-hidden="true"

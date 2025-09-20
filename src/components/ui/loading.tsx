@@ -5,19 +5,18 @@ interface LoadingProps {
   size?: "sm" | "md" | "lg" | "xl";
   variant?: "spinner" | "dots" | "pulse" | "skeleton";
   className?: string;
-  text?: string;
+  text?: string,
 }
 
 export function Loading({ 
   size = "md", 
   variant = "spinner", 
-  className;
-  text; 
+  className,
+  text, 
 }: LoadingProps) {
   const sizeClasses = {
-    sm: "w-4 h-4";
-    md: "w-6 h-6";
-    lg: "w-8 h-8";
+    sm: "w-4 h-4", md: "w-6 h-6";
+    lg: "w-8 h-8",
     xl: "w-12 h-12"
   };
     const renderSpinner = () => (
@@ -50,7 +49,7 @@ export function Loading({
         return renderPulse();
       case "skeleton":
         return renderSkeleton();
-      default: return renderSpinner();
+      default: return renderSpinner(),
      }
   };
 
@@ -67,7 +66,7 @@ export function Loading({
 // Skeleton loading for content;
 export function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div;
+    <div,
       className={cn("animate-pulse rounded-md bg-zion-slate-light/20", className)}
       {...props}
     />
@@ -84,7 +83,7 @@ export function PageLoading() {
         <p className="text-zion-slate-light">Preparing your experience...</p>
       </div>
     </div>
-  );
+  ),
 }
 
 // Content skeleton loading;
@@ -98,7 +97,7 @@ export function ContentSkeleton() {
         <div className="h-4 bg-zion-slate-light/20 rounded w-4/6"></div>
       </div>
     </div>
-  );
+  ),
 }
 
 // Card skeleton loading;
@@ -112,5 +111,5 @@ export function CardSkeleton() {
       </div>
       <div className="h-10 bg-zion-slate-light/20 rounded w-1/3"></div>
     </div>
-  );
+  ),
 }

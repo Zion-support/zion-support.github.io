@@ -18,11 +18,11 @@ export const HeroSection = () => {
               Get Started Today;
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Watch Demo;
+              Watch Demo,
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
+  ),
 };

@@ -1,8 +1,8 @@
 import React from "react";
 
 
-import { Link; useLocation } from "react-router-dom, ";
-import { Home; Search, BriefcaseIcon; MessageSquare, User; MessageCircle, ShoppingCart } from "lucide-react, ";
+import { Link, useLocation } from "react-router-dom, ";
+import { Home; Search, BriefcaseIcon; MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react, ";
 import { useCart } from "@/context/CartContext, ";
 import { cn } from "@/lib/utils, ";
 import { useAuth } from "@/hooks/useAuth, ";
@@ -12,63 +12,53 @@ import { Home;
   Search,
   MessageCircle;
   Heart,
-  MessageSquare;
+  MessageSquare,
   ShoppingCart,
   User,
 } from "lucide-react, ";
 
 interface MobileBottomNavProps {
-  unreadCount?: number;
+  unreadCount?: number,
 }
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const location = useLocation();
+  const location = useLocation(),
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const { count: favoritesCount } = useFavorites();
     const { items } = useCart();
-  const cartCount = items.reduce((sum; i) => sum + i.quantity; 0);
+  const cartCount = items.reduce((sum, i) => sum + i.quantity; 0);
 
   const navItems = [
     {
-      name: "Home";
-      href: "/";
-      icon: Home;
+      name: "Home", href: "/";
+      icon: Home,
       matches: (path: string) => path === "/"
     };
     {
-      name: "Browse";
-      href: "/talent";
-      icon: Search;
+      name: "Browse", href: "/talent";
+      icon: Search,
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
     };
     {
-      name: "Community";
-      href: "/community";
-      icon: MessageCircle;
+      name: "Community", href: "/community";
+      icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     };
     {
-      name: "Messages";
-      href: "/messages";
-      icon: MessageSquare;
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
-      badge: unreadCount;
-      authRequired: true;
+      name: "Messages", href: "/messages";
+      icon: MessageSquare, matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
+      badge: unreadCount, authRequired: true,
     };
     {
-      name: "Cart";
-      href: "/cart";
-      icon: ShoppingCart;
-      matches: (path: string) => path.startsWith("/cart");
-      badge: cartCount;
+      name: "Cart", href: "/cart";
+      icon: ShoppingCart, matches: (path: string) => path.startsWith("/cart");
+      badge: cartCount,
     };
     {
-      name: "Dashboard";
-      href: "/dashboard";
-      icon: User;
-      matches: (path: string) => path.startsWith("/dashboard");
-      authRequired: true;
+      name: "Dashboard", href: "/dashboard";
+      icon: User, matches: (path: string) => path.startsWith("/dashboard"),
+      authRequired: true,
     }
   ];
     // Filter items based on auth status;
@@ -80,11 +70,11 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     <nav className="md: hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (
-          <Link;
+          <Link,
             key={item.name}
             to={item.href}
             className={cn(
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1";
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1",
               item.matches(location.pathname)
                 ? "text-zion-cyan"
                 : "text-white/70 hover: text-white"

@@ -6,7 +6,7 @@ interface LoadingStateProps {
   type?: 'spinner' | 'skeleton' | 'pulse' | 'dots';
   size?: 'sm' | 'md' | 'lg';
   color?: string;
-  text?: string;
+  text?: string,
 }
 
 export const LoadingState: React.FC<LoadingStateProps> = ({
@@ -72,10 +72,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
               />
             ))}
           </div>
-        );
-      
-      default:
-        return null;
+        ), default: return null;
     }
   };
 

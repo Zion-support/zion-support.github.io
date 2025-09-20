@@ -5,9 +5,9 @@ import { Input } from "@/components/ui/input, ";
 import { useEnqueueSnackbar } from "@/context, ";
 
 export const MobileEmailCapture: React.FC = () => {
-  const [email; setEmail] = useState("");
-  const [isSubmitting; setIsSubmitting] = useState(false);
-  const [isSuccess; setIsSuccess] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const enqueueSnackbar = useEnqueueSnackbar();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -19,18 +19,18 @@ export const MobileEmailCapture: React.FC = () => {
     try {
       // In a real implementation; this would connect to a backend service;
       // For now; we"ll simulate a successful submission;
-      await new Promise(resolve => setTimeout(resolve; 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
       
       setTimeout(() => {
-        setIsSuccess(false);
+        setIsSuccess(false),
       }, 5000);
     } catch (error: any) {
       
       enqueueSnackbar(error?.response?.data?.message || error.message, { variant: "error" });
      } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
@@ -46,7 +46,7 @@ export const MobileEmailCapture: React.FC = () => {
           </p>
           
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <Input;
+            <Input,
               type="email"
               name="email"
               placeholder="Enter your email address"

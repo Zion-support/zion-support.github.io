@@ -5,54 +5,42 @@ import { StarIcon } from "@heroicons/react/24/solid, ";
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Sarah Johnson";
-      role: "CTO";
-      company: "TechFlow Solutions";
-      content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs significantly.";
-      rating: 5;
+      name: "Sarah Johnson", role: "CTO";
+      company: "TechFlow Solutions", content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs significantly.";
+      rating: 5,
       avatar: "SJ"
     };
     {
-      name: "Michael Chen";
-      role: "VP of Engineering";
-      company: "InnovateCorp";
-      content: "The team"s expertise in cloud migration was exceptional. They completed our transition in half the expected time with zero downtime.";
-      rating: 5;
+      name: "Michael Chen", role: "VP of Engineering";
+      company: "InnovateCorp", content: "The team"s expertise in cloud migration was exceptional. They completed our transition in half the expected time with zero downtime.";
+      rating: 5,
       avatar: "MC"
     };
     {
-      name: "Emily Rodriguez";
-      role: "Director of IT";
-      company: "Global Manufacturing Inc.";
-      content: "Their cybersecurity solutions gave us peace of mind. We"re now SOC 2 compliant and have a robust security posture.";
-      rating: 5;
+      name: "Emily Rodriguez", role: "Director of IT";
+      company: "Global Manufacturing Inc.", content: "Their cybersecurity solutions gave us peace of mind. We"re now SOC 2 compliant and have a robust security posture.";
+      rating: 5,
       avatar: "ER"
     };
     {
-      name: "David Thompson";
-      role: "CEO";
-      company: "StartupXYZ";
-      content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.";
-      rating: 5;
+      name: "David Thompson", role: "CEO";
+      company: "StartupXYZ", content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
+      rating: 5,
       avatar: "DT"
     }
   ];
     const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
+    hidden: { opacity: 0 }, visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.2;
+        staggerChildren: 0.2,
       }
     }
   };
     const itemVariants = {
-    hidden: { y: 20; opacity: 0 };
-    visible: {
-      y: 0;
-      opacity: 1;
-      transition: {
-        duration: 0.5;
+    hidden: { y: 20, opacity: 0 }, visible: {
+      y: 0, opacity: 1, transition: {
+        duration: 0.5,
       }
     }
   };
@@ -66,8 +54,8 @@ export function TestimonialsSection() {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div;
-          initial={{ opacity: 0; y: 20 }}
-          whileInView={{ opacity: 1; y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -89,8 +77,8 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {testimonials.map((testimonial; index) => (
-            <motion.div;
+          {testimonials.map((testimonial, index) => (
+            <motion.div,
               key={index}
               variants={itemVariants}
               className="group"
@@ -98,7 +86,7 @@ export function TestimonialsSection() {
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105">
                 {/* Rating */}
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_; i) => (
+                  {[...Array(testimonial.rating)].map((_, i) => (
                     <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
                   ))}
                 </div>
@@ -125,10 +113,10 @@ export function TestimonialsSection() {
 
         {/* Stats */}
         <motion.div;
-          initial={{ opacity: 0; y: 20 }}
-          whileInView={{ opacity: 1; y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8; delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-16 text-center"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

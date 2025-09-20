@@ -1,38 +1,24 @@
 export interface EmergingTechService {
-  id: string;
-  title: string;
-  description: string;
-  category: "Blockchain" | "IoT" | "Edge Computing" | "5G" | "AR/VR" | "Robotics" | "Quantum Computing" | "Biotechnology" | "Green Tech" | "Space Tech";
-  subcategory: string;
+  id: string, title: string, description: string;
+  category: "Blockchain" | "IoT" | "Edge Computing" | "5G" | "AR/VR" | "Robotics" | "Quantum Computing" | "Biotechnology" | "Green Tech" | "Space Tech", subcategory: string;
   price: {
     monthly?: number;
     yearly?: number;
     oneTime?: number;
-    currency: string;
-    pricingModel: string;
+    currency: string, pricingModel: string,
   };
   currency?: string;
   pricingModel?: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
+  features: string[], benefits: string[];
+  useCases: string[], targetAudience: string[];
   tags?: string[];
   estimatedDelivery?: string;
   supportLevel?: string;
-  marketPrice: string;
-  competitiveAdvantage: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
+  marketPrice: string, competitiveAdvantage: string, contactInfo: {
+    phone: string, email: string, website: string, address: string,
   };
-  rating: number;
-  reviewCount: number;
-  launchDate: string;
-  status: "Active" | "Beta" | "Coming Soon";
-  innovationScore: number;
+  rating: number, reviewCount: number, launchDate: string;
+  status: "Active" | "Beta" | "Coming Soon", innovationScore: number;
 }
 
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
@@ -44,8 +30,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Blockchain",
     subcategory: "Enterprise Solutions",
     price: {
-      monthly: 299;
-      yearly: 2990;
+      monthly: 299,
+      yearly: 2990,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -87,16 +73,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     tags: ["Blockchain", "Enterprise", "Smart Contracts", "DeFi", "Web3"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "24/7 Premium Support",
-    marketPrice: "$299 - $1;999/month",
+    marketPrice: "$299 - $1, 999/month",
     competitiveAdvantage: "Enterprise-grade scalability; regulatory compliance; and seamless integration with existing systems",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/enterprise-blockchain",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.8;
-    reviewCount: 156;
+    rating: 4.8, reviewCount: 156;
     launchDate: "2024-01-01",
     status: "Active",
     innovationScore: 92;
@@ -110,8 +95,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "IoT",
     subcategory: "Platform Solutions",
     price: {
-      monthly: 199;
-      yearly: 1990;
+      monthly: 199, yearly: 1990,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -154,10 +138,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/iot-ecosystem",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.7;
-    reviewCount: 234;
+    rating: 4.7, reviewCount: 234;
     launchDate: "2023-12-01",
     status: "Active",
     innovationScore: 89;
@@ -171,8 +154,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Edge Computing",
     subcategory: "Orchestration Platform",
     price: {
-      monthly: 249;
-      yearly: 2490;
+      monthly: 249, yearly: 2490,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -209,16 +191,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Transportation companies",
       "Content providers"
     ],
-    marketPrice: "$249 - $1;299/month",
+    marketPrice: "$249 - $1, 299/month",
     competitiveAdvantage: "Intelligent workload distribution; edge AI integration; and seamless multi-cloud support",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-computing",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.9;
-    reviewCount: 178;
+    rating: 4.9, reviewCount: 178;
     launchDate: "2024-02-01",
     status: "Active",
     innovationScore: 94;
@@ -232,8 +213,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "5G",
     subcategory: "Network Management",
     price: {
-      monthly: 399;
-      yearly: 3990;
+      monthly: 399, yearly: 3990,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -270,16 +250,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Industrial companies",
       "Technology providers"
     ],
-    marketPrice: "$399 - $2;499/month",
+    marketPrice: "$399 - $2, 499/month",
     competitiveAdvantage: "AI-powered optimization; comprehensive monitoring; and automated network management",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/5g-optimization",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.8;
-    reviewCount: 145;
+    rating: 4.8, reviewCount: 145;
     launchDate: "2024-01-15",
     status: "Active",
     innovationScore: 91;
@@ -293,8 +272,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "AR/VR",
     subcategory: "Enterprise Platform",
     price: {
-      monthly: 179;
-      yearly: 1790;
+      monthly: 179, yearly: 1790,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -337,10 +315,9 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ar-vr-platform",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.6;
-    reviewCount: 189;
+    rating: 4.6, reviewCount: 189;
     launchDate: "2023-11-01",
     status: "Active",
     innovationScore: 88;
@@ -354,9 +331,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Robotics",
     subcategory: "Automation Solutions",
     price: {
-      monthly: 0;
-      yearly: 0;
-      oneTime: 25000;
+      monthly: 0, yearly: 0, oneTime: 25000,
       currency: "$",
       pricingModel: "one-time"
     },
@@ -393,16 +368,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Service industries",
       "Research institutions"
     ],
-    marketPrice: "$25;000 - $100;000",
+    marketPrice: "$25, 000 - $100, 000",
     competitiveAdvantage: "AI-powered intelligence; collaborative capabilities; and comprehensive safety features",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/intelligent-robotics",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.9;
-    reviewCount: 67;
+    rating: 4.9, reviewCount: 67;
     launchDate: "2024-01-01",
     status: "Active",
     innovationScore: 95;
@@ -416,8 +390,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Quantum Computing",
     subcategory: "Simulation Platform",
     price: {
-      monthly: 599;
-      yearly: 5990;
+      monthly: 599, yearly: 5990,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -454,16 +427,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Government agencies",
       "Universities"
     ],
-    marketPrice: "$599 - $3;999/month",
+    marketPrice: "$599 - $3, 999/month",
     competitiveAdvantage: "Advanced simulation capabilities; expert consultation; and comprehensive toolset",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-simulation",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.9;
-    reviewCount: 89;
+    rating: 4.9, reviewCount: 89;
     launchDate: "2024-01-01",
     status: "Active",
     innovationScore: 96;
@@ -477,8 +449,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Biotechnology",
     subcategory: "Research Platform",
     price: {
-      monthly: 449;
-      yearly: 4490;
+      monthly: 449, yearly: 4490,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -515,16 +486,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Agricultural companies",
       "Environmental organizations"
     ],
-    marketPrice: "$449 - $2;999/month",
+    marketPrice: "$449 - $2, 999/month",
     competitiveAdvantage: "Advanced AI algorithms; comprehensive research tools; and regulatory compliance features",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-biotech",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.8;
-    reviewCount: 123;
+    rating: 4.8, reviewCount: 123;
     launchDate: "2023-12-01",
     status: "Active",
     innovationScore: 93;
@@ -538,8 +508,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Green Tech",
     subcategory: "Sustainability Solutions",
     price: {
-      monthly: 199;
-      yearly: 1990;
+      monthly: 199, yearly: 1990,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -576,16 +545,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Manufacturing companies",
       "Real estate developers"
     ],
-    marketPrice: "$199 - $1;299/month",
+    marketPrice: "$199 - $1, 299/month",
     competitiveAdvantage: "Comprehensive sustainability platform; regulatory compliance; and measurable impact tracking",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/sustainable-tech",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.7;
-    reviewCount: 167;
+    rating: 4.7, reviewCount: 167;
     launchDate: "2024-01-01",
     status: "Active",
     innovationScore: 90;
@@ -599,8 +567,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Space Tech",
     subcategory: "Innovation Platform",
     price: {
-      monthly: 799;
-      yearly: 7990;
+      monthly: 799, yearly: 7990,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -637,16 +604,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Research institutions",
       "Telecommunications companies"
     ],
-    marketPrice: "$799 - $5;999/month",
+    marketPrice: "$799 - $5, 999/month",
     competitiveAdvantage: "Comprehensive space technology platform; expert consultation; and advanced analytics capabilities",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/space-tech",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.9;
-    reviewCount: 78;
+    rating: 4.9, reviewCount: 78;
     launchDate: "2024-02-01",
     status: "Active",
     innovationScore: 97;
@@ -660,8 +626,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Quantum Computing",
     subcategory: "Machine Learning",
     price: {
-      monthly: 3000;
-      yearly: 30000;
+      monthly: 3000, yearly: 30000,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -701,16 +666,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Technology companies",
       "Government agencies"
     ],
-    marketPrice: "$3;000 - $15;000/month",
+    marketPrice: "$3, 000 - $15, 000/month",
     competitiveAdvantage: "Revolutionary quantum advantage for complex computational problems",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.9;
-    reviewCount: 89;
+    rating: 4.9, reviewCount: 89;
     launchDate: "2024-03-01",
     status: "Active",
     innovationScore: 95;
@@ -723,8 +687,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Space Tech",
     subcategory: "Satellite Management",
     price: {
-      monthly: 2000;
-      yearly: 20000;
+      monthly: 2000, yearly: 20000,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -764,16 +727,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Defense contractors",
       "Technology companies"
     ],
-    marketPrice: "$2;000 - $8;000/month",
+    marketPrice: "$2, 000 - $8, 000/month",
     competitiveAdvantage: "Comprehensive space technology platform with real-time satellite management",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.8;
-    reviewCount: 67;
+    rating: 4.8, reviewCount: 67;
     launchDate: "2024-02-15",
     status: "Active",
     innovationScore: 93;
@@ -786,8 +748,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Biotechnology",
     subcategory: "Brain-Computer Interface",
     price: {
-      monthly: 2500;
-      yearly: 25000;
+      monthly: 2500, yearly: 25000,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -827,16 +788,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Medical device manufacturers",
       "Academic researchers"
     ],
-    marketPrice: "$2;500 - $10;000/month",
+    marketPrice: "$2, 500 - $10, 000/month",
     competitiveAdvantage: "Advanced brain-computer interface technology for healthcare and gaming",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.7;
-    reviewCount: 45;
+    rating: 4.7, reviewCount: 45;
     launchDate: "2024-01-20",
     status: "Beta",
     innovationScore: 96;
@@ -849,8 +809,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Robotics",
     subcategory: "Vehicle Development",
     price: {
-      monthly: 1800;
-      yearly: 18000;
+      monthly: 1800, yearly: 18000,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -890,16 +849,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Research institutions",
       "Startups"
     ],
-    marketPrice: "$1;800 - $6;000/month",
+    marketPrice: "$1, 800 - $6, 000/month",
     competitiveAdvantage: "Comprehensive autonomous vehicle development platform with advanced AI",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.6;
-    reviewCount: 78;
+    rating: 4.6, reviewCount: 78;
     launchDate: "2024-02-01",
     status: "Active",
     innovationScore: 94;
@@ -912,8 +870,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Quantum Computing",
     subcategory: "Quantum Internet",
     price: {
-      monthly: 2200;
-      yearly: 22000;
+      monthly: 2200, yearly: 22000,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -953,16 +910,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Research institutions",
       "Defense contractors"
     ],
-    marketPrice: "$2;200 - $8;000/month",
+    marketPrice: "$2, 200 - $8, 000/month",
     competitiveAdvantage: "Next-generation quantum internet with ultra-secure communication",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.9;
-    reviewCount: 34;
+    rating: 4.9, reviewCount: 34;
     launchDate: "2024-01-10",
     status: "Beta",
     innovationScore: 97;
@@ -975,8 +931,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Biotechnology",
     subcategory: "Consciousness Simulation",
     price: {
-      monthly: 1600;
-      yearly: 16000;
+      monthly: 1600, yearly: 16000,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -1016,16 +971,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Academic institutions",
       "Research organizations"
     ],
-    marketPrice: "$1;600 - $5;000/month",
+    marketPrice: "$1, 600 - $5, 000/month",
     competitiveAdvantage: "Revolutionary AI consciousness research platform",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.8;
-    reviewCount: 23;
+    rating: 4.8, reviewCount: 23;
     launchDate: "2024-01-05",
     status: "Beta",
     innovationScore: 98;
@@ -1038,8 +992,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Quantum Computing",
     subcategory: "Financial Modeling",
     price: {
-      monthly: 2800;
-      yearly: 28000;
+      monthly: 2800, yearly: 28000,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -1079,16 +1032,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Investment advisors",
       "Financial institutions"
     ],
-    marketPrice: "$2;800 - $12;000/month",
+    marketPrice: "$2, 800 - $12, 000/month",
     competitiveAdvantage: "Quantum advantage in financial modeling and risk assessment",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.9;
-    reviewCount: 56;
+    rating: 4.9, reviewCount: 56;
     launchDate: "2024-02-20",
     status: "Active",
     innovationScore: 95;
@@ -1101,8 +1053,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Robotics",
     subcategory: "Manufacturing",
     price: {
-      monthly: 1500;
-      yearly: 15000;
+      monthly: 1500, yearly: 15000,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -1142,16 +1093,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Production engineers",
       "Business owners"
     ],
-    marketPrice: "$1;500 - $5;000/month",
+    marketPrice: "$1, 500 - $5, 000/month",
     competitiveAdvantage: "Comprehensive autonomous manufacturing with Industry 4.0 integration",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.7;
-    reviewCount: 89;
+    rating: 4.7, reviewCount: 89;
     launchDate: "2024-01-15",
     status: "Active",
     innovationScore: 93;
@@ -1164,8 +1114,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     category: "Quantum Computing",
     subcategory: "Drug Discovery",
     price: {
-      monthly: 3200;
-      yearly: 32000;
+      monthly: 3200, yearly: 32000,
       currency: "$",
       pricingModel: "subscription"
     },
@@ -1205,16 +1154,15 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       "Biotechnology companies",
       "Academic researchers"
     ],
-    marketPrice: "$3;200 - $15;000/month",
+    marketPrice: "$3, 200 - $15, 000/month",
     competitiveAdvantage: "Revolutionary quantum acceleration in drug discovery",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008; Middletown DE 19709"
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    rating: 4.9;
-    reviewCount: 67;
+    rating: 4.9, reviewCount: 67;
     launchDate: "2024-02-25",
     status: "Active",
     innovationScore: 96;
@@ -1222,16 +1170,16 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
 ];
 
 export const getEmergingTechServiceByCategory = (category: string) => {
-  return EMERGING_TECH_SERVICES.filter(service => service.category === category);
+  return EMERGING_TECH_SERVICES.filter(service => service.category === category),
 };
 
 export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
-  return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory);
+  return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory),
 };
 
 export const getFeaturedEmergingTechServices = () => {
   // Return first 8 services since rating property doesn"t exist;
-  return EMERGING_TECH_SERVICES.slice(0; 8);
+  return EMERGING_TECH_SERVICES.slice(0, 8),
 };
 
 export const getServicesByInnovationScore = (minScore: number) => {

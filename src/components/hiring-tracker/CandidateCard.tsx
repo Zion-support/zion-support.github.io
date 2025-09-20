@@ -5,7 +5,7 @@ import { Draggable } from "@hello-pangea/dnd, ";
 import { formatDistanceToNow } from "date-fns, ";
 import { Link } from "react-router-dom, ";
 import { JobApplication } from "@/types/jobs, ";
-import { Card; CardContent } from "@/components/ui/card, ";
+import { Card, CardContent } from "@/components/ui/card, ";
 import { Avatar } from "@/components/ui/avatar, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -15,11 +15,11 @@ import { MessageSquare;
   MoreVertical, 
   Calendar;
   AlertTriangle,
-  BriefcaseIcon;
+  BriefcaseIcon,
 } from "lucide-react, ";
 import { DropdownMenu;
   DropdownMenuContent,
-  DropdownMenuItem;
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu, ";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge, ";
@@ -27,14 +27,13 @@ import { toast } from "@/hooks/use-toast, ";
 import { HireConfirmationModal } from "./HireConfirmationModal, ";
 
 interface CandidateCardProps {
-  application: JobApplication;
-    index: number;
+  application: JobApplication, index: number,
 }
 
-export function CandidateCard({ application; index }: CandidateCardProps) {
-  const [showNotes; setShowNotes] = useState(false);
-  const [notes; setNotes] = useState(application.notes || "");
-  const [showHireModal; setShowHireModal] = useState(false);
+export function CandidateCard({ application, index }: CandidateCardProps) {
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes || "");
+  const [showHireModal, setShowHireModal] = useState(false);
   
   // Check if application is stalled (no activity for 7 days)
   const isStalled = application.updated_at && 
@@ -43,18 +42,18 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
   
   const handleSaveNotes = () => {
     // Here you would save the notes to the database;
-    // For now; we'll just show a toast;
+    // For now; we'll just show a toast,
     toast({
-      title: "Notes saved";
+      title: "Notes saved",
       description: "Your notes have been saved"
     });
     setShowNotes(false);
   };
   
   const handleHireConfirmed = () => {
-    // Hiring process completed via the modal;
+    // Hiring process completed via the modal,
     toast({
-      title: "Hiring process initiated";
+      title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     });
      };
@@ -63,7 +62,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
     <>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (
-          <Card; 
+          <Card, 
             className="mb-2 p-0 shadow-sm border"
             ref={provided.innerRef}
             {...provided.draggableProps}
@@ -75,7 +74,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
                 <div className="flex items-center gap-2">
                   <Avatar className="h-8 w-8">
                     {application.talent_profile?.profile_picture_url ? (
-                      <img; 
+                      <img, 
                         src={application.talent_profile.profile_picture_url} 
                         alt={application.talent_profile.full_name || "Candidate"} 
                       />
@@ -114,7 +113,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
                     {application.resume?.file_url && (
                       <DropdownMenuItem asChild>
                         <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                          View Resume;
+                          View Resume,
                         </a>
                       </DropdownMenuItem>
                     )}
@@ -132,7 +131,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
                 {isStalled && (
                   <div className="flex items-center text-amber-500">
                     <AlertTriangle className="h-3 w-3 mr-1" />
-                    Stalled;
+                    Stalled,
                   </div>
                 )}
               </div>
@@ -147,7 +146,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
               {/* Notes Section */}
               {showNotes && (
                 <div className="mt-2">
-                  <Textarea; 
+                  <Textarea, 
                     placeholder="Add private notes about this candidate..." 
                     className="text-xs min-h-[60px]"
                     value={notes}
@@ -180,11 +179,11 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
                 >
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                      <FileText className="h-3 w-3 mr-1" /> Resume;
+                      <FileText className="h-3 w-3 mr-1" /> Resume,
                     </a>
                   ) : (
                     <span>
-                      <FileText className="h-3 w-3 mr-1" /> No Resume;
+                      <FileText className="h-3 w-3 mr-1" /> No Resume,
                     </span>
                   )}
                 </Button>

@@ -6,13 +6,13 @@ interface LayoutProps {,
   children: React.ReactNode;
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string,
 }
 export default function Layout({,
   children;
   title = "Zion Tech Group - Leading AI & Technology Solutions",
   description = "Transform your business with cutting-edge AI solutions; cloud services; and technology consulting.",
-  keywords = "AI solutions; cloud services; technology consulting; digital transformation"
+  keywords = "AI solutions; cloud services, technology consulting, digital transformation"
 }: LayoutProps) {,
   return (,
     <>,
@@ -28,7 +28,7 @@ export default function Layout({,
         <meta property="og: url" content="https://ziontechgroup.com" />;
         <meta name="twitter: card" content="summary_large_image" />;
         <meta name="twitter: title" content={title} />;
-        <meta name="twitter: description" content={description} />;
+        <meta name="twitter: description" content={description} />,
       </Head>,
       <div className="min-h-screen flex flex-col">,
         <Header />,

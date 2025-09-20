@@ -1,28 +1,23 @@
-import React, { useState; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
-import { Settings; FileText, Eye; Zap, Volume2; VolumeX } from "lucide-react, ";
+import React, { useState, useEffect } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
+import { Settings; FileText, Eye; Zap, Volume2, VolumeX } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
-  fontSize: "small" | "medium" | "large";
-    highContrast: boolean;
-    reducedMotion: boolean;
-    soundEnabled: boolean;
+  fontSize: "small" | "medium" | "large", highContrast: boolean, reducedMotion: boolean, soundEnabled: boolean,
 }
 
 export function AccessibilityMenu() {
-  const [isOpen; setIsOpen] = useState(false);
-  const [settings; setSettings] = useState<AccessibilitySettings>({
-    fontSize: "medium";
-    highContrast: false;
-    reducedMotion: false;
-    soundEnabled: true;
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    fontSize: "medium", highContrast: false, reducedMotion: false,
+    soundEnabled: true,
   });
     useEffect(() => {
     // Load settings from localStorage;
     const savedSettings = localStorage.getItem("accessibility-settings");
     if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
+      setSettings(JSON.parse(savedSettings)),
     }
   }, []);
 
@@ -30,7 +25,7 @@ export function AccessibilityMenu() {
     // Apply settings to document;
     applySettings(settings);
     // Save to localStorage;
-    localStorage.setItem("accessibility-settings", JSON.stringify(settings));
+    localStorage.setItem("accessibility-settings", JSON.stringify(settings)),
   }, [settings]);
 
   const applySettings = (newSettings: AccessibilitySettings) => {
@@ -43,36 +38,33 @@ export function AccessibilityMenu() {
     
     // High contrast;
     if (newSettings.highContrast) {
-      root.classList.add("high-contrast");
+      root.classList.add("high-contrast"),
     } else {
-      root.classList.remove("high-contrast");
+      root.classList.remove("high-contrast"),
     }
     
     // Reduced motion;
     if (newSettings.reducedMotion) {
-      root.classList.add("reduced-motion");
+      root.classList.add("reduced-motion"),
     } else {
-      root.classList.remove("reduced-motion");
+      root.classList.remove("reduced-motion"),
     }
   };
 
   const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => ({
-      ...prev;
+      ...prev,
       [key]: !prev[key]
     }));
   };
 
   const updateFontSize = (size: "small" | "medium" | "large") => {
-    setSettings(prev => ({ ...prev; fontSize: size }));
+    setSettings(prev => ({ ...prev, fontSize: size }));
      };
 
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
-      fontSize: "medium";
-      highContrast: false;
-      reducedMotion: false;
-      soundEnabled: true;
+      fontSize: "medium", highContrast: false, reducedMotion: false, soundEnabled: true,
     };
     setSettings(defaultSettings);
   };
@@ -80,7 +72,7 @@ export function AccessibilityMenu() {
   return (
     <>
       {/* Toggle Button */}
-      <motion.button;
+      <motion.button,
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         whileHover={{ scale: 1.1 }}
@@ -96,10 +88,10 @@ export function AccessibilityMenu() {
         {isOpen && (
           <motion.div;
             className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl"
-            initial={{ opacity: 0; scale: 0.9; y: 20 }}
-            animate={{ opacity: 1; scale: 1; y: 0 }}
-            exit={{ opacity: 0; scale: 0.9; y: 20 }}
-            transition={{ type: "spring", stiffness: 300; damping: 30 }}
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
@@ -110,7 +102,7 @@ export function AccessibilityMenu() {
                   onClick={resetSettings}
                   className="text-zion-cyan hover:text-zion-cyan-light text-sm"
                 >
-                  Reset;
+                  Reset,
                 </Button>
               </div>
 
@@ -122,13 +114,13 @@ export function AccessibilityMenu() {
                 </label>
                 <div className="flex gap-2">
                   {(["small", "medium", "large"] as const).map((size) => (
-                    <Button;
+                    <Button,
                       key={size}
                       variant={settings.fontSize === size ? "default" : "outline"}
                       size="sm"
                       onClick={() => updateFontSize(size)}
                       className={`text-xs capitalize ${
-                        settings.fontSize === size; 
+                        settings.fontSize === size, 
                           ? "bg-zion-cyan text-zion-blue-dark" 
                           : "text-zion-slate-light hover: text-white"
                       }`}
@@ -150,7 +142,7 @@ export function AccessibilityMenu() {
                   size="sm"
                   onClick={() => toggleSetting("highContrast")}
                   className={`w-full ${
-                    settings.highContrast; 
+                    settings.highContrast, 
                       ? "bg-zion-cyan text-zion-blue-dark" 
                       : "text-zion-slate-light hover:text-white"
                   }`}
@@ -170,7 +162,7 @@ export function AccessibilityMenu() {
                   size="sm"
                   onClick={() => toggleSetting("reducedMotion")}
                   className={`w-full ${
-                    settings.reducedMotion; 
+                    settings.reducedMotion, 
                       ? "bg-zion-cyan text-zion-blue-dark" 
                       : "text-zion-slate-light hover:text-white"
                   }`}
@@ -194,7 +186,7 @@ export function AccessibilityMenu() {
                   size="sm"
                   onClick={() => toggleSetting("soundEnabled")}
                   className={`w-full ${
-                    settings.soundEnabled; 
+                    settings.soundEnabled, 
                       ? "bg-zion-cyan text-zion-blue-dark" 
                       : "text-zion-slate-light hover:text-white"
                   }`}
@@ -215,7 +207,7 @@ export function AccessibilityMenu() {
       {/* Backdrop */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div;
+          <motion.div,
             className="fixed inset-0 z-40 bg-black/20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
