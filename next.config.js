@@ -3,10 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   output: 'export',
-<<<<<<< HEAD
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
-=======
->>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
   
   // Performance optimizations
   compress: true,
@@ -18,7 +15,6 @@ const nextConfig = {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
   },
-<<<<<<< HEAD
   
   // ESLint configuration
   eslint: {
@@ -63,15 +59,10 @@ const nextConfig = {
   },
   
   // Experimental features for performance
-=======
-
-  // Experimental features
->>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
   },
-<<<<<<< HEAD
   
   // Security headers
   async headers() {
@@ -102,8 +93,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig
-=======
-};
-
-module.exports = nextConfig;
->>>>>>> 3354b621683b5dbd53991e6ca60f957ffccef787
