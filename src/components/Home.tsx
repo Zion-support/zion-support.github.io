@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo, lazy, Suspense } from 'react';
+import PricingSection from './PricingSection';
+import NewsletterSignup from './NewsletterSignup';
 
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -246,6 +248,9 @@ const Home: React.FC = () => {
             </div>
           </section>
 
+          {/* Pricing Section */}
+          <PricingSection />
+
           {/* Testimonials Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
@@ -294,6 +299,9 @@ const Home: React.FC = () => {
               </div>
             </div>
           </section>
+
+          {/* Newsletter Signup */}
+          <NewsletterSignup />
 
           {/* CTA Section */}
           <section className="py-20 px-4">

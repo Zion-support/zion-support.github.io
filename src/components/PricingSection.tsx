@@ -1,89 +1,117 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-const pricingTiers = [
-  {
-    name: "Starter",
-    price: "$99",
-    period: "/month",
-    description: "Perfect for small businesses and startups",
-    features: [
-      "Basic AI Services",
-      "Email Support",
-      "5GB Storage",
-      "Basic Analytics",
-      "Mobile App Access"
-    ],
-    popular: false,
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    name: "Professional",
-    price: "$299",
-    period: "/month",
-    description: "Ideal for growing businesses",
-    features: [
-      "Advanced AI Services",
-      "Priority Support",
-      "50GB Storage",
-      "Advanced Analytics",
-      "API Access",
-      "Custom Integrations",
-      "Team Collaboration"
-    ],
-    popular: true,
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    name: "Enterprise",
-    price: "$999",
-    period: "/month",
-    description: "For large organizations",
-    features: [
-      "Full AI Suite",
-      "24/7 Dedicated Support",
-      "Unlimited Storage",
-      "Custom Analytics",
-      "White-label Solutions",
-      "Advanced Security",
-      "Custom Development",
-      "SLA Guarantee"
-    ],
-    popular: false,
-    color: "from-green-500 to-emerald-500"
-  }
-];
+interface PricingTier {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  gradient: string;
+}
 
-export function PricingSection() {
+const PricingSection: React.FC = () => {
+  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');
+
+  const pricingTiers: PricingTier[] = [
+    {
+      name: "Starter",
+      price: billingPeriod === 'monthly' ? "$99" : "$999",
+      period: billingPeriod === 'monthly' ? "/month" : "/year",
+      description: "Perfect for small businesses getting started with AI",
+      features: [
+        "Basic AI consultation",
+        "Up to 5 hours of support",
+        "Email support",
+        "Basic analytics dashboard",
+        "Monthly progress reports"
+      ],
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Professional",
+      price: billingPeriod === 'monthly' ? "$299" : "$2,999",
+      period: billingPeriod === 'monthly' ? "/month" : "/year",
+      description: "Ideal for growing companies with advanced needs",
+      features: [
+        "Advanced AI implementation",
+        "Up to 20 hours of support",
+        "Priority email & phone support",
+        "Advanced analytics & reporting",
+        "Custom integrations",
+        "Quarterly strategy sessions",
+        "Performance optimization"
+      ],
+      popular: true,
+      gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Tailored solutions for large organizations",
+      features: [
+        "Custom AI solutions",
+        "Unlimited support hours",
+        "Dedicated account manager",
+        "24/7 priority support",
+        "Custom analytics platform",
+        "White-label solutions",
+        "On-site training",
+        "SLA guarantees"
+      ],
+      gradient: "from-orange-500 to-red-500"
+    }
+  ];
+
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Transparent Pricing
+    <section className="py-20 px-4 bg-gray-900">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Choose Your Plan
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Flexible pricing options designed to scale with your business.
-            Start small and grow with us.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Flexible pricing options designed to scale with your business needs
           </p>
-        </motion.div>
+          
+          {/* Billing Toggle */}
+          <div className="inline-flex bg-gray-800 rounded-lg p-1 mb-8">
+            <button
+              onClick={() => setBillingPeriod('monthly')}
+              className={`px-6 py-2 rounded-md font-medium transition-all duration-300 ${
+                billingPeriod === 'monthly'
+                  ? 'bg-purple-600 text-white'
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              Monthly
+            </button>
+            <button
+              onClick={() => setBillingPeriod('yearly')}
+              className={`px-6 py-2 rounded-md font-medium transition-all duration-300 ${
+                billingPeriod === 'yearly'
+                  ? 'bg-purple-600 text-white'
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              Yearly
+              <span className="ml-2 text-xs bg-green-500 text-white px-2 py-1 rounded-full">
+                Save 20%
+              </span>
+            </button>
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pricingTiers.map((tier, index) => (
-            <motion.div
+            <div
               key={tier.name}
-              className={`relative ${tier.popular ? 'scale-105' : ''}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
+                tier.popular
+                  ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'
+                  : 'border-gray-700/50 hover:border-purple-500/30'
+              }`}
             >
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -93,60 +121,49 @@ export function PricingSection() {
                 </div>
               )}
               
-              <div className={`bg-slate-800 border-2 ${tier.popular ? 'border-purple-500' : 'border-slate-700'} rounded-2xl p-8 h-full relative overflow-hidden`}>
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-slate-700 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-                
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <p className="text-gray-400 text-sm mb-6">{tier.description}</p>
-                  
-                  <div className="mb-8">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
-                    <span className="text-gray-400">{tier.period}</span>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3">
-                        <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                          <span className="text-white text-xs">✓</span>
-                        </div>
-                        <span className="text-gray-300 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link
-                    to="/contact"
-                    className={`w-full py-3 px-6 bg-gradient-to-r ${tier.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 text-center block`}
-                  >
-                    Get Started
-                  </Link>
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-white">{tier.price}</span>
+                  <span className="text-gray-400">{tier.period}</span>
                 </div>
+                <p className="text-gray-300">{tier.description}</p>
               </div>
-            </motion.div>
+
+              <ul className="space-y-4 mb-8">
+                {tier.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-gray-300">
+                    <div className={`w-5 h-5 bg-gradient-to-r ${tier.gradient} rounded-full mr-3 flex-shrink-0`}></div>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  tier.popular
+                    ? `bg-gradient-to-r ${tier.gradient} text-white hover:shadow-lg hover:shadow-purple-500/25`
+                    : 'bg-gray-700 text-white hover:bg-gray-600 border border-gray-600'
+                }`}
+              >
+                {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+              </button>
+            </div>
           ))}
         </div>
 
-        <motion.div 
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <p className="text-gray-400 mb-6">
-            Need a custom solution? Contact us for a personalized quote.
+        {/* Additional Info */}
+        <div className="text-center mt-16">
+          <p className="text-gray-400 mb-4">
+            All plans include 30-day money-back guarantee
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
-          >
-            Contact Sales Team
-            <span className="text-sm">→</span>
-          </Link>
-        </motion.div>
+          <p className="text-gray-500 text-sm">
+            Need a custom solution? <span className="text-purple-400 cursor-pointer hover:underline">Contact our sales team</span>
+          </p>
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default PricingSection;
