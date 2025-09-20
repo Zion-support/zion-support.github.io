@@ -7,7 +7,6 @@ interface AppStoreButtonsProps {className?: string;
 appStoreUrl?: string;
 googlePlayUrl?: string;
 }
-<<<<<<< HEAD
   onAppStoreClick?: () => void;}
 import React from "react",
 import { AppleGithubIcon } from 'lucide-react';
@@ -19,7 +18,5 @@ interface AppStoreButtonsProps {
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void}
-=======
 onAppStoreClick?: () => void;}
 onGooglePlayClick?: () => void}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

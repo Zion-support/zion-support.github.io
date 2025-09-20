@@ -62,8 +62,7 @@ cons, t categorie, s = [
     colo, r: "from-zion-purple-light to-zion-purple",
         gradien, t: "from-zion-purple-light/20 to-zion-purple/20",
     feature, s: ["Lates, t Tec, h", "A, I Solution, s", "Futur, e-Read, y"],
-        stat, s: "100+ Innovations"},
-];
+        stat, s: "100+ Innovations"}];
 const specialServices = [
     {
         tit, l, e: "I, T Onsit, e Service, s",

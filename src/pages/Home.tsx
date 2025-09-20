@@ -6,7 +6,6 @@ name: string;
 import React from "react";
 import { Link } from "react-router-dom";
 const Home: React.FC = () => {
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -124,7 +123,6 @@ export default function Home() {
     </div>
   );
 }
-=======
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
 {/* Hero Section */}
@@ -236,4 +234,3 @@ Start Your Journey Today;
 );
 }
 export default Home;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

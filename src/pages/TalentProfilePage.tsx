@@ -68,8 +68,7 @@ onClose={() => setIsMessageModalOpen(false)}
 </>;
 )
 }, [error])
-return,
-}setIsHireModalOpen (true)
+return}setIsHireModalOpen (true)
 }
 const handleMessageTalent: any = () => {if (!isAuthenticated) {
 toast ({
@@ -121,13 +120,12 @@ Message;
 <HireRequestModal;
 talent = {profile}
 isOpen = {isHireModalOpen}
-onClose = {(,) => setIsHireModalOpen(false)}
+onClose = {() => setIsHireModalOpen(false)}
 userDetails = {userProfile}
 />;
 {/* Message Talent Modal */}
 <MessageTalentModal;
 talent = {profile}
-<<<<<<< HEAD
         isOpen = {isMessageModalOpen}
         onClose = {() => setIsMessageModalOpen(false)}      />
     </div>
@@ -144,11 +142,9 @@ export default function TalentProfilePage() {
       </div>
     </div>
   );
-=======
 isOpen = {isMessageModalOpen}
 onClose = {() => setIsMessageModalOpen(false)}      />;
 </div>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

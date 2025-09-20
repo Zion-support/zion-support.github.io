@@ -42,17 +42,14 @@ action: "mailto:kleber@ziontechgroup.com";,
 badge: "Response < 2hrs";,
 color: "#8c15e9"};
 {title: "Office Location";
-<<<<<<< HEAD
 badge: "Response < 2hrs";,
 color: "#8c15e9"};
 {
 title: "Office Location";
 description: "Visit our headquarters for in-person meetings";
 icon: <MapPin className="h-8 w-8 text-zion-cyan" />;
-=======
 description: "Visit our headquarters for in-person meetings";,
 icon: <MapPin className="h-8 w-8 text-zion-cyan" />;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 value: "364 E Main St STE 1008; Middletown DE 19709",
 action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";,
 badge: "Open Mon-Fri";,
@@ -65,12 +62,9 @@ title: "Main Website";
 description: "Explore our complete company portfolio";
 icon: <Globe className="h-8 w-8 text-zion-purple" />;
 value: "ziontechgroup.com";
-<<<<<<< HEAD
 action: "https://ziontechgroup.com";
 badge: "Official Site";
-=======
 action: "https://ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 badge: "Official Site";,
 color: "#8c15e9"}
 ];
@@ -85,7 +79,6 @@ icon: <Users className="h-6 w-6 text-zion-purple" />};
 {label: "Projects Completed";,
 value: "500+";,
 icon: <Shield className="h-6 w-6 text-zion-cyan" />};
-<<<<<<< HEAD
 {label: "Client Satisfaction";
 value: "98%";
 value: "10+";,
@@ -100,9 +93,7 @@ value: "500+";,
 icon: <Shield className="h-6 w-6 text-zion-cyan" />};
 {
 label: "Client Satisfaction";
-=======
 {label: "Client Satisfaction";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 value: "98%";,
 icon: <Zap className="h-6 w-6 text-zion-purple" />}
 ];

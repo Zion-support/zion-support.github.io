@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
 unobserve: jest.fn()
-  disconnect: jest.fn(),}));}));
+  disconnect: jest.fn()}));}));
 // Mock window.matchMedia,
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

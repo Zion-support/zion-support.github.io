@@ -82,12 +82,9 @@ targetAudience: ["Crypto investors", "DeFi protocols", "Financial institutions",
 tags: ["DeFi", "Yield Farming", "Liquidity", "Smart Contracts", "Crypto", "Trading"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/defi-pro-suite";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/defi-pro-suite";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;200-5;000/month",
@@ -113,17 +110,14 @@ smartContractSupport: true;,
 crossChainCompatibility: true;
 };
 {id: 2;
-<<<<<<< HEAD
 smartContractSupport: true;,
 crossChainCompatibility: true;};
 {
 id: 2;
 name: "NFT Studio Pro";
 category: "NFT & Digital Assets";
-=======
 name: "NFT Studio Pro";,
 category: "NFT & Digital Assets";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Complete NFT creation; management; and marketplace platform with AI-powered generation and blockchain verification",
 pricing: "Professional";
 price: 800;,
@@ -150,12 +144,9 @@ targetAudience: ["Artists", "Brands", "Gaming companies", "Content creators", "C
 tags: ["NFT", "Digital Assets", "Blockchain", "AI Generation", "Marketplace", "Creators"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/nft-studio-pro";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/nft-studio-pro";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$800-3;000/month",
@@ -181,17 +172,14 @@ smartContractSupport: true;,
 crossChainCompatibility: true;
 };
 {id: 3;
-<<<<<<< HEAD
 smartContractSupport: true;,
 crossChainCompatibility: true;};
 {
 id: 3;
 name: "Smart Contract Factory";
 category: "Smart Contract Development";
-=======
 name: "Smart Contract Factory";,
 category: "Smart Contract Development";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Advanced smart contract development platform with automated testing; deployment; and monitoring across multiple blockchains",
 pricing: "Enterprise";
 price: 1500;,
@@ -218,12 +206,9 @@ targetAudience: ["Developers", "Startups", "Enterprises", "DeFi protocols", "DAO
 tags: ["Smart Contracts", "Blockchain", "Development", "Security", "Testing", "Deployment"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/smart-contract-factory";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/smart-contract-factory";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;500-6;000/month",
@@ -249,17 +234,14 @@ smartContractSupport: true;,
 crossChainCompatibility: true;
 };
 {id: 4;
-<<<<<<< HEAD
 smartContractSupport: true;,
 crossChainCompatibility: true;};
 {
 id: 4;
 name: "DAO Governance Platform";
 category: "Decentralized Governance";
-=======
 name: "DAO Governance Platform";,
 category: "Decentralized Governance";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Complete DAO governance platform with voting mechanisms; proposal management; and treasury management tools",
 pricing: "Professional";
 price: 1000;,
@@ -286,12 +268,9 @@ targetAudience: ["DAO organizations", "Crypto projects", "Community groups", "De
 tags: ["DAO", "Governance", "Voting", "Treasury", "Blockchain", "Community"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/dao-governance-platform";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/dao-governance-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;000-4;000/month",
@@ -349,12 +328,9 @@ targetAudience: ["DeFi protocols", "Exchanges", "Wallets", "Developers", "Enterp
 tags: ["Cross-Chain", "Bridge", "Interoperability", "Liquidity", "Security", "Blockchain"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/cross-chain-bridge-pro";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/cross-chain-bridge-pro";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;000-8;000/month",
@@ -380,17 +356,14 @@ smartContractSupport: true;,
 crossChainCompatibility: true;
 };
 {id: 6;
-<<<<<<< HEAD
 smartContractSupport: true;,
 crossChainCompatibility: true;};
 {
 id: 6;
 name: "Web3 Identity Manager";
 category: "Decentralized Identity";
-=======
 name: "Web3 Identity Manager";,
 category: "Decentralized Identity";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Self-sovereign identity platform with zero-knowledge proofs; verifiable credentials; and privacy-preserving authentication",
 pricing: "Professional";
 price: 600;,
@@ -417,12 +390,9 @@ targetAudience: ["Enterprises", "Healthcare providers", "Financial institutions"
 tags: ["Decentralized Identity", "Privacy", "Authentication", "Verification", "Compliance", "Security"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/web3-identity-manager";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/web3-identity-manager";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$600-2;500/month",

@@ -1,10 +1,10 @@
+import React from "react";
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { Check; X, User; Star, MoreHorizontal } from "lucide-react";
 import { format } from "date-fns";,
 import { toast } from "@/hooks/use-toast";,
 import { supabase } from "@/integrations/supabase/client";
-<<<<<<< HEAD
 import { Review, ReviewStatus } from "@/types/reviews";
 import { useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
@@ -13,9 +13,7 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",;
 import { supabase } from "@/integrations/supabase/client";
 import { ReviewReviewStatus } from "@/types/reviews";
-=======
 import { Review; ReviewStatus } from "@/types/reviews";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import {;
 status: ReviewStatus;
 }) => {      const { error } = await supabase;
@@ -221,7 +219,6 @@ Timeliness: {selectedReview.timeliness_rating}/5;
 {selectedReview.would_work_again !== undefined && (
 <Badge;
 variant={
-<<<<<<< HEAD
                         selectedReview.would_work_again
                           ? 'default'
                           : 'secondary'
@@ -255,9 +252,7 @@ variant='destructive'
                     Reject
                   </Button>
                   <Button
-                  <Button,
-=======
-selectedReview.would_work_again;
+                  <Button selectedReview.would_work_again;
 ? "default";
 : "secondary";
 }                    >;
@@ -290,7 +285,6 @@ disabled={isPending}                  >;
 Reject;
 </Button>;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {() => handleApprove(selectedReview.id)}
 disabled = {isPending}
 >;
@@ -334,22 +328,18 @@ Mark as Approved;
 return (<div className="space-y-4"> <div className="h-12 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> <div className="h-16 w-full bg-muted rounded animate-pulse" /> </div> if (reviews.length === 0) {";
 return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>;
 }
-<<<<<<< HEAD
   return (<div className="flex"> {[1 2, 3  4, 5].map ( (star) => (<Star key= {
   return (<div className="flex"> {
   [1 2, 3  4, 5].map ( (star) => (<Star key= {
   star}/>) )
-=======
 return (<div className="flex"> {[1 2; 3  4; 5].map ( (star) => (<Star key= {
 star}/>) )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</div>)
 };";
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
 reviews.map ( (review) => (<TableRow key= {
 review.id ";
 }> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {review.reviewer profile?.avatar url ? (<AvatarImage src= {
-<<<<<<< HEAD
 }> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
   review.reviewer profile.avatar url}alt= {"
@@ -359,7 +349,6 @@ review.id ";
 }</AvatarFallback>) "
 }</Avatar> <div>) : (<span className=" text-sm font-medium"> {"
   review.reviewer profile?.display name |" User"
-=======
 review.reviewer profile.avatar url}alt= {";
 review.reviewer profile.display name |"";
 }/>) : (<AvatarFallback> {";
@@ -367,7 +356,6 @@ review.reviewer profile?.display name ? getInitials (review.reviewer profile.dis
 }</AvatarFallback>) ";
 }</Avatar> <div>) : (<span className=" text-sm font-medium"> {";
 review.reviewer profile?.display name |" User";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</span>)
 }</div> </div> </TableCell> <TableCell> {
 renderStars (review.rating) ";
@@ -382,19 +370,16 @@ isPending ";
 }<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" sm"className=" h-8 w-8 p-0"> <MoreHorizontal className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> Mark as approved </DropdownMenuItem>)
 }</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {selectedReview.reviewer profile?.avatar url ? (<AvatarImage src= {
-<<<<<<< HEAD
 }</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {
   selectedReview.reviewer profile?.avatar url ? (<AvatarImage src= {
   selectedReview.reviewer profile.avatar url}alt= {"
   selectedReview.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
-=======
 selectedReview.reviewer profile.avatar url}alt= {";
 selectedReview.reviewer profile.display name |"";
 }/>) : (<AvatarFallback> {";
 selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</AvatarFallback>)
 }</Avatar> <div> </Badge> </div> </div> <div> {
 renderStars (selectedReview.rating) ";

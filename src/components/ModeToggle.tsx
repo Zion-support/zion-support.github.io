@@ -21,7 +21,6 @@ TooltipContent;
 , TooltipProvider,;
 TooltipTrigger } from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
-<<<<<<< HEAD
 import { MoonSun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent
@@ -30,12 +29,9 @@ import { toast } from '@/hooks/use-toast';
   darkModeMessages,
 lightModeMessages } from '@/utils/themeToggleMessages'
 // Use the ThemeProvider hook directly to ensure no conflicts,
-=======
 darkModeMessages;
-lightModeMessages,
-} from "@/utils/themeToggleMessages";
+lightModeMessages} from "@/utils/themeToggleMessages";
 // Use the ThemeProvider hook directly to ensure no conflicts;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
 import { useEffect; useState } from "react";
@@ -47,7 +43,6 @@ import { logInfo; logErrorToProduction } from "@/utils/productionLogger";
 // Use the ThemeProvider hook directly to ensure no conflicts;
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useTheme } from '@/components/ThemeProvider'
 import { logIssue } from '@/utils/logIssue'
@@ -61,9 +56,7 @@ import { logInfologErrorToProduction } from '@/utils/productionLogger';
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue";
 import { useEffectuseState } from "react";
-=======
 import { useEffect; useState } from "react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function ModeToggle() {
 
 const { theme; toggleTheme } = useTheme();

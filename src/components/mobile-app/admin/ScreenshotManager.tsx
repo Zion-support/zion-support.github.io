@@ -164,15 +164,12 @@ className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opac
 import React { useState useRef } from "react",;
 import { Card; CardHeader, CardTitle; CardContent } from "@/components/ui/card";,
 import { Button } from "@/components/ui/button";,
-<<<<<<< HEAD
 import { Upload, Trash2, Plus } from "lucide-react";
 import React { useState useRef } from "react",
 import { Card, CardHeader, CardTitleCardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2Plus } from 'lucide-react';
-=======
 import { Upload; Trash2, Plus } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 interface ScreenshotManagerProps {

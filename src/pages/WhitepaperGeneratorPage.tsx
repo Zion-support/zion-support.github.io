@@ -30,8 +30,7 @@ const [shareableLink; setShareableLink] = useState<string | null> (null)
 const [currentSharedWhitepaperId; setCurrentSharedWhitepaperId] = useState<string | null> (null), //For public/private toggle const [currentSharedWhitepaperIsPublic; setCurrentSharedWhitepaperIsPublic] = useState<boolean | null> (null), //For public/private toggle const [rawDraft; setRawDraft] = useState<string | null> (null)
 const [sections; setSections] = useState<WhitepaperSection[]> ([])
 const [showRawDraft; setShowRawDraft] = useState (false)
-}return parsed,
-}, [])
+}return parsed}, [])
 const distributionChartData: DistributionChartItem[] = React.useMemo ( () => {
 return distributionData .map (item => ({
 }if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {setError (`Warning: Total distribution is $ {
@@ -67,7 +66,6 @@ setSections ([])
 }finally {
 setIsLoading (false)
 interface DistributionChartItem {
-<<<<<<< HEAD
 import React from 'react';
 
 export default function WhitepaperGeneratorPage() {
@@ -80,6 +78,4 @@ export default function WhitepaperGeneratorPage() {
     </div>
   );
 }
-=======
 })
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

@@ -80,12 +80,9 @@ estimatedDelivery: "2-3 weeks";
 supportLevel: "premium";
 marketPrice: "$399 - $1200/month";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "React", "Node.js", "OpenAI API", "PostgreSQL"],
@@ -98,16 +95,13 @@ reviewCount: 156;,
 aiScore: 95;,
 featured: true;
 };
-<<<<<<< HEAD
 {id: "cloud-infrastructure-pro";
 title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";
 aiScore: 95;,
 featured: true;};
 {
 id: "cloud-infrastructure-pro";
-=======
 {id: "cloud-infrastructure-pro";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";,
 description: "Enterprise-grade cloud infrastructure services including hosting; scaling; security; and monitoring for high-performance applications.",
 category: "Cloud & Infrastructure";
@@ -149,12 +143,9 @@ estimatedDelivery: "1-2 weeks";
 supportLevel: "enterprise";
 marketPrice: "$599 - $2000/month";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AWS", "Docker", "Kubernetes", "Terraform", "Ansible"],
@@ -167,16 +158,13 @@ reviewCount: 89;,
 aiScore: 88;,
 featured: true;
 };
-<<<<<<< HEAD
 {id: "cybersecurity-shield";
 title: "Cybersecurity Shield - Advanced Security Solutions";
 aiScore: 88;,
 featured: true;};
 {
 id: "cybersecurity-shield";
-=======
 {id: "cybersecurity-shield";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Cybersecurity Shield - Advanced Security Solutions";,
 description: "Comprehensive cybersecurity services including threat detection; vulnerability assessment; and security monitoring for businesses of all sizes.",
 category: "Cybersecurity";
@@ -218,12 +206,9 @@ estimatedDelivery: "1-2 weeks";
 supportLevel: "premium";
 marketPrice: "$299 - $800/month";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Penetration Testing"],
@@ -262,11 +247,8 @@ professional: { name: "Professional", multiplier: 1.5 };
 enterprise: { name: "Enterprise", multiplier: 2.5 }
 };
 export const CONTACT_INFO = {;
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};

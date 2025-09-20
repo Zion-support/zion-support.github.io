@@ -199,8 +199,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                 name: rule.name;
                 status: rule.status;
                 violations: rule.violations.length}));
-            recommendations: [],
-        };
+            recommendations: []};
             recommendations: []};
     // Generate recommendations;
         if (securityMetrics.complianceScore < 80) {

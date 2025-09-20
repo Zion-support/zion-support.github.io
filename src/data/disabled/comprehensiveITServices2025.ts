@@ -3,18 +3,15 @@ import React from "react";
 export interface ComprehensiveITService {id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];,
 targetAudience: string[], tags: string[];
 }
-contactInfo: {,}
+contactInfo: {}
 phone: string; email: string; website: string; address: string};
-<<<<<<< HEAD
 technology: string[], technology: string[];
 contactInfo: {,
 phone: string; email: string; website: string; address: string};
 technology: string[], technology: string[];,
 integrations: string[], compliance: string[];
-=======
 technology: string[], technology: string[];,
 integrations: string[], compliance: string[];,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
@@ -260,8 +257,7 @@ targetAudience: [
 tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
 estimatedDelivery: "6-10 weeks",
 supportLevel: "premium",
-marketPrice: "$1; 299 - $5; 000/month",
-],
+marketPrice: "$1; 299 - $5; 000/month"],
 targetAudience: [
 "Data analysts",
 "Business intelligence managers",

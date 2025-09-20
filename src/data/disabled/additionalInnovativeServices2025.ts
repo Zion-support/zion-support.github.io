@@ -85,12 +85,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -150,12 +147,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$4;500 - $15;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
@@ -215,12 +209,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;800 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Elasticsearch"],
@@ -280,12 +271,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;200 - $4;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -345,12 +333,9 @@ estimatedDelivery: "5-7 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;200 - $10;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -410,12 +395,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;500 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -475,12 +457,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;200 - $7;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -540,12 +519,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;800 - $8;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -605,12 +581,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;900 - $6;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -670,12 +643,9 @@ estimatedDelivery: "5-7 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],

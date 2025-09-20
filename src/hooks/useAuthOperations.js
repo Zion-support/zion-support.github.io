@@ -55,9 +55,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 options: {
                     data: {
                         display_name: display_name;
-                    },
-                },
-            });
+                    }}});
                         display_name: display_name;}}});
             
             if (error) {

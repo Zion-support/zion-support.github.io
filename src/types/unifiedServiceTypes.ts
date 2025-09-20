@@ -10,7 +10,7 @@ price?: number | {
 monthly?: number;
 yearly?: number;
 }
-oneTime?: number;,}
+oneTime?: number;}
 oneTime?: number;,
 currency: string; pricingModel: string};
 currency?: string;
@@ -36,8 +36,7 @@ export type UnifiedService = BaseService;
 // Helper type guards;
 export const hasProperty = <T; K extends string>(obj: T; prop: K): obj is T & Record<K; any> => {return obj && typeof obj === "object" && prop in obj};
 export const hasProperty = <T; K extends string>(
-obj: T; prop: K,
-): obj is T & Record<K; any> => {
+obj: T; prop: K): obj is T & Record<K; any> => {
 return obj && typeof obj === "object" && prop in obj};
 
 export const hasTags: any = (service: UnifiedService): service is UnifiedService & { tags: string[] } => {

@@ -1,9 +1,9 @@
+import React from "react";
 import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
-import {cva,, type,, VariantProps} from &quot;class-variance-authority&quot;
+import {cva, type, VariantProps} from &quot;class-variance-authority&quot;
 import { X } from "lucide-react";
 import * as React from &quot;react&quot;
 import {cn} from &quot;@/lib/utils&quot;
-<<<<<<< HEAD
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, typeVariantProps } from "class-variance-authority"
 import { X } from 'lucide-react'
@@ -35,7 +35,6 @@ const sheetVariants = cva(
     variants: {,
 side: {
         top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
-=======
 const Sheet = SheetPrimitive.Root;
 const SheetTrigger = SheetPrimitive.Trigger;
 const SheetClose = SheetPrimitive.Close;
@@ -59,14 +58,12 @@ const sheetVariants = cva(;
 variants: {,
 side: {,
 top: &quot;inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top&quot;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 bottom:
 &quot;inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom&quot;,
 left: &quot;inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm: max-w-sm&quot;,
 right:
 &quot;inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm: max-w-sm&quot;
 }},
-<<<<<<< HEAD
           "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom"
         left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
 right:
@@ -102,8 +99,7 @@ const SheetHeader = ({className
 const SheetHeader = ({
   className
   ...props}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div,
-className={cn(
+  <div className={cn(
       "flex flex-col space-y-2 text-center sm:text-left"
       className
     )}
@@ -118,8 +114,7 @@ SheetHeader.displayName = "SheetHeader"
 const SheetFooter = ({
   className
   ...props}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div,
-className={cn(
+  <div className={cn(
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2"
       className
     )}
@@ -138,7 +133,6 @@ ref={ref}
     className={cn("text-lg font-semibold text-foreground", className)}
     {...props}
   />;
-=======
 defaultVariants: {,
 side: &quot;right&quot;}}
 )
@@ -194,26 +188,22 @@ React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>;
 className={cn(&quot;text-lg font-semibold text-foreground&quot;, className)}
 {...props}
 />;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 const SheetDescription = React.forwardRef<;
 React.ElementRef<typeof SheetPrimitive.Description>;
 React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
-<<<<<<< HEAD
   <SheetPrimitive.Description;
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />;
-=======
 <SheetPrimitive.Description;
 ref={ref}
 className={cn(&quot;text-sm text-muted-foreground&quot;, className)}
 {...props}
 />;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ));
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
 export {Sheet SheetClose;

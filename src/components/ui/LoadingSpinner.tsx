@@ -45,10 +45,7 @@ sizeClasses[size],
 borderColor)}
 animate={{ rotate: 360 }}
 transition={{
-<<<<<<< HEAD
 duration: 1; repeat: Infinity;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 duration: 1; repeat: Infinity;,
 ease: "linear"}}
 role="status";

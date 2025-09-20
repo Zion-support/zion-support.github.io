@@ -79,14 +79,11 @@ className="flex items-center gap-1 text-xs text-muted-foreground"
 </DropdownMenuContent>;
 </DropdownMenu>;
 );
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Gift, RefreshCw } from "lucide-react";
 import { GiftRefreshCw } from 'lucide-react';
-=======
 import React, { useState } from "react";
 import { Gift; RefreshCw } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 return (
 <TooltipProvider>;
 <div className="flex items-center gap-1">;

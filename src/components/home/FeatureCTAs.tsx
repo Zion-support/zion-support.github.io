@@ -39,9 +39,8 @@ return (
 interface FeatureCTAsProps {
 className?: string;
 }
-style?: React.CSSProperties,}
+style?: React.CSSProperties}
 export function FeatureCTAs({ className style }: FeatureCTAsProps) {
-<<<<<<< HEAD
 className
       )}
       style={style}
@@ -88,9 +87,7 @@ className
               <CardFooter>
                 <Button asChild className='w-full gap-1'>
                   <Link
-                  <Link,
-=======
-className;
+                  <Link className;
 )}
 style={style}
 >;
@@ -136,7 +133,6 @@ style={style}
 <CardFooter>;
 <Button asChild className="w-full gap-1">;
 <Link;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 href = {feature.link}
 aria-label={`${t("general.explore")} ${t(`features.${feature.key}`)}`}
 className="cursor-pointer"

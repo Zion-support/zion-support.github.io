@@ -105,7 +105,6 @@ isMobileFilterOpen={isMobileFilterOpen}      />;
 {/* Price Range */}
 <PriceFilter;
 priceRange={priceRange}
-<<<<<<< HEAD
         setPriceRange={setPriceRange}
         expanded={expandedSections.price}
         toggleSection={() => toggleSection('price')}
@@ -117,8 +116,7 @@ onClick={() =>
           }
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >
         <Button
-        <Button,
-onClick = {(,) => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+        <Button onClick = {() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -126,7 +124,6 @@ onClick = {(,) => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
       {/* Skills */}
       <SkillsFilter
-=======
 setPriceRange={setPriceRange}
 expanded={expandedSections.price}
 toggleSection={() => toggleSection("price")}
@@ -138,7 +135,7 @@ window.dispatchEvent(new CustomEvent("closeMobileFilter"))
 }
 className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"        >
 <Button;
-onClick = {(,) => window.dispatchEvent(new CustomEvent("closeMobileFilter"))}
+onClick = {() => window.dispatchEvent(new CustomEvent("closeMobileFilter"))}
 className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
 {/* Search */}
 <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />;
@@ -146,7 +143,6 @@ className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
 <SortFilter sortOption={sortOption} setSortOption={setSortOption} />;
 {/* Skills */}
 <SkillsFilter;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 selectedSkills={selectedSkills}
 toggleSkill={toggleSkill}
 expanded={expandedSections.skills}

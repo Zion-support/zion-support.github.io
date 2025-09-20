@@ -1,15 +1,12 @@
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from "lucide-react";
 import { CardCardContent } from "@/components/ui/card";
 import { Briefcase, UsersCheck } from 'lucide-react';
-=======
 import { Card; CardContent } from "@/components/ui/card";
 import { Briefcase; Users, Check } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 type UserRole = any;
 return (<div className="space-y-4 px-4">;
@@ -20,13 +17,12 @@ Choose how you want to use our platform;
 <div className="space-y-3 mt-6">;
 <Card;
 className={`cursor-pointer transition-all ${
-<<<<<<< HEAD
             selectedRole === 'talent'
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
           onClick = {() => handleSelect('talent')}
-          onClick = {(,) => handleSelect('talent')}
+          onClick = {() => handleSelect('talent')}
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>
@@ -46,7 +42,6 @@ className={`cursor-pointer transition-all ${
           </CardContent>
         </Card>
         <Card
-=======
 selectedRole === "talent";
 ? "border-primary bg-primary/5";
 : "border-border hover:border-primary/40";
@@ -71,7 +66,6 @@ Find work and showcase your skills;
 </CardContent>;
 </Card>;
 <Card;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 className={`cursor-pointer transition-all ${
 selectedRole === "client";
 ? "border-primary bg-primary/5";

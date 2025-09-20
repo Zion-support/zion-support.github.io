@@ -7,10 +7,8 @@ import { Card; CardContent } from "@/components/ui/card";,
 import { Separator } from "@/components/ui/separator";,
 import { Tooltip; TooltipContent, TooltipProvider; TooltipTrigger } from "@/components/ui/tooltip";,
 import { useAuth } from "@/hooks/useAuth";
-// useRouter replaces the old useLocation hook from react-router,
-}
+// useRouter replaces the old useLocation hook from react-router}
 export function TemplateList({templates;
-<<<<<<< HEAD
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, StarStarOff } from 'lucide-react'
@@ -72,7 +70,7 @@ variant="ghost"
 variant="ghost"
                           size="icon"
                           onClick = {() => handleSetDefault(template.id)}
-                          onClick = {(,) => handleSetDefault(template.id)}
+                          onClick = {() => handleSetDefault(template.id)}
                           aria-label="Set as default"
                         >
                           <Star className="h-4 w-4" />
@@ -102,8 +100,7 @@ variant="ghost"
             </div>
             <Separator className="my-3" />
             <Button
-            <Button,
-onClick = {() => onSelect(template)}
+            <Button onClick = {() => onSelect(template)}
               variant="outline"
               className="w-full"
             >
@@ -133,7 +130,6 @@ className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
       </AlertDialog>
     </div>
   )
-=======
 isLoading;
 onSelect;
 onEdit}: TemplateListProps) {
@@ -143,7 +139,6 @@ return (
 <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
 </div>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 if (!templates.length) {
 return (
@@ -253,15 +248,12 @@ encodeURIComponent (currentPath)
 }`)
 return}await setDefaultTemplate.mutateAsync (templateId)
 }
-<<<<<<< HEAD
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {template.title}</h3> {"
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title}</h3> {"
   template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) "
-=======
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {template.title}</h3> {";
 template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</div> <p className="text-xs text-muted-foreground"> Last updated: {
 new Date (template.updated at) .toLocaleDateString () ";
 }</p> </div> <div className="flex items-center gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> {";

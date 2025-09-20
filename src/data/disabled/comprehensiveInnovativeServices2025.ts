@@ -94,12 +94,9 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$25;000 - $100;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "Natural Language Processing", "Computer Vision"],
@@ -122,8 +119,7 @@ documentationUrl: "https://ziontechgroup.com/docs/ai-autonomous-systems";
 scalability: "Handles unlimited operations and processes";
 deployment: "Cloud-native with on-premise options";,
 marketTrend: "Autonomous systems market growing 45% annually";,
-competitiveAdvantage: "Only platform enabling fully autonomous business operations",
-};
+competitiveAdvantage: "Only platform enabling fully autonomous business operations"};
 marketTrend: "Autonomous systems market growing 45% annually";,
 competitiveAdvantage: "Only platform enabling fully autonomous business operations"};
 // Quantum AI Platform;
@@ -174,12 +170,9 @@ estimatedDelivery: "10-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$35;000 - $150;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Qiskit", "Cirq", "PennyLane", "TensorFlow", "PyTorch", "Quantum Algorithms"],
@@ -202,8 +195,7 @@ documentationUrl: "https://ziontechgroup.com/docs/quantum-ai-platform";
 scalability: "Scalable to 1000+ qubits";
 deployment: "Hybrid cloud and quantum hardware";,
 marketTrend: "Quantum AI market expected to reach $2B by 2030";,
-competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities",
-};
+competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities"};
 marketTrend: "Quantum AI market expected to reach $2B by 2030";,
 competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities"};
 // Space Technology Solutions;
@@ -254,12 +246,9 @@ estimatedDelivery: "12-20 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$45;000 - $200;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Satellite Communications", "Big Data Analytics", "Cloud Computing", "IoT", "Space Protocols"],
@@ -282,8 +271,7 @@ documentationUrl: "https://ziontechgroup.com/docs/space-technology-solutions";
 scalability: "Manages 1000+ satellites";
 deployment: "Hybrid ground and space infrastructure";,
 marketTrend: "Space technology market growing 50% annually";,
-competitiveAdvantage: "Most comprehensive space operations platform with AI integration",
-};
+competitiveAdvantage: "Most comprehensive space operations platform with AI integration"};
 marketTrend: "Space technology market growing 50% annually";,
 competitiveAdvantage: "Most comprehensive space operations platform with AI integration"};
 // Biotechnology AI Platform;
@@ -334,12 +322,9 @@ estimatedDelivery: "16-24 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$40;000 - $200;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "Deep Learning", "Bioinformatics", "Molecular Modeling", "Data Analytics"],
@@ -362,8 +347,7 @@ documentationUrl: "https://ziontechgroup.com/docs/biotechnology-ai-platform";
 scalability: "Handles 1000+ research projects";
 deployment: "Cloud-based with secure research environment";,
 marketTrend: "Biotech AI market growing 35% annually";,
-competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery",
-};
+competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery"};
 marketTrend: "Biotech AI market growing 35% annually";,
 competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery"};
 // Autonomous Vehicle Platform;
@@ -414,12 +398,9 @@ estimatedDelivery: "20-28 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$30;000 - $150;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "5G Networks", "Edge Computing"],
@@ -442,8 +423,7 @@ documentationUrl: "https://ziontechgroup.com/docs/autonomous-vehicle-platform";
 scalability: "Manages 1000+ autonomous vehicles";
 deployment: "Hybrid cloud and edge computing";,
 marketTrend: "Autonomous vehicle market growing 40% annually";,
-competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems",
-};
+competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems"};
 marketTrend: "Autonomous vehicle market growing 40% annually";,
 competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems"};
 // AI Robotics Platform;
@@ -494,12 +474,9 @@ estimatedDelivery: "16-24 weeks";,
 supportLevel: "premium";,
 marketPrice: "$22;000 - $100;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "Edge Computing", "Safety Systems"],
@@ -522,8 +499,7 @@ documentationUrl: "https://ziontechgroup.com/docs/ai-robotics-platform";
 scalability: "Manages 500+ robots";
 deployment: "Hybrid cloud and edge deployment";,
 marketTrend: "AI robotics market growing 30% annually";,
-competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features",
-};
+competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features"};
 marketTrend: "AI robotics market growing 30% annually";,
 competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features"};
 // Smart City Infrastructure Platform;
@@ -574,12 +550,9 @@ estimatedDelivery: "20-32 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$28;000 - $150;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT", "AI/ML", "Big Data Analytics", "Cloud Computing", "Edge Computing", "5G Networks"],
@@ -602,8 +575,7 @@ documentationUrl: "https://ziontechgroup.com/docs/smart-city-infrastructure";
 scalability: "Manages city-wide infrastructure";
 deployment: "Hybrid cloud and edge infrastructure";,
 marketTrend: "Smart city market growing 25% annually";,
-competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization",
-};
+competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization"};
 marketTrend: "Smart city market growing 25% annually";,
 competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization"};
 // Advanced Cybersecurity Platform;
@@ -654,12 +626,9 @@ estimatedDelivery: "12-20 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$18;000 - $100;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Zero-Trust Architecture", "AI/ML", "Behavioral Analytics", "Threat Intelligence", "Security Orchestration"],
@@ -682,8 +651,7 @@ documentationUrl: "https://ziontechgroup.com/docs/advanced-cybersecurity";,
 scalability: "Protects 100;000+ endpoints",
 deployment: "Cloud-native with on-premise options";,
 marketTrend: "Zero-trust security market growing 35% annually";,
-competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration",
-}
+competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration"}
 marketTrend: "Zero-trust security market growing 35% annually";,
 competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration"}
 ];

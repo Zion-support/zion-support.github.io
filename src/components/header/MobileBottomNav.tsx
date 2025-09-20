@@ -39,7 +39,6 @@ href: "/talent";,
 icon: Search;,
 matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")};
 {name: "Community";
-<<<<<<< HEAD
 href: "/community";
 icon: MessageCircle;
 icon: Home;,
@@ -52,9 +51,7 @@ matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categ
 {
 name: "Community";
 href: "/community";
-=======
 href: "/community";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 icon: MessageCircle;,
 matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")};
 {

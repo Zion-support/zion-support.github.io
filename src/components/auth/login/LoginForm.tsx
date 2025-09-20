@@ -9,7 +9,7 @@ import React from "react";
 import React from "react",;
 const LoginForm: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className = "text-xl font-bold mb-4">LoginForm</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
@@ -193,7 +193,6 @@ form.setError ("root", {";
 message: "Please enter your email address.";
 });
 return,;
-<<<<<<< HEAD
 }setIsResending (true);'
 return}setIsResending (true);'
 setVerificationMessage ('')
@@ -202,7 +201,6 @@ try {'
   method: 'POST',
 headers: {'
   'Content-Type': 'application/json'
-=======
 }setIsResending (true);";
 setVerificationMessage ("")
 try {";
@@ -210,7 +208,6 @@ const response = await fetch ("/api/auth/resend-verification-email", {"
 method: "POST",;
 headers: {";
 "Content-Type": "application/json";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 body: JSON.stringify ({email})
 body: JSON.stringify ({
@@ -232,7 +229,6 @@ if (!email) {";
 form.setError ("root", {";
 message: "Please enter your email address.";
 })
-<<<<<<< HEAD
 return}router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -251,9 +247,7 @@ return}router.push (`/verify-status?email=$ {
   verificationMessage}</p>) "
 }<div className=" flex justify-between mt-4" > <Button > {'
   isResending ? 'Sending...': 'Resend / Verify e-mail'
-=======
-return,
-}router.push (`/verify-status?email=$ {
+return}router.push (`/verify-status?email=$ {
 encodeURIComponent (email)
 }`)
 }
@@ -267,6 +261,5 @@ encodeURIComponent (email)
 }/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {verificationMessage}</p>) ";
 }<div className=" flex justify-between mt-4" > <Button > {";
 isResending ? "Sending...": "Resend / Verify e-mail";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)
 }""}

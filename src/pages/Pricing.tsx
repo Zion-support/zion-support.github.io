@@ -100,7 +100,6 @@ Annual <span className="text-green-300">(Save 20%)</span>;
 {plans.map((plan index) => (
 <div;
 key={index}
-<<<<<<< HEAD
                 className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
                   plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
                 }`}
@@ -217,7 +216,6 @@ export default function Pricing() {
     </div>
   );
 }
-=======
 className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
 plan.popular ? "ring-2 ring-blue-500 scale-105" : "";
 }`}
@@ -327,4 +325,3 @@ Talk to Sales;
 );
 }
 export default Pricing;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

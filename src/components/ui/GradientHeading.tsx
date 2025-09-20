@@ -42,8 +42,7 @@ className={cn(
 "font-bold leading-tight",
 getSizeClasses(),
 getGradientClasses(),
-className,
-)}
+className)}
 >;
 {children}
 </h1>;

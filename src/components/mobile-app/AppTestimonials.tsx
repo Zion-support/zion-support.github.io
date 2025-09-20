@@ -15,7 +15,6 @@ rating: 5;,
 avatar: "/placeholder.svg"};
 {name: "Michael Chen", role: "Full Stack Developer";,
 text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
-<<<<<<< HEAD
 rating: 4;
 name: "Alex Johnson", role: "AI Developer";,
 text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!", rating: 5;,
@@ -28,8 +27,6 @@ avatar: "/placeholder.svg"};
 {
 name: "Michael Chen", role: "Full Stack Developer";,
 text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 rating: 4;,
 avatar: "/placeholder.svg"}
 ];

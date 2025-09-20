@@ -82,12 +82,9 @@ implementation: "Turnkey deployment with dedicated engineers";
 sla: "99.99% uptime with performance guarantees";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -140,12 +137,9 @@ implementation: "Phased migration with quantum security specialists";
 sla: "99.999% availability with quantum-grade security";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -198,12 +192,9 @@ implementation: "Gradual rollout with AI training period";
 sla: "99.9% automated resolution rate";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -256,12 +247,9 @@ implementation: "Custom setup with immersive technology specialists";
 sla: "99.5% availability with performance optimization";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -314,12 +302,9 @@ implementation: "Sustainability assessment and gradual optimization";
 sla: "Guaranteed energy savings with monitoring";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -372,12 +357,9 @@ implementation: "Blockchain architecture design and deployment";
 sla: "99.9% network availability with security guarantees";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -430,12 +412,9 @@ implementation: "Custom AI infrastructure design and optimization";
 sla: "99.95% availability with performance guarantees";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 }

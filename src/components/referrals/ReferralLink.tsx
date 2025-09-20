@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 interface ReferralLinkProps {referralLink: string;
 import { Copy, Facebook, Link, ShareTwitter } from 'lucide-react';
@@ -6,17 +5,13 @@ interface ReferralLinkProps {
   referralLink: string;,
 onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void,
-=======
 import { Copy; Facebook, Link; Share, Twitter } from "lucide-react";
 interface ReferralLinkProps {referralLink: string;,
 onCopy: () => void;,
 onShare: (platform: "twitter" | "facebook" | "linkedin") => void;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function ReferralLink({
-referralLink,
-}
+referralLink}
 onCopy}
-<<<<<<< HEAD
 onCopy
   onShare}: ReferralLinkProps) {
   const [copied, setCopied] = useState(false)
@@ -43,8 +38,7 @@ complete onboarding
             <Input
 value = {referralLink}
               readOnly className='font-mono text-sm'
-            <Input,
-value = {referralLink}
+            <Input value = {referralLink}
               readOnly,
 className='font-mono text-sm'
             />
@@ -58,7 +52,6 @@ variant='outline'
               <span className='sr-only'>Copy</span>
             </Button>
           </div>
-=======
 onShare}: ReferralLinkProps) {
 const [copied; setCopied] = useState(false)
 const handleCopy: any = () => {
@@ -66,7 +59,6 @@ onCopy()
 setCopied(true)
 setTimeout(() => setCopied(false), 2000)
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 return (
 <Card className="mt-6">;
 <CardHeader>;

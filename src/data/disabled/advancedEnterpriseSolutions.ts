@@ -83,12 +83,9 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$25;000 - $100;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Cloud Native", "Microservices", "Kubernetes", "TensorFlow"],
@@ -97,8 +94,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"],
 roi: "400% within 12 months";,
 competitors: ["Microsoft", "Oracle", "SAP", "IBM"],
 innovationLevel: "Breakthrough";,
-marketTrend: "Rapidly Growing",
-};
+marketTrend: "Rapidly Growing"};
 innovationLevel: "Breakthrough";,
 marketTrend: "Rapidly Growing"};
 // Quantum Enterprise Solutions;
@@ -146,12 +142,9 @@ estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$50;000 - $200;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Quantum Algorithms", "Qiskit", "Cirq", "Hybrid Systems"],
@@ -160,8 +153,7 @@ compliance: ["NIST", "ISO", "Enterprise Security"],
 roi: "500% within 18 months";,
 competitors: ["IBM", "Google", "Microsoft", "Amazon"],
 innovationLevel: "Revolutionary";,
-marketTrend: "Emerging",
-};
+marketTrend: "Emerging"};
 innovationLevel: "Revolutionary";,
 marketTrend: "Emerging"};
 // Autonomous Business Intelligence;
@@ -209,12 +201,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$15;000 - $60;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "NLP", "Deep Learning", "AutoML"],
@@ -223,8 +212,7 @@ compliance: ["GDPR", "SOC 2", "ISO 27001"],
 roi: "350% within 8 months";,
 competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
 innovationLevel: "Advanced";,
-marketTrend: "Growing",
-};
+marketTrend: "Growing"};
 innovationLevel: "Advanced";,
 marketTrend: "Growing"};
 // Next-Gen Cybersecurity Platform;
@@ -272,12 +260,9 @@ estimatedDelivery: "8-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$20;000 - $80;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Behavioral Analytics", "Threat Intelligence", "SOAR"],
@@ -286,8 +271,7 @@ compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 roi: "450% within 10 months";,
 competitors: ["CrowdStrike", "SentinelOne", "Palo Alto", "Cisco"],
 innovationLevel: "Advanced";,
-marketTrend: "High Growth",
-};
+marketTrend: "High Growth"};
 innovationLevel: "Advanced";,
 marketTrend: "High Growth"};
 // Digital Twin Enterprise Platform;
@@ -335,12 +319,9 @@ estimatedDelivery: "10-14 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$30;000 - $120;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT", "3D Modeling", "Real-time Analytics", "AI/ML"],
@@ -349,8 +330,7 @@ compliance: ["ISO 27001", "Industry Standards"],
 roi: "380% within 12 months";,
 competitors: ["Siemens", "GE", "PTC", "Dassault"],
 innovationLevel: "Advanced";,
-marketTrend: "Emerging",
-}
+marketTrend: "Emerging"}
 innovationLevel: "Advanced";,
 marketTrend: "Emerging"}
 ];

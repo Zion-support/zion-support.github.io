@@ -2,7 +2,6 @@ import { useState, useEffect  } from "react, ";
 
 interface TenantAdminStatus {isAdmin: boolean; isLoading: boolean}
 
-<<<<<<< HEAD
 export const useTenantAdminStatus: any = (tenantId?: string): TenantAdminStatus => {const [_setStatus] = useState<{;
 isAdmin: boolean; isLoading: boolean}>({isAdmin: false;
 interface TenantAdminStatus {
@@ -12,10 +11,8 @@ export const useTenantAdminStatus: any = (tenantId?: string): TenantAdminStatus 
 const [_setStatus] = useState<{;
 isAdmin: boolean; isLoading: boolean}>({
 isAdmin: false;,
-=======
 export const useTenantAdminStatus: any = (tenantId?: string): TenantAdminStatus => {const [_setStatus] = useState<{;,
 isAdmin: boolean; isLoading: boolean}>({isAdmin: false;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 isLoading: true});
 
 useEffect(() => {const checkTenantAdminStatus = async (_tenantId: string) => {;

@@ -70,15 +70,12 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
-<<<<<<< HEAD
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 import { logErrorToProduction } from "@/utils/productionLogger";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function FooterNewsletter(): React.ReactElement {
 Email address for newsletter subscription;
 </label>;

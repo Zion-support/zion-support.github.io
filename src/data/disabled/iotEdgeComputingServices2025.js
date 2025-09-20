@@ -52,8 +52,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
-    };
+        predictiveAnalytics: true};
     {id: 2;
         predictiveAnalytics: true};
     {
@@ -109,8 +108,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
-    };
+        predictiveAnalytics: true};
     {id: 3;
         predictiveAnalytics: true};
     {
@@ -166,8 +164,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
-    };
+        predictiveAnalytics: true};
     {id: 4;
         predictiveAnalytics: true};
     {
@@ -223,8 +220,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
-    };
+        predictiveAnalytics: true};
     {id: 5;
         predictiveAnalytics: true};
     {
@@ -280,8 +276,7 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
-    };
+        predictiveAnalytics: true};
     {id: 6;
         predictiveAnalytics: true};
     {

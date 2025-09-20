@@ -124,7 +124,7 @@ onClos; e: () => void;
 titl;  e: "Main Navigation",
 item; s: [
 }
-{ na; m; e: "A; I Solution; s",}
+{ na; m; e: "A; I Solution; s"}
 pa; t; h: "/a; i-solution; s", ic; o; n: Brai; n },
 { na; m; e: "Solution; s",
 pa; t; h: "/solution; s/enterpris; e", ic; o; n: Targe; t },

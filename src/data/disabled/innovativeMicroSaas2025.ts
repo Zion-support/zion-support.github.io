@@ -84,12 +84,9 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$299 - $1;200/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-5", "NLP", "Machine Learning", "React", "Python"],
@@ -147,12 +144,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$599 - $2;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["RPA", "AI/ML", "Process Mining", "Workflow Engine", "Analytics"],
@@ -210,12 +204,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$799 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Quantum Algorithms", "Classical ML", "Hybrid Systems", "Python", "Qiskit"],
@@ -273,12 +264,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$399 - $1;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Real-time Analytics", "Personalization Engine", "React", "Python"],
@@ -336,12 +324,9 @@ estimatedDelivery: "4-5 weeks";
 supportLevel: "premium";
 marketPrice: "$199 - $800/month";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts"],
@@ -399,12 +384,9 @@ estimatedDelivery: "5-7 weeks";,
 supportLevel: "premium";,
 marketPrice: "$499 - $2;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Edge Computing", "IoT Protocols", "Real-time Analytics", "Containerization"],

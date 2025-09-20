@@ -1,13 +1,11 @@
+import React from "react";
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
-<<<<<<< HEAD
 import { Star, Flag, User } from "lucide-react";
 import { useState } from 'react'
 import { formatDistanceToNow } from 'date-fns';
 import { Star, FlagUser } from 'lucide-react';
-=======
 import { Star; Flag, User } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 return (
 <div className="border rounded-lg p-4 bg-card">;
 <div className="flex justify-between items-start mb-3">;
@@ -92,7 +90,6 @@ Timeliness;
 {review.would_work_again !== undefined && (
 <Badge;
 variant={review.would_work_again ? "default" : "secondary"}
-<<<<<<< HEAD
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
                 {review.would_work_again ? "Would work again" : "Would not work again"}
@@ -128,7 +125,7 @@ placeholder='Why are you reporting this review?'              value={reportReaso
               placeholder="Why are you reporting this review?"
               value = {reportReason}
               onChange = {(e) => setReportReason(e.target.value)}
-              onChange = {(e,) => setReportReason(e.target.value)}
+              onChange = {(e) => setReportReason(e.target.value)}
               className="min-h-[100px]"
             />
             <DialogFooter>
@@ -139,7 +136,6 @@ variant='outline'
                 Cancel
               </Button>
               <Button
-=======
 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}              >
 {review.would_work_again;
 ? "Would work again";
@@ -230,7 +226,6 @@ onClick={() => setIsReportDialogOpen(false)}
 Cancel;
 </Button>;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick={handleReport}
 disabled={!reportReason.trim() |isReporting}              >;
 {isReporting ? "Submitting..." : "Submit Report"}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
@@ -242,7 +237,6 @@ disabled={!reportReason.trim() |isReporting}              >;
 </div>;
 )
 }</div>)
-<<<<<<< HEAD
 };"
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
@@ -251,14 +245,12 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
   review.reviewer profile.avatar url}alt= {
   review.reviewer profile.display name}/>) : (<AvatarFallback> {"
   review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : "??"
-=======
 };";
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {";
 review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
 review.reviewer profile?.avatar url ? (<AvatarImage src= {
 review.reviewer profile.avatar url}alt= {review.reviewer profile.display name}/>) : (<AvatarFallback> {";
 review.reviewer profile?.display name ? getInitials (review.reviewer profile.display name) : "??";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</AvatarFallback>)
 }</Avatar>) ";
 }<div> </div> <div className="text-sm text-muted-foreground"> {

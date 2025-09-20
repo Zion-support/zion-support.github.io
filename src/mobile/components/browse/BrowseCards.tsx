@@ -15,7 +15,7 @@ interface BrowseCardsProps {,
 items: BrowseItem[];,
 type: "jobs" | "talents";
 }
-onViewDetails: (id: string) => void,}
+onViewDetails: (id: string) => void}
 export function BrowseCards({ items type onViewDetails }: BrowseCardsProps) {
 const [savedItems; setSavedItems] = useState<string[]>([]),
 
@@ -55,7 +55,6 @@ return (
 </div>;
 <button;
 className="h-8 w-8 flex items-center justify-center"
-<<<<<<< HEAD
                   onClick={() => toggleSaved(item.id)}
                 >
                   {savedItems.includes(item.id) ? (
@@ -68,9 +67,7 @@ className="h-8 w-8 flex items-center justify-center"
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge index) => (
                   <Badge
-                  <Badge,
-=======
-onClick={() => toggleSaved(item.id)}                >;
+                  <Badge onClick={() => toggleSaved(item.id)}                >;
 {savedItems.includes(item.id) ? (
 <BookmarkCheck className="h-5 w-5 text-primary" />;
 ) : (
@@ -110,7 +107,6 @@ onClick={() => toggleSaved(item.id)}
 <div className="mt-3 flex flex-wrap gap-1">;
 {item.badges.map((badge index) => (
 <Badge;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key = {index}
 variant="outline"
 className="text-xs font-normal"

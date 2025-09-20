@@ -1,7 +1,6 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { Check, X } from "lucide-react";
 return (<section id='pricing' className='py-20 px-4 md:px-6'>
 import { CheckX } from 'lucide-react';
@@ -75,7 +74,6 @@ className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90
                   <TableCell className='font-medium'>{feature.name}</TableCell>
                   {plans.map(plan => (
                     <TableCell
-=======
 import { Check; X } from "lucide-react";
 return (<section id="pricing" className="py-20 px-4 md:px-6">;
 <div className="container mx-auto max-w-7xl">;
@@ -146,7 +144,6 @@ variant = {plan.popular ? "default" : "outline"}
 <TableCell className="font-medium">{feature.name}</TableCell>;
 {plans.map(plan => (
 <TableCell;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key={`${plan.name}-${feature.name}`}
 className="text-center"
 >;

@@ -49,7 +49,6 @@ Profile Settings;
 {user?.avatarUrl ? (
 <img;
 src={user.avatarUrl}
-<<<<<<< HEAD
                           alt={user.displayName |'User'}
                           loading='lazy'
                         />
@@ -190,7 +189,6 @@ export default function TalentDashboard() {
     </div>
   );
 }
-=======
 alt={user.displayName |"User"}
 loading="lazy";
 />;
@@ -326,4 +324,3 @@ return (
 </ProtectedRoute>;
 )
 }}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

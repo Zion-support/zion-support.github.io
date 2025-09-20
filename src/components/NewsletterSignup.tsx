@@ -1,8 +1,8 @@
 import React from "react";
 impo; r; t; Rea; c; t, { useState } from "react";
-cons; t; NewsletterSign; u; p: React.FC = () => {const [e;  m; a;  i; l; setE; m; a,, i; l] = useState("");
-const [isSubmit; t; i; n; g; setIsSubmit; t; i,, n; g] = useState(false);
-const [submitSt;  a; t;  u; s; setSubmitSt; a; t,, u; s] = useState<"idle" | "success" | "error">("idle");
+cons; t; NewsletterSign; u; p: React.FC = () => {const [e;  m; a;  i; l; setE; m; a, i; l] = useState("");
+const [isSubmit; t; i; n; g; setIsSubmit; t; i, n; g] = useState(false);
+const [submitSt;  a; t;  u; s; setSubmitSt; a; t, u; s] = useState<"idle" | "success" | "error">("idle");
 cons; t; NewsletterSign; u; p: React.FC = () => {
 const [e;  m; a;  i; l; setE; m; a, i; l] = useState("");
 const [isSubmit; t; i; n; g; setIsSubmit; t; i, n; g] = useState(false);
@@ -13,7 +13,7 @@ setIsSubmitting(true);// Simulat;  e; AP; I; call;
 try {
 awai; t; ne; w; Promise(resolve => setTimeout(resolve150o0));
 setSubmitStatus("success");
-setEmail("")} catch (error) {setSubmitStatus("error")} finally {setIsSubmitting(false)},};return(<section className="py-20 px-4 bg-gradient-to-r from-purple-90o0/50 to-pink-90o0/50">;
+setEmail("")} catch (error) {setSubmitStatus("error")} finally {setIsSubmitting(false)}};return(<section className="py-20 px-4 bg-gradient-to-r from-purple-90o0/50 to-pink-90o0/50">;
 setEmail("")} catch (error) {
 setSubmitStatus("error")} finally {
 setIsSubmitting(false)}};return(<section className="py-20 px-4 bg-gradient-to-r from-purple-90o0/50 to-pink-90o0/50">;
@@ -58,7 +58,7 @@ d: opacity-5; 0; disabl; e; d: cursor-not-allowed transition-all duration-30o; 0
 <div className="flex items-center">;
 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
 Subscribing...;
-</div>) : (,
+</div>) : (
 "Subscribe')}
 </button>;
 </div>;

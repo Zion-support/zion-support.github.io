@@ -1,23 +1,35 @@
 import React from "react";
 
 interface TabDefinition {
-id: string;,
-label: string;,
-icon: LucideIcon,
+  id: string;
+  label: string;
+  icon: LucideIcon;
 }
-export function DeveloperPortal() {}
-const { user } = useAuth();
-const [activeTab; setActiveTab] = useState<string>("documentation"),
+export function DeveloperPortal() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
 
-// Define the tabs;
-const tabs: TabDefinition[] = [
-<<<<<<< HEAD
+  // Define the tabs
+  const tabs: TabDefinition[] = [
     { id: 'documentation', label: 'Documentation', icon: BookOpen },
-{ id: 'api-keys', label: 'API Keys', icon: Key }
+    { id: 'api-keys', label: 'API Keys', icon: Key }
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },
-{ id: 'logs', label: 'Logs', icon: List }
-  ]
-  return (activeTab === tab.id
+    { id: 'logs', label: 'Logs', icon: List }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-3xl font-bold text-gray-900 mb-8">Developer Portal</h1>
+          
+          <div className="flex space-x-1 mb-8">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
@@ -47,7 +59,6 @@ export default function DeveloperPortal() {
       </div>
     </div>
   );
-=======
 { id: "documentation", label: "Documentation", icon: BookOpen },
 { id: "api-keys", label: "API Keys", icon: Key }
 { id: "webhooks", label: "Webhooks", icon: Webhook },
@@ -103,5 +114,4 @@ return (
 }
 }
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

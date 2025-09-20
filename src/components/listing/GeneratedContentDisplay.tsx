@@ -3,7 +3,6 @@ import React from "react";;
 import { Button } from "@/components/ui/button";,
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
 onApply: () => void,
 export function GeneratedContentDisplay({content,
 import React from "react",
@@ -13,10 +12,8 @@ import { ArrowRight } from 'lucide-react';
 onApply: () => void,
 export function GeneratedContentDisplay({
   content,
-=======
 onApply: () => void;
 export function GeneratedContentDisplay({content;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onApply}: GeneratedContentDisplayProps) {
 return (
 <Card className="border border-zion-blue-light bg-zion-blue-dark">;

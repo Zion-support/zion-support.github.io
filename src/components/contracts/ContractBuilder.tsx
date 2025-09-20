@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";,
 import { Dialog; DialogContent, DialogHeader; DialogTitle } from "@/components/ui/dialog";,
 import { Tabs; TabsList, TabsTrigger; TabsContent } from "@/components/ui/tabs";,
@@ -19,7 +20,6 @@ import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
 }
 export function ContractBuilder({isOpen;
-<<<<<<< HEAD
   onClose;
   talent;
   clientName;
@@ -56,7 +56,7 @@ export function ContractBuilder({isOpen;
 variant="outline"
                 size="sm"
                 onClick = {() => setTemplateManagerOpen(true)}
-                onClick = {(,) => setTemplateManagerOpen(true)}
+                onClick = {() => setTemplateManagerOpen(true)}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -73,8 +73,7 @@ variant="secondary"
           </div>
           <TabsContent value="form" className="pt-4">
             <ContractForm
-            <ContractForm,
-talent = {talent}
+            <ContractForm talent = {talent}
               clientName = {clientName}
               initialValues = {formValues}
               onFormValuesChange = {setFormValues}
@@ -84,8 +83,7 @@ talent = {talent}
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <ContractPreview
-              <ContractPreview,
-contractContent = {generatedContract}
+              <ContractPreview contractContent = {generatedContract}
                 talent = {talent}
                 onClose = {onClose}
                 status="ready"
@@ -94,9 +92,7 @@ contractContent = {generatedContract}
           </TabsContent>
         </Tabs>
         <TemplateManager
-        <TemplateManager,
-=======
-onClose;
+        <TemplateManager onClose;
 talent;
 clientName;
 onContractGenerated}: ContractBuilderProps) {
@@ -167,7 +163,6 @@ status="ready";
 </TabsContent>;
 </Tabs>;
 <TemplateManager;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 isOpen = {templateManagerOpen}
 onClose = {() => setTemplateManagerOpen(false)}
 onSelectTemplate = {handleLoadTemplate}

@@ -68,10 +68,7 @@ return (
 <div className="absolute inset-0" style={{
 backgroundImag;  e: `radial-gradient(circle at 25% 75%, currentColo; r; 1p; x; transparent 1p; x)`,
 backgroundSiz; e: "50px 50px"}} />;
-<<<<<<< HEAD
 </div>
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 </div>;
 
 {/* Floating decorative elements */}

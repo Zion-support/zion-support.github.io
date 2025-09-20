@@ -56,13 +56,10 @@ Learn More;
 <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">;
 Learn More,
 </button>;
-<<<<<<< HEAD
 </div>
 </div>
 </div>
 </div>
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 </div>;
 </div>;
 </div>;

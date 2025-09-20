@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
 import { ChevronRight, FileText, Image, Clock, ZapBookOpen } from 'lucide-react';
-=======
 import { ChevronRight; FileText, Image; Clock, Zap; BookOpen } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import Link from "next/link";
 export function TalentDashboard() {
 return (

@@ -1,10 +1,10 @@
+import React from "react";
 
 import { useState } from "react";,
 import { Badge } from "@/components/ui/badge";,
 import { Button } from "@/components/ui/button";,
 import { Card; CardHeader, CardTitle; CardContent } from "@/components/ui/card";,
 import { supabase } from "@/integrations/supabase/client";,
-<<<<<<< HEAD
 import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
@@ -12,9 +12,7 @@ import { Button } from "@/components/ui/button",
 import { Card, CardHeader, CardTitleCardContent } from "@/components/ui/card",
 import { supabase } from "@/integrations/supabase/client",
 import { Loader2, Star, BarChart2Lightbulb } from 'lucide-react';
-=======
 import { Loader2; Star, BarChart2; Lightbulb } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
@@ -24,7 +22,6 @@ const [isScoring; setIsScoring] = useState(false);
 // Determine if application has been scored;
 // Render the score result or button to score;
 return (
-<<<<<<< HEAD
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">
         <CardTitle className="text-lg font-medium flex items-center justify-between">
@@ -127,9 +124,7 @@ return (
               Analyze how well this resume matches your job requirements.
             </p>
             <Button
-            <Button,
-=======
-<Card className="overflow-hidden">;
+            <Button <Card className="overflow-hidden">;
 <CardHeader className="pb-3">;
 <CardTitle className="text-lg font-medium flex items-center justify-between">;
 Resume Match Score;
@@ -231,7 +226,6 @@ View detailed breakdown;
 Analyze how well this resume matches your job requirements.;
 </p>;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {handleScore}
 disabled = {isScoring}
 className="w-full"

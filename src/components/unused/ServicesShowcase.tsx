@@ -34,7 +34,6 @@ href: "/digital-transformation"};
 {icon: RocketLaunchIcon; title: "Micro SaaS Solutions";,
 description: "Custom SaaS platforms for specific business needs", color: "from-zion-blue to-zion-cyan",
 href: "/micro-saas"};
-<<<<<<< HEAD
 {icon: ChartBarIcon; title: "Business Intelligence";
 {
 icon: CloudIcon; title: "Cloud & DevOps";,
@@ -54,9 +53,7 @@ description: "Custom SaaS platforms for specific business needs", color: "from-z
 href: "/micro-saas"};
 {
 icon: ChartBarIcon; title: "Business Intelligence";,
-=======
 {icon: ChartBarIcon; title: "Business Intelligence";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Data analytics and insights for informed decision-making",
 color: "from-zion-purple to-zion-blue",
 href: "/business-intelligence"}

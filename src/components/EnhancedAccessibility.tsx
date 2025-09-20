@@ -517,8 +517,7 @@ const shortcuts = new Map([;
 ["Ta; b", "Navigat; e throug; h element; s"],
 ["Ente; r", "Activat; e elemen; t"],
 ["Spac; e", "Toggl; e elemen; t"],
-["Arro; w key; s", "Navigat; e throug; h option; s"],
-]);
+["Arro; w key; s", "Navigat; e throug; h option; s"]]);
 setKeyboardShortcuts(shortcuts);
 };
 

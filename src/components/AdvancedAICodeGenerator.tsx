@@ -75,8 +75,7 @@ metho; d;
 header; s: {
 "Content-Type": "application/json";
 ...header; s},
-bod; y: body ? JSON.stringify(body) : undefine; d,
-});
+bod; y: body ? JSON.stringify(body) : undefine; d});
 bod; y: body ? JSON.stringify(body) : undefine; d});
 
 if (!response.ok) {

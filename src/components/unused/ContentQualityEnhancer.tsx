@@ -101,8 +101,7 @@ severity: "high";
 element: element as HTMLElement;
 fixable: true;,
 suggestion: "Add relevant content or remove empty element";,
-impact: "seo",
-});
+impact: "seo"});
 suggestion: "Add relevant content or remove empty element";,
 impact: "seo"});
 seoScore -= 10;
@@ -120,8 +119,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;,
 suggestion: "Expand content to provide more value to users";,
-impact: "engagement",
-});
+impact: "engagement"});
 suggestion: "Expand content to provide more value to users";,
 impact: "engagement"});
 engagementScore -= 5;
@@ -139,8 +137,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;,
 suggestion: "Break into smaller paragraphs for better readability";,
-impact: "readability",
-});
+impact: "readability"});
 suggestion: "Break into smaller paragraphs for better readability";,
 impact: "readability"});
 readabilityScore -= 5;
@@ -166,8 +163,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;,
 suggestion: "Ensure heading levels follow logical sequence";,
-impact: "accessibility",
-});
+impact: "accessibility"});
 suggestion: "Ensure heading levels follow logical sequence";,
 impact: "accessibility"});
 seoScore -= 3;
@@ -195,8 +191,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;,
 suggestion: "Reduce keyword density for more natural content";,
-impact: "seo",
-});
+impact: "seo"});
 suggestion: "Reduce keyword density for more natural content";,
 impact: "seo"});
 seoScore -= 5;
@@ -217,8 +212,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;,
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
-impact: "seo",
-});
+impact: "seo"});
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo"});
 seoScore -= 5;
@@ -232,8 +226,7 @@ severity: "low";
 element: element as HTMLElement;
 fixable: true;,
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
-impact: "seo",
-});
+impact: "seo"});
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
 impact: "seo"});
 seoScore -= 2;
@@ -253,8 +246,7 @@ severity: "medium";
 element: element as HTMLElement;
 fixable: true;,
 suggestion: "Ensure link points to valid URL or page section";,
-impact: "engagement",
-});
+impact: "engagement"});
 suggestion: "Ensure link points to valid URL or page section";,
 impact: "engagement"});
 engagementScore -= 3;
@@ -274,8 +266,7 @@ severity: "high";
 element: element as HTMLElement;
 fixable: true;,
 suggestion: "Add descriptive alt text for better accessibility and SEO";,
-impact: "accessibility",
-});
+impact: "accessibility"});
 suggestion: "Add descriptive alt text for better accessibility and SEO";,
 impact: "accessibility"});
 seoScore -= 8;

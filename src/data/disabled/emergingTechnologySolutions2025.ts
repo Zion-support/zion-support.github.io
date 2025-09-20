@@ -91,12 +91,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;299 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Ethereum", "Polygon", "Solana", "React", "Node.js", "Web3.js"],
@@ -110,8 +107,7 @@ marketTrend: "Explosive growth in enterprise blockchain adoption with 80% annual
 industryFocus: ["Financial Services", "Manufacturing", "Healthcare", "Supply Chain", "Real Estate"],
 scalability: "Enterprise-grade with multi-chain support";,
 customizationLevel: "Custom blockchain solutions and smart contracts";,
-innovationLevel: "Cutting-edge Web3 and blockchain technology",
-};
+innovationLevel: "Cutting-edge Web3 and blockchain technology"};
 customizationLevel: "Custom blockchain solutions and smart contracts";,
 innovationLevel: "Cutting-edge Web3 and blockchain technology"};
 // Quantum Computing Solutions;
@@ -161,12 +157,9 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $10;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators", "Cloud quantum platforms"],
@@ -180,8 +173,7 @@ marketTrend: "Rapid advancement in quantum computing with 100% annual growth";,
 industryFocus: ["Research", "Pharmaceuticals", "Finance", "Technology", "Government"],
 scalability: "Quantum cloud infrastructure with unlimited computational power";,
 customizationLevel: "Custom quantum algorithms and applications";,
-innovationLevel: "Revolutionary quantum computing technology",
-};
+innovationLevel: "Revolutionary quantum computing technology"};
 customizationLevel: "Custom quantum algorithms and applications";,
 innovationLevel: "Revolutionary quantum computing technology"};
 // Edge Computing & IoT Solutions;
@@ -231,12 +223,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$799 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "MQTT", "React", "Python", "Edge frameworks"],
@@ -250,8 +239,7 @@ marketTrend: "Growing adoption of edge computing with 60% annual growth";,
 industryFocus: ["Smart Cities", "Manufacturing", "Healthcare", "Transportation", "Retail"],
 scalability: "Distributed edge infrastructure with unlimited device support";,
 customizationLevel: "Custom edge computing solutions and IoT integrations";,
-innovationLevel: "Advanced edge computing and IoT technology",
-};
+innovationLevel: "Advanced edge computing and IoT technology"};
 customizationLevel: "Custom edge computing solutions and IoT integrations";,
 innovationLevel: "Advanced edge computing and IoT technology"};
 // 5G & Advanced Connectivity Solutions;
@@ -301,12 +289,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$999 - $4;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["5G NR", "Network slicing", "Edge computing", "React", "Python", "Network protocols"],
@@ -320,8 +305,7 @@ marketTrend: "Rapid 5G deployment with 70% annual growth";,
 industryFocus: ["Telecommunications", "Healthcare", "Transportation", "Manufacturing", "Smart Cities"],
 scalability: "Enterprise 5G infrastructure with unlimited device support";,
 customizationLevel: "Custom 5G solutions and network configurations";,
-innovationLevel: "Cutting-edge 5G and connectivity technology",
-};
+innovationLevel: "Cutting-edge 5G and connectivity technology"};
 customizationLevel: "Custom 5G solutions and network configurations";,
 innovationLevel: "Cutting-edge 5G and connectivity technology"};
 // Augmented Reality & Virtual Reality Solutions;
@@ -371,12 +355,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Unity", "Unreal Engine", "WebXR", "React", "Three.js", "AR/VR frameworks"],
@@ -390,8 +371,7 @@ marketTrend: "Growing adoption of AR/VR in enterprise with 65% annual growth";,
 industryFocus: ["Manufacturing", "Healthcare", "Education", "Retail", "Real Estate"],
 scalability: "Multi-user AR/VR platform with unlimited content support";,
 customizationLevel: "Custom AR/VR experiences and training programs";,
-innovationLevel: "Advanced immersive technology solutions",
-};
+innovationLevel: "Advanced immersive technology solutions"};
 customizationLevel: "Custom AR/VR experiences and training programs";,
 innovationLevel: "Advanced immersive technology solutions"};
 // Robotics & Automation Solutions;
@@ -441,12 +421,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;199 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["ROS", "Computer Vision", "Machine Learning", "Python", "C++", "Robotics frameworks"],
@@ -460,8 +437,7 @@ marketTrend: "Growing adoption of robotics and automation with 55% annual growth
 industryFocus: ["Manufacturing", "Logistics", "Healthcare", "Automotive", "Electronics"],
 scalability: "Enterprise robotics platform with multi-system support";,
 customizationLevel: "Custom robotics solutions and automation workflows";,
-innovationLevel: "Advanced robotics and automation technology",
-};
+innovationLevel: "Advanced robotics and automation technology"};
 customizationLevel: "Custom robotics solutions and automation workflows";,
 innovationLevel: "Advanced robotics and automation technology"};
 // Digital Twin & Simulation Solutions;
@@ -511,12 +487,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$999 - $4;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Unity", "Unreal Engine", "Python", "React", "3D modeling", "Simulation engines"],
@@ -530,8 +503,7 @@ marketTrend: "Growing adoption of digital twins with 70% annual growth";,
 industryFocus: ["Manufacturing", "Infrastructure", "Energy", "Healthcare", "Smart Cities"],
 scalability: "Enterprise digital twin platform with unlimited system support";,
 customizationLevel: "Custom digital twin solutions and simulation models";,
-innovationLevel: "Advanced digital twin and simulation technology",
-};
+innovationLevel: "Advanced digital twin and simulation technology"};
 customizationLevel: "Custom digital twin solutions and simulation models";,
 innovationLevel: "Advanced digital twin and simulation technology"};
 // Green Technology & Sustainability Solutions;
@@ -581,12 +553,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $2;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT sensors", "Machine Learning", "React", "Python", "Analytics platforms", "Green tech APIs"],
@@ -600,8 +569,7 @@ marketTrend: "Growing demand for green technology with 50% annual growth";,
 industryFocus: ["Manufacturing", "Real Estate", "Energy", "Transportation", "Retail"],
 scalability: "Multi-organization sustainability platform";,
 customizationLevel: "Custom sustainability solutions and reporting";,
-innovationLevel: "Advanced green technology and sustainability solutions",
-}
+innovationLevel: "Advanced green technology and sustainability solutions"}
 customizationLevel: "Custom sustainability solutions and reporting";,
 innovationLevel: "Advanced green technology and sustainability solutions"}
 ];

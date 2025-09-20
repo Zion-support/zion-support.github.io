@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
 import { ChatBotPanel } from "./ChatBotPanel";
-<<<<<<< HEAD
 import { MessageSquare, Info, X } from "lucide-react";
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { Button } from '@/components/ui/button'
 import { ChatBotPanel } from './ChatBotPanel'
 import { MessageSquare, InfoX } from 'lucide-react';
-=======
 import { MessageSquare; Info, X } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/hooks/useTheme";
 export function SupportWidget() {

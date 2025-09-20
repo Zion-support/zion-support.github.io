@@ -48,7 +48,6 @@ Hire;
 </Button>;
 <Button;
 variant="outline"
-<<<<<<< HEAD
             size="sm"
             onClick = {handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -60,9 +59,7 @@ variant="outline"
       </div>
       {/* Hire Request Modal */}
       <HireRequestModal
-      <HireRequestModal,
-=======
-size="sm";
+      <HireRequestModal size="sm";
 onClick = {handleViewProfile}
 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 >;
@@ -73,7 +70,6 @@ View;
 </div>;
 {/* Hire Request Modal */}
 <HireRequestModal;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 talent = {profile}
 isOpen = {isHireModalOpen}
 onClose = {() => setIsHireModalOpen(false)}

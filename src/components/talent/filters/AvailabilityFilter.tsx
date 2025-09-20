@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { ChevronDownChevronUp } from 'lucide-react';
-=======
 import { ChevronDown; ChevronUp } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function AvailabilityFilter({ selectedAvailability toggleAvailability expanded toggleSection isMobileFilterOpen }: AvailabilityFilterProps) {
 return (
 <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -29,7 +26,6 @@ onCheckedChange={() => toggleAvailability(option.id)}
 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"              />
 <label;
 htmlFor={`availability-${option.id}`}
-<<<<<<< HEAD
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >                {option.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                htmlFor="input-
@@ -43,7 +39,6 @@ htmlFor={`availability-${option.id}`}
     </div>
   )
   toggleSection}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
-=======
 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
 >                {option.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
 htmlFor="input-;
@@ -56,9 +51,7 @@ htmlFor="input-;
 )}
 </div>;
 )
-toggleSection,
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+toggleSection}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
 }</button> {
 AVAILABILITY OPTIONS.map (option => (<div key= {
 option.id ";

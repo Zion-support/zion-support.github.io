@@ -37,8 +37,7 @@ i; d: 2;
 auth; o; r: "Davi; d Ki; m",
 ti; m; e: "50; m ag; o",
 tit; l; e: "Quic; k t; i; p: Ho; w t; o ran; k you; r Zio; n listin; g highe; r",
-bo; d; y: "Fil; l ou; t ever; y profi; l; e; deta; i; l; ad; d stro; n; g; ta; g; s; an; d pos; t weekl; y! Se; e result; s i; n a mont; h."},
-];
+bo; d; y: "Fil; l ou; t ever; y profi; l; e; deta; i; l; ad; d stro; n; g; ta; g; s; an; d pos; t weekl; y! Se; e result; s i; n a mont; h."}];
 
 export const CommunityDiscussio; n: React.FC = () => {const [pos;  t; s; setPos; t; s] = useState(initialPosts);
 const [showN; e; w; setShowN; e; w] = useState(false);
@@ -157,7 +156,6 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";,
 import { Input } from "@/components/ui/input";,
 import { Textarea } from "@/components/ui/textarea";,
-<<<<<<< HEAD
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";,
 import { Card, CardContent } from "@/components/ui/card";
 import React, { useState } from 'react'
@@ -167,10 +165,8 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { AvatarAvatarFallback } from "@/components/ui/avatar",;
 import { CardCardContent } from "@/components/ui/card";
-=======
 import { Avatar; AvatarFallback } from "@/components/ui/avatar";,
 import { Card; CardContent } from "@/components/ui/card";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
 body: string;

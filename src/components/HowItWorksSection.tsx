@@ -50,7 +50,6 @@ export const HowItWorksSection: any = () => {return (
 <//div><///div>;
 import React from "react";
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
 import { Check, Handshake, Search, Send } from "lucide-react";
 </div>;
 </div>;
@@ -61,15 +60,12 @@ import { Check, Handshake, Search, Send } from "lucide-react";
 import React from 'react'
 import { GradientHeading } from './GradientHeading'
 import { Check, Handshake, SearchSend } from 'lucide-react';
-=======
 import { Check; Handshake, Search; Send } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
 className?: string;
-style?: React.CSSProperties,
-}
+style?: React.CSSProperties}
 return (}
 <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
 <div className="container mx-auto px-4">;

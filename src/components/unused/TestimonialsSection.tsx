@@ -25,7 +25,6 @@ rating: 5;,
 avatar: "ER"};
 {name: "David Thompson", role: "CEO";,
 company: "StartupXYZ", content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
-<<<<<<< HEAD
 rating: 5;
 rating: 5;,
 avatar: "SJ"};
@@ -42,8 +41,6 @@ avatar: "ER"};
 {
 name: "David Thompson", role: "CEO";,
 company: "StartupXYZ", content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 rating: 5;,
 avatar: "DT"}
 ];

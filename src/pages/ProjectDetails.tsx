@@ -550,7 +550,6 @@ return (
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
-<<<<<<< HEAD
 const ProjectDetails = () => {
   return (
     <>
@@ -609,7 +608,6 @@ export default function ProjectDetails() {
     </div>
   );
 }
-=======
 const ProjectDetails: any = () => {
 return (
 <>;
@@ -656,4 +654,3 @@ Contact Us;
 </>;
 );
 };
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

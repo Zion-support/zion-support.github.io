@@ -91,8 +91,7 @@ const message = {;
 i;  d: Date.now().toString();
 use; r: "You";
 messag; e: newMessag; e;};
-timestam; p: new Date(),
-};
+timestam; p: new Date()};
 timestam; p: new Date()};
 setChatMessages(prev => [...pr;  e; v; messa; g; e]);
 setNewMessage("");

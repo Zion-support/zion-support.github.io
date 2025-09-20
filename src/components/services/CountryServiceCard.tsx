@@ -1,7 +1,6 @@
 import { Globe; Server, Clock; MapPin, Check } from "lucide-react";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {isPopular?: boolean}
-<<<<<<< HEAD
 export function CountryServiceCard({country,
 import { Globe, Server, Clock, MapPinCheck } from 'lucide-react';
 import { CountryPricing } from "@/data/onsiteServicePricing";
@@ -48,9 +47,7 @@ isPopular}: CountryServiceCardProps) {
       </CardContent>
       <CardFooter className='flex flex-col space-y-2'>
         <Button
-        <Button,
-=======
-export function CountryServiceCard({country;
+        <Button export function CountryServiceCard({country;
 onSelect;
 onQuote;
 isPopular}: CountryServiceCardProps) {
@@ -90,7 +87,6 @@ Typical response time: {getResponseTime(country.country)}
 </CardContent>;
 <CardFooter className="flex flex-col space-y-2">;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {() => onSelect(country)}
 className={`w-full ${
 isPopular;

@@ -9,7 +9,6 @@ onStatusChange: (applicationId: string newStatus: string) => Promise<void>;,
 onViewScore: (application: JobApplication) => void}
 // Sub-component for avatar to handle its own error state;
 return (
-<<<<<<< HEAD
     <>
       <div className='rounded-md border'>
         <Table>
@@ -71,8 +70,7 @@ variant='outline'
                       <Briefcase className='h-3 w-3 mr-1' /> Hire
                     </ClickableBadge>
                     <ApplicationActions
-                    <ApplicationActions,
-application = {application}
+                    <ApplicationActions application = {application}
                       processingId = {processingId}
                       onViewApplication = {onViewApplication}
                       onStatusChange = {onStatusChange}
@@ -85,9 +83,7 @@ application = {application}
         </Table>
       </div>
       <HireConfirmationModal
-      <HireConfirmationModal,
-=======
-<>;
+      <HireConfirmationModal <>;
 <div className="rounded-md border">;
 <Table>;
 <TableHeader>;
@@ -161,7 +157,6 @@ onStatusChange = {onStatusChange}
 </Table>;
 </div>;
 <HireConfirmationModal;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 isOpen = {hireModalOpen}
 onClose = {() => setHireModalOpen(false)}
 application = {selectedApplication |undefined}
@@ -171,7 +166,6 @@ onConfirm = {handleHireConfirmed}
 )
 /* Using Renamed AvatarPrimitive */;
 }{application.talent profile?.profile picture url && !avatarError ? (<Image src= {
-<<<<<<< HEAD
   application.talent profile.profile picture url}alt= {talentName}width= {32}//for h-8 w-8 height= {
 }{
   application.talent profile?.profile picture url && !avatarError ? (<Image src= {
@@ -179,10 +173,8 @@ onConfirm = {handleHireConfirmed}
   talentName}width= {
   32}//for h-8 w-8 height= {
   32 "
-=======
 application.talent profile.profile picture url}alt= {talentName}width= {32}//for h-8 w-8 height= {
 32 ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }//for h-8 w-8 className="rounded-full object-cover" onError= {
 () => setAvatarError (true)
 }priority= {
@@ -191,15 +183,12 @@ false ";
 }</AvatarPrimitive>)
 };";
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {applications.map ( (application) => (<TableRow key= {
-<<<<<<< HEAD
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
   application.id}> <TableCell> </div> </div> </div> </TableCell> onClick={
   () => onViewScore (application)
-=======
 application.id}> <TableCell> </div> </div> </div> </TableCell> onClick={
 () => onViewScore (application)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }> {
 application.match score ";
 }% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) ";

@@ -177,7 +177,7 @@ export, const, useAICodeGeneration = () => {
             exportContent = JSON.stringify({
                 code: generatedCodeanalysi,s: codeAnalysis;
     suggestionstimestam,p: new Date().toISOString();
-     }, null, 2),filename = 'generated-code.json',}
+     }, null, 2),filename = 'generated-code.json'}
     suggestionstimestam,p: new Date().toISOString();}, null, 2),filename = 'generated-code.json'}
         else if (format === 'md') {
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysisnull2) : 'No, analysis, available'}`,filename = 'generated-code.md'}
@@ -304,7 +304,7 @@ console.log("Promp,t: ""${prompt}");
         if (code.includes('innerHTML') || code.includes('document.write')) {
             suggestions.push({
                 id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'];
-     }),};
+     })};
                 id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'];})};
         // Best, practice, suggestions;
         if (code.includes('console.log')) {

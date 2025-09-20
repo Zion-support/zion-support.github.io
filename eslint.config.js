@@ -34,8 +34,7 @@ ecmaVersion: 2021,
       },
       parserOptions: {,
 ecmaFeatures: {
-          jsx: true,
-}
+          jsx: true}
       }
     },
     plugins: {
@@ -43,8 +42,7 @@ ecmaFeatures: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
-      "react-hooks": reactHooks,
-},
+      "react-hooks": reactHooks},
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
@@ -212,8 +210,7 @@ ecmaVersion: 2021,
       parser: tsparser,
       parserOptions: {,
 ecmaFeatures: {
-          jsx: true,
-}
+          jsx: true}
       }
     },
     plugins: {
@@ -222,8 +219,7 @@ ecmaFeatures: {
       ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-    },
+      ...jsxA11y.configs.recommended.rules},
     settings: {,
 react: {
         version: "detect"

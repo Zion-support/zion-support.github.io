@@ -15,7 +15,7 @@ function fixAllSyntaxErrors(content) {
   // Fix interface definitions
   content = content.replace(/interface (\w+) extends ([^{]+) {,/g, 'interface $1 extends $2 {');
   content = content.replace(/(\w+):\s*([^;]+);}/g, '$1: $2;\n}');
-  content = content.replace(/(\w+):\s*([^;]+);,}/g, '$1: $2;\n}');
+  content = content.replace(/(\w+):\s*([^;]+);}/g, '$1: $2;\n}');
   
   // Fix function definitions
   content = content.replace(/export function (\w+)\(\{ ([^}]+) \}: (\w+)\) {,/g, 'export function $1({ $2 }: $3) {');

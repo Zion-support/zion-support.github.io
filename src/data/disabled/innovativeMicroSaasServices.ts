@@ -628,8 +628,7 @@ roi: "400% within 8 months",
 competitors: ["Chainlink", "The Graph", "Alchemy"],
 freeTrial: true;,
 freeTrialDays: 14;,
-demoUrl: "https://demo.ziontechgroup.com/web3-automation",
-},
+demoUrl: "https://demo.ziontechgroup.com/web3-automation"},
 freeTrialDays: 14;,
 demoUrl: "https://demo.ziontechgroup.com/web3-automation"},
 
@@ -888,12 +887,9 @@ description: "Real-time business intelligence powered by AI that transforms raw 
 category: "AI & Analytics",
 subcategory: "Business Intelligence",
 price: {starter: 199;
-<<<<<<< HEAD
 professional: 499;
 enterprise: 1299;
-=======
 professional: 499;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: 1299;,
 currency: "$"},
 features: [
@@ -958,12 +954,9 @@ category: "Cybersecurity",
 subcategory: "Compliance & Governance",
 price: {
 starter: 299;
-<<<<<<< HEAD
 professional: 799;
 enterprise: 1999;
-=======
 professional: 799;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: 1999;,
 currency: "$"},
 features: [
@@ -1266,8 +1259,7 @@ roi: "500% within 12 months",
 competitors: ["IBM Quantum", "Google Quantum", "D-Wave"],
 freeTrial: true;,
 freeTrialDays: 7;,
-demoUrl: "https://demo.ziontechgroup.com/quantum-solutions",
-},
+demoUrl: "https://demo.ziontechgroup.com/quantum-solutions"},
 freeTrialDays: 7;,
 demoUrl: "https://demo.ziontechgroup.com/quantum-solutions"},
 
@@ -1507,8 +1499,7 @@ roi: "350% within 6 months",
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU"],
 freeTrial: true;,
 freeTrialDays: 21;,
-demoUrl: "https://demo.ziontechgroup.com/edge-iot",
-},
+demoUrl: "https://demo.ziontechgroup.com/edge-iot"},
 freeTrialDays: 21;,
 demoUrl: "https://demo.ziontechgroup.com/edge-iot"},
 
@@ -1572,8 +1563,7 @@ roi: "450% within 10 months",
 competitors: ["Meta Horizon", "Microsoft Mesh", "Spatial"],
 freeTrial: true;,
 freeTrialDays: 14;,
-demoUrl: "https://demo.ziontechgroup.com/metaverse-hub",
-},
+demoUrl: "https://demo.ziontechgroup.com/metaverse-hub"},
 freeTrialDays: 14;,
 demoUrl: "https://demo.ziontechgroup.com/metaverse-hub"},
 
@@ -1632,8 +1622,7 @@ roi: "300% within 8 months",
 competitors: ["Watershed", "Normative", "Persefoni"],
 freeTrial: true;,
 freeTrialDays: 30;,
-demoUrl: "https://demo.ziontechgroup.com/green-tech",
-},
+demoUrl: "https://demo.ziontechgroup.com/green-tech"},
 freeTrialDays: 30;,
 demoUrl: "https://demo.ziontechgroup.com/green-tech"},
 
@@ -1692,8 +1681,7 @@ roi: "400% within 6 months",
 competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
 freeTrial: true;,
 freeTrialDays: 14;,
-demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh",
-},
+demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh"},
 freeTrialDays: 14;,
 demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh"},
 
@@ -1871,10 +1859,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}
-},
-
-},
-}},
+}}}},
 technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
 integrations: ["Slack", "Microsoft Teams", "Jira", "Trello", "Asana"],
 compliance: ["GDPR", "SOC 2"],
@@ -2103,12 +2088,9 @@ integrations: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "Azure Digita
 compliance: ["ISO 27001", "Industry-specific standards", "Data privacy regulations"],
 roi: "450% within 10 months",
 competitors: ["Siemens", "GE Digital", "PTC", "Microsoft Azure"],
-<<<<<<< HEAD
 freeTrial: true;
 freeTrialDays: 21;
-=======
 freeTrial: true;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 freeTrialDays: 21;,
 demoUrl: "https://demo.ziontechgroup.com/digital-twin"},
 
@@ -3531,8 +3513,7 @@ marketPrice: "$899 - $4;999/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"},
-}
+website: "https://ziontechgroup.com"}}
 website: "https://ziontechgroup.com"}}
 }
 ];
@@ -4325,8 +4306,7 @@ roi: "350% within 6 months",
 competitors: ["Jasper", "Copy.ai", "Writesonic", "Canva"],
 freeTrial: true;,
 freeTrialDays: 14;,
-demoUrl: "https://demo.ziontechgroup.com/ai-content",
-}
+demoUrl: "https://demo.ziontechgroup.com/ai-content"}
 freeTrialDays: 14;,
 demoUrl: "https://demo.ziontechgroup.com/ai-content"}
 ];

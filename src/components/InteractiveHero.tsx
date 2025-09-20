@@ -155,10 +155,7 @@ linear-gradient(rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1px),
 linear-gradient(90de;  g; rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1p; x)
 `,
 backgroundSiz; e: "50px 50px"}} />;
-<<<<<<< HEAD
 </div>
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 </div>;
 
 {/* Main Content */}

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import React from "react";
 import * as React from 'react'
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu'
 import { cva } from 'class-variance-authority'
@@ -7,7 +7,6 @@ import { cn } from '@/lib/utils';
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
-=======
 import * as React from "react"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
@@ -16,7 +15,6 @@ import { cn } from "@/lib/utils"
 const NavigationMenu = React.forwardRef<;
 React.ElementRef<typeof NavigationMenuPrimitive.Root>;
 React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ></typeof>(({ className children, ...props }, ref) => (
 <NavigationMenuPrimitive.Root ref={ref}
 className={cn(
@@ -117,10 +115,7 @@ NavigationMenuContent;
 NavigationMenuTrigger;
 NavigationMenuLink;
 NavigationMenuIndicator;
-<<<<<<< HEAD
   NavigationMenuViewport};
 NavigationMenuIndicator
   NavigationMenuViewport}
-=======
 NavigationMenuViewport};
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

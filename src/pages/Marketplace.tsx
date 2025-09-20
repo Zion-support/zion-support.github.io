@@ -15,7 +15,7 @@ import { logInfo; logErrorToProduction } from "@/utils/productionLogger";
 export interface MarketplaceProps {
 // All props removed - component now fetches data independently;
 }
-// Market insights component,}
+// Market insights component}
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 // though ProductCard will reset its state in .finally() regardless.;
 throw error;
@@ -113,7 +113,7 @@ t ("marketplace.hero title") ";
 t ("marketplace.hero subtitle") ";
 }</p> </motion.div> <div className="grid grid-cols-1 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;,
 length: 12 ;
-}) .map ( (, i) => (<SkeletonCard key= {i ;
+}) .map ( ( i) => (<SkeletonCard key= {i ;
 }/>) ) ;
 }</div> </div>) ;
 }//Error state with retry if (error && products.length === 0) {";
@@ -205,7 +205,7 @@ opacity: 1 ;
 }";
 }> <div className="grid grid-cols-1 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;,
 length: 4 ;
-}) .map ( (, i) => (<SkeletonCard key= {`loading-$ {;
+}) .map ( ( i) => (<SkeletonCard key= {`loading-$ {;
 i ;
 }` ;
 }/>) ) ;
@@ -283,7 +283,6 @@ Contact Us;
 </Link>;
 </div>;
 </>;
-<<<<<<< HEAD
   );
 import React from 'react';
 
@@ -297,7 +296,5 @@ export default function Marketplace() {
     </div>
   );
 }
-=======
 );
 }}}}}}}}}}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

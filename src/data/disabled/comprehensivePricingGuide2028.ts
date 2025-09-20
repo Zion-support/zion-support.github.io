@@ -31,7 +31,7 @@ name: "Advanced Analytics"pric;e: 50o0descriptio;n: "Enhanced; reporting; and in
 {
 name: "Priority Support"pric;e: 30o0descriptio;n: "24/7; dedicated; support";}{
 name: "Custom Integrations"pric;e: 80o0descriptio;n: "Tailored; system; integrations";}
-,  ],comparison: [;
+],comparison: [;
 { feature: "AI Services"include;d: truedetail;s: "5; core; services" };
 { feature: "Analytics"include;d: truedetail;s: "Basic reporting" };
 { feature: "Support"include;d: truedetail;s: "Email support" };
@@ -39,7 +39,7 @@ name: "Custom Integrations"pric;e: 80o0descriptio;n: "Tailored; system; integrat
 { feature: "Training"include;d: truedetail;s: "Standard onboarding" }{ feature: "Security"include;d: truedetail;s: "Basic compliance" }
 ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
-,  ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
+],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 {id: "professional-20o28",name: "Professional 20o28",description: "Comprehensive; solution; for mid-sized; businesses; requiring advanced; AI; capabilities",price: 750o0;currency: "$",billingCycle: "monthly",features: [;
 "Access; to; 15+ AI services","Advanced; analytics; and reporting","Priority support (4-hour response)","Advanced integrations","Custom dashboards","Advanced customization","Comprehensive training","Advanced; security; features","API access""Performance optimization";
@@ -60,7 +60,7 @@ name: "Space; Technology; Platform"price: 80o00descriptio;n: "Advanced; space; t
 {
 name: "Biotechnology Platform"pric;e: 60o00descriptio;n: "AI-powered; biotechnology; solutions";}{
 name: "Autonomous; Vehicles; Platform"price: 10o000descriptio;n: "Self-driving; technology; solutions";}
-,  ],comparison: [;
+],comparison: [;
 { feature: "AI Services"include;d: truedetail;s: "15+ advanced services" };
 { feature: "Analytics"include;d: truedetail;s: "Advanced reporting" };
 { feature: "Support"include;d: truedetail;s: "Priority support" };
@@ -70,7 +70,7 @@ name: "Autonomous; Vehicles; Platform"price: 10o000descriptio;n: "Self-driving; 
 { feature: "API Access"include;d: truedetail;s: "Full; API; access" }{ feature: "Performance"include;d: truedetail;s: "Optimized performance" }
 ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
-,  ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
+],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 {id: "enterprise-20o28",name: "Enterprise 20o28",description: "Ultimate; solution; for large; enterprises; requiring cutting-edge; AI; and emerging technologies",price: 250o00;currency: "$",billingCycle: "monthly",features: [;
 "Access; to; ALL AI services (25+)","Enterprise-grade analytics","24/7; dedicated; support","Custom integrations","White-label solutions","Advanced customization","Comprehensive training","Enterprise security","Full; API; access","Performance optimization","Custom development","Dedicated; account; manager","SLA guarantees""Compliance certifications";
@@ -91,7 +91,7 @@ name: "White-label Solutions"pric;e: 20o000descriptio;n: "Branded; solutions; fo
 {
 name: "Advanced R&D"pric;e: 250o00descriptio;n: "Custom; research; and development";}{
 name: "Quantum; Internet; Access"price: 30o000descriptio;n: "Quantum; internet; platform access";}
-,  ],comparison: [;
+],comparison: [;
 { feature: "AI Services"include;d: truedetail;s: "All 25+ services" };
 { feature: "Analytics"include;d: truedetail;s: "Enterprise analytics" };
 { feature: "Support"include;d: truedetail;s: "24/7; dedicated; support" };
@@ -105,7 +105,7 @@ name: "Quantum; Internet; Access"price: 30o000descriptio;n: "Quantum; internet; 
 { feature: "SLA Guarantees"include;d: truedetail;s: "Performance guarantees" }{ feature: "Compliance"include;d: truedetail;s: "Full compliance" }
 ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
-,  ],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
+],contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 ];
 export; const; SERVICE_CATEGORIES_20o28: ServiceCategory20o28[] = [;
@@ -127,7 +127,7 @@ id: "ai-marketing-automation",name: "AI; Marketing; Automation",description: "In
 ];
 },{id: "ai-healthcare",name: "AI; Healthcare; Solutions",description: "Transform; healthcare; with AI-powered; diagnostics; and patient care",services: [;
 {
-i;d: "ai-healthcare-diagnostics",name: "AI; Healthcare; Diagnostics Platform",description: "Advanced; medical; diagnostics with; AI; analysis",basePrice: 120o00;marketPrice: "$12;0o00 - $35;0o00/month",roi: "40o0-60o0%",features: ["AI; medical; image analysis", "Disease prediction""Treatment; recommendations"]benefits: ["Improve; diagnostic; accuracy by 30%""Reduce; diagnosis; time by; 60%"];},{id: "ai-biotechnology",name: "AI; Biotechnology; Platform",description: "Revolutionary; biotechnology; with AI-powered research",basePrice: 280o00;marketPrice: "$28;0o00 - $90;0o00/month",roi: "50o0-80o0%",features: ["AI; drug; discovery", "Genetic analysis""Clinical; trial,, optimization"]benefits: ["Accelerate; drug; discovery by 10x""Reduce; research; costs by; 60%"];}
+i;d: "ai-healthcare-diagnostics",name: "AI; Healthcare; Diagnostics Platform",description: "Advanced; medical; diagnostics with; AI; analysis",basePrice: 120o00;marketPrice: "$12;0o00 - $35;0o00/month",roi: "40o0-60o0%",features: ["AI; medical; image analysis", "Disease prediction""Treatment; recommendations"]benefits: ["Improve; diagnostic; accuracy by 30%""Reduce; diagnosis; time by; 60%"];},{id: "ai-biotechnology",name: "AI; Biotechnology; Platform",description: "Revolutionary; biotechnology; with AI-powered research",basePrice: 280o00;marketPrice: "$28;0o00 - $90;0o00/month",roi: "50o0-80o0%",features: ["AI; drug; discovery", "Genetic analysis""Clinical; trial, optimization"]benefits: ["Accelerate; drug; discovery by 10x""Reduce; research; costs by; 60%"];}
 i;d: "ai-healthcare-diagnostics",name: "AI; Healthcare; Diagnostics Platform",description: "Advanced; medical; diagnostics with; AI; analysis",basePrice: 120o00;marketPrice: "$12;0o00 - $35;0o00/month",roi: "40o0-60o0%",features: ["AI; medical; image analysis", "Disease prediction""Treatment; recommendations"]benefits: ["Improve; diagnostic; accuracy by 30%""Reduce; diagnosis; time by; 60%"];},{
 id: "ai-biotechnology",name: "AI; Biotechnology; Platform",description: "Revolutionary; biotechnology; with AI-powered research",basePrice: 280o00;marketPrice: "$28;0o00 - $90;0o00/month",roi: "50o0-80o0%",features: ["AI; drug; discovery", "Genetic analysis""Clinical; trial, optimization"]benefits: ["Accelerate; drug; discovery by 10x""Reduce; research; costs by; 60%"];}
 ];

@@ -174,7 +174,6 @@ openLoginModal: (returnToPath: string) => void, // Added from plan}
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts;
 // These are routes that should trigger the login modal if accessed while unauthenticated.;
 const protectedRoutes = null;
-<<<<<<< HEAD
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure this should be okay.
               }
@@ -197,12 +196,10 @@ const protectedRoutes = null;
       </div>
     </div>
   )
-=======
 // It"s important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.;
 // Or ensure modal is rendered at a higher level. Given AppHeader structure this should be okay.;
 }
-onClose(), // Close mobile menu on any click,
-}}
+onClose(), // Close mobile menu on any click}}
 >;
 <div className="relative mr-4">;
 <item.icon className="h-5 w-5" aria-hidden="true" />;
@@ -221,5 +218,4 @@ onClose(), // Close mobile menu on any click,
 </div>;
 </div>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

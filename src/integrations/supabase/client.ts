@@ -37,22 +37,17 @@ user: () => ({ id: "1", email: "user@example.com" }),
 onAuthStateChange: (callback: any) => {
 
 return { data: { subscription: { unsubscribe: () => {} } } };
-<<<<<<< HEAD
 }},
 from: (table: string) => ({
 select: (columns: string) => ({
-=======
-},
-},
+}},
 from: (table: string) => ({,
 select: (columns: string) => ({,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 eq: (column: string; value: any) => ({,
 single: async () => ({ data: null; error: null }),
 execute: async () => ({ data: [], error: null })}),
 execute: async () => ({ data: [], error: null })}),
 insert: (data: any) => ({,
-<<<<<<< HEAD
 execute: async () => ({ data: null; error: null })}),
 update: (data: any) => ({
 eq: (column: string; value: any) => ({,
@@ -61,22 +56,14 @@ delete: () => ({
 eq: (column: string; value: any) => ({,
 execute: async () => ({ data: null; error: null })})})}),
 storage: {
-=======
-execute: async () => ({ data: null; error: null }),
-}),
+execute: async () => ({ data: null; error: null })}),
 update: (data: any) => ({,
 eq: (column: string; value: any) => ({,
-execute: async () => ({ data: null; error: null }),
-}),
-}),
+execute: async () => ({ data: null; error: null })})}),
 delete: () => ({,
 eq: (column: string; value: any) => ({,
-execute: async () => ({ data: null; error: null }),
-}),
-}),
-}),
+execute: async () => ({ data: null; error: null })})})}),
 storage: {,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 from: (bucket: string) => ({,
 upload: async (path: string; file: File) => ({ data: null; error: null }),
 download: async (path: string) => ({ data: null; error: null }),

@@ -1,10 +1,10 @@
+import React from "react";
 import { useState; useEffect } from "react";
 import { useRouter } from "next/router";
 import { GradientHeading } from "@/components/GradientHeading";,
 import { ProductListingCard } from "@/components/ProductListingCard";,
 import { Button } from "@/components/ui/button";,
 import { Input } from "@/components/ui/input";
-<<<<<<< HEAD
 import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
 import { import, {, Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { useStateuseEffect } from "react";
@@ -15,10 +15,8 @@ import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input";
 import { logInfologErrorToProduction } from '@/utils/productionLogger';
 import { import, {, Search, Filter, LayoutGrid, ListStar } from 'lucide-react';
-=======
 import { logInfo; logErrorToProduction } from "@/utils/productionLogger";
 import { import, {, Search; Filter, LayoutGrid; List, Star } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { toast } from "@/hooks/use-toast";
 import { captureException } from "@/utils/sentry";
 interface PriceRange {
@@ -44,7 +42,6 @@ return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <di
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) )
 }</SelectContent> </Select> </div>) ";
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value= {selectedAvailability}onValueChange= {
-<<<<<<< HEAD
 return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {
   filter.label}</label> </div>) )
 }</div> </div> Brand </label> <Select value= {
@@ -55,26 +52,21 @@ return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <di
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value= {
   selectedAvailability}onValueChange= {
   (value: string) => setSelectedAvailability (value) "
-=======
 (value: string) => setSelectedAvailability (value) ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) )
 }</SelectContent> </Select> </div>) ";
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label>;
 }aria-pressed= {selectedRating === rating}className= {
-<<<<<<< HEAD
 }aria-pressed= {
   selectedRating === rating}className= {
   ` {
   selectedRating === rating <Star key= {
   i "
 }className="h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) "
-=======
 ` {
 selectedRating === rating <Star key= {
 i ";
 }className="h-3 w-3 fill-zion-cyan text-zion-cyan" />) ) ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }<span className="ml-1" >& Up</span> </div>)
 }</Button>) )
 }</div> </div> <Button clearCategories ()
@@ -89,7 +81,6 @@ isLoading ? (<div className= {
 i ";
 }className="rounded-lg overflow-hidden border border-zion-blue-light" > </div> </div> </div>) )
 }</div> > {filteredListings.map ( (listing) => (<ProductListingCard key= {
-<<<<<<< HEAD
   listing.id}listing= {listing}view= {view}onRequestQuote= {handleRequestQuote}detailBasePath= {detailBasePath}/>) ) "
 }</div> > {
   filteredListings.map ( (listing) => (<ProductListingCard key= {
@@ -98,9 +89,7 @@ i ";
   view}onRequestQuote= {
   handleRequestQuote}detailBasePath= {
   detailBasePath}/>) ) "
-=======
 listing.id}listing= {listing}view= {view}onRequestQuote= {handleRequestQuote}detailBasePath= {detailBasePath}/>) ) ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</div> No listings found </h3> <p className="text-zion-slate-light mb-6" > Try adjusting your filters or search query </p> <Button clearCategories ()
 setCurrentPriceFilter ([0 priceRange.max])
 setSelectedRating (null)

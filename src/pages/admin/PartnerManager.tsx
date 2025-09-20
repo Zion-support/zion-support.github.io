@@ -18,7 +18,6 @@ interface PartnerProfile {commission_rate?: number}
 import React from 'react';
 
 export default function PartnerManager() {
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
@@ -27,7 +26,5 @@ export default function PartnerManager() {
       </div>
     </div>
   );
-=======
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

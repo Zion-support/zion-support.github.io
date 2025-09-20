@@ -1,11 +1,8 @@
 import { formatDistanceToNow } from "date-fns";
-<<<<<<< HEAD
 import { Calendar, User, FileText, BarChart } from "lucide-react";
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileTextBarChart } from 'lucide-react';
-=======
 import { Calendar; User, FileText; BarChart } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 export function ApplicationRow({
 return (
@@ -41,7 +38,6 @@ priority={false}              />;
 {formatDistanceToNow(new Date(application.created_at), {
 addSuffix: true;
 })}
-<<<<<<< HEAD
           </span>
         </div>
       </TableCell>
@@ -75,9 +71,7 @@ href={application.resume.file_url |'#'}
       </TableCell>
       <TableCell className='text-right'>
         <ApplicationActions
-        <ApplicationActions,
-=======
-</span>;
+        <ApplicationActions </span>;
 </div>;
 </TableCell>;
 <TableCell>;
@@ -110,7 +104,6 @@ rel="noopener noreferrer";
 </TableCell>;
 <TableCell className="text-right">;
 <ApplicationActions;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 application = {application}
 processingId = {processingId}
 onViewApplication = {onViewApplication}

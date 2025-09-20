@@ -1,8 +1,7 @@
-import React from "react,,
-,;
+import React from "react,;
 import { SEO  } from "@/components/SEO";
 import React from "react, import { SEO  } from "@/components/SEO",;
-export default function ChatAssistant(props: any) {return (,
+export default function ChatAssistant(props: any) {return (
 <div className="min-h-screen bg-white">,
 <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />,
 <div className="container mx-auto px-4 py-20">,
@@ -77,16 +76,14 @@ aria-live="polite";
 <div className="flex flex-wrap justify-center gap-2">;
 {starterQuestions.map((q idx) => (<Button;
 key = {idx}
-<<<<<<< HEAD
                       variant="outline"
                       className="text-xs"
                       onClick = {() => handleSendMessage(q)}
-                  {starterQuestions.map((q idx,) => (
-                    <Button,
-key = {idx}
+                  {starterQuestions.map((q idx) => (
+                    <Button key = {idx}
                       variant="outline"
                       className="text-xs"
-                      onClick = {(,) => handleSendMessage(q)}
+                      onClick = {() => handleSendMessage(q)}
                     >
                       {q}
                     </Button>
@@ -131,9 +128,7 @@ variant="outline"
                 Cancel
               </Button>
               <Button
-              <Button,
-=======
-variant="outline"
+              <Button variant="outline"
 className="text-xs"
 onClick = {() => handleSendMessage(q)}
 >;
@@ -180,7 +175,6 @@ className="text-white border-zion-purple hover:bg-zion-purple/10"
 Cancel;
 </Button>;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {handleModalSendConfirm}
 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
 >;
@@ -194,9 +188,6 @@ Send;
 )
 }
 };
-<<<<<<< HEAD
 }
 ;
-=======
 ;)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

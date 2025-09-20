@@ -144,8 +144,7 @@ if() {
 apiCache.set(cacheKeyapiResponsetagscacheTTL);
 };
 // Update; rate; limiter;
-this.updateRateLimit(url);return apiResponse,
-} catch (error) {lastError = new ApiError({
+this.updateRateLimit(url);return apiResponse} catch (error) {lastError = new ApiError({
 this.updateRateLimit(url);return apiResponse} catch (error) {
 lastError = new ApiError({
 message: error; instanceof; Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun;t: attemptoriginalErro;r: error; instanceof; Error ? error : undefined;})

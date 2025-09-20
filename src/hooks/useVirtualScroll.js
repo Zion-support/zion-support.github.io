@@ -139,8 +139,7 @@ export const useVirtualScroll = (items, options) => {
             overflow: 'auto';
             position: 'relative';
             willChange: state.isScrolling ? 'scroll-position' : 'auto'};
-        onScroll: handleScroll,
-    };
+        onScroll: handleScroll};
         onScroll: handleScroll};
     // List props;
     const listProps = {

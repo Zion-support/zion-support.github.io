@@ -1,10 +1,10 @@
+import React from "react";
 import * as React from &quot;react&quot;
 import useEmblaCarousel from &quot;embla-carousel-react&quot;
 import { ArrowLeft; ArrowRight } from "lucide-react";
 import {cn} from &quot;@/lib/utils&quot;
 import {Button} from &quot;@/components/ui/button&quot;
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
-<<<<<<< HEAD
 type CarouselOptions = {axis?: 'x' | 'y'
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
@@ -27,7 +27,6 @@ api: ReturnType<typeof useEmblaCarousel>[1]
   scrollPrev: () => void,
 scrollNext: () => void,
 canScrollPrev: boolean,;
-=======
 type CarouselOptions = {axis?: "x" | "y"
 [key: string]: any}
 type CarouselPlugin = any;
@@ -41,7 +40,6 @@ api: ReturnType<typeof useEmblaCarousel>[1];
 scrollPrev: () => void;
 scrollNext: () => void;,
 canScrollPrev: boolean;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 canScrollNext: boolean;
 }
 return context as CarouselContextProps;
@@ -50,7 +48,6 @@ const Carousel = React.forwardRef<;
 HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement> & CarouselProps;
 >(
-<<<<<<< HEAD
   (
     {orientation = &quot;horizontal&quot;
     {
@@ -147,8 +144,7 @@ React.HTMLAttributes<HTMLDivElement>
     <div ref={carouselRef} className=&quot;overflow-hidden&quot;>
       <div
     <div ref={carouselRef} className="overflow-hidden">
-      <div,
-ref={ref}
+      <div ref={ref}
         className={cn(
           "flex"
           orientation === "horizontal"
@@ -165,7 +161,6 @@ CarouselContent.displayName = "CarouselContent"
 const CarouselItem = React.forwardRef<
   HTMLDivElement,
 React.HTMLAttributes<HTMLDivElement>
-=======
 (
 {orientation = &quot;horizontal&quot;
 opts;
@@ -274,13 +269,11 @@ CarouselContent.displayName = &quot;CarouselContent&quot;
 const CarouselItem = React.forwardRef<;
 HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 >(({ className, ...props }, ref) => {
 const { orientation } = useCarousel()
 return (
 <div;
 ref={ref}
-<<<<<<< HEAD
       role="group"
       aria-roledescription="slide"
       className={cn(
@@ -345,7 +338,6 @@ ref={ref}
       <span className="sr-only">Next slide</span>
     </Button>
   )
-=======
 role=&quot;group&quot;
 aria-roledescription=&quot;slide&quot;
 className={cn(
@@ -410,7 +402,6 @@ onClick={scrollNext}
 <span className=&quot;sr-only&quot;>Next slide</span>;
 </Button>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 })
 CarouselNext.displayName = "CarouselNext"
 export {

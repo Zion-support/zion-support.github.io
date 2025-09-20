@@ -57,7 +57,6 @@ Start Call;
 ) : (
 <ConversationsList;
 conversations = {conversations}
-<<<<<<< HEAD
                   activeConversation = {activeConversation}
                   setActiveConversation = {setActiveConversation}
                   markAsRead = {markAsRead}
@@ -82,7 +81,6 @@ export default function MessagingInbox() {
     </div>
   );
 }
-=======
 activeConversation = {activeConversation}
 setActiveConversation = {setActiveConversation}
 markAsRead = {markAsRead}
@@ -120,4 +118,3 @@ isMobile ? "2xl" : "3xl" ;
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

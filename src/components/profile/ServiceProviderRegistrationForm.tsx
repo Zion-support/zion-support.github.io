@@ -51,15 +51,12 @@ const { user } = useAuth();
 const [isSubmitting; setIsSubmitting] = useState(false);
 const [serviceTags; setServiceTags] = useState<string[]>([]);
 const [isGenerating; setIsGenerating] = useState(false);
-<<<<<<< HEAD
 const [generatedContent; setGeneratedContent] = useState<{ summary: string;
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [serviceTags, setServiceTags] = useState<string[]>([]);
 const [isGenerating, setIsGenerating] = useState(false);
 const [generatedContent, setGeneratedContent] = useState<{ summary: string;,
-=======
 const [generatedContent; setGeneratedContent] = useState<{ summary: string;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 services: string[] } | null>(null);
 const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
 
@@ -76,8 +73,7 @@ hourlyRate: "";
 availability: "available";,
 enhancedProfile: false;,
 website: "";
-},
-});
+}});
 enhancedProfile: false;,
 website: "";}});
 
@@ -98,7 +94,6 @@ import { Textarea } from "@/components/ui/textarea";,
 import { Switch } from "@/components/ui/switch";,
 import { Badge } from "@/components/ui/badge";,
 import { Separator } from "@/components/ui/separator";
-<<<<<<< HEAD
 import { logWarn, logErrorToProduction } from "@/utils/productionLogger";
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -112,9 +107,7 @@ import { Switch } from "@/components/ui/switch",
 import { Badge } from "@/components/ui/badge",;
 import { Separator } from "@/components/ui/separator";
 import { logWarnlogErrorToProduction } from '@/utils/productionLogger';
-=======
 import { logWarn; logErrorToProduction } from "@/utils/productionLogger";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import {
 return (
 <div className="max-w-4xl mx-auto p-4 md:p-6">;
@@ -475,7 +468,6 @@ Your base hourly or project rate;
 />;
 <FormField;
 control={form.control}
-<<<<<<< HEAD
                     name='availability'
                     render={({ field }: { field: any }) => (
                       <FormItem className='space-y-4'>
@@ -565,7 +557,6 @@ type='submit'
     </div>
   );
   )
-=======
 name="availability";
 render={({ field }: { field: any }) => (
 <FormItem className="space-y-4">;
@@ -654,7 +645,6 @@ disabled={isSubmitting}                >;
 </Card>;
 </div>;
 );
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 };
 };
 
@@ -707,7 +697,6 @@ title: formData.title;
 bio: formData.bio;,
 services: serviceTags;,
 location: formData.location;
-<<<<<<< HEAD
 //Generate enhanced profile with AI return}//Call the Supabase Edge Function const {data error}= await supabase.functions.invoke ('service-profile-enhancer', {body: {,
 services: serviceTags;,
 location: formData.location;,
@@ -718,13 +707,11 @@ providerData: {
   name: formData.name title: formData.title bio: formData.bio  services: serviceTags location: formData.location})
 }else {'
   //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content')
-=======
 //Generate enhanced profile with AI return}//Call the Supabase Edge Function const {data error}= await supabase.functions.invoke ("service-profile-enhancer", {body: {,
 providerData: {,
 name: formData.name title: formData.title bio: formData.bio  services: serviceTags location: formData.location})
 }else {";
 //Fallback for mock/development mode logWarn ("Mock AI response - using fallback content")
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 setGeneratedContent ({
 }catch (error: any) {";
 logErrorToProduction ("Error generating enhanced profile:", {
@@ -1391,7 +1378,6 @@ if (error) throw error;
 error: serviceError ";
 }= await supabase .from ("service profiles") if (serviceError) throw serviceError;
 */ //Send notification email if available if (userEmail && values.enhancedProfile) {
-<<<<<<< HEAD
   try {'
   await supabase.functions.invoke ('send-email', {
   body: {'
@@ -1400,17 +1386,14 @@ error: serviceError ";
 }Zion Marketplace</p>
 }//Continue with submission even if email fails}//Redirect to service provider dashboard or profile page setTimeout ( () => {'
   router.push ('/service-dashboard')
-=======
 try {";
 await supabase.functions.invoke ("send-email", {
 body: {";
 <p>Your service provider profile has been successfully created and published.</p> <p>We"ve enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px padding-top: 20px border-top: 1px solid #eee, "> <p style="color: #666  font-size: 12px; ">© $ {
 new Date () .getFullYear ()
 }Zion Marketplace</p>;
-}//Continue with submission even if email fails,
-}//Redirect to service provider dashboard or profile page setTimeout ( () => {";
+}//Continue with submission even if email fails}//Redirect to service provider dashboard or profile page setTimeout ( () => {";
 router.push ("/service-dashboard")
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }, 1500)
 }catch (error: any) {";
 logErrorToProduction ("Error creating profile:", {
@@ -1427,18 +1410,15 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> </div> </div> /> </AspectRatio>) : (<div className=" flex items-center justify-center h-full"> <UserRound className=" h-10 w-10 text-zion-slate opacity-50"/> </div>) ";
 }</div> <label className=" flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className=" mr-2 h-4 w-4"/> <span>Upload Photo</span> <input /> </label> </div> <p className=" text-sm text-zion-slate"> For best results use an image at least 400x400 pixels in JPG PNG or GIF format. </p> </div> </div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className=" text-zion-slate-light">About Your Services</FormLabel> <FormControl> <Textarea </FormDescription> </FormItem>)
 }/> {
-<<<<<<< HEAD
   /* AI Enhancement Option */ "
 }<FormField AI Profile Enhancement </FormLabel> <FormDescription className=" text-zion-slate-light"> Let AI help optimize your service description for better visibility and client engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) "
 }/> <Button type=" button"variant=" outline"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick={generateEnhancedProfile}disabled= {isGenerating}> </Button> </div>) "
 }/> <Button type=" button"variant=" outline"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick={
   generateEnhancedProfile}disabled= {
   isGenerating}> </Button> </div>) "
-=======
 /* AI Enhancement Option */ ";
 }<FormField AI Profile Enhancement </FormLabel> <FormDescription className=" text-zion-slate-light"> Let AI help optimize your service description for better visibility and client engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) ";
 }/> <Button type=" button"variant=" outline"className=" border-zion-purple text-zion-purple hover:bg-zion-purple/10"onClick={generateEnhancedProfile}disabled= {isGenerating}> </Button> </div>) ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }AI-Generated Content </h4> <Button type=" button"size=" sm"className=" bg-zion-purple hover:bg-zion-purple-dark text-white"onClick={
 applyGeneratedContent ";
 }> <Check className=" mr-1 h-3 w-3"/> Apply </Button> </div> <div className=" space-y-4"> <div> </div> {

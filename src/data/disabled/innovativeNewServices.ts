@@ -89,12 +89,9 @@ marketPrice: "$4;999 - $15;000/month",
 roi: "300-500%";
 innovationLevel: "Revolutionary";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -147,12 +144,9 @@ marketPrice: "$2;999 - $8;999/month",
 roi: "200-350%";
 innovationLevel: "Advanced";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -205,12 +199,9 @@ marketPrice: "$1;999 - $5;999/month",
 roi: "150-300%";
 innovationLevel: "Innovative";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -263,12 +254,9 @@ marketPrice: "$2;499 - $7;999/month",
 roi: "250-400%";
 innovationLevel: "Advanced";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -321,12 +309,9 @@ marketPrice: "$3;999 - $12;999/month",
 roi: "300-500%";
 innovationLevel: "Revolutionary";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -379,12 +364,9 @@ marketPrice: "$4;999 - $15;000/month",
 roi: "400-600%";
 innovationLevel: "Advanced";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -437,12 +419,9 @@ marketPrice: "$3;499 - $9;999/month",
 roi: "200-350%";
 innovationLevel: "Innovative";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -495,12 +474,9 @@ marketPrice: "$1;999 - $5;999/month",
 roi: "150-300%";
 innovationLevel: "Innovative";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -553,12 +529,9 @@ marketPrice: "$4;999 - $15;000/month",
 roi: "300-500%";
 innovationLevel: "Advanced";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -611,12 +584,9 @@ marketPrice: "$1;499 - $4;999/month",
 roi: "200-350%";
 innovationLevel: "Innovative";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -669,12 +639,9 @@ marketPrice: "$2;499 - $7;999/month",
 roi: "250-400%";
 innovationLevel: "Advanced";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -727,12 +694,9 @@ marketPrice: "$3;999 - $12;999/month",
 roi: "300-500%";
 innovationLevel: "Advanced";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -785,12 +749,9 @@ marketPrice: "$1;999 - $5;999/month",
 roi: "200-350%";
 innovationLevel: "Innovative";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -843,12 +804,9 @@ marketPrice: "$2;999 - $8;999/month",
 roi: "250-400%";
 innovationLevel: "Advanced";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
@@ -901,12 +859,9 @@ marketPrice: "$1;999 - $5;999/month",
 roi: "200-350%";
 innovationLevel: "Innovative";
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 }

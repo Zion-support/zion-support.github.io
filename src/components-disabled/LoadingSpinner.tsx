@@ -1,6 +1,5 @@
 import React from "react";
-interface LoadingSpinnerProps {size?: "sm" | "md" | "lg",
-}
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg"}
 text?: string;}
 interface LoadingSpinnerProps {
 size?: "sm" | "md" | "lg",

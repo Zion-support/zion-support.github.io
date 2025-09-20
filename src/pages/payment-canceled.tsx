@@ -31,7 +31,6 @@ onClick={() => router.push("/dashboard")} // Changed to router.push className="b
 export default function PaymentCanceled() {
 const router = useRouter(); // Changed from navigate;
 return (
-<<<<<<< HEAD
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>
       <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>
         <div className='inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center'>
@@ -65,7 +64,6 @@ export default function PaymentCanceled() {
     </div>
   );
 }
-=======
 <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">;
 <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
 <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">;
@@ -100,4 +98,3 @@ Return to Dashboard;
 </div>;
 )
 }}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

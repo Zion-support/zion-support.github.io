@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React from "react";
 
 interface Service {
 id: string;,
 name: string;
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 export default function LandingPage() {
 const { t } = useTranslation();
@@ -39,7 +36,6 @@ className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-au
 {toolsFeatures.map((feature index) => (
 <Link;
 key={index}
-<<<<<<< HEAD
                 href={feature.link}
                 className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
                 <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
@@ -97,7 +93,6 @@ className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}
       </div>
     </div>
   );
-=======
 href={feature.link}
 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"              >
 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">;
@@ -149,5 +144,4 @@ className={`${isRTL ? "ml-0 mr-2 rotate-180" : "ml-2"} h-4 w-4`}
 <FloatingCTA />;
 </div>;
 );
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

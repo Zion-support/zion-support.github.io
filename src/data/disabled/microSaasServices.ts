@@ -3,7 +3,7 @@ import React from "react";
 export interface MicroSaasService {id: string; title: string; description: string; category: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; marketPrice: string; website: string; contactEmail: string; tags: string[], aiScore: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; featured: boolean; location: string; availability: string; author: {,
 name: string; id: string;
 }
-avatarUrl?: string;,}
+avatarUrl?: string;}
 verified: boolean; verified: boolean; verified: boolean};
 images: string[], createdAt: string;
 }
@@ -52,8 +52,7 @@ id: "zion-tech-group",
 avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
 verified: true},
 images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-createdAt: "2024-01-15T10:00:00.000Z",
-},
+createdAt: "2024-01-15T10:00:00.000Z"},
 {id: "ai-content-generator",
 createdAt: "2024-01-15T10:00:00.000Z"},
 {
@@ -93,8 +92,7 @@ name: "Zion Tech Group",
 id: "zion-tech-group",
 verified: true},
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
-createdAt: "2024-01-20T14:30:00.000Z",
-},
+createdAt: "2024-01-20T14:30:00.000Z"},
 {id: "ai-data-analytics",
 createdAt: "2024-01-20T14:30:00.000Z"},
 {
@@ -134,8 +132,7 @@ name: "Zion Tech Group",
 id: "zion-tech-group",
 verified: true},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-createdAt: "2024-02-01T09:15:00.000Z",
-},
+createdAt: "2024-02-01T09:15:00.000Z"},
 {id: "ai-code-assistant",
 createdAt: "2024-02-01T09:15:00.000Z"},
 {
@@ -175,8 +172,7 @@ name: "Zion Tech Group",
 id: "zion-tech-group",
 verified: true},
 images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
-createdAt: "2024-01-10T11:45:00.000Z",
-},
+createdAt: "2024-01-10T11:45:00.000Z"},
 {id: "ai-image-generator",
 createdAt: "2024-01-10T11:45:00.000Z"},
 {
@@ -254,8 +250,7 @@ name: "Zion Tech Group",
 id: "zion-tech-group",
 verified: true},
 images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
-createdAt: "2024-01-25T13:10:00.000Z",
-},
+createdAt: "2024-01-25T13:10:00.000Z"},
 {id: "cybersecurity-monitoring",
 createdAt: "2024-01-25T13:10:00.000Z"},
 {
@@ -295,8 +290,7 @@ name: "Zion Tech Group",
 id: "zion-tech-group",
 verified: true},
 images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
-createdAt: "2024-02-10T08:30:00.000Z",
-},
+createdAt: "2024-02-10T08:30:00.000Z"},
 {id: "devops-automation",
 createdAt: "2024-02-10T08:30:00.000Z"},
 {
@@ -336,8 +330,7 @@ name: "Zion Tech Group",
 id: "zion-tech-group",
 verified: true},
 images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
-createdAt: "2024-01-30T15:45:00.000Z",
-},
+createdAt: "2024-01-30T15:45:00.000Z"},
 {id: "data-backup-recovery",
 createdAt: "2024-01-30T15:45:00.000Z"},
 {

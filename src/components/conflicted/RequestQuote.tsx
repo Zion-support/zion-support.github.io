@@ -105,12 +105,9 @@ phone: "";
 company: "";
 projectType: "";
 budget: "";
-<<<<<<< HEAD
 timeline: "";
 description: "";
-=======
 timeline: "";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "";,
 urgency: "medium"});
 setSubmissionStatus("idle");

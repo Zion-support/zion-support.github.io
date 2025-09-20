@@ -78,12 +78,9 @@ integrations: ["Jupyter Notebooks", "Python", "Qiskit", "Cirq", "PennyLane", "Cu
 compliance: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "FISMA", "NIST"],
 website: "https://ziontechgroup.com/quantum-computing-as-a-service";
 contact: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;,
@@ -135,12 +132,9 @@ integrations: ["Intel Loihi", "IBM TrueNorth", "BrainChip Akida", "Custom Hardwa
 compliance: ["ISO 27001", "SOC2", "GDPR", "NIST", "IEEE Standards"],
 website: "https://ziontechgroup.com/neuromorphic-computing-platform";
 contact: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;,
@@ -192,12 +186,9 @@ integrations: ["DNA Sequencers", "Synthesis Equipment", "Bioinformatics Tools", 
 compliance: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "Biosafety Standards"],
 website: "https://ziontechgroup.com/dna-computing-storage-platform";
 contact: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 90;,
@@ -249,12 +240,9 @@ integrations: ["Fiber Optic Networks", "Optical Equipment", "Telecom Systems", "
 compliance: ["ISO 27001", "SOC2", "GDPR", "NIST", "Telecom Standards"],
 website: "https://ziontechgroup.com/photonic-computing-platform";
 contact: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;,
@@ -306,12 +294,9 @@ integrations: ["Laboratory Equipment", "Biological Systems", "Medical Devices", 
 compliance: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "Biosafety Standards", "FDA"],
 website: "https://ziontechgroup.com/biological-computing-platform";
 contact: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 75;,
@@ -363,12 +348,9 @@ integrations: ["Robot Operating System", "Industrial Robots", "IoT Devices", "Cl
 compliance: ["ISO 13482", "ISO 27001", "SOC2", "GDPR", "Safety Standards"],
 website: "https://ziontechgroup.com/swarm-robotics-platform";
 contact: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;,
@@ -420,12 +402,9 @@ integrations: ["Medical Devices", "Research Equipment", "Gaming Systems", "Assis
 compliance: ["FDA 510(k)", "CE Mark", "ISO 13485", "HIPAA", "GDPR", "ISO 27001"],
 website: "https://ziontechgroup.com/brain-computer-interface-platform";
 contact: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 120;,
@@ -477,12 +456,9 @@ integrations: ["Laboratory Equipment", "DNA Synthesis", "Sequencing Platforms", 
 compliance: ["ISO 27001", "SOC2", "GDPR", "Biosafety Standards", "FDA Guidelines"],
 website: "https://ziontechgroup.com/synthetic-biology-platform";
 contact: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;,

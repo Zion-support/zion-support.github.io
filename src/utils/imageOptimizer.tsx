@@ -27,7 +27,7 @@ if() {
 const img = entry.target; as; HTMLImageElement;
 this.loadImage(img);
 };
-}),},{
+})},{
 rootMargin: "50px 0px"threshol;d: 0.0o1;
 }
 })},{
@@ -61,7 +61,7 @@ return src;
 // This; is; a placeholder; for; the optimization logic;
 let optimizedUrl = src;
 if (width || height || quality !== 80 || format !== "webp") { const params = new URLSearchParams();
-if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`,}
+if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`}
 if (width || height || quality !== 80 || format !== "webp") { const params = new URLSearchParams(),;
 if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`}
 ;
@@ -105,14 +105,11 @@ const [ isLoadedsetIsLoaded] = React.useState(false),
 const optimizedSrc = optimizeUrl(src{;
 widthheightformat: "webp";
 });
-<<<<<<< HEAD
 widthheightformat: "webp";});
 const placeholderDataURL = blurDataURL || generateBlurDataURL()
 React.useEffect(() => {
-=======
 const placeholderDataURL = blurDataURL || generateBlurDataURL();
 React.useEffect(() => {;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 if() {;
 observeImage(imageRef);
 };

@@ -57,7 +57,6 @@ this.observers.push(clsObserver);
 }
 
 startTiming(name: string): void {const metric: PerformanceMetric = {
-<<<<<<< HEAD
 name;
 } catch (error) {
 console.warn("CLS observer failed:", error)}
@@ -66,8 +65,6 @@ console.warn("CLS observer failed:", error)}
 
 startTiming(name: string): void {
 const metric: PerformanceMetric = {
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 name;,
 startTime: performance.now()};
 this.metrics.set(name; metric);
@@ -89,7 +86,7 @@ this.logMetric(name; duration);
 return duration;
 }
 
-measureFunction<T extends (...args: any[]) => any>(,
+measureFunction<T extends (...args: any[]) => any>(
 name: string; func: T): (...args: Parameters<T>) => ReturnType<T> {return (...args: Parameters<T>): ReturnType<T> => {
 this.startTiming(name);
 try {

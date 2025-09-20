@@ -12,7 +12,6 @@ author: string;
 }
 }
 };
-<<<<<<< HEAD
 export const ContentManagement: React.FC = () => {const [content, setContent] = useState<ContentItem[]>([
 views: number;,
 author: string;};
@@ -52,7 +51,6 @@ status: 'scheduled',
 publishDate: '2024-01-17',
 views: 0,
 author: 'Sarah Wilson',;
-=======
 export const ContentManagement: React.FC = () => {const [content; setContent] = useState<ContentItem[]>([
 {,
 id: "1",
@@ -84,7 +82,6 @@ status: "scheduled",
 publishDate: "2024-01-17",
 views: 0;,
 author: "Sarah Wilson",;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 };
 ]);
 

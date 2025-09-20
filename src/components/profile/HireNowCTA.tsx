@@ -23,7 +23,6 @@ message: string;
 export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {const [isFormOpen; setIsFormOpen] = useState(false);
 const [formData; setFormData] = useState<HireData>({
 projectDescription: "";
-<<<<<<< HEAD
 budget: "";
 startDate: "";
 onHire?: (data: HireData) => void;};
@@ -37,9 +36,7 @@ const [isFormOpen, setIsFormOpen] = useState(false);
 const [formData, setFormData] = useState<HireData>({
 projectDescription: "";
 budget: "";
-=======
 budget: "";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 startDate: "";,
 message: ""});
 const handleSubmit: any = (e: React.FormEvent) => {;
@@ -49,12 +46,9 @@ onHire(formData);
 }
 // Reset form and close;
 setFormData({projectDescription: "";
-<<<<<<< HEAD
 budget: "";
 startDate: "";
-=======
 budget: "";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 startDate: "";,
 message: ""});
 setIsFormOpen(false);

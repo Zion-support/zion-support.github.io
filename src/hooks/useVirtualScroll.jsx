@@ -16,12 +16,12 @@ export, const, useVirtualScroll = (items, options) => {
             startIndexendIndexvisibleCount;
             offsetY: startIndex * itemHeight;
      };
-    }, [state.scrollTop, containerHeight, itemHeight,, overscanitems.length]),// Update, virtual, items when, parameters, change;
+    }, [state.scrollTop, containerHeight, itemHeight, overscanitems.length]),// Update, virtual, items when, parameters, change;
     useEffect(() => {
         const { startIndexendIndex } = virtualScrollParams,setState(prev => ({
             ...prev,startIndex,endIndexvisibleItems: items.slice(startIndexendIndex + 1)totalHeigh,t: items.length * itemHeight;
      }));
-    }, [virtualScrollParams,, itemsitemHeight]),// Handle, scroll, events;
+    }, [virtualScrollParams, itemsitemHeight]),// Handle, scroll, events;
             offsetY: startIndex * itemHeight;};
     }, [state.scrollTop, containerHeight, itemHeight, overscanitems.length]),// Update, virtual, items when, parameters, change;
     useEffect(() => {

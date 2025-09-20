@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { ArrowLeft } from 'lucide-react';
 interface ProfileErrorStateProps {
-error: string | null,}
+error: string | null}
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
 return (
 <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;

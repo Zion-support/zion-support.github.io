@@ -1,14 +1,11 @@
 // Test setup file for Jest;
 import "@testing-library/jest-dom"
 // Mock window.matchMedia,;
-<<<<<<< HEAD
 // Mock window.matchMedia,
 Object.defineProperty(window, 'matchMedia', {;
   writable: true;
-=======
 Object.defineProperty(window, "matchMedia", {;
 writable: true;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 value: jest.fn().mockImplementation(query => ({,
 matches: false;
 media: query;,
@@ -53,11 +50,8 @@ return}
 originalWarn.call(console, ...args)
 }
 })
-<<<<<<< HEAD
 afterAll(() => {console.error = originalError,
 afterAll(() => {
   console.error = originalError,
-=======
 afterAll(() => {console.error = originalError;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 console.warn = originalWarn})

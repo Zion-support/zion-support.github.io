@@ -1,11 +1,8 @@
 import { BadgeCheck } from "lucide-react";
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeaderCardTitle } from "@/components/ui/card";
-=======
 import { Card; CardContent, CardHeader; CardTitle } from "@/components/ui/card";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export interface Achievement {
 achieved: boolean;
 }

@@ -1,3 +1,4 @@
+import React from "react";
 import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
 import { useStat, e, useEffect } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';

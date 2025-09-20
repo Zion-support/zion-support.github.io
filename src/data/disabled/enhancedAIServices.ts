@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface AIService {id: string; title: string; description: string; category: string; pricing: {,}
+export interface AIService {id: string; title: string; description: string; category: string; pricing: {}
 monthly: number; yearly: number; custom: string; currency: string; pricingModel: string};
 features: string[], benefits: string[];,
 useCases: string[], targetAudience: string[];,
@@ -70,8 +70,7 @@ support: [
 link: "https://ziontechgroup.com/ai-chatbot-platform",
 badge: "Popular",
 icon: "💬",
-image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500",
-},
+image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500"},
 {id: "ai-content-generation-suite",
 image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500"},
 {
@@ -122,8 +121,7 @@ support: [
 ],
 link: "https://ziontechgroup.com/ai-content-generation-suite",
 icon: "✍️",
-image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500",
-},
+image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500"},
 {id: "ai-image-generation-platform",
 image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500"},
 {
@@ -174,8 +172,7 @@ support: [
 ],
 link: "https://ziontechgroup.com/ai-image-generation-platform",
 icon: "🎨",
-image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-},
+image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"},
 {id: "ai-predictive-analytics",
 image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"},
 {
@@ -227,8 +224,7 @@ support: [
 link: "https://ziontechgroup.com/ai-predictive-analytics",
 badge: "Featured",
 icon: "🔮",
-image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
-},
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"},
 {id: "ai-process-automation",
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"},
 {
@@ -279,8 +275,7 @@ support: [
 ],
 link: "https://ziontechgroup.com/ai-process-automation",
 icon: "⚙️",
-image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-},
+image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"},
 {id: "ai-customer-insights-platform",
 image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"},
 {
@@ -331,8 +326,7 @@ support: [
 ],
 link: "https://ziontechgroup.com/ai-customer-insights-platform",
 icon: "👥",
-image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
-},
+image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"},
 {id: "ai-voice-assistant-platform",
 image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"},
 {
@@ -383,8 +377,7 @@ support: [
 ],
 link: "https://ziontechgroup.com/ai-voice-assistant-platform",
 icon: "🎤",
-image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-},
+image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"},
 {id: "ai-data-quality-platform",
 image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"},
 {
@@ -435,8 +428,7 @@ support: [
 ],
 link: "https://ziontechgroup.com/ai-data-quality-platform",
 icon: "🧹",
-image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
-},
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"},
 {id: "ai-translation-platform",
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"},
 {
@@ -487,8 +479,7 @@ support: [
 ],
 link: "https://ziontechgroup.com/ai-translation-platform",
 icon: "🌍",
-image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
-},
+image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"},
 {id: "ai-recommendation-engine",
 image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"},
 {

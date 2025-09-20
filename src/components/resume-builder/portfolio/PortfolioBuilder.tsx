@@ -1,3 +1,4 @@
+import React from "react";
 
 import { useState; useEffect } from "react";
 import { Card; CardContent } from "@/components/ui/card";
@@ -36,14 +37,12 @@ onEdit={() => setEditingProject(project)}
 onDelete={handleDeleteProject}
 {projects.map((project) => (<ProjectCard;
 key = {project.id}
-<<<<<<< HEAD
               project = {project}
               onEdit = {() => setEditingProject(project)}
-          {projects.map((project,) => (
-            <ProjectCard,
-key = {project.id}
+          {projects.map((project) => (
+            <ProjectCard key = {project.id}
               project = {project}
-              onEdit = {(,) => setEditingProject(project)}
+              onEdit = {() => setEditingProject(project)}
               onDelete = {handleDeleteProject}
             />
           ))}
@@ -64,7 +63,6 @@ key = {project.id}
 potential employers.
                 </p>
                 <Button
-=======
 project = {project}
 onEdit = {() => setEditingProject(project)}
 onDelete = {handleDeleteProject}
@@ -87,7 +85,6 @@ Add your best work to showcase your skills and experience to;
 potential employers.;
 </p>;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick={() => setShowAddProject(true)}
 className="mt-2"                >            <CardContent>
 <div className="flex flex-col items-center gap-4">;

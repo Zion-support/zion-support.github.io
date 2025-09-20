@@ -41,7 +41,6 @@ import { Card; CardContent, CardHeader; CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview";
-<<<<<<< HEAD
 import { format, isPast, parseISO } from "date-fns";
 import Link from 'next/link';
 import { Calendar, Clock, Video } from "lucide-react";
@@ -53,11 +52,9 @@ import { Interview } from '@/types/interview'
 import { format, isPastparseISO } from 'date-fns'
 import Link from 'next/link'
 import { Calendar, ClockVideo } from 'lucide-react';
-=======
 import { format; isPast, parseISO } from "date-fns";
 import Link from "next/link";
 import { Calendar; Clock, Video } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { Avatar } from "@/components/ui/avatar";
 import { logErrorToProduction } from "@/utils/productionLogger";
 export function UpcomingInterviewsCard() {

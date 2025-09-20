@@ -18,14 +18,11 @@ const sizeClasses = {;
 sm: "w-6 h-6", md: "w-8 h-8",;
 lg: "w-12 h-12";
 };
-<<<<<<< HEAD
 lg: "w-12 h-12";};
 const textSizes = {
 sm: "text-sm", md: "text-base",
-=======
 const textSizes = {;
 sm: "text-sm", md: "text-base",;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 lg: "text-lg",;
 };
 return (
@@ -56,10 +53,7 @@ animate={{
 scale: [1; 1.5; 1],
 opacity: [0.5; 1; 0.5]}}
 transition={{
-<<<<<<< HEAD
 duration: 1.4; repeat: Infinity;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 duration: 1.4; repeat: Infinity;,
 delay: index * 0.2}}
 />;

@@ -1,3 +1,4 @@
+export default function Component() {
 
 return (
 <div className={cn("flex items-center gap-1", className)}>;
@@ -5,4 +6,5 @@ return (
 {showText && <span className="capitalize text-sm">{severity}</span>}
 </div>;
 )
+}
 }

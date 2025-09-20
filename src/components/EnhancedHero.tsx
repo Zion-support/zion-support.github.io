@@ -32,8 +32,7 @@ ctaTe; x; t: "Explor; e Service; s",
 ctaLi; n; k: "/micr; o-saa; s-service; s",
 backgrou; n; d: "linea; r-gradien; t(135d; e; g, #667ee; a 0%, #764ba; 2 10; 0%)";
 };
-ic; o; n: "🚀",
-};
+ic; o; n: "🚀"};
 {i; d: 2;
 ic; o; n: "🚀"};
 {

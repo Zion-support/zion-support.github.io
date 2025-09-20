@@ -81,12 +81,9 @@ return baseStyles[variant];
 
 const getSizeStyles: any = () => {const sizeStyles = {;
 sm: "px-3 py-1.5 text-sm";
-<<<<<<< HEAD
 md: "px-4 py-2 text-base";
 lg: "px-6 py-3 text-lg";
-=======
 md: "px-4 py-2 text-base";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 lg: "px-6 py-3 text-lg";,
 xl: "px-8 py-4 text-xl"};
 return sizeStyles[size];
@@ -119,12 +116,9 @@ className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-tr
 initial={{ x: "-100%" }}
 animate={{ x: "100%" }}
 transition={{
-<<<<<<< HEAD
 duration: 2;
 repeat: Infinity;
-=======
 duration: 2;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;

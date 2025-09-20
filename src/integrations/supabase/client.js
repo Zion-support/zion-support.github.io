@@ -5,7 +5,6 @@ const createMockSupabaseClient = () => ({
         persistSession: true;
         autoRefreshToken: true;
         storage: supabaseStorageAdapter;
-    },
-});
+    }});
         storage: supabaseStorageAdapter;}});
 export const supabase = createMockSupabaseClient();

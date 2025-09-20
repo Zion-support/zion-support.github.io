@@ -41,7 +41,7 @@ exclusive rewards!;
 <Button onClick={() => setLoginOpen(true)} size="lg">              Join Now to Start Earning;
 </Button>;
 </div>;
-<Button onClick={(,) => setLoginOpen(true)} size="lg">;
+<Button onClick={() => setLoginOpen(true)} size="lg">;
 <Button onClick={() => setLoginOpen(true)} size="lg">;
 Join Now to Start Earning;
 </Button>;
@@ -98,7 +98,6 @@ What you can redeem your points for;
 {upcomingRewards.map((reward index) => (
 <div;
 key={index}
-<<<<<<< HEAD
                     className='flex items-center justify-between p-3 rounded-lg border'
                   >                    <div>
                       <h4 className='font-medium'>{reward.title}</h4>
@@ -170,7 +169,6 @@ export default function Points() {
           <CardContent className='space-y-4'>
             {earningOpportunities.map((opportunity index) => (
               <div
-=======
 className="flex items-center justify-between p-3 rounded-lg border"
 >                    <div>;
 <h4 className="font-medium">{reward.title}</h4>;
@@ -252,7 +250,6 @@ More ways to boost your point balance;
 <CardContent className="space-y-4">;
 {earningOpportunities.map((opportunity index) => (
 <div;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key={index}
 className="flex items-start gap-3 p-3 rounded-lg border"
 >;

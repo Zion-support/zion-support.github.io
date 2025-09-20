@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React { useEffect useState } from 'react'
 import { supabase } from '@/utils/supabase/client'
@@ -11,7 +10,6 @@ import type {User as SupabaseUser,
 AuthChangeEvent
   Session} from '@supabase/supabase-js'
   Session } from '@supabase/supabase-js'
-=======
 "use client";
 import React { useEffect useState } from "react"
 import { supabase } from "@/utils/supabase/client"
@@ -23,9 +21,8 @@ import { useRouter } from "next/navigation"
 import type {User as SupabaseUser;
 AuthChangeEvent;
 Session} from "@supabase/supabase-js";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface UserProfileProps {
-onUserChange?: (user: SupabaseUser | null) => void,}
+onUserChange?: (user: SupabaseUser | null) => void}
 export default function UserProfile({ onUserChange }: UserProfileProps) {
 const [user; setUser] = useState<SupabaseUser | null>(null)
 const [loading; setLoading] = useState(true)
@@ -34,7 +31,6 @@ useEffect(() =></SupabaseUser> {;
 // Get initial session;
 const getInitialSession = async () => {
 const {
-<<<<<<< HEAD
       data: { subscription }
     } = supabase.auth.onAuthStateChange(
       (event: AuthChangeEvent session: Session | null) => {
@@ -116,7 +112,6 @@ const {
     </Card>;
     </Card>
   );
-=======
 data: { session }
 } = await supabase.auth.getSession()
 setUser(session?.user ?? null)
@@ -206,4 +201,3 @@ Sign Out;
 </CardContent>;
 </Card>;
 );}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

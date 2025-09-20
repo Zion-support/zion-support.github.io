@@ -1,3 +1,4 @@
+import React from "react";
 
 import { useState } from "react";
 import { Briefcase; Star, User } from "lucide-react";
@@ -15,12 +16,9 @@ onSelect: (userType: "serviceProvider" | "talent" | "client") => void;,
 selectedType: string | null;
 export function UserTypeSelection({
 }
-<<<<<<< HEAD
-  onSelect,}
+  onSelect}
   onSelect,
-=======
-onSelect,}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+onSelect}
 selectedType}: UserTypeSelectionProps) {
 const userTypes: UserTypeOption[] = [
 {

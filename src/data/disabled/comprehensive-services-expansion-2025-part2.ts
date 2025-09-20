@@ -138,17 +138,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$399-1; 29
 competitors: ["Multichain", "Stargate", "Hop Protocol"],
 roi: "600% within 12 months", setupTime: "1-2 weeks";,
 integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
-freeTier: false; trialPeriod: "7 days",
-};
-<<<<<<< HEAD
+freeTier: false; trialPeriod: "7 days"};
 {id: 2; name: "Decentralized Identity Platform";
 category: "Identity Management", pricing: "Professional";
 freeTier: false; trialPeriod: "7 days"};
 {
 id: 2; name: "Decentralized Identity Platform";,
-=======
 {id: 2; name: "Decentralized Identity Platform";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Identity Management", pricing: "Professional";,
 description: "Self-sovereign identity platform built on blockchain technology for secure; privacy-preserving digital identity management",
 price: 249; pricingModel: "monthly";,
@@ -175,10 +171,7 @@ tags: ["Decentralized Identity", "Privacy", "Blockchain", "Authentication"],
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/decentralized-identity",
-<<<<<<< HEAD
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$249-799/month";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$249-799/month";,
 competitors: ["Microsoft", "IBM", "Sovrin"],
 roi: "400% within 10 months", setupTime: "2-3 weeks";,
@@ -215,9 +208,7 @@ website: "https://ziontechgroup.com/ai-soc-platform",
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$20; 000-60; 000/project",
 responseTime: "30 minutes", sla: "99.99% uptime";,
 certifications: ["CISSP", "CISM", "GCIH", "GCFA"],
-deliveryTime: "8-10 weeks", support: "24/7",
-};
-<<<<<<< HEAD
+deliveryTime: "8-10 weeks", support: "24/7"};
 {id: 2; name: "Quantum-Safe Cryptography";
 category: "Cryptography", description: "Post-quantum cryptography solutions to protect against future quantum computing threats to current encryption standards";
 responseTime: "30 minutes", sla: "99.99% uptime";,
@@ -225,9 +216,7 @@ certifications: ["CISSP", "CISM", "GCIH", "GCFA"],
 deliveryTime: "8-10 weeks", support: "24/7"};
 {
 id: 2; name: "Quantum-Safe Cryptography";,
-=======
 {id: 2; name: "Quantum-Safe Cryptography";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Cryptography", description: "Post-quantum cryptography solutions to protect against future quantum computing threats to current encryption standards";,
 hourlyRate: 200; projectRate: 30000; features: [
 "Post-quantum algorithms",
@@ -253,10 +242,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/quantum-safe-cryptography",
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$30; 000-80; 000/project",
-<<<<<<< HEAD
 responseTime: "4 hours", sla: "99.9% uptime";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 responseTime: "4 hours", sla: "99.9% uptime";,
 certifications: ["Cryptography", "Security", "Quantum Computing"],
 deliveryTime: "12-16 weeks", support: "Business hours"}
@@ -289,10 +275,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/ai-devops-automation",
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$18; 000-50; 000/project",
-<<<<<<< HEAD
 responseTime: "6 hours", sla: "99.5% uptime";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 responseTime: "6 hours", sla: "99.5% uptime";,
 certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
 deliveryTime: "6-8 weeks", support: "Business hours"}
@@ -468,10 +451,7 @@ tags: ["Circular Economy", "Sustainability", "Waste Reduction", "Resource Optimi
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/circular-economy-platform",
-<<<<<<< HEAD
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$299-999/month";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$299-999/month";,
 competitors: ["Ellen MacArthur Foundation", "Circularity Capital", "Circle Economy"],
 roi: "250% within 12 months", setupTime: "2-3 weeks";,

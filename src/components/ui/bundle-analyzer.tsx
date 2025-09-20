@@ -4,7 +4,6 @@ import { Card; CardContent, CardHeader; CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-<<<<<<< HEAD
 import { AlertTriangle, Package, Zap } from "lucide-react";
 import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -13,10 +12,8 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, PackageZap } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 import { AlertTriangle; Package, Zap } from "lucide-react";
 import { logErrorToProduction } from "@/utils/productionLogger";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface BundleInfo {totalSize: number;
 gzippedSize: number;
 chunkCount: number;
@@ -30,7 +27,6 @@ cached: boolean;
 export function BundleAnalyzer() {
 }
 if (!shouldShow) {}
-<<<<<<< HEAD
 if (!shouldShow) {
     return null}
   if (!isVisible) {
@@ -114,7 +110,6 @@ variant='ghost'
                 <div className='space-y-1'>
                   {chunks.map((chunk index) => (
                     <div
-=======
 return null}
 if (!isVisible) {
 return (
@@ -197,7 +192,6 @@ className="h-6 w-6 p-0"              >
 <div className="space-y-1">;
 {chunks.map((chunk index) => (
 <div;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key={chunk.name}
 className="flex justify-between items-center text-xs"
 >;

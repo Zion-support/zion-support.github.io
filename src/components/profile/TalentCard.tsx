@@ -1,13 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-<<<<<<< HEAD
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card';
 import { Star, MapPin, Clock, ArrowRightCheckCircle2 } from 'lucide-react';
-=======
 import { Star; MapPin, Clock; ArrowRight, CheckCircle2 } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 isAuthenticated: boolean;
 }
 export function TalentCard({
@@ -94,19 +91,15 @@ className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`}
 <div className="flex flex-wrap gap-2">;
 {skills.map((skill index) => (<span;
 key={index}
-<<<<<<< HEAD
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >          <div className="mt-4">
             <div className="flex flex-wrap gap-2">
               {skills.map((skill index) => (
                 <span
-              {skills.map((skill index,) => (
-                <span,
-=======
-className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"                >          <div className="mt-4">
+              {skills.map((skill index) => (
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"                >          <div className="mt-4">
 <div className="flex flex-wrap gap-2">;
 {skills.map((skill index) => (
 <span;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key = {index}
 className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
 {skill}

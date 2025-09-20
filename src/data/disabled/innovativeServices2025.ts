@@ -58,8 +58,7 @@ email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "Machine Learning", "RPA", "Business Intelligence"],
 estimatedDelivery: "2-4 weeks";,
-supportLevel: "premium",
-};
+supportLevel: "premium"};
 {id: "quantum-neural-network-platform";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
@@ -96,9 +95,7 @@ email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Quantum Computing", "Neural Networks", "Quantum Algorithms", "AI"],
 estimatedDelivery: "6-8 weeks";,
-supportLevel: "enterprise",
-};
-<<<<<<< HEAD
+supportLevel: "enterprise"};
 {id: "blockchain-defi-solutions";
 title: "Blockchain DeFi Solutions";
 email: "kleber@ziontechgroup.com";,
@@ -108,9 +105,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise"};
 {
 id: "blockchain-defi-solutions";
-=======
 {id: "blockchain-defi-solutions";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Blockchain DeFi Solutions";,
 description: "Comprehensive blockchain and DeFi platform for financial services; smart contracts; and decentralized applications.",
 category: "Blockchain & DeFi";
@@ -139,9 +134,7 @@ email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Ethereum", "Solana", "Smart Contracts", "DeFi Protocols"],
 estimatedDelivery: "4-6 weeks";,
-supportLevel: "premium",
-};
-<<<<<<< HEAD
+supportLevel: "premium"};
 {id: "iot-data-analytics-platform";
 title: "IoT Data Analytics Platform";
 email: "kleber@ziontechgroup.com";,
@@ -151,9 +144,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium"};
 {
 id: "iot-data-analytics-platform";
-=======
 {id: "iot-data-analytics-platform";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "IoT Data Analytics Platform";,
 description: "Advanced IoT platform with real-time data analytics; predictive maintenance; and intelligent automation.",
 category: "IoT & Analytics";
@@ -182,9 +173,7 @@ email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT", "Machine Learning", "Big Data", "Cloud Computing"],
 estimatedDelivery: "3-5 weeks";,
-supportLevel: "standard",
-};
-<<<<<<< HEAD
+supportLevel: "standard"};
 {id: "ai-cybersecurity-automation";
 title: "AI Cybersecurity Automation";
 email: "kleber@ziontechgroup.com";,
@@ -194,9 +183,7 @@ estimatedDelivery: "3-5 weeks";,
 supportLevel: "standard"};
 {
 id: "ai-cybersecurity-automation";
-=======
 {id: "ai-cybersecurity-automation";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "AI Cybersecurity Automation";,
 description: "Intelligent cybersecurity platform that automatically detects; prevents; and responds to threats using AI.",
 category: "Cybersecurity";
@@ -225,8 +212,7 @@ email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI", "Machine Learning", "Cybersecurity", "Automation"],
 estimatedDelivery: "4-6 weeks";,
-supportLevel: "premium",
-}
+supportLevel: "premium"}
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI", "Machine Learning", "Cybersecurity", "Automation"],

@@ -70,11 +70,9 @@ export default function Services() {,
 									<Clock className=\"h-4 w-4\" />,
 									<span>2-4 weeks delivery</span>
 								</div>,
-								<Link,
-									href=\"/contact\",
+								<Link href=\"/contact\",
 									className=\"inline-flex items-center text-sm font-semibold text-blue-600 hover: text-blue-500 transition-colors group\",
-									aria-label=\"Get started with AI services\",
-								>,
+									aria-label=\"Get started with AI services\">,
 									Get started with AI,
 									<ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform\" />
 								</Link>
@@ -117,11 +115,9 @@ export default function Services() {,
 									<Clock className=\"h-4 w-4\" />,
 									<span>4-8 weeks delivery</span>
 								</div>,
-								<Link,
-									href=\"/contact\",
+								<Link href=\"/contact\",
 									className=\"inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group\",
-									aria-label=\"Get started with cloud services\",
-								>,
+									aria-label=\"Get started with cloud services\">,
 									Get started with Cloud,
 									<ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform\" />
 								</Link>
@@ -164,11 +160,9 @@ export default function Services() {,
 									<Clock className=\"h-4 w-4\" />,
 									<span>3-6 weeks delivery</span>
 								</div>,
-								<Link,
-									href=\"/contact\",
+								<Link href=\"/contact\",
 									className=\"inline-flex items-center text-sm font-semibold text-purple-600 hover: text-purple-500 transition-colors group\",
-									aria-label=\"Get started with cybersecurity services\",
-								>,
+									aria-label=\"Get started with cybersecurity services\">,
 									Get started with Security,
 									<ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform\" />
 								</Link>
@@ -211,11 +205,9 @@ export default function Services() {,
 									<Clock className=\"h-4 w-4\" />,
 									<span>6-12 weeks delivery</span>
 								</div>,
-								<Link,
-									href=\"/contact\",
+								<Link href=\"/contact\",
 									className=\"inline-flex items-center text-sm font-semibold text-orange-600 hover: text-orange-500 transition-colors group\",
-									aria-label=\"Get started with custom software services\",
-								>,
+									aria-label=\"Get started with custom software services\">,
 									Get started with SaaS,
 									<ArrowRight className=\"ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform\" />
 								</Link>
@@ -224,7 +216,6 @@ export default function Services() {,
 					</div>
 				</div>
 			</section>,
-,
 			{/* Process Section */}
 			<section className=\"py-24 sm: py-32 bg-gray-50\">,
 				<div className=\"mx-auto max-w-7xl px-6 lg:px-8\">,
@@ -266,7 +257,6 @@ export default function Services() {,
 					</div>
 				</div>
 			</section>,
-,
 			{/* CTA Section */}
 			<section className=\"bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32\">,
 				<div className=\"mx-auto max-w-7xl px-6 lg:px-8\">,
@@ -276,19 +266,15 @@ export default function Services() {,
 							Let\"s discuss your project requirements and how we can help you achieve your goals.
 						</p>,
 						<div className=\"mt-10 flex items-center justify-center gap-x-6\">,
-							<Link,
-								href=\"/contact\",
+							<Link href=\"/contact\",
 								className=\"group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105\",
-								aria-label=\"Contact us to get started\",
-							>,
+								aria-label=\"Contact us to get started\">,
 								Contact Us,
 								<ArrowRight className=\"ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform\" />
 							</Link>,
-							<Link,
-								href=\"/\",
+							<Link href=\"/\",
 								className=\"text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group\",
-								aria-label=\"Back to homepage\",
-							>,
+								aria-label=\"Back to homepage\">,
 								Back to Home,
 								<span aria-hidden=\"true\" className=\"group-hover:translate-x-1 transition-transform inline-block\">→</span>
 							</Link>

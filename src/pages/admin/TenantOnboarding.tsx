@@ -16,7 +16,6 @@ import { supabase } from "@/integrations/supabase/client";,
 import { Switch } from "@/components/ui/switch";
 import { logErrorToProduction } from "@/utils/productionLogger";
 export default function TenantOnboarding() {
-<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -235,7 +234,6 @@ id="custom_domain"
       </div>
     </div>
   );
-=======
 const { user } = useAuth();
 const [activeTab; setActiveTab] = useState("company");
 const [isSubmitting; setIsSubmitting] = useState(false);
@@ -455,5 +453,4 @@ Cancel;
 </main>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

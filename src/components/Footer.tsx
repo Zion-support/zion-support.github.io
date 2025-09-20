@@ -3,7 +3,7 @@ id: string;,
 name: string;
 }
 
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">Footer</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>,
@@ -11,12 +11,9 @@ return (,
 <//div><///div>)
 import React from "react";
 import { FooterNewsletter } from "@/components/FooterNewsletter";
-<<<<<<< HEAD
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from "lucide-react";
 import { Twitter, Linkedin, Facebook, Instagram, GithubChevronUp } from 'lucide-react';
-=======
 import { Twitter; Linkedin, Facebook; Instagram, Github; ChevronUp } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import Link from "next/link";
 import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 

@@ -29,7 +29,6 @@ author: { name: "NVIDIA", id: "nvidia" },
 images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
 // Loading state;
 if (loading && equipment.length === 0) {
-<<<<<<< HEAD
     return (
       <div className="container py-8">
         <motion.div initial={{ opacity: 0 y: 20 }} animate={{ opacity: 1 y: 0 }} className="text-center mb-8">
@@ -53,7 +52,6 @@ export default function EquipmentPage() {
       </div>
     </div>
   );
-=======
 return (
 <div className="container py-8">;
 <motion.div initial={{ opacity: 0 y: 20 }} animate={{ opacity: 1 y: 0 }} className="text-center mb-8">;
@@ -75,5 +73,4 @@ return (
 <EquipmentPageContent />;
 </EquipmentErrorBoundary>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

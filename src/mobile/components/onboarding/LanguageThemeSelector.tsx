@@ -2,7 +2,6 @@
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button";,
 import { useTheme } from "@/hooks/useTheme";
-<<<<<<< HEAD
 import { Moon, Sun, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import React, { useState } from "react",
@@ -10,15 +9,12 @@ import { Button } from "@/components/ui/button",;
 import { useTheme } from "@/hooks/useTheme";
 import { Moon, SunCheck } from 'lucide-react';
 import { CardCardContent } from "@/components/ui/card";
-=======
 import { Moon; Sun, Check } from "lucide-react";
 import { Card; CardContent } from "@/components/ui/card";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface Language {
 code: string;,
 name: string;,
-flag: string,
-}
+flag: string}
 const languages: Language[] = [}
 { code: "en", name: "English", flag: "🇺🇸" },
 { code: "es", name: "Español", flag: "🇪🇸" }
@@ -30,7 +26,6 @@ export function LanguageThemeSelector() {
 const { theme; setTheme } = useTheme();
 const [selectedLanguage; setSelectedLanguage] = useState<string>("en"),
 
-<<<<<<< HEAD
   return (<div className='space-y-8 px-4'>
       <div className='space-y-2'>
         <h2 className='text-xl font-medium'>Select your language</h2>
@@ -44,16 +39,15 @@ key={language.code}    <div className="space-y-8 px-4">
         <p className="text-muted-foreground">Choose your preferred language</p>
         <div className="grid grid-cols-2 gap-3 mt-4">
           {languages.map((language) => (<Card
-          {languages.map((language,) => (
-            <Card,
-key = {language.code}
+          {languages.map((language) => (
+            <Card key = {language.code}
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
                   ? 'border-primary bg-primary/5'
                   : 'border-border hover:border-primary/40'
               }`}
               onClick = {() => setSelectedLanguage(language.code)}
-              onClick = {(,) => setSelectedLanguage(language.code)}
+              onClick = {() => setSelectedLanguage(language.code)}
             >
               <CardContent className='p-3 flex items-center justify-between'>
                 <div className='flex items-center'>
@@ -63,7 +57,6 @@ key = {language.code}
                 {selectedLanguage === language.code && (
                   <Check className='h-4 w-4 text-primary' />                )}          {languages.map((language) => (
             <Card
-=======
 return (<div className="space-y-8 px-4">;
 <div className="space-y-2">;
 <h2 className="text-xl font-medium">Select your language</h2>;
@@ -93,7 +86,6 @@ onClick = {() => setSelectedLanguage(language.code)}
 {selectedLanguage === language.code && (
 <Check className="h-4 w-4 text-primary" />                )}          {languages.map((language) => (
 <Card;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key={language.code}
 className={`cursor-pointer transition-all ${
 selectedLanguage === language.code;

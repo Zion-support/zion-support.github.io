@@ -276,8 +276,7 @@ dropdown: [
 ];
 key: "equipment",
 href: "/equipment",
-matches: (path: string) => path.startsWith("/equipment"),
-},
+matches: (path: string) => path.startsWith("/equipment")},
 {key: "community",
 matches: (path: string) => path.startsWith("/equipment")},
 {
@@ -414,7 +413,6 @@ document.removeEventListener("mousedown", handleClickOutside);
 }, []);
 name: "About",
 matches: (path: string) => path.startsWith("/about") || path === "/careers" || path === "/contact",
-<<<<<<< HEAD
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     )}
@@ -427,10 +425,9 @@ matches: (path: string) => path.startsWith("/about") || path === "/careers" || p
                       </span>
 import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3' } from "lucide-react";
 import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3' } from 'lucide-react';
-=======
 ? "bg-zion-purple/20 text-zion-cyan";
 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-),}
+)}
 >;
 <ShoppingCart className="w-4 h-4 mr-1" />;
 {t("nav.cart", "Cart")}
@@ -439,7 +436,6 @@ import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brai
 {cartCount}
 </span>;
 import { ChevronDown; Menu, X; Home, Settings; Users, Building; Globe, Zap; Brain, Shield; Cloud, Code; BarChart3" } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export default function Page() { [])
 const baseLinks: NavigationLink[] = [{,
 key: "home",

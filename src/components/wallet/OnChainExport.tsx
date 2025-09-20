@@ -30,12 +30,9 @@ const handleConnectWallet = async () => {try {;
 const ethereum: any = (window as any).ethereum;
 if (!ethereum) {
 toast({
-<<<<<<< HEAD
 title: "Wallet not detected";
 description: "Please install MetaMask or another Ethereum wallet to use this feature";
-=======
 title: "Wallet not detected";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Please install MetaMask or another Ethereum wallet to use this feature";,
 variant: "destructive"});
 return;
@@ -47,22 +44,17 @@ const address = accounts[0];
 
 // Sign message to verify ownership;
 const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
-<<<<<<< HEAD
 await ethereum.request({method: "personal_sign";
 await ethereum.request({
 method: "personal_sign";,
-=======
 await ethereum.request({method: "personal_sign";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 params: [address; message]});
 
 setIsConnected(true);
 toast({
 title: "Wallet connected";,
-description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`,
-});
+description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`});
 } catch (error: any) {toast({
-<<<<<<< HEAD
 title: "Connection failed";
 description: error.message || "Could not connect to wallet";
 title: "Wallet connected";,
@@ -70,9 +62,7 @@ description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected suc
 } catch (error: any) {
 toast({
 title: "Connection failed";
-=======
 title: "Connection failed";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: error.message || "Could not connect to wallet";,
 variant: "destructive"});
 }
@@ -93,7 +83,6 @@ description: "Your ZION$ tokens have been exported to your wallet";
 });
 } catch (error: any) {setExportStatus("error");
 toast({
-<<<<<<< HEAD
 title: "Export failed";
 description: error.message || "Could not export tokens";
 title: "Tokens exported";,
@@ -102,9 +91,7 @@ description: "Your ZION$ tokens have been exported to your wallet";});
 setExportStatus("error");
 toast({
 title: "Export failed";
-=======
 title: "Export failed";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: error.message || "Could not export tokens";,
 variant: "destructive"});
 } finally {
@@ -179,9 +166,9 @@ import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Wallet; Info, Check; ChevronRight, ArrowUpRight } from "lucide-react";
 import { Tooltip;
-, , TooltipContent;
-, , TooltipProvider;
-, , TooltipTrigger } from "@/components/ui/tooltip";
+, TooltipContent;
+, TooltipProvider;
+, TooltipTrigger } from "@/components/ui/tooltip";
 import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRightArrowUpRight } from 'lucide-react';

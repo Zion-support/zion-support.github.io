@@ -8,7 +8,6 @@ SelectContent;
 , SelectItem,;
 SelectTrigger;
 , SelectValue } from "@/components/ui/select";
-<<<<<<< HEAD
 import { X, Filter } from "lucide-react";
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -18,9 +17,7 @@ import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger
 SelectValue } from '@/components/ui/select';
 import { XFilter } from 'lucide-react';
-=======
 import { X; Filter } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface BrowseFiltersProps {
 type: "jobs" | "talents"}
 export function BrowseFilters({ type }: BrowseFiltersProps) {

@@ -79,8 +79,7 @@ user id: user.id talent id: talentId;
 }])
 if (error) {throw error}data: talentData error: talentError ";
 }= await supabase .from ("talent profiles") .select ("*") .eq ("id", talentId) .single ()
-return,
-}catch (error) {
+return}catch (error) {
 logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined {";
 message: "Error toggling saved talent";
 })

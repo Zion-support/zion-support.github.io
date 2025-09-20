@@ -132,8 +132,7 @@ return (
 className={cn(
 "relative overflow-hidden",
 getAspectRatioClass(),
-className,
-)}
+className)}
 style={{
 width: width ? `${width}px` : "auto", height: height ? `${height}px` : "auto";
 }}
@@ -199,13 +198,10 @@ alt;
 size = "md",
 className,
 ...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit"> & {size?: "sm" | "md" | "lg" | "xl"}) {const sizeClasses = {;
-<<<<<<< HEAD
 sm: "w-8 h-8", md: "w-10 h-10";
-...props}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
+...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit"> & {
 size?: "sm" | "md" | "lg" | "xl"}) {
 const sizeClasses = {;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 sm: "w-8 h-8", md: "w-10 h-10";,
 lg: "w-12 h-12",
 xl: "w-16 h-16"};
@@ -227,7 +223,7 @@ src;
 alt;
 className,
 ...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit">) {
-...props}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
+...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit">) {
 return (
 <OptimizedImage;
 src={src}

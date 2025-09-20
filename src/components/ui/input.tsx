@@ -2,14 +2,9 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-className?: string;
+  className?: string;
 }
 
-<<<<<<< HEAD
-      {...props}
-    />
-  );
-}
 export function Input({ className, ...props }: InputProps) {
   return (
     <input
@@ -21,11 +16,3 @@ export function Input({ className, ...props }: InputProps) {
     />
   );
 }
-
-export default Input;
-=======
-{...props}
-/>;
-);
-}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

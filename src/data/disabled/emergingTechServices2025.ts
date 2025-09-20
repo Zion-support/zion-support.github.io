@@ -78,12 +78,9 @@ targetAudience: [
 tags: ["Space Tech", "Satellites", "Communication", "Earth Observation", "Space Data", "Global Coverage"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$50;000/month (Industry average: $100;000/month)",
@@ -105,8 +102,7 @@ useCases: [
 compliance: ["ITAR", "FCC", "NOAA", "Space Force", "International Space Law"],
 scalability: "Global satellite network";,
 support: "24/7 space operations support";,
-futurePotential: "Mars colonization support; deep space exploration",
-},
+futurePotential: "Mars colonization support; deep space exploration"},
 {id: 2;
 support: "24/7 space operations support";,
 futurePotential: "Mars colonization support; deep space exploration"},
@@ -148,12 +144,9 @@ targetAudience: [
 tags: ["Biotechnology", "AI", "Drug Discovery", "Genetic Engineering", "Synthetic Biology", "Precision Medicine"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$35;000/month (Industry average: $70;000/month)",
@@ -175,8 +168,7 @@ useCases: [
 compliance: ["FDA", "EMA", "GMP", "ISO 13485", "HIPAA", "CLIA"],
 scalability: "Unlimited biological data";,
 support: "Biotechnology expert support";,
-futurePotential: "Human augmentation; synthetic life forms; bio-computing",
-},
+futurePotential: "Human augmentation; synthetic life forms; bio-computing"},
 {id: 3;
 support: "Biotechnology expert support";,
 futurePotential: "Human augmentation; synthetic life forms; bio-computing"},
@@ -218,12 +210,9 @@ targetAudience: [
 tags: ["Nanotechnology", "Manufacturing", "Quantum Materials", "Atomic Precision", "Materials Science", "Innovation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$40;000/month (Industry average: $80;000/month)",
@@ -245,8 +234,7 @@ useCases: [
 compliance: ["ISO 9001", "AS9100", "FDA", "CE", "RoHS", "REACH"],
 scalability: "Atomic-scale precision";,
 support: "Nanotechnology expert support";,
-futurePotential: "Molecular machines; quantum computers; space elevators",
-},
+futurePotential: "Molecular machines; quantum computers; space elevators"},
 {id: 4;
 support: "Nanotechnology expert support";,
 futurePotential: "Molecular machines; quantum computers; space elevators"},
@@ -288,12 +276,9 @@ targetAudience: [
 tags: ["Quantum Internet", "Quantum Communication", "Quantum Security", "Quantum Networks", "Encryption", "Future Tech"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$30;000/month (Industry average: $60;000/month)",
@@ -315,8 +300,7 @@ useCases: [
 compliance: ["NIST", "FIPS", "FedRAMP", "SOC 2", "ISO 27001"],
 scalability: "Global quantum network";,
 support: "Quantum internet expert support";,
-futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication",
-},
+futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication"},
 {id: 5;
 support: "Quantum internet expert support";,
 futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication"},
@@ -358,12 +342,9 @@ targetAudience: [
 tags: ["Brain-Computer Interface", "Neural Technology", "Cognitive Enhancement", "Medical Technology", "Human-AI", "Accessibility"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
@@ -385,8 +366,7 @@ useCases: [
 compliance: ["FDA", "CE", "ISO 13485", "HIPAA", "GDPR"],
 scalability: "Unlimited neural interfaces";,
 support: "Neuroscience expert support";,
-futurePotential: "Human consciousness upload; collective intelligence; telepathic communication",
-},
+futurePotential: "Human consciousness upload; collective intelligence; telepathic communication"},
 {id: 6;
 support: "Neuroscience expert support";,
 futurePotential: "Human consciousness upload; collective intelligence; telepathic communication"},
@@ -428,12 +408,9 @@ targetAudience: [
 tags: ["Fusion Energy", "Clean Energy", "Nuclear Physics", "Plasma Physics", "Sustainability", "Climate Solution"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$100;000/month (Industry average: $200;000/month)",
@@ -455,8 +432,7 @@ useCases: [
 compliance: ["Nuclear regulations", "Environmental standards", "Safety protocols", "International treaties"],
 scalability: "Global energy grid";,
 support: "Fusion physics expert support";,
-futurePotential: "Interstellar travel; space colonization; unlimited energy civilization",
-},
+futurePotential: "Interstellar travel; space colonization; unlimited energy civilization"},
 {id: 7;
 support: "Fusion physics expert support";,
 futurePotential: "Interstellar travel; space colonization; unlimited energy civilization"},
@@ -498,12 +474,9 @@ targetAudience: [
 tags: ["Digital Twin", "IoT", "Simulation", "Predictive Analytics", "Virtual Reality", "Smart Cities"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000/month (Industry average: $30;000/month)",
@@ -525,8 +498,7 @@ useCases: [
 compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
 scalability: "Unlimited digital twins";,
 support: "Digital twin expert support";,
-futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling",
-},
+futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling"},
 {id: 8;
 support: "Digital twin expert support";,
 futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling"},
@@ -568,12 +540,9 @@ targetAudience: [
 tags: ["Holographic Display", "3D Technology", "Telepresence", "Augmented Reality", "Immersive Tech", "Visualization"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$20;000/month (Industry average: $40;000/month)",
@@ -595,8 +564,7 @@ useCases: [
 compliance: ["Display standards", "Safety regulations", "Accessibility guidelines"],
 scalability: "Unlimited holographic displays";,
 support: "Holographic technology expert support";,
-futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet",
-},
+futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet"},
 {id: 9;
 support: "Holographic technology expert support";,
 futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet"},
@@ -638,12 +606,9 @@ targetAudience: [
 tags: ["Quantum Sensing", "Quantum Technology", "Precision Measurement", "Detection", "Scientific Instruments", "Innovation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$18;000/month (Industry average: $35;000/month)",
@@ -665,8 +630,7 @@ useCases: [
 compliance: ["Research standards", "Safety protocols", "International standards"],
 scalability: "Unlimited quantum sensors";,
 support: "Quantum physics expert support";,
-futurePotential: "Quantum internet; quantum computers; quantum communication networks",
-},
+futurePotential: "Quantum internet; quantum computers; quantum communication networks"},
 {id: 10;
 support: "Quantum physics expert support";,
 futurePotential: "Quantum internet; quantum computers; quantum communication networks"},
@@ -708,12 +672,9 @@ targetAudience: [
 tags: ["Autonomous Systems", "Robotics", "AI", "Computer Vision", "Automation", "Innovation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
@@ -735,8 +696,7 @@ useCases: [
 compliance: ["Safety standards", "Industry regulations", "Quality standards"],
 scalability: "Unlimited autonomous systems";,
 support: "Robotics expert support";,
-futurePotential: "General purpose robots; humanoid robots; swarm intelligence",
-}
+futurePotential: "General purpose robots; humanoid robots; swarm intelligence"}
 support: "Robotics expert support";,
 futurePotential: "General purpose robots; humanoid robots; swarm intelligence"}
 ];

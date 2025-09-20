@@ -22,7 +22,6 @@ export default function OrdersPage() {
 const { user } = useAuth();
 const { data: orders isLoading } = useGetOrdersQuery(user?.id);
 return (
-<<<<<<< HEAD
     <div className='container max-w-4xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>
       {isLoading ? (
@@ -103,7 +102,6 @@ export default function Orders() {
       </div>
     </div>
   );
-=======
 <div className="container max-w-4xl py-10">;
 <h1 className="text-3xl font-bold mb-6">Order History</h1>;
 {isLoading ? (
@@ -175,5 +173,4 @@ View;
 )}
 </div>;
 );
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

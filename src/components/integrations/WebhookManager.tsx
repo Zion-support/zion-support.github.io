@@ -9,7 +9,7 @@ import React from "react";
 import React from "react",;
 const WebhookManager: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className = "text-xl font-bold mb-4">WebhookManager</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
@@ -27,7 +27,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
-<<<<<<< HEAD
 import { PlusCircle, Save, Trash } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter
 CardHeader, CardTitle } from '@/components/ui/card'
@@ -77,9 +76,8 @@ id='webhook-url'
                 <ClickableBadge
 key={event}                  onRemove={() => handleRemoveEvent(event)}
                 <ClickableBadge
-                <ClickableBadge,
-key = {event}
-                  onRemove = {(,) => handleRemoveEvent(event)}
+                <ClickableBadge key = {event}
+                  onRemove = {() => handleRemoveEvent(event)}
                 >
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
@@ -311,7 +309,6 @@ className={
 }setNewWebhook ({
   ...newWebhook,
 eventTypes: [...newWebhook.eventTypes newWebhook.selectedEvent]
-=======
 import { PlusCircle; Save, Trash } from "lucide-react";
 return (
 <div className="space-y-8">;
@@ -333,7 +330,6 @@ placeholder="e.g., Job Postings Webhook";
 value={newWebhook.name}
 onChange={e =>;
 setNewWebhook({ ...newWebhook name: e.target.value })
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 />;
 </div>;
@@ -356,7 +352,7 @@ setNewWebhook({ ...newWebhook url: e.target.value })
 key={event}                  onRemove={() => handleRemoveEvent(event)}
 <ClickableBadge;
 key = {event}
-onRemove = {(,) => handleRemoveEvent(event)}
+onRemove = {() => handleRemoveEvent(event)}
 >;
 {eventOptions.find(e => e.value === event)?.label |event}
 </ClickableBadge>;
@@ -599,7 +595,6 @@ event}onRemove= {
 }</div> <div className="flex space-x-2"> <Select value= {newWebhook.selectedEvent}onValueChange= {(value) => setNewWebhook ({
 ...newWebhook selectedEvent: value as WebhookEventType}) ";
 }> <SelectTrigger className="w-full"> <SelectValue placeholder=" Select event"/> </SelectTrigger> <SelectContent> {eventOptions.map (option => (<SelectItem key= {
-<<<<<<< HEAD
   option.value}value= {option.value}> {option.label}</SelectItem>) ) "
 //Reset form return (<div className="space-y-8"> <Card> <CardHeader> <CardTitle>Create Webhook</CardTitle> <CardDescription> Define webhooks to notify external systems when events occur in Zion. </CardDescription> </CardHeader> <CardContent className="space-y-4"> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <div className="space-y-2"> <Label htmlFor=" webhook-name">Webhook Name</Label> <Input /> </div> </div> <div className="space-y-2"> <Label>Events</Label> <div className="flex flex-wrap gap-2 mb-2"> {
   newWebhook.eventTypes.map (event => (<ClickableBadge key= {
@@ -616,9 +611,7 @@ event}onRemove= {
   option.value}value= {
   option.value}> {
   option.label}</SelectItem>) ) "
-=======
 option.value}value= {option.value}> {option.label}</SelectItem>) ) ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</SelectContent> </Select> <PlusCircle className="h-4 w-4 mr-2"/> Add </Button> </div> </div> <div className="space-y-2"> <Label htmlFor=" webhook-secret">Secret (optional) </Label> <Input /> <p className="text-xs text-muted-foreground"> If provided this secret will be used to sign the webhook payload. </p> </div> </CardContent> <CardFooter> <Button onClick={
 handleCreateWebhook ";
 }> <Save className="h-4 w-4 mr-2"/> Create Webhook </Button> </CardFooter> </Card> <div> <h3 className="text-lg font-medium mb-4">Your Webhooks</h3> {";
@@ -653,17 +646,14 @@ new Date (webhook.last triggered at) .toLocaleString () ";
 testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className="flex justify-between"> <span className="font-medium">Status:</span> <span className= {";
 testResult.status >= 200 && testResult.status < 300 ? "text-green-600" : "text-red-600";
 }> {testResult.status}{
-<<<<<<< HEAD
 }> {
   testResult.status}{
   testResult.statusText "
 }</span> </div> <div> <span className="font-medium">Response:</span> <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto"> {'
   testResult.responseBody |'<empty>'
-=======
 testResult.statusText ";
 }</span> </div> <div> <span className="font-medium">Response:</span> <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto"> {";
 testResult.responseBody |"<empty>";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</pre> </div> </div> </CardContent> </Card>)
 }</div> </div>)
 }""}

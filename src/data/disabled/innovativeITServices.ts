@@ -84,12 +84,9 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$5;000 - $25;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IBM Q", "Google Quantum", "Microsoft Q#", "Qiskit", "Cirq", "PennyLane"],
@@ -98,8 +95,7 @@ compliance: ["ISO 27001", "SOC 2", "Research ethics", "Data security"],
 roi: "200% within 24 months";,
 competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
 marketSize: "$1.9 billion";,
-growthRate: "56.7% annually",
-};
+growthRate: "56.7% annually"};
 marketSize: "$1.9 billion";,
 growthRate: "56.7% annually"};
 // Edge Computing Infrastructure;
@@ -148,12 +144,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;200 - $4;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Node.js", "Python", "Redis", "PostgreSQL"],
@@ -162,8 +155,7 @@ compliance: ["ISO 27001", "SOC 2", "GDPR", "IoT security standards"],
 roi: "280% within 18 months";,
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
 marketSize: "$15.7 billion";,
-growthRate: "37.4% annually",
-};
+growthRate: "37.4% annually"};
 marketSize: "$15.7 billion";,
 growthRate: "37.4% annually"};
 // Zero Trust Security Architecture;
@@ -212,12 +204,9 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["OAuth 2.0", "SAML", "OIDC", "Zero Trust Network Access", "Identity providers", "SIEM"],
@@ -226,8 +215,7 @@ compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
 roi: "320% within 18 months";,
 competitors: ["Okta", "Ping Identity", "ForgeRock", "CyberArk", "Palo Alto Networks"],
 marketSize: "$19.6 billion";,
-growthRate: "17.4% annually",
-};
+growthRate: "17.4% annually"};
 marketSize: "$19.6 billion";,
 growthRate: "17.4% annually"};
 // Multi-Cloud Management Platform;
@@ -276,12 +264,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$800 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Terraform", "Kubernetes", "Docker", "Python", "React", "PostgreSQL"],
@@ -290,8 +275,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "Cloud security standards"],
 roi: "250% within 12 months";,
 competitors: ["Flexera", "CloudHealth", "CloudCheckr", "RightScale", "Scalr"],
 marketSize: "$6.3 billion";,
-growthRate: "28.9% annually",
-};
+growthRate: "28.9% annually"};
 marketSize: "$6.3 billion";,
 growthRate: "28.9% annually"};
 // API Management and Governance;
@@ -340,12 +324,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$600 - $2;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kong", "Apigee", "AWS API Gateway", "Azure API Management", "Node.js", "React"],
@@ -354,8 +335,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "API security standards"],
 roi: "300% within 12 months";,
 competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management", "MuleSoft"],
 marketSize: "$4.5 billion";,
-growthRate: "32.7% annually",
-};
+growthRate: "32.7% annually"};
 marketSize: "$4.5 billion";,
 growthRate: "32.7% annually"};
 // DevOps Automation Platform;
@@ -404,12 +384,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$450 - $1;800/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Kubernetes"],
@@ -418,8 +395,7 @@ compliance: ["SOC 2", "ISO 27001", "DevOps best practices", "Security standards"
 roi: "350% within 12 months";,
 competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "TeamCity"],
 marketSize: "$8.9 billion";,
-growthRate: "24.3% annually",
-};
+growthRate: "24.3% annually"};
 marketSize: "$8.9 billion";,
 growthRate: "24.3% annually"};
 // Data Mesh Architecture Platform;
@@ -468,12 +444,9 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;500 - $6;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Apache Kafka", "Apache Airflow", "DataHub", "Amundsen", "Great Expectations", "dbt"],
@@ -482,8 +455,7 @@ compliance: ["GDPR", "CCPA", "SOC 2", "Data governance standards"],
 roi: "280% within 18 months";,
 competitors: ["DataHub", "Amundsen", "Collibra", "Alation", "Informatica"],
 marketSize: "$12.8 billion";,
-growthRate: "21.4% annually",
-};
+growthRate: "21.4% annually"};
 marketSize: "$12.8 billion";,
 growthRate: "21.4% annually"};
 // Green IT Infrastructure;
@@ -532,12 +504,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$800 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT sensors", "Energy monitoring", "Sustainability analytics", "Green computing tools", "Reporting platforms"],
@@ -546,8 +515,7 @@ compliance: ["ISO 14001", "ISO 50001", "LEED", "Energy Star", "ESG standards"],
 roi: "200% within 18 months";,
 competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls", "Sustainability platforms"],
 marketSize: "$7.6 billion";,
-growthRate: "19.2% annually",
-}
+growthRate: "19.2% annually"}
 marketSize: "$7.6 billion";,
 growthRate: "19.2% annually"}
 ];

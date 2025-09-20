@@ -80,12 +80,9 @@ targetAudience: ["Enterprises", "SMBs", "Startups", "Government", "Healthcare"],
 tags: ["Cloud Migration", "AWS", "Azure", "GCP", "Strategy", "Implementation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/cloud-migration";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/cloud-migration";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$150-250/hour, $25K-100K per project",
@@ -111,17 +108,14 @@ monitoringTools: true;,
 reportingCapabilities: true;
 };
 {id: 2;
-<<<<<<< HEAD
 monitoringTools: true;,
 reportingCapabilities: true;};
 {
 id: 2;
 name: "Cybersecurity Assessment & Implementation";
 category: "Cybersecurity";
-=======
 name: "Cybersecurity Assessment & Implementation";,
 category: "Cybersecurity";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Comprehensive cybersecurity services including assessment; implementation; and ongoing monitoring for enterprise security",
 hourlyRate: 175;,
 projectRate: 35000;,
@@ -147,12 +141,9 @@ targetAudience: ["Enterprises", "Healthcare", "Financial Services", "Government"
 tags: ["Cybersecurity", "Security Assessment", "Compliance", "Threat Detection", "Incident Response"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/cybersecurity";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/cybersecurity";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$175-300/hour, $35K-150K per project",
@@ -178,17 +169,14 @@ monitoringTools: true;,
 reportingCapabilities: true;
 };
 {id: 3;
-<<<<<<< HEAD
 monitoringTools: true;,
 reportingCapabilities: true;};
 {
 id: 3;
 name: "DevOps Implementation & Automation";
 category: "DevOps";
-=======
 name: "DevOps Implementation & Automation";,
 category: "DevOps";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "End-to-end DevOps implementation with CI/CD pipelines; automation; and infrastructure as code for modern development teams",
 hourlyRate: 140;,
 projectRate: 20000;,
@@ -214,12 +202,9 @@ targetAudience: ["Development Teams", "Startups", "Enterprises", "Tech Companies
 tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/devops";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/devops";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$140-200/hour, $20K-80K per project",
@@ -245,17 +230,14 @@ monitoringTools: true;,
 reportingCapabilities: true;
 };
 {id: 4;
-<<<<<<< HEAD
 monitoringTools: true;,
 reportingCapabilities: true;};
 {
 id: 4;
 name: "Data Center Design & Implementation";
 category: "Infrastructure";
-=======
 name: "Data Center Design & Implementation";,
 category: "Infrastructure";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Comprehensive data center services including design; implementation; and management for enterprise-grade infrastructure",
 hourlyRate: 160;,
 projectRate: 50000;,
@@ -281,12 +263,9 @@ targetAudience: ["Enterprises", "Government", "Healthcare", "Financial Services"
 tags: ["Data Center", "Infrastructure", "Network", "Storage", "Security"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/data-center";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/data-center";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$160-250/hour, $50K-500K per project",
@@ -343,12 +322,9 @@ targetAudience: ["Enterprises", "Healthcare", "Financial Services", "Education",
 tags: ["Network Security", "Firewall", "VPN", "Intrusion Detection", "Compliance"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/network-security";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/network-security";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$145-200/hour, $18K-75K per project",
@@ -374,17 +350,14 @@ monitoringTools: true;,
 reportingCapabilities: true;
 };
 {id: 6;
-<<<<<<< HEAD
 monitoringTools: true;,
 reportingCapabilities: true;};
 {
 id: 6;
 name: "Business Intelligence & Analytics Implementation";
 category: "Data & Analytics";
-=======
 name: "Business Intelligence & Analytics Implementation";,
 category: "Data & Analytics";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Comprehensive BI and analytics implementation with data warehousing; reporting; and advanced analytics capabilities",
 hourlyRate: 155;,
 projectRate: 30000;,
@@ -410,12 +383,9 @@ targetAudience: ["Enterprises", "Financial Services", "Healthcare", "Retail", "M
 tags: ["Business Intelligence", "Analytics", "Data Warehouse", "Reporting", "ETL"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/bi-analytics";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/bi-analytics";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$155-225/hour, $30K-120K per project",
@@ -472,12 +442,9 @@ targetAudience: ["Startups", "SMBs", "Enterprises", "Healthcare", "Financial Ser
 tags: ["Mobile Development", "iOS", "Android", "Cross-platform", "API Integration"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/mobile-development";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/mobile-development";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$120-180/hour, $15K-100K per project",
@@ -503,17 +470,14 @@ monitoringTools: true;,
 reportingCapabilities: true;
 };
 {id: 8;
-<<<<<<< HEAD
 monitoringTools: true;,
 reportingCapabilities: true;};
 {
 id: 8;
 name: "IT Consulting & Digital Transformation";
 category: "Consulting";
-=======
 name: "IT Consulting & Digital Transformation";,
 category: "Consulting";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Strategic IT consulting services for digital transformation; technology assessment; and strategic planning",
 hourlyRate: 200;,
 projectRate: 40000;,
@@ -539,12 +503,9 @@ targetAudience: ["Enterprises", "Government", "Healthcare", "Financial Services"
 tags: ["IT Consulting", "Digital Transformation", "Strategy", "Technology Assessment", "Change Management"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/it-consulting";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/it-consulting";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$200-300/hour, $40K-200K per project",
@@ -570,17 +531,14 @@ monitoringTools: false;,
 reportingCapabilities: true;
 };
 {id: 9;
-<<<<<<< HEAD
 monitoringTools: false;,
 reportingCapabilities: true;};
 {
 id: 9;
 name: "Managed IT Services & Support";
 category: "Managed Services";
-=======
 name: "Managed IT Services & Support";,
 category: "Managed Services";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Comprehensive managed IT services including 24/7 monitoring; support; and proactive maintenance for businesses",
 hourlyRate: 85;,
 projectRate: 12000;,
@@ -606,12 +564,9 @@ targetAudience: ["SMBs", "Enterprises", "Healthcare", "Financial Services", "Man
 tags: ["Managed Services", "24/7 Support", "Monitoring", "Maintenance", "Help Desk"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/managed-services";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/managed-services";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$85-150/hour, $12K-60K per month",
@@ -668,12 +623,9 @@ targetAudience: ["Startups", "SMBs", "Enterprises", "E-commerce", "Healthcare"],
 tags: ["Web Development", "Full-stack", "Responsive Design", "API", "Hosting"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/web-development";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/web-development";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$110-170/hour, $18K-80K per project",

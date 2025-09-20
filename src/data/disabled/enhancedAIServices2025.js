@@ -52,8 +52,7 @@ export const enhancedAIServices2025 = [
         scalability: "Millions of requests/day";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {id: 2;
         industrySpecific: true};
     {
@@ -109,8 +108,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {id: 3;
         industrySpecific: true};
     {
@@ -166,8 +164,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {id: 4;
         industrySpecific: true};
     {
@@ -223,8 +220,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited conversations";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {id: 5;
         industrySpecific: true};
     {
@@ -280,8 +276,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited words";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {id: 6;
         industrySpecific: true};
     {
@@ -337,8 +332,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {id: 7;
         industrySpecific: true};
     {
@@ -394,8 +388,7 @@ export const enhancedAIServices2025 = [
         scalability: "Unlimited requests";
         realTimeProcessing: true;
         multilingualSupport: true;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {id: 8;
         industrySpecific: true};
     {
@@ -451,8 +444,7 @@ export const enhancedAIServices2025 = [
         scalability: "Millions of recommendations";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {id: 9;
         industrySpecific: true};
     {
@@ -508,8 +500,7 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    };
+        industrySpecific: true};
     {id: 10;
         industrySpecific: true};
     {

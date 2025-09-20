@@ -16,7 +16,6 @@ canonical="https://app.ziontechgroup.com/features/admin-dashboard";
 {/* Use a normal script tag so JSON-LD is correctly parsed */}
 <script;
 type="application/ld+json"
-<<<<<<< HEAD
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -87,7 +86,6 @@ export default function AdminDashboard() {
       </div>
     </div>
   );
-=======
 dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
 ></script>;
 <Header />;
@@ -174,5 +172,4 @@ Yes you can export data to CSV for further analysis.;
 </main>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

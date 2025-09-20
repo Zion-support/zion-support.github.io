@@ -6,7 +6,6 @@ name: string;
 import React from "react";
 import { Link } from "react-router-dom";
 const Services: React.FC = () => {
-<<<<<<< HEAD
   const services = [
     {
       title: "AI & Machine Learning",
@@ -172,7 +171,6 @@ export default function Services() {
     </div>
   );
 }
-=======
 const services = [
 {,
 title: "AI & Machine Learning",
@@ -332,4 +330,3 @@ View Pricing;
 );
 }
 export default Services;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

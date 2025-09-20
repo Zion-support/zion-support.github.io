@@ -20,8 +20,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "2-3 Weeks";
         aiScore: 95;
-        pricingTier: "Professional",
-    };
+        pricingTier: "Professional"};
     {id: "ai-content-generation";
         pricingTier: "Professional"};
     {
@@ -45,8 +44,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "1-2 Weeks";
         aiScore: 96;
-        pricingTier: "Starter",
-    };
+        pricingTier: "Starter"};
     {id: "ai-business-intelligence";
         pricingTier: "Starter"};
     {
@@ -92,8 +90,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "3-5 Weeks";
         aiScore: 92;
-        pricingTier: "Professional",
-    };
+        pricingTier: "Professional"};
     {id: "cybersecurity-audit";
         pricingTier: "Professional"};
     {
@@ -117,8 +114,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "4-8 Weeks";
         aiScore: 97;
-        pricingTier: "Enterprise",
-    };
+        pricingTier: "Enterprise"};
     {id: "devops-automation";
         pricingTier: "Enterprise"};
     {
@@ -164,8 +160,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "2-4 Weeks";
         aiScore: 93;
-        pricingTier: "Professional",
-    };
+        pricingTier: "Professional"};
     {id: "customer-support-ai";
         pricingTier: "Professional"};
     {
@@ -211,8 +206,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "3-5 Weeks";
         aiScore: 95;
-        pricingTier: "Professional",
-    };
+        pricingTier: "Professional"};
     {id: "digital-marketing-automation";
         pricingTier: "Professional"};
     {
@@ -258,8 +252,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "8-12 Weeks";
         aiScore: 99;
-        pricingTier: "Enterprise",
-    };
+        pricingTier: "Enterprise"};
     {id: "fintech-compliance-security";
         pricingTier: "Enterprise"};
     {
@@ -305,8 +298,7 @@ export const COMPREHENSIVE_SERVICES = [
         location: "Global";
         availability: "5-8 Weeks";
         aiScore: 94;
-        pricingTier: "Professional",
-    };
+        pricingTier: "Professional"};
     {id: "smart-building-automation";
         pricingTier: "Professional"};
     {

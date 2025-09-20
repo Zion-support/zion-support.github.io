@@ -56,8 +56,7 @@ loading: {
 icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />;,
 title: "Loading...";,
 description: "We\"re fetching the latest data for you. This should only take a moment.";
-},
-};
+}};
 title: "No Products Available";,
 description: "We\"re loading our marketplace products. If this persists; there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!"},
 categories: {
@@ -189,10 +188,7 @@ onAddProduct?: () => void;
 isAuthenticated?: boolean;
 }) {const action = onAddProduct;
 ? {
-<<<<<<< HEAD
 label: isAuthenticated ? "Add Product" : "Login to Add Product";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 label: isAuthenticated ? "Add Product" : "Login to Add Product";,
 onClick: onAddProduct; }
 : onRetry;

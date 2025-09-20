@@ -1,24 +1,24 @@
-import { useState; useEffect } from "react";,
-import { JobsList } from "@/components/jobs/JobsList";,
-import { Button } from "@/components/ui/button";,
-import { Tabs; TabsContent, TabsList; TabsTrigger } from "@/components/ui/tabs";,
-import Link from "next/link",;
-import { JobStatus } from "@/types/jobs";,
-import { SEO } from "@/components/SEO";,
-import { BriefcaseIcon; UserIcon, MessageSquare; Star, PlusCircle; Kanban, Video } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";,
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";,
-import { useJobs } from "@/hooks/useJobs";,
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";,
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";,
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";,
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";,
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";,
+import { useState, useEffect } from "react";
+import { JobsList } from "@/components/jobs/JobsList";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
+import { JobStatus } from "@/types/jobs";
+import { SEO } from "@/components/SEO";
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
+import { useJobs } from "@/hooks/useJobs";
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
+import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-const [activeTab; setActiveTab] = useState<JobStatus | "all">("all");
-const { jobs; isLoading } = useJobs();
-const [selectedJobId; setSelectedJobId] = useState<string | null>(null),
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
+  const { jobs, isLoading } = useJobs();
+  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
 const [selectedJobTitle; setSelectedJobTitle] = useState<string>(""),
 const isMobile = null;
 return (
@@ -114,7 +114,6 @@ Select a job to see AI-matched talent suggestions;
 import React from 'react';
 
 export default function ClientDashboard() {
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
@@ -124,7 +123,6 @@ export default function ClientDashboard() {
     </div>
   );
 }
-=======
 return (
 <ProtectedRoute>;
 <ClientDashboardContent />;
@@ -164,4 +162,3 @@ selectedJobId ";
 }</div> </div> </div> </div> </main> </>)
 }export default function ClientDashboard () {
 return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

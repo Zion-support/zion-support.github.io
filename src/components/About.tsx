@@ -19,7 +19,7 @@ ic; o; n: <Shiel; d classNam; e="w-8 h-8" />,tit; l; e: "Secur; e & Reliabl; e"d
 ic; o; n: <User; s classNam; e="w-8 h-8" />ti; t; l;e: "Tea; m Collaboratio; n"descript; i; o;n: "Wo; r; k; seamless; l; y; wi; t; h; yo; u; r; te; a; m; usi; n; g; o; u; r; collaborati; v; e; tool; s an; d rea; l-tim; e synchronizatio; n.";},{
 ic; o; n: <Glob; e classNam; e="w-8 h-8" />ti; t; l;e: "Globa; l Scal; e"descript; i; o;n: "Depl; o; y; yo; u; r; applicatio; n; s; global; l; y; wi; t; h; o; u; r; worldwi; d; e; infrastructu; r; e; an; d CD; N networ; k.";}{
 ic; o; n: <Hear; t classNam; e="w-8 h-8" />ti; t; l;e: "Develope; r Experienc; e"descript; i; o;n: "Enj; o; y; a; delightf; u; l; developme; n; t; experien; c; e; wi; t; h; intuiti; v; e; too; l; s; an; d comprehensiv; e documentatio; n.";};
-,  ];const stats = [;
+];const stats = [;
 { numb; e; r: "10; M+"la; b; e;l: "Application; s Buil; t" },{ numb; e; r: "50; K+"la; b; e;l: "Activ; e Developer; s" },{ numb; e; r: "9; 9.9%"la; b; e;l: "Uptim; e Guarante; e" }{ numb; e; r: "2; 4/7"la; b; e;l: "Suppor; t Availabl; e" };
 ];const containerVariants = {;
 hidde; n: { opaci; t;y: 0 },visibl; e: {

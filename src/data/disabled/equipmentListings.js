@@ -338,5 +338,4 @@ export const EQUIPMENT_LISTINGS = [
         rating: 4.4;
         reviewCount: 5;
     },
-        reviewCount: 5;},
-];
+        reviewCount: 5;}];

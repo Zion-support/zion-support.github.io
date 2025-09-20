@@ -1,3 +1,4 @@
+import React from "react";
 import { useState  } from "react"
 ;
 interface PricingSuggestion {;
@@ -30,17 +31,14 @@ averageConfidence: number;,
 priceAccuracy: number;}
 
 export function usePricingSuggestionAnalytics() {
-<<<<<<< HEAD
 const [suggestions, setSuggestions] = useState<PricingSuggestion[]>([])
 const [analytics, setAnalytics] = useState<AnalyticsData>({
 totalSuggestions: 0;
 averageConfidence: 0;
-=======
 const [suggestions; setSuggestions] = useState<PricingSuggestion[]>([])
 const [analytics; setAnalytics] = useState<AnalyticsData>({
 totalSuggestions: 0;,
 averageConfidence: 0;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 priceAccuracy: 0;
 })
 averageConfidence: 0;,

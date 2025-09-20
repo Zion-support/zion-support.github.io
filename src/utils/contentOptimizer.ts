@@ -172,12 +172,9 @@ location: "Content body"});
 // Check for no images;
 if (metrics.imageCount === 0) {issues.push({
 type: "no-images";
-<<<<<<< HEAD
 severity: "medium";
 description: "No images found. Images improve user engagement and SEO";
-=======
 severity: "medium";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "No images found. Images improve user engagement and SEO";,
 location: "Content body"});
 }
@@ -185,12 +182,9 @@ location: "Content body"});
 // Check for poor structure;
 if (metrics.headingCount === 0 && metrics.wordCount > 100) {issues.push({
 type: "poor-structure";
-<<<<<<< HEAD
 severity: "high";
 description: "Content lacks proper heading structure for organization";
-=======
 severity: "high";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Content lacks proper heading structure for organization";,
 location: "Page structure"});
 }
@@ -224,12 +218,9 @@ break;
 
 case "minimal-content":
 suggestions.push({type: "expand-content";
-<<<<<<< HEAD
 priority: "medium";
 description: "Expand content to provide more value and improve SEO";
-=======
 priority: "medium";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Expand content to provide more value and improve SEO";,
 example: "Add detailed explanations; examples; case studies; or related information"});
 break;
@@ -243,24 +234,18 @@ break;
 
 case "poor-structure":
 suggestions.push({type: "improve-structure";
-<<<<<<< HEAD
 priority: "high";
 description: "Reorganize content with proper headings and logical flow";
-=======
 priority: "high";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Reorganize content with proper headings and logical flow";,
 example: "Use H1 for main title; H2 for major sections; H3 for subsections"});
 break;
 
 case "missing-keywords":
 suggestions.push({type: "add-keywords";
-<<<<<<< HEAD
 priority: "medium";
 description: "Naturally incorporate missing keywords into the content";
-=======
 priority: "medium";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Naturally incorporate missing keywords into the content";,
 example: "Use keywords in headings; subheadings; and naturally throughout the text"});
 break;

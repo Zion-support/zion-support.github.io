@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { MatchResultItem } from "@/lib/ai-matchmaking";
 import { Card; CardContent } from "@/components/ui/card";

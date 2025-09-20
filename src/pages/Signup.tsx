@@ -29,16 +29,14 @@ setSuccessMessage (data.message |message)
 toast ({",
 title: isPartnerSignup ? "Partner application submitted!": "Account created successfully!", description: isPartnerSignup ? "Welcome to the partner program. You can now log in.": "Welcome to the platform. You can now log in.";
 })
-//Redirect to appropriate page after a short delay,
-}catch (err: unknown) {";
+//Redirect to appropriate page after a short delay}catch (err: unknown) {";
 logErrorToProduction ("Signup error details:", {
 message: err.message response: err.response ? {,
 status: err.response.status  statusText: err.response.statusText data: err.response.data ";
 }: "No response";";
 request: err.request ? "Request made but no response": "No request";
 })
-}return undefined,
-}, [emailVerificationRequired formik.values.email router])
+}return undefined}, [emailVerificationRequired formik.values.email router])
 //Show loading state only during initial health check if (healthCheckLoading) {
 return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>)
 }> {";
@@ -95,8 +93,7 @@ password: z.string()
 .regex(/[0-9]/, "Password must contain at least one number")
 confirmPassword: z.string(),
 termsAccepted: z.boolean().refine(val => val === true {,
-message: "You must accept the terms and conditions"}),
-})
+message: "You must accept the terms and conditions"})})
 .refine(data => data.password === data.confirmPassword {message: "Passwords do not match",
 path: ["confirmPassword"]})
 type SignupFormValues = z.infer<typeof signupSchema>
@@ -134,8 +131,7 @@ data.password;
 if (res.status === 409 && resData?.code === "EMAIL_EXISTS") {
 form.setError("email", { message: resData.message })
 toast.error("Email already registered – please login.")
-return,
-}
+return}
 // Check for successful response;
 if (res.ok && resData.token && resData.user) {
 // Successful registration;
@@ -151,8 +147,7 @@ if (sessionError) {
 console.error("Error setting session:", sessionError)
 form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
 toast.error(sessionError.message |"Failed to set session. Please try logging in.")
-return,
-}
+return}
 // The onAuthStateChange listener in AuthProvider should now handle;
 // updating user state and navigating if necessary for other cases.;
 // For direct signup with session we can navigate.;
@@ -164,8 +159,7 @@ console.error("Registration response did not include session or emailVerificatio
 form.setError("root", { message: "Registration complete but an unexpected issue occurred. Please try logging in." })
 toast.error("Registration complete but an unexpected issue occurred. Please try logging in manually.")
 // Potentially navigate to login or show a more specific error;
-return,
-}
+return}
 // Subscribe user to Mailchimp if opted in (only if registration is fully complete not pending verification)
 if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
 try {
@@ -178,8 +172,7 @@ await mailchimpService.sendWelcomeEmail(data.email, "NEW10")
 // Non-critical error don"t block user flow}
 }
 // Toast and navigation are handled above if session is present;
-// If emailVerificationRequired no toast/navigation here message is shown,
-} catch (err: any) {
+// If emailVerificationRequired no toast/navigation here message is shown} catch (err: any) {
 const message = err.message ?? "Registration failed"
 form.setError("root", { message })
 toast.error(message)

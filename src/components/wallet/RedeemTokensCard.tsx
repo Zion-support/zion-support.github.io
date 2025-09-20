@@ -35,7 +35,6 @@ cost: 50;,
 type: "feature"};
 {id: "platform-credit";
 title: "$5 Platform Credit";
-<<<<<<< HEAD
 description: "Get $5 credit to use on any paid service";
 cost: 100;
 cost: 100;,
@@ -50,9 +49,7 @@ type: "feature"};
 id: "platform-credit";
 title: "$5 Platform Credit";
 description: "Get $5 credit to use on any paid service";
-=======
 description: "Get $5 credit to use on any paid service";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 cost: 100;,
 type: "credit"}
 ];
@@ -124,16 +121,13 @@ import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet";,
 import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { Gift, ArrowRight, ExternalLink } from "lucide-react";
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRightExternalLink } from 'lucide-react'
-=======
 import { Gift; ArrowRight, ExternalLink } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import {
 return (
 <Card>;

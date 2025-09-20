@@ -224,13 +224,10 @@ isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-
 }</Button> </CardContent> </Card> <CardHeader> <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) )
 }</div> </CardContent> </Card>) ";
 }<CardHeader> <CardTitle className="text-white" >Generated Content</CardTitle> </CardHeader> <CardContent className="space-y-4" > <div> <h3 className="text-sm font-medium text-zion-slate-light mb-2" >Description</h3> <p className="text-white" > {generatedContent.description}</p> </div> <div>) )
-<<<<<<< HEAD
 }<CardHeader> <CardTitle className="text-white" >Generated Content</CardTitle> </CardHeader> <CardContent className="space-y-4" > <div> <h3 className="text-sm font-medium text-zion-slate-light mb-2" >Description</h3> <p className="text-white" > {
   generatedContent.description}</p> </div> <div>) )
 }</div> </div> <div>) ) "
-=======
 }</div> </div> <div>) ) ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>)
 }</div>)
 }'"  )

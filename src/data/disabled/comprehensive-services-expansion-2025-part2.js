@@ -122,8 +122,7 @@ export const advancedBlockchainServices2025 = [
         setupTime: "1-2 weeks";
         integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
         freeTier: false;
-        trialPeriod: "7 days",
-    };
+        trialPeriod: "7 days"};
     {id: 2;
         trialPeriod: "7 days"};
     {
@@ -206,8 +205,7 @@ export const advancedCybersecurityServices2025 = [
         sla: "99.99% uptime";
         certifications: ["CISSP", "CISM", "GCIH", "GCFA"],
         deliveryTime: "8-10 weeks";
-        support: "24/7",
-    };
+        support: "24/7"};
     {id: 2;
         support: "24/7"};
     {

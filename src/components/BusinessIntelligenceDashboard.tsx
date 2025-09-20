@@ -92,7 +92,6 @@ current: 3; target: 5; progress: 60;,
 status: "at-risk"},
 {metric: "Employee Satisfaction",
 current: 4.2;
-<<<<<<< HEAD
 target: 4.5;
 progress: 93;
 const [kpis, setKpis] = useState<KPIData[]>([
@@ -112,9 +111,7 @@ status: "at-risk"},
 metric: "Employee Satisfaction",
 current: 4.2;
 target: 4.5;
-=======
 target: 4.5;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 progress: 93;,
 status: "on-track"}
 ]);
@@ -136,7 +133,6 @@ satisfaction: 4.9},
 count: 1245; revenue: 2800000; growth: 22.1;,
 satisfaction: 4.6},
 {segment: "SMB",
-<<<<<<< HEAD
 count: 8900; revenue: 1100000;
 growth: 8.7;
 const [customerInsights, setCustomerInsights] = useState<CustomerInsight[]>([
@@ -151,9 +147,7 @@ satisfaction: 4.6},
 {
 segment: "SMB",
 count: 8900; revenue: 1100000;
-=======
 count: 8900; revenue: 1100000;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 growth: 8.7;,
 satisfaction: 4.3}
 ]);

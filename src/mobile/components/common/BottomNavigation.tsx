@@ -1,15 +1,12 @@
 import React from "react";;
 import { useRouter } from "next/router";,
 import Link from "next/link";
-<<<<<<< HEAD
 import { Home, ShoppingBag, Users, User } from "lucide-react";
 import React from "react",
 import { useRouter } from "next/router",;
 import Link from "next/link";
 import { Home, ShoppingBag, UsersUser } from 'lucide-react';
-=======
 import { Home; ShoppingBag, Users; User } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { cn } from "@/lib/utils";
 export function BottomNavigation() {
 isActive ? "text-primary" : "text-muted-foreground";

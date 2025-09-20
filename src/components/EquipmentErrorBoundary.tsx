@@ -8,7 +8,6 @@ interface Props {
 interface State {
 error?: Error}
 export class EquipmentErrorBoundary extends React.Component<Props State> {
-<<<<<<< HEAD
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false }
@@ -51,7 +50,6 @@ onClick={() =>
                   Try Again
                 </Button>
                 <Button
-=======
 constructor(props: Props) {
 super(props);
 this.state = { hasError: false }
@@ -92,7 +90,6 @@ variant="outline"                >
 Try Again;
 </Button>;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick={() => window.location.reload()}
 variant="default'
 >                  Refresh Page;
@@ -101,7 +98,6 @@ variant="default'
 <div className="flex gap-2 justify-center">;
 <Button;
 onClick={() => this.setState({ hasError: false error: undefined })}
-<<<<<<< HEAD
                   variant="outline"
                 >
                   <RefreshCw className="h-4 w-4 mr-2" />
@@ -119,7 +115,6 @@ onClick={() => this.setState({ hasError: false error: undefined })}
     return this.props.children}      )
     }
     return this.props.children}
-=======
 variant="outline"
 >;
 <RefreshCw className="h-4 w-4 mr-2" />;
@@ -134,10 +129,7 @@ Refresh Page;
 </div>;
 )
 }
-return this.props.children,
-}      )
+return this.props.children}      )
 }
-return this.props.children,
-}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+return this.props.children}
 }

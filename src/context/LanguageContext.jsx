@@ -18,8 +18,7 @@ export function LanguageProvider({ children }) {;
       get_started: 'Comenzar';
       learn_more: 'Saber Más';
       contact_us: 'Contáctanos';
-    },
-  };
+    }};
       contact_us: 'Contáctanos';}};
 
   const t = (key) => translations[language]?.[key] || key;

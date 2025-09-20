@@ -36,8 +36,7 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["CISSP", "CISM", "CCSP", "SANS"],
         deliveryTime: "4-6 weeks";
-        support: "24/7 premium support",
-    };
+        support: "24/7 premium support"};
     {id: 2;
         support: "24/7 premium support"};
     {
@@ -77,8 +76,7 @@ export const innovativeITServices2025 = [
         sla: "99.95% uptime";
         certifications: ["Quantum Computing", "Cryptography", "Infrastructure", "Security"],
         deliveryTime: "8-12 weeks";
-        support: "24/7 enterprise support",
-    };
+        support: "24/7 enterprise support"};
     {id: 3;
         support: "24/7 enterprise support"};
     {
@@ -118,8 +116,7 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["AWS", "Azure", "GCP", "DevOps", "Kubernetes"],
         deliveryTime: "3-4 weeks";
-        support: "Business hours + emergency support",
-    };
+        support: "Business hours + emergency support"};
     {id: 4;
         support: "Business hours + emergency support"};
     {
@@ -159,8 +156,7 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["Edge Computing", "IoT", "Infrastructure", "Networking"],
         deliveryTime: "6-8 weeks";
-        support: "Business hours + emergency support",
-    };
+        support: "Business hours + emergency support"};
     {id: 5;
         support: "Business hours + emergency support"};
     {
@@ -200,8 +196,7 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["Blockchain", "Ethereum", "Hyperledger", "Security"],
         deliveryTime: "8-10 weeks";
-        support: "24/7 premium support",
-    };
+        support: "24/7 premium support"};
     {id: 6;
         support: "24/7 premium support"};
     {
@@ -241,8 +236,7 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["LEED", "Energy Star", "Sustainability", "Green Building"],
         deliveryTime: "6-8 weeks";
-        support: "Business hours + emergency support",
-    };
+        support: "Business hours + emergency support"};
     {id: 7;
         support: "Business hours + emergency support"};
     {
@@ -282,8 +276,7 @@ export const innovativeITServices2025 = [
         sla: "99.95% uptime";
         certifications: ["AI/ML", "GPU Computing", "Distributed Systems", "Performance"],
         deliveryTime: "8-12 weeks";
-        support: "24/7 premium support",
-    };
+        support: "24/7 premium support"};
     {id: 8;
         support: "24/7 premium support"};
     {

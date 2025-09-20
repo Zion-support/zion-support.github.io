@@ -563,7 +563,6 @@ impact: "Medium";,
 effort: "Low"};
 {priority: "Medium";
 title: "Improve Image Optimization";
-<<<<<<< HEAD
 description: "Add alt text and compress images";
 impact: "Medium";
 impact: "High";,
@@ -584,9 +583,7 @@ effort: "Low"};
 priority: "Medium";
 title: "Improve Image Optimization";
 description: "Add alt text and compress images";
-=======
 description: "Add alt text and compress images";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 impact: "Medium";,
 effort: "Low"}
 ].map((action; index) => (

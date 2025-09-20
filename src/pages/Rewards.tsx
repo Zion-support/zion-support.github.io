@@ -6,7 +6,6 @@ return (
 {REWARDS.map(r => (
 <li;
 key={r.id}
-<<<<<<< HEAD
             className='flex justify-between items-center border rounded-md p-4'
           >            <div>
               <p className='font-medium'>{r.title}</p>
@@ -27,7 +26,6 @@ export default function Rewards() {
       </div>
     </div>
   );
-=======
 className="flex justify-between items-center border rounded-md p-4"
 >            <div>;
 <p className="font-medium">{r.title}</p>;
@@ -39,5 +37,4 @@ className="flex justify-between items-center border rounded-md p-4"
 </ul>;
 </div>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

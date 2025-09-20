@@ -29,8 +29,7 @@ export class ComprehensiveImprovementsManager {
       ogImage: 'https://zion.app/og-image.svg',
       ogType: 'website',
       twitterCard: 'summary_large_image',
-      author: 'Zion Holdings',
-    });
+      author: 'Zion Holdings'});
   }
 
   public async initializeAllImprovements() {
@@ -71,13 +70,11 @@ export class ComprehensiveImprovementsManager {
           firstContentfulPaint: loadTime,
           largestContentfulPaint: loadTime,
           firstInputDelay: 0,
-          cumulativeLayoutShift: 0,
-        });
+          cumulativeLayoutShift: 0});
         
         this.analytics.trackPerformance({
           pageLoadTime: loadTime,
-          domContentLoaded: performance.getEntriesByType('navigation')[0]?.domContentLoadedEventEnd || 0,
-        });
+          domContentLoaded: performance.getEntriesByType('navigation')[0]?.domContentLoadedEventEnd || 0});
       });
     }
   }
@@ -107,7 +104,7 @@ export class ComprehensiveImprovementsManager {
     // Track performance metrics
     setTimeout(() => {
       const metrics = this.performance.getMetrics();
-      this.analytics.trackPerformance(metrics as Record<string, number>);
+      this.analytics.trackPerformance(metrics as Record<string number>);
     }, 1000);
     
     // Track user engagement
@@ -126,8 +123,7 @@ export class ComprehensiveImprovementsManager {
     // Add breadcrumb structured data for navigation
     const breadcrumbs = [
       { name: 'Home', url: 'https://zion.app' },
-      { name: 'AI Solutions', url: 'https://zion.app/services' },
-    ];
+      { name: 'AI Solutions', url: 'https://zion.app/services' }];
     this.metadata.generateBreadcrumbStructuredData(breadcrumbs);
   }
 
@@ -137,25 +133,21 @@ export class ComprehensiveImprovementsManager {
     const performanceReport = {
       metrics: this.performance.getMetrics(),
       score: this.performance.getPerformanceScore(),
-      recommendations: this.generatePerformanceRecommendations(),
-    };
+      recommendations: this.generatePerformanceRecommendations()};
     
     const accessibilityReport = {
       config: this.accessibility.getConfig(),
       score: this.calculateAccessibilityScore(),
-      recommendations: this.generateAccessibilityRecommendations(),
-    };
+      recommendations: this.generateAccessibilityRecommendations()};
     
     const analyticsReport = {
       userMetrics: this.analytics.getUserMetrics(),
-      events: this.analytics.getEvents(),
-    };
+      events: this.analytics.getEvents()};
     
     const seoReport = {
       metadata: this.metadata.generateOptimizedMetadata(),
       structuredData: this.metadata.generateStructuredDataScript(),
-      metaTags: this.metadata.generateMetaTags(),
-    };
+      metaTags: this.metadata.generateMetaTags()};
     
     // Store reports for analysis
     this.storeReports({
@@ -163,8 +155,7 @@ export class ComprehensiveImprovementsManager {
       accessibility: accessibilityReport,
       analytics: analyticsReport,
       seo: seoReport,
-      timestamp: new Date().toISOString(),
-    });
+      timestamp: new Date().toISOString()});
   }
 
   private createSkipLinks() {
@@ -323,23 +314,18 @@ export class ComprehensiveImprovementsManager {
     return {
       performance: {
         score: this.performance.getPerformanceScore(),
-        metrics: this.performance.getMetrics(),
-      },
+        metrics: this.performance.getMetrics()},
       accessibility: {
         config: this.accessibility.getConfig(),
-        score: this.calculateAccessibilityScore(),
-      },
+        score: this.calculateAccessibilityScore()},
       analytics: {
         userMetrics: this.analytics.getUserMetrics(),
-        eventCount: this.analytics.getEvents().length,
-      },
+        eventCount: this.analytics.getEvents().length},
       seo: {
         metadata: this.metadata.generateOptimizedMetadata(),
-        hasStructuredData: true,
-      },
+        hasStructuredData: true},
       status: 'All improvements active and functioning',
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
   }
 
   public cleanup() {

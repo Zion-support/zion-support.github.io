@@ -18,8 +18,7 @@ on: jest.fn()
         off: jest.fn(),
 emit: jest.fn()
       }
-      isFallback: false,
-}
+      isFallback: false}
   }
 }));
 // Mock Next.js Image component,

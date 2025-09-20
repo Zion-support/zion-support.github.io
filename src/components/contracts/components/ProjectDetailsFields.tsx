@@ -9,7 +9,7 @@ import React from "react";
 import React from "react",;
 const ProjectDetailsFields: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className = "text-xl font-bold mb-4">ProjectDetailsFields</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
@@ -83,7 +83,6 @@ Be specific about what is included and any limitations;
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
 <FormField;
 control={form.control}
-<<<<<<< HEAD
           name='startDate'
           render={({
             field}: {
@@ -91,8 +90,7 @@ control={form.control}
           }) => (<FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
-        <FormField,
-control = {form.control}
+        <FormField control = {form.control}
           name="startDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
             <FormItem className="flex flex-col">
@@ -120,7 +118,7 @@ mode='single'
                     selected = {field.value}
                     onSelect = {field.onChange}
                     disabled = {(date) => date < new Date()}
-                    disabled = {(date,) => date < new Date()}
+                    disabled = {(date) => date < new Date()}
                     >
                       {field.value ? (
                         format(field.value, "PPP")
@@ -154,8 +152,7 @@ control={form.control}
           }) => (
             <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
         <FormField
-        <FormField,
-control = {form.control}
+        <FormField control = {form.control}
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
             <FormItem className="flex flex-col">
@@ -183,7 +180,7 @@ mode='single'
                     selected = {field.value |undefined}
                     onSelect = {field.onChange}
                     disabled = {(date) => date < form.getValues("startDate")}
-                    disabled = {(date,) => date < form.getValues("startDate")}
+                    disabled = {(date) => date < form.getValues("startDate")}
                     >
                       {field.value ? (
                         format(field.value, "PPP")
@@ -214,7 +211,6 @@ mode="single"
       </div>
 </>
   )
-=======
 name="startDate";
 render={({
 field}: {
@@ -341,6 +337,5 @@ Leave empty if the end date is flexible;
 </div>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 }}))))))

@@ -6,12 +6,10 @@ className?: string;
 }
 variant?: "default" | "destructive"}
 };
-interface AlertTitleProps {,
-}
+interface AlertTitleProps {}
 "children": React.ReactNode;}
 className?: string};
-interface AlertDescriptionProps {,
-}
+interface AlertDescriptionProps {}
 "children": React.ReactNode;}
 "children": React.ReactNode;
 className?: string};
@@ -25,12 +23,9 @@ const variantClasses = variant === "destructive",
 : "border-gray-200 bg-gray-50 text-gray-800",
 return <div className={`${baseClasses} ${variantClasses} ${className}`}>{children}</div>}
 export function AlertTitle($1) {,
-<<<<<<< HEAD
 return <h5 className={`mb-1 font-medium leading-none tracking-tight ${className}`}>{children}</h5>}
-=======
 return <h5 className={`mb-1 font-medium leading-none tracking-tight ${className}`}>{children}</h5>,;
 };
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function AlertDescription($1) {,;
 return <div className = {`text-sm ${className}`}>{children}</div>;
 };

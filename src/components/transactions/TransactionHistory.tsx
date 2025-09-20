@@ -13,7 +13,6 @@ import { safeStorage } from "@/utils/safeStorage";
 import { useCurrency } from "@/hooks/useCurrency";
 import { logErrorToProduction } from "@/utils/productionLogger";
 interface Transaction {provider?: {}
-<<<<<<< HEAD
     display_name?: string}
   service?: {title?: string}
 import React { useState useEffect } from "react",
@@ -35,10 +34,8 @@ provider?: {
     display_name?: string}
   service?: {
     title?: string}
-=======
 display_name?: string}
 service?: {title?: string}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 export function TransactionHistory() {
 const { user } = useAuth();

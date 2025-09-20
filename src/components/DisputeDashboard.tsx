@@ -14,13 +14,10 @@ export function DisputeDashboard() {return (
 </div>;
 </div>;
 <div className="mt-4 text-center">;
-<<<<<<< HEAD
 <div className="text-lg font-semibold text-white">Average Resolution Time</div>
 <div className="text-2xl font-bold text-zion-purple">3.2 days</div>
 </div>
 </div>
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 <div className="text-lg font-semibold text-white">Average Resolution Time</div>;
 <div className="text-2xl font-bold text-zion-purple">3.2 days</div>;
 </div>;

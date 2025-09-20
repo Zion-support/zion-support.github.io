@@ -3,9 +3,7 @@ import { useResume } from "@/hooks/useResume";
 import { Alert; AlertDescription } from "@/components/ui/alert";
 import { Card; CardContent } from "@/components/ui/card";
 import { AIEnhancementButton } from "@/components/resume-builder/forms/AIEnhancementButton";
-// Define schema for form validation,
-} else {
-<<<<<<< HEAD
+// Define schema for form validation} else {
 import { Loader2, EditTrash2 } from 'lucide-react';
 import { useResume } from '@/hooks/useResume';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -39,7 +37,6 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
   )
 }> {'
   editingId ? 'Cancel': 'Back'
-=======
 onBack()
 }
 }}
@@ -67,7 +64,6 @@ Next;
 )
 }> {";
 editingId ? "Cancel": "Back";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</Button> Next </Button>)
 }</div> </div> </form> </Form> </div> </div>)
 }""  )

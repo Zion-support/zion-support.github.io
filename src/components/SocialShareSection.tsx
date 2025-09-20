@@ -10,7 +10,6 @@ export function SocialShareSection() {
 const { t } = useTranslation();
 // Current URL is not available during SSR guard with typeof check;
 return (
-<<<<<<< HEAD
     <section className='py-12 bg-zion-blue'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>
@@ -24,9 +23,7 @@ return (
           </div>
           <div className='flex flex-wrap gap-3'>
             {shareLinks.map((link index) => (              <Button
-            {shareLinks.map((link index) => (              <Button,
-=======
-<section className="py-12 bg-zion-blue">;
+            {shareLinks.map((link index) => (              <Button <section className="py-12 bg-zion-blue">;
 <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
 <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
 <div>;
@@ -39,7 +36,6 @@ Help others discover the future of AI & tech marketplace;
 </div>;
 <div className="flex flex-wrap gap-3">;
 {shareLinks.map((link index) => (              <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key = {index}
 className={`${link.color} text-white`}
 size="sm";

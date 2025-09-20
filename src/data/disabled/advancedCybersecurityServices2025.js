@@ -53,8 +53,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: true;
-        threatIntelligence: true,
-    };
+        threatIntelligence: true};
     {id: 2;
         threatIntelligence: true};
     {
@@ -111,8 +110,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true,
-    };
+        threatIntelligence: true};
     {id: 3;
         threatIntelligence: true};
     {
@@ -169,8 +167,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: false;
         quantumResistant: true;
-        threatIntelligence: false,
-    };
+        threatIntelligence: false};
     {id: 4;
         threatIntelligence: false};
     {
@@ -227,8 +224,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: false;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: false,
-    };
+        threatIntelligence: false};
     {id: 5;
         threatIntelligence: false};
     {
@@ -285,8 +281,7 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true,
-    };
+        threatIntelligence: true};
     {id: 6;
         threatIntelligence: true};
     {

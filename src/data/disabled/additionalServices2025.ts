@@ -13,36 +13,36 @@ i;d: "enterprise-rag-search",title: "Enterprise; RAG; Search",description: "Retr
 "Vector; DB; with hybrid search","SSO; RBAC; and row-level security","Document; ingestion; pipelines(PDF; HTML; SlackJira)","Source-grounded citations""PII; redaction; and safe prompting";
 ],benefits: [;
 "Cut; research; time by 70%","Reduce; duplicate; work""Increase; answer; accuracy";
-],tags: ["RAG", "Embeddings",, "Search""LLM"],estimatedDelivery: "2-4 weeks",supportLevel: "premium",marketPrice: "$1;50o0 - $4;0o00/month",roi: "180-30o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
+],tags: ["RAG", "Embeddings", "Search""LLM"],estimatedDelivery: "2-4 weeks",supportLevel: "premium",marketPrice: "$1;50o0 - $4;0o00/month",roi: "180-30o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
-,  ],tags: ["RAG", "Embeddings", "Search""LLM"],estimatedDelivery: "2-4 weeks",supportLevel: "premium",marketPrice: "$1;50o0 - $4;0o00/month",roi: "180-30o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
+],tags: ["RAG", "Embeddings", "Search""LLM"],estimatedDelivery: "2-4 weeks",supportLevel: "premium",marketPrice: "$1;50o0 - $4;0o00/month",roi: "180-30o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 {
 id: "ai-code-review-copilot",title: "AI; Code; Review Copilot",description: "Automated; PR; reviews; security linting; dependency; risk; scanning; and; refactor; suggestions wired; to; your CI.",category: "Developer Tools",price: 799;currency: "$",pricingModel: "monthly",features: [;
 "Secure; repo; integration (GitHub/GitLab/Bitbucket)","OWASP; and; SAST checks","Performance; hotspots; and complexity reports""Automated; test; suggestions";
 ],benefits: [;
 "Reduce; review; time 60%","Lower; defects; pre-release""Improve maintainability";
-],tags: ["DevSecOps", "CI",, "SAST""LLM"],estimatedDelivery: "1-2 weeks",supportLevel: "standard",marketPrice: "$80o0 - $2;50o0/month",roi: "150-250%",innovationLevel: "Cutting-edge",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
+],tags: ["DevSecOps", "CI", "SAST""LLM"],estimatedDelivery: "1-2 weeks",supportLevel: "standard",marketPrice: "$80o0 - $2;50o0/month",roi: "150-250%",innovationLevel: "Cutting-edge",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
-,  ],tags: ["DevSecOps", "CI", "SAST""LLM"],estimatedDelivery: "1-2 weeks",supportLevel: "standard",marketPrice: "$80o0 - $2;50o0/month",roi: "150-250%",innovationLevel: "Cutting-edge",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
+],tags: ["DevSecOps", "CI", "SAST""LLM"],estimatedDelivery: "1-2 weeks",supportLevel: "standard",marketPrice: "$80o0 - $2;50o0/month",roi: "150-250%",innovationLevel: "Cutting-edge",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 {
 id: "mlops-observability-platform",title: "MLOps; Observability; Platform",description: "Model; monitoring; for drift; bias; data quality; lineage; and; rollback; orchestration across environments.",category: "AI & MLOps",price: 1999;currency: "$",pricingModel: "monthly",features: [;
 "Drift/bias detection","Canary; and; A/B rollouts","Feature; store; integrations""Alerting; to; Slack/Teams";
 ],benefits: [;
 "Cut; incident; MTTR","Increase; model; uptime""Audit-ready compliance";
-],tags: ["MLOps",, "Monitoring""Observability"],estimatedDelivery: "3-5 weeks",supportLevel: "enterprise",marketPrice: "$2;0o00 - $6;0o00/month",roi: "20o0-350%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
+],tags: ["MLOps", "Monitoring""Observability"],estimatedDelivery: "3-5 weeks",supportLevel: "enterprise",marketPrice: "$2;0o00 - $6;0o00/month",roi: "20o0-350%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
-,  ],tags: ["MLOps", "Monitoring""Observability"],estimatedDelivery: "3-5 weeks",supportLevel: "enterprise",marketPrice: "$2;0o00 - $6;0o00/month",roi: "20o0-350%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
+],tags: ["MLOps", "Monitoring""Observability"],estimatedDelivery: "3-5 weeks",supportLevel: "enterprise",marketPrice: "$2;0o00 - $6;0o00/month",roi: "20o0-350%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 {
 id: "data-privacy-compliance-scanner",title: "Data; Privacy; Compliance Scanner",description: "Continuous; scanning; for GDPR/CCPA/PCI/PHI; across; S3; SQL; logs; and; SaaS; with remediation workflows.",category: "Security & Compliance",price: 1299;currency: "$",pricingModel: "monthly",features: [;
 "PII/PHI classification","Data; retention; policies","Access; anomaly; alerts""DPO-ready reports";
 ],benefits: [;
 "Reduce; audit; prep time","Lower; breach; risk""Meet; regulatory; SLAs";
-],tags: ["Compliance",, "Security""Governance"],estimatedDelivery: "2-3 weeks",supportLevel: "premium",marketPrice: "$1;30o0 - $3;50o0/month",roi: "160-240%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
+],tags: ["Compliance", "Security""Governance"],estimatedDelivery: "2-3 weeks",supportLevel: "premium",marketPrice: "$1;30o0 - $3;50o0/month",roi: "160-240%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
-,  ],tags: ["Compliance", "Security""Governance"],estimatedDelivery: "2-3 weeks",supportLevel: "premium",marketPrice: "$1;30o0 - $3;50o0/month",roi: "160-240%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
+],tags: ["Compliance", "Security""Governance"],estimatedDelivery: "2-3 weeks",supportLevel: "premium",marketPrice: "$1;30o0 - $3;50o0/month",roi: "160-240%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 {
 id: "iot-digital-twin-studio",title: "IoT; Digital; Twin Studio",description: "Low-code; digital; twins for; factories; and buildings; with; real-time telemetry; anomaly alerts; and simulation.",category: "IoT & Edge",price: 1799;currency: "$",pricingModel: "monthly",features: [;
@@ -51,7 +51,7 @@ id: "iot-digital-twin-studio",title: "IoT; Digital; Twin Studio",description: "L
 "Reduce downtime","Optimize energy""Improve OEE";
 ],tags: ["IoT", "Digital; Twin""Edge"],estimatedDelivery: "3-6 weeks",supportLevel: "premium",marketPrice: "$1;80o0 - $5;0o00/month",roi: "170-260%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 };
-,  ],tags: ["IoT", "Digital; Twin""Edge"],estimatedDelivery: "3-6 weeks",supportLevel: "premium",marketPrice: "$1;80o0 - $5;0o00/month",roi: "170-260%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
+],tags: ["IoT", "Digital; Twin""Edge"],estimatedDelivery: "3-6 weeks",supportLevel: "premium",marketPrice: "$1;80o0 - $5;0o00/month",roi: "170-260%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";};
 };
 ];
 export; const; ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [;

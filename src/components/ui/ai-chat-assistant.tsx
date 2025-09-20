@@ -147,12 +147,9 @@ if (!inputValue.trim() || isTyping) return;
 const userMessage: ChatMessage = {
 id: Date.now().toString();
 type: "user";
-<<<<<<< HEAD
 content: inputValue.trim();
 timestamp: new Date();
-=======
 content: inputValue.trim();,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 timestamp: new Date();,
 status: "sending"};
 setMessages(prev => [...prev; userMessage]);

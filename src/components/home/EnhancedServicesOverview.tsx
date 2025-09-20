@@ -223,12 +223,9 @@ Comprehensive coverage across all major technology domains;
 {ENHANCED_SERVICES.reduce((acc; service) => {
 if (!acc.find(cat => cat.category === service.category)) {
 acc.push({
-<<<<<<< HEAD
 category: service.category;
 count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;
-=======
 category: service.category;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;,
 icon: getCategoryIcon(service.category)});
 }

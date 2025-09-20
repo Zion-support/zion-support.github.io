@@ -77,12 +77,9 @@ targetAudience: [
 tags: ["Quantum Computing", "AI", "Machine Learning", "Optimization", "Encryption", "Simulation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
@@ -103,8 +100,7 @@ useCases: [
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA", "FedRAMP"],
 scalability: "Unlimited quantum qubits";,
-support: "24/7 quantum expert support",
-};
+support: "24/7 quantum expert support"};
 {id: 2;
 scalability: "Unlimited quantum qubits";,
 support: "24/7 quantum expert support"};
@@ -146,12 +142,9 @@ targetAudience: [
 tags: ["Neuromorphic", "AI", "Neural Networks", "Edge Computing", "IoT", "Robotics"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000/month (Industry average: $30;000/month)",
@@ -172,8 +165,7 @@ useCases: [
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "FDA", "CE"],
 scalability: "Up to 1M neurons";,
-support: "Expert neuromorphic support",
-};
+support: "Expert neuromorphic support"};
 {id: 3;
 scalability: "Up to 1M neurons";,
 support: "Expert neuromorphic support"};
@@ -215,12 +207,9 @@ targetAudience: [
 tags: ["Federated Learning", "Privacy", "AI", "Security", "Compliance", "Collaboration"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$8;000/month (Industry average: $15;000/month)",
@@ -241,8 +230,7 @@ useCases: [
 ],
 compliance: ["GDPR", "HIPAA", "CCPA", "SOC 2", "ISO 27001"],
 scalability: "Unlimited participants";,
-support: "Privacy expert support",
-};
+support: "Privacy expert support"};
 {id: 4;
 scalability: "Unlimited participants";,
 support: "Privacy expert support"};
@@ -284,12 +272,9 @@ targetAudience: [
 tags: ["Edge Computing", "AI", "Orchestration", "IoT", "5G", "Real-time"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$12;000/month (Industry average: $25;000/month)",
@@ -310,8 +295,7 @@ useCases: [
 ],
 compliance: ["ISO 27001", "SOC 2", "GDPR", "NIST", "IEC 62443"],
 scalability: "Unlimited edge nodes";,
-support: "24/7 edge computing support",
-};
+support: "24/7 edge computing support"};
 {id: 5;
 scalability: "Unlimited edge nodes";,
 support: "24/7 edge computing support"};
@@ -353,12 +337,9 @@ targetAudience: [
 tags: ["AI Ethics", "Governance", "Compliance", "Bias Detection", "Transparency", "Risk Management"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$6;000/month (Industry average: $12;000/month)",
@@ -379,8 +360,7 @@ useCases: [
 ],
 compliance: ["GDPR", "CCPA", "AI Act", "NIST AI Risk Management", "ISO 42001"],
 scalability: "Unlimited AI models";,
-support: "AI ethics expert support",
-};
+support: "AI ethics expert support"};
 {id: 6;
 scalability: "Unlimited AI models";,
 support: "AI ethics expert support"};
@@ -422,12 +402,9 @@ targetAudience: [
 tags: ["Blockchain", "AI", "DeFi", "NFTs", "Smart Contracts", "Web3"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$18;000/month (Industry average: $35;000/month)",
@@ -448,8 +425,7 @@ useCases: [
 ],
 compliance: ["GDPR", "SOC 2", "ISO 27001", "Blockchain regulations"],
 scalability: "Multi-chain support";,
-support: "Blockchain AI expert support",
-};
+support: "Blockchain AI expert support"};
 {id: 7;
 scalability: "Multi-chain support";,
 support: "Blockchain AI expert support"};
@@ -491,12 +467,9 @@ targetAudience: [
 tags: ["Post-Quantum", "Cryptography", "Security", "Quantum Computing", "Encryption", "Compliance"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$10;000/month (Industry average: $20;000/month)",
@@ -517,8 +490,7 @@ useCases: [
 ],
 compliance: ["NIST PQC", "FIPS 140-3", "SOC 2", "ISO 27001", "FedRAMP"],
 scalability: "Unlimited encryption keys";,
-support: "Cryptography expert support",
-};
+support: "Cryptography expert support"};
 {id: 8;
 scalability: "Unlimited encryption keys";,
 support: "Cryptography expert support"};
@@ -560,12 +532,9 @@ targetAudience: [
 tags: ["DevOps", "AI", "Automation", "CI/CD", "Monitoring", "SRE"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$7;000/month (Industry average: $15;000/month)",
@@ -586,8 +555,7 @@ useCases: [
 ],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
 scalability: "Unlimited repositories";,
-support: "DevOps expert support",
-};
+support: "DevOps expert support"};
 {id: 9;
 scalability: "Unlimited repositories";,
 support: "DevOps expert support"};
@@ -629,12 +597,9 @@ targetAudience: [
 tags: ["Synthetic Data", "GANs", "Privacy", "Data Science", "AI Training", "Compliance"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;000/month (Industry average: $10;000/month)",
@@ -655,8 +620,7 @@ useCases: [
 ],
 compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],
 scalability: "Unlimited data generation";,
-support: "Data science expert support",
-};
+support: "Data science expert support"};
 {id: 10;
 scalability: "Unlimited data generation";,
 support: "Data science expert support"};
@@ -698,12 +662,9 @@ targetAudience: [
 tags: ["Customer Experience", "AI", "Personalization", "Chatbots", "Analytics", "Automation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$9;000/month (Industry average: $18;000/month)",
@@ -724,8 +685,7 @@ useCases: [
 ],
 compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
 scalability: "Unlimited customers";,
-support: "Customer experience expert support",
-}
+support: "Customer experience expert support"}
 scalability: "Unlimited customers";,
 support: "Customer experience expert support"}
 ];

@@ -19,7 +19,6 @@ import { logInfo } from "@/utils/productionLogger";
 import { MessageSquare; Briefcase, Code; FileText, Megaphone; Search } from "lucide-react";
 // Mock category data;
 const categoriesInfo: Record<string ForumCategoryInfo> = {
-<<<<<<< HEAD
   "getting-hired": {
   )
 import React from 'react';
@@ -34,8 +33,6 @@ export default function ForumCategoryPage() {
     </div>
   );
 }
-=======
 "getting-hired": {
 )
 }}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

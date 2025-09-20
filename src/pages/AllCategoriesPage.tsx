@@ -1,16 +1,8 @@
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
-<<<<<<< HEAD
-import ErrorBoundary from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
 import Header from "@/components/Header";
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-// Reusing the categories array from CategoriesSection.tsx
-=======
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-// Reusing the categories array from CategoriesSection.tsx;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
-// Ideally this would come from a shared data source or API;
 
 const categories = [
   {
@@ -44,65 +36,31 @@ const categories = [
 ];
 
 export default function AllCategoriesPage() {
-return (
-<div className="min-h-screen bg-zion-blue">;
-<div className="container mx-auto px-4 py-12">;
-<div className="text-center mb-12">;
-<GradientHeading;
-level="h1";
-className="text-4xl md:text-5xl font-bold mb-4"
->;
-All Categories;
-</GradientHeading>;
-<p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
-Explore our extensive range of AI services and products. Find;
-exactly what you"re looking for to enhance your business or personal;
-projects.          </p>;
-</div>;
-<ErrorBoundary>;
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
-{categories.map(category => (
-<CategoryCard;
-key={category.id}
-title={category.title}
-description={category.description}
-icon={category.icon}
-href={category.href}
-/>;
-))}
-</div>;
-<ErrorBoundary>;
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
-{categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
-{categories.map((category) => (<CategoryCard;
-key={category.title}
-title={category.title}
-description={category.description}
-icon={category.icon}
-{categories.map((category) => (
-<CategoryCard;
-key = {category.title}
-<<<<<<< HEAD
-                title = {category.title}
-                description = {category.description}
-                icon = {category.icon}
-                // The CategoryCard itself is a Link to its specific category page
-                // So we don't pass the category.link to a 'to' prop here directly
-                // The 'link' in the categories array above is used by CategoryCard's internal Link
-      <div className='container mx-auto px-4 py-8'>
-        <GradientHeading
-          title="All Categories"
-          subtitle="Explore our comprehensive range of services and solutions"
-          className="text-center mb-12"
-        />
-        
+  return (
+    <div className="min-h-screen bg-zion-blue">
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-12">
+          <GradientHeading
+            level="h1"
+            className="text-4xl md:text-5xl font-bold mb-4"
+          >
+            All Categories
+          </GradientHeading>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            Explore our extensive range of AI services and products. Find
+            exactly what you're looking for to enhance your business or personal
+            projects.
+          </p>
+        </div>
         <ErrorBoundary>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category) => (
               <CategoryCard
                 key={category.id}
-                category={category}
-                className="hover:scale-105 transition-transform duration-200"
+                title={category.name}
+                description={category.description}
+                icon={category.icon}
+                href={`/category/${category.id}`}
               />
             ))}
           </div>
@@ -111,19 +69,3 @@ key = {category.title}
     </div>
   );
 }
-=======
-title = {category.title}
-description = {category.description}
-icon = {category.icon}
-// The CategoryCard itself is a Link to its specific category page;
-// So we don"t pass the category.link to a "to" prop here directly;
-// The "link" in the categories array above is used by CategoryCard's internal Link;
-/>;
-))}
-</div>;
-</ErrorBoundary>;
-</div>;
-</div>;
-)
-}}}))))
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

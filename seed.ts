@@ -107,14 +107,11 @@ async function main() {
   await (prisma as any).category.createMany({
     data: categories,
     skipDuplicates: true
-  }),
-}
+  })}
 
 main()
   .catch((e) => {
     console.error(e),
-    process.exit(1),
-  })
+    process.exit(1)})
   .finally(async () => {
-    await prisma.$disconnect(),
-  }),
+    await prisma.$disconnect()}),

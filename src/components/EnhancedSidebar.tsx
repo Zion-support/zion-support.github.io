@@ -9,7 +9,6 @@ import { import { motion; AnimatePresence   } from "framer-motion";
 ,
 export default function Page("props": "any) {,
 setExpandedSections(newExpanded)"},
-,
 const navigationSections = [{,
 import { import { motion; AnimatePresence   } from "framer-motion", export default function Page("props": "any) {,;
 setExpandedSections(newExpanded)"}, const navigationSections = [{,
@@ -41,8 +40,7 @@ exit = {,
 "height": "0,
 "}}
 transition={{ "duration": "0.3 "}}",
-className="ml-7 mt-2 space-y-1",
->,
+className="ml-7 mt-2 space-y-1">,
 {section.items.map((item) => (<Link;
 key={item.name}
 initial = {,
@@ -62,10 +60,8 @@ transition = {,
 <span>{item.name}</span>,
 {isActive(item.href) && (",
 <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>)}
-</Link>,
-))}
-</motion.div>,
-)}
+</Link>))}
+</motion.div>)}
 </AnimatePresence>,
 </div>) ) }
 </nav>,
@@ -100,7 +96,7 @@ transition = {,
 </div>,
 </motion.div>,
 </div>,
-</aside>,) },
+</aside>) },
 '"`,
 </motion>,
 </motion>]]<//motion><///motion>;

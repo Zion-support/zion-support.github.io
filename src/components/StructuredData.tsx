@@ -7,13 +7,10 @@ data: any;
 }
 }
 };
-<<<<<<< HEAD
 type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';,
 data: any;};
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
-=======
 export const StructuredData: React.FC<StructuredDataProps> = ({ type; data }) => {
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 const getStructuredData: any = () => {
 const baseStructure = {;
 "@context": "https://schema.org";
@@ -40,7 +37,6 @@ url: "https://ziontechgroup.com",;
 logo: "https://ziontechgroup.com/logo.png",;
 description: "Leading provider of AI; quantum computing; and advanced technology solutions",
 address: {
-<<<<<<< HEAD
 '@type': 'PostalAddress',
 streetAddress: '364 E Main St STE 1008',
 addressLocality: 'Middletown',
@@ -53,7 +49,6 @@ contactPoint: {
 telephone: '+1-302-464-0950',
 contactType: 'customer service',
 email: 'kleber@ziontechgroup.com'},
-=======
 "@type": "PostalAddress",
 streetAddress: "364 E Main St STE 1008",
 addressLocality: "Middletown",
@@ -64,7 +59,6 @@ contactPoint: {"@type": "ContactPoint",
 telephone: "+1-302-464-0950",
 contactType: "customer service",
 email: "kleber@ziontechgroup.com"},
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 sameAs: [
 "https://twitter.com/ziontechgroup",
 "https://linkedin.com/company/ziontechgroup",;

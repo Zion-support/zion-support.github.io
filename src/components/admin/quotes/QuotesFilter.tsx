@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Calendar, RefreshCw } from "lucide-react";
 import { CalendarRefreshCw } from 'lucide-react';
-=======
 import React from "react";
 import { Calendar; RefreshCw } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface QuotesFilterProps {
 searchQuery: string;
 setSearchQuery: (value: string) => void;

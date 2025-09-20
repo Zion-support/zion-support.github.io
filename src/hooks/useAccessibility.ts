@@ -34,7 +34,6 @@ screenReader: false;,
 keyboardNavigation: true;
 });
 const [settings; setSettings] = useState<AccessibilitySettings>({fontSize: "medium";
-<<<<<<< HEAD
 colorScheme: "default";
 motionPreference: "no-preference";
 screenReader: false;,
@@ -42,9 +41,7 @@ keyboardNavigation: true;});
 const [settings, setSettings] = useState<AccessibilitySettings>({
 fontSize: "medium";
 colorScheme: "default";
-=======
 colorScheme: "default";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 motionPreference: "no-preference";,
 focusStyle: "default"});
 // Load preferences from localStorage;

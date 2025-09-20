@@ -343,12 +343,9 @@ return count;
 export const getDefaultFilters: any = (): SearchFilters => ({types: [],
 category: "",;
 minPrice: 0;
-<<<<<<< HEAD
 maxPrice: 10000;
 minRating: 0;
-=======
 maxPrice: 10000;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 minRating: 0;,
 sort: "relevance"});
 export default {

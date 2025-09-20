@@ -9,7 +9,7 @@ import React from "react";
 import React from "react",;
 const ConversationDetailView: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className = "text-xl font-bold mb-4">ConversationDetailView</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
@@ -27,7 +27,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageBubble } from "./MessageBubble";
 import { DateDivider } from "./DateDivider";
 export function ConversationDetailView() {loadMessages} = useMessaging();
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext';
@@ -48,8 +47,7 @@ loadMessages} = useMessaging();
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
             <AvatarImage
-            <AvatarImage,
-src = {activeConversation.other_user.avatar_url}
+            <AvatarImage src = {activeConversation.other_user.avatar_url}
               alt = {activeConversation.other_user.name}
             />
             <AvatarFallback className="bg-zion-blue-dark text-white">
@@ -76,8 +74,7 @@ src = {activeConversation.other_user.avatar_url}
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
                   <img
-                  <img,
-src = {activeConversation.context_data.image_url}
+                  <img src = {activeConversation.context_data.image_url}
                     alt = {activeConversation.context_data.title |"Context"}
                     className="object-cover"
                     loading="lazy"
@@ -114,10 +111,8 @@ src = {activeConversation.context_data.image_url}
               <div className="space-y-3">
                 {group.messages.map((message) => (
                   <MessageBubble
-                {group.messages.map((message,) => (
-                  <MessageBubble,
-=======
-const [messageText; setMessageText] = useState("");
+                {group.messages.map((message) => (
+                  <MessageBubble const [messageText; setMessageText] = useState("");
 const messagesEndRef = null;
 return (
 <div className="flex-1 flex flex-col h-full">;
@@ -190,7 +185,6 @@ activeConversation.context_type === "talent" ? "Regarding Talent:" :
 <div className="space-y-3">;
 {group.messages.map((message) => (
 <MessageBubble;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key = {message.id}
 message = {message}
 isUserMessage = {message.sender_id === user?.id}
@@ -206,18 +200,15 @@ isUserMessage = {message.sender_id === user?.id}
 <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
 <textarea;
 value = {messageText}
-<<<<<<< HEAD
             onChange = {(e) => setMessageText(e.target.value)}
-          <textarea,
-value = {messageText}
-            onChange = {(e,) => setMessageText(e.target.value)}
+          <textarea value = {messageText}
+            onChange = {(e) => setMessageText(e.target.value)}
             onKeyDown = {handleKeyDown}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref = {inputRef}
           />
           <Button
-=======
 onChange = {(e) => setMessageText(e.target.value)}
 onKeyDown = {handleKeyDown}
 placeholder="Type a message...";
@@ -225,7 +216,6 @@ className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p
 ref = {inputRef}
 />;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 type="submit"
 className="bg-zion-purple hover: bg-zion-purple-dark text-white"
 >;

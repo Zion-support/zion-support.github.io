@@ -5,7 +5,7 @@ benefits: string[], useCases: string[];,
 targetAudience: string[], tags: string[];,
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
-contactInfo: {,}
+contactInfo: {}
 contactInfo: {,
 phone: string; email: string; website: string};
 websiteUrl: string;
@@ -65,8 +65,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
-websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure",
-},
+websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"},
 websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"},
 
 // Quantum-Ready Cloud Infrastructure;
@@ -117,8 +116,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
-websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure",
-},
+websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure"},
 websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure"},
 
 // 5G Enterprise Infrastructure Solutions;
@@ -168,8 +166,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
-websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure",
-},
+websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"},
 websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"},
 
 // Autonomous DevOps Infrastructure;
@@ -395,8 +392,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
-websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure",
-},
+websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure"},
 websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure"},
 
 // AI-Powered Infrastructure Management;
@@ -446,8 +442,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
-websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management",
-}
+websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management"}
 ];
 }
 websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management"}

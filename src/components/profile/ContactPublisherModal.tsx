@@ -155,7 +155,6 @@ return (
 <FocusLock disabled={!isOpen} returnFocus>;
 <DialogContent;
 className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-<<<<<<< HEAD
           onKeyDown = {handleKeyDown}          aria-modal="true"
           aria-labelledby="contact-publisher-title"
         >
@@ -177,9 +176,8 @@ className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-m
         <Form {...form}>
           <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
             <FormField
-          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
-            <FormField,
-control = {form.control}
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+            <FormField control = {form.control}
               name="subject"
               render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Subject</FormLabel>
@@ -195,8 +193,7 @@ placeholder="Subject"
               )}
             />
             <FormField
-            <FormField,
-control = {form.control}
+            <FormField control = {form.control}
               name="message"
               render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Message</FormLabel>
@@ -212,9 +209,7 @@ placeholder={`Message to ${publisherName}...`}
               )}
             />
             <Button
-            <Button,
-=======
-onKeyDown={handleKeyDown}
+            <Button onKeyDown={handleKeyDown}
 aria-modal="true";
 aria-labelledby="contact-publisher-title";
 >;
@@ -345,7 +340,6 @@ className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
 )}
 />;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {handleSend}
 className="w-full"
 disabled = {!form.formState.isValid |isSubmitting}            >;

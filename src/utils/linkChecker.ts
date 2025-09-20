@@ -55,10 +55,7 @@ const normalizedUrl = this.normalizeUrl(url; pagePath);
 
 links.push({,
 url: normalizedUrl; status: "working",
-<<<<<<< HEAD
 page: pagePath;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 page: pagePath;,
 anchor: url.startsWith("#") ? url : undefined});
 }

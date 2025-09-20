@@ -17,7 +17,6 @@ import { useAuth } from "@/hooks/useAuth";,
 import ReplyCard from "@/components/community/ReplyCard",;
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
-<<<<<<< HEAD
 // Mock data for a forum post
   )
 export default function ForumPostPage() {
@@ -29,8 +28,6 @@ export default function ForumPostPage() {
       </div>
     </div>
   );
-=======
 // Mock data for a forum post;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

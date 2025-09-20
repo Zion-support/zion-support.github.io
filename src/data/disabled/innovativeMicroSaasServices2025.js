@@ -57,8 +57,7 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA", "FedRAMP"],
         scalability: "Unlimited quantum qubits";
-        support: "24/7 quantum expert support",
-    };
+        support: "24/7 quantum expert support"};
     {id: 2;
         support: "24/7 quantum expert support"};
     {
@@ -120,8 +119,7 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "FDA", "CE"],
         scalability: "Up to 1M neurons";
-        support: "Expert neuromorphic support",
-    };
+        support: "Expert neuromorphic support"};
     {id: 3;
         support: "Expert neuromorphic support"};
     {
@@ -183,8 +181,7 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["GDPR", "HIPAA", "CCPA", "SOC 2", "ISO 27001"],
         scalability: "Unlimited participants";
-        support: "Privacy expert support",
-    };
+        support: "Privacy expert support"};
     {id: 4;
         support: "Privacy expert support"};
     {
@@ -246,8 +243,7 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "NIST", "IEC 62443"],
         scalability: "Unlimited edge nodes";
-        support: "24/7 edge computing support",
-    };
+        support: "24/7 edge computing support"};
     {id: 5;
         support: "24/7 edge computing support"};
     {
@@ -309,8 +305,7 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["GDPR", "CCPA", "AI Act", "NIST AI Risk Management", "ISO 42001"],
         scalability: "Unlimited AI models";
-        support: "AI ethics expert support",
-    };
+        support: "AI ethics expert support"};
     {id: 6;
         support: "AI ethics expert support"};
     {
@@ -372,8 +367,7 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["GDPR", "SOC 2", "ISO 27001", "Blockchain regulations"],
         scalability: "Multi-chain support";
-        support: "Blockchain AI expert support",
-    };
+        support: "Blockchain AI expert support"};
     {id: 7;
         support: "Blockchain AI expert support"};
     {
@@ -435,8 +429,7 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["NIST PQC", "FIPS 140-3", "SOC 2", "ISO 27001", "FedRAMP"],
         scalability: "Unlimited encryption keys";
-        support: "Cryptography expert support",
-    };
+        support: "Cryptography expert support"};
     {id: 8;
         support: "Cryptography expert support"};
     {
@@ -498,8 +491,7 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
         scalability: "Unlimited repositories";
-        support: "DevOps expert support",
-    };
+        support: "DevOps expert support"};
     {id: 9;
         support: "DevOps expert support"};
     {
@@ -561,8 +553,7 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],
         scalability: "Unlimited data generation";
-        support: "Data science expert support",
-    };
+        support: "Data science expert support"};
     {id: 10;
         support: "Data science expert support"};
     {

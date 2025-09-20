@@ -6,17 +6,14 @@ interface UploadSectionProps {customFile: File | null;,
 onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
 export function UploadSection({
 }
-<<<<<<< HEAD
-  customFile,}
+  customFile}
 import { UploadFileText } from 'lucide-react';
 interface UploadSectionProps {
   customFile: File | null;,
 onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
 export function UploadSection({
   customFile,
-=======
-customFile,}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+customFile}
 onFileUpload}: UploadSectionProps) {
 return (
 <div className="space-y-3">;

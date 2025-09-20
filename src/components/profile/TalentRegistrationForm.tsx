@@ -87,8 +87,7 @@ skills: "";
 hourlyRate: "";,
 availability: "available";,
 enhancedProfile: true;
-},
-});
+}});
 availability: "available";,
 enhancedProfile: true;}});
 
@@ -809,7 +808,6 @@ import { Textarea } from "@/components/ui/textarea";,
 import { Switch } from "@/components/ui/switch";,
 import { Badge } from "@/components/ui/badge";,
 import { Separator } from "@/components/ui/separator";
-<<<<<<< HEAD
 import { logWarn, logErrorToProduction } from "@/utils/productionLogger";
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -822,9 +820,7 @@ import { Switch } from "@/components/ui/switch",
 import { Badge } from "@/components/ui/badge",;
 import { Separator } from "@/components/ui/separator";
 import { logWarnlogErrorToProduction } from '@/utils/productionLogger';
-=======
 import { logWarn; logErrorToProduction } from "@/utils/productionLogger";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import {
 return (
 <div className="max-w-4xl mx-auto p-4 md:p-6">;
@@ -1261,7 +1257,6 @@ disabled={isSubmitting}                >;
 </div>;
 )
 }
-<<<<<<< HEAD
 //Generate enhanced profile with AI return}//Call the Supabase Edge Function const {
   data error '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {body: {,
@@ -1278,9 +1273,7 @@ devops: ["Docker", "CI/CD", "AWS" ];"
 platforms: ["Node.js", "Next.js", "Vercel" ];"
 softSkills: ["Communication", "Problem Solving",  "Team Leadership" ];"
 other: ["Project Management", "Technical Writing" ]
-=======
-//Generate enhanced profile with AI return,
-}//Call the Supabase Edge Function const {
+//Generate enhanced profile with AI return}//Call the Supabase Edge Function const {
 data error ";
 }= await supabase.functions.invoke ("talent-profile-enhancer", {body: {,
 talentData: {,
@@ -1295,7 +1288,6 @@ devops: ["Docker", "CI/CD", "AWS" ];";
 platforms: ["Node.js", "Next.js", "Vercel" ];";
 softSkills: ["Communication", "Problem Solving",  "Team Leadership" ];";
 other: ["Project Management", "Technical Writing" ];
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 })
 toast ({
 }catch (error: any) {";
@@ -1339,16 +1331,12 @@ if (Array.isArray (categorySkills) ) {
 categorySkills.forEach (skill => {";
 if (typeof skill === "string"&& skill) {
 })
-<<<<<<< HEAD
 //Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ]
 }//Continue with submission even if enhancement fails}//Send notification email if we have user email if (userEmail && values.enhancedProfile && user?.id) {
   sendEnhancementNotification (user.id userEmail)
-=======
 //Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ];
-}//Continue with submission even if enhancement fails,
-}//Send notification email if we have user email if (userEmail && values.enhancedProfile && user?.id) {
+}//Continue with submission even if enhancement fails}//Send notification email if we have user email if (userEmail && values.enhancedProfile && user?.id) {
 sendEnhancementNotification (user.id userEmail)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }, 1500)
 //Here would be the actual code to save the profile to Supabase /* const {
 error ";
@@ -1356,26 +1344,19 @@ error ";
 user id: user.id name: values.name title: values.title bio: values.bio summary: finalSummary location: values.location  skills: finalSkills.map (name => ({
 name level: 4;
 }) ), //Default skill level hourly rate: Number (values.hourlyRate)
-<<<<<<< HEAD
 availability status: values.availability
 //Other fields would be handled here})
 if (error) throw error
-=======
 availability status: values.availability;
-//Other fields would be handled here,
-})
+//Other fields would be handled here})
 if (error) throw error;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 */ setIsSubmitting (false)
 };";
 return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {...form}> <form onSubmit= {
-<<<<<<< HEAD
 return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {
   ...form}> <form onSubmit= {
   form.handleSubmit (onSubmit) "
-=======
 form.handleSubmit (onSubmit) ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }> <CardContent className="space-y-8"> {
 /* Basic Information */ ";
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
@@ -1385,17 +1366,14 @@ form.handleSubmit (onSubmit) ";
 }/> </div> </div> {
 /* Upload Avatar */ ";
 }<div className="space-y-2"> <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel> <div className="flex items-center gap-6"> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light"> {uploadedAvatar ? (<AspectRatio ratio= {
-<<<<<<< HEAD
 }<div className="space-y-2"> <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel> <div className="flex items-center gap-6"> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light"> {
   uploadedAvatar ? (<AspectRatio ratio= {
   1/1}> <img src= {
   uploadedAvatar "
 }alt="Avatar preview" className="w-full h-full object-cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items-center justify-center h-full"> <UserRound className="h-10 w-10 text-zion-slate opacity-50" /> </div>) "
-=======
 1/1}> <img src= {
 uploadedAvatar ";
 }alt="Avatar preview" className="w-full h-full object-cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items-center justify-center h-full"> <UserRound className="h-10 w-10 text-zion-slate opacity-50" /> </div>) ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</div> <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors"> <Upload className="mr-2 h-4 w-4" /> <span>Upload Photo</span> <input type="file" accept="image/*" className="hidden" onChange= {
 handleAvatarUpload ";
 }/> </label> </div> <p className="text-sm text-zion-slate"> For best results use an image at least 400x400 pixels in JPG PNG or GIF format. </p> </div> </div> <Separator className="bg-zion-blue-light/50" /> {
@@ -1409,7 +1387,6 @@ handleAvatarUpload ";
   generateEnhancedProfile}disabled= {
   isGenerating}> </Button> </div>)
 }{
-<<<<<<< HEAD
   /* Generated Content Display */
 }{"
   generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4"> <div className="flex items-center justify-between mb-3"> <h4 className="text-white font-medium flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Button type="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={
@@ -1420,7 +1397,6 @@ handleAvatarUpload ";
   generatedContent.categorizedSkills && (<div> <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5> <div className="flex flex-wrap gap-2 mt-1"> {
   Object.entries (generatedContent.categorizedSkills) .map ( ([category skills]) => (<div key= {
   category "
-=======
 /* Generated Content Display */;
 }{";
 generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4"> <div className="flex items-center justify-between mb-3"> <h4 className="text-white font-medium flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Button type="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={
@@ -1429,7 +1405,6 @@ applyGeneratedContent ";
 generatedContent.categorizedSkills && (<div> <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5> <div className="flex flex-wrap gap-2 mt-1"> {
 Object.entries (generatedContent.categorizedSkills) .map ( ([category skills]) => (<div key= {
 category ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }className="flex items-center gap-2"> <Badge className= {
 `w-fit $ {
 getCategoryColor (category as CategoryType)

@@ -1,3 +1,4 @@
+import React from "react";
 
 import { useState; useEffect } from "react";,
 import { useAuth } from "@/hooks/useAuth";,
@@ -12,7 +13,6 @@ import Link from "next/link";
 import { logErrorToProduction } from "@/utils/productionLogger";
 interface JobsListProps {return (<div className="grid gap-6 md:grid-cols-2">
 }
-<<<<<<< HEAD
       {jobs.map((job) => (<Card}
 import { useStateuseEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -28,14 +28,13 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 interface JobsListProps {
 return (
     <div className="grid gap-6 md:grid-cols-2">
-      {jobs.map((job,) => (
-        <Card,
-key = {job.id}
+      {jobs.map((job) => (
+        <Card key = {job.id}
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
           onClick = {() => onSelectJob?.(job.id job.title)}
-          onClick = {(,) => onSelectJob?.(job.id job.title)}
+          onClick = {() => onSelectJob?.(job.id job.title)}
         >
           <CardHeader className="p-4">
             <div className="flex justify-between items-start">
@@ -102,7 +101,6 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
   `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
   onSelectJob ? "cursor-pointer" : ""
 }`
-=======
 {jobs.map((job) => (<Card}
 key = {job.id}
 className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
@@ -173,21 +171,16 @@ job.id}className= {
 `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {";
 onSelectJob ? "cursor-pointer" : "";
 }`;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }onClick={
 () => onSelectJob?. (job.id job.title)
-}job.description,
-}</p> + {job.skills.length - 3}more </Badge>) ";
+}job.description}</p> + {job.skills.length - 3}more </Badge>) ";
 }</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {job.budget.min}- $ {
-<<<<<<< HEAD
 }job.description}</p> + {
   job.skills.length - 3}more </Badge>) "
 }</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {
   job.budget.min}- $ {
   job.budget.max "
-=======
 job.budget.max ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
 }</div>)
 }'"}

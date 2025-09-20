@@ -160,8 +160,7 @@ const notification = {;
 id: Date.now().toString();,
 message: `${key.replace(/([A-Z])/g, " $1").toLowerCase()} ${value ? "enabled" : "disabled"}`,
 type: "success" as const;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 type: "success" as const;,
 timestamp: Date.now()};
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
@@ -187,12 +186,9 @@ setSettings(defaultSettings);
 
 const notification = {;
 id: Date.now().toString();
-<<<<<<< HEAD
 message: "Accessibility settings reset to defaults";
 type: "info" as const;
-=======
 message: "Accessibility settings reset to defaults";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 type: "info" as const;,
 timestamp: Date.now()};
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);

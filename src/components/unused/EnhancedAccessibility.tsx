@@ -34,12 +34,9 @@ highContrast: false;
 fontSize: 16;
 reducedMotion: false;
 screenReader: false;
-<<<<<<< HEAD
 keyboardNavigation: false;
 focusIndicator: true;
-=======
 keyboardNavigation: false;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 focusIndicator: true;,
 colorBlindness: "none"});
 useEffect(() => {
@@ -123,12 +120,9 @@ highContrast: false;
 fontSize: 16;
 reducedMotion: false;
 screenReader: false;
-<<<<<<< HEAD
 keyboardNavigation: false;
 focusIndicator: true;
-=======
 keyboardNavigation: false;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 focusIndicator: true;,
 colorBlindness: "none"};
 setSettings(defaultSettings);

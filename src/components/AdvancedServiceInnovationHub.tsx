@@ -82,8 +82,7 @@ investme; n; t: "$50; B+",
 keyPlaye; r; s: ["IB; M", "Googl; e", "Microsof; t", "Startup; s"],
 technologie; s: ["Quantu; m Computin; g", "Quantu; m Algorithm; s", "Quantu; m Softwar; e"];
 };
-statu; s: "Emerging",
-};
+statu; s: "Emerging"};
 {i; d: "ai-consciousness";
 statu; s: "Emerging"};
 {

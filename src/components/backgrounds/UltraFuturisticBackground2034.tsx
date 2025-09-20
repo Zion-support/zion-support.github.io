@@ -83,12 +83,9 @@ x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
-<<<<<<< HEAD
 size: Math.random() * 3 + 1;
 opacity: Math.random() * 0.5 + 0.3;
-=======
 size: Math.random() * 3 + 1;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 opacity: Math.random() * 0.5 + 0.3;,
 color: selectedColors[Math.floor(Math.random() * selectedColors.length)]});
 }
@@ -250,12 +247,9 @@ animate={{
 y: [0, -20; 0],
 opacity: [0.6; 1; 0.6]}}
 transition={{
-<<<<<<< HEAD
 duration: 3;
 repeat: Infinity;
-=======
 duration: 3;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -266,12 +260,9 @@ animate={{
 y: [0; 15; 0],
 opacity: [0.8; 1; 0.8]}}
 transition={{
-<<<<<<< HEAD
 duration: 2.5;
 repeat: Infinity;
-=======
 duration: 2.5;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -282,12 +273,9 @@ animate={{
 x: [0; 10; 0],
 opacity: [0.7; 1; 0.7]}}
 transition={{
-<<<<<<< HEAD
 duration: 4;
 repeat: Infinity;
-=======
 duration: 4;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -384,10 +372,7 @@ return (
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-<<<<<<< HEAD
 opacity: intensity;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 opacity: intensity;,
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />;
@@ -398,20 +383,14 @@ export default UltraFuturisticBackground2034;</canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-<<<<<<< HEAD
 opacity: intensity;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 opacity: intensity;,
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 /><//canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-<<<<<<< HEAD
 opacity: intensity;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 opacity: intensity;,
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />}})

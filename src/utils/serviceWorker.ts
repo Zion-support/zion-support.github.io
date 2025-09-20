@@ -53,8 +53,7 @@ Promise.all([
 caches.open(STATIC_CACHE).then(cache => {
 return cache.addAll(STATIC_ASSETS)}),
 caches.open(DYNAMIC_CACHE).then(cache => {
-return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`)),
-})
+return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`))})
 ]).then(() => {return self.skipWaiting()})
 return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`))})
 ]).then(() => {

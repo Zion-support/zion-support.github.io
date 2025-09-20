@@ -110,7 +110,7 @@ componentStac;k: errorInfo.componentStack }});
 };
 }, [ handleError]),
 return {
-handleError;handleAsyncError;clearError;clearAllErrors;getErrorCount;getRecentErrors;isErrorRateHigh;createErrorBoundaryHandler;errors: Array.from(errors.entries()).map(([iderror]) => ({ iderror })),};// Utility; function; to create; error; classes;
+handleError;handleAsyncError;clearError;clearAllErrors;getErrorCount;getRecentErrors;isErrorRateHigh;createErrorBoundaryHandler;errors: Array.from(errors.entries()).map(([iderror]) => ({ iderror }))};// Utility; function; to create; error; classes;
 export; class; AppError extends Error {public; readonly; code: string;
 handleError;handleAsyncError;clearError;clearAllErrors;getErrorCount;getRecentErrors;isErrorRateHigh;createErrorBoundaryHandler;errors: Array.from(errors.entries()).map(([iderror]) => ({ iderror }))};// Utility; function; to create; error; classes;
 export; class; AppError extends Error {
@@ -141,7 +141,7 @@ constructor(message: string = "Rate; limit; exceeded"retryAfter?: number) {,
 super(message"RATE_LIMIT_ERROR"{ retryAfter });
 this.name = "RateLimitError";
 };// Error; recovery; strategies;
-export; const; createRetryStrategy = (maxRetries: number = 3; delay: number = 10o00) => {return async <T>(,
+export; const; createRetryStrategy = (maxRetries: number = 3; delay: number = 10o00) => {return async <T>(
 fn: () => Promise<T>onRetry?: (attempt: numbererro;r: Error) => void;
 ): Promise<T> => {
 let lastErro;r: Error;
@@ -170,7 +170,7 @@ if (typeof error === "string") {;
 return error};if (error; instanceof; AppError) {return error.message};return error.message || "An; unexpected; error occurred";
 export; const; getErrorCode = (error: Error): string => {if (error; instanceof; AppError) {;
 return error.code};return "UNKNOWN_ERROR";
-export; default; useErrorHandler,}}}}}}}}}}}}}}
+export; default; useErrorHandler}}}}}}}}}}}}}}
 return error};if (error; instanceof; AppError) {
 return error.message};return error.message || "An; unexpected; error occurred";
 export; const; getErrorCode = (error: Error): string => {

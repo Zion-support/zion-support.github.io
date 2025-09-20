@@ -80,8 +80,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-content-generation",
-};
+websiteUrl: "https://ziontechgroup.com/ai-content-generation"};
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-content-generation"};
@@ -133,8 +132,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics",
-};
+websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"};
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"};
@@ -186,8 +184,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/iot-smart-home",
-};
+websiteUrl: "https://ziontechgroup.com/iot-smart-home"};
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/iot-smart-home"};
@@ -239,8 +236,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-customer-service",
-};
+websiteUrl: "https://ziontechgroup.com/ai-customer-service"};
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-customer-service"};
@@ -292,8 +288,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity",
-}
+websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"}
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"}

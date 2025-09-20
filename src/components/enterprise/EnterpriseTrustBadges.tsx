@@ -1,11 +1,8 @@
 
 import React from "react";
-<<<<<<< HEAD
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
 import { Shield, Lock, AwardCheckCircle } from 'lucide-react';
-=======
 import { Shield; Lock, Award; CheckCircle } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function EnterpriseTrustBadges() {
 return (
 <section className="py-10 px-4 md:px-6 border-t border-b border-border">;

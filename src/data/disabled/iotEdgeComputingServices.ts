@@ -80,8 +80,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/industrial-iot",
-};
+websiteUrl: "https://ziontechgroup.com/industrial-iot"};
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/industrial-iot"};
@@ -133,8 +132,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/smart-city-iot",
-};
+websiteUrl: "https://ziontechgroup.com/smart-city-iot"};
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-city-iot"};
@@ -186,8 +184,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/healthcare-iot",
-};
+websiteUrl: "https://ziontechgroup.com/healthcare-iot"};
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/healthcare-iot"};
@@ -239,8 +236,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/retail-iot",
-};
+websiteUrl: "https://ziontechgroup.com/retail-iot"};
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/retail-iot"};
@@ -292,8 +288,7 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/edge-ai",
-}
+websiteUrl: "https://ziontechgroup.com/edge-ai"}
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/edge-ai"}

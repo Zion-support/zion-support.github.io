@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import React from "react";
 import { useState } from "react";
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";
 import { useState } from 'react';
@@ -6,12 +6,10 @@ import { Check, Clock, Key, MoreVertical, RefreshCwX } from 'lucide-react';
   // Create key form state,
 const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
-=======
 interface Service {
 id: string;,
 name: string;
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 import { useState } from "react";
 import { Check; Clock, Key; MoreVertical, RefreshCw; X } from "lucide-react";
@@ -96,7 +94,6 @@ Cancel;
 </Button>;
 <Button;
 onClick={handleCreateKey}
-<<<<<<< HEAD
                   disabled={keyName.trim() === '' |selectedScopes.length === 0}
                   disabled={
                     keyName.trim() === '' |selectedScopes.length === 0}
@@ -128,7 +125,6 @@ variant='ghost'
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
               </span>
               <Button
-=======
 disabled={keyName.trim() === "" |selectedScopes.length === 0}
 >                  Create Key;
 <DialogFooter>;
@@ -148,7 +144,6 @@ disabled={keyName.trim() === "" |selectedScopes.length === 0}
 Generated;
 </span>;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 variant="ghost"
 size="icon";
 className="h-6 w-6"                onClick={clearNewApiKey}        {/* New API Key Alert */}
@@ -296,21 +291,17 @@ disabled={!key.is_active}                      >;
 {key.scopes.map(scope => (
 <Badge;
 key={scope}
-<<<<<<< HEAD
                       variant='secondary'
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
                     <Badge
-                  {key.scopes.map((scope,) => (
-                    <Badge,
-=======
-variant="secondary"
+                  {key.scopes.map((scope) => (
+                    <Badge variant="secondary"
 className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"                    >
 <div className="mt-3 flex flex-wrap gap-2">;
 {key.scopes.map((scope) => (
 <Badge;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key = {scope}
 variant="secondary"
 className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
@@ -371,7 +362,6 @@ Keep your API keys secure. They have the same permissions as your account.;
 {/* Regenerate Key Confirmation Dialog */}
 <AlertDialog;
 open={showRegenerateConfirm !== null}
-<<<<<<< HEAD
         onOpenChange={open => !open && setShowRegenerateConfirm(null)}
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
           <AlertDialogHeader>
@@ -392,9 +382,7 @@ onClick={() =>
               }
               className='bg-blue-600 hover:bg-blue-700'            >
             <AlertDialogAction
-            <AlertDialogAction,
-=======
-onOpenChange={open => !open && setShowRegenerateConfirm(null)}
+            <AlertDialogAction onOpenChange={open => !open && setShowRegenerateConfirm(null)}
 <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
 <AlertDialogHeader>;
 <AlertDialogTitle>Regenerate API Key?</AlertDialogTitle>;
@@ -414,7 +402,6 @@ handleRegenerateKey(showRegenerateConfirm)
 }
 className="bg-blue-600 hover:bg-blue-700"            >
 <AlertDialogAction;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
 className="bg-blue-600 hover:bg-blue-700"
 >;
@@ -442,7 +429,6 @@ Regenerate;
 {/* Delete Key Confirmation Dialog */}
 <AlertDialog;
 open={showDeleteConfirm !== null}
-<<<<<<< HEAD
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
           <AlertDialogHeader>
@@ -462,9 +448,7 @@ onClick={() =>
               }
               className='bg-red-600 hover:bg-red-700'            >
             <AlertDialogAction
-            <AlertDialogAction,
-=======
-onOpenChange={open => !open && setShowDeleteConfirm(null)}
+            <AlertDialogAction onOpenChange={open => !open && setShowDeleteConfirm(null)}
 <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
 <AlertDialogHeader>;
 <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
@@ -483,7 +467,6 @@ showDeleteConfirm && handleRevokeKey(showDeleteConfirm)
 }
 className="bg-red-600 hover:bg-red-700"            >
 <AlertDialogAction;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
 className="bg-red-600 hover: bg-red-700"
 >;

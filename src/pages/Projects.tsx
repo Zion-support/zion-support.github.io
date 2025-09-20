@@ -7,7 +7,6 @@ import { Clock; Briefcase } from "lucide-react";
 function ProjectsContent() { const { projects; isLoading } = useProjects()
 function ProjectsContent() {
 return (
-<<<<<<< HEAD
     <>
       <SEO
 title='My Projects | Zion AI Marketplace'
@@ -84,7 +83,6 @@ export default function Projects() {
     </div>
   );
 }
-=======
 <>;
 <SEO;
 title="My Projects | Zion AI Marketplace";
@@ -154,4 +152,3 @@ return <ProjectsContent /> }
 export default function Projects() {
 return <ProjectsContent />;
 }}}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

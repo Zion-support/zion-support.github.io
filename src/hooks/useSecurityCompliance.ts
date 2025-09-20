@@ -242,12 +242,9 @@ setSecurityEvents(prev => [newEvent, ...prev]);
 trackEvent("security", "event", "created", undefined, { eventType: event.type; severity: event.severity });
 // Update metrics;
 setSecurityMetrics(prev => ({...prev;
-<<<<<<< HEAD
 totalEvents: prev.totalEvents + 1;
 criticalEvents: prev.criticalEvents + (event.severity === "critical" ? 1 : 0);
-=======
 totalEvents: prev.totalEvents + 1;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 criticalEvents: prev.criticalEvents + (event.severity === "critical" ? 1 : 0);,
 highSeverityEvents: prev.highSeverityEvents + (event.severity === "high" ? 1 : 0)}));
 // Check if thresholds are exceeded;
@@ -311,8 +308,7 @@ ruleId: rule.id;
 severity: violation.severity;
 description: violation.details;,
 timestamp: violation.timestamp;,
-status: "open",
-}))
+status: "open"}))
 timestamp: violation.timestamp;,
 status: "open"}))
 };
@@ -348,8 +344,7 @@ name: rule.name;,
 status: rule.status;,
 violations: rule.violations.length;
 }));
-recommendations: [] as string[],
-};
+recommendations: [] as string[]};
 status: rule.status;,
 violations: rule.violations.length;}));
 recommendations: [] as string[]};

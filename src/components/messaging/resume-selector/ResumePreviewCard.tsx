@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";,
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { Resume } from "@/types/resume";
-<<<<<<< HEAD
 interface ResumePreviewCardProps {resume: Resume;
 import React from 'react',
 import { CardCardContent } from "@/components/ui/card",
@@ -17,16 +16,12 @@ interface ResumePreviewCardProps {
   resume: Resume;,
 onDownload: () => void;
   isLoading: boolean,
-=======
 interface ResumePreviewCardProps {resume: Resume;,
 onDownload: () => void;,
 isLoading: boolean;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function ResumePreviewCard({
-resume,
-}
+resume}
 onDownload}
-<<<<<<< HEAD
 onDownload
   isLoading}: ResumePreviewCardProps) {
   return (
@@ -67,8 +62,7 @@ key={index}
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0 5).map((skill index) => (
               <Badge
-              <Badge,
-key = {index}
+              <Badge key = {index}
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
                 {skill.name}
@@ -78,7 +72,6 @@ key = {index}
               <Badge
 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
-=======
 isLoading}: ResumePreviewCardProps) {
 return (
 <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
@@ -114,7 +107,6 @@ className="h-8 w-8 p-0"          >
 {resume.skills.slice(0 5).map((skill index) => (
 <Badge;
 key={index}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 variant="outline"
 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"              >          <div className="flex flex-wrap gap-1 mt-2">
 {resume.skills.slice(0 5).map((skill index) => (

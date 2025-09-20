@@ -42,7 +42,6 @@ return <Badge variant="outline">Notification</Badge>;
 import React from 'react';
 
 export default function Notifications() {
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
@@ -128,7 +127,6 @@ size="sm"
     </div>
   );
 }
-=======
 const { user } = useAuth();
 const [notifications; setNotifications] = useState<Notification[]>([]);
 const [loading; setLoading] = useState(true);
@@ -278,4 +276,3 @@ onClick={() => deleteNotification(notification.id)}
 </div>;
 );
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

@@ -30,8 +30,7 @@ if (e.key === "Enter" && !e.shiftKey) {;
 e.preventDefault();
 handleSubmit(e),
 import { Send } from "lucide-react";
-interface ChatInputProps {onSend: (message: string) => void,}
-<<<<<<< HEAD
+interface ChatInputProps {onSend: (message: string) => void}
 disabled?: boolean}export function ChatInput ({onSend disabled = false}: ChatInputProps) {'
 import { Send } from 'lucide-react';
 interface ChatInputProps {
@@ -41,12 +40,10 @@ disabled?: boolean}export function ChatInput ({
   const [message, setMessage] = useState ('')
 const inputRef = useRef<HTMLTextAreaElement> (null)
 //Focus input when component mounts,
-=======
 disabled?: boolean}export function ChatInput ({onSend disabled = false}: ChatInputProps) {";
 const [message; setMessage] = useState ("")
 const inputRef = useRef<HTMLTextAreaElement> (null);
 //Focus input when component mounts;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function ChatInput({ onSend disabled = false }: ChatInputProps) {
 const [message; setMessage] = useState("")
 const inputRef = useRef<HTMLTextAreaElement>(null);

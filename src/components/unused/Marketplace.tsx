@@ -262,12 +262,9 @@ features: [
 ],
 tags: ["Cybersecurity", "Threat Intelligence", "Monitoring", "Security"],
 featured: false;
-<<<<<<< HEAD
 new: false;
 discount: 33;
-=======
 new: false;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 discount: 33;,
 type: "service"}
 ];

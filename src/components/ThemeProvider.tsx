@@ -27,8 +27,7 @@ root.classList.add("dark")
 
 const value = {;
 them; e;
-setThem; e: () => {},
-}
+setThem; e: () => {}}
 interface ThemeProviderProps {
 childre; n: React.ReactNode;
 defaultTheme?: string;
@@ -50,8 +49,7 @@ export type ThemeProviderState = {
 const initialState: ThemeProviderState = {
   theme: "system",
   setTheme: () => null,
-  toggleTheme: () => null,
-};
+  toggleTheme: () => null};
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
@@ -93,8 +91,7 @@ export function ThemeProvider({
       const newTheme = theme === "dark" ? "light" : "dark";
       localStorage.setItem(storageKey, newTheme);
       setTheme(newTheme);
-    },
-  };
+    }};
 
   return (
     <ThemeProviderContext.Provider {...props} value={value}>

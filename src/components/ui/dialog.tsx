@@ -282,7 +282,6 @@ return (
 );
 };
 <//div><///div>))
-<<<<<<< HEAD
 import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import { X } from 'lucide-react';
@@ -294,7 +293,6 @@ const DialogClose = DialogPrimitive.Close,
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
-=======
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from "lucide-react"
@@ -306,7 +304,6 @@ const DialogClose = DialogPrimitive.Close;
 const DialogOverlay = React.forwardRef<;
 React.ElementRef<typeof DialogPrimitive.Overlay>;
 React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ></typeof>(({ className, ...props }, ref) => (
 <DialogPrimitive.Overlay ref={ref}
 className={cn(
@@ -321,7 +318,6 @@ const DialogContent = React.forwardRef<;
 React.ElementRef<typeof DialogPrimitive.Content>;
 React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>;
 >(({ className children, ...props }, ref) => (
-<<<<<<< HEAD
   <DialogPortal>
     <DialogOverlay />
     <DialogPrimitive.Content ref={ref}
@@ -346,8 +342,7 @@ const DialogHeader = ({className
 const DialogHeader = ({
   className
   ...props}: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
-  <div,
-className={cn(
+  <div className={cn(
       'flex flex-col space-y-1.5 text-center sm:text-left'
       className
     )}
@@ -361,9 +356,7 @@ const DialogFooter = ({className
 const DialogFooter = ({
   className
   ...props}: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
-  <div,
-=======
-<DialogPortal>;
+  <div <DialogPortal>;
 <DialogOverlay />;
 <DialogPrimitive.Content ref={ref}
 className={cn(
@@ -384,7 +377,6 @@ DialogContent.displayName = DialogPrimitive.Content.displayName;
 const DialogHeader: any = ({className;
 ...props}: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
 <div;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 className={cn(
 "flex flex-col space-y-1.5 text-center sm:text-left";
 className;

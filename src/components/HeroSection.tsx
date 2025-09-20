@@ -26,13 +26,10 @@ Get Started Today;
 <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">;
 Watch Demo,
 </button>;
-<<<<<<< HEAD
 </div>
 </div>
 </div>
 </div>
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 </div>;
 </div>;
 </div>;

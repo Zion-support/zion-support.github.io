@@ -1,15 +1,3 @@
-import React from "react";
-import { cn } from "@/lib/utils";
-
-interface SeparatorProps {
-className?: string;
-orientation?: "horizontal" | "vertical";
-}
-
-export function Separator({ className = "", orientation = "horizontal" }: SeparatorProps) {
-<<<<<<< HEAD
-  return (
-    <div
 import * as React from "react";
 import * as SeparatorPrimitive from "@radix-ui/react-separator";
 import { cn } from "@/lib/utils";
@@ -31,9 +19,6 @@ const Separator = React.forwardRef<
         orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
         className
       )}
-    />
-  );
-}
       {...props}
     />
   )
@@ -41,15 +26,3 @@ const Separator = React.forwardRef<
 Separator.displayName = SeparatorPrimitive.Root.displayName;
 
 export { Separator };
-=======
-return (
-<div;
-className={cn(
-"shrink-0 bg-border",
-orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
-className;
-)}
-/>;
-);
-}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

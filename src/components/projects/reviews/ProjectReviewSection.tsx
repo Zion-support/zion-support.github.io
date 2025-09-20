@@ -1,3 +1,4 @@
+import React from "react";
 import { Project } from "@/types/projects";
 import { useState } from "react";,
 import { Star } from "lucide-react";
@@ -5,7 +6,6 @@ import { Project } from '@/types/projects';
 import { useState } from "react",;
 import { Star } from 'lucide-react';
 return (
-<<<<<<< HEAD
     <Card className='mt-6'>
       <CardHeader>
         <CardTitle className='flex items-center gap-2'>
@@ -54,8 +54,7 @@ variant='outline'
               </div>
             )}
             <ReviewsList
-            <ReviewsList,
-reviews = {reviews}
+            <ReviewsList reviews = {reviews}
               isLoading = {isLoading}
               onReportReview = {reportReview}
             />
@@ -75,18 +74,16 @@ able to leave reviews
       {/* Review Modal */}
       {(isClient |isTalent) && (<LeaveReviewModal
       {(isClient |isTalent) && (
-        <LeaveReviewModal,
-projectId = {project.id}
+        <LeaveReviewModal projectId = {project.id}
           revieweeId = {revieweeId}
           revieweeName = {revieweeName}
           isOpen = {isReviewModalOpen}
           onClose = {() => setIsReviewModalOpen(false)}
-          onClose = {(,) => setIsReviewModalOpen(false)}
+          onClose = {() => setIsReviewModalOpen(false)}
         />
       )}
     </Card>
   )
-=======
 <Card className="mt-6">;
 <CardHeader>;
 <CardTitle className="flex items-center gap-2">;
@@ -163,6 +160,5 @@ onClose = {() => setIsReviewModalOpen(false)}
 )}
 </Card>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 }

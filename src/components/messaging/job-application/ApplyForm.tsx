@@ -29,7 +29,6 @@ const { applyToJob } = useJobApplications();
 const [message; setMessage] = useState(
 `Hi I"m interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
 return (
-<<<<<<< HEAD
     <>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="w-full mb-4 bg-zion-blue-dark/30">
@@ -42,8 +41,7 @@ return (
         </TabsList>
         <TabsContent value="message">
           <MessageTab
-          <MessageTab,
-message = {message}
+          <MessageTab message = {message}
             setMessage = {setMessage}
             proposalLink = {proposalLink}
             setProposalLink = {setProposalLink}
@@ -51,9 +49,7 @@ message = {message}
         </TabsContent>
         <TabsContent value="resume">
           <ResumeTab
-          <ResumeTab,
-=======
-<>;
+          <ResumeTab <>;
 <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
 <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
 <TabsTrigger value="message" className="flex-1">;
@@ -73,7 +69,6 @@ setProposalLink = {setProposalLink}
 </TabsContent>;
 <TabsContent value="resume">;
 <ResumeTab;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onResumeSelected = {handleResumeSelected}
 selectedResumeId = {selectedResumeId}
 />;
@@ -90,7 +85,6 @@ Cancel;
 </Button>;
 <Button;
 type="button"
-<<<<<<< HEAD
           onClick = {handleApply}
           disabled = {isSubmitting}
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -119,11 +113,9 @@ if (proposalLink) {'
 }//Add info about attached resume if available if (selectedResume) {'
   fullMessage += `\n\nI've attached my resume: $ {
   selectedResume.title}`
-}//Create context data for the conversation const contextData = {title: job.title,
-}//Create context data for the conversation const contextData = {
+}//Create context data for the conversation const contextData = {title: job.title}//Create context data for the conversation const contextData = {
   title: job.title,
 description: job.description,
-=======
 onClick = {handleApply}
 disabled = {isSubmitting}
 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -152,22 +144,17 @@ fullMessage += `\n\nI"ve attached my resume: $ {
 selectedResume.title}`;
 }//Create context data for the conversation const contextData = {title: job.title;,
 description: job.description;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 attachedResume: selectedResume ? {,
 id: selectedResume.id;,
 title: selectedResume.title;,
-type: selectedResume.type}: null,
-}
-<<<<<<< HEAD
+type: selectedResume.type}: null}
 type: selectedResume.type}: null}
 fullMessage;'
 'job'
 job.id,
-=======
 fullMessage;";
 "job";
 job.id;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 contextData)
 //Call onApplySuccess to update job status in the UI onClose ()
 }catch (error) {";
@@ -183,7 +170,6 @@ setActiveTab ";
 }className="w-full" > <TabsList className="w-full mb-4 bg-zion-blue-dark/30" > <TabsTrigger value="message" className="flex-1" > resume"className=" flex-1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {message}setMessage= {setMessage}proposalLink= {proposalLink}setProposalLink= {
 setProposalLink ";
 }/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {handleResumeSelected}selectedResumeId= {
-<<<<<<< HEAD
 return (<> <Tabs value= {
   activeTab}onValueChange= {
   setActiveTab "
@@ -197,10 +183,8 @@ return (<> <Tabs value= {
   selectedResumeId "
 }/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'"
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application')
-=======
 selectedResumeId ";
 }/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {"";
 isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</Button> </div> </>)
 }'"}))

@@ -14,8 +14,7 @@ interface ProjectActionsProps {
 isUnderDispute: boolean;
 disputeId?: string;,
 isTalent: boolean;,
-onAddMilestone: () => void,
-}
+onAddMilestone: () => void}
 export function ProjectActions({}
 export function ProjectActions({
 onAddMilestone}: ProjectActionsProps) {

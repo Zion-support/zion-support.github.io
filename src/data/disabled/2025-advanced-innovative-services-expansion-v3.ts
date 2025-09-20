@@ -100,12 +100,9 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 realImplementation: true;
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Fully operational AI-powered BI platform with machine learning algorithms; real-time data processing; and automated insights generation.",
 launchDate: "2024-01-15";
@@ -120,8 +117,7 @@ marketPrice: "$2;499/month",
 setupFee: "$5;000",
 monthlyFee: "$2;499",
 annualDiscount: "15% off annual billing";,
-enterprisePricing: "Custom pricing for 1000+ users",
-};
+enterprisePricing: "Custom pricing for 1000+ users"};
 annualDiscount: "15% off annual billing";,
 enterprisePricing: "Custom pricing for 1000+ users"};
 // CYBERSECURITY & THREAT INTELLIGENCE;
@@ -167,12 +163,9 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 realImplementation: true;
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Operational quantum-resistant cybersecurity platform with AI threat detection; zero-trust architecture; and compliance automation.",
 launchDate: "2024-03-01";
@@ -187,8 +180,7 @@ marketPrice: "$3;999/month",
 setupFee: "$10;000",
 monthlyFee: "$3;999",
 annualDiscount: "20% off annual billing";,
-enterprisePricing: "Custom pricing for enterprise deployments",
-};
+enterprisePricing: "Custom pricing for enterprise deployments"};
 annualDiscount: "20% off annual billing";,
 enterprisePricing: "Custom pricing for enterprise deployments"};
 // CLOUD & DEVOPS AUTOMATION;
@@ -234,12 +226,9 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 realImplementation: true;
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Fully operational cloud orchestration platform with AI-powered optimization; multi-cloud management; and automated infrastructure management.",
 launchDate: "2024-02-15";
@@ -254,8 +243,7 @@ marketPrice: "$1;999/month",
 setupFee: "$3;000",
 monthlyFee: "$1;999",
 annualDiscount: "10% off annual billing";,
-enterprisePricing: "Custom pricing for large deployments",
-};
+enterprisePricing: "Custom pricing for large deployments"};
 annualDiscount: "10% off annual billing";,
 enterprisePricing: "Custom pricing for large deployments"};
 // BLOCKCHAIN & WEB3 SOLUTIONS;
@@ -301,12 +289,9 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 realImplementation: true;
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Operational enterprise blockchain platform with multi-chain support; smart contract automation; and enterprise-grade security.",
 launchDate: "2024-01-01";
@@ -321,8 +306,7 @@ marketPrice: "$4;999/month",
 setupFee: "$15;000",
 monthlyFee: "$4;999",
 annualDiscount: "25% off annual billing";,
-enterprisePricing: "Custom pricing for enterprise deployments",
-};
+enterprisePricing: "Custom pricing for enterprise deployments"};
 annualDiscount: "25% off annual billing";,
 enterprisePricing: "Custom pricing for enterprise deployments"};
 // IOT & EDGE COMPUTING;
@@ -368,12 +352,9 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 realImplementation: true;
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Fully operational AI-powered IoT edge platform with real-time processing; predictive analytics; and secure edge-to-cloud communication.",
 launchDate: "2024-02-01";
@@ -388,8 +369,7 @@ marketPrice: "$2;999/month",
 setupFee: "$8;000",
 monthlyFee: "$2;999",
 annualDiscount: "15% off annual billing";,
-enterprisePricing: "Custom pricing for large IoT deployments",
-};
+enterprisePricing: "Custom pricing for large IoT deployments"};
 annualDiscount: "15% off annual billing";,
 enterprisePricing: "Custom pricing for large IoT deployments"};
 // DIGITAL TWIN & SIMULATION;
@@ -435,12 +415,9 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 realImplementation: true;
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Operational digital twin platform with 3D modeling; real-time simulation; IoT integration; and advanced analytics capabilities.",
 launchDate: "2024-01-15";
@@ -455,8 +432,7 @@ marketPrice: "$5;999/month",
 setupFee: "$25;000",
 monthlyFee: "$5;999",
 annualDiscount: "30% off annual billing";,
-enterprisePricing: "Custom pricing for enterprise deployments",
-};
+enterprisePricing: "Custom pricing for enterprise deployments"};
 annualDiscount: "30% off annual billing";,
 enterprisePricing: "Custom pricing for enterprise deployments"};
 // AUTOMATED TESTING & QUALITY ASSURANCE;
@@ -502,12 +478,9 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 realImplementation: true;
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Fully operational AI-powered testing automation platform with intelligent test generation; automated execution; and comprehensive reporting.",
 launchDate: "2024-03-01";
@@ -522,8 +495,7 @@ marketPrice: "$1;499/month",
 setupFee: "$2;000",
 monthlyFee: "$1;499",
 annualDiscount: "10% off annual billing";,
-enterprisePricing: "Custom pricing for large development teams",
-};
+enterprisePricing: "Custom pricing for large development teams"};
 annualDiscount: "10% off annual billing";,
 enterprisePricing: "Custom pricing for large development teams"};
 // DATA PRIVACY & COMPLIANCE;
@@ -569,12 +541,9 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 realImplementation: true;
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Operational compliance management platform with multi-framework support; automated monitoring; and comprehensive reporting capabilities.",
 launchDate: "2024-02-01";
@@ -589,8 +558,7 @@ marketPrice: "$3;499/month",
 setupFee: "$8;000",
 monthlyFee: "$3;499",
 annualDiscount: "20% off annual billing";,
-enterprisePricing: "Custom pricing for enterprise deployments",
-}
+enterprisePricing: "Custom pricing for enterprise deployments"}
 annualDiscount: "20% off annual billing";,
 enterprisePricing: "Custom pricing for enterprise deployments"}
 ];

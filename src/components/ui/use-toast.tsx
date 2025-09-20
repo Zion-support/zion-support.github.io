@@ -32,12 +32,10 @@ variants: {
 variant: {,
 default: "border bg-background text-foreground";,
 destructive: "destructive border-destructive bg-destructive text-destructive-foreground";
-},
-},
+}},
 defaultVariants: {,
 variant: "default";
-},
-}
+}}
 default: "border bg-background text-foreground";,
 destructive: "destructive border-destructive bg-destructive text-destructive-foreground";}},
 defaultVariants: {,

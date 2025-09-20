@@ -47,12 +47,9 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 largeText: false;
 reducedMotion: false;
-<<<<<<< HEAD
 screenReader: false;
 fontSize: 16;
-=======
 screenReader: false;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 fontSize: 16;,
 colorBlindMode: "normal"});
 // Apply accessibility settings to document;
@@ -125,12 +122,9 @@ const resetSettings = useCallback(() => {const defaults: AccessibilitySettings =
 highContrast: false;
 largeText: false;
 reducedMotion: false;
-<<<<<<< HEAD
 screenReader: false;
 fontSize: 16;
-=======
 screenReader: false;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 fontSize: 16;,
 colorBlindMode: "normal"};
 saveSettings(defaults);

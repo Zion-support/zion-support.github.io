@@ -1,3 +1,4 @@
+import React from "react";
 import { useState; useEffect } from "react";
 import { Button } from "@/components/ui/button";,
 import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card";,
@@ -6,7 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { Loader2; RefreshCw, Play; CheckCircle, AlertCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { ModelConfig } from "@/utils/zion-gpt";
-<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
 import { useState, useEffect } from 'react';
@@ -21,11 +21,9 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string}
-=======
 import { logErrorToProduction } from "@/utils/productionLogger";
 interface ModelVersionData extends ModelConfig {trainingStatus: "queued" | "running" | "succeeded" | "failed";
 errorMessage?: string}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 return (
 <Card className="w-full">;
@@ -80,10 +78,9 @@ Manage fine-tuned AI models for different platform features;
 <TableCell className="text-right">;
 {model.trainingStatus === "queued" |model.trainingStatus === "running" ? (<Button;
 variant="ghost"
-<<<<<<< HEAD
                         size="sm"
                         onClick = {() => checkTrainingStatus(model.id)}
-                        onClick = {(,) => checkTrainingStatus(model.id)}
+                        onClick = {() => checkTrainingStatus(model.id)}
                         disabled = {activeJobs[model.id]}
                       >
                         {activeJobs[model.id] ? (
@@ -98,10 +95,9 @@ variant = {model.active ? "outline" : "default"}
                         size="sm"
                         onClick = {() => toggleModelActive(model.id model.active model.purpose)}
                     ) : model.trainingStatus === 'succeeded' ? (
-                      <Button,
-variant = {model.active ? "outline" : "default"}
+                      <Button variant = {model.active ? "outline" : "default"}
                         size="sm"
-                        onClick = {(,) => toggleModelActive(model.id model.active model.purpose)}
+                        onClick = {() => toggleModelActive(model.id model.active model.purpose)}
                       >
                         {model.active ? (
                           <>
@@ -115,7 +111,6 @@ variant = {model.active ? "outline" : "default"}
                       </Button>
                     ) : (
                       <Button
-=======
 size="sm";
 onClick = {() => checkTrainingStatus(model.id)}
 disabled = {activeJobs[model.id]}
@@ -144,7 +139,6 @@ onClick = {() => toggleModelActive(model.id model.active model.purpose)}
 </Button>;
 ) : (
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 variant="ghost"
 size="sm";
 className="text-red-500"

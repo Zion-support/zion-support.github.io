@@ -8,8 +8,7 @@ export const store = configureStore({
         cart: cartReducer;
         wishlist: wishlistReducer;
         auth: authReducer;
-    },
-});
+    }});
         auth: authReducer;}});
 store.subscribe(() => {
     const state = store.getState();

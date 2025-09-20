@@ -6,7 +6,7 @@ price: {
 monthly?: number;
 yearly?: number;
 }
-oneTime?: number;,}
+oneTime?: number;}
 oneTime?: number;,
 currency: string; pricingModel: string};
 currency?: string;

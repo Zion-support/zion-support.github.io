@@ -49,8 +49,7 @@ statusCo; d; e: 4; 0; 4;
 responseTi; m; e: 12; 0; 0;
 lastCheck; e; d: ne; w Dat; e(),
 parentPa; g; e: "Homepag; e"};
-linkTe; x; t: "LinkedI; n",
-},
+linkTe; x; t: "LinkedI; n"},
 {u; r; l: "htt; p; s://twitte; r.co; m/ziontechgrou; p",
 linkTe; x; t: "LinkedI; n"},
 {

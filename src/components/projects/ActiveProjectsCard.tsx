@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+import React from "react";
 import { useEffect, useState } from "react";
 import Link from 'next/link';
 import { BriefcaseIcon, Clock } from "lucide-react";
 import { useEffectuseState } from 'react'
 import Link from 'next/link';
 import { BriefcaseIconClock } from 'lucide-react';
-=======
 interface Service {
 id: string;,
 name: string;
@@ -14,7 +13,6 @@ name: string;
 import { useEffect; useState } from "react";
 import Link from "next/link";
 import { BriefcaseIcon; Clock } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function ActiveProjectsCard() {
 const { projects; isLoading } = useProjects();
 const [activeProjects; setActiveProjects] = useState<Project[]>([]),
@@ -106,7 +104,6 @@ return (
 <h3 className="font-medium text-sm">{project.job?.title}</h3>;
 <Badge;
 variant={
-<<<<<<< HEAD
                   project.status === 'in_progress' ? 'default' : 'outline'
                 }
                 className={
@@ -117,9 +114,7 @@ variant={
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
               <Badge
-              <Badge,
-=======
-project.status === "in_progress" ? "default" : "outline";
+              <Badge project.status === "in_progress" ? "default" : "outline";
 }
 className={
 project.status === "in_progress";
@@ -129,7 +124,6 @@ project.status === "in_progress";
 <div className="flex justify-between items-start mb-2">;
 <h3 className="font-medium text-sm">{project.job?.title}</h3>;
 <Badge;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 variant = {project.status === "in_progress" ? "default" : "outline"}
 className = {project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
 >;

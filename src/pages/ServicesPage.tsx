@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function ServicesPage() {
@@ -10,7 +9,6 @@ export default function ServicesPage() {
         </h1>
         <p className="text-muted-foreground text-lg">Professional services for digital transformation and technology innovation</p>
       </motion.div>
-=======
 import React from "react";
 
 </div>;
@@ -26,7 +24,6 @@ return (
 </div>;
 )
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 return (
 <div className="container py-8">;
@@ -82,7 +79,6 @@ transition={{ delay: Math.min(index * 0.03 0.5) }} whileHover={{ scale: 1.02 }}
 </motion.div>;
 )}
 
-<<<<<<< HEAD
       <AnimatePresence>
         {showScrollTop && (
           <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
@@ -100,7 +96,6 @@ transition={{ delay: Math.min(index * 0.03 0.5) }} whileHover={{ scale: 1.02 }}
       </div>
     </div>
   );
-=======
 <AnimatePresence>;
 {showScrollTop && (
 <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
@@ -114,6 +109,4 @@ whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
 </div>;
 )
 }
-export default ServicesPage,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
-}
+export default ServicesPage}

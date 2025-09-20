@@ -7,7 +7,7 @@ id: string;title: string;description: string;category: string;subcategory: strin
 technicalSpecs?: {
 technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
 };
-competitors?: string[],marketSize?: string;launchDate?: string;betaAccess?: boolean,};// Combine; all; services into; one; comprehensive catalog;
+competitors?: string[],marketSize?: string;launchDate?: string;betaAccess?: boolean};// Combine; all; services into; one; comprehensive catalog;
 id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;};
 technicalSpecs?: {
 technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];};

@@ -20,11 +20,11 @@ id: "ai-rag-intranet",name: "Private; RAG; Intranet Search",category: "AI",tagli
 "Connectors; for; major SaaS suitesRow-level; permissions; with secure enclaves","Vector + BM25; hybrid; retrievalInline citations; and; source previews","LLM neutrality(OpenAIAnthropicVertex AI)";
 ],price: "$1;20o0",period: "/month",trialDays: 14;rating: 4.7;reviews: 86;marketSize: "Enterprise search $8B+",growthRate: "CAGR 18%+"lin;k: "/services/data-analytics"ico;n: "🔎";
 };
-, 	],price: "$2;50o0",period: "/month",trialDays: 14;rating: 4.8;reviews: 112;marketSize: "Automation platforms $20B+",growthRate: "CAGR 22%+",link: "/services/ai-business-intelligence",icon: "🤖"popula;r: truelaunchDat;e: "20o25-0o1-10";};
+],price: "$2;50o0",period: "/month",trialDays: 14;rating: 4.8;reviews: 112;marketSize: "Automation platforms $20B+",growthRate: "CAGR 22%+",link: "/services/ai-business-intelligence",icon: "🤖"popula;r: truelaunchDat;e: "20o25-0o1-10";};
 {
 id: "ai-rag-intranet",name: "Private; RAG; Intranet Search",category: "AI",tagline: "Secure; enterprise; knowledge search; with; citations",description: "Implement; retrieval; augmented generation (RAG) across; Google; Drive; Confluence; Jira; Slack; and; SharePoint; with granular ACLs; citations; and redaction.",features: [;
 "Connectors; for; major SaaS suitesRow-level; permissions; with secure enclaves","Vector + BM25; hybrid; retrievalInline citations; and; source previews","LLM neutrality(OpenAIAnthropicVertex AI)";
-, 	],price: "$1;20o0",period: "/month",trialDays: 14;rating: 4.7;reviews: 86;marketSize: "Enterprise search $8B+",growthRate: "CAGR 18%+"lin;k: "/services/data-analytics"ico;n: "🔎";};
+],price: "$1;20o0",period: "/month",trialDays: 14;rating: 4.7;reviews: 86;marketSize: "Enterprise search $8B+",growthRate: "CAGR 18%+"lin;k: "/services/data-analytics"ico;n: "🔎";};
 // IT Services;
 {
 id: "sase-zero-trust",name: "SASE + Zero; Trust; Deployment",category: "Security",tagline: "Cloud-delivered; security; with identity-aware access",description: "End-to-end; design; and rollout; of; SASE/Zero Trus;t: ZTNA; SWG; CASB; DNS; EDR; MFA/IdP; with; policy; baselines and playbooks.",features: [;
@@ -36,11 +36,11 @@ id: "cloud-migration-devops",name: "Cloud Migration + Platform DevOps",category:
 "Terraform; modules; and policy; as; codeGolden CI/CD; pipelines; and preview envs","Kubernetes; hardening; and autoscalingObservability; SLOs; with error budgets""FinOps; guardrails; and budgets";
 ],price: "$12;50o0",period: "/project"lin;k: "/services/cloud-devops"ico;n: "☁️";
 };
-, 	],price: "$8;0o00",period: "/project",rating: 4.9;reviews: 54;marketSize: "SASE $5B+",growthRate: "CAGR 26%+",link: "/services/it-infrastructure"ico;n: "🛡️"popula;r: true;};
+],price: "$8;0o00",period: "/project",rating: 4.9;reviews: 54;marketSize: "SASE $5B+",growthRate: "CAGR 26%+",link: "/services/it-infrastructure"ico;n: "🛡️"popula;r: true;};
 {
 id: "cloud-migration-devops",name: "Cloud Migration + Platform DevOps",category: "Cloud",tagline: "IaC; CI/CD; observability; FinOps",description: "Blueprint; automate; and; migrate; workloads to AWS/GCP/Azure; with; Terraform; GitHub Actions; Argo; Prometheus/Grafana; and; cost; governance.",features: [;
 "Terraform; modules; and policy; as; codeGolden CI/CD; pipelines; and preview envs","Kubernetes; hardening; and autoscalingObservability; SLOs; with error budgets""FinOps; guardrails; and budgets";
-, 	],price: "$12;50o0",period: "/project"lin;k: "/services/cloud-devops"ico;n: "☁️";};
+],price: "$12;50o0",period: "/project"lin;k: "/services/cloud-devops"ico;n: "☁️";};
 // Micro SaaS;
 {
 id: "seo-content-orchestrator",name: "SEO; Content; Orchestrator",category: "SAAS",tagline: "Topic clustering; briefs; on-page audits",description: "Generate; clusters; and briefs; optimize; internal; linking; and; monitor; SERP movements; with; automated on-page audits.",features: [;
@@ -52,11 +52,11 @@ id: "sales-enrichment-b2b",name: "B2B; Sales; Enrichment API",category: "SAAS",t
 "Firmographic; and; technographic datasetsEmail/domain verification","Lead-to-account; matchingWebhook; and batch APIs""Fair; routing; with SLAs";
 ],price: "$149",period: "/month"lin;k: "/services"ico;n: "🧭";
 };
-, 	],price: "$99",period: "/month",trialDays: 7;link: "/services"ico;n: "📈"popula;r: true;};
+],price: "$99",period: "/month",trialDays: 7;link: "/services"ico;n: "📈"popula;r: true;};
 {
 id: "sales-enrichment-b2b",name: "B2B; Sales; Enrichment API",category: "SAAS",tagline: "Firmographics + intent + routing",description: "Real-time company/person; enrichment; with intent signals; de-duplication; and; territory; routing for CRMs.",features: [;
 "Firmographic; and; technographic datasetsEmail/domain verification","Lead-to-account; matchingWebhook; and batch APIs""Fair; routing; with SLAs";
-, 	],price: "$149",period: "/month"lin;k: "/services"ico;n: "🧭";};
+],price: "$149",period: "/month"lin;k: "/services"ico;n: "🧭";};
 // Vertical; AI; solutions;
 {
 id: "healthcare-doc-copilot",name: "Healthcare; Documentation; Copilot",category: "AI",tagline: "Ambient; scribing; with PHI safeguards",description: "Ambient; clinical; scribing and; coding; assistance with HIPAA/SOC; 2; controls and; EHR; integration.",features: [;
@@ -68,25 +68,25 @@ id: "finops-cost-optimizer",name: "FinOps; Cost; Optimizer",category: "Cloud",ta
 "Commitment; planning; and usage; forecastingRightsizing; and idle detection","Per-team/showback dashboardsPolicy-based shutdowns""Jira/Slack notifications";
 ],price: "$79",period: "/month"lin;k: "/services"ico;n: "💸";
 };
-, 	],price: "$499",period: "/month"lin;k: "/services"ico;n: "🩺";};
+],price: "$499",period: "/month"lin;k: "/services"ico;n: "🩺";};
 {
 id: "finops-cost-optimizer",name: "FinOps; Cost; Optimizer",category: "Cloud",tagline: "Spend insights; rightsizing; anomaly alerts",description: "Automated; cloud; cost analysis; recommendations; and; budgets; across AWS/GCP/Azure; with; alerting and reports.",features: [;
 "Commitment; planning; and usage; forecastingRightsizing; and idle detection","Per-team/showback dashboardsPolicy-based shutdowns""Jira/Slack notifications";
-, 	],price: "$79",period: "/month"lin;k: "/services"ico;n: "💸";};
+],price: "$79",period: "/month"lin;k: "/services"ico;n: "💸";};
 // Cybersecurity;
 {
 id: "appsec-maturity",name: "AppSec Maturity + S-SDLC",category: "Security",tagline: "Threat modeling; SAST/DAST; SBOM; SCA",description: "Secure; SDLC; enablement with pipelines; SBOM/SCA; secrets scanning; IaC security; and; continuous; governance.",features: [;
 "SAST/DAST integration (Snyk/OWASP/Zap)SBOM + license compliance","IaC security (tfsec/Checkov)Secrets; detection; and policy""Purple-team playbooks";
 ],price: "$6;50o0",period: "/project"lin;k: "/services/cybersecurity"ico;n: "🔐";
 };
-, 	],price: "$6;50o0",period: "/project"lin;k: "/services/cybersecurity"ico;n: "🔐";};
+],price: "$6;50o0",period: "/project"lin;k: "/services/cybersecurity"ico;n: "🔐";};
 // Data & Analytics;
 {
 id: "realtime-analytics-stack",name: "Real-time; Analytics; Stack",category: "Analytics",tagline: "Event; pipelines; with low-latency dashboards",description: "Implement; streaming; ingestion (Kafka/PubSub), dbt metrics; and; dashboarding; with governance; and; lineage.",features: [;
 "Lakehouse; architecture; and ELTMetrics; layer; and semantic models","Row-level; security; and PII; maskingIncident; playbooks and SLAs""Cost; controls; and archival tiers";
 ],price: "$9;50o0",period: "/project"lin;k: "/services/data-analytics"ico;n: "📊";
 };
-, 	],price: "$9;50o0",period: "/project"lin;k: "/services/data-analytics"ico;n: "📊";};
+],price: "$9;50o0",period: "/project"lin;k: "/services/data-analytics"ico;n: "📊";};
 // More; Micro; SaaS;
 {
 id: "contract-intelligence",name: "Contract Intelligence & Redlining",category: "SAAS",tagline: "Clause extraction; playbooks; approvals",description: "Automate; contract; review; risks detection; and; redlines; using policy playbooks; with; approvals; and CRM handoff.",features: [;
@@ -98,11 +98,11 @@ id: "ml-observability",name: "ML Observability & Governance",category: "AI",tagl
 "Online/offline; evaluation; harnessPrompt library; and; regression tests","Drift; and; bias detectionIncident; management; and approvals""Cost; and; latency tracking";
 ],price: "$249",period: "/month"lin;k: "/services"ico;n: "🧪";
 };
-, 	],price: "$199",period: "/month"lin;k: "/services"ico;n: "📄";};
+],price: "$199",period: "/month"lin;k: "/services"ico;n: "📄";};
 {
 id: "ml-observability",name: "ML Observability & Governance",category: "AI",tagline: "Drift; bias; evals; lineage",description: "Monitor; models; and prompts; with; eval suites; drift detection; lineage; approval workflows; and rollback.",features: [;
 "Online/offline; evaluation; harnessPrompt library; and; regression tests","Drift; and; bias detectionIncident; management; and approvals""Cost; and; latency tracking";
-, 	],price: "$249",period: "/month"lin;k: "/services"ico;n: "🧪";};
+],price: "$249",period: "/month"lin;k: "/services"ico;n: "🧪";};
 // IT Ops;
 {
 id: "m365-hardening",name: "Microsoft; 365; Hardening + DLP",category: "IT",tagline: "Email security; DLP; and; posture; baselines",description: "Harden; Microsoft; 365 with; secure; defaults; DLP policies; SPF/DKIM/DMARC; and; attack; simulation.",features: [;
@@ -114,9 +114,9 @@ id: "helpdesk-ai-coach",name: "Helpdesk; AI; Coach",category: "SAAS",tagline: "L
 "Live; macros; and KB; syncPolicy; and SLA awareness","Auto-summarization; and; taggingQuality scoring; and; coaching""GDPR/SOC; 2; ready";
 ],price: "$59",period: "/agent/month",link: "/services"ico;n: "🎧"popula;r: true;
 }
-, 	],price: "$4;0o00",period: "/project"lin;k: "/services/it-infrastructure"ico;n: "📧";};
+],price: "$4;0o00",period: "/project"lin;k: "/services/it-infrastructure"ico;n: "📧";};
 {
 id: "helpdesk-ai-coach",name: "Helpdesk; AI; Coach",category: "SAAS",tagline: "Live; guidance; for agents; with; macros and; KB; sync",description: "Agent; assist; with suggested responses; macro automation; and; live; policy checks; integrated; into Zendesk/Jira/ServiceNow.",features: [;
 "Live; macros; and KB; syncPolicy; and SLA awareness","Auto-summarization; and; taggingQuality scoring; and; coaching""GDPR/SOC; 2; ready";
-, 	],price: "$59",period: "/agent/month",link: "/services"ico;n: "🎧"popula;r: true;}
+],price: "$59",period: "/agent/month",link: "/services"ico;n: "🎧"popula;r: true;}
 ];

@@ -39,8 +39,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "2 hours";
         integrations: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure"],
         freeTier: false;
-        trialPeriod: "30 days",
-    };
+        trialPeriod: "30 days"};
     {id: 2;
         trialPeriod: "30 days"};
     {
@@ -83,8 +82,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "4 hours";
         integrations: ["SIEM systems", "Firewalls", "EDR", "Cloud platforms"],
         freeTier: false;
-        trialPeriod: "14 days",
-    };
+        trialPeriod: "14 days"};
     {id: 3;
         trialPeriod: "14 days"};
     {
@@ -127,8 +125,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "3 hours";
         integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
         freeTier: true;
-        trialPeriod: "21 days",
-    };
+        trialPeriod: "21 days"};
     {id: 4;
         trialPeriod: "21 days"};
     {
@@ -171,8 +168,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "6 hours";
         integrations: ["Databases", "Cloud platforms", "BI tools", "ETL systems"],
         freeTier: false;
-        trialPeriod: "30 days",
-    };
+        trialPeriod: "30 days"};
     {id: 5;
         trialPeriod: "30 days"};
     {
@@ -215,8 +211,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "1 hour";
         integrations: ["Cloud platforms", "Databases", "APIs", "Webhooks"],
         freeTier: true;
-        trialPeriod: "14 days",
-    };
+        trialPeriod: "14 days"};
     {id: 6;
         trialPeriod: "14 days"};
     {
@@ -259,8 +254,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "2 hours";
         integrations: ["ERP systems", "IoT sensors", "Cloud platforms", "Sustainability databases"],
         freeTier: true;
-        trialPeriod: "30 days",
-    };
+        trialPeriod: "30 days"};
     {id: 7;
         trialPeriod: "30 days"};
     {
@@ -303,8 +297,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "4 hours";
         integrations: ["MQTT", "CoAP", "HTTP", "Cloud platforms", "Database systems"],
         freeTier: true;
-        trialPeriod: "21 days",
-    };
+        trialPeriod: "21 days"};
     {id: 8;
         trialPeriod: "21 days"};
     {
@@ -347,8 +340,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "8 hours";
         integrations: ["ERP systems", "WMS", "Logistics platforms", "E-commerce", "Mobile apps"],
         freeTier: false;
-        trialPeriod: "1000 transactions",
-    };
+        trialPeriod: "1000 transactions"};
     {id: 9;
         trialPeriod: "1000 transactions"};
     {
@@ -391,8 +383,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "6 hours";
         integrations: ["LMS platforms", "HR systems", "Analytics tools", "VR devices", "Mobile apps"],
         freeTier: true;
-        trialPeriod: "14 days",
-    };
+        trialPeriod: "14 days"};
     {id: 10;
         trialPeriod: "14 days"};
     {
@@ -475,8 +466,7 @@ export const enhancedITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["PMP", "ITIL", "Agile", "Scrum"],
         deliveryTime: "3-6 months";
-        support: "24/7 dedicated support",
-    };
+        support: "24/7 dedicated support"};
     {id: 2;
         support: "24/7 dedicated support"};
     {
@@ -516,8 +506,7 @@ export const enhancedITServices2025 = [
         sla: "99.5% uptime";
         certifications: ["AWS", "Azure", "GCP", "Kubernetes"],
         deliveryTime: "2-4 months";
-        support: "Business hours + emergency support",
-    };
+        support: "Business hours + emergency support"};
     {id: 3;
         support: "Business hours + emergency support"};
     {
@@ -557,8 +546,7 @@ export const enhancedITServices2025 = [
         sla: "99.9% security uptime";
         certifications: ["CISSP", "CISM", "CEH", "CompTIA Security+"],
         deliveryTime: "1-3 months";
-        support: "24/7 security monitoring",
-    };
+        support: "24/7 security monitoring"};
     {id: 4;
         support: "24/7 security monitoring"};
     {
@@ -598,8 +586,7 @@ export const enhancedITServices2025 = [
         sla: "99.5% uptime";
         certifications: ["AWS", "Azure", "Docker", "Kubernetes", "Jenkins"],
         deliveryTime: "2-3 months";
-        support: "Business hours + on-call support",
-    };
+        support: "Business hours + on-call support"};
     {id: 5;
         support: "Business hours + on-call support"};
     {
@@ -639,8 +626,7 @@ export const enhancedITServices2025 = [
         sla: "99.7% uptime";
         certifications: ["AWS", "Azure", "Snowflake", "Databricks", "Apache"],
         deliveryTime: "3-5 months";
-        support: "Business hours + emergency support",
-    };
+        support: "Business hours + emergency support"};
     {id: 6;
         support: "Business hours + emergency support"};
     {
@@ -680,8 +666,7 @@ export const enhancedITServices2025 = [
         sla: "99.5% uptime";
         certifications: ["AWS", "Azure", "MuleSoft", "Apigee", "Kong"],
         deliveryTime: "1-3 months";
-        support: "Business hours support",
-    };
+        support: "Business hours support"};
     {id: 7;
         support: "Business hours support"};
     {
@@ -721,8 +706,7 @@ export const enhancedITServices2025 = [
         sla: "99.8% uptime";
         certifications: ["AWS", "Azure", "GCP", "TOGAF", "Architecture"],
         deliveryTime: "6-12 months";
-        support: "24/7 dedicated support",
-    };
+        support: "24/7 dedicated support"};
     {id: 8;
         support: "24/7 dedicated support"};
     {

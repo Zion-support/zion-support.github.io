@@ -245,5 +245,4 @@ rating: 4.5;,
 reviewCount: 36;
 },
 rating: 4.5;,
-reviewCount: 36;},
-];
+reviewCount: 36;}];

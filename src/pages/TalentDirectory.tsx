@@ -53,7 +53,6 @@ className="text-zion-slate-light h-8 w-8 p-0"
 </div>;
 <FilterSidebar;
 searchTerm={searchTerm}
-<<<<<<< HEAD
                   setSearchTerm={setSearchTerm}
                   selectedSkills={selectedSkills}
                   toggleSkill={toggleSkill}
@@ -87,7 +86,6 @@ export default function TalentDirectory() {
       </div>
     </div>
   );
-=======
 setSearchTerm={setSearchTerm}
 selectedSkills={selectedSkills}
 toggleSkill={toggleSkill}
@@ -115,5 +113,4 @@ isMobileFilterOpen={isMobileFilterOpen}
 )
 }
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

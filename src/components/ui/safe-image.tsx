@@ -1,3 +1,4 @@
+import React from "react";
 "use client",
 
 import Image from "next/image";
@@ -17,7 +18,6 @@ return (
 }
 <div}
 className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-<<<<<<< HEAD
         style={{ width height }}
         role="img"
         aria-label = {alt}
@@ -35,9 +35,7 @@ className={`flex items-center justify-center bg-gray-100 text-gray-400 ${classNa
     />
   ); return (
     <Image
-    <Image,
-=======
-style={{ width height }}
+    <Image style={{ width height }}
 role="img";
 aria-label = {alt}
 >;
@@ -54,7 +52,6 @@ aria-label = {alt}
 />;
 ); return (
 <Image;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 src = {currentSrc}
 alt = {alt}
 width = {width}

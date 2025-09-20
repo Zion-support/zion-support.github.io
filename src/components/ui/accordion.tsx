@@ -9,14 +9,13 @@ import React from "react";
 import React from "react",;
 const accordion: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className = "text-xl font-bold mb-4">accordion</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
 export default accordion,;<//div><///div>
-<<<<<<< HEAD
 import * as React from 'react'
 import { ElementRef, ComponentPropsWithoutRef } from 'react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
@@ -26,7 +25,6 @@ const Accordion = AccordionPrimitive.Root,
 const AccordionItem = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Item>
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
-=======
 import * as React from "react"
 import { ElementRef; ComponentPropsWithoutRef } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
@@ -36,7 +34,6 @@ const Accordion = AccordionPrimitive.Root;
 const AccordionItem = React.forwardRef<;
 ElementRef<typeof AccordionPrimitive.Item>;
 ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ></typeof>(({ className, ...props }, ref) => (
 <AccordionPrimitive.Item ref={ref}
 className={cn("border-b", className)}

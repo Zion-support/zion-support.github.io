@@ -56,7 +56,6 @@ profileData.linkedin link ";
 id: profileData?.id |"", full name: profileData?.full name |"",  professional title: profileData?.professional title |"", hourly rate: profileData?.hourly rate |0}/> {
 /* Placeholder for other sidebar elements */;
 }</div> </div> </div> </>)
-<<<<<<< HEAD
 }'"}
 export default function PublicTalentProfilePage() {
   return (
@@ -68,6 +67,4 @@ export default function PublicTalentProfilePage() {
     </div>
   );
 }
-=======
 }""}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

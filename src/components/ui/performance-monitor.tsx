@@ -56,22 +56,18 @@ const [isExpanded; setIsExpanded] = useState(false);
 const [isMinimized; setIsMinimized] = useState(false);
 const [showSettings; setShowSettings] = useState(false);
 const [metrics; setMetrics] = useState<PerformanceMetrics>({
-<<<<<<< HEAD
 fps: 60;
 const [isExpanded, setIsExpanded] = useState(false);
 const [isMinimized, setIsMinimized] = useState(false);
 const [showSettings, setShowSettings] = useState(false);
 const [metrics, setMetrics] = useState<PerformanceMetrics>({
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 fps: 60;,
 memory: { used: 0; total: 0; percentage: 0 };
 renderTime: 0;
 networkLatency: 0;
 cpuUsage: 0;,
 diskUsage: 0;,
-timestamp: Date.now(),
-});
+timestamp: Date.now()});
 const [alerts; setAlerts] = useState<Array<{ id: string;
 diskUsage: 0;,
 timestamp: Date.now()});
@@ -110,8 +106,7 @@ id: `fps-${Date.now()}`;
 metric: "FPS";,
 message: `Low FPS detected: ${fps} (threshold: ${thresholds.fps})`;
 severity: "warning" as const;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 severity: "warning" as const;,
 timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -147,8 +142,7 @@ id: `memory-${Date.now()}`;
 metric: "Memory";,
 message: `High memory usage: ${percentage}% (threshold: ${thresholds.memory}%)`;
 severity: "warning" as const;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 severity: "warning" as const;,
 timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -173,8 +167,7 @@ id: `render-${Date.now()}`;
 metric: "Render Time";,
 message: `Slow render time: ${renderTime}ms (threshold: ${thresholds.renderTime}ms)`;
 severity: "error" as const;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 severity: "error" as const;,
 timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -188,10 +181,7 @@ const start = performance.now();
 
 try {
 await fetch("/api/health", {
-<<<<<<< HEAD
 method: "HEAD";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 method: "HEAD";,
 cache: "no-cache"});
 const end = performance.now();
@@ -204,8 +194,7 @@ id: `network-${Date.now()}`;
 metric: "Network";,
 message: `High network latency: ${latency}ms (threshold: ${thresholds.networkLatency}ms)`;
 severity: "warning" as const;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 severity: "warning" as const;,
 timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -233,8 +222,7 @@ id: `cpu-${Date.now()}`;
 metric: "CPU";,
 message: `High CPU usage: ${cpuUsage}% (threshold: ${thresholds.cpuUsage}%)`;
 severity: "warning" as const;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 severity: "warning" as const;,
 timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -247,8 +235,7 @@ id: `disk-${Date.now()}`;
 metric: "Disk";,
 message: `High disk usage: ${diskUsage}% (threshold: ${thresholds.diskUsage}%)`;
 severity: "warning" as const;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 severity: "warning" as const;,
 timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);

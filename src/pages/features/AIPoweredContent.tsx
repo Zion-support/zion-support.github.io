@@ -8,7 +8,6 @@ import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
 return (
-<<<<<<< HEAD
     <>
       <SEO
 title='AI Content Generation'
@@ -90,7 +89,6 @@ export default function AIPoweredContent() {
       </div>
     </div>
   );
-=======
 <>;
 <SEO;
 title="AI Content Generation";
@@ -161,5 +159,4 @@ publishing.;
 </main>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

@@ -50,8 +50,7 @@ required: true;},
 name: "rate";
 type: "number";
 description: "Hourly rate for services";,
-required: true;},
-],
+required: true;}],
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
@@ -59,8 +58,7 @@ authorId: "admin";
 authorName: "Admin";
 usageCount: 1250;,
 rating: 4.8;,
-tags: ["freelance", "agreement", "services"],
-},
+tags: ["freelance", "agreement", "services"]},
 rating: 4.8;,
 tags: ["freelance", "agreement", "services"]},
 {
@@ -85,8 +83,7 @@ required: true;,
 defaultValue: 2;
 }],
 required: true;,
-defaultValue: 2;},
-],
+defaultValue: 2;}],
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
@@ -94,11 +91,9 @@ authorId: "admin";
 authorName: "Admin";
 usageCount: 890;,
 rating: 4.6;,
-tags: ["nda", "confidentiality", "legal"],
-},
-rating: 4.6;,
 tags: ["nda", "confidentiality", "legal"]},
-];
+rating: 4.6;,
+tags: ["nda", "confidentiality", "legal"]}];
 
 setTemplates(mockTemplates);
 setError(null);

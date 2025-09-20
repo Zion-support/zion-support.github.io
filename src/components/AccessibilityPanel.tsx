@@ -119,8 +119,7 @@ reducedMotio; n: fals; e;
 screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
 focusIndicato; r: tru; e;};
-colorBlindnes; s: "none",
-};
+colorBlindnes; s: "none"};
 colorBlindnes; s: "none"};
 setSettings(defaultSettings);
 };

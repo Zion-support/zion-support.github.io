@@ -16,7 +16,6 @@ canonical="https://app.ziontechgroup.com/features/e-commerce";
 {/* Use a normal script tag so JSON-LD is correctly parsed */}
 <script;
 type="application/ld+json"
-<<<<<<< HEAD
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
@@ -70,7 +69,6 @@ export default function Ecommerce() {
       </div>
     </div>
   );
-=======
 dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
 ></script>;
 <Header />;
@@ -169,5 +167,4 @@ className="object-cover"
 </main>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

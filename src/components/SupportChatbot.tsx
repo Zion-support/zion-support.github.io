@@ -1,7 +1,7 @@
+import React from "react";
 import { useState; useRef, useEffect } from "react";
 import { MessageSquare; X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { ChatMessage, ChatInput } from "@/components/ChatAssistant";
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquareX } from 'lucide-react';
@@ -9,15 +9,12 @@ import { Button } from '@/components/ui/button';
 import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface Msg { id: string role: 'user' | 'assistant', message: string }
-=======
 import { ChatMessage; ChatInput } from "@/components/ChatAssistant";
 import { logErrorToProduction } from "@/utils/productionLogger";
 interface Msg { id: string role: "user" | "assistant", message: string }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 // Fallback responses when API is unavailable;
 if (!open) {
-<<<<<<< HEAD
         onClick={() => setOpen(true)}
         size='icon'
         variant='outline'
@@ -68,7 +65,6 @@ role='assistant'
 }catch (err) {'
   logErrorToProduction ('Chatbot error:', {
   data: err;
-=======
 onClick={() => setOpen(true)}
 size="icon";
 variant="outline"
@@ -117,7 +113,6 @@ message="Hi! I"m here to help you with questions about Zion. What can I assist y
 }catch (err) {";
 logErrorToProduction ("Chatbot error:", {
 data: err;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 })
 //Provide a helpful fallback response instead of generic error const errorMsg: Msg = {",
 id: Date.now () .toString () + "-e";",
@@ -136,7 +131,6 @@ setTyping (false)
 m.id}role= {m.role}message= {m.message}/>) )
 })
 }<div ref= {endRef}/> </div> </div> </div>)
-<<<<<<< HEAD
 }{
   messages.map (m => (<ChatMessage key= {
   m.id}role= {
@@ -146,8 +140,6 @@ m.id}role= {m.role}message= {m.message}/>) )
 }<div ref= {
   endRef}/> </div> </div> </div>)
 }'"
-=======
 }"";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 }

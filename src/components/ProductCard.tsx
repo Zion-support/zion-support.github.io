@@ -96,7 +96,6 @@ interface ProductCardProps {product: Product;
 onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure;
 onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
 }
-<<<<<<< HEAD
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */}
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
@@ -121,10 +120,8 @@ interface ProductCardProps {
 onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
   buyDisabled?: boolean}
-=======
 /** Disable the Buy Now button (e.g. when the checkout route isn"t ready). */}
 buyDisabled?: boolean}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 )
 }

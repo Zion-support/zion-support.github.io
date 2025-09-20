@@ -32,7 +32,6 @@ See how enterprise teams are transforming their hiring process;
 <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
 <img;
 src={testimonial.image}
-<<<<<<< HEAD
                         alt={testimonial.author}
                         className='h-full w-full object-cover'
                         loading='lazy'                      />
@@ -59,7 +58,6 @@ src={testimonial.image}
   );
   )
 };
-=======
 alt={testimonial.author}
 className="h-full w-full object-cover"
 loading="lazy"                      />;
@@ -85,4 +83,3 @@ loading="lazy"                      />;
 </section>;
 );
 };}}))
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

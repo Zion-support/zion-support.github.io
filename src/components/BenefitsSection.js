@@ -1,3 +1,4 @@
+import React from "react";
 import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
@@ -22,10 +23,8 @@ const benefits = [{
         tit, l, e: "Cos, t Reductio, n",
     descripti, o, n: "Eliminat, e middleme, n an, d reduc, e cost, s b, y u, p t, o 4, 0% throug, h direc, t connection, s wit, h servic, e provider, s an, d produc, t vendor, s.",
         ic, o, n: _js, x(TrendingDo,  w, n, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.4,
-    }];
-        del, a, y: 0.4},
-];
+        del, a, y: 0.4}];
+        del, a, y: 0.4}];
 export function BenefitsSection() {
 impor,  t, Reac, t, { useState } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';

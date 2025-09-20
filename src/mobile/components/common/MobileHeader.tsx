@@ -1,12 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
-<<<<<<< HEAD
 import { ChevronLeft, Bell, Settings } from "lucide-react";
 import { useRouter } from 'next/router';
 import { ChevronLeft, BellSettings } from 'lucide-react';
-=======
 import { ChevronLeft; Bell, Settings } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
@@ -16,11 +13,10 @@ className}
 <div className="flex items-center">;
 {showBack && (<Button;
 variant="ghost"
-<<<<<<< HEAD
               size="icon"
               className="mr-2"
               onClick = {() => router.back()}
-              onClick = {(,) => router.back()}
+              onClick = {() => router.back()}
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
@@ -79,7 +75,6 @@ variant='ghost'
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>
               <Settings className='h-5 w-5' />
               <span className='sr-only'>Settings</span>            </Button>            <Button
-=======
 size="icon";
 className="mr-2"
 onClick = {() => router.back()}
@@ -112,15 +107,13 @@ showNotifications = false;
 showSettings = false;
 className;
 onNotificationsClick;
-onSettingsClick,
-}: MobileHeaderProps) {
+onSettingsClick}: MobileHeaderProps) {
 const router = useRouter();
 >;
 <div className="flex items-center justify-between h-14 px-4">;
 <div className="flex items-center">;
 {showBack && (;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 variant="ghost"
 size="icon";
 className="mr-2"

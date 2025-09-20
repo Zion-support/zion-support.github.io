@@ -56,8 +56,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                     // Only store a simple display name in the profile data;
                     data: {
                         display_name: userData?.displayName ?? userData?.name ?? ""};
-                },
-            });
+                }});
                 }});
             
             if (error) {

@@ -87,12 +87,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-content-marketing-automation-2025";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-content-marketing-automation-2025";,
 technologyStack: ["GPT-5", "Natural Language Processing", "Marketing Automation", "Analytics", "API Integration"],
 complianceStandards: ["GDPR", "CAN-SPAM", "CCPA", "SOC2"],
@@ -149,12 +146,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/blockchain-supply-chain-transparency-2025";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/blockchain-supply-chain-transparency-2025";,
 technologyStack: ["Ethereum", "Hyperledger", "Smart Contracts", "IoT", "Cloud Computing"],
 complianceStandards: ["ISO 9001", "FSMA", "GDPR", "Industry-specific regulations"],
@@ -211,12 +205,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";,
 technologyStack: ["Quantum-Resistant Algorithms", "Post-Quantum Cryptography", "Secure Communication", "Blockchain", "Zero-Knowledge Proofs"],
 complianceStandards: ["SOC2", "ISO 27001", "NIST", "FISMA", "FedRAMP"],
@@ -273,12 +264,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";,
 technologyStack: ["GPT-5", "Natural Language Processing", "Machine Learning", "API Integration", "Analytics"],
 complianceStandards: ["GDPR", "CCPA", "SOC2", "Industry-specific regulations"],
@@ -335,12 +323,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/edge-ai-computing-platform-2025";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/edge-ai-computing-platform-2025";,
 technologyStack: ["TensorFlow Lite", "Edge ML", "IoT", "5G", "Cloud Computing"],
 complianceStandards: ["ISO 27001", "GDPR", "Industry-specific regulations"],
@@ -397,12 +382,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/autonomous-financial-trading-2025";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/autonomous-financial-trading-2025";,
 technologyStack: ["Advanced AI/ML", "Real-time Data Processing", "Trading APIs", "Risk Models", "Cloud Computing"],
 complianceStandards: ["SEC", "FINRA", "GLBA", "SOX", "International regulations"],
@@ -459,12 +441,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/smart-energy-management-2025";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/smart-energy-management-2025";,
 technologyStack: ["IoT Sensors", "AI/ML", "Cloud Computing", "Smart Grid Technology", "Renewable Energy Systems"],
 complianceStandards: ["ISO 50001", "LEED", "Energy Star", "Local regulations"],
@@ -521,12 +500,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/autonomous-healthcare-diagnostics-2025";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/autonomous-healthcare-diagnostics-2025";,
 technologyStack: ["AI/ML", "Medical Imaging", "IoT Devices", "Cloud Computing", "Security Protocols"],
 complianceStandards: ["HIPAA", "FDA", "SOC2", "ISO 13485", "GDPR"],
@@ -583,12 +559,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/autonomous-supply-chain-optimization-2025";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/autonomous-supply-chain-optimization-2025";,
 technologyStack: ["AI/ML", "IoT", "Cloud Computing", "Optimization Algorithms", "Real-time Analytics"],
 complianceStandards: ["ISO 9001", "C-TPAT", "GDPR", "Industry-specific regulations"],

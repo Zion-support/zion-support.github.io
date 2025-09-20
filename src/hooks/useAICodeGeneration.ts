@@ -205,10 +205,7 @@ security: calculateSecurityScore(code);
 performance: calculatePerformanceScore(code);,
 accessibility: calculateAccessibilityScore(code);,
 suggestions: generateCodeSuggestions(code; language),
-<<<<<<< HEAD
 metrics: getCodeMetrics(code);
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 metrics: getCodeMetrics(code);,
 issues: analyzeCodeIssues(code; language)};
 

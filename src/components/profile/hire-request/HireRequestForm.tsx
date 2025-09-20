@@ -9,7 +9,6 @@ import { PersonalInfoFields } from "./PersonalInfoFields";,
 import { ProjectDetailsField } from "./ProjectDetailsField";,
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
-<<<<<<< HEAD
 export interface HireRequestFormProps {talent: TalentProfile;
 import React from 'react'
 import { useHireRequestFormFormValues } from './useHireRequestForm'
@@ -24,15 +23,12 @@ import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
 export interface HireRequestFormProps {
   talent: TalentProfile;,
-=======
 export interface HireRequestFormProps {talent: TalentProfile;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClose: () => void;
 initialJobTitle?: string;
 userDetails?: {
 name?: string;
 }
-<<<<<<< HEAD
     email?: string;}
     email?: string;
     id?: string}
@@ -75,7 +71,6 @@ type='submit'
             {isSubmitting ? (
               <>
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void}
-=======
 email?: string;}
 id?: string}
 onSubmitSuccess?: () => void;
@@ -115,7 +110,6 @@ className="bg-zion-purple hover:bg-zion-purple-dark text-white"            disab
 {isSubmitting ? (
 <>;
 <Loader2 className="mr-2 h-4 w-4 animate-spin" />                Submitting...  onSubmitSuccess?: () => void}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function HireRequestForm({ talent onClose initialJobTitle userDetails onSubmitSuccess }: HireRequestFormProps) {
 return (
 <Form {...form}>;

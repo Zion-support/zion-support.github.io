@@ -90,12 +90,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-financial-advisory";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-financial-advisory";,
 technicalSpecs: ["Machine Learning Models", "Real-time Data Processing", "API Integration", "Cloud Infrastructure"],
 integrations: ["Bloomberg", "Reuters", "Yahoo Finance", "Trading Platforms", "Banking APIs"],
@@ -150,12 +147,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-healthcare";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-healthcare";,
 technicalSpecs: ["Deep Learning Models", "Medical Image Processing", "Natural Language Processing", "Real-time Analytics"],
 integrations: ["Epic", "Cerner", "PACS Systems", "Lab Information Systems", "Pharmacy Systems"],
@@ -210,12 +204,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-legal-services";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-legal-services";,
 technicalSpecs: ["Natural Language Processing", "Machine Learning", "Document OCR", "Semantic Search"],
 integrations: ["Westlaw", "LexisNexis", "Clio", "Practice Management Systems", "Document Management"],
@@ -270,12 +261,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-marketing";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-marketing";,
 technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
 integrations: ["Shopify", "WooCommerce", "HubSpot", "Salesforce", "Google Analytics", "Facebook Ads"],
@@ -330,12 +318,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-supply-chain";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-supply-chain";,
 technicalSpecs: ["Machine Learning", "Predictive Analytics", "IoT Integration", "Real-time Monitoring"],
 integrations: ["ERP Systems", "WMS", "TMS", "E-commerce Platforms", "Supplier Portals"],
@@ -390,12 +375,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-hr-platform";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-hr-platform";,
 technicalSpecs: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "API Integration"],
 integrations: ["ATS Systems", "HRIS", "LinkedIn", "Job Boards", "Background Check Services"],
@@ -450,12 +432,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-real-estate";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-real-estate";,
 technicalSpecs: ["Machine Learning", "Predictive Analytics", "Geospatial Analysis", "Real-time Data Processing"],
 integrations: ["MLS Systems", "Property Databases", "Financial Data Sources", "Market Data APIs"],
@@ -510,12 +489,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-education";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-education";,
 technicalSpecs: ["Machine Learning", "Natural Language Processing", "Learning Analytics", "Content Management"],
 integrations: ["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools"],
@@ -570,12 +546,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-manufacturing";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-manufacturing";,
 technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Monitoring"],
 integrations: ["MES Systems", "SCADA", "ERP Systems", "IoT Devices", "Quality Control Systems"],
@@ -630,12 +603,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-energy";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-energy";,
 technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Processing"],
 integrations: ["SCADA Systems", "Smart Meters", "Renewable Energy Systems", "Energy Trading Platforms"],
@@ -690,12 +660,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-transportation";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-transportation";,
 technicalSpecs: ["Machine Learning", "GPS Integration", "Real-time Analytics", "IoT Connectivity"],
 integrations: ["GPS Systems", "Fleet Management Software", "TMS", "Fuel Cards", "Maintenance Systems"],
@@ -750,12 +717,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
 websiteUrl: "https://ziontechgroup.com/ai-retail";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-retail";,
 technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
 integrations: ["POS Systems", "E-commerce Platforms", "Inventory Management", "Customer Databases", "Payment Systems"],
@@ -807,12 +771,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;899 - $5;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-real-estate-investment";
@@ -823,8 +784,7 @@ complianceStandards: ["SEC", "FINRA", "GDPR", "SOC 2", "Real Estate Regulations"
 integrationOptions: ["MLS Systems", "Property Databases", "Financial Platforms", "Tax Software", "CRM Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Education & Learning Platform;
@@ -872,12 +832,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $2;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-education-platform";
@@ -888,8 +845,7 @@ complianceStandards: ["FERPA", "COPPA", "GDPR", "SOC 2", "Educational Standards"
 integrationOptions: ["LMS Systems", "Student Information Systems", "Assessment Tools", "Content Management", "Communication Platforms"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Energy Management Platform;
@@ -937,12 +893,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;499 - $4;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-energy-management";
@@ -953,8 +906,7 @@ complianceStandards: ["ISO 50001", "LEED", "Energy Star", "SOC 2", "Environmenta
 integrationOptions: ["Building Management Systems", "IoT Sensors", "Utility Meters", "Renewable Energy Systems", "SCADA Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Agriculture & Precision Farming;
@@ -1002,12 +954,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;299 - $3;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-precision-agriculture";
@@ -1018,8 +967,7 @@ complianceStandards: ["Organic Standards", "Food Safety", "Environmental Regulat
 integrationOptions: ["IoT Sensors", "Drone Systems", "Weather APIs", "Soil Testing Equipment", "Irrigation Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Construction & Project Management;
@@ -1067,12 +1015,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;699 - $4;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-construction-management";
@@ -1083,8 +1028,7 @@ complianceStandards: ["OSHA", "Building Codes", "Safety Standards", "SOC 2", "Co
 integrationOptions: ["Project Management Software", "Safety Systems", "IoT Sensors", "Financial Systems", "Communication Platforms"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Hospitality & Tourism;
@@ -1132,12 +1076,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$999 - $2;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-hospitality-platform";
@@ -1148,8 +1089,7 @@ complianceStandards: ["PCI DSS", "GDPR", "SOC 2", "Hospitality Standards", "Data
 integrationOptions: ["PMS Systems", "Booking Engines", "Payment Gateways", "CRM Systems", "Communication Platforms"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Insurance & Risk Assessment;
@@ -1197,12 +1137,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;199 - $6;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-insurance-platform";
@@ -1213,8 +1150,7 @@ complianceStandards: ["NAIC", "State Regulations", "SOC 2", "Data Privacy", "Ins
 integrationOptions: ["Policy Management Systems", "Claims Systems", "CRM Platforms", "Financial Systems", "Third-party Data"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Legal Research & Document Analysis;
@@ -1262,12 +1198,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;599 - $4;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-legal-research";
@@ -1278,8 +1211,7 @@ complianceStandards: ["GDPR", "CCPA", "SOC 2", "Legal Standards", "Data Privacy"
 integrationOptions: ["Legal Research Databases", "Document Management Systems", "Case Management Software", "Legal Libraries", "Court Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Media & Content Creation;
@@ -1327,12 +1259,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;299 - $3;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-media-platform";
@@ -1343,8 +1272,7 @@ complianceStandards: ["Copyright", "Content Rights", "SOC 2", "Media Standards",
 integrationOptions: ["Video Editing Software", "Audio Processing Tools", "Content Management Systems", "Social Media Platforms", "Analytics Tools"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Gaming & Entertainment;
@@ -1392,12 +1320,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;199 - $3;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-gaming-platform";
@@ -1408,8 +1333,7 @@ complianceStandards: ["COPPA", "GDPR", "SOC 2", "Gaming Standards", "Data Privac
 integrationOptions: ["Game Engines", "Analytics Platforms", "Payment Systems", "Social Platforms", "Advertising Networks"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Cybersecurity & Threat Intelligence;
@@ -1457,12 +1381,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $7;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-cybersecurity-intelligence";
@@ -1473,8 +1394,7 @@ complianceStandards: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 integrationOptions: ["SIEM Systems", "EDR Platforms", "Firewalls", "Identity Management", "Security Tools"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.99%";,
-uptime: "99.99%",
-};
+uptime: "99.99%"};
 sla: "99.99%";,
 uptime: "99.99%"};
 // AI-Powered Supply Chain & Logistics;
@@ -1522,12 +1442,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;799 - $5;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-supply-chain-platform";
@@ -1538,8 +1455,7 @@ complianceStandards: ["ISO 28000", "C-TPAT", "SOC 2", "Supply Chain Standards", 
 integrationOptions: ["ERP Systems", "WMS Platforms", "TMS Solutions", "Supplier Portals", "Financial Systems"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Customer Experience & Support;
@@ -1587,12 +1503,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;399 - $4;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-customer-experience";
@@ -1603,8 +1516,7 @@ complianceStandards: ["GDPR", "CCPA", "SOC 2", "Data Privacy", "Customer Service
 integrationOptions: ["CRM Systems", "Help Desk Platforms", "Communication Tools", "Analytics Platforms", "Social Media"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered HR & Talent Management;
@@ -1652,12 +1564,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;199 - $3;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-hr-talent-platform";
@@ -1668,8 +1577,7 @@ complianceStandards: ["EEOC", "ADA", "GDPR", "SOC 2", "HR Compliance Standards"]
 integrationOptions: ["ATS Systems", "HRIS Platforms", "Job Boards", "Background Check Services", "Assessment Tools"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.9%";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9%";,
 uptime: "99.95%"};
 // AI-Powered Data Governance & Privacy;
@@ -1717,12 +1625,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;899 - $6;999/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-data-governance";
@@ -1733,8 +1638,7 @@ complianceStandards: ["GDPR", "CCPA", "HIPAA", "SOC 2", "Data Privacy Regulation
 integrationOptions: ["Data Warehouses", "CRM Systems", "ERP Platforms", "Security Tools", "Analytics Platforms"],
 deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
 sla: "99.99%";,
-uptime: "99.99%",
-}
+uptime: "99.99%"}
 sla: "99.99%";,
 uptime: "99.99%"}
 ];

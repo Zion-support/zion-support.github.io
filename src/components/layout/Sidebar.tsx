@@ -10,7 +10,6 @@ Users;
 DollarSign;
 , Phone,;
 Menu } from "lucide-react";
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Home, Users, Settings, DollarSign
@@ -35,7 +34,6 @@ const Sidebar = () => {
         <nav className="space-y-2">
           {navigation.map((item) => (
             <Link
-=======
 const Sidebar: any = () => {
 const navigation = [
 { name: "Home", href: "/", icon: Home },
@@ -56,7 +54,6 @@ return (
 <nav className="space-y-2">;
 {navigation.map((item) => (;
 <Link;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key={item.name}
 to={item.href}
 className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors duration-200"
@@ -76,7 +73,7 @@ import React from "react";
 import React from "react",;
 const Sidebar: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className = "text-xl font-bold mb-4">Sidebar</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;

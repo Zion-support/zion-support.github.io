@@ -105,15 +105,12 @@ These milestones will be added to your contract;
 </div>;
 )
 }
-<<<<<<< HEAD
 <Button variant="outline" onClick={handleGenerateMilestones}> {"
 <Button variant="outline" onClick={
   handleGenerateMilestones}> {"
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)
-=======
 <Button variant="outline" onClick={handleGenerateMilestones}> {";
 isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</Button>)
 }AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)

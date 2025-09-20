@@ -331,12 +331,9 @@ totalPages: 0;
 averageWordCount: 0;
 averageSeoScore: 0;
 pagesWithIssues: 0;
-<<<<<<< HEAD
 topIssues: [];
 pageMetrics: [];
-=======
 topIssues: [];,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 pageMetrics: [];,
 summary: "No pages analyzed yet"};
 }

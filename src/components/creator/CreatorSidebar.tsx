@@ -1,11 +1,9 @@
 
 import { //, SidebarMenu, //, Removed;
 , //, SidebarMenuButton, //, Removed;
-<<<<<<< HEAD
 , //, SidebarGroupLabel, //, Not, needed;
 , //, SidebarGroupContent, //, Not, needed } from "@/components/ui/sidebar";
-  // SidebarGroupContent, // Not needed,
-} from "@/components/ui/sidebar"
+  // SidebarGroupContent, // Not needed} from "@/components/ui/sidebar"
 import { //, SidebarMenu, //, Removed, //, SidebarMenuButton, //, Removed, //, SidebarGroupLabel, //, Not, needed, //, SidebarGroupContent//, Not, needed } from '@/components/ui/sidebar';
   // SidebarGroupContent, // Not needed } from "@/components/ui/sidebar"
   Sidebar,
@@ -16,11 +14,9 @@ SidebarMenuItem
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed } from "@/components/ui/sidebar"
-=======
 , //, SidebarGroupLabel, //, Not; needed;
 , //, SidebarGroupContent, //, Not; needed } from "@/components/ui/sidebar";
-// SidebarGroupContent, // Not needed,
-} from "@/components/ui/sidebar";
+// SidebarGroupContent, // Not needed} from "@/components/ui/sidebar";
 Sidebar;
 SidebarContent;
 SidebarGroup;
@@ -28,9 +24,7 @@ SidebarMenuItem;
 // SidebarMenu, // Removed;
 // SidebarMenuButton, // Removed;
 // SidebarGroupLabel, // Not needed;
-// SidebarGroupContent, // Not needed,
-} from "@/components/ui/sidebar";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+// SidebarGroupContent, // Not needed} from "@/components/ui/sidebar";
 export function AppSidebar() {
 return (
 <Sidebar>;

@@ -634,8 +634,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 89,
         launchDate: "2024-03-01",
         status: "Active",
-        innovationScore: 95,
-    },
+        innovationScore: 95},
     {id: "space-technology-platform",
         innovationScore: 95},
     {
@@ -697,8 +696,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 67,
         launchDate: "2024-02-15",
         status: "Active",
-        innovationScore: 93,
-    },
+        innovationScore: 93},
     {id: "brain-computer-interface-platform",
         innovationScore: 93},
     {
@@ -760,8 +758,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 45,
         launchDate: "2024-01-20",
         status: "Beta",
-        innovationScore: 96,
-    },
+        innovationScore: 96},
     {id: "autonomous-vehicle-platform",
         innovationScore: 96},
     {
@@ -823,8 +820,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 78,
         launchDate: "2024-02-01",
         status: "Active",
-        innovationScore: 94,
-    },
+        innovationScore: 94},
     {id: "quantum-internet-platform",
         innovationScore: 94},
     {
@@ -886,8 +882,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 34,
         launchDate: "2024-01-10",
         status: "Beta",
-        innovationScore: 97,
-    },
+        innovationScore: 97},
     {id: "ai-consciousness-simulation",
         innovationScore: 97},
     {
@@ -949,8 +944,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 23,
         launchDate: "2024-01-05",
         status: "Beta",
-        innovationScore: 98,
-    },
+        innovationScore: 98},
     {id: "quantum-financial-modeling",
         innovationScore: 98},
     {
@@ -1012,8 +1006,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 56,
         launchDate: "2024-02-20",
         status: "Active",
-        innovationScore: 95,
-    },
+        innovationScore: 95},
     {id: "autonomous-manufacturing-platform",
         innovationScore: 95},
     {
@@ -1075,8 +1068,7 @@ export const EMERGING_TECH_SERVICES = [
         reviewCount: 89,
         launchDate: "2024-01-15",
         status: "Active",
-        innovationScore: 93,
-    },
+        innovationScore: 93},
     {id: "quantum-drug-discovery",
         innovationScore: 93},
     {

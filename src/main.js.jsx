@@ -27,9 +27,7 @@ const queryClient = new QueryClient({
         queries: {
             retry: 1;
             refetchOnWindowFocus: false;
-        },
-    },
-});
+        }}});
             refetchOnWindowFocus: false;}}});
 const rootElement = document.getElementById('root');
 function renderApp() {

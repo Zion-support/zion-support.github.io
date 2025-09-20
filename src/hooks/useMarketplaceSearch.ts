@@ -111,8 +111,7 @@ fetchSuggestions();
 
 const filterOptions: FilterOptions = useMemo(
 () => staticFilterOptions;
-[],
-);
+[]);
 
 // Removed client-side filtering logic as the API now handles it.;
 const filteredListings = useMemo(() => {;

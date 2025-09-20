@@ -47,7 +47,6 @@ link?: string;
 * @returns {*} Function return value;
 */;
 function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {const categories = [{
-<<<<<<< HEAD
     title: "AI Services",
 description: "Cutting - edge AI solutions chatbots and machine learning"
     icon: "🤖",
@@ -75,7 +74,6 @@ description: "Business modernization and digital strategy"
 link: "/all - services"
     color: "from - emerald - 500 to - green - 600"}
 ]
-=======
 title: "AI Services",
 description: "Cutting - edge AI solutions chatbots and machine learning",
 icon: "🤖",
@@ -97,7 +95,6 @@ icon: "📈",
 link: "/all - services",
 color: "from - emerald - 500 to - green - 600"};
 ];
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 const specialServices = [{
 title: "IT Onsite Services",;
 link: "/it - onsite - services";
@@ -127,7 +124,6 @@ return (
 </section>;
 )
 }
-<<<<<<< HEAD
 // Default static categories with translation keys
   // If fetchedCategories is an empty array and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
@@ -159,9 +155,8 @@ return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category) => (
             <Link
-          {displayCategories.map((category,) => (
-            <Link,
-key = {category.id}
+          {displayCategories.map((category) => (
+            <Link key = {category.id}
               href = {category.link |'#'}
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
@@ -183,10 +178,8 @@ key = {category.id}
           <div className="flex flex-wrap justify-center gap-4">
             {getSpecialServices(t).map((service) => (
               <Link
-            {getSpecialServices(t).map((service,) => (
-              <Link,
-=======
-return (
+            {getSpecialServices(t).map((service) => (
+              <Link return (
 <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
 <div className="container mx-auto px-4">;
 {showTitle && (
@@ -222,7 +215,6 @@ className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zio
 <div className="flex flex-wrap justify-center gap-4">;
 {getSpecialServices(t).map((service) => (
 <Link;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key = {service.title}
 href = {service.link}
 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
@@ -249,14 +241,12 @@ title: t ("categories.it onsite services"),
 link: "/it-onsite-services";
 }];
 interface CategoriesSectionProps {showTitle?: boolean;
-className?: string,
-}
-style?: React.CSSProperties,}
+className?: string}
+style?: React.CSSProperties}
 categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({showTitle = true;
 className;
 style;
 categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {const {
-<<<<<<< HEAD
 style?: React.CSSProperties,
 categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({
   showTitle = true,
@@ -268,12 +258,10 @@ categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProp
 const defaultCategories = getDefaultCategories (t)
 //Use fetchedCategories if provided otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
   id: cat.id;",
-=======
 t}= useTranslation ()
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
 id: cat.id;",
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: cat.name,  //Map name to title description: cat.description |"No description available.",
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
 cat.id ";
@@ -292,16 +280,13 @@ t ("home.no categories desc") ";
 t ("home.no categories support")
 }return (</p> </div>)
 }</div> </Link>) )
-<<<<<<< HEAD
 }</div> > {service.title}</Link>) ) "
 }</div> > {
   service.title}</Link>) ) "
 }</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {'
   t ('home.view all categories')
-=======
 }</div> > {service.title}</Link>) ) ";
 }</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {";
 t ("home.view all categories")
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</Link> </div> </div> </section>)
 }'"}

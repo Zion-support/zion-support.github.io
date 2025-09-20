@@ -18,7 +18,6 @@ const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface
 tutorial?: TutorialType}
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
 if (!tutorial) {
-<<<<<<< HEAD
     return (
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>
         Tutorial not found.
@@ -69,7 +68,6 @@ export default function Tutorial() {
       </div>
     </div>
   );
-=======
 return (
 <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">;
 Tutorial not found.;
@@ -109,5 +107,4 @@ asChild;
 </div>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

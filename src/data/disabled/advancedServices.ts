@@ -27,8 +27,7 @@ reviewCount: 156;
 featured: true;
 aiScore: 96;,
 location: "Global";,
-availability: "2-3 Weeks",
-};
+availability: "2-3 Weeks"};
 location: "Global";,
 availability: "2-3 Weeks"};
 {
@@ -55,8 +54,7 @@ reviewCount: 89;
 featured: true;
 aiScore: 94;,
 location: "Global";,
-availability: "3-4 Weeks",
-};
+availability: "3-4 Weeks"};
 location: "Global";,
 availability: "3-4 Weeks"};
 {
@@ -82,8 +80,7 @@ rating: 4.7;
 reviewCount: 67;
 aiScore: 93;,
 location: "Global";,
-availability: "4-5 Weeks",
-};
+availability: "4-5 Weeks"};
 location: "Global";,
 availability: "4-5 Weeks"};
 // Cybersecurity & Compliance Solutions;
@@ -111,8 +108,7 @@ reviewCount: 134;
 featured: true;
 aiScore: 97;,
 location: "Global";,
-availability: "2-3 Weeks",
-};
+availability: "2-3 Weeks"};
 location: "Global";,
 availability: "2-3 Weeks"};
 {
@@ -138,8 +134,7 @@ rating: 4.6;
 reviewCount: 78;
 aiScore: 91;,
 location: "Global";,
-availability: "3-4 Weeks",
-};
+availability: "3-4 Weeks"};
 location: "Global";,
 availability: "3-4 Weeks"};
 // Cloud & DevOps Solutions;
@@ -167,8 +162,7 @@ reviewCount: 112;
 featured: true;
 aiScore: 95;,
 location: "Global";,
-availability: "2-3 Weeks",
-};
+availability: "2-3 Weeks"};
 location: "Global";,
 availability: "2-3 Weeks"};
 {
@@ -194,8 +188,7 @@ rating: 4.7;
 reviewCount: 93;
 aiScore: 92;,
 location: "Global";,
-availability: "3-4 Weeks",
-};
+availability: "3-4 Weeks"};
 location: "Global";,
 availability: "3-4 Weeks"};
 // Data & Analytics Solutions;
@@ -222,8 +215,7 @@ rating: 4.8;
 reviewCount: 67;
 aiScore: 94;,
 location: "Global";,
-availability: "4-5 Weeks",
-};
+availability: "4-5 Weeks"};
 location: "Global";,
 availability: "4-5 Weeks"};
 {
@@ -249,8 +241,7 @@ rating: 4.7;
 reviewCount: 89;
 aiScore: 93;,
 location: "Global";,
-availability: "2-3 Weeks",
-};
+availability: "2-3 Weeks"};
 location: "Global";,
 availability: "2-3 Weeks"};
 // Marketing & Sales Automation;
@@ -278,8 +269,7 @@ reviewCount: 156;
 featured: true;
 aiScore: 95;,
 location: "Global";,
-availability: "3-4 Weeks",
-};
+availability: "3-4 Weeks"};
 location: "Global";,
 availability: "3-4 Weeks"};
 {
@@ -305,8 +295,7 @@ rating: 4.9;
 reviewCount: 134;
 aiScore: 96;,
 location: "Global";,
-availability: "2-3 Weeks",
-};
+availability: "2-3 Weeks"};
 location: "Global";,
 availability: "2-3 Weeks"};
 // HR & Talent Management;
@@ -333,8 +322,7 @@ rating: 4.7;
 reviewCount: 78;
 aiScore: 92;,
 location: "Global";,
-availability: "3-4 Weeks",
-};
+availability: "3-4 Weeks"};
 location: "Global";,
 availability: "3-4 Weeks"};
 // Financial Technology Solutions;
@@ -362,8 +350,7 @@ reviewCount: 112;
 featured: true;
 aiScore: 95;,
 location: "Global";,
-availability: "4-5 Weeks",
-};
+availability: "4-5 Weeks"};
 location: "Global";,
 availability: "4-5 Weeks"};
 // Healthcare Technology;
@@ -390,8 +377,7 @@ rating: 4.9;
 reviewCount: 89;
 aiScore: 97;,
 location: "Global";,
-availability: "5-6 Weeks",
-};
+availability: "5-6 Weeks"};
 location: "Global";,
 availability: "5-6 Weeks"};
 // Manufacturing & IoT;
@@ -418,8 +404,7 @@ rating: 4.8;
 reviewCount: 67;
 aiScore: 94;,
 location: "Global";,
-availability: "4-5 Weeks",
-};
+availability: "4-5 Weeks"};
 location: "Global";,
 availability: "4-5 Weeks"};
 // Retail & E-commerce;
@@ -446,8 +431,7 @@ rating: 4.7;
 reviewCount: 93;
 aiScore: 93;,
 location: "Global";,
-availability: "3-4 Weeks",
-}
+availability: "3-4 Weeks"}
 location: "Global";,
 availability: "3-4 Weeks"}
 ];

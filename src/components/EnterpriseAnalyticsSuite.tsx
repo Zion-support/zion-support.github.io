@@ -128,7 +128,6 @@ status: "completed",
 team: "Security",
 deadline: "2024-01-15"},
 {name: "Mobile App Redesign",
-<<<<<<< HEAD
 progress: 65;
 const [departmentPerformance, setDepartmentPerformance] = useState<DepartmentPerformance[]>([
 {
@@ -186,8 +185,6 @@ team: "Security",
 deadline: "2024-01-15"},
 {
 name: "Mobile App Redesign",
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 progress: 65;,
 status: "delayed",
 team: "Design",

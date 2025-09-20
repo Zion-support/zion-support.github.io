@@ -16,7 +16,6 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 <Card className;
 // Loading state;
 if (loading && talents.length === 0) {
-<<<<<<< HEAD
     return (
       <div className="container py-8" data-testid="talents-loading">
         <motion.div initial={{ opacity: 0 y: 20 }}
@@ -46,7 +45,6 @@ export default function TalentsPage() {
     </div>
   );
 }
-=======
 return (
 <div className="container py-8" data-testid="talents-loading">;
 <motion.div initial={{ opacity: 0 y: 20 }}
@@ -66,4 +64,3 @@ Connect with world-class AI and technology professionals;
 }
 
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

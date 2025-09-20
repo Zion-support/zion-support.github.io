@@ -108,12 +108,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "BERT", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -143,8 +140,7 @@ communityAccess: true;
 updatesFrequency: "Weekly feature updates";
 dataRetention: "Configurable retention policies";,
 sla: "99.9% uptime guarantee";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9% uptime guarantee";,
 uptime: "99.95%"};
 // Blockchain Supply Chain Transparency Platform;
@@ -196,12 +192,9 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;500 - $6;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Ethereum", "Hyperledger", "IPFS", "React", "Node.js", "MongoDB", "Redis"],
@@ -231,8 +224,7 @@ communityAccess: true;
 updatesFrequency: "Monthly blockchain upgrades";
 dataRetention: "Permanent blockchain records";,
 sla: "99.99% blockchain uptime";,
-uptime: "99.99%",
-};
+uptime: "99.99%"};
 sla: "99.99% blockchain uptime";,
 uptime: "99.99%"};
 // AI-Powered Predictive Maintenance Platform;
@@ -284,12 +276,9 @@ estimatedDelivery: "6-10 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;200 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "PyTorch", "IoT protocols", "React", "Node.js", "Time-series databases", "Edge computing"],
@@ -319,8 +308,7 @@ communityAccess: true;
 updatesFrequency: "Bi-weekly AI model updates";
 dataRetention: "Configurable retention with long-term analytics";,
 sla: "99.5% uptime guarantee";,
-uptime: "99.7%",
-};
+uptime: "99.7%"};
 sla: "99.5% uptime guarantee";,
 uptime: "99.7%"};
 // Quantum-Safe Communication Platform;
@@ -372,12 +360,9 @@ estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;000 - $15;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Post-Quantum Algorithms", "Quantum Key Distribution", "Zero-Trust Architecture", "Blockchain", "Cloud Native"],
@@ -407,8 +392,7 @@ communityAccess: true;
 updatesFrequency: "Monthly quantum security updates";
 dataRetention: "Quantum-safe data retention policies";,
 sla: "99.99% security guarantee";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.99% security guarantee";,
 uptime: "99.95%"};
 // AI-Powered Market Research & Intelligence Platform;
@@ -460,12 +444,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$799 - $3;200/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "Claude", "TensorFlow", "React", "Node.js", "Elasticsearch", "Apache Kafka"],
@@ -495,8 +476,7 @@ communityAccess: true;
 updatesFrequency: "Weekly AI model updates";
 dataRetention: "Configurable retention with long-term analytics";,
 sla: "99.5% uptime guarantee";,
-uptime: "99.7%",
-};
+uptime: "99.7%"};
 sla: "99.5% uptime guarantee";,
 uptime: "99.7%"};
 // Autonomous AI Content Creation & Management Platform;
@@ -548,12 +528,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;299 - $5;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "Claude", "DALL-E", "Stable Diffusion", "React", "Node.js", "MongoDB"],
@@ -583,8 +560,7 @@ communityAccess: true;
 updatesFrequency: "Daily AI model updates";
 dataRetention: "Content versioning with long-term storage";,
 sla: "99.9% content creation uptime";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9% content creation uptime";,
 uptime: "99.95%"};
 // Smart Contract Development & Management Platform;
@@ -636,12 +612,9 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;800 - $7;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Solidity", "Rust", "Vyper", "React", "Node.js", "Ethereum", "Polygon", "Solana"],
@@ -671,8 +644,7 @@ communityAccess: true;
 updatesFrequency: "Weekly platform updates";
 dataRetention: "Blockchain-immutable records";,
 sla: "99.9% platform uptime";,
-uptime: "99.95%",
-};
+uptime: "99.95%"};
 sla: "99.9% platform uptime";,
 uptime: "99.95%"};
 // AI-Powered Human Resources & Talent Management Platform;
@@ -724,12 +696,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "Claude", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -759,8 +728,7 @@ communityAccess: true;
 updatesFrequency: "Weekly AI model updates";
 dataRetention: "Configurable retention with compliance requirements";,
 sla: "99.5% uptime guarantee";,
-uptime: "99.7%",
-};
+uptime: "99.7%"};
 sla: "99.5% uptime guarantee";,
 uptime: "99.7%"};
 // Quantum Machine Learning & Optimization Platform;
@@ -812,12 +780,9 @@ estimatedDelivery: "16-20 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$5;000 - $25;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Quantum Algorithms", "Hybrid Systems", "Quantum Error Correction", "Cloud Quantum Computing", "Advanced ML"],
@@ -847,8 +812,7 @@ communityAccess: true;
 updatesFrequency: "Monthly quantum algorithm updates";
 dataRetention: "Research data retention with quantum security";,
 sla: "99.9% quantum system uptime";,
-uptime: "99.95%",
-}
+uptime: "99.95%"}
 sla: "99.9% quantum system uptime";,
 uptime: "99.95%"}
 ];

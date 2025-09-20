@@ -11,8 +11,7 @@ import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { INITIAL_MARKETPLACE_PRODUCTS } from "@/data/initialMarketplaceProducts";
 import { useCurrency } from "@/hooks/useCurrency";
 import { logErrorToProduction } from "@/utils/productionLogger";
-// Market insights component,
-}}
+// Market insights component}}
 />;
 </motion.div>;
 ))}
@@ -63,7 +62,6 @@ whileTap={{ scale: 0.9 }}
 </>;
 )
 }
-<<<<<<< HEAD
 // Main export,
 import React from 'react';
 
@@ -76,9 +74,7 @@ export default function MarketplacePage() {
       </div>
     </div>
   );
-=======
 // Main export;
 export default function MarketplacePage() {
 return <MarketplacePageContent />;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

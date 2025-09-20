@@ -187,7 +187,6 @@ suggestion.type === "talent" ? "bg-green-100 text-green-600" :
 searchSuggestions?: SearchSuggestion[];
 }
 export function EnhancedSearchInput({setHighlightedIndex(-1)
-<<<<<<< HEAD
 export function EnhancedSearchInput({
 setHighlightedIndex(-1)
             }
@@ -203,7 +202,7 @@ setHighlightedIndex(-1)
         {value && (<button
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick = {() => onChange('')}
-            onClick = {(,) => onChange('')}
+            onClick = {() => onChange('')}
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
@@ -211,8 +210,7 @@ className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate h
         )}
       </div>
       <AutocompleteSuggestions
-      <AutocompleteSuggestions,
-suggestions = {filteredSuggestions}
+      <AutocompleteSuggestions suggestions = {filteredSuggestions}
         searchTerm = {value}
         onSelectSuggestion = {handleSelectSuggestion}
         visible = {isFocused}
@@ -222,7 +220,6 @@ listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
   )
-=======
 }
 setValueOnFocus(null)
 }}
@@ -251,7 +248,6 @@ highlightedIndex={highlightedIndex} // Pass highlightedIndex listId="autocomplet
 />;
 </div>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }setIsFocused (false)
 inputRef.current?.blur ()
 setHighlightedIndex (-1)
@@ -270,20 +266,16 @@ break}
 () => onChange ("") ";
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
 }</div> <AutocompleteSuggestions /> </div>)
-<<<<<<< HEAD
 }'"  )
       default:
         break}
   }
   return (<div
-=======
 }""  )
 default:
-break,
-}
+break}
 }
 return (<div;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 className="relative w-full"
 ref={containerRef}
 role="combobox";

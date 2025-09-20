@@ -5,7 +5,7 @@ import { QuoteRequestSteps } from '../QuoteRequestForm'
 import { CheckIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface StepProgressProps {
-currentStep: QuoteRequestSteps,}
+currentStep: QuoteRequestSteps}
 export function StepProgress({ currentStep }: StepProgressProps) {
 const steps: { id: QuoteRequestSteps; label: string }[] = [{ id: "service", label: "Service" },
 { id: "details", label: "Details" }
@@ -16,7 +16,6 @@ const steps: { id: QuoteRequestSteps; label: string }[] = [{ id: "service", labe
 )}
 <span;
 className = {cn(
-<<<<<<< HEAD
                   "text-xs mt-2 font-medium"
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
@@ -33,7 +32,6 @@ className = {cn(
   )
   (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100}%`
 }/> </div>
-=======
 "text-xs mt-2 font-medium";
 status === "complete" ? "text-zion-cyan" :
 status === "current" ? "text-white" :
@@ -48,10 +46,8 @@ status === "current" ? "text-white" :
 </div>;
 </div>;
 )
-(steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100,
-}%`;
+(steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100}%`;
 }/> </div>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {steps.findIndex (s => s.id === step.id) + 1}</span>)
 }</div> <span)
 }> {step.label}</span> </div>)

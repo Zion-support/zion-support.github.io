@@ -284,7 +284,6 @@ rotation: -time * 0.2;,
 type: "octagon"},
 {x: Math.sin(time * 0.7) * 350 + canvas.width / 2;
 y: Math.cos(time * 0.2) * 250 + canvas.height / 2;
-<<<<<<< HEAD
 size: 40;
 rotation: time * 0.25;
 rotation: time * 0.15;,
@@ -299,9 +298,7 @@ type: "octagon"},
 x: Math.sin(time * 0.7) * 350 + canvas.width / 2;
 y: Math.cos(time * 0.2) * 250 + canvas.height / 2;
 size: 40;
-=======
 size: 40;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 rotation: time * 0.25;,
 type: "diamond"}
 ];
@@ -480,12 +477,9 @@ y: [0, -25; 0],
 opacity: [0.7; 1; 0.7],
 scale: [1; 1.2; 1]}}
 transition={{
-<<<<<<< HEAD
 duration: 4;
 repeat: Infinity;
-=======
 duration: 4;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -497,12 +491,9 @@ y: [0; 20; 0],
 opacity: [0.8; 1; 0.8],
 x: [0; 10; 0]}}
 transition={{
-<<<<<<< HEAD
 duration: 3.5;
 repeat: Infinity;
-=======
 duration: 3.5;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -514,12 +505,9 @@ x: [0; 15; 0],
 opacity: [0.75; 1; 0.75],
 scale: [1; 1.1; 1]}}
 transition={{
-<<<<<<< HEAD
 duration: 5;
 repeat: Infinity;
-=======
 duration: 5;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -531,12 +519,9 @@ y: [0, -15; 0],
 x: [0, -10; 0],
 opacity: [0.6; 1; 0.6]}}
 transition={{
-<<<<<<< HEAD
 duration: 6;
 repeat: Infinity;
-=======
 duration: 6;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -545,10 +530,7 @@ ease: "easeInOut"}}
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-<<<<<<< HEAD
 opacity: intensity;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 opacity: intensity;,
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 />;
@@ -559,20 +541,14 @@ export default FuturisticAnimatedBackground2029;</canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-<<<<<<< HEAD
 opacity: intensity;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 opacity: intensity;,
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 /><//canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-<<<<<<< HEAD
 opacity: intensity;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 opacity: intensity;,
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 />}}})

@@ -85,12 +85,9 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;800 - $8;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "React", "Node.js", "Redis", "AWS Edge"],
@@ -99,8 +96,7 @@ compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
 roi: "300% within 8 months";,
 competitors: ["AWS Edge", "Azure Edge", "Google Edge", "Cloudflare Workers"],
 marketTrend: "Growing market with 250% annual growth";,
-innovationLevel: "Advanced edge computing with AI capabilities",
-};
+innovationLevel: "Advanced edge computing with AI capabilities"};
 marketTrend: "Growing market with 250% annual growth";,
 innovationLevel: "Advanced edge computing with AI capabilities"};
 // Zero-Trust Security Architecture;
@@ -150,12 +146,9 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["React", "Node.js", "PostgreSQL", "Redis", "OAuth 2.0", "SAML"],
@@ -164,8 +157,7 @@ compliance: ["NIST", "SOC 2", "ISO 27001", "GDPR", "HIPAA"],
 roi: "400% within 12 months";,
 competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
 marketTrend: "Growing market with 300% annual growth";,
-innovationLevel: "Advanced zero-trust with AI-powered threat detection",
-};
+innovationLevel: "Advanced zero-trust with AI-powered threat detection"};
 marketTrend: "Growing market with 300% annual growth";,
 innovationLevel: "Advanced zero-trust with AI-powered threat detection"};
 // Hybrid Cloud Management Platform;
@@ -215,12 +207,9 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;200 - $7;000/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Terraform", "React", "Node.js", "MongoDB", "Docker"],
@@ -229,8 +218,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
 roi: "350% within 8 months";,
 competitors: ["VMware", "Red Hat", "HashiCorp", "CloudBolt"],
 marketTrend: "Growing market with 200% annual growth";,
-innovationLevel: "Advanced hybrid cloud with AI-powered optimization",
-};
+innovationLevel: "Advanced hybrid cloud with AI-powered optimization"};
 marketTrend: "Growing market with 200% annual growth";,
 innovationLevel: "Advanced hybrid cloud with AI-powered optimization"};
 // Software-Defined Networking (SDN) Platform;
@@ -280,12 +268,9 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;800 - $5;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["OpenFlow", "React", "Node.js", "PostgreSQL", "Redis", "Docker"],
@@ -294,8 +279,7 @@ compliance: ["ISO 27001", "SOC 2", "GDPR"],
 roi: "300% within 6 months";,
 competitors: ["VMware NSX", "Cisco ACI", "Juniper Contrail", "OpenDaylight"],
 marketTrend: "Growing market with 180% annual growth";,
-innovationLevel: "Advanced SDN with AI-powered traffic optimization",
-};
+innovationLevel: "Advanced SDN with AI-powered traffic optimization"};
 marketTrend: "Growing market with 180% annual growth";,
 innovationLevel: "Advanced SDN with AI-powered traffic optimization"};
 // Container Orchestration Platform;
@@ -345,12 +329,9 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;500 - $4;500/month",
 contactInfo: {
-<<<<<<< HEAD
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "React", "Node.js", "MongoDB", "Redis"],
@@ -359,8 +340,7 @@ compliance: ["SOC 2", "ISO 27001", "GDPR"],
 roi: "400% within 6 months";,
 competitors: ["Red Hat OpenShift", "VMware Tanzu", "Docker Enterprise", "Rancher"],
 marketTrend: "Growing market with 250% annual growth";,
-innovationLevel: "Advanced container orchestration with AI-powered optimization",
-}
+innovationLevel: "Advanced container orchestration with AI-powered optimization"}
 marketTrend: "Growing market with 250% annual growth";,
 innovationLevel: "Advanced container orchestration with AI-powered optimization"}
 ];

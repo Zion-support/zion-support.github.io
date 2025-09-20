@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useCallback } from 'react';
 
 let toastCount = 0;
@@ -28,16 +29,14 @@ export function useToast() {
       message,
       type: 'default',
       duration: 5000,
-      ...options,
-    });
+      ...options});
   }, [addToast]);
 
   return {
     toasts,
     toast,
     addToast,
-    removeToast,
-  };
+    removeToast};
 }
 export function useToast() {
   const [toasts, setToasts] = useState([]);
@@ -48,8 +47,7 @@ export function useToast() {
       id,
       message,
       type: options.type || 'default',
-      duration: options.duration || 5000,
-    };
+      duration: options.duration || 5000};
 
     setToasts(prev => [...prev, newToast]);
 
@@ -69,8 +67,7 @@ export function useToast() {
   return {
     toast,
     dismiss,
-    toasts,
-  };
+    toasts};
 }
 
 export default useToast;

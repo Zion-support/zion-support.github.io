@@ -2,7 +2,6 @@
 import { GradientHeading } from "./GradientHeading";,
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button";
 import { CheckCircle2 } from 'lucide-react';
@@ -45,7 +44,6 @@ levels
       </div>
     </section>
   )
-=======
 <TableRow key={index} className="border-b border-zion-blue">;
 <TableCell className="font-medium text-white">{item.service}</TableCell>;
 <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>;
@@ -85,5 +83,4 @@ levels;
 </div>;
 </section>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

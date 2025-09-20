@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 interface Service {
 id: string;,
 name: string;
 }
 
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 import { SEO } from "@/components/SEO";,
 import { GradientHeading } from "@/components/GradientHeading";,
@@ -786,7 +783,6 @@ Connect with our experts to discuss how we can help you build a more sustainable
 </>;
 )
 "                    {expandedSection === solution.id && (
-<<<<<<< HEAD
                       <motion.div initial={{ opacity: 0 height: 0 }}'
                         animate={{ opacity: 1 height: 'auto' }}
                         exit={{ opacity: 0 height: 0 }}"
@@ -989,7 +985,6 @@ export default function GreenIT() {
       </div>
     </div>
   );
-=======
 <motion.div initial={{ opacity: 0 height: 0 }}";
 animate={{ opacity: 1 height: "auto' }}
 exit={{ opacity: 0 height: 0 }}";
@@ -1191,5 +1186,4 @@ export { GreenIT }
 export { GreenIT }
 export { GreenIT }
 export { GreenIT GreenIT }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

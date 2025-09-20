@@ -16,15 +16,13 @@ const INSTANCES: Instance[] = [
 {
 interface FeedItem {,
 id: number;,
-text: string,
-}
+text: string}
 export default function GlobalMapPage() {}
 <TooltipProvider key={i.id}>;
 <Tooltip>;
 <TooltipTrigger asChild>;
 <div;
 className={`absolute ${color} rounded-full p-1`}
-<<<<<<< HEAD
                         style={{ left: x top: y }}
                       >
                         <MapPin className='w-4 h-4 text-white' />
@@ -80,7 +78,6 @@ export default function GlobalMap() {
       </div>
     </div>
   );
-=======
 style={{ left: x top: y }}
 >;
 <MapPin className="w-4 h-4 text-white" />;
@@ -128,5 +125,4 @@ Top Regions by Talent;
 </div>;
 )
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

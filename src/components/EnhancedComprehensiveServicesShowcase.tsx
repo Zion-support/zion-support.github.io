@@ -22,8 +22,7 @@ const allServices = [;
 ...advancedInnovativeServicesExpansionV; 3.ma; p(servic;  e => ({
 ...servi; c; e;
 ty; p; e: "Advance; d A; I & Innovatio; n"};
-displayPri; c; e: servic; e.pric; e;,
-})),
+displayPri; c; e: servic; e.pric; e;})),
 ...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({...servi; c; e;
 displayPri; c; e: servic; e.pric; e;})),
 ...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({

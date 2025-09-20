@@ -16,7 +16,6 @@ category: string;
 }
 }
 isOpen={isApplyModalOpen}
-<<<<<<< HEAD
           onClose={() => setIsApplyModalOpen(false)}        />
       )}
 </>
@@ -31,7 +30,6 @@ export default function JobDetails() {
       </div>
     </div>
   );
-=======
 onClose={() => setIsApplyModalOpen(false)}        />;
 )}
 </>;
@@ -66,5 +64,4 @@ isWhitelabel ? brandName : "Zion AI Marketplace" ;
 }</>) ;
 }"";
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

@@ -97,7 +97,6 @@ interface SmartAppBannerProps {appName?: string;
 appIconSrc?: string;
 appStoreUrl?: string;
 }
-<<<<<<< HEAD
   googlePlayUrl?: string;}
 import React { useState useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -110,9 +109,7 @@ interface SmartAppBannerProps {
   appStoreUrl?: string;
   googlePlayUrl?: string;
   delay?: number, // Delay in milliseconds before showing the banner}
-=======
 googlePlayUrl?: string;}
 delay?: number, // Delay in milliseconds before showing the banner}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 )

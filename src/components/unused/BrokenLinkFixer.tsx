@@ -63,12 +63,9 @@ url: href;
 status: "unknown";
 lastChecked: new Date();
 parentPage: window.location.pathname;
-<<<<<<< HEAD
 element: element as HTMLElement;
 fixable: false;
-=======
 element: element as HTMLElement;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 fixable: false;,
 suggestedFix: ""};
 // Determine if link is fixable;
@@ -151,12 +148,9 @@ return { ...link; status: "healthy", lastChecked: new Date() };
 }
 } catch (error) {return {
 ...link;
-<<<<<<< HEAD
 status: "broken";
 error: error instanceof Error ? error.message : "Unknown error";
-=======
 status: "broken";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 error: error instanceof Error ? error.message : "Unknown error";,
 lastChecked: new Date() };
 }

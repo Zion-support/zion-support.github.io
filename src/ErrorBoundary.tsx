@@ -23,7 +23,7 @@ error?: Error;
 errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props State> {
 constructor(props: Props) {
 super(props);
 this.state = { hasError: false };
@@ -83,8 +83,7 @@ background: "#f5f5f5",
 padding: "1rem",
 borderRadius: "4px",
 overflow: "auto",
-fontSize: "12px",
-}}>
+fontSize: "12px"}}>
 {this.state.error.toString()}
 {this.state.errorInfo?.componentStack}
 </pre>

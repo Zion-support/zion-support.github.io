@@ -104,9 +104,8 @@ children: ReactNode;
 }
 }
 }
-interface State {hasError: boolean,
-}
-error?: Error,}
+interface State {hasError: boolean}
+error?: Error}
 interface Props {
   children: ReactNode;
 }
@@ -151,7 +150,6 @@ Refresh Page;
 </button>;
 <button;
 onClick={() => this.setState({ hasError: false error: undefined errorInfo: undefined })}
-<<<<<<< HEAD
                 className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
               >
                 Try Again
@@ -173,7 +171,6 @@ onClick={() => this.setState({ hasError: false error: undefined errorInfo: undef
       )
     }
     return this.props.children}
-=======
 className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
 >;
 Try Again;
@@ -194,9 +191,7 @@ Error Details (Development)
 </div>;
 )
 }
-return this.props.children,
-}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+return this.props.children}
 }
 
 export function ErrorBoundary({ childre;  n; fallbac; k; onError }: ErrorBoundaryProps) {

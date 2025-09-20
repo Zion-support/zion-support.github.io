@@ -12,9 +12,7 @@ name: "auth";
 initialState;,
 reducers: {
 setLoggedIn(state; action: PayloadAction<boolean>) {
-state.isLoggedIn = action.payload},
-},
-});
+state.isLoggedIn = action.payload}}});
 state.isLoggedIn = action.payload}}});
 
 export const { setLoggedIn } = authSlice.actions;

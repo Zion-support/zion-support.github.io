@@ -1,3 +1,4 @@
+import React from "react";
 import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
 import { useEffec, t, useStat, e, useRef } from 'react';
 export function PerformanceOptimizer() {
@@ -197,8 +198,7 @@ export const PerformanceOptimizer = ({ children }) => {
                         }
                     }
                 });
-            },  {rootMargi, n: '50px',
-            },  {
+            },  {rootMargi, n: '50px'},  {
                 rootMargi, n: '50px',
     threshol, d: 0.1});
             // Observe all images with data-src;

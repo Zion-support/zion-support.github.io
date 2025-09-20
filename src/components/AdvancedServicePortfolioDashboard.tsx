@@ -81,8 +81,7 @@ reven; u; e: 24000; 0; 0;
 grow; t; h: 2; 8.5;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Explodin; g"};
-technologyMaturi; t; y: "Leadin; g",
-},
+technologyMaturi; t; y: "Leadin; g"},
 {i; d: "spac; e-minin; g",
 technologyMaturi; t; y: "Leadin; g"},
 {

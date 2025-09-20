@@ -109,9 +109,7 @@ openLoginModal={returnToPath => setLoginOpen(true)}            />;
 }
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />;
 }setQuery ("")
-//Track analytics event,
-}searchSuggestions= {suggestions}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
-<<<<<<< HEAD
+//Track analytics event}searchSuggestions= {suggestions}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
 //Track analytics event}searchSuggestions= {
   suggestions}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
   (e) => {
@@ -119,13 +117,11 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
   t ('auth.login') "
 }</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {'
   t ('auth.signup')
-=======
 (e) => {
 > {";
 t ("auth.login") ";
 }</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {";
 t ("auth.signup")
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</Link> </>)
 }{
 isLoggedIn && <UserMenu />;
@@ -145,30 +141,23 @@ isLoggedIn && <UserMenu />;
 }</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
 () => setMobileMenuOpen (false) ";
 }aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {unreadCount}onClose= {
-<<<<<<< HEAD
 }aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
   unreadCount}onClose= {
   () => setMobileMenuOpen (false)
-=======
 () => setMobileMenuOpen (false)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }openLoginModal= {
 (returnToPath) => setLoginOpen (true)
 }/> </div> </div>)
 }{isMobile && <MobileBottomNav unreadCount= {
 unreadCount}/>;
 }<LoginModal isOpen= {loginOpen}onOpenChange= {setLoginOpen}/> </>)
-<<<<<<< HEAD
 }{
   isMobile && <MobileBottomNav unreadCount= {
   unreadCount}/>
 }<LoginModal isOpen= {
   loginOpen}onOpenChange= {
   setLoginOpen}/> </>)
-}'"  { opacity: 0,
-=======
-}""  { opacity: 0;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+}'"  { opacity: 0}""  { opacity: 0;,
 height: 0;
 }}
 animate = {

@@ -59,7 +59,6 @@ onClick={() => window.print()}
 </div>;
 <Tabs;
 value={activeTab}
-<<<<<<< HEAD
         onValueChange={setActiveTab}
         className='space-y-4'
       >
@@ -131,7 +130,6 @@ export default function Partners() {
       </div>
     </div>
   );
-=======
 onValueChange={setActiveTab}
 className="space-y-4"
 >;
@@ -205,5 +203,4 @@ t ("partner.earnings title") ;
 t ("partner.earnings desc") ";
 }</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space-y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space-y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
 }'"}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

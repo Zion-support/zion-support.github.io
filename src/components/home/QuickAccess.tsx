@@ -40,5 +40,5 @@ return (
 interface QuickAccessProps {
 className?: string;
 }
-style?: React.CSSProperties,}
+style?: React.CSSProperties}
 export function QuickAccess({ className style }: QuickAccessProps) {

@@ -1,152 +1,92 @@
-import useSWR from "swr",;
-import { CategoryCard } from "@/components/CategoryCard";,
+import React, { useState, useEffect } from 'react';
+import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
-import { SkeletonCard } from "@/components/ui";
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
 import { Folder } from "lucide-react";
 import { CATEGORIES } from "@/data/categories";
-import { NextSeo } from "@/components/NextSeo";
+import { SEO } from "@/components/SEO";
 import { logErrorToProduction } from "@/utils/productionLogger";
-interface CategoryType {
-id: string;
-name: string;,
-slug: string;,
-icon: string;
-}
-}
-}
 
+interface CategoryType {
+  id: string;
+  name: string;
+  slug: string;
+  icon: string;
+  description: string;
+  count: number;
 }
-import React from "react";
-import { Brain; Cloud, Shield; Code, Database; Network } from "lucide-react";"});"})
-}
-const Categories: React.FC: = () => {,"
-const categories = [];
-return (";
-<div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",",";
-<div: className="max-w-6xl mx-auto px-4 sm: px-6: lg:px-8: py-16">",";";
-<div: className="text - center mb-12">",";
-<h1: className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>",";
-<p: className = "text-xl text-gray-600">Explore our comprehensive range of technology services</p>",";
-</div>";
-<div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6">"," {categories.map((category index) => (";
-<div: key="{index}" className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md: transition-shadow">",";";
-<div: className="flex items-center mb-4">",";
-<category.icon: className = "h-8 w-8 text-blue-600 mr-3" />",",";
-<h2: className="text - xl font-semibold text-gray-900">{category.name}</h2>",";
-<p: className = "text-gray-600 mb-4">"," {category.count} services: available in this category;
-";
-const Categories: React.FC = () => {"
-const categories = [];
-return (";
-<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;";
-<div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,";
-<div className="text-center mb-12">,";
-<h1 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>,";
-<p className = "text-xl text-gray-600">Explore our comprehensive range of technology services</p>;
-</div>,";
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {categories.map((category index) => (;";
-<div key="{index}" className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow">,";
-<div className = "flex items-center mb-4">,";
-<category.icon className="h-8 w-8 text-blue-600 mr-3" />,";
-<h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>;";
-<p className="text-gray-600 mb-4"> {category.count} services available in this category;
-</p>;
-<a>;
-href = {"/services ? category=${category.name.toLowerCase().replace(" ", "-")}"}">;
-className="text-blue-600 hover : text-blue-700 font-medium">
-View Services →;
-</a>;
-))}"lucide-react";&apos;&apos;
-const Categories: React.FC = () => {}
-const;const categories = [;
-{ name: &aposAI Services&apos icon: Brain count: 25 } { name: &aposCloud Solutions&apos icon: Cloud count: 15 } { name: &aposCybersecurity&apos icon: Shield count: 12 } { name: &aposDevelopment&apos icon: Code count: 18 } { name: &aposData Analytics&apos icon: Database count: 10 } { name: &aposInfrastructure&apos icon: Network count: 8 };
-return(&apos;";
-<div className="&apos;min-h-screen" bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos,";
-<div className="&apos;max-w-6xl" mx-auto px-4 sm: px-6 lg:px-8 py-16&apos>&apos,";
-<div className="&apos;text-center" mb-12&apos;>&apos,";
-<h1 className="&apos;text-4xl" font-bold text-gray-900 mb-4&apos;>Service Categories&apos</h1>";
-<p className="&apos;text-xl" text-gray-600&apos;>Explore our comprehensive range of technology services&apos</p>";
-<div className = "&aposgrid" grid-cols-1 md:grid-cols-2 lg: grid-cols-3 gap-6&apos>;
-{categories.map((category index) => (&apos}";
-<div key="{index}" className="&apos;bg-white" rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow&apos>&apos,";
-<div className="&apos;flex" items-center mb-4&apos;>&apos,";
-<category.icon className="&apos;h-8" w-8 text-blue-600 mr-3&apos; />&apos,";
-<h2 className="&apostext-xl" font-semibold text-gray-900&apos>{category.name}&apos </h2>";
-<p className="&apos;text-gray-600" mb-4&apos;>;
-{category.count} services available in this category&apos;
-const categories = [";
-{ nam,";
-e: "AI Services", icon: Brain count: 25 } { name: "Cloud Solutions", icon: Cloud count: 15 },";
-const categories = [";
-{ name: "AI Services", icon: Brain count: 25 } { name: "Cloud Solutions", icon: Cloud count: 15 },";
-{ name: "Cybersecurity", icon: Shield count: 12 } { name: "Development", icon: Code count: 18 },
-{ name: "Data Analytics", icon: Database count: 10 } { name: "Infrastructure", icon: Network count: 8 }";
-return(";
-<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">";
-<div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";
-<div className="text-center mb-12">";
-<h1 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>";
-<p className="text-xl text-gray-600">Explore our comprehensive range of technology services</p>";
-</div>";
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">";
-{categories.map((category index) => (";
-<div key="{index}" className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow">";
-<div className="flex items-center mb-4">";
-<category .icon className="h-8 w-8 text-blue-600 mr-3" /">";
-<h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>";
-<p className="text-gray-600 mb-4">;
-{category.count} services available in this category;
-</p>";
-<a";
-href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}
-const categories = [";
-{ name: "AI Services", icon: Brain count: 25 } { name: "Cloud Solutions", icon: Cloud count: 15 } { name: "Cybersecurity", icon: Shield count: 12 } { name: "Development", icon: Code count: 18 } { name: "Data Analytics", icon: Database count: 10 } { name: "Infrastructure", icon: Network count: 8 }";
-return(";
-<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50>";
-<div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16>";
-<div className="text-center mb-12>";
-<h1 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>";
-<p className="text-xl text-gray-600">Explore our comprehensive range of technology services</p>";
-<div className="grid grid-cols-1 m>,
-d:grid-cols-2 l,";
-g: grid-cols-3 gap-6">";
-{categories.map((category index) => (";
-<div key="{index}" className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow>";
-<div className="flex items-center mb-4>";
-<category.icon className="h-8 w-8 text-blue-600 mr-3" />";
-<h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>;
-<a";
-href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}"">;
-<a href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"} className="text-blue-600 hover: text-blue-700 font-medium">";
-<a href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}";";";
-className="text-blue-600: hover: text-blue-700: font-medium">",
-View: Services →";
-href="{"/services?category=${category.name.toLowerCase().replace(&apos," &apos, &apos;-&apos)}"}";
-className="&apos;text-blue-600" hover: text-blue-700 font-medium&apos>
-View Services →&apos,&apos;
-<a;
-href = {"/services?category=${category.name.toLowerCase().replace(" ,-")}"}
-className="text-blue-600 hover: text-blue-700 font-medium">
-View Services →;
-</a>;
-<</div>";
-)}"";
-export default Categories""
-";
-)}
-export: default Categories;
-export default Categories," ]
-export default Categories"")))))))))
-import React from 'react';
 
 export default function Categories() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Categories</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
+  const [categories, setCategories] = useState<CategoryType[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    try {
+      setCategories(CATEGORIES);
+      setLoading(false);
+    } catch (err) {
+      logErrorToProduction('Error fetching categories:', err);
+      setError('Failed to load categories');
+      setLoading(false);
+    }
+  }, []);
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Error Loading Categories</h1>
+          <p className="text-gray-600">Please try again later.</p>
+        </div>
       </div>
-    </div>
+    );
+  }
+
+  return (
+    <>
+      <SEO
+        title="Categories - Zion AI Marketplace"
+        description="Browse our comprehensive categories of AI services and solutions"
+      />
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <GradientHeading
+                level="h1"
+                className="text-4xl md:text-5xl font-bold mb-4"
+              >
+                Categories
+              </GradientHeading>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Explore our comprehensive range of AI services and solutions organized by category
+              </p>
+            </div>
+
+            <ErrorBoundary>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {loading ? (
+                  <div className="col-span-full text-center py-8">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+                    <p className="mt-4 text-gray-600">Loading categories...</p>
+                  </div>
+                ) : (
+                  categories.map((category) => (
+                    <CategoryCard
+                      key={category.id}
+                      title={category.name}
+                      description={category.description}
+                      icon={<Folder className="h-8 w-8" />}
+                      href={`/category/${category.slug}`}
+                    />
+                  ))
+                )}
+              </div>
+            </ErrorBoundary>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

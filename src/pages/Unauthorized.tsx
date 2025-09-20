@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 interface Service {
 id: string;,
 name: string;
 }
 
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 import Link from "next/link",;
 import { Button } from "@/components/ui/button";,
@@ -14,7 +11,6 @@ import { Header } from "@/components/Header";
 import { ShieldAlert } from "lucide-react";
 import { useTranslation } from "react-i18next";
 export default function Unauthorized() {
-<<<<<<< HEAD
   return (
     <>
       <Header />
@@ -63,7 +59,6 @@ href='/auth/login'
       </div>
     </div>
   );
-=======
 const { t } = useTranslation();
 return (
 <>;
@@ -106,5 +101,4 @@ className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-z
 </div>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

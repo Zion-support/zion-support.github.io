@@ -6,9 +6,9 @@ import { generateSearchSuggestions } from "@/data/marketplaceData";,
 import { SearchSuggestion } from "@/types/search";
 import { logErrorToProduction } from "@/utils/productionLogger";
 import { Tabs;
-, , TabsContent;
-, , TabsList;
-, , TabsTrigger } from "@/components/ui/tabs";
+, TabsContent;
+, TabsList;
+, TabsTrigger } from "@/components/ui/tabs";
 import { Loader2 } from "lucide-react";
 interface SearchResult {
 description: string;
@@ -204,7 +204,6 @@ onClick={ () => toggleFilter(filter.id) }
 className={`w-full flex items - center justify - between p - 3 rounded-lg transition - colors ${selectedFilters.has(filter.id) ? "bg-blue - 50 border border-blue - 200"
 : "hover:bg-gray - 50';
 }`}
-<<<<<<< HEAD
                   >
                     <div  className="flex items - center space - x-3">
                       <filter.icon className="h-5 w-5 text-gray -600" />
@@ -266,7 +265,6 @@ export default function SearchPage() {
       </div>
     </div>
   );
-=======
 >;
 <div  className="flex items - center space - x-3">;
 <filter.icon className="h-5 w-5 text-gray -600" />;
@@ -317,5 +315,4 @@ Contact Us;
 </div>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

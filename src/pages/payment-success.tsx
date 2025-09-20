@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 interface Service {
 id: string;,
 name: string;
@@ -8,14 +6,12 @@ name: string;
 
 
 import React from "react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";, // Changed from useNavigate;
 import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function PaymentSuccess() {
-<<<<<<< HEAD
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
       <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>
@@ -67,7 +63,6 @@ variant="outline"
     </div>
   );
 }
-=======
 const router = null;
 return (
 <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
@@ -116,4 +111,3 @@ onClick={() => router.push("/")} // Changed to router.push className="border-zio
 </div>;
 )
 })
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

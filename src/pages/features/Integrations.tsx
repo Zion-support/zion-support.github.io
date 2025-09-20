@@ -7,7 +7,6 @@ import Link from "next/link";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
 return (
-<<<<<<< HEAD
     <>
       <SEO
 title='API & Integrations'
@@ -86,7 +85,6 @@ export default function Integrations() {
       </div>
     </div>
   );
-=======
 <>;
 <SEO;
 title="API & Integrations";
@@ -154,5 +152,4 @@ higher limits.;
 </main>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

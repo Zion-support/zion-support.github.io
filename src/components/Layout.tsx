@@ -20,7 +20,7 @@ title = "Zion Tech Group - Leading AI & Technology Solutions",
 description = "Transform your business with cutting-edge AI solutions; cloud services; and technology consulting.",
 keywords = "AI solutions; cloud services; technology consulting; digital transformation";
 }: LayoutProps) {,
-return (,
+return (
 <>,
 <Head>,
 <title>{title}</title>,

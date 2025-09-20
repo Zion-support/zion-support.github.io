@@ -1,3 +1,4 @@
+export default function Component() {
 return (
 <div className="space-y-6">;
 <div className="grid md:grid-cols-3 gap-6">;
@@ -125,4 +126,5 @@ Set Up Trigger;
 </Card>;
 </div>;
 )
+}
 }

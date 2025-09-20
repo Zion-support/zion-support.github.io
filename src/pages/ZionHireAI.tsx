@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function ZionHireAI() {
@@ -32,7 +31,6 @@ size="lg"
       </div>
     </div>
   );
-=======
 import React from "react";
 
 interface Service {
@@ -66,5 +64,4 @@ Schedule a Demo;
 </main>;
 </>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

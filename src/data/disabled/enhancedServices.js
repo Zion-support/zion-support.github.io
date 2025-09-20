@@ -20,8 +20,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 96,
-    };
+        aiScore: 96};
     {id: "ai-customer-insights";
         aiScore: 96};
     {
@@ -42,8 +41,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "1-2 Weeks";
-        aiScore: 93,
-    };
+        aiScore: 93};
     {id: "ai-content-optimization";
         aiScore: 93};
     {
@@ -84,8 +82,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "3-4 Weeks";
-        aiScore: 94,
-    };
+        aiScore: 94};
     {id: "edge-computing-solution";
         aiScore: 94};
     {
@@ -126,8 +123,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "3-4 Weeks";
-        aiScore: 95,
-    };
+        aiScore: 95};
     {id: "zero-trust-security";
         aiScore: 95};
     {
@@ -167,8 +163,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 89;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 90,
-    };
+        aiScore: 90};
     {id: "predictive-maintenance-ai";
         aiScore: 90};
     {
@@ -228,8 +223,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 234;
         location: "Global";
         availability: "Immediate";
-        aiScore: 93,
-    };
+        aiScore: 93};
     {id: "devops-automation";
         aiScore: 93};
     {
@@ -289,8 +283,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 34;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 94,
-    };
+        aiScore: 94};
     {id: "fintech-compliance-ai";
         aiScore: 94};
     {
@@ -331,8 +324,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 95,
-    };
+        aiScore: 95};
     {id: "quantum-computing-readiness";
         aiScore: 95};
     {

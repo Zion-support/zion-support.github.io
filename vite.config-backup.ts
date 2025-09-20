@@ -48,8 +48,7 @@ include: '**/*.{jsx,js,ts,tsx}'
 						'@radix-ui/react-hover-card@radix-ui/react-label@radix-ui/react-menubar@radix-ui/react-navigation-menu',
 						'@radix-ui/react-popover@radix-ui/react-progress@radix-ui/react-radio-group@radix-ui/react-scroll-area',
 						'@radix-ui/react-select@radix-ui/react-separator@radix-ui/react-slider@radix-ui/react-slot',
-						'@radix-ui/react-switch@radix-ui/react-tabs@radix-ui/react-toast@radix-ui/react-toggle',
-		}
+						'@radix-ui/react-switch@radix-ui/react-tabs@radix-ui/react-toast@radix-ui/react-toggle'}
 		"extensions": ['.js', '.jsx', '.ts', '.tsx']
 	}
 	"build": {
@@ -164,8 +163,7 @@ manualChunks: {
 	"define": {,
 		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
 		"__PROD__": JSON.stringify(process.env.NODE_ENV === 'production'),
-		// Enhanced global definitions,
-		}
+		// Enhanced global definitions}
 		"terserOptions": {
 			compress: {,
 drop_console: true
@@ -178,8 +176,7 @@ drop_console: true
 				"unsafe_math": true
 				"unsafe_proto": true
 				"unsafe_regexp": true
-				"unsafe_undefined": true,
-}
+				"unsafe_undefined": true}
 			"mangle": {
 				safari10: true
 				// Enhanced mangling
@@ -192,8 +189,7 @@ drop_console: true
 		// Enhanced build options
 		"reportCompressedSize": false
 		"emptyOutDir": true
-		"assetsInlineLimit": 4096,
-}
+		"assetsInlineLimit": 4096}
 	"optimizeDeps": {
 		include: ['react'
 			'react-dom'
@@ -228,8 +224,7 @@ drop_console: true
 		}
 	}
 	"css": {
-		devSourcemap: false,
-}
+		devSourcemap: false}
 	"esbuild": {
 		jsx: 'automatic'}
 	"server": {
@@ -246,8 +241,7 @@ drop_console: true
 	"preview": {
 		port: 4173
 		"host": true
-		"open": true,
-}
+		"open": true}
 	"define": {
 		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development')
 		"__PROD__": JSON.stringify(process.env.NODE_ENV === 'production')

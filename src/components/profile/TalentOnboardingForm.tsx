@@ -13,7 +13,6 @@ FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import React, { useState } from "react",
 import { useFormuseFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -29,8 +28,7 @@ import { Button } from '@/components/ui/button';
 SelectContent
   SelectItem,
 SelectTrigger
-  SelectValue,
-} from '@/components/ui/select'
+  SelectValue} from '@/components/ui/select'
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
@@ -51,13 +49,11 @@ ArrowRight
   ArrowLeft,
 Trash2
   Plus,
-=======
 Select;
 SelectContent;
 SelectItem;
 SelectTrigger;
-SelectValue,
-} from "@/components/ui/select";
+SelectValue} from "@/components/ui/select";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
@@ -74,9 +70,7 @@ ArrowRight;
 ArrowLeft;
 Trash2;
 Plus;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
-CheckCircle2,
-} from "lucide-react";
+CheckCircle2} from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
@@ -86,8 +80,7 @@ Form FormControl FormField FormItem FormLabel FormMessage,;
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-Select SelectContent SelectItem SelectTrigger SelectValue,
-} from "@/components/ui/select";
+Select SelectContent SelectItem SelectTrigger SelectValue} from "@/components/ui/select";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
@@ -135,18 +128,13 @@ setProfilePictureUrl (reader.result as string)
 reader.readAsDataURL (file)
 }//Get the public window.URL const {data: {
 publicUrl}= supabase.storage.from ("resumes") .getPublicUrl (fileName)
-return publicUrl,
-<<<<<<< HEAD
-}
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null,
-}'}
+return publicUrl}
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null}'}
 }//Get the public window.URL const {
   data: {
   publicUrl}= supabase.storage.from ('resumes') .getPublicUrl (fileName)
 return publicUrl}
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null}'}
-=======
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null,;
 }'}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

@@ -1,3 +1,4 @@
+import React from "react";
 
 import { useState; useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
@@ -18,7 +19,6 @@ import { useResumeProgress } from "./useResumeProgress";
 import { ResumeVersionSelector } from "./ResumeVersionSelector";
 import { RESUME_STEPS } from "./constants";
 export function ResumeWizard() {createResume} = useResume();
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
@@ -42,11 +42,9 @@ createResume} = useResume();
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   // Use the extracted hook for progress calculation,
-=======
 const [activeTab; setActiveTab] = useState("basic-info");
 const [showNewResumeForm; setShowNewResumeForm] = useState(false);
 // Use the extracted hook for progress calculation;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 if (isLoading) {
 return (
 <div className="flex justify-center items-center h-64">;
@@ -68,13 +66,11 @@ return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
 }
 if (showNewResumeForm) {return (<CreateResumeForm;
 onCreateResume = {handleCreateNewResume}
-<<<<<<< HEAD
         onCancel = {() => setShowNewResumeForm(false)}
   if (showNewResumeForm) {
     return (
-      <CreateResumeForm,
-onCreateResume = {handleCreateNewResume}
-        onCancel = {(,) => setShowNewResumeForm(false)}
+      <CreateResumeForm onCreateResume = {handleCreateNewResume}
+        onCancel = {() => setShowNewResumeForm(false)}
         isLoading = {isLoading}
       />
     )
@@ -86,8 +82,7 @@ onCreateResume = {handleCreateNewResume}
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button
 onClick = {() => setShowNewResumeForm(true)}
-          <Button,
-onClick = {(,) => setShowNewResumeForm(true)}
+          <Button onClick = {() => setShowNewResumeForm(true)}
             variant="outline"
             size="sm"
             className="gap-2"
@@ -105,16 +100,13 @@ onClick = {(,) => setShowNewResumeForm(true)}
           </div>
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <ResumeSteps
-            <ResumeSteps,
-steps = {RESUME_STEPS}
+            <ResumeSteps steps = {RESUME_STEPS}
               activeTab = {activeTab}
               onChange = {setActiveTab}
             />
             {resume && (
               <ResumeStepContent
-              <ResumeStepContent,
-=======
-onCancel = {() => setShowNewResumeForm(false)}
+              <ResumeStepContent onCancel = {() => setShowNewResumeForm(false)}
 isLoading = {isLoading}
 />;
 )
@@ -144,7 +136,6 @@ Create New;
 <Tabs value={activeTab} onValueChange={setActiveTab}>;
 <ResumeSteps;
 steps = {RESUME_STEPS}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 activeTab = {activeTab}
 onChange = {setActiveTab}
 />;
@@ -168,7 +159,6 @@ onPrevStep = {prevStep}
 () => setShowNewResumeForm (false)
 }isLoading= {isLoading}/>)
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {activeTab}onValueChange= {setActiveTab}> <ResumeSteps steps= {RESUME STEPS}activeTab= {activeTab}onChange= {setActiveTab}/> {resume && (<ResumeStepContent activeTab= {
-<<<<<<< HEAD
   activeTab}resume= {resume as Resume}onNextStep= {nextStep}onPrevStep= {prevStep}/>)
 <AlertTitle>Error</AlertTitle> <AlertDescription> {
   error}</AlertDescription> </Alert>)
@@ -187,8 +177,6 @@ onPrevStep = {prevStep}
   resume as Resume}onNextStep= {
   nextStep}onPrevStep= {
   prevStep}/>)
-=======
 activeTab}resume= {resume as Resume}onNextStep= {nextStep}onPrevStep= {prevStep}/>)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</Tabs> </CardContent> </Card> </div>)
 }'"}

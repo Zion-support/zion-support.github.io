@@ -162,8 +162,7 @@ export const blockchainWeb3Services2025 = [
         setupTime: "20 minutes";
         integrations: ["Ethereum", "Polygon", "BSC", "Arbitrum", "Optimism"],
         freeTier: true;
-        trialPeriod: "7 days",
-    };
+        trialPeriod: "7 days"};
     {id: 2;
         trialPeriod: "7 days"};
     {
@@ -246,8 +245,7 @@ export const cybersecurityServices2025 = [
         sla: "99.9% uptime";
         certifications: ["CISSP", "CISM", "ISO 27001", "SOC 2"],
         deliveryTime: "4-6 weeks";
-        support: "24/7",
-    };
+        support: "24/7"};
     {id: 2;
         support: "24/7"};
     {

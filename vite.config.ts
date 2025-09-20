@@ -6,9 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
+      '@': path.resolve(__dirname, './src')}},
   build: {
     target: 'es2020',
     minify: 'terser',
@@ -38,8 +36,7 @@ resolve: {
     }
   }
   css: {,
-postcss: false,
-}
+postcss: false}
   esbuild: {,
 loader: 'tsx'
     include: /src\/.*\.[jt]sx?$/,
@@ -65,8 +62,7 @@ entryFileNames: 'js/[name]-[hash].js'
         }
       }
     }
-    chunkSizeWarningLimit: 1000,
-}
+    chunkSizeWarningLimit: 1000}
   optimizeDeps: {,
 include: [
       'react'
@@ -82,11 +78,9 @@ include: [
   server: {,
 port: 3000,
 host: true,
-open: true,
-}
+open: true}
   preview: {,
 port: 4173,
 host: true,
-open: true,
-}
+open: true}
 });

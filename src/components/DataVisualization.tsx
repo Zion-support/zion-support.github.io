@@ -57,11 +57,8 @@ borderWidth: 2}];
 }
 );
 const [metrics; setMetrics] = useState<any> ([{,
-<<<<<<< HEAD
 title: "Total Revenue", value: "$2.4M";
 const [metrics, setMetrics] = useState<any> ([{,
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Total Revenue", value: "$2.4M";,
 change: 1 2.5; changeType: "increase",",
 icon: <DollarSign className="w-5 h-5"   />,
@@ -121,10 +118,7 @@ borderColor[,
 borderColor[,
 "rgba(34; 221; 210; 1),rgba(140; 21; 233; 1),rgba(239; 68; 68; 1),rgba(16; 185; 129; 1),rgba(245; 158; 11; 1)
 ],
-,
-,
-"borderWidth": "2}]},
-], "borderWidth": "2}]},
+"borderWidth": "2}]}], "borderWidth": "2}]},
 // Generate line chart data;
 const lineChartData = {,
 '",

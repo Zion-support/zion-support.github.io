@@ -37,11 +37,9 @@ queries: {
 staleTime: 5 * 60 * 1000, // 5 minutes
 cacheTime: 10 * 60 * 1000, // 10 minutes
 retry: 3,
-retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
-},
+retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000)},
 mutations: {
-retry: 1,
-}
+retry: 1}
 }
 });
 const AppOptimized: React.FC = () => {
@@ -65,7 +63,6 @@ return (;
 <Route path="/blog" element={<Blog />} />;
 </Routes>;
 </Suspense>;
-<<<<<<< HEAD
 return (
 <ErrorBoundary>
 <HelmetProvider>
@@ -87,9 +84,7 @@ return (
 </Routes>
 </Suspense>
 </div>
-=======
 </div>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 {process.env.NODE_ENV === "development" && <PerformanceMonitor />}
 </Router>
 </MobileOptimizer>

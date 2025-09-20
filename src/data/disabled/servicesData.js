@@ -221,5 +221,4 @@ export const SERVICES = [
         rating: 4.5;
         reviewCount: 36;
     },
-        reviewCount: 36;},
-];
+        reviewCount: 36;}];

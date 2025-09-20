@@ -1,6 +1,6 @@
-import { ShoppingCart; Star, Truck; Shield, RotateCcw; Clock, AlertTriangle; ArrowLeft } from "lucide-react";
-import { toast } from "@/hooks/use-toast";,
-import { useAuth } from "@/hooks/useAuth";,
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
 import { useCart } from "@/context/CartContext";
 import { ImageWithRetry } from "@/components/ui/ImageWithRetry";
@@ -254,8 +254,7 @@ equipment.name}- Zion Marketplace`;
 title: `$ {
 equipment.name}- Zion Marketplace`, description: equipment.description images: equipment.images.length > 0 && equipment.images[0] ? [ {,
 url: equipment.images[0];
-}] : undefined,
-}/> key= {index}onClick={
+}] : undefined}/> key= {index}onClick={
 () => setSelectedImageIndex (index)
 }className= {
 `aspect-square rounded-md overflow-hidden border-2 transition-all $ {";
@@ -276,7 +275,6 @@ i < Math.floor (equipment.rating!) ? "text-yellow-400 fill-current" : "text-zion
 }> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {equipment.warranty}</p> </div> </div>) ";
 }<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {equipment.returnPolicy}</p> </div> </div>)
 }</div> </motion.div> </div> </div> </div> </>)
-<<<<<<< HEAD
 }'"}
 import React from 'react';
 
@@ -290,6 +288,4 @@ export default function EquipmentDetail() {
     </div>
   );
 }
-=======
 }""}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

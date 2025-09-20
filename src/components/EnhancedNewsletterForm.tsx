@@ -9,7 +9,7 @@ import React from "react";
 import React from "react",;
 const EnhancedNewsletterForm: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className = "text-xl font-bold mb-4">EnhancedNewsletterForm</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
@@ -28,7 +28,6 @@ import { useToast } from "@/hooks/use-toast";
 import { logErrorToProduction } from "@/utils/productionLogger";
 export function EnhancedNewsletterForm() {
 return (
-<<<<<<< HEAD
     <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>
       <div className='flex items-center mb-4'>
         <div className='p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3'>
@@ -51,7 +50,6 @@ deals
         </div>
       ) : (
         <form
-=======
 <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
 <div className="flex items-center mb-4">;
 <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;
@@ -74,7 +72,6 @@ We&apos;ll keep you updated with the latest from Zion.;
 </div>;
 ) : (
 <form;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onSubmit={handleSubmit}
 className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
 >;

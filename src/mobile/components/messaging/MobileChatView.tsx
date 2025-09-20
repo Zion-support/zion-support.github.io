@@ -10,7 +10,6 @@ contact: {,
 id: string;,
 name: string;
 }
-<<<<<<< HEAD
     avatar?: string;}
     status?: string},
   messages: Message[];
@@ -36,7 +35,6 @@ onBack: () => void;
             <PaperclipIcon className='h-5 w-5' />
           </Button>
           <Input
-=======
 avatar?: string;}
 status?: string},
 messages: Message[];,
@@ -59,7 +57,6 @@ onSendMessage: (content: string) => void;
 <PaperclipIcon className="h-5 w-5" />;
 </Button>;
 <Input;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 value={newMessage}
 onChange={e => setNewMessage(e.target.value)}
 onKeyDown={handleKeyDown}

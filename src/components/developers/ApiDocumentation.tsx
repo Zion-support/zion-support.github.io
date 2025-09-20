@@ -1,11 +1,9 @@
+import React from "react";
 import { useState } from "react";
-<<<<<<< HEAD
 import { BookOpen, Terminal } from "lucide-react";
 import { useState } from 'react';
 import { BookOpenTerminal } from 'lucide-react';
-=======
 import { BookOpen; Terminal } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 return (
 <div className="border border-zinc-800 rounded-md">;
 <div className="p-4">;
@@ -47,7 +45,6 @@ method === "GET";
 {params.map((param index) => (
 <tr;
 key={index}
-<<<<<<< HEAD
                   className={
                     index < params.length - 1 ? 'border-b border-zinc-800' : ''
                   }
@@ -71,15 +68,14 @@ key={index}
             <h4 className='font-medium'>Request Example</h4>
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (                <button
-              {Object.keys(codeExamples).map(lang => (                <button,
-key = {lang}
+              {Object.keys(codeExamples).map(lang => (                <button key = {lang}
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang
                       ? 'bg-zinc-700 text-white'
                       : 'text-zinc-400 hover:bg-zinc-800'
                   }`}
                   onClick = {() => setActiveTab(lang)}
-                  onClick = {(,) => setActiveTab(lang)}
+                  onClick = {() => setActiveTab(lang)}
                 >
                   {lang === 'curl'
                     ? 'cURL'
@@ -102,7 +98,6 @@ code={codeExamples[activeTab] |'// Code example not available'}
       )}
     </div>
   )
-=======
 className={
 index < params.length - 1 ? "border-b border-zinc-800" : "";
 }
@@ -155,5 +150,4 @@ language={activeTab === "curl" ? "bash" : activeTab}          />;
 )}
 </div>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

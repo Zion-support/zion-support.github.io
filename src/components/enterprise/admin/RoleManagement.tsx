@@ -9,7 +9,6 @@ return (
 {Object.entries(roleDescriptions).map(([role description]) => (
 <div;
 key={role}
-<<<<<<< HEAD
               className='bg-card rounded-lg p-4 border border-border'
             >
               <div className='flex items-center gap-2 mb-2'>
@@ -178,7 +177,6 @@ aria-label='View billing'
     </div>
   );
   )
-=======
 className="bg-card rounded-lg p-4 border border-border"
 >;
 <div className="flex items-center gap-2 mb-2">;
@@ -346,5 +344,4 @@ handlePermissionChange(member.id, "viewBilling", checked)
 </div>;
 </div>;
 );
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 };

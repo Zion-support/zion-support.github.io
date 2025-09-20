@@ -1,3 +1,4 @@
+export default function Component() {
 return (
 <Card className="border border-zion-blue-light bg-zion-blue-dark">;
 <CardHeader>;
@@ -47,17 +48,15 @@ Save Changes;
 )
 isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>)
 }</Button> </CardTitle> </CardHeader> <CardContent> {isEditing ? (<Textarea value= {
-<<<<<<< HEAD
 }</Button> </CardTitle> </CardHeader> <CardContent> {
   isEditing ? (<Textarea value= {
   editedDescription}</div>)
-=======
 editedDescription}</div>)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</CardContent> {
 isEditing && (<CardFooter> <Button onClick={
 handleSave ";
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
 }</Card>)
 }'";
+}
 }

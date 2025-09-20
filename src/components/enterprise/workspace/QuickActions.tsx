@@ -1,3 +1,4 @@
+export default function Component() {
 return (
 <Card>;
 <CardHeader>;
@@ -40,3 +41,4 @@ className={`h-auto justify-start p-4 ${action.color}`}
 </Card>;
 )
 }))
+}

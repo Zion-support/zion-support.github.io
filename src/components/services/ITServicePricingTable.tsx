@@ -1,3 +1,4 @@
+export default function Component() {
 return (
 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
 <div className="flex items-center mb-6">;
@@ -64,4 +65,5 @@ No countries match your search;
 </div>;
 </div>;
 )
+}
 }

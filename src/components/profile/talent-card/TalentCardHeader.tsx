@@ -7,7 +7,7 @@ professionalTitle: string;
 profilePicture?: string;,
 availabilityType: string;
 }
-yearsExperience: number,}
+yearsExperience: number}
 
 export default function Component() {
 import { BadgeCheck } from 'lucide-react';

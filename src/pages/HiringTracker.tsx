@@ -55,7 +55,6 @@ className="mb-8"
 )
 }
 export default function HiringTracker() {
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
@@ -64,11 +63,9 @@ export default function HiringTracker() {
       </div>
     </div>
   );
-=======
 return (
 <ProtectedRoute>;
 <HiringTrackerContent />;
 </ProtectedRoute>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

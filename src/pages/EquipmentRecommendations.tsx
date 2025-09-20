@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ErrorState } from "@/components/jobs/applications";
 export default function EquipmentRecommendations() {
 useEffect(() => {
-<<<<<<< HEAD
     if (isAuthenticated && user?.id) {
       setLoading(true);
       fetchRecommendations(user.id)
@@ -68,7 +67,6 @@ export default function EquipmentRecommendations() {
     </div>
   );
 }
-=======
 if (isAuthenticated && user?.id) {
 setLoading(true);
 fetchRecommendations(user.id)
@@ -125,4 +123,3 @@ AI Equipment Recommendations;
 </div>;
 )
 })
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

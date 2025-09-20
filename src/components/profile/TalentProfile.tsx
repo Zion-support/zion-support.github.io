@@ -15,8 +15,7 @@ import { Availability } from "@/types/profile";
 interface TalentProfileProps {profile: TalentProfileType;,
 onRequestHire: () => void;
 }
-<<<<<<< HEAD
-  onMessageTalent?: () => void,}
+  onMessageTalent?: () => void}
 import React from 'react'
 import { Handshake, MessageSquareStar } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -35,9 +34,7 @@ interface TalentProfileProps {
   profile: TalentProfileType;,
 onRequestHire: () => void;
   onMessageTalent?: () => void,
-=======
-onMessageTalent?: () => void,}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
+onMessageTalent?: () => void}
 onMessageTalent}: TalentProfileProps) {
 const { isAuthenticated } = useAuth();
 // Create proper availability object from talent profile;

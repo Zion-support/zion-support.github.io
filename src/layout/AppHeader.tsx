@@ -270,24 +270,20 @@ data-testid="signup-nav-link";
 {mobileMenuOpen && (<div className="md:hidden fixed inset-0 z-60 pt-16">;
 <div;
 className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-<<<<<<< HEAD
             onClick = {() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu
-            onClick = {(,) => setMobileMenuOpen(false)}
+            onClick = {() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu,
-=======
-onClick = {() => setMobileMenuOpen(false)}
+            <MobileMenu onClick = {() => setMobileMenuOpen(false)}
 aria-hidden="true";
 />;
 <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
 <MobileMenu;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 unreadCount = {unreadCount}
 onClose = {() => setMobileMenuOpen(false)}
 openLoginModal = {openLoginModal}

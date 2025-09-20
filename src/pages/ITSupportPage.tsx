@@ -11,7 +11,6 @@ const benefits = [;
 {import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import React from "react"
-<<<<<<< HEAD
 export default function ITSupportPage() {<ServiceLandingTemplate
 title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
@@ -40,7 +39,6 @@ export default function ITSupportPage() {
     </div>
   );
 }
-=======
 export default function ITSupportPage() {<ServiceLandingTemplate;
 title="IT Support Services";
 subtitle="Reliable assistance to keep your business technology operating smoothly.";
@@ -58,4 +56,3 @@ ctaLink="/request-quote";
 />;
 )
 }}}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
