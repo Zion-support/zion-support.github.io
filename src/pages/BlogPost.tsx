@@ -2,19 +2,41 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
-import { logErrorToProduction,  } from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app you would fetch this from an API,
-import { BLOG_POSTS,  } from "@/data/blog-posts";
-import { useSkeletonTimeout,  } from '@/hooks/useSkeletonTimeout';
-import { fetchWithRetry,  } from '@/utils/fetchWithRetry';
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { SEO } from '@/components/SEO';
+import { JsonLd } from '@/components/JsonLd';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
 export default function BlogPost() {
-return (
+  // Mock data - in a real app, this would come from props or API
+  const post = BLOG_POSTS[0] || {
+    title: "Sample Blog Post",
+    excerpt: "This is a sample blog post excerpt",
+    tags: ["AI", "Technology"],
+    featuredImage: "/placeholder.jpg",
+    slug: "sample-post"
+  };
+
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt
+  };
+
+  return (
     <>
       <SEO
-title={post.title}
+        title={post.title}
         description={post.excerpt}
         keywords={post.tags.join(', ')}
-        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+        ogImage={post.featuredImage}
+        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
       />
       <JsonLd data={articleLd} />
       <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
