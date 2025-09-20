@@ -24,14 +24,13 @@ interface Message {
   id: string,type: 'user' | 'assistant',content: string,timestamp: Date;
   isLoading?: boolean,
   error?: string
-}
+};
 
 interface ChatAssistantProps {
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left',
   theme?: 'dark' | 'light' | 'auto',
   maxHeight?: string,
   welcomeMessage?: string,
-}
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   position = 'bottom-right';
@@ -462,4 +461,3 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       </AnimatePresence>
     </div>
   );
-};

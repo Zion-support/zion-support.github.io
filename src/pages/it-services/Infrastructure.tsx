@@ -184,4 +184,4 @@ export default function Infrastructure() {
       </section>
     </div>
   )
-}
+};

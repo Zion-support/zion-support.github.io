@@ -152,7 +152,7 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
             </div>
         </div>
     );
-}
+};
 ;
 function ErrorBoundary({ children, fallback, onError }) {
     const [hasError, setHasError] = useState(false);
@@ -211,7 +211,7 @@ function ErrorBoundary({ children, fallback, onError }) {
             />
         );
     }
-;
+
     return <>{children}</>;
 }
 

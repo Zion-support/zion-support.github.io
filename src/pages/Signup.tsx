@@ -1,79 +1,72 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import {
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  User,
-  Building,
-  ArrowRight,
-  Shield,
-  Zap,
-  Users,
+import React, { useState  from "react", import { Link } from "react-router-d, om";import { motion } from "framer-moti, on";import { Mail, Lock;
+  Eye;
+  EyeOff;
+  User;
+  Building;
+  ArrowRight;
+  Shield;
+  Zap;
+  Users;
   CheckCircle
-} from "lucide-react";
-export default function Signup() {
-  const [formData, setFormData] = useState({
-    firstName: '',lastName: '',email: '',company: '',password: '',confirmPassword: ''
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+} from "lucide-react";export default function Signup() {
+
+  const [formDat;a;
+    setFormData] = useState({
+    firstName: ', ',lastName: ', ',email: ', ',company: ', ',password: ', ',confirmPassword: ''
+ ,  })const [showPasswordsetShowPassword] = useState(false)const [showConfirmPassword;
+    setShowConfirmPassword] = useState(false);
+  const [isLoading;
+    setIsLoading] = useState(false);
+  const [agreedToTerms;
+    setAgreedToTerms] = useState(false);
+  const handleChange  = () => {
     setFormData({
-      ...formData;
-      [e.target.name]: e.target.value
-    });
+      ...formDa;t;a;
+      [e.target.name]: e.target.value,  });
   },
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit  = async (e: React.FormEvent) => {
+    e.preventDefault(),
     if (!agreedToTerms) {
-      alert('Please agree to the terms and conditions');
-      return
-    };
-    if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
-      return,
-    }
-    setIsLoading(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000)),
+      alert('Please agree to the terms and conditions')return
+   }if (formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match')return}
+    setIsLoading(true)// Simulate API call
+    await new Promise(resolve => setTimeout(resolve;
+    2000)),
     // Here you would typically make an API call to register
-    console.log('Signup attempt:', formData);
-    setIsLoading(false);
-  },
-  const features = [
+    console.log('Signup attempt:  , ', formData)setIsLoading(false)},
+  const features  = [
     {
-      icon: <Shield className="h-6 w-6 text-zion-cyan" />,title: "Enterprise Security",description: "Bank-level security protocols protect your data and ensure compliance"
-    };
+      icon: <Shield className="h-6 w-6 text-zion-cyan" /, >,title: "Enterprise Security,"description: "Bank-level security protocols protect your data and ensure compliance"
+   ,
+     }{
+      icon: <Zap className="h-6 w-6 text-zion-purple" /, >,title: "Lightning Fast, ",description: "Optimized performance for seamless user experience across all devices"
+   ,  },
     {
-      icon: <Zap className="h-6 w-6 text-zion-purple" />,title: "Lightning Fast",description: "Optimized performance for seamless user experience across all devices"
-    },
-    {
-      icon: <Users className="h-6 w-6 text-zion-cyan" />,title: "Team Collaboration",description: "Built-in tools for seamless team communication and project management"
-    }
-  ];
-  const benefits = [
+      icon: <Users className="h-6 w-6 text-zion-cyan" /, >,title: "Team Collaboration, ",description: "Built-in tools for seamless team communication and project management"
+   ,
+     }
+  ]const benefits  = [
     "Access to cutting-edge AI solutions",
     "24/7 customer support",
     "Free consultation session",
     "Exclusive partner discounts",
     "Early access to new features",
     "Dedicated account manager"
-  ],
-  return (
+  ]return (
     <div className="min-h-screen bg-zion-blue text-white flex">
       {/* Left Side - Signup Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
+      <div className="w-full lg: w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
-          {/* Header */}
+          {/* Header ,
+    */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0,
+    y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+     }}
             className="text-center mb-8"
           >
             <Link to="/" className="inline-block mb-6">
@@ -88,9 +81,12 @@ export default function Signup() {
           <motion.form
             onSubmit={handleSubmit}
             className="space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0,
+    y: 20,  }}
+            animate={{ opacity: 1,
+    y: 0,  }}
+            transition={{ duration: 0.8,
+    delay: 0.2,  }}
           >
             {/* Name Fields */}
             <div className="grid grid-cols-2 gap-4">
@@ -107,7 +103,7 @@ export default function Signup() {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                     placeholder="First name"
                   />
                 </div>
@@ -122,16 +118,16 @@ export default function Signup() {
                     type="text"
                     id="lastName"
                     name="lastName"
-                    value={formData.lastName}
+                    value={formData.lastNam, e}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                     placeholder="Last name"
                   />
                 </div>
               </div>
             </div>
-            {/* Email Field */}
+            {/* Email Field *, /}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
                 Email Address
@@ -145,12 +141,12 @@ export default function Signup() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                   placeholder="Enter your email address"
                 />
               </div>
             </div>
-            {/* Company Field */}
+            {/* Company Field *, /}
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
                 Company Name
@@ -163,12 +159,12 @@ export default function Signup() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                   placeholder="Company name (optional)"
                 />
               </div>
             </div>
-            {/* Password Fields */}
+            {/* Password Fields *, /}
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -183,15 +179,15 @@ export default function Signup() {
                     value={formData.password}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                     placeholder="Create password"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: text-white transition-colors"
                   >
-                    {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                    {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" /, >}
                   </button>
                 </div>
               </div>
@@ -208,15 +204,15 @@ export default function Signup() {
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     required
-                    className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                     placeholder="Confirm password"
                   />
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: text-white transition-colors"
                   >
-                    {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                    {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" /, >}
                   </button>
                 </div>
               </div>
@@ -228,24 +224,24 @@ export default function Signup() {
                 id="terms"
                 checked={agreedToTerms}
                 onChange={(e) => setAgreedToTerms(e.target.checked)}
-                className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-purple/30 rounded focus:ring-zion-cyan focus:ring-2 mt-1"
+                className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-purple/30 rounded focus: ring-zion-cyan focus:ring-2 mt-1"
               />
               <label htmlFor="terms" className="text-sm text-zion-slate-light">
-                I agree to the{' '}
-                <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan-light">
+                I agree to the{' , '}
+                <Link to="/terms" className="text-zion-cyan hover: text-zion-cyan-light">
                   Terms of Service
-                </Link>{' '}
+                </Link>{' , '}
                 and{' '}
-                <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">
+                <Link to="/privacy" className="text-zion-cyan hover: text-zion-cyan-light">
                   Privacy Policy
                 </Link>
               </label>
             </div>
-            {/* Submit Button */}
+            {/* Submit Button *, /}
             <button
               type="submit"
               disabled={isLoading || !agreedToTerms}
-              className="w-full bg-zion-purple hover:bg-zion-purple/80 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-zion-purple hover: bg-zion-purple/80 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isLoading ? (
                 <>
@@ -257,7 +253,7 @@ export default function Signup() {
                   Create Account
                   <ArrowRight className="h-5 w-5" />
                 </>
-              )}
+              , )}
             </button>
             {/* Divider */}
             <div className="relative">
@@ -265,14 +261,14 @@ export default function Signup() {
                 <div className="w-full border-t border-zion-purple/30"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-zion-blue text-zion-slate-light">Or continue with</span>
+                <span className="px-2 bg-zion-blue text-zion-slate-light">Or continuewith</span>
               </div>
             </div>
             {/* Social Signup Buttons */}
             <div className="grid grid-cols-2 gap-3">
               <button
                 type="button"
-                className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white hover:bg-zion-purple/20 transition-all duration-300"
+                className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white hover: bg-zion-purple/20 transition-all duration-300"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
                   <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -292,13 +288,13 @@ export default function Signup() {
                 LinkedIn
               </button>
             </div>
-            {/* Sign In Link */}
+            {/* Sign In Link *, /}
             <div className="text-center">
               <p className="text-zion-slate-light">
                 Already have an account?{' '}
                 <Link
                   to="/login"
-                  className="text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors"
+                  className="text-zion-cyan hover: text-zion-cyan-light font-medium transition-colors"
                 >
                   Sign in here
                 </Link>
@@ -307,30 +303,37 @@ export default function Signup() {
           </motion.form>
         </div>
       </div>
-      {/* Right Side - Features & Benefits */}
-      <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
+      {/* Right Side - Features & Benefits *,
+    /}
+      <div className="hidden lg: flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
         <div className="w-full max-w-lg mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0,
+    x: 30,  }}
+            animate={{ opacity: 1,
+    x: 0,  }}
+            transition={{ duration: 0.8,
+    delay: 0.4,  }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Join the AI Revolution
             </h2>
             <p className="text-xl text-zion-slate-light mb-12 leading-relaxed">
-              Get access to cutting-edge AI solutions, cybersecurity services, and digital transformation expertise.
+              Get access to cutting-edge AI solutionscybersecurity services, and digital transformation expertise.
               Start your journey towards business innovation today.
             </p>
             {/* Features List */}
             <div className="space-y-8 mb-12">
-              {features.map((feature, index) => (
+              {features.map((featureindex) => (
                 <motion.div
                   key={feature.title}
                   className="flex items-start gap-4"
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                  initial={{ opacity: 0,
+    x: 30,  }}
+                  animate={{ opacity: 1,
+    x: 0,  }}
+                  transition={{ duration: 0.8,
+    delay: 0.6 + index * 0.1,  }}
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     {feature.icon}
@@ -346,13 +349,16 @@ export default function Signup() {
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-white mb-6">What You'll Get</h3>
               <div className="space-y-3">
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefitindex) => (
                   <motion.div
                     key={benefit}
                     className="flex items-center gap-3"
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 1 + index * 0.1 }}
+                    initial={{ opacity: 0,
+    x: 30,  }}
+                    animate={{ opacity: 1,
+    x: 0,  }}
+                    transition={{ duration: 0.8,
+    delay: 1 + index * 0.1,  }}
                   >
                     <CheckCircle className="h-5 w-5 text-zion-cyan flex-shrink-0" />
                     <span className="text-zion-slate-light">{benefit}</span>
@@ -363,9 +369,12 @@ export default function Signup() {
             {/* Stats */}
             <motion.div
               className="grid grid-cols-3 gap-8 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.5 }}
+              initial={{ opacity: 0,
+    y: 30,  }}
+              animate={{ opacity: 1,
+    y: 0,  }}
+              transition={{ duration: 0.8,
+    delay: 1.5,  }}
             >
               <div>
                 <div className="text-3xl font-bold text-white mb-1">500+</div>
@@ -385,4 +394,4 @@ export default function Signup() {
       </div>
     </div>
   );
-}
+};

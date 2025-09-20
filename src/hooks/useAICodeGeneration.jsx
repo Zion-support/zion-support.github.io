@@ -231,7 +231,7 @@ export const useAICodeGeneration = () => {
 import { motion } from "framer-motion";
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
   // TODO: Define props based on prompt: ${prompt}
-}
+};
 
 export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
   const [state, setState] = useState<any>(null);
@@ -526,4 +526,3 @@ def generated_function():
         exportCode,
         getCodeMetrics
     };
-};

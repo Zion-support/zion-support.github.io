@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 interface Testimonial {
   id: string,name: string,position: string,company: string,companyLogo: string,content: string,rating: number,industry: string,results: string[],avatar: string
-}
+};
 ;
 const testimonials: Testimonial[] = [
   {
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
   {
     id: '5',name: 'Lisa Park',position: 'Director of IT',company: 'CloudScale Enterprises',companyLogo: '/images/company-logos/cloudscale.svg',content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',rating: 5,industry: 'Cloud Services',results: ['40% cost reduction60% performance boost', 'Unified management'],
     avatar: '/images/avatars/lisa-park.jpg'
-  }
+  };
 ];
 export default function EnhancedTestimonialsSection() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -285,4 +285,3 @@ export default function EnhancedTestimonialsSection() {
       </div>
     </section>
   )
-}

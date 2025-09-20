@@ -480,4 +480,4 @@ export default function ComprehensivePricing2027() {
       </motion.section>
     </div>
   )
-}
+};

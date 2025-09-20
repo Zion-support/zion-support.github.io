@@ -1050,4 +1050,4 @@ export default function Equipment() {
       </section>
     </div>
   )
-}
+};

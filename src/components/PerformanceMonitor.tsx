@@ -7,7 +7,7 @@ interface PerformanceMetrics {
   networkLatency: number;
   fps: number;
   lighthouseScore: number;
-}
+};
 
 export default function PerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({

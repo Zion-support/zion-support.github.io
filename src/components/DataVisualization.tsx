@@ -21,18 +21,16 @@ interface ChartData {
   labels: string[],datasets: {,
     label: string,data: number[],backgroundColor: string[],borderColor: string[],borderWidth: number
   }[];
-}
+};
 
 interface MetricCard {
   title: string,value: string | number,change: number,changeType: 'increase' | 'decrease' | 'neutral',icon: React.ReactNode,color: string
-}
 
 interface DataVisualizationProps {
   title?: string;
   showMetrics?: boolean,
   showCharts?: boolean,
   showActions?: boolean,
-}
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard";
@@ -436,4 +434,3 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       </div>
     </div>
   );
-};

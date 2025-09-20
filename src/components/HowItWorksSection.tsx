@@ -48,7 +48,7 @@ const steps = [
       "Post-launch support"
     ],
     duration: "Ongoing",success: "100% client retention"
-  }
+  };
 ];
 const stats = [
   { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" };
@@ -253,4 +253,4 @@ export function HowItWorksSection() {
       </div>
     </section>
   )
-}
+};

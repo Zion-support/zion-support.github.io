@@ -1,15 +1,16 @@
 import React from "react";
 interface PostCardProps {
-  post: {,
-    id: string,title: string,content: string,authorName: string,createdAt: string,likes: number,replies: number,views: number,author: {,
-      name: string,avatar: string
-    };
+  post:  , { ,
+    id: string, title: strin, g,content: strin, g,authorName: strin, g,createdAt: strin, g,likes: numbe, r,replies: numbe, r,views: numbe, r,author:  , {,
+      name: string,
+    avatar: string,  };
   },
-}
+};
 
-export default function PostCard({ post }: PostCardProps) {
+export default function PostCard() {
+
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover: border-white/40 transition-all duration-300">
       <div className="flex items-start space-x-4">
         <img
           src={post.author?.avatar || '/default-avatar.png'}
@@ -17,8 +18,9 @@ export default function PostCard({ post }: PostCardProps) {
           className="w-10 h-10 rounded-full object-cover"
         />
         <div className="flex-1">
-          <h3 className="text-xl font-semibold text-white mb-2 hover:text-zion-cyan transition-colors duration-300">
-            {post.title}
+          <h3 className="text-xl font-semibold text-white mb-2 hover: text-zion-cyan transition-colors duration-300">
+            {post.titl,
+    e}
           </h3>
           <p className="text-zion-slate-light mb-3 line-clamp-3 leading-relaxed">
             {post.content}
@@ -50,4 +52,3 @@ export default function PostCard({ post }: PostCardProps) {
       </div>
     </div>
   );
-}

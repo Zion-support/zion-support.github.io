@@ -244,6 +244,6 @@ Please provide any additional context about what you were doing when this error 
 ;
         return this.props.children;
     }
-}
+};
 
 export default EnhancedErrorBoundary;

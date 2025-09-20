@@ -18,7 +18,7 @@ import {
 interface FloatingAction {
   id: string,icon: React.ComponentType<{ size?: number, className?: string }>,
   label: string,action: () => void,color: string,priority: 'high' | 'medium' | 'low'
-}
+};
 
 interface FloatingActionButtonProps {
   actions?: FloatingAction[];
@@ -27,7 +27,6 @@ interface FloatingActionButtonProps {
   showScrollToTop?: boolean,
   showContactActions?: boolean,
   showUtilityActions?: boolean,
-}
 ;
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   actions = [];

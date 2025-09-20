@@ -226,6 +226,6 @@ export default function AffiliateTracking() {
       </section>
     </div>
   )
-}
+};
 
 // Duplicate leftover block removed

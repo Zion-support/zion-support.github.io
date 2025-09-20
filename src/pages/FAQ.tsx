@@ -308,7 +308,7 @@ export default function FAQ() {
       </section>
     </div>
   );
-}
+};
 
 // FAQ Item Component
 function FAQItem({ question, answer }: { question: string, answer: string }) {
@@ -334,4 +334,3 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
       )}
     </div>
   );
-}

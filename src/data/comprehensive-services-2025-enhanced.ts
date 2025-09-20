@@ -12,11 +12,10 @@ export interface EnhancedService {
     contactInfo: {,
         mobile: string,email: string,address: string,website: string
     };
-}
+};
 ;
 const CONTACT = {
     mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
-};
 export const comprehensiveServices2025Enhanced: EnhancedService[] = [
     // NEW MICRO SAAS SERVICES - FINANCIAL TECHNOLOGY
     {

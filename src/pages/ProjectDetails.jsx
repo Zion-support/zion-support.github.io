@@ -522,9 +522,8 @@ function ProjectDetailsContent() {
       </main>
       
     </>);
-}
+};
 export default function ProjectDetails() {
     return (<ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>);
-}

@@ -10,7 +10,7 @@ interface PerformanceMetrics {
   cacheHitRate: number;
   lighthouseScore: number;
   loadTime: number;
-}
+};
 
 interface PerformanceAlert {
   id: string;

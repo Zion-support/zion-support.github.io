@@ -490,5 +490,4 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
       </div>
     </motion.div>
   )
-};
 export default AllServices2027;

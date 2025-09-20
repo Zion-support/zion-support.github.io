@@ -10,7 +10,7 @@ export interface NewInnovativeService2026 {
   aiCapabilities?: string[],
   complianceFeatures?: string[],
   scalabilityFeatures?: string[],
-}
+};
 
 export const NEW_INNOVATIVE_SERVICES_2026: NewInnovativeService2026[] = [
   // AI Project Management Platform
@@ -316,7 +316,7 @@ export const NEW_INNOVATIVE_SERVICES_2026: NewInnovativeService2026[] = [
     marketSize: "$245.8 billion by 2026",aiCapabilities: ["Machine Learning", "Predictive Analytics", "Natural Language Processing", "Computer Vision", "Fraud Detection"],
     complianceFeatures: ["PCI DSS", "SOC 2", "ISO 27001", "GDPR", "SOX", "Regulatory Compliance"],
     scalabilityFeatures: ["Cloud-native", "Auto-scaling", "Multi-region", "High Availability", "Disaster Recovery"]
-  }
+  };
 ],
 
 export default NEW_INNOVATIVE_SERVICES_2026;

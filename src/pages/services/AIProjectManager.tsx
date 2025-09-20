@@ -286,4 +286,4 @@ export default function AIProjectManager() {
       </section>
     </div>
   )
-}
+};

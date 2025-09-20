@@ -505,7 +505,7 @@ export default function UltimateServicesShowcase2025() {
       </div>
     </div>
   )
-}
+};
 
 // Search icon component
 const Search = ({ className }: { className?: string }) => (

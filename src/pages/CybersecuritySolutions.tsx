@@ -537,4 +537,4 @@ export default function CybersecuritySolutions() {
       </section>
     </div>
   )
-}
+};

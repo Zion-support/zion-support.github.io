@@ -428,4 +428,4 @@ export default function InnovativeServicesOverview() {
       </section>
     </div>
   )
-}
+};

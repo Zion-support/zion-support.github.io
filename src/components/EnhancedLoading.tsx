@@ -16,7 +16,7 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   fullScreen?: boolean,
-}
+};
 
 export function LoadingSpinner({
   size = 'md';
@@ -94,11 +94,9 @@ export function LoadingSpinner({
       </div>
     </div>
   );
-}
 
 interface PageLoaderProps {
   pageName?: string,
-}
 
 export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   return (
@@ -174,12 +172,10 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
       </div>
     </div>
   );
-}
 
 interface SkeletonLoaderProps {
   lines?: number,
   className?: string,
-}
 
 export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {
   return (
@@ -203,4 +199,3 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
       ))}
     </div>
   );
-}

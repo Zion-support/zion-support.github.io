@@ -8,7 +8,7 @@ export interface EnhancedMicroSaasService {
   competitors?: string[],
   marketSize?: string,
   uniqueValueProposition: string,implementationComplexity: string,scalabilityFeatures: string[]
-}
+};
 
 export const ENHANCED_MICRO_SAAS_SERVICES_2025: EnhancedMicroSaasService[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -401,5 +401,5 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025: EnhancedMicroSaasService[] = [
     },
     competitors: ["Meta", "Microsoft", "Roblox", "Decentraland"],
     marketSize: "$936.6 billion by 2030"
-  }
+  };
 ];

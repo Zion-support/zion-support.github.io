@@ -766,15 +766,34 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2030: ProductListing[] = [
 
   // AI-Powered Healthcare Diagnostics
   {
-    id: "ai-healthcare-diagnostics",title: "AI-Powered Healthcare Diagnostics Platform",description: "Transform healthcare with AI-powered medical imaging analysis, early disease detection, and clinical decision support. 96% accuracy, HIPAA compliant, and FDA ready.",
-    category: "AI & Healthcare",subcategory: "Medical Diagnostics",price: 3999,currency: "$",tags: ["Healthcare", "Medical Imaging", "Diagnostics", "Radiology", "Clinical AI"],
+    id: "ai-healthcare-diagnostics",
+    title: "AI-Powered Healthcare Diagnostics Platform",
+    description: "Transform healthcare with AI-powered medical imaging analysis, early disease detection, and clinical decision support. 96% accuracy, HIPAA compliant, and FDA ready.",
+    category: "AI & Healthcare",
+    subcategory: "Medical Diagnostics",
+    price: 3999,
+    currency: "$",
+    tags: ["Healthcare", "Medical Imaging", "Diagnostics", "Radiology", "Clinical AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-healthcare.jpg"],createdAt: "2024-12-01T10:00:00.000Z",rating: 4.9,reviewCount: 178,featured: true,location: "Global",availability: "4-6 Weeks",aiScore: 96,contactInfo: {
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com/ai-healthcare",address: "364 E Main St STE 1008 Middletown DE 19709"
+    images: ["https://ziontechgroup.com/images/ai-healthcare.jpg"],
+    createdAt: "2024-12-01T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 178,
+    featured: true,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-healthcare",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$3,500-15,000",
     competitors: ["Aidoc", "Zebra Medical", "Butterfly Network"],
-    roi: "800% within 12 months",setupTime: "4-6 weeks",integrations: ["PACS Systems", "RIS", "EHR", "DICOM", "HL7", "Medical Devices"]
+    roi: "800% within 12 months",
+    setupTime: "4-6 weeks",
+    integrations: ["PACS Systems", "RIS", "EHR", "DICOM", "HL7", "Medical Devices"]
   }
 ]
 

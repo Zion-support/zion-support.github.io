@@ -262,4 +262,4 @@ export default function TranslationManager() {
       </main>
       
     </>);
-}
+};

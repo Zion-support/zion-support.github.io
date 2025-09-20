@@ -3,7 +3,7 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   className?: string;
-}
+};
 ;
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md',

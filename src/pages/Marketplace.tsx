@@ -870,4 +870,4 @@ export default function Marketplace() {
       </section>
     </div>
   )
-}
+};

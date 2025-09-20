@@ -326,7 +326,7 @@ const workflowSolutions = [
     ],
     price: "From $100,000",
     timeline: "16-28 weeks",category: "Task Management",technologies: ["AI", "Task Management", "Optimization", "Analytics"]
-  }
+  };
 ],
 
 const workflowTechnologies = [
@@ -341,7 +341,7 @@ const workflowTechnologies = [
   },
   {
     name: "Predictive Analytics",description: "AI-powered analytics for workflow optimization",icon: BarChart3,useCase: "Performance Optimization",reliability: "High"
-  }
+  };
 ];
 const successStories = [
   {
@@ -355,7 +355,7 @@ const successStories = [
   {
     id: 3,company: "Healthcare Technology Ltd",industry: "Healthcare",challenge: "Needed AI workflow automation for patient care processes",solution: "Built AI-powered workflow automation system for healthcare",results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",
     logo: "HTL"
-  }
+  };
 ];
 const processSteps = [
   {
@@ -369,7 +369,7 @@ const processSteps = [
   },
   {
     step: 4,title: "Testing & Optimization",description: "Test systems and optimize performance",icon: Gauge,duration: "4-8 weeks"
-  }
+  };
 ];
 const workflowBenefits = [
   {
@@ -384,7 +384,7 @@ const workflowBenefits = [
   },
   {
     title: "Scalability",description: "AI workflows scale efficiently with business growth",icon: Rocket,examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
-  }
+  };
 ],
 
 export default function AIWorkflowAutomation() {
@@ -769,4 +769,4 @@ export default function AIWorkflowAutomation() {
       </section>
     </div>
   )
-}
+};

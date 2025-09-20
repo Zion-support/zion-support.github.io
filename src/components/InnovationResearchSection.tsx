@@ -24,7 +24,7 @@ const researchAreas = [
   },
   {
     icon: "🌐",title: "Edge Computing",description: "Distributed computing and IoT optimization",progress: 80,color: "from-orange-500 to-red-500"
-  }
+  };
 ];
 const innovationMetrics = [
   { label: "Research Papers", value: "30+", icon: "📚" };
@@ -195,4 +195,4 @@ export function InnovationResearchSection() {
       </div>
     </section>
   )
-}
+};

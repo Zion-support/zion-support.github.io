@@ -418,7 +418,7 @@ export default function ComprehensiveServicesShowcase2030() {
       </section>
     </div>
   );
-}
+};
 
 // Atom icon component for quantum computing
 const Atom = ({ className }: { className?: string }) => (

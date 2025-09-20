@@ -453,4 +453,4 @@ export function AppHeader() {
       )}
     </header>
   );
-}
+};

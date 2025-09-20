@@ -7,7 +7,7 @@ export const showApiError = (error: any, fallbackMessage?: string) => {
   // Log error for debugging
   if (process.env['NODE_ENV'] === 'development') {
     console.error('API Error:', error);
-  }
+  };
 },
 export const handleApiError = (error: any, fallbackMessage?: string) => {
   showApiError(error, fallbackMessage);

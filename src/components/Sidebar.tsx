@@ -30,7 +30,7 @@ import {
 interface SidebarItem {
   name: string,href: string,icon: React.ComponentType<any>;
   children?: SidebarItem[]
-}
+};
 
 export const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -266,4 +266,3 @@ export const Sidebar: React.FC = () => {
       </div>
     </>
   )
-};

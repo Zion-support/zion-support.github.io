@@ -73,7 +73,7 @@ interface Service {
   marketSize?: string,
   growthRate?: string,
   roi?: string,
-}
+};
 ;
 const EnhancedComprehensiveServices2026: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -655,5 +655,4 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       </div>
     </div>
   )
-};
 export default EnhancedComprehensiveServices2026;

@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 interface HeroSlide {
   id: string,title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> }[];
-}
+};
 ;
 const heroSlides: HeroSlide[] = [
   {
@@ -61,7 +61,7 @@ const heroSlides: HeroSlide[] = [
       { label: "Digital Maturity", value: "95%", icon: TrendingUp },
       { label: "Time to Market", value: "-70%", icon: Rocket }
     ]
-  }
+  };
 ];
 const slideVariants = {
   enter: (direction: number) => ({,
@@ -73,11 +73,9 @@ const slideVariants = {
   exit: (direction: number) => ({,
     zIndex: 0,x: direction < 0 ? 1000 : -1000,opacity: 0
   })
-};
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity
-};
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -162,7 +160,7 @@ export default function HeroSection() {
         </div>
       </div>
     );
-  }
+  };
 ;
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -358,6 +356,5 @@ export default function HeroSection() {
       </div>
     </section>
   );
-}
 
 export { HeroSection };

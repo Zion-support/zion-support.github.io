@@ -1,19 +1,19 @@
 import React from "react"
 import SEO from "@/components/SEO"
-const ITServicesPage = () () => {
+const ITServicesPage  = () () => {
   return (
     <>
       <SEO
         title="IT Services - Zion Tech Group"
-        description="Comprehensive IT services including infrastructure, support, and technology consulting solutions."
-        keywords="IT services, infrastructure, support, technology consulting, IT solutions"
+        description="Comprehensive IT services including infrastructu;r;e;
+    support, and technology consulting solutions."
+        keywords="IT servicesinfrastructure, support, technology consulting, IT solutions"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-16">
-            <h1 className="text-5xl,
-  m: d: text-6xl font-bold mb-6">
+            <h1 className="text-5xlm: d: text-6xl font-bold mb-6">
               IT <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Services</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -22,8 +22,8 @@ const ITServicesPage = () () => {
           </div>
 
           <div className="grid grid-cols-1,
-  m: d:grid-cols-2 l,
-  g:grid-cols-3 gap-8">
+    m: d: grid-cols-2 l,
+    g: grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-teal-400/20">
               <div className="text-4xl mb-4">🏗️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Infrastructure</h3>
@@ -45,6 +45,7 @@ const ITServicesPage = () () => {
         </div>
       </div>
     </>
-  )
+  ),
 };
 export default ITServicesPage
+;

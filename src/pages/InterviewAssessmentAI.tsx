@@ -292,4 +292,4 @@ export default function InterviewAssessmentAI() {
       </section>
     </div>
   )
-}
+};

@@ -16,7 +16,7 @@ interface AnalysisResult {
     totalLinks: number,brokenLinks: number,missingPages: number,externalLinks: number
   },
   pages: PageInfo[],brokenLinks: LinkInfo[],missingPages: string[]
-}
+};
 
 export const WebsiteAnalyzer: React.FC = () => {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -321,6 +321,5 @@ export const WebsiteAnalyzer: React.FC = () => {
       </div>
     </div>
   ),
-};
 
 export default WebsiteAnalyzer;

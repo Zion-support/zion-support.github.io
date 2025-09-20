@@ -9,4 +9,4 @@ export function getStripe() {
     stripePromise = loadStripe(key)
   };
   return stripePromise;
-}
+};

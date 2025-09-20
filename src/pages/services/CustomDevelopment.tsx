@@ -360,4 +360,4 @@ export default function CustomDevelopment() {
       </section>
     </div>
   )
-}
+};
