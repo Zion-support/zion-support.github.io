@@ -289,26 +289,15 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
                 Join thousands of companies already using our revolutionary technologies to gain competitive advantages and drive unprecedented growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
-                >
-                  Start Your Journey →
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-indigo-400 text-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-black transition-all duration-300 font-semibold text-lg"
-                >
-                  Schedule Demo
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"></button>
+                  Start Your Journey →</button>
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"></button>
+                  Schedule Demo</button>
+                </button>
+          </motion.div>
+      </motion.div>
     </>
   );
 };

@@ -1,6 +1,6 @@
 
-class ErrorBoundary extends React.Component {,
-  constructor(props) {,
+class ErrorBoundary extends React.Component {
+  constructor(props) {
     super(props);
     this.state = { hasError: false ,};
   }
@@ -30,4 +30,3 @@ export default /**,
 function ForgotPassword() {,
   return (,
 }
-,)

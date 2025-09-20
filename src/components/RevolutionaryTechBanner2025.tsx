@@ -1,3 +1,14 @@
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="inline-flex items-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Explore All Technologies
+            </button>
+            <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+              Watch Demo
+            </button>
 import React from 'react';
 
 const RevolutionaryTechBanner2025: React.FC = () => {
@@ -143,9 +154,26 @@ const RevolutionaryTechBanner2025: React.FC = () => {
             >
               🧬 Connect Neural Interface →
             </a>
-          {/* Additional Info */}
-          <div className="mt-8 text-sm text-gray-300">
-            <p>✨ Free access to all revolutionary technologies • 🚀 No setup required • 💫 Experience the future today</p>
+          </div>
+        </div>
+        
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-sm">Live Technology</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+              <span className="text-sm">Real-time Demo</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+              <span className="text-sm">Interactive Experience</span>
+            </div>
+          </div>
+        </div>
+      </div>
   );
 };
 

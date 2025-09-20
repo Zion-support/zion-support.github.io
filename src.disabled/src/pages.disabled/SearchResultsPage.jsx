@@ -34,9 +34,16 @@ export default function SearchResultsPage({ }: SearchResultsPageProps) {,
       <p>This component is currently under development.</p>,
     </div>,
   );
+
+
+=======
+=======
+
+
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
-:src.disabled/src/pages.disabled/SearchResultsPage.jsx,
+=======
+
+:src.disabled/src/pages.disabled/SearchResultsPage.jsx
 }
 }
 ursor/add-new-services-and-deploy-updates-0462,

@@ -15,7 +15,7 @@ import {
   Zap
 } from 'lucide-react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   emergingTechServicesEnhanced2025
 } from '../data/2025-emerging-tech-services-enhanced';
@@ -75,11 +75,30 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const latestInsights = [
-    { title: 'Operational Evidence Hubs (2026)', href: '/blog/operational-evidence-hubs-from-evals-to-decisions', tag: 'New', gradient: 'from-amber-500 to-pink-500' },
-    { title: 'Trusted RAG: Freshness Windows (2026)', href: '/blog/trusted-rag-freshness-windows-that-work', tag: 'RAG', gradient: 'from-purple-500 to-blue-500' },
-    { title: 'Evidence‑Led Operations — Blueprint (2026)', href: '/blog/ai-2026-evidence-led-operations-blueprint', tag: 'Ops', gradient: 'from-fuchsia-500 to-indigo-500' },
-    { title: 'Production Evidence Hub — Blueprint (2026)', href: '/blog/ai-2026-production-evidence-hub-blueprint', tag: 'Blueprint', gradient: 'from-cyan-500 to-blue-600' },
-    { title: 'Real-Time RAG Architectures (2026)', href: '/blog/ai-2026-real-time-rag-architectures', tag: 'RAG', gradient: 'from-emerald-500 to-cyan-500' }
+    {
+      title: 'GenAI for Regulated Industries (2025)',
+      href: '/blog/genai-2025-practical-compliance-patterns',
+      tag: 'Compliance',
+      gradient: 'from-emerald-500 to-cyan-500'
+    },
+    {
+      title: 'Agentic CRM: Autonomous Revenue Workflows',
+      href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
+      tag: 'RevOps',
+      gradient: 'from-fuchsia-500 to-indigo-500'
+    },
+    {
+      title: 'AI 2026: Real-Time Retrieval Architectures',
+      href: '/blog/ai-2026-real-time-retrieval-architectures',
+      tag: 'Article',
+      gradient: 'from-purple-500 to-blue-500'
+    },
+    {
+      title: 'AI 2026: Autonomous Ops Playbook',
+      href: '/content/ai-2026-autonomous-ops-playbook',
+      tag: 'Playbook',
+      gradient: 'from-cyan-500 to-blue-600'
+    }
   ];
 
   const navigationSections = [

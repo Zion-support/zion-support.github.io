@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import SEO from '@/components/SEO';
 import { 
   Users, 
   Target, 
@@ -66,33 +66,34 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            About <span className="bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">Zion Tech Group</span>
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            We are a forward-thinking technology company dedicated to transforming businesses through 
-            innovative AI solutions, comprehensive IT services, and cutting-edge micro SAAS platforms.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              to="/contact" 
-              className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Get in Touch
-            </Link>
-            <Link 
-              to="/services" 
-              className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Our Services
-            </Link>
+    <>
+      {/* <SEO 
+        title="About Zion Tech Group - Leading AI & Technology Innovation Company"
+        description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions. Discover our story, values, and commitment to innovation."
+        keywords={['about Zion Tech Group', 'AI company', 'technology innovation', 'quantum computing', 'digital transformation']}
+      /> */}
+      
+      <div className="min-h-screen bg-futuristic">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
+          
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Pioneering the Future of
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Technology
+              </span>
+            </h1>
+            
+            <p className="text-xl text-slate-300 max-w-4xl mx-auto mb-8">
+              At Zion Tech Group, we're not just building technology – we're building the future. 
+              Our mission is to democratize AI and cutting-edge technology, making it accessible 
+              to businesses of all sizes.
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
@@ -138,7 +139,6 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
 
       {/* Values Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
@@ -203,6 +203,7 @@ const About: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

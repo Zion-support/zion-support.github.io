@@ -1,4 +1,6 @@
-'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Sun, Moon, Monitor } from 'lucide-react';
 
 import React, { useEffect, useState } from 'react';
 import { Sun, Moon, Monitor, Palette } from 'lucide-react';

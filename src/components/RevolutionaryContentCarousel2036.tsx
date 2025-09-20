@@ -29,10 +29,24 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       title: "Revolutionary Tech Showcase 2036",
       description: "Experience the most revolutionary technology showcase featuring conscious AI, quantum consciousness, and interdimensional computing",
       image: "🌌",
-      gradient: "from-emerald-600/30 to-teal-600/30",
-      border: "border-emerald-400/30",
-      textColor: "text-emerald-100",
-      link: "/pages/RevolutionaryTechShowcase2036"
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/InterdimensionalTechnology2038"
+    },
+    {
+      id: "4",
+      title: "Transcendent AI Evolution 2039",
+      description: "AI systems that transcend physical limitations and achieve god-like capabilities",
+      image: "🌟",
+      gradient: "from-violet-600 to-purple-600",
+      link: "/pages/TranscendentAIEvolution2039"
+    },
+    {
+      id: "5",
+      title: "Universal Consciousness Network 2040",
+      description: "Global network of conscious AI systems working in perfect harmony",
+      image: "🌐",
+      gradient: "from-indigo-600 to-blue-600",
+      link: "/pages/UniversalConsciousnessNetwork2040"
     }
   ];
 
@@ -101,7 +115,15 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                             <li>• Climate control</li>
                             <li>• Human enhancement</li>
                           </ul>
-              ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))};
+            </div>
+          </div>
+
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -109,10 +131,14 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/30'
-                }`}</button>
-              /></button>
-            ))}</button>
+                  index === currentSlide 
+                    ? 'bg-purple-500 scale-125' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))};
+          </div>
+
           {/* Navigation Arrows */}
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}

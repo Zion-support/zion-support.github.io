@@ -34,9 +34,15 @@ export default function TranslationManager({ }: TranslationManagerProps) {,
       <p>This component is currently under development.</p>,
     </div>,
   );
+
+
+=======
+
+
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
-:src.disabled/src/pages.disabled/TranslationManager.jsx,
+=======
+
+:src.disabled/src/pages.disabled/TranslationManager.jsx
 }
 }
 ursor/add-new-services-and-deploy-updates-0462,

@@ -162,6 +162,9 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Enter Dimensions →
             </a>
+          </div>
+        </div>
+        
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
             <div className="text-sm opacity-80">Revolutionary Features:
@@ -170,7 +173,11 @@ const RevolutionaryContentBanner2025: React.FC = () => {
               <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Mind Interface</span>
               <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Quantum Tech</span>
               <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Multi-Dimensional</span>
-    </motion.div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

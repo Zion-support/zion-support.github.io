@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-interface FileData {,
+
+interface FileData {
   name: string;
   type: string;
   size: number;

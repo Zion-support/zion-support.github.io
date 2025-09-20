@@ -1,4 +1,7 @@
-import React from 'react',
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react';
 
 const ModernHeader: React.FC = () => {,
   return (,

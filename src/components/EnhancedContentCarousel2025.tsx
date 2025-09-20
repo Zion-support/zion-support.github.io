@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+const EnhancedContentCarousel2025: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const contentItems = [
     {
@@ -12,9 +15,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
       gradient: 'from-purple-600 to-pink-600',
       link: '/pages/NextGenAIConsciousness2025',
       features: ['Self-aware AI systems', 'Emotional intelligence', 'Quantum consciousness', 'Transcendent learning']
-    }
-  ];
-
   const contentSlides = [
     {
       id: 1,
@@ -158,19 +158,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    if (!isAutoPlaying) return;
-    
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % contentItems.length);
-    }, 6000);
-    
-    return () => clearInterval(timer);
-  }, [isAutoPlaying, contentItems.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % contentItems.length);
-  };
-  };
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
@@ -219,8 +206,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-6 h-6 bg-gradient-to-r ${contentItems[currentSlide].gradient} rounded-full flex items-center justify-center text-sm font-bold`}>
                         ✓
-          </p>
-        </motion.div>
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
             <div 
@@ -246,6 +231,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
                         <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
                           Start Interactive Demo →</button>
                         </button>
+                      </div>
                       <span className="text-lg">{feature}</span>
                   ))}
                 {/* Action Buttons */}
@@ -447,8 +433,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
             <div className="text-4xl font-bold text-cyan-400 mb-2">24/7
             <div className="text-gray-300">Available Demos
           <div className="text-center">
-            <div className="text-4xl font-bold text-emerald-400 mb-2">∞
-            <div className="text-gray-300">Possibilities
+            <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
+            <div className="text-gray-300">Possibilities</div>
         {/* Technology Tags */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-4">
@@ -487,6 +473,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
               Download Whitepaper
             </motion.button>
         </motion.div>
+      </div>
+    </div>
   );
 };
 

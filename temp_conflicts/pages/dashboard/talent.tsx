@@ -1,9 +1,31 @@
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import FeedbackModal from "../../components/ui/FeedbackModal";
+import React, { useEffect, useMemo, useState } from "react";
+import { supabase } from "../../utils/supabase/client";
+import { AnimatePresence, motion } from "framer-motion";
 
-export default function TalentDashboard() {
-  const [offers, setOffers] = useState<any[]>([]);
+type JobSuggestion = {
+  id: string;
+  match_type?: "job_for_talent" | string;
+  job_id: string;
+  job_title: string;
+  client_name?: string;
+  client_id?: string;
+  talent_id: string;
+  summary?: string;
+  skills?: string[];
+  budget_min?: number | null;
+  budget_max?: number | null;
+  duration?: string | null;
+  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null;
+  score?: number;
+  created_at?: string;
+  updated_at?: string;
+};
+
+const SUGGESTION_TABLE_ENV =
+  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches";
+
+export default function TalentDashboardSuggestedJobs() {
+  const [userId, setUserId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [expandedId, setExpandedId] = useState<string | null>(null);

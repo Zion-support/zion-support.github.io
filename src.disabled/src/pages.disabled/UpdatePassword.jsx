@@ -34,9 +34,16 @@ export default function UpdatePassword({ }: UpdatePasswordProps) {,
       <p>This component is currently under development.</p>,
     </div>,
   );
+
+
+=======
+=======
+
+
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
-:src.disabled/src/pages.disabled/UpdatePassword.jsx,
+=======
+
+:src.disabled/src/pages.disabled/UpdatePassword.jsx
 }
 }
 ursor/add-new-services-and-deploy-updates-0462,

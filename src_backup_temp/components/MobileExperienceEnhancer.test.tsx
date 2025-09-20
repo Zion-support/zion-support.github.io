@@ -11,6 +11,6 @@ import React from 'react,',',',', import {SEO } from '@/components/SEO', export 
           Professional MobileExperienceEnhancer.test services to help your business grow.,
         </p>,
       </div>';
-    </div>;
-  ),',',';
-}",',';
+    </div>';';
+  );';';';
+}"';';';';
