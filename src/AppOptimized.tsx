@@ -29,9 +29,9 @@ const queryClient = new QueryClient({
     },
     mutations: {
       retry: 1
-    },
-  },
-  })
+    }
+  }
+})
 const AppOptimized: React.FC = () => {
   return (
     <ErrorBoundary>
@@ -54,8 +54,7 @@ const AppOptimized: React.FC = () => {
                         </Routes>
                       </Suspense>
                     </div>
-                    {{process.env.NODE_ENV === 'development' && <PerformanceMonitor />},
-  }
+                    {process.env.NODE_ENV === 'development' && <PerformanceMonitor />}
                   </Router>
                 </MobileOptimizer>
               </AccessibilityEnhancer>
