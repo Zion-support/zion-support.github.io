@@ -4,6 +4,8 @@ import { Metadata } from 'next'
 import ModernAnalyticsDashboard from './components/ModernAnalyticsDashboard'
 import AdvancedAIChatbot from './components/AdvancedAIChatbot'
 import PerformanceOptimizer from './components/PerformanceOptimizer'
+import InteractiveFeatureShowcase from './components/InteractiveFeatureShowcase'
+import EnhancedTestimonials from './components/EnhancedTestimonials'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ziontechgroup.com'),
@@ -96,44 +98,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-            Our Services
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link
-              href="/ai-2025"
-              className="bg-gradient-to-br from-blue-500 to-purple-600 text-white p-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105"
-            >
-              <h3 className="text-xl font-bold mb-2">AI 2025 Solutions</h3>
-              <p className="text-blue-100">Next-generation AI technologies</p>
-            </Link>
-            <Link
-              href="/automation"
-              className="bg-gradient-to-br from-green-500 to-teal-600 text-white p-6 rounded-lg hover:from-green-600 hover:to-teal-700 transition-all transform hover:scale-105"
-            >
-              <h3 className="text-xl font-bold mb-2">Automation</h3>
-              <p className="text-green-100">Intelligent process automation</p>
-            </Link>
-            <Link
-              href="/autonomous-systems-2026"
-              className="bg-gradient-to-br from-purple-500 to-pink-600 text-white p-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all transform hover:scale-105"
-            >
-              <h3 className="text-xl font-bold mb-2">Autonomous Systems</h3>
-              <p className="text-purple-100">Self-managing business operations</p>
-            </Link>
-            <Link
-              href="/tools"
-              className="bg-gradient-to-br from-orange-500 to-red-600 text-white p-6 rounded-lg hover:from-orange-600 hover:to-red-700 transition-all transform hover:scale-105"
-            >
-              <h3 className="text-xl font-bold mb-2">AI Tools</h3>
-              <p className="text-orange-100">ROI calculators and assessments</p>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Interactive Feature Showcase */}
+      <InteractiveFeatureShowcase />
 
       {/* Stats Section */}
       <section className="py-16 bg-blue-900 text-white">
@@ -158,6 +124,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Enhanced Testimonials */}
+      <EnhancedTestimonials />
 
       {/* CTA Section */}
       <section className="py-16 bg-gray-50">
