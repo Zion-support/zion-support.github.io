@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react'
-=======
-import React from 'react';
->>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 
 export default function About() {
   return (
@@ -29,14 +25,5 @@ export default function About() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
->>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

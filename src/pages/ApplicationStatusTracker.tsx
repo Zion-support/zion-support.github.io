@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-interface Service {
-  id: string;
-  name: string;
-}
-
-import { SEO } from "@/components/SEO";
-import { ApplicationsTracker } from "@/components/jobs/applications";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Briefcase, Inbox } from "lucide-react";
+import { SEO } from '@/components/SEO';
+import { ApplicationsTracker } from '@/components/jobs/applications';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Briefcase, Inbox } from 'lucide-react';
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const mockApplications = [
   {
@@ -38,14 +31,6 @@ const mockApplications = [
     lastUpdate: "2024-01-12"
   }
 ];
-=======
->>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
-import { SEO } from '@/components/SEO';
-import { ApplicationsTracker } from '@/components/jobs/applications';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Briefcase, Inbox } from 'lucide-react';
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
@@ -104,7 +89,6 @@ function ApplicationStatusTrackerContent() {
     </>
   );
 }
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 export default function ApplicationStatusTracker() {
   return (

@@ -1,17 +1,7 @@
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
-import Header from "@/components/Header";
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-=======
->>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
-import ErrorBoundary from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-// Ideally this would come from a shared data source or API;
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 const categories = [
   {
@@ -46,16 +36,6 @@ const categories = [
 
 export default function AllCategoriesPage() {
   return (
-<<<<<<< HEAD
-    <div className='min-h-screen bg-zion-blue'>
-      <div className='container mx-auto px-4 py-8'>
-        <GradientHeading
-          title="All Categories"
-          subtitle="Explore our comprehensive range of services and solutions"
-          className="text-center mb-12"
-        />
-        
-=======
     <div className="min-h-screen bg-zion-blue">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
@@ -71,7 +51,6 @@ export default function AllCategoriesPage() {
             projects.
           </p>
         </div>
->>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
         <ErrorBoundary>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category) => (
@@ -88,12 +67,4 @@ export default function AllCategoriesPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
-=======
-<<<<<<< HEAD
-}
-=======
-};
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
->>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
