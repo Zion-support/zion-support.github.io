@@ -1,12 +1,11 @@
-import { ArrowLeft,,, Calendar,,, Clock,,, ChevronLeft,,, ChevronRight,,, Share2,,, Facebook,,, Twitter,,, Linkedin,,  } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
+import type { BlogPost as BlogPostType } from "@/types/blog";
 import React from "react";
-import import ReactMarkdown from 'react-markdown';
-import import { logErrorToProduction,,  } from '@/utils/productionLogger';
-// Importing the sample blog posts - in a real app you would fetch this from an API,
-import React from "react";
-import import { useSkeletonTimeout,,  } from '@/hooks/useSkeletonTimeout';
-import import { fetchWithRetry,,  } from '@/utils/fetchWithRetry';
+import ReactMarkdown from 'react-markdown';
+import { logErrorToProduction } from '@/utils/productionLogger';
+// Importing the sample blog posts - in a real app you would fetch this from an API
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {
 return (
     <>
