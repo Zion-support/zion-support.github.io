@@ -10,7 +10,6 @@ const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   // const [activeSection, setActiveSection] = useState(0);
-
   useEffect(() => {
     setIsLoaded(true);
     
