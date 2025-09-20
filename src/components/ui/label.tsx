@@ -11,11 +11,11 @@ React.ElementRef<typeof LabelPrimitive.Root>
 React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
 VariantProps<typeof labelVariants>
 >(({ className, ...props }, ref) => (
-<LabelPrimitive.Root
-ref={ref}
-className={`${labelVariants()} ${className}`}
-{...props}
-/>
+  <LabelPrimitive.Root
+    ref={ref}
+    className={`${labelVariants()} ${className}`}
+    {...props}
+  />
 ));
 
 Label.displayName = LabelPrimitive.Root.displayName;

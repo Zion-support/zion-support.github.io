@@ -41,13 +41,13 @@ icon: "h-10 w-10"
 const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
 return (
-<button;
-type={type}
-className={classes}
-onClick={onClick}
-disabled={disabled}
-{...props}
->;
+  <button
+    type={type}
+    className={classes}
+    onClick={onClick}
+    disabled={disabled}
+    {...props}
+  >
 {children}
 </button>
 );
