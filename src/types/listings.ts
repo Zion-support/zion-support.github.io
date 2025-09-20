@@ -40,15 +40,13 @@ export interface ListingFilter {
   priceRange?: {
     min: number;
     max: number;
-=======
-=======
-  author: {
+  };
+  author?: {
     name: string;
     id: string;
     avatarUrl?: string;
   };
   location?: string;
-=======
   availability?: string;
   aiScore?: number;
   pricingTier?: string;
