@@ -129,66 +129,27 @@ const UltimateTechRevolution2032: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🚀</div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Space-Time Computing</h3>
-                  <p className="text-gray-300">
-                    Computing systems that manipulate space-time itself to achieve instantaneous data processing
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🔮</div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Predictive Reality</h3>
-                  <p className="text-gray-300">
-                    AI systems that can predict and simulate future events with 99.9% accuracy
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🌟</div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Consciousness Transfer</h3>
-                  <p className="text-gray-300">
-                    Technology that allows human consciousness to be transferred to digital or synthetic bodies
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="text-4xl">🌊</div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">Quantum Teleportation</h3>
-                  <p className="text-gray-300">
-                    Instantaneous transportation of matter and information across any distance
-                  </p>
-                </div>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Success Stories */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
-            See how our revolutionary technologies have transformed businesses and societies worldwide
-          </p>
+      {/* Success Stories */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">🏆 Success Stories</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
+              See how our revolutionary technologies have transformed businesses and societies worldwide
+            </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="text-6xl mb-4">📈</div>
-              <h3 className="text-2xl font-bold mb-4">Global Productivity Increase</h3>
-              <p className="text-4xl font-bold text-purple-400 mb-2">+5000%</p>
-              <p className="text-gray-300">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+                <div className="text-6xl mb-4">📈</div>
+                <h3 className="text-2xl font-bold mb-4">Global Productivity Increase</h3>
+                <p className="text-4xl font-bold text-purple-400 mb-2">+5000%</p>
+                <p className="text-gray-300">
                 Average productivity increase across all industries using our conscious AI systems
               </p>
             </div>

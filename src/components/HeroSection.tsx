@@ -1,4 +1,5 @@
 
+import React, { memo } from 'react';
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
@@ -6,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Globe } from "lucide-react";
 
-export function HeroSection() {
+export const HeroSection = memo(() => {
   const { t } = useTranslation();
   
   const containerVariants = {
@@ -174,4 +175,6 @@ export function HeroSection() {
       </div>
     </section>
   );
-}
+});
+
+HeroSection.displayName = 'HeroSection';
