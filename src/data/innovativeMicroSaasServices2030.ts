@@ -61,7 +61,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     roi: "400% within 6 months",
     setupTime: "10 minutes",
     integrations: ["Slack", "Microsoft Teams", "WhatsApp", "Facebook Messenger", "Live Chat"]
-=======
+  },
+  {
     id: "ai-content-creation-studio-pro",title: "AI Content Creation Studio Pro",description: "Advanced AI-powered content creation platform with multi-language support, SEO optimization, and brand voice consistency. Generates high-quality content 10x faster than traditional methods.",
     category: "AI & Content",subcategory: "Content Creation",price: 299,currency: "$",tags: ["Content Creation", "AI Writing", "SEO Optimization", "Multi-language", "Brand Voice"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
@@ -235,6 +236,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     },
     marketPrice: "$150-500/month",competitors: ["Semantic Scholar", "Iris.ai", "Elicit"],
     roi: "400% within 6 months",setupTime: "1 week",integrations: ["PubMed", "arXiv", "Google Scholar", "Research Databases", "Citation Managers"]
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-1f15
   },
   ];

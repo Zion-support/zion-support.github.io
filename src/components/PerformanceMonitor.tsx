@@ -1,12 +1,24 @@
 import { useEffect, useState } from "react";
+
 interface PerformanceMetrics {
-  loadTime: number,renderTime: number,memoryUsage: number,networkLatency: number,fps: number,lighthouseScore: number}
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatency: number;
+  fps: number;
+  lighthouseScore: number;
+}
 
 export default function PerformanceMonitor() {
-      const [metrics, setMetrics] = useState<PerformanceMetrics>({
-        loadTime: 0,renderTime: 0,memoryUsage: 0,networkLatency: 0,fps: 0,lighthouseScore: 0
-      });
-const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    networkLatency: 0,
+    fps: 0,
+    lighthouseScore: 0
+  });
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Measure page load time
@@ -14,11 +26,11 @@ const [isVisible, setIsVisible] = useState(false);
     
     // Measure memory usage
     const memoryInfo = (performance as any).memory;
-const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
+    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
 
     // Measure render time
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-const renderTime = navigationEntry?.loadEventEnd || 0;
+    const renderTime = navigationEntry?.loadEventEnd || 0;
 
     // Measure network latency (simplified)
     const networkLatency = performance.getEntriesByType('resource')
@@ -26,17 +38,18 @@ const renderTime = navigationEntry?.loadEventEnd || 0;
 
     // Calculate FPS (simplified)
     let fps = 60;
-let lastTime = performance.now();
-let frameCount = 0;
-const measureFPS = () => {
+    let lastTime = performance.now();
+    let frameCount = 0;
+    const measureFPS = () => {
       frameCount++;
-const currentTime = performance.now();
+      const currentTime = performance.now();
       if (currentTime - lastTime >= 1000) {
         fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
         frameCount = 0;
-        lastTime = currentTime
-};
-      requestAnimationFrame(measureFPS)
+        lastTime = currentTime;
+      }
+      requestAnimationFrame(measureFPS);
+    };
     measureFPS();
 
     // Calculate Lighthouse score (simplified)
@@ -44,23 +57,26 @@ const currentTime = performance.now();
       100 - (loadTime / 10) - (memoryUsage * 2) - (networkLatency / 10)
     ));
 
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(renderTime),
-        memoryUsage: Math.round(memoryUsage * 100) / 100,
-        networkLatency: Math.round(networkLatency),
-        fps,
-        lighthouseScore: Math.round(lighthouseScore)
-      });
+    setMetrics({
+      loadTime: Math.round(loadTime),
+      renderTime: Math.round(renderTime),
+      memoryUsage: Math.round(memoryUsage * 100) / 100,
+      networkLatency: Math.round(networkLatency),
+      fps,
+      lighthouseScore: Math.round(lighthouseScore)
+    });
+  }, []);
+
+  useEffect(() => {
     // Show performance monitor on Ctrl+Shift+P
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(!isVisible)
-},
-  };
+        setIsVisible(!isVisible);
+      }
+    };
     window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress)
-}, [isVisible]);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [isVisible]);
 
   if (!isVisible) return null;
 
@@ -115,8 +131,7 @@ const currentTime = performance.now();
                   metrics.lighthouseScore >= 70 ? 'bg-yellow-400' :
                   'bg-red-400'
                 }`}
-                style={{ width: `${metrics.lighthouseScore}%` },
-  };
+                style={{ width: `${metrics.lighthouseScore}%` }}
               />
             </div>
             <span className={metrics.lighthouseScore >= 90 ? 'text-green-400' : 
@@ -131,4 +146,5 @@ const currentTime = performance.now();
         <span className="text-gray-500 text-xs">Press Ctrl+Shift+P to toggle</span>
       </div>
     </div>
-  )
+  );
+}
