@@ -44,9 +44,5 @@ export default defineConfig({
   preview: {
     port: 4173,
     open: true,
-<<<<<<< HEAD
-  },
-=======
   }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 });
