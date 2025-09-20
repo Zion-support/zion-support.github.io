@@ -1,5 +1,5 @@
 import React from "
-
+;
 export export interface User {;
 id: string; email: string;
 displayName?: string;
@@ -7,7 +7,7 @@ avatar?: string;
 role?: string;
 isEmailVerified?: boolean;
 createdAt?: string;
-updatedAt?: string,
+updatedAt?: string
 }
 export export interface AuthTokens {;
 accessToken: string | null; refreshToken: string | null,

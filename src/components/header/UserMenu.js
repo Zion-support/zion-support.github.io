@@ -1,16 +1,16 @@
-import { jsx as _jsx, jsxs as _jsxs } from "
-import import { useState } from 'react';
-import import { Link } from 'react-router-dom';
-import import { useAuth } from '@/hooks/useAuth';
-import import { Button } from '@/components/ui/Button';
-import import { User, LogOut, Settings, UserPlus } from 'lucide-react';
+import { jsx as _jsx, jsxs as _jsxs } from ";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/Button';
+import { User, LogOut, Settings, UserPlus } from 'lucide-react';
 export function UserMenu() {
     const { user, logout } = useAuth()
     const [isOpen, setIsOpen] = useState(false)
-import import React, { useState, useRef, useEffect } from 'react';
-import import { Link } from 'react-router-dom';
-import import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
-import import { useAuth } from '../../hooks/useAuth';
+import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
+import { useAuth } from '../../hooks/useAuth';
 export const UserMenu = () => {
     const [isOpen, setIsOpen] = useState(false)
     const menuRef = useRef(null)

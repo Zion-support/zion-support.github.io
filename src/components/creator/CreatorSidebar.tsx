@@ -70,4 +70,4 @@ export function AppSidebar() {
       </SidebarContent>
     </Sidebar>
   )
-}
+};

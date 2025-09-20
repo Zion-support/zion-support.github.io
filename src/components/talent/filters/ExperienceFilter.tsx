@@ -32,4 +32,4 @@ aria-label='Experience range'            aria-label="Experience range"
       )}
     </div>
   )
-}
+};

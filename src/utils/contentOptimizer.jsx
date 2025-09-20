@@ -10,7 +10,7 @@ export, class, ContentOptimizer {
         const imageCount = this.countImages(content)
         const linkCount = this.countLinks(content)
         const readabilityScore = this.calculateReadabilityScore(content)
-        const seoScore = this.calculateSEOScore(contentpage)
+        const seoScore = this.calculateSEOScore(contentpage);
         const issues = this.identifyIssues(content, page, {;
             wordCountheadingCountimageCountlinkCount;
         })

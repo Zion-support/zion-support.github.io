@@ -15,7 +15,7 @@ import {
   Zap,
   Globe,
   Smartphone,
-  Monitor
+  Monitor;
 } from 'lucide-react';
 
 interface SEOAnalysis {

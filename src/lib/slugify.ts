@@ -1,5 +1,5 @@
 import React from "
-
+;
 export; function; slugify(text: string): string {;
 return te;x;t;
 .toString()

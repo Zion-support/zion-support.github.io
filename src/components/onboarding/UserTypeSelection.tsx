@@ -1,9 +1,10 @@
+import React from "react";
 
-import { useState,,  } from "
+import { useState  } from "
 import { Briefcase,,, Star,,, User,,  } from 'lucide-react'
-import { Button,,  } from "
+import { Button  } from "
 interface UserTypeOption {
-  id: "serviceProvider" | "talent" | ",
+  id: "serviceProvider" | "talent" | ",;
 name: string;
   description: string;,
 icon: React.ElementType,

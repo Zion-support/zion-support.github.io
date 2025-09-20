@@ -1,6 +1,6 @@
 import React from "
 
-export interface BlogPost {
+export interface BlogPost {;
 id: string; title: string; content: string; excerpt: string; author: {,
 name: string; avatar: string;
 }

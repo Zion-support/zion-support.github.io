@@ -1,4 +1,5 @@
-import import { useState, useCallback } from 'react';
+import React from "react";
+import { useState, useCallback } from 'react';
 export function useToast() {
     const [toasts, setToasts] = useState([])
     const toast = useCallback((options) => {
@@ -23,7 +24,7 @@ export function useToast() {
     const dismissAll = useCallback(() => {
         setToasts([])
     }, [])
-import import { useState } from 'react';
+import { useState } from 'react';
 export function useToast() {
     const [toasts, setToasts] = useState([])
     const toast = (options) => {

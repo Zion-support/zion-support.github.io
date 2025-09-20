@@ -1,4 +1,5 @@
-import import { useState, useEffect } from 'react, ';
+import React from "react";
+import { useState, useEffect } from 'react, ';
 export function usePostsByCategory(categoryId) {
     const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)

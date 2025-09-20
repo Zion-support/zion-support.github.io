@@ -1,17 +1,18 @@
-import { useState,,  } from "
-import import { useRouter,,, ,,  } from 'next/router';
-import { useJobApplications,,  } from "@/hooks/useJobApplications",
-import { useResume,,  } from "@/hooks/useResume",
-import { useAuth,,  } from "@/hooks/useAuth",
-import { Button,,  } from "@/components/ui/button",
-import { Textarea,,  } from "@/components/ui/textarea",
-import { Label,,  } from "@/components/ui/label",
+import React from "react";
+import { useState  } from ";
+import { useRouter,,, ,,  } from 'next/router';
+import { useJobApplications  } from "@/hooks/useJobApplications",
+import { useResume  } from "@/hooks/useResume",
+import { useAuth  } from "@/hooks/useAuth",
+import { Button  } from "@/components/ui/button",
+import { Textarea  } from "@/components/ui/textarea",
+import { Label  } from "@/components/ui/label",
 import { Select,,, SelectContent,,, SelectItem,,, SelectTrigger,,, SelectValue,,  } from "@/components/ui/select",
 import { Alert,,, AlertDescription,,  } from "@/components/ui/alert",
 import { AlertCircle,,, FileText,,, Loader2,,  } from 'lucide-react'
-import { formatDistanceToNow,,  } from "date-fns",
-import { Job,,  } from "
-import { toast,,  } from "
+import { formatDistanceToNow  } from "date-fns",
+import { Job  } from "
+import { toast  } from "
 interface ApplyToJobFormProps {
 onSuccess?: () => void,
 }
@@ -146,4 +147,4 @@ handleSubmit,
 }</SelectContent> </Select> > Create Resume </Button> </div>) "
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
-}"}
+}"};

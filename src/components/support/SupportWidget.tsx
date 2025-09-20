@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { useRouter,,  } from 'next/router'
-import { Button,,  } from '@/components/ui/button'
-import { ChatBotPanel,,  } from './ChatBotPanel'
+import { useRouter  } from 'next/router'
+import { Button  } from '@/components/ui/button'
+import { ChatBotPanel  } from './ChatBotPanel'
 import { MessageSquare,,, Info,,, X,,  } from 'lucide-react'
-import { cn,,  } from "
-import { useTheme,,  } from "
+import { cn  } from "
+import { useTheme  } from "
 export function SupportWidget() {
           )}
           style={{ height: '600px', maxHeight: '80vh' }}        >
@@ -44,4 +44,4 @@ variant='ghost'
       )}
     </>
   )
-}
+};

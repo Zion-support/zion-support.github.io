@@ -1,10 +1,10 @@
-import import React, { useState; useRef; useEffect } from "
+import React, { useState; useRef; useEffect } from "
 import { Button } from "
 import { Send } from "
 
-interface ChatInputProps {
+interface ChatInputProps {;
 onSend: (message: string) => void;
-disabled?: boolean,
+disabled?: boolean
 }
 export export function ChatInput({ onSend; disabled = false }: ChatInputProps) {
 const [message; setMessage] = useState("")
@@ -27,7 +27,7 @@ const handleKeyPress: any = (e: React.KeyboardEvent) => {
 if (if (e.key === "Enter" && !e.shiftKey) {;) {
 e.preventDefault()
 handleSubmit(e),
-import { Send,,  } from 'lucide-react'
+import { Send  } from 'lucide-react'
 interface ChatInputProps {
   onSend: (message: string) => void,
 disabled?: boolean,
@@ -74,7 +74,7 @@ type='submit'
 }
 
 return (
-<form onSubmit={handleSubmit} className="flex items-end gap-2">
+<form onSubmit={handleSubmit} className="flex items-end gap-2">;
 <textarea;
 ref={inputRef}
 className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus: outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light"

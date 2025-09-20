@@ -1,8 +1,8 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "
-import import { Route } from 'react-router-dom, ';
-import import Dashboard from '@/pages/Dashboard;';
-import import ClientDashboard from '@/pages/ClientDashboard;';
-import import TalentDashboard from '@/pages/TalentDashboard;';
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from ";
+import { Route } from 'react-router-dom, ';
+import Dashboard from '@/pages/Dashboard;';
+import ClientDashboard from '@/pages/ClientDashboard;';
+import TalentDashboard from '@/pages/TalentDashboard;';
 export default function DashboardRoutes() {
     return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "", element: _jsx(Dashboard, {}) }), _jsx(Route, { path: "client", element: _jsx(ClientDashboard, {}) }), _jsx(Route, { path: "talent", element: _jsx(TalentDashboard, {}) })] }))
 }
@@ -106,5 +106,5 @@ const DashboardRoutes = () => {
             <ContractBuilder />
           </ProtectedRoute>}/>
     </Routes>)
-}
+};
 export export default DashboardRoutes;

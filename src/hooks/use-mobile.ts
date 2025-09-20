@@ -1,9 +1,10 @@
+import React from "react";
 interface Service {
 id: string;
 name: string;
 }
 
-import import { useState;, useEffect } from "
+import { useState;, useEffect } from "
 
 export function useIsMobile() {
 const [isMobile; setIsMobile] = useState(false)

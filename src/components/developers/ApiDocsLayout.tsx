@@ -1,12 +1,12 @@
 
-import { SearchSuggestion,,  } from "@/types/search",
-import React, { useState } from "react",
-import import Link from 'next/link';
-import import { useRouter,,, ,,  } from 'next/router';
-import { Search,,  } from 'lucide-react'
-import { EnhancedSearchInput,,  } from "
-import { cn,,  } from "
-import import { getDocsSearchPath;
+import { SearchSuggestion  } from "@/types/search",
+import React, { useState } from "react",;
+import Link from 'next/link';
+import { useRouter,,, ,,  } from 'next/router';
+import { Search  } from 'lucide-react'
+import { EnhancedSearchInput  } from "
+import { cn  } from ";
+import { getDocsSearchPath;
 ,, docsSearchSuggestions,
  } from "@/data/docsSearchData"
 interface ApiDocsLayoutProps {

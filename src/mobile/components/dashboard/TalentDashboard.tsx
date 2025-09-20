@@ -1,3 +1,4 @@
+import React from "react";
 import { ChevronRight,,, FileText,,, Image,,, Clock,,, Zap,,, BookOpen,,  } from 'lucide-react'
 import Link from "
 export function TalentDashboard() {
@@ -246,4 +247,4 @@ className='bg-primary/10 p-3 rounded-full'
       </section>
     </div>
   )
-}
+};

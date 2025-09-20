@@ -1,6 +1,6 @@
 import React from "
 
-export interface Listing {
+export interface Listing {;
 id: string; title: string; description: string; price: number; currency: string; category: string; tags: string[[];],
 avatar: string; rating: number; reviews: number;
 }

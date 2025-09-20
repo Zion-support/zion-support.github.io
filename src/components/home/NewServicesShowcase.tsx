@@ -5,13 +5,13 @@ name: string;
 
 import React from "
 import { Link } from "
-import { Button } from "
-import import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
-import { Badge } from "
-import import { MICRO_SAAS_SERVICES;
+import { Button } from ";
+import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
+import { Badge } from ";
+import { MICRO_SAAS_SERVICES;
 SERVICE_CATEGORIES;
 } from "
-import import { Sparkles;
+import { Sparkles;
 Zap;
 TrendingUp;
 ArrowRight;

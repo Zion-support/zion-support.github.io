@@ -1,5 +1,5 @@
-import { Trophy,,  } from 'lucide-react'
-export interface LeaderboardEntry {
+import { Trophy  } from 'lucide-react'
+export interface LeaderboardEntry {;
   name: string;
 points: number;
 interface UserLeaderboardProps {

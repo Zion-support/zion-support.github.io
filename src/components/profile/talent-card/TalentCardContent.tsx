@@ -1,8 +1,8 @@
 
 import React, { useState } from "
-import { MapPin,,  } from 'lucide-react'
-import { TalentCardSkills,,  } from "
-interface TalentCardContentProps {
+import { MapPin  } from 'lucide-react'
+import { TalentCardSkills  } from "
+interface TalentCardContentProps {;
   summary: string | undefined;,
 bio: string;
   timezone: string | undefined;,

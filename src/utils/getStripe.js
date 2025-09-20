@@ -1,4 +1,4 @@
-import import { loadStripe } from '@stripe/stripe-js, ';
+import { loadStripe } from '@stripe/stripe-js, ';
 let stripePromise;
 export function getStripe() {
     if (!stripePromise) {

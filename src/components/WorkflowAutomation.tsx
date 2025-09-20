@@ -6,7 +6,7 @@ name: string;
 import React, { useState } from "
 import { motion } from "
 
-export const WorkflowAutomation: React.FC = () => {
+export const WorkflowAutomation: React.FC = () => {;
 const [workflows] = useState([;
 {;,
 id: "1", name: ",

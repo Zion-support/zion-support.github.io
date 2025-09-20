@@ -1,8 +1,8 @@
 
-import import React from 'react';
-import { Button,,  } from "
+import React from 'react';
+import { Button  } from "
 import { Upload,,, FileText,,  } from 'lucide-react'
-interface UploadSectionProps {
+interface UploadSectionProps {;
   customFile: File | null;,
 onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
 export function UploadSection({

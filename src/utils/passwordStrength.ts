@@ -1,5 +1,5 @@
 import React from "
-
+;
 export export type PasswordStrength = 0 | 1 | 2 | 3 | 4;
 
 export function calculatePasswordStrength(password: string): PasswordStrength {

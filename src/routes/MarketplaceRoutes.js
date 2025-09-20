@@ -1,6 +1,6 @@
-import { jsx as _jsx, Fragment as _Fragment } from "
-import import { Route } from 'react-router-dom, ';
-import import Marketplace from '@/pages/Marketplace;';
+import { jsx as _jsx, Fragment as _Fragment } from ";
+import { Route } from 'react-router-dom, ';
+import Marketplace from '@/pages/Marketplace;';
 export default function MarketplaceRoutes() {
     return (_jsx(_Fragment, { children: _jsx(Route, { path: "", element: _jsx(Marketplace, {}) }) }))
 }
@@ -82,5 +82,5 @@ const MarketplaceRoutes = () => {
             <VideoCall />
           </ProtectedRoute>}/>
     </Routes>)
-}
+};
 export export default MarketplaceRoutes;

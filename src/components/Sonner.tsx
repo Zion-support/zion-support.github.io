@@ -1,7 +1,7 @@
 import React from "
 
 interface SonnerProps {
-position?: "top-left" | "top-right" | "bottom-left" | "
+position?: "top-left" | "top-right" | "bottom-left" | ";
 richColors?: boolean;
 closeButton?: boolean;
 }

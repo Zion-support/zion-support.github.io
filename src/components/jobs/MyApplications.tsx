@@ -1,13 +1,14 @@
+import React from "react";
 
-import { useState,,  } from "react",
-import { useJobApplications,,  } from "@/hooks/useJobApplications",
+import { useState  } from "react",
+import { useJobApplications  } from "@/hooks/useJobApplications",
 import { Card,,, CardContent,,, CardHeader,,, CardTitle,,  } from "@/components/ui/card",
-import { Badge,,  } from "@/components/ui/badge",
-import { Button,,  } from "@/components/ui/button",
+import { Badge  } from "@/components/ui/badge",
+import { Button  } from "@/components/ui/button",
 import { Loader2,,, MessageSquare,,, ExternalLink,,  } from 'lucide-react'
-import { formatDistanceToNow,,  } from "date-fns",
+import { formatDistanceToNow  } from "date-fns",
 import Link from "
-import { ApplicationStatus,,  } from "
+import { ApplicationStatus  } from "
 export function MyApplications() {
 if (isLoading) {
     return (
@@ -87,4 +88,4 @@ variant="default"
       ))}
     </div>
   )
-}
+};

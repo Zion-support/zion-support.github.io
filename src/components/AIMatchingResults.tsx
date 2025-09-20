@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from 'react'
 import { MatchResultItem } from '@/lib/ai-matchmaking'
 import { Card, CardContent } from '@/components/ui/card'
@@ -8,7 +9,7 @@ import { BarChart3, BriefcaseIcon, Monitor, User, Star } from 'lucide-react'
 import { Skeleton } from "@/components/ui/skeleton"
 import { cn } from "@/lib/utils"
 
-interface AIMatchingResultsProps {
+interface AIMatchingResultsProps {;
   serviceType?: string;
 }
 

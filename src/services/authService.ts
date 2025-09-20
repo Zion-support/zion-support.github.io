@@ -6,7 +6,7 @@ name: string;
 import apiClient, { setAuthToken } from "
 
 const API_URL = import.meta.env.VITE_API_URL || "
-
+;
 export export async function loginUser(email: string; password: string) {
 const res = await apiClient("/api/auth/login", {
 method: "POST", headers: {

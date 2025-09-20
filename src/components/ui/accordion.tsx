@@ -11,7 +11,7 @@ return (,
 <h3 className="text-xl font-bold mb-4">accordion</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>
 },
-</div>)},
+</div>)},;
 export export default accordion,;<//div><///div>
 import * as React from 'react'
 import { ElementRef,, ComponentPropsWithoutRef } from 'react'
@@ -63,3 +63,4 @@ ref={ref}
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName,
 export { Accordion AccordionItem AccordionTrigger AccordionContent }
+;

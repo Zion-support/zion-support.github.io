@@ -1,7 +1,7 @@
 import React from "
 import { Helmet } from "
 
-interface MetaTagsProps {
+interface MetaTagsProps {;
 titl; e: string;
 descriptio; n: string;
 keywords?: string;

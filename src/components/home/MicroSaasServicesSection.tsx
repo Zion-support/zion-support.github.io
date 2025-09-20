@@ -4,12 +4,12 @@ name: string;
 }
 
 import React from "
-import { Link } from "
-import import { Zap;, Star;, ArrowRight;, CheckCircle;, TrendingUp;, Shield;, Code;, Users } from "
+import { Link } from ";
+import { Zap;, Star;, ArrowRight;, CheckCircle;, TrendingUp;, Shield;, Code;, Users } from "
 import { getFeaturedMicroSaasServices } from "
 import { Button } from "
 import { Badge } from "
-
+;
 export export function MicroSaasServicesSection() {;
 const featuredServices = getFeaturedMicroSaasServices().slice(0; 3)
 

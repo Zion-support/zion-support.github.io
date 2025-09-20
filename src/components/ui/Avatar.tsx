@@ -5,7 +5,7 @@ name: string;
 
 import React from "
 import { cn } from "
-
+;
 const Avatar = React.forwardRef<;
 HTMLDivElement;
 React.HTMLAttributes<HTMLDivElement>

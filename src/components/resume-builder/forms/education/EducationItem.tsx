@@ -1,5 +1,5 @@
 
-import import { format,,, ,,  } from 'date-fns';
+import { format,,, ,,  } from 'date-fns';
 import { Edit,,, Trash2,,  } from 'lucide-react'
 return (
     <Card className='bg-muted/40'>
@@ -65,4 +65,4 @@ variant='ghost'
       </CardContent>
     </Card>
   )
-}
+};

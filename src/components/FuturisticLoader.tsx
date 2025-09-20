@@ -1,7 +1,7 @@
 import React from "
 
 interface FuturisticLoaderProps {
-size?: "small" | "medium" | "
+size?: "small" | "medium" | ";
 text?: string;
 variant?: "matrix" | "neural" | "quantum" | "
 }

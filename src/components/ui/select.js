@@ -9,10 +9,10 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 }
-import { jsx as _jsx, jsxs as _jsxs } from "
-import import React from 'react';
-import import { cn } from '@/lib/utils';
-import import { ChevronDown } from 'lucide-react';
+import { jsx as _jsx, jsxs as _jsxs } from ";
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { ChevronDown } from 'lucide-react';
 const Select = React.forwardRef((_a, ref) => {
     var { className, children } = _a, props = __rest(_a, ["className", "children"])
     return (_jsxs("div", { className: "relative", children: [_jsx("select", Object.assign({ ref: ref, className: cn('flex h-10 w-full appearance-none rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50', className) }, props, { children: children })), _jsx(ChevronDown, { className: "absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 opacity-50 pointer-events-none" })] }))
@@ -39,7 +39,7 @@ const SelectItem = React.forwardRef((_a, ref) => {
 })
 SelectItem.displayName = 'SelectItem';
 export { Select, SelectValue, SelectTrigger, SelectContent, SelectItem }
-import import React from 'react';
+import React from 'react';
 export function Select({ children, className = '', value, onValueChange }) {
     return (<select className={`${baseClasses} ${className}`} value={value} onChange={onChange} disabled={disabled}>
       {children}

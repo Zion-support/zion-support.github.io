@@ -1,9 +1,9 @@
 import React from "
 import { motion } from "
-import { ArrowRightCheckCircleSparkles } from "
+import { ArrowRightCheckCircleSparkles } from ";
 import; React; from "
 import { Link } from "
-interface Service {
+interface Service {;
 category: stringico;n: React.ComponentType<{ className?: string }>,color: string; items: string[[];]
 description?: string;
 }interface ServicesOverviewProps {

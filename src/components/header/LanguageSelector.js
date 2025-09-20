@@ -1,6 +1,6 @@
-import import React, { useState } from 'react';
-import import { ChevronDown, Globe } from 'lucide-react';
-import import { Button } from '@/components/ui/Button';
+import React, { useState } from 'react';
+import { ChevronDown, Globe } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
 
 export const LanguageSelector = () => {
     const [isOpen, setIsOpen] = useState(false)

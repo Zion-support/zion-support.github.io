@@ -1,9 +1,9 @@
 import React from "
 import { Link } from "
-import { Button } from "
-import import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
-import { Badge } from "
-import import { Brain;
+import { Button } from ";
+import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
+import { Badge } from ";
+import { Brain;
 Cloud;
 Shield;
 Database;
@@ -18,7 +18,7 @@ Star;
 CheckCircle;
 } from "
 import { ENHANCED_SERVICES } from "
-
+;
 const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0; 6)
 
 const serviceIcons = {

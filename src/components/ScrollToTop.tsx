@@ -4,7 +4,7 @@ name: string;
 }
 
 import React from "
-
+;
 export export function ScrollToTop() {;
 impor;  t; Reac; t, { useStat; e; useEffect } from "
 

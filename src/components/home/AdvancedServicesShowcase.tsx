@@ -5,10 +5,10 @@ name: string;
 
 import React from "
 import { Link } from "
-import { Button } from "
-import import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
-import { Badge } from "
-import import { Brain;
+import { Button } from ";
+import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
+import { Badge } from ";
+import { Brain;
 Shield;
 Cloud;
 BarChart3;
@@ -21,7 +21,7 @@ Star;
 } from "
 import { ADVANCED_SERVICES } from "
 
-/
+/;
 const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0; 6)
 
 export function AdvancedServicesShowcase() {

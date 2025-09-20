@@ -1,8 +1,9 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "
-import import { Car, d, CardConten, t, CardHeade, r, CardTitle } from '@/components/ui/Card';
-import import { Badge } from '@/components/ui/Badge';
-import import { Button } from '@/components/ui/Button';
-import import { Sta, r, MapPi, n, Clock } from 'lucide-react';
+import React from "react";
+import { jsx a, s, _js, x, jsxs as _jsxs } from ";
+import { Car, d, CardConten, t, CardHeade, r, CardTitle } from '@/components/ui/Card';
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import { Sta, r, MapPi, n, Clock } from 'lucide-react';
 export function FeaturedListingsSection() {
     return (_jsx("section",  { classNam, e: "py-16 bg-zion-blue-light",
     childre, n: _jsxs("div", { classNam, e: "container mx-auto px-4",
@@ -45,8 +46,8 @@ export function FeaturedListingsSection() {
     childre, n: "4.8" })] }), _jsx(Butto,  n, { classNam, e: "w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hove, r:from-zion-purple-light hove, r:to-zion-purple",
     childre, n: "View Profile" })] })] })] })] }) }))
 impor, t, Reac, t, { useState } from 'react';
-import import { motio, n, AnimatePresence } from 'framer-motion';
-import import { Sta, r, Ey, e, Hear, t, ArrowRigh, t, Cloc, k, User, s, Award } from 'lucide-react';
+import { motio, n, AnimatePresence } from 'framer-motion';
+import { Sta, r, Ey, e, Hear, t, ArrowRigh, t, Cloc, k, User, s, Award } from 'lucide-react';
 const featuredListings = [
     {
         i, d: 1,

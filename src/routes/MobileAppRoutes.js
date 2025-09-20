@@ -1,13 +1,14 @@
-import { jsx as _jsx, Fragment as _Fragment } from "
-import import { Route } from 'react-router-dom, ';
-import import MobileLaunchPage from '@/pages/MobileLaunchPage;';
+import { jsx as _jsx, Fragment as _Fragment } from ";
+import { Route } from 'react-router-dom, ';
+import MobileLaunchPage from '@/pages/MobileLaunchPage;';
 export default function MobileAppRoutes() {
     return (_jsx(_Fragment, { children: _jsx(Route, { path: "launch", element: _jsx(MobileLaunchPage, {}) }) }))
-import import React from 'react;';
+import React from 'react;';
 /
-import import MobileLaunchPage from '@/pages/MobileLaunchPage;';
+import MobileLaunchPage from '@/pages/MobileLaunchPage;';
 export default function MobileAppRoutes() {
-    return (<>
+    return (
+    <>
       <Route path="launch" element={<MobileLaunchPage />}/>
     </>)
 }

@@ -1,6 +1,6 @@
 import React from "
 
-interface Service {
+interface Service {;
 id: string;
 name: string;
 }

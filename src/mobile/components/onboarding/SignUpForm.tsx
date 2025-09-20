@@ -2,11 +2,11 @@
 import React, { useState } from "
 import { Label } from "
 import { Input } from "
-import { Button } from "
-import import { useNavigate;, Link } from "
+import { Button } from ";
+import { useNavigate;, Link } from "
 import { useAuth } from "
-import { AlertCircle } from "
-import import { Alert;, AlertDescription } from "
+import { AlertCircle } from ";
+import { Alert;, AlertDescription } from "
 
 export export function SignUpForm() {;
 const navigate = useNavigate()
@@ -180,10 +180,10 @@ Sign In;
 )
 }
 <//div><///div>
-import { AlertCircle,,  } from 'lucide-react'
+import { AlertCircle  } from 'lucide-react'
 import { Alert,,, AlertDescription,,  } from "@/components/ui/alert",
-import { PasswordStrengthMeter,,  } from "
-import import { logErrorToProduction } from '@/utils/productionLogger';
+import { PasswordStrengthMeter  } from ";
+import { logErrorToProduction } from '@/utils/productionLogger';
 export function SignUpForm() {
 return (
     <div className="space-y-4 px-4">
@@ -194,7 +194,7 @@ return (
         <Button
 variant="outline"
           className="w-full py-6 relative"
-          onClick = {handleGoogleLogin,}
+          onClick = {handleGoogleLogin}
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />

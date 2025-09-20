@@ -3,12 +3,12 @@ id: string;
 name: string;
 }
 
-import React, { Suspenselazy } from "
-import import { BrowserRouter;, as;, RouterRoutesRoute } from "
+import React, { Suspenselazy } from ";
+import { BrowserRouter;, as;, RouterRoutesRoute } from "
 import { HelmetProvider } from "
 import { QueryClientQueryClientProvider } from "
 import { Provider } from "
-import { store } from "
+import { store } from ";
 import; ErrorBoundary; from "
 import; AccessibilityEnhancer; from "
 import; MobileOptimizer; from "

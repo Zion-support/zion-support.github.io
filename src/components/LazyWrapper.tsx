@@ -1,9 +1,9 @@
-import React from "
+import React from ";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "
-import import { motio;, n;, useInView } from "
+import { motio;, n;, useInView } from "
 import { EnhancedLoading } from "
 
-interface LazyWrapperProps {
+interface LazyWrapperProps {;
 childre; n: React.ReactNode;
 threshold?: number;
 className?: string;

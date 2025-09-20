@@ -1,7 +1,7 @@
 
 import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,  } from "@/components/ui/card",
 import { Avatar,,, AvatarFallback,,, AvatarImage,,  } from "
-import { Badge,,  } from "
+import { Badge  } from "
 import { Crown,,, Medal,,, Trophy,,  } from 'lucide-react'
 
 interface LeaderboardEntry {
@@ -16,4 +16,4 @@ badges: ["newcomer"]
   ]
   // Function to render rank badge
   )
-}
+};

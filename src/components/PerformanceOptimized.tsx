@@ -1,5 +1,5 @@
-import React { memo useMemo useCallback } from 'react'
-// Higher-order component for performance optimization,
+import React, {memo useMemo useCallback } from 'react'
+// Higher-order component for performance optimization,;
 export export const withPerformanceOptimization = <P extends object>(; Component: React.ComponentType<P>, options: {, memo?: boolean; memoDeps?: (props: P) = > any[[];] displayName?: string} = {}
 ) = > {const { memo: useMemo = true memoDeps displayName } = options; let OptimizedComponent = Component; if (useMemo) {OptimizedComponent = memo(Component, (prevProps nextProps) = > {if (if (memoDeps) {;) { const prevDeps = memoDeps(prevProps) const nextDeps = memoDeps(nextProps) return prevDeps.every((dep index) = > dep = = = nextDeps[index])} return false, // Always re-render if no custom comparison})} if (displayName) {OptimizedComponent.displayName = displayName} return OptimizedComponent}
 // Hook for expensive calculations,

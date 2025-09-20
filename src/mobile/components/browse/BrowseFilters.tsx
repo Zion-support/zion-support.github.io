@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Button,,  } from '@/components/ui/button'
-import { Slider,,  } from '@/components/ui/slider'
-import { Switch,,  } from '@/components/ui/switch'
-import { Input,,  } from '@/components/ui/input'
+import { Button  } from '@/components/ui/button'
+import { Slider  } from '@/components/ui/slider'
+import { Switch  } from '@/components/ui/switch'
+import { Input  } from '@/components/ui/input'
 import { Select,
 SelectContent
 ,, ,, SelectItem,
@@ -13,7 +13,7 @@ import { X,,, Filter,,  } from 'lucide-react'
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([])
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const addFilter = null;
   return (
     <div className='space-y-3'>

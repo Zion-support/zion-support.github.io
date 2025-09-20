@@ -11,7 +11,7 @@ return (
 <div className="absolute inset-0 bg-black/20"></div>
 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 <div className="text-center">
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
 Request IT Services;
 </h1>
 <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -32,13 +32,13 @@ View Services,
 }<//div><///div>
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { GradientHeading,,  } from '@/components/GradientHeading'
-import { Button,,  } from '@/components/ui/button'
-import { Input,,  } from '@/components/ui/input'
-import { Textarea,,  } from '@/components/ui/textarea'
-import { useToast,,  } from '@/hooks/use-toast'
+import { GradientHeading  } from '@/components/GradientHeading'
+import { Button  } from '@/components/ui/button'
+import { Input  } from '@/components/ui/input'
+import { Textarea  } from '@/components/ui/textarea'
+import { useToast  } from '@/hooks/use-toast'
 import axios from 'axios'
-import { Loader2,,  } from 'lucide-react'
+import { Loader2  } from 'lucide-react'
 return (
     <section className='py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a_#020617)]'>
       <div className='container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
@@ -177,3 +177,4 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }'"
 }
 }
+;

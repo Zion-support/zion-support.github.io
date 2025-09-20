@@ -1,9 +1,10 @@
+import React from "react";
 'use client',
 
-import import Image from 'next/image';
-import import { useState,,  } from 'react';
-import { ImageIcon,,  } from 'lucide-react'
-interface SafeImageProps {
+import Image from 'next/image';
+import { useState  } from 'react';
+import { ImageIcon  } from 'lucide-react'
+interface SafeImageProps {;
   src: string;
 alt: string;  width?: number;interface SafeImageProps {,
 src: string;

@@ -1,4 +1,4 @@
-import import { captureException } from './sentry, ';
+import { captureException } from './sentry, ';
 export function withErrorLogging(handler) {
     return async (req, res) => {
         try {

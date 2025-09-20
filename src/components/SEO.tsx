@@ -1,6 +1,6 @@
 import React from "
 
-interface SEOProps {
+interface SEOProps {;
   title?: string;
   description?: string;
   keywords?: string;

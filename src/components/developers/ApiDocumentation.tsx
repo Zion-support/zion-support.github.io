@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from 'react';
 import { BookOpen, Terminal } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';

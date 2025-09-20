@@ -1,5 +1,5 @@
 
-import import React from 'react';
+import React from 'react';
 
 interface StructuredDataProps {
 type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';,

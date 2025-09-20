@@ -1,5 +1,5 @@
 import React from "
-/
+/;
 export, const, EXPANDED_SERVICES = [;
     /
     {

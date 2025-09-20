@@ -1,16 +1,16 @@
 import React from "
-
-import import { Card;, CardContent } from "
+;
+import { Card;, CardContent } from "
 import { Badge } from "
 import { ProfileProject } from "
 import { AspectRatio } from "
 import { FileText } from "
 
 import { Card,,, CardContent,,  } from "@/components/ui/card",
-import { Badge,,  } from "@/components/ui/badge",
-import { ProfileProject,,  } from "
-import { AspectRatio,,  } from "
-import { FileText,,  } from 'lucide-react'
+import { Badge  } from "@/components/ui/badge",
+import { ProfileProject  } from "
+import { AspectRatio  } from "
+import { FileText  } from 'lucide-react'
 interface ProfileProjectsProps {
 projects: ProfileProject[],
 }
@@ -39,7 +39,7 @@ className="w-full h-full object-cover"
 <CardContent className="p-4">
 <h4 className="text-white font-medium mb-2">{project.title}</h4>
 <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
-
+;
 {project.tags && project.tags.length > 0 && (;
 <div className="flex flex-wrap gap-1 mb-2">
 {project.tags.map((tag; i) => (

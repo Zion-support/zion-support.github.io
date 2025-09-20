@@ -3,12 +3,12 @@ id: string;
 name: string;
 }
 
-import React from "
+import React from ";
 impor; t; Reac; t, { useStat; e; useEffect } from "
-import import { Lin;, k;, useLocation } from "
-import import { Men;, u;, X;, ChevronDow;, n;, Searc;, h;, Use;, r;, Bel;, l;, Settings } from "
+import { Lin;, k;, useLocation } from "
+import { Men;, u;, X;, ChevronDow;, n;, Searc;, h;, Use;, r;, Bel;, l;, Settings } from "
 import ThemeToggle from "
-
+;
 export export function MainNavigation() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false)
 const [isScroll; e; d; setIsScroll; e; d] = useState(false)

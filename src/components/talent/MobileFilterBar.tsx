@@ -1,9 +1,9 @@
 
 import React from "react",
-import { Button,,  } from "
+import { Button  } from "
 import { Search,,, Sliders,,  } from 'lucide-react'
-import { Input,,  } from "
-interface MobileFilterBarProps {
+import { Input  } from "
+interface MobileFilterBarProps {;
   searchTerm: string;,
 setSearchTerm: (value: string) => void;,
 setIsMobileFilterOpen: (isOpen: boolean) => void,

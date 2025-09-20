@@ -1,8 +1,9 @@
+import React from "react";
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Facebook, Github } from 'lucide-react'
 
-interface AuthButtonsProps {
+interface AuthButtonsProps {;
   providers: string[];
   onSignIn: (provider: string) => void;
   loadingProvider?: string | null;

@@ -1,4 +1,5 @@
-import import { useEffect, useRef, useState, useCallback } from 'react, ';
+import React from "react";
+import { useEffect, useRef, useState, useCallback } from 'react, ';
 export const useLazyLoad = (options = {}) => {
     const { threshold = 0.1, rootMargin = '50px', preload = true, preloadDistance = 100 } = options;
     const [isVisible, setIsVisible] = useState(false)

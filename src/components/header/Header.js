@@ -1,11 +1,11 @@
-import { jsx as _jsx, jsxs as _jsxs } from "
-import import { useState, useEffect } from 'react';
-import import { Link, useLocation } from 'react-router-dom';
-import import { Logo } from './Logo';
-import import { UserMenu } from './UserMenu';
-import import { LanguageSelector } from './LanguageSelector';
-import import { Button } from '@/components/ui/Button';
-import import { Menu, X, Search, Phone, Mail } from 'lucide-react';
+import { jsx as _jsx, jsxs as _jsxs } from ";
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Logo } from './Logo';
+import { UserMenu } from './UserMenu';
+import { LanguageSelector } from './LanguageSelector';
+import { Button } from '@/components/ui/Button';
+import { Menu, X, Search, Phone, Mail } from 'lucide-react';
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
@@ -13,15 +13,15 @@ export function Header() {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10)
-import import React, { useState, useEffect } from 'react';
-import import { Link } from 'react-router-dom';
-import import { Logo } from './Logo';
-import import { UserMenu } from './UserMenu';
-import import { LanguageSelector } from './LanguageSelector';
-import import { MainNavigation } from '@/layout/MainNavigation';
-import import { MobileMenu } from './MobileMenu';
-import import { useAuth } from '@/hooks/useAuth';
-import import { useWhitelabel } from '@/context/WhitelabelContext';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Logo } from './Logo';
+import { UserMenu } from './UserMenu';
+import { LanguageSelector } from './LanguageSelector';
+import { MainNavigation } from '@/layout/MainNavigation';
+import { MobileMenu } from './MobileMenu';
+import { useAuth } from '@/hooks/useAuth';
+import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "
 import { generateSearchSuggestions } from "
 import { useNavigate } from "
@@ -55,7 +55,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         }
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+    }, []);
     const isActive = (path) => location.pathname === path;
     const navigationItems = [
         { name: 'Home', path: '/' },

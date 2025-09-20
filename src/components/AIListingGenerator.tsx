@@ -8,7 +8,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { Sparkles, ArrowRight } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
 
-interface GeneratedContent {
+interface GeneratedContent {;
   description: string;
   tags: string[];
   suggestedPrice: {

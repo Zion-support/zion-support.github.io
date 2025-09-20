@@ -1,10 +1,11 @@
-import { Button,,  } from '@/components/ui/button'
-import { Input,,  } from '@/components/ui/input'
-import { Textarea,,  } from '@/components/ui/textarea'
+import React from "react";
+import { Button  } from '@/components/ui/button'
+import { Input  } from '@/components/ui/input'
+import { Textarea  } from '@/components/ui/textarea'
 import { Mail,,, Send,,  } from 'lucide-react'
-import { useState,,  } from "
-import { toast,,  } from "
-interface ProfileContactProps {
+import { useState  } from "
+import { toast  } from "
+interface ProfileContactProps {;
   email?: string;
   profileName: string;,
 profileType: 'service' | 'talent'

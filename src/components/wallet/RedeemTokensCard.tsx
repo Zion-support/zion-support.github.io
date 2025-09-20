@@ -1,15 +1,15 @@
 
 import React, { useState } from "
-import { useWallet } from "
-import import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
-import { Button } from "
-import import { Gift;, ArrowRight;, ExternalLink } from "
-import import { Dialog;
+import { useWallet } from ";
+import { Card;, CardContent;, CardDescription;, CardHeader;, CardTitle } from "
+import { Button } from ";
+import { Gift;, ArrowRight;, ExternalLink } from "
+import { Dialog;
 DialogContent;
 DialogDescription;
 DialogHeader;
 DialogTitle;
-DialogTrigger,
+DialogTrigger
 } from "
 
 type RewardOption = {;
@@ -108,9 +108,9 @@ Learn More <ExternalLink aria-hidden="true" className="ml-1 h-3 w-3" />
 }
 <//Card><///Card>
 import React, { useState } from "react",
-import { useWallet,,  } from "@/hooks/useWallet",
+import { useWallet  } from "@/hooks/useWallet",
 import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,  } from "
-import { Button,,  } from "
+import { Button  } from "
 import { Gift,,, ArrowRight,,, ExternalLink,,  } from 'lucide-react'
 import {
 return (
@@ -184,3 +184,4 @@ variant='outline'
     </Card>
   )
 }
+;

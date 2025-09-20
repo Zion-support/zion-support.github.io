@@ -1,8 +1,9 @@
-import import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
-import import { cva,,, type,,, VariantProps,,  } from &quot;class-variance-authority&quot;
-import { X,,  } from 'lucide-react'
-import import * as React from &quot;react&quot;
-import import { cn,,  } from &quot;@/lib/utils&quot;
+import React from "react";
+import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
+import { cva,,, type,,, VariantProps,,  } from &quot;class-variance-authority&quot;
+import { X  } from 'lucide-react';
+import * as React from &quot;react&quot;
+import { cn  } from &quot;@/lib/utils&quot;
 const Sheet = SheetPrimitive.Root,
 const SheetTrigger = SheetPrimitive.Trigger,
 const SheetClose = SheetPrimitive.Close,

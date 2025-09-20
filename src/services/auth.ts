@@ -4,7 +4,7 @@ name: string;
 }
 
 import { apiClient } from "
-
+;
 export export async function register(name: string; email: string; password: string) {
 const res = await apiClient("/api/auth/register", {
 method: "POST", headers: {

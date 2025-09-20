@@ -1,6 +1,6 @@
-import { Star,,  } from 'lucide-react'
-import { Progress,,  } from "
-interface ReviewStatsProps {
+import { Star  } from 'lucide-react'
+import { Progress  } from "
+interface ReviewStatsProps {;
   averageRating: number;,
 totalReviews: number;
   ratingDistribution?: Record<number number>

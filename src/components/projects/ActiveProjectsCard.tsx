@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect,,, useState,,  } from 'react'
 import Link from 'next/link'
 import { BriefcaseIcon,,, Clock,,  } from 'lucide-react'
@@ -6,7 +7,7 @@ export function ActiveProjectsCard() {
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
   useEffect(() => {
-    if (projects && !isLoading) {
+    if (projects && !isLoading) {;
       const active = null;
   if (isLoading) {
     return (

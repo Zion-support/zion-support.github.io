@@ -11,14 +11,14 @@ return (,
 <h3 className="text-xl font-bold mb-4">ProfileRatings</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>
 },
-</div>)},
+</div>)},;
 export export default ProfileRatings,;<//div><///div>
 import { useState,,, useEffect,,  } from 'react'
-import { Star,,  } from 'lucide-react'
-import { ReviewStats,,  } from "@/components/reviews/ReviewStats",
-import { ReviewsList,,  } from "@/components/reviews/ReviewsList",
-import { useReviews,,  } from "@/hooks/useReviews",
-import { Button,,  } from "
+import { Star  } from 'lucide-react'
+import { ReviewStats  } from "@/components/reviews/ReviewStats",
+import { ReviewsList  } from "@/components/reviews/ReviewsList",
+import { useReviews  } from "@/hooks/useReviews",
+import { Button  } from "
 import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from "
 interface ProfileRatingsProps {
 return (
@@ -110,3 +110,4 @@ reviews={reviews.filter((r) => r.rating < 4)}
   reportReview,
 }/> </TabsContent> </Tabs> </div> </div> </div>)
 }"}
+;

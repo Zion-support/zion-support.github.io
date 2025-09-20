@@ -1,10 +1,10 @@
 import React from 'react'
-import { Card,,  } from '@/components/ui/card'
-import { Badge,,  } from '@/components/ui/badge'
+import { Card  } from '@/components/ui/card'
+import { Badge  } from '@/components/ui/badge'
 import { Avatar,,, AvatarFallback,,, AvatarImage,,  } from '@/components/ui/avatar'
-import { Search,,  } from 'lucide-react'
-import { Input,,  } from "
-import { cn,,  } from "
+import { Search  } from 'lucide-react'
+import { Input  } from "
+import { cn  } from "
 interface Conversation {
             )}
             onClick={() => onSelectConversation(conversation.id)}          >
@@ -49,4 +49,4 @@ src={conversation.avatar}
       </div>
     </div>
   )
-}
+};

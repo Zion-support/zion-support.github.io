@@ -1,7 +1,7 @@
 import React from "
 export, class, SitemapGenerator {
     constructor(config) {
-        this.config = {
+        this.config = {;
             outputPath: './public/sitemap.xml';
     ...config;
         },}

@@ -1,6 +1,6 @@
 import React from "react,,
 ,
-import { SEO,  } from "@/components/SEO",
+import { SEO  } from "@/components/SEO",
 export default function ChatAssistant(props: any) {return (,
 <div className="min-h-screen bg-white">,
 <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />,
@@ -9,7 +9,7 @@ export default function ChatAssistant(props: any) {return (,
 <p className="text-gray-300 text-lg">,
 Professional ChatAssistant services to help your business grow.,
 </p>,
-</div>",
+</div>",;
 </div>,;
 ),,',;
 "<//div><///div>
@@ -17,7 +17,7 @@ Professional ChatAssistant services to help your business grow.,
 const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return,
 import React {
-read?: boolean,
+read?: boolean
 }
 export interface ChatAssistantProps {
   /** Optional canned questions shown when the chat is empty */
@@ -140,3 +140,4 @@ onClick = {handleModalSendConfirm,}
   )
 }
 }
+;

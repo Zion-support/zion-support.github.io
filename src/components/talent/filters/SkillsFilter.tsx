@@ -1,7 +1,7 @@
 import { ChevronDown,,, ChevronUp,,  } from 'lucide-react'
-import { Button,,  } from "@/components/ui/button",
-import { Checkbox,,  } from "
-import { SkillsFilterProps,,  } from "
+import { Button  } from "@/components/ui/button",
+import { Checkbox  } from "
+import { SkillsFilterProps  } from "
 /
 
 export function SkillsFilter({ selectedSkills toggleSkill expanded toggleSection isMobileFilterOpen }: SkillsFilterProps) {
@@ -41,4 +41,4 @@ htmlFor={`skill-${skill}`}
       )}
     </div>
   )
-}
+};

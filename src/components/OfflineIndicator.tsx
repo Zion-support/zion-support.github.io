@@ -1,7 +1,8 @@
+import React from "react";
 import { useState, useEffect } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
 
-export function OfflineIndicator() {
+export function OfflineIndicator() {;
   const [isOnline, setIsOnline] = useState(true);
 
   useEffect(() => {

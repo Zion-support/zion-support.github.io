@@ -2,7 +2,7 @@ import React from "
 
 export function FaqSection() {
 return (
-<div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+<div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">;
 <div className="container mx-auto px-4 s;  m:px-6 l; g:px-8">
 <div className="text-center mb-12">
 <h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
@@ -48,7 +48,7 @@ while complex enterprise solutions can take 3-6 months or more.;
 </div>
 )
 }<//div><///div>
-import { FileText,,  } from 'lucide-react'
+import { FileText  } from 'lucide-react'
 const faqs = [
   {
     question: 'How do I publish my AI product or service?',
@@ -134,3 +134,4 @@ export function FaqSection() {
     </section>
   )
 }
+;

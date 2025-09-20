@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react"
 import { useToast } from "@/hooks/use-toast"
 import { Button } from "@/components/ui/button"
@@ -7,7 +8,7 @@ import { findMatches, MatchResultItem } from "@/lib/ai-matchmaking"
 import { Textarea } from "@/components/ui/textarea"
 import { Sparkles, Search } from 'lucide-react'
 
-interface AIMatchmakerProps {
+interface AIMatchmakerProps {;
   serviceType?: string;
 }
 

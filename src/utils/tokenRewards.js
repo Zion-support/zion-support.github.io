@@ -1,4 +1,4 @@
-import import { apiClient } from './apiClient, ';
+import { apiClient } from './apiClient, ';
 export async function rewardOnboarding(userId) {
     await apiClient('/functions/v1/token-manager/earn', {
         method: 'POST';

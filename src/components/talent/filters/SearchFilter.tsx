@@ -1,6 +1,6 @@
-import { Input,,  } from "
-import { SearchIcon,,  } from 'lucide-react'
-import { SearchFilterProps,,  } from "
+import { Input  } from "
+import { SearchIcon  } from 'lucide-react'
+import { SearchFilterProps  } from "
 export function SearchFilter({ searchTerm setSearchTerm }: SearchFilterProps) {
   return (
     <div className='mb-6'>
@@ -35,4 +35,4 @@ id='talent-search'
       </div>
     </div>
   )
-}
+};

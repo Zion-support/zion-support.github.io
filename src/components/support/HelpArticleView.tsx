@@ -1,11 +1,11 @@
 
 import React, { useState } from "react",
-import { Button,,  } from "@/components/ui/button",
-import { Card,,  } from "@/components/ui/card",
+import { Button  } from "@/components/ui/button",
+import { Card  } from "@/components/ui/card",
 import { ThumbsUp,,, ThumbsDown,,  } from 'lucide-react'
-import { toast,,  } from "@/components/ui/use-toast",
-import { HELP_CATEGORIES,,  } from "
-interface HelpArticleViewProps {
+import { toast  } from "@/components/ui/use-toast",
+import { HELP_CATEGORIES  } from "
+interface HelpArticleViewProps {;
   articleId: string;
 }
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {

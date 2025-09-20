@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { X } from 'lucide-react'
 
-export const FloatingCTA = () => {
+export const FloatingCTA = () => {;
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
 

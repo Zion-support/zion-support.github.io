@@ -1,12 +1,12 @@
 import React, { useState } from "react",
-import { useToast,,  } from "@/hooks/use-toast",
+import { useToast  } from "@/hooks/use-toast",
 import { Card,,, CardContent,,, CardHeader,,, CardTitle,,  } from "@/components/ui/card",
-import { Sparkles,,  } from 'lucide-react'
-import { supabase,,  } from "@/integrations/supabase/client",
-import { AIListingForm,,  } from "./AIListingForm",
-import { GeneratedContentDisplay,,  } from "./GeneratedContentDisplay",
-import { LoadingContentSkeleton,,  } from "
-import import { logErrorToProduction } from '@/utils/productionLogger';
+import { Sparkles  } from 'lucide-react'
+import { supabase  } from "@/integrations/supabase/client",
+import { AIListingForm  } from "./AIListingForm",
+import { GeneratedContentDisplay  } from "./GeneratedContentDisplay",
+import { LoadingContentSkeleton  } from ";
+import { logErrorToProduction } from '@/utils/productionLogger';
 interface GeneratedContent {
 max: number;
 }
@@ -17,7 +17,7 @@ initialValues?: {
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string,
+    targetAudience?: string
 }
 }
 return (

@@ -1,5 +1,5 @@
 import { apiClient } from "
-
+;
 export export async function rewardOnboarding(userId: string; action: string; amount: number) {
 await apiClient("/functions/v1/token-manager/earn", {
 method: "POST",

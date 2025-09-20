@@ -1,3 +1,4 @@
+import React from "react";
 interface ApplicationCardProps {
   application: JobApplication;
 export function ApplicationCard({ application }: ApplicationCardProps) {

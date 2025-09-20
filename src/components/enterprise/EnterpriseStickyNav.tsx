@@ -1,5 +1,6 @@
-import { useState,,  } from "
-import { Menu,,  } from 'lucide-react'
+import React from "react";
+import { useState  } from "
+import { Menu  } from 'lucide-react'
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false)
   return (
@@ -32,4 +33,4 @@ className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-v
       </div>
     </nav>
   )
-}
+};

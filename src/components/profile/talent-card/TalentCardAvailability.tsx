@@ -1,7 +1,7 @@
 
 import React from "
-import { Clock,,  } from 'lucide-react'
-interface TalentCardAvailabilityProps {
+import { Clock  } from 'lucide-react'
+interface TalentCardAvailabilityProps {;
   availabilityType: string;
 export function TalentCardAvailability({
   availabilityType,

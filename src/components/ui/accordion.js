@@ -9,10 +9,10 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 }
-import { jsx as _jsx, jsxs as _jsxs } from "
-import import React from 'react';
-import import { cn } from '@/lib/utils';
-import import { ChevronDown } from 'lucide-react';
+import { jsx as _jsx, jsxs as _jsxs } from ";
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { ChevronDown } from 'lucide-react';
 const Accordion = React.forwardRef((_a, ref) => {
     var { className } = _a, props = __rest(_a, ["className"])
     return (_jsx("div", Object.assign({ ref: ref, className: cn('', className) }, props)))
@@ -39,7 +39,7 @@ AccordionContent.displayName = 'AccordionContent';
 import * as React from "
 import * as AccordionPrimitive from "
 import { ChevronDown } from "
-import { cn } from "
+import { cn } from ";
 const Accordion = AccordionPrimitive.Root;
 const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (<AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props}/>))
 AccordionItem.displayName = "

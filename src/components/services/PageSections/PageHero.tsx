@@ -1,5 +1,5 @@
 
-import { GradientHeading,,  } from "
+import { GradientHeading  } from "
 import { Clock,,, Map,,, DollarSign,,  } from 'lucide-react'
 export function PageHero() {
   return (
@@ -81,4 +81,4 @@ export function PageHero() {
       </div>
     </div>
   )
-}
+};

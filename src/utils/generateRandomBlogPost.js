@@ -1,3 +1,4 @@
+import React from "react";
 const titles = [
     'The Future of AI in Software Development',
     'Building Scalable Microservices Architecture',

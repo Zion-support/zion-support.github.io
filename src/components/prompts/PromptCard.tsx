@@ -1,7 +1,8 @@
-import import { useState,,, ,,  } from 'react';
-import { Copy,,, Send,,  } from 'lucide-react'
-import import { Button,,, ,,  } from '@/components/ui/button';
-import import type { Prompt } from '@/types/prompts';
+import React from "react";
+import { useState,,, ,,  } from 'react';
+import { Copy,,, Send,,  } from 'lucide-react';
+import { Button,,, ,,  } from '@/components/ui/button';
+import type { Prompt } from '@/types/prompts';
 interface PromptCardProps {
   prompt: Prompt;
 export function PromptCard({ prompt }: PromptCardProps) {

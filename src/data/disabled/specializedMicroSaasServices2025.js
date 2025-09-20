@@ -1,3 +1,4 @@
+import React from "react";
 export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
     /
     {

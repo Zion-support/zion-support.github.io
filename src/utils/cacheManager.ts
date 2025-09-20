@@ -1,6 +1,6 @@
 import React from "
 
-interface CacheItem<T> {
+interface CacheItem<T> {;
   data: T;
   timestamp: number;
   expiresAt?: number;

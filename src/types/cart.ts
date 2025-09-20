@@ -1,8 +1,8 @@
 import React from "
 
-export interface CartItem {
+export interface CartItem {;
 id: string; name: string; price: number; quantity: number;
-image?: string,
+image?: string
 }
 
 export interface CartContextType {

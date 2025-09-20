@@ -1,8 +1,8 @@
 
-import { ApplicationStatus,,  } from "@/types/jobs",
-import { Progress,,  } from "
+import { ApplicationStatus  } from "@/types/jobs",
+import { Progress  } from "
 import { CheckCircle2,,, Circle,,, CircleDot,,  } from 'lucide-react'
-import { cn,,  } from "
+import { cn  } from "
 interface ApplicationProgressProps {
 className?: string,
 }
@@ -18,4 +18,4 @@ return <CircleDot className="h-4 w-4 text-blue-500" />
     // This step is upcoming,
 return <Circle className="h-4 w-4 text-muted-foreground/50" />
   }
-}
+};

@@ -46,4 +46,4 @@ htmlFor={`region-${region.id}`}
 }</label> </div>) )
 }</div>)
 }</div>)
-}"}
+}"};

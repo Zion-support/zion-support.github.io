@@ -99,4 +99,4 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
   )
-}
+};

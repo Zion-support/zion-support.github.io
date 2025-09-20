@@ -1,4 +1,5 @@
-import import { useState, useMemo } from 'react, ';
+import React from "react";
+import { useState, useMemo } from 'react, ';
 export function useFilterTalents(talents = []) {
     const [searchTerm, setSearchTerm] = useState('')
     const [selectedSkills, setSelectedSkills] = useState([])

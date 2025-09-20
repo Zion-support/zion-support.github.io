@@ -1,6 +1,6 @@
 import React from "
 
-export interface SEOData {
+export interface SEOData {;
 title: string;
 description: string;,
 keywords: string[[];]

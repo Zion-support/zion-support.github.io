@@ -11,18 +11,18 @@ return (,
 <h3 className="text-xl font-bold mb-4">ConversationDetailView</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>
 },
-</div>)},
+</div>)},;
 export export default ConversationDetailView,;<//div><///div>
-import import React { useState useEffect useRef } from 'react';
-import import { format,,, ,,  } from 'date-fns';
-import { MessageSquare,,  } from 'lucide-react'
-import import { useMessaging,,, ,,  } from '@/context/MessagingContext';
-import import { Button,,, ,,  } from '@/components/ui/button';
-import import { Avatar,,, AvatarFallback,,, AvatarImage,,, ,,  } from '@/components/ui/avatar';
-import import { AspectRatio,,, ,,  } from '@/components/ui/aspect-ratio';
-import import { useAuth,,, ,,  } from '@/hooks/useAuth';
-import import { MessageBubble,,, ,,  } from './MessageBubble';
-import import { DateDivider,,  } from './DateDivider';
+import React, {useState useEffect useRef } from 'react';
+import { format,,, ,,  } from 'date-fns';
+import { MessageSquare  } from 'lucide-react';
+import { useMessaging,,, ,,  } from '@/context/MessagingContext';
+import { Button,,, ,,  } from '@/components/ui/button';
+import { Avatar,,, AvatarFallback,,, AvatarImage,,, ,,  } from '@/components/ui/avatar';
+import { AspectRatio,,, ,,  } from '@/components/ui/aspect-ratio';
+import { useAuth,,, ,,  } from '@/hooks/useAuth';
+import { MessageBubble,,, ,,  } from './MessageBubble';
+import { DateDivider  } from './DateDivider';
 export function ConversationDetailView() {
 loadMessages,
 } = useMessaging()

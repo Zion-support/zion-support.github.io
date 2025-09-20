@@ -1,5 +1,6 @@
+import React from "react";
 import { Copy,,, Facebook,,, Link,,, Share,,, Twitter,,  } from 'lucide-react'
-interface ReferralLinkProps {
+interface ReferralLinkProps {;
   referralLink: string;,
 onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void,

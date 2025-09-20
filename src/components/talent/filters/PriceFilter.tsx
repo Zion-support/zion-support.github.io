@@ -32,4 +32,4 @@ aria-label='Hourly rate range'            aria-label="Hourly rate range"
       )}
     </div>
   )
-}
+};

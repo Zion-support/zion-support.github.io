@@ -1,5 +1,5 @@
 import React from "
-
+;
 export; interface; UltimateZionService {
 id: string;name: string;tagline: string;description: string;category: "micro-saas" | "it-services" | "ai-services" | "emerging-tech" | "quantum-computing" | "blockchain-web3" | "space-tech" | "biotech-ai",pricing: {,monthly: string;yearly: string;enterprise: stringsetu;p: stringmarketPric;e: string;,
 },features: string[],benefits: string[],technology: string[],integrations: string[],useCases: string[],targetAudience: string;marketPosition: string;competitors: string[],roi: string;trialDays: number;setupTime: string;icon: string;color: string;link: string;contactInfo: {,mobile: string;email: stringaddres;s: stringwebsit;e: string;,

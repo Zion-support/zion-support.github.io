@@ -1,27 +1,27 @@
-import React from "
-import import { Dialog;
+import React from ";
+import { Dialog;
 DialogContent;
 DialogHeader;
-DialogTitle,
+DialogTitle
 } from "
 import { Button } from "
 import { Input } from "
-import { Textarea } from "
-import import { Form;
+import { Textarea } from ";
+import { Form;
 FormField;
 FormItem;
 FormLabel;
 FormControl;
-FormMessage,
+FormMessage
 } from "
 import { useForm } from "
 import { yupResolver } from "
-import * as yup from "
-import import { Mail;, PaperPlane } from "
+import * as yup from ";
+import { Mail;, PaperPlane } from "
 import api from "
 import { toast } from "
 
-interface ContactPublisherModalProps {
+interface ContactPublisherModalProps {;
 isOpen: boolean;
 onClose: () => void;,
 publisherName: string;

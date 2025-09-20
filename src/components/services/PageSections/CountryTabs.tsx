@@ -1,6 +1,7 @@
-import import { useState,,, useEffect,,, ,,  } from 'react';
-import { Search,,  } from 'lucide-react'
-interface CountryTabsProps {
+import React from "react";
+import { useState,,, useEffect,,, ,,  } from 'react';
+import { Search  } from 'lucide-react'
+interface CountryTabsProps {;
   popularCountries: string[[];],
 filteredCountries: CountryPricing[[];]
   handleCountrySelect: (country: CountryPricing) => void;

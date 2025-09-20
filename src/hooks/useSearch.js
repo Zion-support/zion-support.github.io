@@ -1,4 +1,5 @@
-import import { useState, useEffect, useCallback, useMemo } from 'react, ';
+import React from "react";
+import { useState, useEffect, useCallback, useMemo } from 'react, ';
 export const useSearch = (data, options) => {
     const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options;
     const [searchState, setSearchState] = useState({

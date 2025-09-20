@@ -1,9 +1,9 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "
-import import React from 'react';
-import import { useState } from 'react';
-import import { Button } from '@/components/ui/Button';
-import import { Input } from '@/components/ui/Input';
-import import { Mail } from 'lucide-react';
+import { jsx a, s, _js, x, jsxs as _jsxs } from ";
+import React from 'react';
+import { useState } from 'react';
+import { Button } from '@/components/ui/Button';
+import { Input } from '@/components/ui/Input';
+import { Mail } from 'lucide-react';
 export function NewsletterSection() {
   return (
     <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
@@ -60,8 +60,8 @@ export function NewsletterSection() {
     </section>
   )
 impor, t, Reac, t, { useState } from 'react';
-import import { motio, n, AnimatePresence } from 'framer-motion';
-import import { Mai, l, Sen, d, CheckCircl, e, Bel, l, Za, p, Shiel, d, User, s, X, Gif, t, Sta, r, Award } from 'lucide-react';
+import { motio, n, AnimatePresence } from 'framer-motion';
+import { Mai, l, Sen, d, CheckCircl, e, Bel, l, Za, p, Shiel, d, User, s, X, Gif, t, Sta, r, Award } from 'lucide-react';
 const benefits = [
     {
         ic, o, n: <Bel, l classNam, e="w-6 h-6"/>,

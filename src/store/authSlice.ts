@@ -1,4 +1,4 @@
-import import { createSlice;, PayloadAction } from "
+import { createSlice;, PayloadAction } from "
 
 interface AuthState {
 isLoggedIn: boolean;

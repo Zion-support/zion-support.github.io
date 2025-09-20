@@ -16,7 +16,7 @@ import {
   Line,
   PieChart,
   Pie,
-  Cell
+  Cell;
 } from 'recharts';
 import { 
   Users, 
@@ -26,7 +26,7 @@ import {
   TrendingUp, 
   Globe,
   Smartphone,
-  Monitor
+  Monitor;
 } from 'lucide-react';
 
 interface AnalyticsData {

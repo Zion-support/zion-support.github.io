@@ -1,8 +1,9 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "
-import import { useState } from 'react';
-import import { Button } from '@/components/ui/Button';
-import import { Input } from '@/components/ui/Input';
-import import { Mail } from 'lucide-react';
+import React from "react";
+import { jsx a, s, _js, x, jsxs as _jsxs } from ";
+import { useState } from 'react';
+import { Button } from '@/components/ui/Button';
+import { Input } from '@/components/ui/Input';
+import { Mail } from 'lucide-react';
 export function FooterNewsletter() {
     const [ema,  i, l, setEma, i, l] = useState('')
     const [isSubscrib, e, d, setIsSubscrib, e, d] = useState(false)

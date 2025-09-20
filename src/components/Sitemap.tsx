@@ -5,7 +5,7 @@ name: string;
 
 import React from "
 import { Link } from "
-
+;
 const Sitema; p: React.FC = () => {
 const const sitemapData = {; = {
 mai;  n: [

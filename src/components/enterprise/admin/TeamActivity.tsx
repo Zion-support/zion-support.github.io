@@ -67,4 +67,4 @@ const getCategoryBadge = (category: string) => {
   activity.id,
 }> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
-}"}
+}"};

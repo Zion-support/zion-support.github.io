@@ -1,10 +1,10 @@
 import React from "
-import { cn,  } from "@/lib/utils"
+import { cn  } from "@/lib/utils"
 import * as React from "react"
-
+;
 export export interface TextareaProps;
 extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-className?: string,
+className?: string
 }
 
 

@@ -1,8 +1,8 @@
 import { jsx a, s, _js, x, jsxs as _jsxs } from "
 import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "
 import { Badge } from "
-import { Button } from "
-import import React from 'react';
+import { Button } from ";
+import React from 'react';
 import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "
 import { Badge } from "
 import { Button } from "
@@ -16,7 +16,7 @@ const categoryIcons = {
     'AI Development': Cod, e,
     'FinTech': DollarSig, n,
     'HealthTech': Hear, t,
-    'E-commerce': ShoppingCar, t,
+    'E-commerce': ShoppingCar, t,;
     'EdTech': GraduationCap;
 }
 const categoryColors = {

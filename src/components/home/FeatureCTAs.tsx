@@ -31,7 +31,7 @@ return (
 </div>
 </div>
 </div>
-</div>
+</div>;
 ),;
 }<//div><///div>
 interface FeatureCTAsProps {

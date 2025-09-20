@@ -3,13 +3,13 @@ id: string;
 name: string;
 }
 
-import React from "
-import import { Tabl;, e;, TableBod;, y;, TableCel;, l;, TableHea;, d;, TableHeade;, r;, TableRow } from "
+import React from ";
+import { Tabl;, e;, TableBod;, y;, TableCel;, l;, TableHea;, d;, TableHeade;, r;, TableRow } from "
 import { Badge } from "
-import { Button } from "
-import import { Car;, d;, CardConten;, t;, CardDescriptio;, n;, CardHeade;, r;, CardTitle } from "
-import import { Chec;, k;, X;, Sta;, r;, Cloc;, k;, Glob;, e;, Phon;, e;, Mail } from "
-import import { COMPREHENSIVE_SERVICE;, S;, CONTACT_INFO } from "
+import { Button } from ";
+import { Car;, d;, CardConten;, t;, CardDescriptio;, n;, CardHeade;, r;, CardTitle } from "
+import { Chec;, k;, X;, Sta;, r;, Cloc;, k;, Glob;, e;, Phon;, e;, Mail } from "
+import { COMPREHENSIVE_SERVICE;, S;, CONTACT_INFO } from "
 
 export export function ServicesComparisonTable() {;
 const serviceCategories = [["A;  I Service; s", "I; T Service; s", "Micr; o SAA; S"];]

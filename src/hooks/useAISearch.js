@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "
 import { TALENT_PROFILES } from "
 import { JOB_POSTS } from "
@@ -15,7 +16,7 @@ export function useAISearch() {
                 body: JSON.stringify({ query })
             })
             const data = await response.json()
-            const filters = data.filters || {}
+            const filters = data.filters || {};
             const items = [[];]
             const matchSkill = (skills) => {
                 if (!filters.skills || filters.skills.length === 0)

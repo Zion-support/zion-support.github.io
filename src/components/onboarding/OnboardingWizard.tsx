@@ -1,5 +1,6 @@
-import { Rocket,,, FileText,,, Users,,, Calendar,,, Eye,,, MessageSquare,,  } from 'lucide-react'
-import import { cn,,  } from '@/lib/utils';
+import React from "react";
+import { Rocket,,, FileText,,, Users,,, Calendar,,, Eye,,, MessageSquare,,  } from 'lucide-react';
+import { cn  } from '@/lib/utils';
 interface WizardStep {
   title: string;,
 description: string;

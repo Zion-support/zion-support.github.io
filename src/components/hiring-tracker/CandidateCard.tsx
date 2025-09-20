@@ -13,13 +13,13 @@ import {
   MoreVertical, 
   Calendar, 
   AlertTriangle, 
-  BriefcaseIcon 
+  BriefcaseIcon ;
 } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { useToast } from "@/hooks/use-toast";

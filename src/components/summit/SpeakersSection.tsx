@@ -1,6 +1,6 @@
 import Image from "
 import { Twitter,,, Linkedin,,  } from 'lucide-react'
-interface Speaker {
+interface Speaker {;
   name: string;
 title: string;
 avatar: string;

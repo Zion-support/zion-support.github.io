@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCw, WifiOff } from 'lucide-react'
 
-interface ApiErrorBoundaryProps {
+interface ApiErrorBoundaryProps {;
   children: ReactNode;
   queryClient?: QueryClient;
   fallback?: ReactNode;

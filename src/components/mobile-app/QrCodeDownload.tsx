@@ -21,7 +21,7 @@ return (
 <div className="max-w-5xl mx-auto">
 <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
 <div className="flex-1">
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
 Download <span className="text-zion-cyan">Zion</span> to Your Device;
 </h2>
 <p className="text-lg text-gray-300 mb-8">

@@ -1,10 +1,10 @@
-import React { useState useRef useEffect } from 'react',
-import import Image from 'next/image';
-import import { motion,,, AnimatePresence,,, ,,  } from 'framer-motion';
-import { ImageIcon,,, AlertTriangle,,  } from 'lucide-react'
-import import { cn,,, ,,  } from '@/lib/utils';
-import import { imageOptimization,,, ,,  } from '@/utils/performance';
-import import { logWarn,,  } from '@/utils/productionLogger';
+import React, {useState useRef useEffect } from 'react',;
+import Image from 'next/image';
+import { motion,,, AnimatePresence,,, ,,  } from 'framer-motion';
+import { ImageIcon,,, AlertTriangle,,  } from 'lucide-react';
+import { cn,,, ,,  } from '@/lib/utils';
+import { imageOptimization,,, ,,  } from '@/utils/performance';
+import { logWarn  } from '@/utils/productionLogger';
 interface OptimizedImageProps {
   src: string;,
 alt: string;

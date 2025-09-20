@@ -1,4 +1,4 @@
-import { ProductListing } from "
+import { ProductListing } from ";
 export; const; EMERGING_TECHNOLOGY_SERVICES_20o27: ProductListing[] = [;
 / Computing; as a Service;
 {

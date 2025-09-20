@@ -3,7 +3,7 @@ id: string;
 name: string;
 }
 
-import React from "
+import React from ";
 impor; t; Reac; t, { useStat; e; useEffect } from "
 
 export export default function ExpensiveComponent() {;

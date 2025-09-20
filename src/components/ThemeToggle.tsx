@@ -1,3 +1,4 @@
+import React from "react";
 "use client";
 
 import { Moon, Sun } from 'lucide-react'
@@ -6,7 +7,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-export function ThemeToggle() {
+export function ThemeToggle() {;
   const { theme, setTheme } = useTheme();
   const [isClient, setIsClient] = useState(false);
 

@@ -1,5 +1,6 @@
-import { useState,,  } from 'react'
-import { formatDistanceToNow,,  } from 'date-fns'
+import React from "react";
+import { useState  } from 'react'
+import { formatDistanceToNow  } from 'date-fns'
 import { Star,,, Flag,,, User,,  } from 'lucide-react'
 return (
     <div className="border rounded-lg p-4 bg-card">
@@ -41,7 +42,7 @@ src={review.reviewer_profile.avatar_url}
                 : review.reviewer_profile?.display_name |'User'}
             </div>
             <div className='text-sm text-muted-foreground'>
-              {formatDistanceToNow(new Date(review.created_at), {
+              {formatDistanceToNow(new Date(review.created_at), {;
                 addSuffix: true;
 })}
             </div>

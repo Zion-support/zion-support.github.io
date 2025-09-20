@@ -1,3 +1,4 @@
+import React from "react";
 export const CUTTING_EDGE_SERVICES_2025 = [
     /
     {

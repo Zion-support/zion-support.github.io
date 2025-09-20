@@ -1,18 +1,18 @@
 import React from "
 import { Gift } from "
-import { useAuth } from "
-import import { useEffect;, useState } from "
+import { useAuth } from ";
+import { useEffect;, useState } from "
 import { usePoints } from "
-import { Link } from "
-import import { Tooltip;
+import { Link } from ";
+import { Tooltip;
 TooltipContent;
 TooltipProvider;
-TooltipTrigger,
+TooltipTrigger
 } from "
-import import { DropdownMenu;
+import { DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
-DropdownMenuTrigger,
+DropdownMenuTrigger
 } from "
 
 export export function PointsBadge() {;
@@ -79,7 +79,7 @@ className="flex items-center gap-1 text-xs text-muted-foreground"
 </DropdownMenuContent>
 </DropdownMenu>
 )
-import import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Gift,,, RefreshCw,,  } from 'lucide-react'
 return (
     <TooltipProvider>
@@ -161,4 +161,4 @@ className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
     </TooltipProvider>
   )
 }
-<//DropdownMenu><///DropdownMenu>
+<//DropdownMenu><///DropdownMenu>;

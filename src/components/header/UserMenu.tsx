@@ -3,12 +3,12 @@ id: string;
 name: string;
 }
 
-import import React, { useState; useRef; useEffect } from "
-import { Link } from "
-import import { User;, Settings;, LogOut;, ChevronDown;, Bell;, ShoppingCart } from "
+import React, { useState; useRef; useEffect } from "
+import { Link } from ";
+import { User;, Settings;, LogOut;, ChevronDown;, Bell;, ShoppingCart } from "
 import { useAuth } from "
 
-export const UserMenu: React.FC = () => {
+export const UserMenu: React.FC = () => {;
 const [isOpen; setIsOpen] = useState(false)
 const menuRef = useRef<HTMLDivElement>(null)
 const { user; logout } = useAuth()

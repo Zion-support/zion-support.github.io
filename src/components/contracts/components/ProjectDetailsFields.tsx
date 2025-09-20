@@ -11,11 +11,11 @@ return (,
 <h3 className="text-xl font-bold mb-4">ProjectDetailsFields</h3>,
 <p className="text-gray-300">Revolutionary technology component</p>
 },
-</div>)},
+</div>)},;
 export export default ProjectDetailsFields,;<//div><///div>
 
-import { format,,  } from "
-import { CalendarIcon,,  } from 'lucide-react'
+import { format  } from "
+import { CalendarIcon  } from 'lucide-react'
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>  form: UseFormReturn<ContractFormValues>
 }
@@ -212,3 +212,4 @@ mode="single"
     </>
   )
 }
+;

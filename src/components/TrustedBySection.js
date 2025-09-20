@@ -1,6 +1,6 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "
-import import { motion } from 'framer-motion';
-import import { Car, d, CardContent } from './ui/Card';
+import { jsx a, s, _js, x, jsxs as _jsxs } from ";
+import { motion } from 'framer-motion';
+import { Car, d, CardContent } from './ui/Card';
 const trustedCompanies = [
     {
         na, m, e: 'TechCor, p',
@@ -83,7 +83,7 @@ export function TrustedBySection() {
     childr, e, n: [_js, x("butto, n", { classNa, m, e: "p, x-8 p, y-3 b, g-gradien, t-t, o-r fro, m-zio, n-cya, n t, o-zio, n-purpl, e tex, t-whit, e rounde, d-l, g fon, t-semibol, d hov, e, r:fro, m-zio, n-purpl, e hov, e, r:t, o-zio, n-cya, n transitio, n-al, l duratio, n-30, 0 hov, e, r:shado, w-x, l hov, e, r:shado, w-zio, n-cya, n/2, 5",
     childr, e, n: "Ge, t Starte, d Toda, y" }), _js, x("butto,  n", { classNa, m, e: "p, x-8 p, y-3 borde, r borde, r-zio, n-cya, n tex, t-zio, n-cya, n rounde, d-l, g fon, t-semibol, d hov, e, r:b, g-zio, n-cya, n hov, e, r:tex, t-whit, e transitio, n-al, l duratio, n-30, 0",
     childr, e, n: "Schedul, e Dem, o" })] })] }) })] }) }))
-import import React from 'react';
+import React from 'react';
 export function TrustedBySection() {
     const companies = [
         'Microsof,  t', 'Googl, e', 'Amazo, n', 'Met, a', 'Appl, e', 'Netfli, x'

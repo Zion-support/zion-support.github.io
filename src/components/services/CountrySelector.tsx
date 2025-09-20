@@ -1,5 +1,6 @@
+import React from "react";
 import { useState,,, useEffect,,  } from 'react'
-import { Globe,,  } from 'lucide-react'
+import { Globe  } from 'lucide-react'
 selectedCountry: CountryPricing | null,
 }
   // Set top/popular countries,
@@ -62,4 +63,4 @@ key={item.country}
       </Select>
     </div>
   )
-}
+};

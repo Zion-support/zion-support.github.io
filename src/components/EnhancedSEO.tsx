@@ -1,7 +1,7 @@
 import React from "
 import { Helmet } from "
 
-interface EnhancedSEOProps {
+interface EnhancedSEOProps {;
 title?: string;
 description?: string;
 keywords?: string;

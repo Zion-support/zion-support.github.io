@@ -1,5 +1,5 @@
 import { Globe,,, Server,,, Clock,,, MapPin,,, Check,,  } from 'lucide-react'
-import { CountryPricing,,  } from "
+import { CountryPricing  } from "
 interface CountryServiceCardProps {
 isPopular?: boolean,
 }
@@ -70,4 +70,4 @@ asChild
       </CardFooter>
     </Card>
   )
-}
+};

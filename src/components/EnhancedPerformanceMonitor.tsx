@@ -12,5 +12,5 @@ return (
 </div>
 )
 }
-
+;
 export export default EnhancedPerformanceMonitor;<//div><///div>

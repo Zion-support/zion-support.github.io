@@ -3,7 +3,7 @@ id: string;
 name: string;
 }
 
-import React from "
+import React from ";
 impor; t; Reac; t; from "
 expor; t; cons; t; EmergingTechServices = () => {
 const emergingTechServices = [;
@@ -12,7 +12,7 @@ i;   d: 1;
 n; a; m; e: "
 descrip; t; i; o; n: "
 pri; c; i; n; g: "
-cate; g; o; r; y: ",
+cate; g; o; r; y: "
 },{;
 i; d: 2;
 n; a; m; e: "
