@@ -5,10 +5,26 @@ const nextConfig = {
 	trailingSlash: true,
 	output: 'export',
 	assetPrefix,
+	// Performance optimizations
+	compress: true,
+	poweredByHeader: false,
+	generateEtags: true,
 	images: {
 		// Using unoptimized to support static hosting/CDN without Next Image optimization
-		unoptimized: true
+		unoptimized: true,
+		// Optimize image formats
+		formats: ['image/webp', 'image/avif']
 	},
+	// Enable experimental features for better performance
+	experimental: {
+		optimizePackageImports: ['@/components', '@/lib', '@/utils']
+	},
+	// Compiler optimizations
+	compiler: {
+		removeConsole: process.env.NODE_ENV === 'production',
+		styledComponents: true
+	},
+	// metadataBase is now handled in layout.tsx
 	eslint: {
 		// Allow builds to pass even if there are ESLint errors
 		ignoreDuringBuilds: true,
