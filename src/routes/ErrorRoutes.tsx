@@ -4,7 +4,7 @@ import React from "react;";
 import NotFound from "@/pages/NotFound;";
 
 export default function ErrorRoutes() {
-return (;
-<Route path="*" element={<NotFound />} />
-);
-}</Route path="*" element={<NotFound /><//Route path="*" element={<NotFound />}}
+  return (
+  return (
+  return (;
+<Route path="*" element={<NotFound />} />;

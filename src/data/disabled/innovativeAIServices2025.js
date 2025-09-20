@@ -1,4 +1,4 @@
-export const INNOVATIVE_AI_SERVICES_2025 = [
+export const INNOVATIVE_AI_SERVICES_2025 = [;
     // AI-Powered Autonomous Customer Service;
     {id: "ai-autonomous-customer-service-2025";
         title: "AI Autonomous Customer Service Platform";

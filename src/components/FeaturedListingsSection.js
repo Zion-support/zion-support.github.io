@@ -159,223 +159,24 @@ const featuredListings = [
     tea, m: "6 experts",
         locatio, n: "Remote",
     feature, d: fals, e,
-        technologie, s: ["Pytho, n", "Tablea, u", "PostgreSQ, L", "Apach, e Spar, k", "Reac, t"],
-        highlight, s: ["Rea, l-tim, e Dashboard, s", "Predictiv, e Model, s", "Dat, a Integratio, n", "Custo, m Report, s"]
-    }
+        technologie, s: ["Pytho, n", "Tablea, u", "PostgreSQ, L", "Apach, e Spar, k", "Reac, t"],;
+        highlight, s: ["Rea, l-tim, e Dashboard, s", "Predictiv, e Model, s", "Dat, a Integratio, n", "Custo, m Report, s"];
+    };
 ];
-const categories = [
-    "Al, l", "We, b Developmen, t", "Mobil, e Developmen, t", "Clou, d & DevOp, s", "A, I & Machin, e Learnin, g", "Io, T Solution, s", "Dat, a Analytic, s"
+const categories = [;
+    "Al, l", "We, b Developmen, t", "Mobil, e Developmen, t", "Clou, d & DevOp, s", "A, I & Machin, e Learnin, g", "Io, T Solution, s", "Dat, a Analytic, s";
 ];
 export function FeaturedListingsSection() {
     const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState("All");
     const [hoveredListi, n, g, setHoveredListi, n, g] = useState(null);
     const [showFilte,  r, s, setShowFilte, r, s] = useState(false);
-    const filteredListings = selectedCategory === "All"
+    const filteredListings = selectedCategory === "All";
         ? featuredListings;
         : featuredListings.filter(listing => listing.category === selectedCategory);
     const containerVariants = {
         hidde,  n: { opacit, y: 0 },
         visibl, e: {opacit, y: 1,
     transitio, n: {
-                staggerChildre, n: 0.1, 5,
-    delayChildre, n: 0.1}
-        }
-    };
-    ;
-    const renderStars = (rating) => {
-        return Array.from({ lengt,  h: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-        ★
-      </span>));
-    };
-    return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
-      {/* Enhanced background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-            backgroundImag,  e: `radial-gradient(circle at 75% 25%, currentColo, r, 1p, x, transparent 1p, x)`,
-            backgroundSiz, e: '60px 60px'}}/>
-      </div>
-
-      {/* Floating decorative elements */}
-      <div className="absolute inset-0">
-        <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotat, e: 360 }} transition={{ duratio, n: 2, 0,
-    repea, t: Infinit, y, eas, e: "linear" }}/>
-        <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotat, e: -360 }} transition={{ duratio, n: 2, 5,
-    repea, t: Infinit, y, eas, e: "linear" }}/>
-        <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scal, e: [1, 1.2, 1] }} transition={{ duratio, n: 3,
-    repea, t: Infinit, y, eas, e: "easeInOut" }}/>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div className="text-center mb-16" initial={{ opacit, y: 0,
-    y: 20 }} whileInView={{ opacit, y: 1,
-    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6 }}>
-          <h2 className="text-4xl m, d:text-5xl l, g:text-6xl font-bold text-white mb-6">
-            Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Projects</span>
-          </h2>
-          <p className="text-zion-slate-light text-lg m, d:text-xl max-w-4xl mx-auto leading-relaxed">
-            Discover our most popular and highly-rated projects that showcase our expertise and innovation. 
-            Each project represents our commitment to excellence and cutting-edge technology.
-          </p>
-        </motion.div>
-
-        {/* Category filters */}
-        <motion.div className="flex flex-wrap justify-center gap-3 mb-12" initial={{ opacit, y: 0,
-    y: 20 }} whileInView={{ opacit, y: 1,
-    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
-    dela, y: 0.2 }}>
-          {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${selectedCategory === category;
-                ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
-                : 'bg-zion-blue-dark/40 text-zion-slate-light hove,  r:bg-zion-blue-dark/60 hove, r:text-white border border-zion-blue-light/3, 0'}`}>
-              {category}
-            </button>))}
-        </motion.div>
-        
-        <motion.div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-8 mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ onc, e: true }}>
-          {filteredListings.map((listing) => (<motion.div key={listing.id} variants={itemVariants} onHoverStart={() => setHoveredListing(listing.id)} onHoverEnd={() => setHoveredListing(null)}>
-              <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-blue-light/30 hove,  r:border-zion-cyan/50 transition-all duration-500 hove, r:transform hove, r:scale-[1.0, 2] hove, r:shadow-2xl hove, r:shadow-zion-cyan/20 h-full">
-                {/* Featured badge */}
-                {listing.featured && (<div className="absolute top-4 left-4 z-10">
-                    <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
-                      <Award className="w-3 h-3 inline mr-1"/>
-                      Featured;
-                    </div>
-                  </div>)}
-
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img src={listing.image} alt={listing.title} className="w-full h-full object-cover group-hove, r:scale-110 transition-transform duration-500"/>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
-                  <div className="absolute top-4 right-4">
-                    <button className="p-2 rounded-full bg-zion-blue-dark/80 hove, r:bg-zion-cyan transition-colors duration-300">
-                      <Heart className="w-4 h-4 text-white"/>
-                    </button>
-                  </div>
-                </div>
-                
-                {/* Content */}
-                <div className="p-6 flex flex-col h-full">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
-                      {listing.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hove, r:text-zion-cyan transition-colors duration-300">
-                    {listing.title}
-                  </h3>
-                  
-                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed flex-grow">
-                    {listing.description}
-                  </p>
-                  
-                  {/* Quick info */}
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
-                      <Clock className="w-3 h-3"/>
-                      <span>{listing.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
-                      <Users className="w-3 h-3"/>
-                      <span>{listing.team}</span>
-                    </div>
-                  </div>
-                  
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {listing.tags.slice(0,  3).map((ta,  g, index) => (<span key={index} className="px-2 py-1 rounded-md bg-zion-slate/30 text-zion-slate-light text-xs">
-                        {tag}
-                      </span>))}
-                    {listing.tags.length > 3 && (<span className="text-zion-cyan/60 text-xs">
-                        +{listing.tags.length - 3} more;
-                      </span>)}
-                  </div>
-                  
-                  {/* Stats */}
-                  <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current"/>
-                      <span>{listing.rating}</span>
-                      <span>({listing.reviews})</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-1">
-                        <Eye className="w-4 h-4"/>
-                        <span>{listing.views}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Heart className="w-4 h-4"/>
-                        <span>{listing.likes}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Price and CTA */}
-                  <div className="flex items-center justify-between mt-auto">
-                    <span className="text-2xl font-bold text-zion-cyan">
-                      {listing.price}
-                    </span>
-                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hove,  r:from-zion-purple-light hove, r:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hove, r:scale-105">
-                      View Details;
-                      <ArrowRight className="w-4 h-4"/>
-                    </button>
-                  </div>
-
-                  {/* Expanded details on hover */}
-                  <AnimatePresence>
-                    {hoveredListing === listing.id && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacit, y: 0,
-    heigh, t: 0, y: 10 }} animate={{ opacit, y: 1,
-    heigh, t: "auto", y: 0 }} exit={{ opacit, y: 0,
-    heigh, t: 0, y: 10 }} transition={{ duratio, n: 0.3 }}>
-                        <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Highlight, s:</h4>
-                        <div className="space-y-2 mb-4">
-                          {listing.highlights.map((highligh, t, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacit,  y: 0,
-    x: -10 }} animate={{ opacit, y: 1,
-    x: 0 }} transition={{ dela, y: idx * 0.1 }}>
-                              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                              <span>{highlight}</span>
-                            </motion.div>))}
-                        </div>
-
-                        <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologie, s:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {listing.technologies.slice(0,  4).map((tec,  h, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial={{ opacit,  y: 0,
-    scal, e: 0.8 }} animate={{ opacit, y: 1,
-    scal, e: 1 }} transition={{ dela, y: idx * 0.1 }}>
-                              {tech}
-                            </motion.span>))}
-                        </div>
-                      </motion.div>)}
-                  </AnimatePresence>
-                </div>
-              </div>
-              
-              <div className="px-6 pb-6">
-                <Link to={service.link} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hove, r:bg-blue-700 transition-colors duration-300 text-center block group-hove, r:shadow-lg">
-                  Get Started;
-                </Link>
-              </div>
-            </div>))}
-</></div>
-        
-        {/* Enhanced bottom CTA */}
-        <motion.div className="text-center" initial={{ opacit, y: 0,
-    y: 20 }} whileInView={{ opacit, y: 1,
-    y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
-    dela, y: 0.3 }}>
-          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
-            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
-              <p className="text-white text-lg mb-4">
-                Ready to start your next project?
-              </p>
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hove, r:from-zion-cyan-dark hove, r:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-zion-cyan/25">
-                View All Projects;
-                <ArrowRight className="w-5 h-5"/>
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>);
-    section >
-    ;
-    ;
-}
+                staggerChildre, n: 0.1, 5,;
+    delayChildre, n: 0.1};
+        };

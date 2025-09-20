@@ -7,12 +7,3 @@ const { data; error } = await supabase;
 .select("*")
 .eq("category_id", categoryId)
 .order("created_at", { ascending: false });
-<<<<<<< HEAD
-if (error) {
-throw new Error(error.message)}
-=======
-if (error) {throw new Error(error.message)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-
-return (data as ForumPost[]) || [];
-}

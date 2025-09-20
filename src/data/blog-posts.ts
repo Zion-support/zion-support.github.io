@@ -1,4 +1,5 @@
 export interface BlogPost {
+<<<<<<< HEAD
   id: number;
   title: string;
   excerpt: string;
@@ -10,10 +11,23 @@ export interface BlogPost {
   tags: string[];
   image: string;
   featured: boolean;
+=======
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  readTime: number;
+  tags: string[];
+  image?: string;
+  author: string;
+>>>>>>> acd3fffc0febff8152b7eda17ac2cde729b1e4ec
 }
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+<<<<<<< HEAD
     id: 1,
     title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
     excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.",
@@ -123,5 +137,41 @@ Quantum computing represents a paradigm shift that will transform industries. Wh
     tags: ["Quantum Computing", "Technology", "Innovation", "Security"],
     image: "/api/placeholder/600/400",
     featured: false
+=======
+    id: '1',
+    title: 'The Future of AI in Business',
+    slug: 'future-of-ai-in-business',
+    excerpt: 'Discover how artificial intelligence is transforming modern business operations and what to expect in the coming years.',
+    content: '# The Future of AI in Business\n\nArtificial Intelligence is revolutionizing how businesses operate...',
+    date: '2024-01-15',
+    readTime: 5,
+    tags: ['AI', 'Business', 'Technology'],
+    image: '/images/ai-business.jpg',
+    author: 'John Doe'
+  },
+  {
+    id: '2',
+    title: 'Cloud Computing Best Practices',
+    slug: 'cloud-computing-best-practices',
+    excerpt: 'Learn the essential best practices for implementing and managing cloud infrastructure effectively.',
+    content: '# Cloud Computing Best Practices\n\nCloud computing has become the backbone of modern IT infrastructure...',
+    date: '2024-01-10',
+    readTime: 7,
+    tags: ['Cloud', 'DevOps', 'Infrastructure'],
+    image: '/images/cloud-computing.jpg',
+    author: 'Jane Smith'
+  },
+  {
+    id: '3',
+    title: 'Cybersecurity Trends for 2024',
+    slug: 'cybersecurity-trends-2024',
+    excerpt: 'Stay ahead of the latest cybersecurity threats and trends that will shape the industry in 2024.',
+    content: '# Cybersecurity Trends for 2024\n\nAs technology evolves, so do the threats we face...',
+    date: '2024-01-05',
+    readTime: 6,
+    tags: ['Cybersecurity', 'Security', 'Trends'],
+    image: '/images/cybersecurity.jpg',
+    author: 'Mike Johnson'
+>>>>>>> acd3fffc0febff8152b7eda17ac2cde729b1e4ec
   }
 ];

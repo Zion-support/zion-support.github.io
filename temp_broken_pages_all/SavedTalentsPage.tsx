@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
 import { useState, useEffect } from "react";,
 import { SEO } from "@/components/SEO";,
 import { TalentCard } from "@/components/talent/TalentCard";,
@@ -11,7 +12,9 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from "lucide-react";
 import { logInfo, logWarn } from "@/utils/productionLogger";
 export default function SavedTalentsPage() {
-return (
+  return (
+  return (
+  return (
     <>
       <SEO
 title='Saved Talents | Zion AI Marketplace'
@@ -36,19 +39,11 @@ icon={<Heart className='h-8 w-8' />}
         ) : (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
             {savedTalents.map(talent => (              <TalentCard
-<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
-key = {talent.id,}
-                talent = {talent,}
-                onViewProfile = {handleViewProfile,}
-                onRequestHire = {handleRequestHire,}
-                isAuthenticated = {!!user,}
-=======
 key = {talent.id}
                 talent = {talent}
                 onViewProfile = {handleViewProfile}
                 onRequestHire = {handleRequestHire}
                 isAuthenticated = {!!user}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/SavedTalentsPage.tsx
               />
             ))}
           </div>
@@ -70,24 +65,29 @@ location,
 availability
 is verified) `)
 }finally {
+  
   setIsLoading (false)
 }
 }, [user])
 }
   try {
+  
   if (!user) {
 }//Remove from saved talents const {
+  
   error '
 }= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talentId)
 }else {
+  
   //Add to saved talents const {
+  
   error '
 }= await supabase .from ('saved talents') .insert ([ {
   user id: user.id talent id: talentId;
 }])
 if (error) {throw error}data: talentData error: talentError '
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ()
-return,
+return
 }catch (error) {
   logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined {'
   message: 'Error toggling saved talent'
@@ -98,3 +98,16 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div>)
 }</div> </>)
 }'"}
+import React from 'react';
+
+export default function SavedTalentsPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">SavedTalentsPage</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SavedTalentsPage.tsx

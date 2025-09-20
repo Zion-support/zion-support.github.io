@@ -1,4 +1,4 @@
-export const enhanced2025ComprehensiveServices = [
+export const enhanced2025ComprehensiveServices = [;
     // AI-Powered Business Intelligence & Analytics;
     {id: 'ai-business-intelligence-suite';
         name: 'AI Business Intelligence Suite';
@@ -501,7 +501,7 @@ export const enhanced2025ComprehensiveServices = [
     }
 ];
 // Additional specialized services for different industries;
-export const specializedIndustryServices = [
+export const specializedIndustryServices = [;
     // Renewable Energy Management Platform;
     {id: 'renewable-energy-management-platform';
         name: 'Renewable Energy Management Platform';
@@ -604,5 +604,5 @@ export const specializedIndustryServices = [
     }
 ];
 // Export all services combined;
-export const allEnhancedServices = [...enhanced2025ComprehensiveServices,
+export const allEnhancedServices = [...enhanced2025ComprehensiveServices,;
     ...specializedIndustryServices];

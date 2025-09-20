@@ -1,4 +1,4 @@
-export const INDUSTRY_SPECIFIC_SOLUTIONS = [
+export const INDUSTRY_SPECIFIC_SOLUTIONS = [;
     {id: "healthcare-ai-diagnostics";
         title: "Healthcare AI Diagnostics & Patient Care Platform";
         description: "Comprehensive AI-powered healthcare platform for medical diagnostics, patient monitoring, treatment planning, and healthcare workflow optimization.",

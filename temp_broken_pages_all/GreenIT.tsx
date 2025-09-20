@@ -1,11 +1,15 @@
+import React from 'react';
 
+<<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
 import { SEO } from "@/components/SEO";,
 import { GradientHeading } from "@/components/GradientHeading";,
 import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from "lucide-react";
 import Link from "next/link";
 export default function GreenIT() {
-return (
+  return (
+  return (
+  return (
     <>
       <SEO
 title="Green IT Solutions - Sustainable Technology"
@@ -239,13 +243,14 @@ BatteryCharging, as, BatteryCharging9,
 BatteryFull, as, BatteryFull9,
 BatteryLow, as, BatteryLow9,
 BatteryMedium, as, BatteryMedium9,
-BatteryEmpty, as, BatteryEmpty9,
-BatteryCharging, as, BatteryCharging10,
-BatteryFull, as, BatteryFull10,
-BatteryLow, as, BatteryLow10,;
+BatteryEmpty, as, BatteryEmpty9,;
+BatteryCharging, as, BatteryCharging10;
+BatteryFull, as, BatteryFull10;
+BatteryLow, as, BatteryLow10;
 BatteryMedium, as, BatteryMedium10,;
 BatteryEmpty, as, BatteryEmpty10 } from "lucide-react";
 export default function GreenIT(...args: unknown[]): unknown {
+  
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
@@ -530,9 +535,9 @@ features: ['Environmental data collection'
       savings: 'Time and resource savings',
 implementation: '6 - 8 weeks'
       pricing: 'Starting from $8000'
-}
-  ]
-export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
+};
+  ];
+export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
@@ -970,12 +975,14 @@ roadmap
           </motion.div>
         </div>
       </section>
+export default function GreenIT() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">GreenIT</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/GreenIT.tsx
     </div>
-  )
-}
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT GreenIT }
+  );
 }

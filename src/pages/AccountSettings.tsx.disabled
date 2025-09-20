@@ -2,37 +2,21 @@ import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
-import { useAuthContext } from '@/context/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-<<<<<<< HEAD:src/pages/AccountSettings.tsx.disabled
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Separator } from '@/components/ui/separator';
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/AccountSettings.tsx
 import { Wallet, Database, Save } from 'lucide-react';
 
 export default function AccountSettings() {
-  const [user, setUser] = useState(null);
+  const { user } = useAuth();
   const [didHandle, setDidHandle] = useLocalStorage('didHandle', '');
   const [displayWeb3, setDisplayWeb3] = useLocalStorage('displayWeb3', false);
   const [enableBackup, setEnableBackup] = useLocalStorage('enableBackup', false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Try to get user from context, fallback to null if not available
-  try {
-    const authContext = useAuthContext();
-    if (authContext?.user) {
-      setUser(authContext.user);
-    }
-  } catch (error) {
-    // Context not available, use fallback
-    setUser(null);
-  }
 
   const handleConnectWallet = async () => {
     // Wallet connection logic
@@ -104,11 +88,7 @@ export default function AccountSettings() {
                   </p>
                 </div>
                 <Switch
-<<<<<<< HEAD:src/pages/AccountSettings.tsx.disabled
                   id='displayWeb3'
-=======
-id='displayWeb3'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/AccountSettings.tsx
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}
                 />
@@ -125,11 +105,7 @@ id='displayWeb3'
                   </p>
                 </div>
                 <Switch
-<<<<<<< HEAD:src/pages/AccountSettings.tsx.disabled
                   id='backup'
-=======
-id='backup'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/AccountSettings.tsx
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
                 />
@@ -141,11 +117,7 @@ id='backup'
                 </div>
               )}
               <Button
-<<<<<<< HEAD:src/pages/AccountSettings.tsx.disabled
                 onClick={handleSave}
-=======
-onClick={handleSave}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/AccountSettings.tsx
                 disabled={isSubmitting}
                 className='w-full'
               >
@@ -167,11 +139,7 @@ onClick={handleSave}
                 {didHandle ? (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
                     <svg
-<<<<<<< HEAD:src/pages/AccountSettings.tsx.disabled
                       xmlns='http://www.w3.org/2000/svg'
-=======
-xmlns='http://www.w3.org/2000/svg'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/AccountSettings.tsx
                       width='20'
                       height='20'
                       viewBox='0 0 24 24'
@@ -190,11 +158,7 @@ xmlns='http://www.w3.org/2000/svg'
                 ) : (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
                     <svg
-<<<<<<< HEAD:src/pages/AccountSettings.tsx.disabled
                       xmlns='http://www.w3.org/2000/svg'
-=======
-xmlns='http://www.w3.org/2000/svg'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/AccountSettings.tsx
                       width='20'
                       height='20'
                       viewBox='0 0 24 24'
@@ -244,11 +208,7 @@ xmlns='http://www.w3.org/2000/svg'
               <div>
                 <h3 className='font-medium mb-2'>Recovery Options</h3>
                 <Button
-<<<<<<< HEAD:src/pages/AccountSettings.tsx.disabled
                   variant='outline'
-=======
-variant='outline'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/AccountSettings.tsx
                   className='w-full'
                   disabled={!enableBackup}
                 >
@@ -264,11 +224,6 @@ variant='outline'
           </Card>
         </div>
       </main>
-<<<<<<< HEAD:src/pages/AccountSettings.tsx.disabled
     </>
-  );
-=======
-</>
-  )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/AccountSettings.tsx
+  );origin/main
 }

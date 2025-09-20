@@ -1,4 +1,4 @@
-export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
+export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [;
     // AI-Powered Financial Compliance Automation;
     {id: "ai-financial-compliance-automation-2025";
         title: "AI Financial Compliance Automation Platform";

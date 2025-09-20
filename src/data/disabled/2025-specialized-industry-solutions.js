@@ -1,4 +1,4 @@
-export const specializedIndustrySolutions2025 = [
+export const specializedIndustrySolutions2025 = [;
     // Healthcare & Biotech Solutions;
     {id: 1;
         name: "MedTech AI Platform";
@@ -470,21 +470,21 @@ export const specializedIndustrySolutions2025 = [
     }
 ];
 // Utility functions for specialized industry services;
-export const getServicesByIndustry = (industry) => {
+export const getServicesByIndustry = (industry) => {;
     return specializedIndustrySolutions2025.filter(service => service.industry === industry);
 };
-export const getServicesByCategory = (category) => {
+export const getServicesByCategory = (category) => {;
     return specializedIndustrySolutions2025.filter(service => service.category === category);
 };
-export const getServicesByCompliance = (compliance) => {
+export const getServicesByCompliance = (compliance) => {;
     return specializedIndustrySolutions2025.filter(service => service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase())));
 };
-export const getServicesByTechnology = (technology) => {
+export const getServicesByTechnology = (technology) => {;
     return specializedIndustrySolutions2025.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())));
 };
-export const getPopularIndustryServices = (limit = 6) => {
+export const getPopularIndustryServices = (limit = 6) => {;
     return specializedIndustrySolutions2025.slice(0, limit);
 };
-export const getServicesByPriceRange = (minPrice, maxPrice) => {
+export const getServicesByPriceRange = (minPrice, maxPrice) => {;
     return specializedIndustrySolutions2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };

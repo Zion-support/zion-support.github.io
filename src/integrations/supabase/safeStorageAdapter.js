@@ -1,6 +1,6 @@
 import { safeStorage } from '../../utils/safeStorage, ';
-export const supabaseStorageAdapter = {
-    async getItem(key) {
+export const supabaseStorageAdapter = {;
+    async getItem(key) {;
         return safeStorage.getItem(key);
     },
     async setItem(key, value) {
@@ -8,4 +8,5 @@ export const supabaseStorageAdapter = {
     },
     async removeItem(key) {
         safeStorage.removeItem(key);
-    }};
+    }
+};

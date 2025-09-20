@@ -5,5 +5,3 @@ id: string;,
 name: string;
 }
 
-// TypeScript file,
-export const placeholder = 'placeholder';

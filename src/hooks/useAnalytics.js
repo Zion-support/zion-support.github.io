@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react, ';
-export const useAnalytics = (config = {}) => {
+export const useAnalytics = (config = {}) => {;
     const { enableTracking = true, enablePerformanceTracking = true, enableUserBehaviorTracking = true, enableHeatmapTracking = false, sessionTimeout = 30, batchSize = 10, flushInterval = 5000 } = config;
     const [events, setEvents] = useState([]);
     const [currentSession, setCurrentSession] = useState(null);
@@ -22,7 +22,7 @@ export const useAnalytics = (config = {}) => {
     // Initialize user session;
     const initializeSession = useCallback(() => {const sessionId = generateSessionId();
         sessionRef.current = sessionId;
-        const session = {
+        const session = {;
             id: sessionId;
             startTime: Date.now();
             lastActivity: Date.now();
@@ -35,8 +35,8 @@ export const useAnalytics = (config = {}) => {
         trackEvent('session', 'start', 'session_started');
     }, []);
     // Start tracking;
-    const startTracking = useCallback(() => {
-        if (!enableTracking)
+    const startTracking = useCallback(() => {;
+        if (!enableTracking);
             return;
         setIsTracking(true);
         // Track page view;
@@ -59,17 +59,17 @@ export const useAnalytics = (config = {}) => {
         setupEventBatching();
     }, [enableTracking, enablePerformanceTracking, enableUserBehaviorTracking, enableHeatmapTracking]);
     // Stop tracking;
-    const stopTracking = useCallback(() => {
+    const stopTracking = useCallback(() => {;
         setIsTracking(false);
         if (flushTimerRef.current) {
             clearTimeout(flushTimerRef.current);
         }
     }, []);
     // Track custom event;
-    const trackEvent = useCallback((category, action, label, value, metadata) => {
-        if (!isTracking || !currentSession)
+    const trackEvent = useCallback((category, action, label, value, metadata) => {;
+        if (!isTracking || !currentSession);
             return;
-        const event = {
+        const event = {;
             id: generateEventId();
             type: 'custom';
             category,
@@ -84,9 +84,9 @@ export const useAnalytics = (config = {}) => {
         updateSessionActivity();
     }, [isTracking, currentSession]);
     // Track page view;
-    const trackPageView = useCallback(() => {if (!isTracking || !currentSession)
+    const trackPageView = useCallback(() => {if (!isTracking || !currentSession);
             return;
-        const event = {
+        const event = {;
             id: generateEventId();
             type: 'pageview';
             category: 'navigation';
@@ -104,15 +104,16 @@ export const useAnalytics = (config = {}) => {
     updateSessionActivity();
     }, [isTracking, currentSession]);
     // Track performance metrics;
-    const trackPerformanceMetrics = useCallback(async () => {if (!enablePerformanceTracking)
+    const trackPerformanceMetrics = useCallback(async () => {if (!enablePerformanceTracking);
             return;
         try {
+  
             // Wait for performance metrics to be available;
             await new Promise(resolve => setTimeout(resolve, 1000));
             const navigation = performance.getEntriesByType('navigation')[0];
             const paintEntries = performance.getEntriesByType('paint');
             const layoutShiftEntries = performance.getEntriesByType('layout-shift');
-            const metrics = {
+            const metrics = {;
                 pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
                 timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0;
                 firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
@@ -127,9 +128,9 @@ export const useAnalytics = (config = {}) => {
         }
     }, [enablePerformanceTracking]);
     // Setup user behavior tracking;
-    const setupUserBehaviorTracking = useCallback(() => {
+    const setupUserBehaviorTracking = useCallback(() => {;
         // Click tracking;
-        const handleClick = (event) => {
+        const handleClick = (event) => {;
             const target = event.target;
             const tagName = target.tagName.toLowerCase();
             const className = target.className;
@@ -144,7 +145,7 @@ export const useAnalytics = (config = {}) => {
      };
         // Scroll tracking;
         let scrollTimeout;
-        const handleScroll = () => {
+        const handleScroll = () => {;
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(() => {
                 const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
@@ -152,7 +153,7 @@ export const useAnalytics = (config = {}) => {
             }, 150);
         };
         // Form interaction tracking;
-        const handleFormInteraction = (event) => {
+        const handleFormInteraction = (event) => {;
             const target = event.target;
             trackEvent('interaction', 'form_input', 'form_field_interaction', undefined, {
                 fieldType: target.type;
@@ -173,11 +174,11 @@ export const useAnalytics = (config = {}) => {
         };
     }, []);
     // Setup heatmap tracking;
-    const setupHeatmapTracking = useCallback(() => {if (!enableHeatmapTracking)
+    const setupHeatmapTracking = useCallback(() => {if (!enableHeatmapTracking);
             return;
         // Track mouse movements for heatmap;
         let moveTimeout;
-        const handleMouseMove = (event) => {
+        const handleMouseMove = (event) => {;
             clearTimeout(moveTimeout);
             moveTimeout = setTimeout(() => {
                 trackEvent('heatmap', 'mouse_movement', 'mouse_position', undefined, {
@@ -192,8 +193,8 @@ export const useAnalytics = (config = {}) => {
         };
     }, [enableHeatmapTracking]);
     // Setup session monitoring;
-    const setupSessionMonitoring = useCallback(() => {
-        const checkSessionTimeout = () => {
+    const setupSessionMonitoring = useCallback(() => {;
+        const checkSessionTimeout = () => {;
             const now = Date.now();
             const timeoutMs = sessionTimeout * 60 * 1000;
             if (now - lastActivityRef.current > timeoutMs) {
@@ -206,9 +207,9 @@ export const useAnalytics = (config = {}) => {
         return () => clearInterval(interval);
     }, [sessionTimeout, initializeSession]);
     // Setup event batching;
-    const setupEventBatching = useCallback(() => {
-        const flushEvents = () => {
-            if (events.length >= batchSize) {
+    const setupEventBatching = useCallback(() => {;
+        const flushEvents = () => {;
+            if (events.length >= batchSize) {;
                 sendEventsToServer(events);
                 setEvents([]);
             }
@@ -216,104 +217,19 @@ export const useAnalytics = (config = {}) => {
         flushTimerRef.current = setInterval(flushEvents, flushInterval);
     }, [events.length, batchSize, flushInterval]);
     // Update session activity;
-    const updateSessionActivity = useCallback(() => {
+    const updateSessionActivity = useCallback(() => {;
         lastActivityRef.current = Date.now();
         setCurrentSession(prev => prev ? { ...prev, lastActivity: Date.now() } : null);
      }, []);
     // Send events to server;
     const sendEventsToServer = useCallback(async (eventsToSend) => {
         try {
+  
+  ;
+  ;
+  ;
             // In a real implementation, this would send to your analytics server;
             // Simulate API call;
             await fetch('/api/analytics/events', {
                 method: 'POST';
                 headers: { 'Content-Type': 'application/json' };
-                body: JSON.stringify(eventsToSend)});
-     }
-        catch (error) {
-            
-        }
-    }, []);
-    // Flush events manually;
-    const flushEvents = useCallback(() => {
-        if (events.length > 0) {
-            sendEventsToServer(events);
-            setEvents([]);
-        }
-    }, [events, sendEventsToServer]);
-    // Get analytics summary;
-    const getAnalyticsSummary = useCallback(() => {
-        if (!currentSession)
-            return null;
-        const sessionDuration = Date.now() - currentSession.startTime;
-        const eventsByCategory = events.reduce((acc, event) => {
-            acc[event.category] = (acc[event.category] || 0) + 1;
-            return acc;
-        }, {});
-        return {
-            sessionId: currentSession.id;
-            sessionDuration: Math.round(sessionDuration / 1000), // seconds;
-            pageViews: currentSession.pageViews;
-            totalEvents: events.length;
-            eventsByCategory,
-            performanceMetrics;
-        };
-    }, [currentSession, events, performanceMetrics]);
-    // Track conversion;
-    const trackConversion = useCallback((goal, value, metadata) => {
-        trackEvent('conversion', goal, 'goal_achieved', value, metadata);
-    }, [trackEvent]);
-    // Track error;
-    const trackError = useCallback((error, context, metadata) => {
-        trackEvent('error', 'error_occurred', context, undefined, {
-            errorMessage: error.message;
-            errorStack: error.stack;
-            ...metadata;
-        });
-    }, [trackEvent]);
-    return {
-        // State;
-        isTracking,
-        currentSession,
-        performanceMetrics,
-        events,
-        // Actions;
-        trackEvent,
-        trackPageView,
-        trackConversion,
-        trackError,
-        flushEvents,
-        // Analytics;
-        getAnalyticsSummary,
-        // Session management;
-        initializeSession,
-        startTracking,
-        stopTracking;
-    };
-};
-// Utility functions;
-const generateSessionId = () => {
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-};
-const generateEventId = () => {
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-};
-const getDeviceInfo = () => {
-    const userAgent = navigator.userAgent;
-    let deviceType = 'desktop';
-    if (/Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
-        deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? 'tablet' : 'mobile';
-    }
-    return {type: deviceType;
-        screen: {
-            width: window.screen.width;
-            height: window.screen.height};
-<<<<<<< HEAD
-        viewport: {
-            width: window.innerWidth;
-=======
-        viewport: {width: window.innerWidth;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-            height: window.innerHeight}
-    };
-};

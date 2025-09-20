@@ -1,4 +1,4 @@
-export const enhancedITInfrastructureServices2025 = [
+export const enhancedITInfrastructureServices2025 = [;
     {id: 201;
         name: "Zero-Trust Network Architecture";
         category: "Network Security";

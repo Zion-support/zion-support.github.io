@@ -1,4 +1,4 @@
-export const INNOVATIVE_NEW_SERVICES_2025 = [
+export const INNOVATIVE_NEW_SERVICES_2025 = [;
     {id: "ai-predictive-business-intelligence";
         title: "AI-Powered Predictive Business Intelligence Platform";
         description: "Advanced business intelligence platform that uses machine learning to predict market trends, customer behavior, and business outcomes with 95% accuracy.",
@@ -88,9 +88,9 @@ export const INNOVATIVE_NEW_SERVICES_2025 = [
             website: "https://ziontechgroup.com"}
     }
 ];
-    export const getServicesByCategory = (category) => {
+    export const getServicesByCategory = (category) => {;
     return INNOVATIVE_NEW_SERVICES_2025.filter(service => service.category === category);
 };
-export const getFeaturedServices = () => {
+export const getFeaturedServices = () => {;
     return INNOVATIVE_NEW_SERVICES_2025.filter(service => service.price >= 3000 || service.category === "AI & Analytics");
 };

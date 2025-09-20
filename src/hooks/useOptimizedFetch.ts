@@ -1,11 +1,12 @@
 import { useState; useEffect, useCallback  } from "react, ";
 
 interface UseFetchOptions {
+  
 immediate?: boolean;}
 }
 
 export const useOptimizedFetch = <T>(;
-url: string;
+url: string;,
 options: UseFetchOptions = {}
 ) => {
 const [data, setData] = useState<T | null>(null);
@@ -17,6 +18,7 @@ setLoading(true);
 setError(null);
 
 try {
+  
 const response = await fetch(url);
 if (!response.ok) {
 throw new Error(`HTTP error! status: ${response.status}`);
@@ -26,6 +28,7 @@ setData(result);
 } catch (err) {
 setError(err instanceof Error ? err.message : "An error occurred");
 } finally {
+  
 setLoading(false);
 }
 }, [url]);

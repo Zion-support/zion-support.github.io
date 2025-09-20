@@ -1,3 +1,26 @@
+<<<<<<<< HEAD:temp_broken_pages_all/JobDetails.tsx
+import React { useState useEffect } from 'react';
+import useJobDetails from '@/hooks/useJobDetails';
+import { ApplyToJobModal } from "@/components/messaging/job-application";
+import { SEO } from "@/components/SEO";
+import { useWhitelabel } from "@/context/WhitelabelContext";
+import { JobDetailsSkeleton } from "@/components/jobs";
+interface Job {
+  
+  id: string;
+title: string;
+  description: string;
+  company_name?: string;
+client_id: string;
+  skills?: string[];
+  created_at: string;
+category: string;
+}
+}
+isOpen={isApplyModalOpen}
+          onClose={() => setIsApplyModalOpen(false)}        />
+      )}
+</>
 import React from 'react';
 
 export default function JobDetails() {
@@ -8,5 +31,6 @@ export default function JobDetails() {
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
     </div>
+<<<<<<<< HEAD:temp_broken_pages_all/JobDetails.tsx
   );
 }

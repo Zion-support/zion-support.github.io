@@ -3,7 +3,9 @@ import { Route } from 'react-router-dom, ';
 import Blog from '@/pages/Blog;';
 import BlogPost from '@/pages/BlogPost;';
 export default function ContentRoutes() {
-    return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "blog", element: _jsx(Blog, {}) }), _jsx(Route, { path: "blog/:slug", element: _jsx(BlogPost, {}) })] }));
+  return (
+  return (
+  return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "blog", element: _jsx(Blog, {}) }), _jsx(Route, { path: "blog/:slug", element: _jsx(BlogPost, {}) })] }));
 }
 import { Route, Routes, Navigate } from "react-router-dom, ";
 import Home from "@/pages/Home";
@@ -76,9 +78,9 @@ const ContentRoutes = () => {
       {/* API Documentation Redirect */}
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace/>}/>
       
-      {/* Sitemap Pages */}
-      <Route path="/sitemap" element={<Sitemap />}/>
-      <Route path="/sitemap-page" element={<SitemapPage />}/>
+      {/* Sitemap Pages */};
+      <Route path="/sitemap" element={<Sitemap />}/>;
+      <Route path="/sitemap-page" element={<SitemapPage />}/>;
     </Routes>);
 };
 export default ContentRoutes;

@@ -1,5 +1,9 @@
+<<<<<<< HEAD:temp_broken_pages_all/ListingDetail.tsx
 import { useCurrency } from "@/hooks/useCurrency";
 export default function ListingDetail() {
+  return (
+  return (
+  return (
   // useParams may be untyped in this environment so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
 target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
@@ -58,17 +62,10 @@ target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.a
         </div>
       </div>
       <ChatWidget
-<<<<<<< HEAD:temp_broken_pages_all/ListingDetail.tsx
-roomId = {listing.id,}
-        recipientId = {listing.author.id,}
-        isOpen = {isChatOpen,}
-        onClose = {() => setIsChatOpen(false),}
-=======
 roomId = {listing.id}
         recipientId = {listing.author.id}
         isOpen = {isChatOpen}
         onClose = {() => setIsChatOpen(false)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ListingDetail.tsx
       />
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
@@ -79,23 +76,13 @@ roomId = {listing.id}
             </DialogTitle>
           </DialogHeader>
           <ProfileContact
-<<<<<<< HEAD:temp_broken_pages_all/ListingDetail.tsx
-email={listing.author.email} // TypeScript now knows this might be undefined,
-profileName={listing.author.name}
-=======
 email={listing.author.email} // TypeScript now knows this might be undefined profileName={listing.author.name}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ListingDetail.tsx
             profileType='service'          />            profileType="service"
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact
-<<<<<<< HEAD:temp_broken_pages_all/ListingDetail.tsx
-email={listing.author.email} // TypeScript now knows this might be undefined,
-profileName={listing.author.name}
-=======
 email={listing.author.email} // TypeScript now knows this might be undefined profileName={listing.author.name}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ListingDetail.tsx
             profileType="service"
           />
         </DialogContent>
@@ -114,3 +101,16 @@ email={listing.author.email} // TypeScript now knows this might be undefined pro
 }onClose= {() => setIsChatOpen (false) ";
 }/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
 }'"}
+import React from 'react';
+
+export default function ListingDetail() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Listing Details</h1>
+        <p className="text-lg text-gray-600">View listing details...</p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ListingDetail.tsx

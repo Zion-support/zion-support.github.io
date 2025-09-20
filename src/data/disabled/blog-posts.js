@@ -1,4 +1,4 @@
-export const BLOG_POSTS = [
+export const BLOG_POSTS = [;
     {id: '1';
         title: 'The Future of AI in Technology';
         slug: 'future-of-ai-in-technology';
@@ -16,30 +16,3 @@ export const BLOG_POSTS = [
         category: 'Artificial Intelligence';
         readTime: 8;
         featuredImage: '/blog/ai-future.jpg';
-<<<<<<< HEAD
-        isFeatured: true};
-    {
-        id: '2';
-=======
-        isFeatured: true,
-    };
-    {id: '2';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-        title: 'Building Scalable Web Applications';
-        slug: 'building-scalable-web-applications';
-        excerpt: 'Best practices and architectural patterns for creating web applications that can handle millions of users.';
-        content: 'This article covers the essential principles of building scalable web applications...';
-        author: {
-            name: 'Michael Chen';
-            avatar: '/avatars/michael.jpg';
-            avatarUrl: '/avatars/michael.jpg';
-            bio: 'Senior Software Engineer';
-            title: 'Senior Software Engineer'};
-        publishedAt: '2024-01-10';
-        publishedDate: '2024-01-10';
-        tags: ['Web Development', 'Scalability', 'Architecture'],
-        category: 'Web Development';
-        readTime: 12;
-        featuredImage: '/blog/scalable-web.jpg';
-        isFeatured: false}
-];

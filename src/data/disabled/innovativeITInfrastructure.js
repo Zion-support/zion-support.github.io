@@ -1,4 +1,4 @@
-export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [
+export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES = [;
     // Green Computing Infrastructure;
     {id: "green-computing-infrastructure";
         title: "Green Computing Infrastructure";

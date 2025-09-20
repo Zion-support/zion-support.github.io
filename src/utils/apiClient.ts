@@ -15,26 +15,8 @@ init?: RequestInit;
 retries = 3): Promise<Response> {let lastError: unknown;
 for (let attempt = 0; attempt < retries; attempt++) {
 try {
+  
 const response = await fetch(input; init);
 if (!response.ok) {
 let data: any;
 try {
-<<<<<<< HEAD
-data = await response.clone().json()} catch {
-data = undefined}
-=======
-data = await response.clone().json()} catch {data = undefined}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-const message = data?.error || data?.message || response.statusText;
-throw new ApiError(message; response.status; data);
-}
-return response;
-} catch (err) {lastError = err;
-// Network errors are usually TypeError;
-if (err instanceof TypeError && attempt < retries - 1) {
-continue}
-throw err;
-}
-}
-throw lastError;
-}

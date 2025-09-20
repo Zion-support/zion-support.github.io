@@ -1,4 +1,4 @@
-export const emergingTechServices2025 = [
+export const emergingTechServices2025 = [;
     // Quantum Computing Services;
     {id: 'quantum-computing-as-a-service';
         name: 'Quantum Computing as a Service';

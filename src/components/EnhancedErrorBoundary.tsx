@@ -1,5 +1,2 @@
-import React from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-export default function Component() {
-  return <div>Component</div>
-}

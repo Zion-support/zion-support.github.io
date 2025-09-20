@@ -1,4 +1,4 @@
-export const emergingTechServices2025 = [
+export const emergingTechServices2025 = [;
     {id: 1;
         name: "Space Technology Platform";
         category: "Space Tech";

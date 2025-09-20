@@ -1,10 +1,13 @@
-
 import React from 'react';
+<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";, // Changed from useNavigate,
 import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 export default function PaymentSuccess() {
+  return (
+  return (
+  return (
   const router = null;
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
@@ -20,12 +23,7 @@ export default function PaymentSuccess() {
         </p>
         <div className='flex flex-col space-y-3'>
           <Button
-<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
-onClick={() => router.push('/dashboard')} // Changed to router.push,
-className='bg-zion-purple hover:bg-zion-purple-dark text-white'
-=======
 onClick={() => router.push('/dashboard')} // Changed to router.push className='bg-zion-purple hover:bg-zion-purple-dark text-white'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/payment-success.tsx
           >
             {t('errors.go_to_dashboard')}
           </Button>
@@ -43,12 +41,7 @@ variant='outline'
         </p>
         <div className="flex flex-col space-y-3">
           <Button
-<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
-onClick={() => router.push('/dashboard')} // Changed to router.push,
-className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-=======
 onClick={() => router.push('/dashboard')} // Changed to router.push className="bg-zion-purple hover:bg-zion-purple-dark text-white"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/payment-success.tsx
           >
             {t('errors.go_to_dashboard')}
           </Button>
@@ -59,7 +52,15 @@ variant="outline"
             {t('errors.return_home')}
           </Button>
         </div>
+
+export default function PaymentSuccess() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Payment Successful</h1>
+        <p className="text-lg text-gray-600">Your payment was processed successfully...</p>
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/payment-success.tsx
       </div>
     </div>
-  )
+  );
 }

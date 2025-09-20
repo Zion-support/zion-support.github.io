@@ -5,7 +5,9 @@ import { GradientHeading } from "@/components/GradientHeading";,
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function AdminDashboard() {
-return (
+  return (
+  return (
+  return (
     <>
       <SEO
 title='Admin Dashboard'
@@ -101,5 +103,4 @@ src="https: //placehold.co/800x400"
         </div>
       </main>
 </>
-  )
 }

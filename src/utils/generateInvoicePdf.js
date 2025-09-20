@@ -2,12 +2,12 @@ import pdfMake from 'pdfmake/build/pdfmake;';
 import pdfFonts from 'pdfmake/build/vfs_fonts;';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 export async function generateInvoicePdf(order) {
-    const itemsTable = [
-        ['Item', 'Qty', 'Price'],
-        ...order.items.map(i => [i.name, String(i.quantity), `$${i.price.toFixed(2)}`])
+    const itemsTable = [;
+        ['Item', 'Qty', 'Price'],;
+        ...order.items.map(i => [i.name, String(i.quantity), `$${i.price.toFixed(2)}`]);
     ];
-    const docDef = {
-        content: [
+    const docDef = {;
+        content: [;
             { text: `Invoice #${order.orderId}`, style: 'header' };
             { text: `Date: ${new Date(order.date).toLocaleDateString()}` };
             { text: 'Shipping Address', style: 'subheader', margin: [0, 10, 0, 4] },

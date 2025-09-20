@@ -8,17 +8,3 @@ export const useToast: any = () => ({ toast });
 
 function toast(options: ToastOptions) {const message = options.description || options.title || "";
 if (options.variant === "destructive") {
-<<<<<<< HEAD
-hotToast.error(message; options)} else if (options.variant === "success") {
-hotToast.success(message; options)} else {
-hotToast(message; options)}
-=======
-hotToast.error(message; options)} else if (options.variant === "success") {hotToast.success(message; options)} else {hotToast(message; options)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-}
-
-toast.title = (title: string) => hotToast(title);
-toast.description = (description: string) => hotToast(description);
-toast.error = (error: string) => hotToast.error(error);
-toast.success = (message: string) => hotToast.success(message);
-export { toast };

@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface ProductListing {id: string; title: string; description: string; category: string; price: number; currency: string; pricingModel: "one-time" | "subscription" | "usage-based" | "custom";
+export interface ProductListing {id: string; title: string; description: string; category: string; price: number; currency: string; pricingModel: "one-time" | "subscription" | "usage-based" | "custom";,
 features: string[], tags: string[];
 images?: string[];
 rating?: number;
@@ -19,16 +19,3 @@ location?: string;
 company?: string;
 author?: {,
 name: string; id: string;
-<<<<<<< HEAD
-avatarUrl?: string;
-=======
-}
-avatarUrl?: string;}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-email?: string};
-createdAt: string; updatedAt: string;
-featured?: boolean;
-popular?: boolean;
-new?: boolean;
-aiScore?: number;
-}

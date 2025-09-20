@@ -9,28 +9,8 @@ return (;
 key={i}
 className="p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg"
 >;
-<<<<<<< HEAD
-<div className="flex items-center space-x-4">
-<Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />
-<div className="flex-1 space-y-2">
-<Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />
-<Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" />
-</div>
-</div>
-<Skeleton className="h-24 w-full bg-zion-blue-light/20" />
-=======
 <div className="flex items-center space-x-4">;
 <Skeleton className="w-16 h-16 rounded-full bg-zion-blue-light/20" />;
 <div className="flex-1 space-y-2">;
 <Skeleton className="h-4 w-3/4 bg-zion-blue-light/20" />;
 <Skeleton className="h-3 w-1/2 bg-zion-blue-light/20" />;
-</div>
-</div>
-<Skeleton className="h-24 w-full bg-zion-blue-light/20" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-</div>
-))}
-</div>
-);
-}
-<//div><///div>

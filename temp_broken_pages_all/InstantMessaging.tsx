@@ -5,7 +5,9 @@ import { GradientHeading } from "@/components/GradientHeading";,
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function InstantMessaging() {
-return (
+  return (
+  return (
+  return (
     <>
       <SEO
 title='Instant Messaging'
@@ -110,5 +112,4 @@ src="https://placehold.co/800x400"
         </div>
       </main>
 </>
-  )
 }

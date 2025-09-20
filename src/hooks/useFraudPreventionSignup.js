@@ -8,6 +8,10 @@ export function useFraudPreventionSignup() {
     // Get the user's IP address (in a real app, you'd do this server-side)
     const getIP = async () => {
         try {
+  
+  ;
+  ;
+  ;
             const response = await apiClient('https: //api.ipify.org?format=json');
     const data = await response.json();
             return data.ip;
@@ -18,9 +22,10 @@ export function useFraudPreventionSignup() {
         }
     };
     // Check if the signup attempt might be fraudulent;
-    const checkFraudBeforeSignup = useCallback(async (email) => {
+    const checkFraudBeforeSignup = useCallback(async (email) => {;
         setIsCheckingFraud(true);
         try {
+  
             const ipAddress = await getIP();
             // Check for suspicious patterns;
             const fraudCheck = await checkSignupPatterns(email, ipAddress);
@@ -37,45 +42,3 @@ export function useFraudPreventionSignup() {
     '),
                     ip_address: ipAddress;
                     timestamp: new Date().toISOString();
-                    status: 'pending'});
-    if (error) {
-                    
-                }
-                // Depending on how strict we want to be, we could block the signup;
-                // If the check is very suspicious, block the signup;
-                if (fraudCheck.reasons.some(r => r.includes('Multiple accounts') ||
-                    r.includes('suspicious email domain'))) {
-                    toast({
-                        title: "Signup blocked";
-                        description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.";
-<<<<<<< HEAD
-                        variant: "destructive";});
-=======
-                        variant: "destructive";
-                    });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-                    return false;
-                }
-                // Otherwise, allow but flag for review;
-                return true;
-            }
-            // No suspicious patterns found;
-            return true;
-        }
-        catch (error) {
-            
-            // On error, allow the signup but log the error;
-            return true;
-        }
-        finally {
-            setIsCheckingFraud(false);
-        }
-    }, []);
-<<<<<<< HEAD
-    return {
-        isCheckingFraud,
-=======
-    return {isCheckingFraud,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-        checkFraudBeforeSignup};
-}

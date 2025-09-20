@@ -80,9 +80,9 @@ const benefits = [
     },
     {
         ic, o, n: <User s classNam e="w-6 h-6"/>,
-    tit, l, e: "Communit, y",
-        descripti, o, n: "Joi, n ou, r networ, k o, f tec, h professional, s an, d innovator, s"
-    }
+    tit, l, e: "Communit, y",;
+        descripti, o, n: "Joi, n ou, r networ, k o, f tec, h professional, s an, d innovator, s";
+    };
 ];
 const stats = [
     { val, u, e: "50, K+",
@@ -90,22 +90,22 @@ const stats = [
     { val, u, e: "9, 5%",
     lab, e, l: "Satisfactio, n" },
     { val, u, e: "2, 4/7",
-    lab, e, l: "Suppor, t" },
-    { val, u, e: "10, 0%",
-    lab, e, l: "Fre, e" }
+    lab, e, l: "Suppor, t" },;
+    { val, u, e: "10, 0%",;
+    lab, e, l: "Fre, e" };
 ];
 export function NewsletterSection() {
     const [ema,  i, l, setEma, i, l] = useState('');
     const [isSubscrib, e, d, setIsSubscrib, e, d] = useState(false);
     const [isLoadi,  n, g, setIsLoadi, n, g] = useState(false);
     const [showBenefi, t, s, setShowBenefi, t, s] = useState(false);
-    const handleSubmit = (e) => {
+    const handleSubmit = (e) => {;
         e.preventDefault();
         // Here you would typically send the email to your newsletter service;
         setIsSubscribed(true);
         setEmail('');
     };
-    const handleUnsubscribe = () => {
+    const handleUnsubscribe = () => {;
         setIsSubscribed(false);
         setEmail('');
     };

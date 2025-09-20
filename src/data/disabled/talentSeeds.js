@@ -1,4 +1,4 @@
-export const TALENT_SEEDS = [
+export const TALENT_SEEDS = [;
     {id: 'seed-1';
         user_id: 'user-seed-1';
         full_name: 'Alice Johnson';
@@ -7,30 +7,3 @@ export const TALENT_SEEDS = [
         skills: ['React', 'Node.js', 'TypeScript'],
         hourly_rate: 120;
         availability_type: 'full_time'};
-<<<<<<< HEAD
-    {
-        id: 'seed-2';
-=======
-    {id: 'seed-2';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-        user_id: 'user-seed-2';
-        full_name: 'Brian Lee';
-        professional_title: 'Data Scientist';
-        profile_picture_url: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&h=200';
-        skills: ['Python', 'TensorFlow', 'Data Analysis'],
-        hourly_rate: 150;
-        availability_type: 'part_time'};
-<<<<<<< HEAD
-    {
-        id: 'seed-3';
-=======
-    {id: 'seed-3';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-        user_id: 'user-seed-3';
-        full_name: 'Carla Gomez';
-        professional_title: 'DevOps Engineer';
-        profile_picture_url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&h=200';
-        skills: ['AWS', 'Docker', 'Kubernetes'],
-        hourly_rate: 140;
-        availability_type: 'project'}
-];

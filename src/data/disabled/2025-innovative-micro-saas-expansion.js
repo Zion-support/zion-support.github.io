@@ -1,4 +1,4 @@
-export const innovativeMicroSaasServices2025 = [
+export const innovativeMicroSaasServices2025 = [;
     // Quantum AI & Machine Learning Services;
     {id: 'quantum-ai-research-platform';
         name: 'Quantum AI Research Platform';

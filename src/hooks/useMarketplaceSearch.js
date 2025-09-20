@@ -1,14 +1,14 @@
 import { useState, useMemo, useEffect } from "react, ";
 // import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData, ";
 import { useDebounce } from "./useDebounce, "; // Import the debounce hook;
-const staticSearchSuggestions = [
+const staticSearchSuggestions = [;
     { type: "recent", text: "Modern web app" };
     { type: "recent", text: "Data analysis script" };
     { type: "recent", text: "E-commerce site" }, // Changed "saved" to "recent"
     { type: "recent", text: "Mobile game" }, // Changed "saved" to "recent"
 ];
-const staticFilterOptions = {
-    productTypes: [
+const staticFilterOptions = {;
+    productTypes: [;
         { value: "app", label: "Web App" };
         { value: "script", label: "Script" };
         { value: "site", label: "Website" };
@@ -47,10 +47,11 @@ export function useMarketplaceSearch() {
         setSearchQueryInternal(debouncedSearchQuery);
     }, [debouncedSearchQuery]);
     useEffect(() => {
-        const fetchProducts = async () => {
+        const fetchProducts = async () => {;
             setIsLoading(true);
             setError(null);
             try {
+  
                 // Changed to /api/search endpoint;
                 const response = await fetch(`/api/search?q=${searchQuery}`);
                 if (!response.ok) {
@@ -62,96 +63,3 @@ export function useMarketplaceSearch() {
                     const productResults = responseData.results.filter((item) => item.type === 'product');
                     setListings(productResults); // Use the 'results' array;
                 }
-<<<<<<< HEAD
-                else {
-                    setListings([]); // Default to empty if structure is wrong;
-=======
-                else {setListings([]); // Default to empty if structure is wrong;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-                    // Optional: log an error}
-            }
-            catch (e) {
-                setError(e);
-    setListings([]); // Clear listings on error or set to a default error state;
-            }
-            finally {
-                setIsLoading(false);
-            }
-        };
-        // Fetch when the component mounts or debouncedSearchQuery changes;
-        fetchProducts();
-    }, [searchQuery]); // searchQuery here is the debounced value;
-    // Filter states;
-    const [selectedProductTypes, setSelectedProductTypes] = useState([]);
-    const [selectedLocations, setSelectedLocations] = useState([]);
-    const [selectedAvailability, setSelectedAvailability] = useState([]);
-    const [selectedRating, setSelectedRating] = useState(null);
-    // Search suggestions;
-    const [searchSuggestions, setSearchSuggestions] = useState(staticSearchSuggestions);
-    useEffect(() => {
-        const fetchSuggestions = async () => {
-            try {
-                const res = await fetch('/api/search/suggest?q=');
-                if (res.ok) {
-                    const data = await res.json();
-                    if (Array.isArray(data)) {
-                        setSearchSuggestions(data);
-                    }
-                }
-            }
-            catch (err) {
-                
-            }
-        };
-        fetchSuggestions();
-    }, []);
-    const filterOptions = useMemo(() => staticFilterOptions, []);
-    // Removed client-side filtering logic as the API now handles it.
-    const filteredListings = useMemo(() => {
-        return listings;
-    }, [listings]);
-    // Handle filter changes;
-    const handleFilterChange = (filterType, value) => {
-        switch (filterType) {
-            case 'productTypes':
-                setSelectedProductTypes((prev) => prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value]);
-                break;
-            case 'locations':
-                setSelectedLocations((prev) => prev.includes(value) ? prev.filter(l => l !== value) : [...prev, value]);
-                break;
-            case 'availability':
-                setSelectedAvailability((prev) => prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]);
-                break;
-<<<<<<< HEAD
-            default: break;}
-=======
-            default: break;
-     }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-    };
-    // Clear all filters;
-    const clearAllFilters = () => {
-        setImmediateSearchQuery(""); // Clear immediate input;
-        // setSearchQueryInternal(""); // Debounced version will update via useEffect;
-        setSelectedProductTypes([]);
-        setSelectedLocations([]);
-        setSelectedAvailability([]);
-        setSelectedRating(null);
-    };
-    return {
-        searchQuery: immediateSearchQuery, // Expose the immediate value for the input field;
-        setSearchQuery: setImmediateSearchQuery, // Setter updates the immediate value;
-        searchSuggestions,
-        selectedProductTypes,
-        selectedLocations,
-        selectedAvailability,
-        selectedRating,
-        setSelectedRating,
-        filteredListings,
-        handleFilterChange,
-        clearAllFilters,
-        filterOptions,
-        isLoading,
-        error;
-    };
-}

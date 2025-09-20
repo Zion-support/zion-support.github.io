@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import React { useEffect useState } from 'react';
 import { MessageSquare, Video } from "lucide-react";
 import { useMessaging } from "@/context/MessagingContext";
@@ -34,11 +35,7 @@ return (
             </h1>
             {activeConversation && (
               <Button
-<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
-onClick = {startVideoCall,}
-=======
 onClick = {startVideoCall}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/MessagingInbox.tsx
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
                 <Video className="h-4 w-4" />
@@ -55,17 +52,10 @@ onClick = {startVideoCall}
                 </div>
               ) : (
                 <ConversationsList
-<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
-conversations = {conversations,}
-                  activeConversation = {activeConversation,}
-                  setActiveConversation = {setActiveConversation,}
-                  markAsRead = {markAsRead,}
-=======
 conversations = {conversations}
                   activeConversation = {activeConversation}
                   setActiveConversation = {setActiveConversation}
                   markAsRead = {markAsRead}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/MessagingInbox.tsx
                 />
               )}
               {/* Conversation Detail */}
@@ -87,7 +77,7 @@ setActiveCall (roomId);
 //Show toast notification //Navigate to video call page router.push (`/call/$ {roomId ;
 }`), //Changed from navigate ;
 }
-return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <h1 className= {`text-$ {;
+return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <h1 className={`text-$ {;
   isMobile ? '2xl' : '3xl' ;
 }font-bold text-white flex items-center gap-2` ";
 }> <MessageSquare className="h-6 w-6" /> activeConversation && (<Button onClick={startVideoCall ";
@@ -100,3 +90,16 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
+import React from 'react';
+
+export default function MessagingInbox() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">MessagingInbox</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/MessagingInbox.tsx

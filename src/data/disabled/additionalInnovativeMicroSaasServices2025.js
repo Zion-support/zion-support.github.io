@@ -1,4 +1,4 @@
-export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
+export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [;
     // AI-Powered Content Creation & Marketing Automation;
     {id: "ai-content-marketing-automation-2025";
         title: "AI-Powered Content Creation & Marketing Automation Platform";
@@ -495,18 +495,18 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Autonomous optimization", "Real-time visibility", "Predictive capabilities"]
     }
 ];
-export const getServicesByCategory = (category) => {
+export const getServicesByCategory = (category) => {;
     return ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => service.category === category);
 };
-export const getFeaturedServices = () => {
+export const getFeaturedServices = () => {;
     return ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => service.price >= 3000 || service.category === "AI & Marketing");
 };
-export const getServicesByPriceRange = (minPrice, maxPrice) => {
+export const getServicesByPriceRange = (minPrice, maxPrice) => {;
     return ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };
 export const searchServices = (query) => {
-    return ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => service.title.toLowerCase().includes(query.toLowerCase()) ||
-        service.description.toLowerCase().includes(query.toLowerCase()) ||
-        service.category.toLowerCase().includes(query.toLowerCase()) ||
+    return ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => service.title.toLowerCase().includes(query.toLowerCase()) ||;
+        service.description.toLowerCase().includes(query.toLowerCase()) ||;
+        service.category.toLowerCase().includes(query.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())));
 };

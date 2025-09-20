@@ -1,4 +1,4 @@
-export const cuttingEdgeInnovations2025 = [
+export const cuttingEdgeInnovations2025 = [;
     // AI-Powered Micro SAAS Services;
     {id: 1;
         name: "QuantumAI Studio";
@@ -456,21 +456,21 @@ export const cuttingEdgeInnovations2025 = [
     }
 ];
 // Utility functions for service management;
-export const getServicesByCategory = (category) => {
+export const getServicesByCategory = (category) => {;
     return cuttingEdgeInnovations2025.filter(service => service.category === category);
 };
-export const getServicesBySubcategory = (subcategory) => {
+export const getServicesBySubcategory = (subcategory) => {;
     return cuttingEdgeInnovations2025.filter(service => service.subcategory === subcategory);
 };
-export const getServicesByPriceRange = (minPrice, maxPrice) => {
+export const getServicesByPriceRange = (minPrice, maxPrice) => {;
     return cuttingEdgeInnovations2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };
-export const getPopularServices = (limit = 6) => {
+export const getPopularServices = (limit = 6) => {;
     return cuttingEdgeInnovations2025.slice(0, limit);
 };
-export const getServicesByTechnology = (technology) => {
+export const getServicesByTechnology = (technology) => {;
     return cuttingEdgeInnovations2025.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())));
 };
-export const getServicesByCompliance = (compliance) => {
+export const getServicesByCompliance = (compliance) => {;
     return cuttingEdgeInnovations2025.filter(service => service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase())));
 };

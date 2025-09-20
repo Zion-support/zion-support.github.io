@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
 import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
@@ -11,6 +12,9 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
+  return (
+  return (
+  return (
   // useParams is typed as `any` in this environment due to missing type
   // definitions so avoid passing a type argument to prevent TS2347.
               }}
@@ -47,11 +51,7 @@ export default function ProfileDetail() {
               <div className="flex flex-col space-y-3">
                 {profileData.github_url && (
                   <a
-<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
-href = {profileData.github_url,}
-=======
 href = {profileData.github_url}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ProfileDetail.tsx
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -64,11 +64,7 @@ href = {profileData.github_url}
                 )}
                 {profileData.twitter_url && (
                   <a
-<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
-href = {profileData.twitter_url,}
-=======
 href = {profileData.twitter_url}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ProfileDetail.tsx
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -81,11 +77,7 @@ href = {profileData.twitter_url}
                 )}
                 {profileData.linkedin_url && (
                   <a
-<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
-href = {profileData.linkedin_url,}
-=======
 href = {profileData.linkedin_url}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ProfileDetail.tsx
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -127,3 +119,16 @@ href = {profileData.linkedin_url}
 }target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
 }</div> </div> </div> </div> </div> </>) ;
 }'"}
+import React from 'react';
+
+export default function ProfileDetail() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">ProfileDetail</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProfileDetail.tsx

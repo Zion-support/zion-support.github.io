@@ -1,4 +1,4 @@
-export const DEVOPS_CLOUD_SERVICES = [
+export const DEVOPS_CLOUD_SERVICES = [;
     // GitOps Platform;
     {id: "gitops-platform";
         title: "GitOps Platform & Infrastructure Automation";

@@ -14,6 +14,7 @@ const initialState = { items: [] };
                     : i);
      }
             else {
+  
                 items = [...state.items, action.payload];
             }
             return { items };
@@ -22,60 +23,3 @@ const initialState = { items: [] };
             return { items: state.items.filter(i => i.id !== action.payload) };
     case 'CLEAR_CART':
             return { items: [] };
-<<<<<<< HEAD
-    default: return state;}
-=======
-    default: return state;
-     }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-}
-const CartContext = createContext(undefined);
-export function useCart() {
-    const ctx = useContext(CartContext);
-    if (!ctx)
-        throw new Error('useCart must be used within a CartProvider');
-    return ctx;
-}
-export function CartProvider({ children }) {
-    const { user } = useAuth();
-    const [state, dispatch] = useReducer(cartReducer, initialState);
-    const cartKey = getCartKey(user?.id);
-    useEffect(() => {
-        let items = [];
-        const stored = safeStorage.getItem(cartKey);
-        if (stored) {
-            try {
-                items = JSON.parse(stored);
-            }
-            catch {
-                items = [];
-            }
-        }
-        // Merge guest cart when user logs in;
-        if (user?.id) {
-            const guestStored = safeStorage.getItem(getCartKey());
-            if (guestStored) {
-                try {
-                    const guestItems = JSON.parse(guestStored);
-                    items = mergeCartItems(items, guestItems);
-                }
-                catch {
-                    /* ignore */
-                }
-                safeStorage.removeItem(getCartKey());
-            }
-        }
-        dispatch({ type: 'SET_ITEMS', payload: items });
-     }, [cartKey]);
-    useEffect(() => {
-        safeStorage.setItem(cartKey, JSON.stringify(state.items));
-    }, [state.items, cartKey]);
-<<<<<<< HEAD
-    const value = {
-        items: state.items;
-=======
-    const value = {items: state.items;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-        dispatch};
-    return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
-}

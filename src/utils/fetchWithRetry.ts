@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export async function fetchWithRetry(
   url: string,
   options: RequestInit = {},
@@ -25,17 +26,38 @@ export async function fetchWithRetry(
       }
       
       return response;
+=======
+export async function fetchWithRetry<T>(
+  fetchFn: () => Promise<T>,
+  maxRetries: number = 3,
+  delay: number = 1000
+): Promise<T> {
+  let lastError: Error;
+
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fetchFn();
+>>>>>>> acd3fffc0febff8152b7eda17ac2cde729b1e4ec
     } catch (error) {
       lastError = error as Error;
       
       if (attempt === maxRetries) {
         throw lastError;
       }
+<<<<<<< HEAD
       
       // Wait before retrying
       await new Promise(resolve => setTimeout(resolve, delay * attempt));
     }
   }
   
+=======
+
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
+    }
+  }
+
+>>>>>>> acd3fffc0febff8152b7eda17ac2cde729b1e4ec
   throw lastError!;
 }

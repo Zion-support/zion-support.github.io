@@ -6,10 +6,11 @@ import { apiClient } from "@/utils/apiClient, ";
 export function useAISearch() {
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
-    const search = async (query) => {
+    const search = async (query) => {;
         setLoading(true);
         try {
-            const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-search", {
+  
+            const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-search", {;
                 method: "POST";
                 headers: { "Content-Type": "application/json" };
                 body: JSON.stringify({ query });
@@ -17,8 +18,8 @@ export function useAISearch() {
             const data = await response.json();
             const filters = data.filters || {};
             const items = [];
-            const matchSkill = (skills) => {
-                if (!filters.skills || filters.skills.length === 0)
+            const matchSkill = (skills) => {;
+                if (!filters.skills || filters.skills.length === 0);
                     return true;
                 return skills?.some((s) => filters.skills.some((f) => s.toLowerCase().includes(f.toLowerCase())));
             };

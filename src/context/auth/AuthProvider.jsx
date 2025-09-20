@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {;
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
   const { login: loginImpl, signup: signupImpl, logout, resetPassword, updateProfile, loginWithGoogle, loginWithFacebook, loginWithTwitter, loginWithWeb3 } = useAuthOperations(setUser, setIsLoading);
 
-  const login = async (email, password) => {
+  const login = async (email, password) => {;
     const { res, data } = await loginUser(email, password);
     if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
       toast({ title: "Login Failed", description: data.error || "Email not confirmed. Please check your inbox to verify your email.", variant: "destructive" });
@@ -53,6 +53,10 @@ export const AuthProvider = ({ children }) => {;
 
   const register = async (name, email, password) => {
     try {
+  
+  ;
+  ;
+  ;
       const { res, data } = await registerUser(name, email, password);
       if (!res.ok || !data?.token || !data?.user) {
         return { error: data?.message || 'Registration failed' };
@@ -66,7 +70,7 @@ export const AuthProvider = ({ children }) => {;
      }
   };
 
-  const signup = async (email, password, userData) => {
+  const signup = async (email, password, userData) => {;
     const result = await signupImpl({ email, password, display_name: userData });
     if (!result?.error) {
       const loginResult = await login(email, password);
@@ -86,6 +90,7 @@ export const AuthProvider = ({ children }) => {;
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
       if (session?.user) {
         try {
+  
           const { data: profile, error } = await getFromProfiles().select('*').eq('id', session.user.id).single();
           if (profile) {
             const mappedUser = mapProfileToUser(session.user, profile);
@@ -112,6 +117,7 @@ export const AuthProvider = ({ children }) => {;
           setUser(null);
         }
       } else {
+  
         setUser(false);
         if (event === 'SIGNED_OUT') {
           handleSignedOut();
@@ -122,9 +128,9 @@ export const AuthProvider = ({ children }) => {;
     return () => { subscription.unsubscribe(); };
   }, [navigate]);
 
-  const authContextValue = {
-    user,
-    isLoading,
+  const authContextValue = {;
+    user,;
+    isLoading,;
     isAuthenticated: !!user;
     login,
     register,

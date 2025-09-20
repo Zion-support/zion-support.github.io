@@ -18,6 +18,7 @@ import Info from "lucide-react/dist/esm/icons/info;";
 import { cn } from "@/lib/utils, ";
 
 interface PerformanceDashboardProps {
+  
 className?: string;
 showDetails?: boolean;
 }
@@ -43,18 +44,6 @@ if (score >= 70) return "⚠️";
 return "🐌";
 };
 
-<<<<<<< HEAD
-const getMetricIcon: any = (metricNam;  e: string) => {
-const icon; s: Record<strin; g; React.ReactNode> = {
-FC; P: <Eye className="w-4 h-4" />
-LC; P: <Eye className="w-4 h-4" />
-FI; D: <MousePointer className="w-4 h-4" />
-CL; S: <BarChart3 className="w-4 h-4" />
-TTF; B: <Clock className="w-4 h-4" />
-DOMLOA; D: <Activity className="w-4 h-4" />
-WINDOWLOA; D: <Activity className="w-4 h-4" />};
-return icons[metricNa; m; e] || <Activity className="w-4 h-4" />
-=======
 const getMetricIcon: any = (metricNam;  e: string) => {const icon; s: Record<strin; g; React.ReactNode> = {
 FC; P: <Eye className="w-4 h-4" />;
 LC; P: <Eye className="w-4 h-4" />;
@@ -62,253 +51,34 @@ FI; D: <MousePointer className="w-4 h-4" />;
 CL; S: <BarChart3 className="w-4 h-4" />;
 TTF; B: <Clock className="w-4 h-4" />;
 DOMLOA; D: <Activity className="w-4 h-4" />;
-WINDOWLOA; D: <Activity className="w-4 h-4" />};
-return icons[metricNa; m; e] || <Activity className="w-4 h-4" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-};
-
-const getMetricDescription: any = (metricNam;  e: string) => {const description; s: Record<strin; g; string> = {
-FC; P: "First Contentful Paint - Time to first content";
-LC; P: "Largest Contentful Paint - Time to largest content";
-FI; D: "First Input Delay - Time to first interaction";
-CL; S: "Cumulative Layout Shift - Visual stability";
-TTF; B: "Time to First Byte - Server response time";
-DOMLOA; D: "DOM Content Loaded - DOM ready time";
-WINDOWLOA; D: "Window Load - Full page load time"};
-return descriptions[metricNa; m; e] || "Performance metric";
-};
-
-const formatMetricValue: any = (metricNam;  e: strin; g;
-valu; e: number) => {
-if (metricName === "CLS") return value.toFixed(3);
-if (metricName === "FID") return `${value.toFixed(0)}m; s`;
-return `${value.toFixed(0)}m; s`;
-};
-
-return (
-<motion.div;
-className={cn(
-"fixed bottom-4 right-4 z-50 max-w-sm",
-className;
-)}
-initial={{ opacit; y: 0;
-y: 20 }}
-animate={{ opacit; y: 1;
-y: 0 }}
-transition={{ duratio; n: 0.3 }}
->;
-<Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">
-<CardHeader className="pb-3">
-<div className="flex items-center justify-between">
-<CardTitle className="text-lg flex items-center gap-2">
-<Activity className="w-5 h-5 text-zion-cyan" />
-Performance;
-</CardTitle>
-<div className="flex items-center gap-2">
-<Button;
-variant="ghost"
-size="sm";
-onClick={() => setIsExpanded(!isExpanded)}
-className="p-1 h-8 w-8 text-zion-slate-light hove;  r:text-zion-cyan"
->;
-<TrendingUp className="w-4 h-4" />
-</Button>
-{onClose && (
-<Button;
-variant="ghost"
-size="sm";
-onClick={onClose}
-className="p-1 h-8 w-8 text-zion-slate-light hove; r:text-zion-cyan"
->;
-<X className="w-4 h-4" />
-</Button>
-)}
-</div>
-</div>
-
-{/* Performance Score */}
-<div className="flex items-center justify-between">
-<div className="flex items-center gap-2">
-<span className="text-sm text-zion-slate-light">Scor; e:</span>
-<span className={cn("text-2xl font-bold",  getScoreColor(performanceScore))}>
-{performanceScore}
-<<<<<<< HEAD
-</span>
-<span className="text-lg">{getScoreEmoji(performanceScore)}</span>
-=======
-</span>;
-<span className="text-lg">{getScoreEmoji(performanceScore)}</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-</div>
-<Button;
-variant="ghost"
-size="sm";
-onClick={logMetrics}
-className="text-zion-cyan hove;  r:text-zion-cyan-light"
->;
-<<<<<<< HEAD
-<RefreshCw className="w-4 h-4" />
-</Button>
-</div>
-</CardHeader>
-=======
 <RefreshCw className="w-4 h-4" />;
 </Button>;
-</div>
+</div>;
 </CardHeader>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-
-<AnimatePresence>
-{isExpanded && (
-<motion.div;
-initial={{ heigh; t: 0;
-opacit; y: 0 }}
-animate={{ heigh; t: "auto";
-opacit; y: 1 }}
-exit={{ heigh; t: 0;
-opacit; y: 0 }}
-transition={{ duratio; n: 0.3 }}
->;
-<CardContent className="pt-0 space-y-3">
-{/* Metrics Grid */}
-<div className="grid grid-cols-1 gap-2">
-{observers.map(({ nam; e; valu; e; rating }) => (<div;
-key={name}
-className="flex items-center justify-between p-2 bg-zion-slate-dark/30 rounded-lg"
->;
-<div className="flex items-center gap-2">
-{getMetricIcon(name)}
-<<<<<<< HEAD
-<div>
-<div className="text-sm font-medium">{name}</div>
-<div className="text-xs text-zion-slate-light">
-=======
 <div>;
-<div className="text-sm font-medium">{name}</div>
+<div className="text-sm font-medium">{name}</div>;
 <div className="text-xs text-zion-slate-light">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-{getMetricDescription(name)}
-</div>
-</div>
-</div>
-<<<<<<< HEAD
-<div className="flex items-center gap-2">
-<span className="text-sm font-mono">
-=======
 <div className="flex items-center gap-2">;
 <span className="text-sm font-mono">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-{formatMetricValue(nam;  e; value)}
-</span>
-<Badge;
-variant={rating === "good" ? "default" : rating === "needs-improvement" ? "secondary" : "destructive"}
-className={cn("text-xs",
-rating === "good" ? "bg-green-500/20 text-green-400 border-green-500/30" :
-rating === "needs-improvement" ? "bg-yellow-500/20 text-yellow-400 border-yellow-500/30" :
-"bg-red-500/20 text-red-400 border-red-500/30";
-)}
->;
-{rating}
-<<<<<<< HEAD
-</Badge>
-=======
 </Badge>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-</div>
-</div>
-))}
-</div>
-
-{/* Performance Tips */}
-<<<<<<< HEAD
-<div className="p-3 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">
-<div className="flex items-center gap-2 mb-2">
-<Info className="w-4 h-4 text-zion-purple" />
-<span className="text-sm font-medium text-zion-purple">Tips</span>
-</div>
-<div className="text-xs text-zion-slate-light space-y-1">
-{performanceScore < 90 && (<>
-=======
 <div className="p-3 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">;
 <div className="flex items-center gap-2 mb-2">;
 <Info className="w-4 h-4 text-zion-purple" />;
 <span className="text-sm font-medium text-zion-purple">Tips</span>;
-</div>
+</div>;
 <div className="text-xs text-zion-slate-light space-y-1">;
 {performanceScore < 90 && (<>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-{performanceScore < 70 && (
-<p>• Optimize images and use lazy loading</p>
-)}
-<p>• Minimize JavaScript bundle size</p>
-<p>• Use CDN for static assets</p>
-</>
-)}
-{performanceScore >= 90 && (
-<p>Great performance! Keep up the good work! 🎉</p>
-)}
-</div>
-</div>
-<<<<<<< HEAD
-</CardContent>
-</motion.div>
-=======
 </CardContent>;
 </motion.div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-)}
-</AnimatePresence>
-</Card>
-</motion.div>
-);
-}
-
-// Compact performance indicator;
-export function PerformanceIndicator({ className }: { className?: string }) {;
-const { performanceScore } = usePerformance();
-
-return (
-<div className={cn("flex items-center gap-2",  className)}>
-<div className={cn("w-2 h-2 rounded-full",
-performanceScore >= 90 ? "bg-green-500" :
-performanceScore >= 70 ? "bg-yellow-500" : "bg-red-500";
-)} />
-<span className="text-xs text-zion-slate-light">
-{performanceScore}/100;
-<<<<<<< HEAD
-</span>
-=======
 </span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-</div>
-);
-}<//div><///div>
-interface PerformanceMetrics {
-<<<<<<< HEAD
-buildSize: string;,
-pageCount: number;,
-loadTime: number;,
-healthStatus: 'healthy' | 'warning' | 'error';
-interface Improvement {,
-id: string;,
-title: string;,
-description: string;,
-status: 'completed' | 'in-progress' | 'planned';,
-impact: 'high' | 'medium' | 'low';,
-category: 'performance' | 'security' | 'ux' | 'build';
-}}
-=======
-  buildSize: string;
 pageCount: number;
-  loadTime: number;
-healthStatus: 'healthy' | 'warning' | 'error'
+loadTime: number;
+healthStatus: "healthy" | "warning" | "error";
 interface Improvement {
-  id: string;
 title: string;
-  description: string;
-status: 'completed' | 'in-progress' | 'planned';
-  impact: 'high' | 'medium' | 'low';
-category: 'performance' | 'security' | 'ux' | 'build'
+description: string;
+status: "completed" | "in-progress" | "planned";,
+impact: "high" | "medium" | "low";,
+category: "performance" | "security" | "ux" | "build";
 }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

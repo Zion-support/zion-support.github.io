@@ -1,5 +1,5 @@
 // Enhanced Micro SAAS Services for 2025;
-export const enhancedMicroSaasServices2025 = [
+export const enhancedMicroSaasServices2025 = [;
     {id: 1;
         name: "TaskFlow Pro";
         category: "Productivity";
@@ -522,7 +522,7 @@ export const enhancedMicroSaasServices2025 = [
     }
 ];
 // Additional Innovative Micro SAAS Services for 2025;
-export const additionalInnovativeMicroSaasServices2025 = [
+export const additionalInnovativeMicroSaasServices2025 = [;
     {id: 101;
         name: "QuantumEdge AI Platform";
         category: "Quantum AI";

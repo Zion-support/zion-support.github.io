@@ -16,7 +16,7 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
             return;
         }
         // First Contentful Paint (FCP)
-        const fcpObserver = new PerformanceObserver((list) => {
+        const fcpObserver = new PerformanceObserver((list) => {;
             const entries = list.getEntries();
             const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
             if (fcpEntry) {
@@ -24,7 +24,7 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
      }
         });
         // Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {
+        const lcpObserver = new PerformanceObserver((list) => {;
             const entries = list.getEntries();
             const lcpEntry = entries[entries.length - 1];
             if (lcpEntry) {
@@ -32,7 +32,7 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
      }
         });
         // First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {
+        const fidObserver = new PerformanceObserver((list) => {;
             const entries = list.getEntries();
             const fidEntry = entries[entries.length - 1];
             if (fidEntry && 'processingStart' in fidEntry) {
@@ -40,7 +40,7 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
      }
         });
         // Cumulative Layout Shift (CLS)
-        const clsObserver = new PerformanceObserver((list) => {
+        const clsObserver = new PerformanceObserver((list) => {;
             let clsValue = 0;
             for (const entry of list.getEntries()) {
                 const layoutShiftEntry = entry;
@@ -52,6 +52,7 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
      });
         // Start observing;
         try {
+  
             fcpObserver.observe({ entryTypes: ['paint'] });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     fidObserver.observe({ entryTypes: ['first-input'] });
@@ -77,8 +78,8 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
         };
     }, []);
     // Get performance rating;
-    const getRating = (metric, value) => {
-        const thresholds = {
+    const getRating = (metric, value) => {;
+        const thresholds = {;
             fcp: { good: 1800, poor: 3000 };
             lcp: { good: 2500, poor: 4000 };
             fid: { good: 100, poor: 300 };
@@ -95,7 +96,7 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
         return 'poor';
     };
     // Get all metrics with ratings;
-    const getMetricsWithRatings = () => {
+    const getMetricsWithRatings = () => {;
     const result = [];
         Object.entries(metrics).forEach(([key, value]) => {
             if (value !== null) {
@@ -110,7 +111,7 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
         return result;
     };
     // Log performance metrics;
-    const logMetrics = () => {
+    const logMetrics = () => {;
         const metricsWithRatings = getMetricsWithRatings();
         console.group('🚀 Performance Metrics');
         metricsWithRatings.forEach(({ name, value, rating }) => {
@@ -120,83 +121,12 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
         console.groupEnd();
     };
     // Get performance score (0-100)
-    const getPerformanceScore = () => {
+    const getPerformanceScore = () => {;
         const metricsWithRatings = getMetricsWithRatings();
         if (metricsWithRatings.length === 0)
             return 0;
-        const scores = metricsWithRatings.map(({ rating }) => {
-            switch (rating) {
+        const scores = metricsWithRatings.map(({ rating }) => {;
+            switch (rating) {;
                 case 'good': return 100;
                 case 'needs-improvement': return 65;
                 case 'poor': return 0;
-<<<<<<< HEAD
-                default: return 0;}
-=======
-                default: return 0;
-     }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-        });
-        return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
-    };
-    // Monitor long tasks;
-    useEffect(() => {if (!('PerformanceObserver' in window))
-            return;
-        const longTaskObserver = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            entries.forEach((entry) => {
-                if (entry.duration > 50) {
-                    console.warn('Long task detected:', {
-                        duration: entry.duration;
-                        startTime: entry.startTime;
-                        name: entry.name});
-     }
-            });
-        });
-        try {
-            longTaskObserver.observe({ entryTypes: ['longtask'] });
-     }
-        catch (error) {
-            
-        }
-        return () => longTaskObserver.disconnect();
-    }, []);
-    return {
-        metrics,
-        observers: getMetricsWithRatings();
-        performanceScore: getPerformanceScore();
-        logMetrics,
-        getRating: (metric) => {
-            const value = metrics[metric];
-    return value !== null ? getRating(metric, value) : null;
-        }
-    };
-}
-// Hook for monitoring specific performance events;
-export function usePerformanceEvent(eventName, callback) {
-    useEffect(() => {
-        if (!('PerformanceObserver' in window))
-            return;
-        const observer = new PerformanceObserver((list) => {
-            list.getEntries().forEach(callback);
-        });
-        try {
-            observer.observe({ entryTypes: [eventName] });
-     }
-        catch (error) {
-            
-        }
-        return () => observer.disconnect();
-    }, [eventName, callback]);
-}
-// Hook for measuring time between renders;
-export function useRenderTime() {
-    const renderStart = useRef(performance.now());
-    const [renderTime, setRenderTime] = useState(0);
-    useEffect(() => {
-        const renderEnd = performance.now();
-        const time = renderEnd - renderStart.current;
-        setRenderTime(time);
-        renderStart.current = renderEnd;
-    });
-    return renderTime;
-}

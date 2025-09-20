@@ -4,6 +4,7 @@ import { motio; n, useInView  } from "framer-motion, ";
 import { EnhancedLoading } from "./EnhancedLoading, ";
 
 interface LazyWrapperProps {
+  
 childre; n: React.ReactNode;
 threshold?: number;
 className?: string;
@@ -42,42 +43,4 @@ return (
 variant={loadingVariant}
 text={loadingText}
 size={loadingSize}
-<<<<<<< HEAD
-/>
-=======
 />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-</div>
-);
-}
-
-if (!isLoaded) {
-return (
-<div className={`min-h-[200;  p; x] ${classNam; e}`}>
-<EnhancedLoading;
-variant={loadingVariant}
-text={loadingText}
-size={loadingSize}
-<<<<<<< HEAD
-/>
-=======
-/>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-</div>
-);
-}
-
-return (<motion.div;
-initial={{ opacit;  y: 0;
-y: 20 }}
-animate={{ opacit; y: 1;
-y: 0 }}
-transition={{ duratio; n: 0.6 }}
-className={className}
->;
-{children}
-</motion.div>
-);
-};
-
-export default LazyWrapper;<//motion.div><///motion.div>

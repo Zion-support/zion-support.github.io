@@ -14,9 +14,9 @@ const categoryIcons = {
     'IT Infrastructure': Clou, d,
     'Data Analytics': BarChart, 3,
     'AI Development': Cod, e,
-    'FinTech': DollarSig, n,
-    'HealthTech': Hear, t,
-    'E-commerce': ShoppingCar, t,
+    'FinTech': DollarSig, n,;
+    'HealthTech': Hear, t,;
+    'E-commerce': ShoppingCar, t,;
     'EdTech': GraduationCap;
 };
 const categoryColors = {
@@ -25,9 +25,9 @@ const categoryColors = {
     'Data Analytics': 'from-green-500 to-emerald-600',
     'AI Development': 'from-orange-500 to-red-600',
     'FinTech': 'from-yellow-500 to-orange-600',
-    'HealthTech': 'from-pink-500 to-rose-600',
-    'E-commerce': 'from-indigo-500 to-purple-600',
-    'EdTech': 'from-teal-500 to-green-600'
+    'HealthTech': 'from-pink-500 to-rose-600',;
+    'E-commerce': 'from-indigo-500 to-purple-600',;
+    'EdTech': 'from-teal-500 to-green-600';
 };
 const features = [
     "A, I-Powere, d Automatio, n",
@@ -39,9 +39,9 @@ const features = [
     "Whit, e-labe, l Solution, s",
     "Comprehensiv, e Documentatio, n",
     "2, 4/7 Technica, l Suppor, t",
-    "9, 9.9% Uptim, e Guarante, e",
-    "SO, C 2 Typ, e I, I Complian, t",
-    "3, 0-Da, y Mone, y Bac, k Guarante, e"
+    "9, 9.9% Uptim, e Guarante, e",;
+    "SO, C 2 Typ, e I, I Complian, t",;
+    "3, 0-Da, y Mone, y Bac, k Guarante, e";
 ];
 const benefits = [
     {
@@ -65,9 +65,9 @@ const benefits = [
     {
         ic, o, n: <CheckCircl e classNam e="h-6 w-6"/>,
         ic, o, n: _js, x(CheckCirc,  l, e, { classNa, m, e: "h-6 w-6" }),
-        tit, l, e: "Qualit, y Guarantee, d",
-    descripti, o, n: "3, 0-da, y mone, y-bac, k guarante, e wit, h fre, e migratio, n suppor, t"
-    }
+        tit, l, e: "Qualit, y Guarantee, d",;
+    descripti, o, n: "3, 0-da, y mone, y-bac, k guarante, e wit, h fre, e migratio, n suppor, t";
+    };
 ];
 export function ServicesShowcase() {
     const featuredServices = MICRO_SAAS_SERVICES.filter(service => service.featured).slice(0,  6);

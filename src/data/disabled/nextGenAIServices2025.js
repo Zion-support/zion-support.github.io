@@ -1,4 +1,4 @@
-export const NEXT_GEN_AI_SERVICES_2025 = [
+export const NEXT_GEN_AI_SERVICES_2025 = [;
     // Revolutionary AI Services;
     {id: "ai-consciousness-simulator";
         title: "AI Consciousness Simulation Platform";

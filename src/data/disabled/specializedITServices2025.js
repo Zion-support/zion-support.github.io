@@ -1,4 +1,4 @@
-export const SPECIALIZED_IT_SERVICES_2025 = [
+export const SPECIALIZED_IT_SERVICES_2025 = [;
     {id: "5g-enterprise-network-solutions";
         title: "5G Enterprise Network Infrastructure & Management Platform";
         description: "Comprehensive 5G enterprise networking solution that provides ultra-fast, low-latency connectivity with advanced network slicing, security, and management capabilities.",
@@ -98,9 +98,9 @@ export const SPECIALIZED_IT_SERVICES_2025 = [
         roiMetrics: ["95% latency reduction", "80% bandwidth cost savings", "Millions of edge devices supported"]
     }
 ];
-export const getServicesByCategory = (category) => {
+export const getServicesByCategory = (category) => {;
     return SPECIALIZED_IT_SERVICES_2025.filter(service => service.category === category);
 };
-export const getFeaturedServices = () => {
+export const getFeaturedServices = () => {;
     return SPECIALIZED_IT_SERVICES_2025.filter(service => service.price >= 4000 || service.category === "Network Infrastructure");
 };

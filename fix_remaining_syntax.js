@@ -3,45 +3,58 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix specific syntax errors
-function fixSpecificSyntaxErrors(content) {
-  // Fix interface closing braces
-  content = content.replace(/(\w+):\s*([^;]+);}/g, '$1: $2;');
+// Function to fix remaining syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
   
-  // Fix import statements with semicolons in wrong places
-  content = content.replace(/impor;\s*t;\s*Reac;\s*t/g, 'import React');
-  content = content.replace(/impor;\s*t;\s*([^;]+);/g, 'import $1');
+  // Fix extra commas in imports
+  fixed = fixed.replace(/import\s+[^;]+,\s*;/g, (match) => {
+    return match.replace(/,\s*;/, ';');
+  });
   
-  // Fix function parameters with semicolons
-  content = content.replace(/export function (\w+)\(\{;\s*([^}]+);/g, 'export function $1({ $2');
-  content = content.replace(/children;/g, 'children');
+  // Fix missing semicolons in imports
+  fixed = fixed.replace(/import\s+[^;]+(?<!;)$/gm, (match) => {
+    if (!match.trim().endsWith(';')) {
+      return match + ';';
+    }
+    return match;
+  });
   
-  // Fix interface definitions with extra braces
-  content = content.replace(/interface Service \{\s*id: string;\s*name: string;\}\s*\}/g, 'interface Service {\n  id: string;\n  name: string;\n}');
+  // Fix JSX fragments
+  fixed = fixed.replace(/<>\s*$/gm, '<>');
+  fixed = fixed.replace(/^\s*<\/>/gm, '</>');
   
-  // Fix React imports
-  content = content.replace(/import React from "react"\s*;\s*$/gm, 'import React from "react";');
+  // Fix missing return statements
+  fixed = fixed.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{\s*$/gm, 'export default function $1() {\n  return (');
   
-  // Fix missing semicolons after imports
-  content = content.replace(/import React from "react"\s*$/gm, 'import React from "react";');
+  // Fix missing closing braces
+  fixed = fixed.replace(/(\w+)\s*{\s*$/gm, '$1 {\n  ');
   
-  // Fix interface properties
-  content = content.replace(/(\w+):\s*([^;]+);\}/g, '$1: $2;\n}');
+  // Fix extra commas in object literals
+  fixed = fixed.replace(/,(\s*[}\]])/g, '$1');
   
-  // Fix function parameter syntax
-  content = content.replace(/\(\{;\s*([^}]+);/g, '({ $1');
+  // Fix missing quotes in JSX attributes
+  fixed = fixed.replace(/className=\s*{([^}]+)}/g, 'className={$1}');
   
-  return content;
+  // Fix missing semicolons after variable declarations
+  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?<!;)$/gm, (match) => {
+    if (!match.trim().endsWith(';')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  return fixed;
 }
 
 // Function to process a file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSpecificSyntaxErrors(content);
+    const fixed = fixSyntaxErrors(content);
     
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -52,27 +65,28 @@ function processFile(filePath) {
   }
 }
 
-// Main execution
-console.log('🔧 Starting targeted syntax error fix...');
-
-const filesToFix = [
-  'src/components/Header.tsx',
-  'src/components/SEO.tsx',
-  'src/components/services/ServiceLandingTemplate.tsx',
-  'src/components/ui/button.tsx',
-  'src/components/ui/card.tsx'
-];
-
-let fixedCount = 0;
-
-for (const file of filesToFix) {
-  const fullPath = path.join(__dirname, file);
-  if (fs.existsSync(fullPath)) {
-    if (processFile(fullPath)) {
-      fixedCount++;
+// Function to recursively find and process files
+function processDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (processFile(filePath)) {
+        fixedCount++;
+      }
     }
   }
+  
+  return fixedCount;
 }
 
-console.log(`✅ Fixed ${fixedCount} out of ${filesToFix.length} files`);
-console.log('🎉 Targeted syntax error fix completed!');
+// Main execution
+console.log('Starting syntax error fixes...');
+const fixedCount = processDirectory('./src');
+console.log(`Fixed ${fixedCount} files`);

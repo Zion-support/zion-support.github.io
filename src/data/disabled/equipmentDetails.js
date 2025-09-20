@@ -1,5 +1,5 @@
-export const EQUIPMENT_DETAILS = {
-    "pro-camera-x1000": {
+export const EQUIPMENT_DETAILS = {;
+    "pro-camera-x1000": {;
         id: "pro-camera-x1000";
         name: "Pro Camera X1000";
         description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.",
@@ -42,46 +42,7 @@ export const EQUIPMENT_DETAILS = {
             "Custom 3D LUT support"
         ],
         warranty: "2 years manufacturer warranty";
-        returnPolicy: "30-day return policy for unused items in original packaging"};
-    "audio-mixer-pro": {
-        id: "audio-mixer-pro";
-        name: "AudioMixer Pro Digital Mixing Console";
-        description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",
-        brand: "AudioTech";
-        category: "Equipment";
-        subcategory: "Audio";
-        images: [
-            "/images/equipment-placeholder.svg";
-            "/images/equipment-placeholder.svg"
-        ],
-        price: 3499;
-        currency: "$";
-        rating: 4.8;
-        reviewCount: 42;
-        inStock: true;
-        expectedShipping: "5-7 business days";
-        specifications: [
-            { name: "Channels", value: "32 input channels" };
-            { name: "Faders", value: "16 motorized faders" };
-            { name: "Preamps", value: "24 premium mic preamps" };
-            { name: "Sampling Rate", value: "Up to 96kHz" };
-            { name: "EQ", value: "4-band parametric per channel" };
-            { name: "Dynamics", value: "Compressor/Gate on all channels" };
-            { name: "Effects", value: "8 stereo effects processors" };
-            { name: "Recording", value: "64-channel USB interface" };
-            { name: "Weight", value: "32 lbs" }
-        ];
-        features: [
-            "32-channel digital mixer with 24 premium mic preamps";
-            "16 motorized faders with touch-sensitive control",
-            "7-inch high-resolution color touchscreen",
-            "Comprehensive routing matrix",
-            "Onboard multi-track recording to USB",
-            "iOS and Android remote control app",
-            "Configurable user layers",
-            "8 DCA groups and 6 mute groups",
-            "Integrated WiFi for wireless control"
-        ],
-        warranty: "3 years manufacturer warranty";
-        returnPolicy: "21-day return policy for items in original condition"}
-};
+        returnPolicy: "30-day return policy for unused items in original packaging"
+    };
+        returnPolicy: "21-day return policy for items in original condition"
+    }

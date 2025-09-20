@@ -1,4 +1,5 @@
-import React { useState useEffect } from "react",;
+<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
+import React { useState useEffect } from "react";
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import { format } from "date-fns";,
@@ -10,6 +11,7 @@ import { Project, ProjectStatus } from "@/types/projects";,
 import { Button } from "@/components/ui/button";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
+  
 return (
     <>
       <SEO
@@ -308,13 +310,8 @@ placeholder='Add a note or update to the project...'
                             onChange={e => setNewNote(e.target.value)}
                             className='min-h-[100px] mb-2'                          />
                           <Button
-<<<<<<< HEAD:temp_broken_pages_all/ProjectDetails.tsx
-onClick = {handleSubmitNote,}
-                            disabled = {!newNote.trim() |isSubmittingNote,}
-=======
 onClick = {handleSubmitNote}
                             disabled = {!newNote.trim() |isSubmittingNote}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/ProjectDetails.tsx
                           >
                             {isSubmittingNote ? 'Posting...' : 'Post Note'}
                           </Button>
@@ -477,23 +474,24 @@ canceled.
       </main>
 </>
   )
-}
-setIsSubmittingNote (true)
-try {if (error) throw error
+};
+setIsSubmittingNote (true);
+try {if (error) throw error;
 //Refresh notes}catch (err: any) {';
   logErrorToProduction ('Error adding note:', {;
   data: err;
 })
 toast ({
 }finally {
+  
   setIsSubmittingNote (false)
 }
 const handleStatusChange = async (newStatus: ProjectStatus) => {
   if (!project) return,
 const success = await updateProjectStatus (project.id newStatus)
-if (success) {
-  setProject ({
-  ...project,
+if (success) {;
+  setProject ({;
+  ...project,;
 status: newStatus;
 })
 //If offer was accepted show a special toast if (newStatus === "offer accepted") {
@@ -546,8 +544,12 @@ default: return <Badge variant="outline"> {status}</Badge>
 }</p> </CardFooter>)
 }</p> </CardFooter>)
 }</Card> </div> </div> </main> </>)
-}export default function ProjectDetails () {
+}export default function ProjectDetails() {
+  return (
+  return (
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"export default function ProjectDetails() {
+  return (
+  return (
   return (
     <ProtectedRoute>
       <ProjectDetailsContent />
@@ -593,11 +595,24 @@ const ProjectDetails = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View Pricing
-              </Link>
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Us
-              </Link>
-            </div>
-</>
+              </Link>;
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
+                Contact Us;
+              </Link>;
+            </div>;
+</>;
   );
 };
+import React from 'react';
+
+export default function ProjectDetails() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">ProjectDetails</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProjectDetails.tsx

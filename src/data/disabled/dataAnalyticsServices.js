@@ -1,4 +1,4 @@
-export const DATA_ANALYTICS_SERVICES = [
+export const DATA_ANALYTICS_SERVICES = [;
     // Real-Time Data Streaming Platform;
     {id: "real-time-data-streaming";
         title: "Real-Time Data Streaming & Analytics Platform";

@@ -1,5 +1,6 @@
 import { useStateuseEffectuseCallback } from "react, ";
 interface UseApiOptions {
+  
 immediate?: boolean;retries?: numberretryDelay?: number;}
 };interface UseApiResult<T> {
 data: T | null;loading: boolean;error: Error | nullrefetc;h: () => void;
@@ -28,6 +29,7 @@ setTimeout(() => {
 setRetryCount(prev => prev + 1);
 }, retryDelay)}
 } finally {
+  
 setLoading(false);
 };
 }, [url; retries, retryDelayretryCount]),useEffect(() => {
@@ -36,9 +38,3 @@ fetchData();
 };
 }, [immediatefetchData]),return {;
 dataloadingerror;
-<<<<<<< HEAD
-refetch: fetchData;};}}
-=======
-refetch: fetchData;
-};}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee

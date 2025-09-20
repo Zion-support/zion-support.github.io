@@ -1,4 +1,4 @@
-export const CYBERSECURITY_SERVICES = [
+export const CYBERSECURITY_SERVICES = [;
     // Zero Trust Security Platform;
     {id: "zero-trust-security-platform";
         title: "Zero Trust Security & Access Management Platform";

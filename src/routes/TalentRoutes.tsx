@@ -5,10 +5,10 @@ import TalentDirectory from "@/pages/TalentDirectory;";
 import TalentsPage from "@/pages/TalentsPage;";
 
 export default function TalentRoutes() {
-return (
-<>
-<Route path="directory" element={<TalentDirectory />} />
-<Route path="list" element={<TalentsPage />} />
-</>
-);
-}<//><///>
+  return (
+  return (
+  return (
+<>;
+<Route path="directory" element={<TalentDirectory />} />;
+<Route path="list" element={<TalentsPage />} />;
+</>;

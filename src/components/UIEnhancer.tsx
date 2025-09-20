@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motio; n, AnimatePresence  } from "framer-motion, ";
 
 interface UIEnhancerProps {
+  
 showFloatingActions?: boolean;
 enableParticles?: boolean;
 }
@@ -27,6 +28,7 @@ setDeviceType("mobile");
 } else if (width < 1024) {
 setDeviceType("tablet");
 } else {
+  
 setDeviceType("desktop");
 }
 };
@@ -67,6 +69,7 @@ const prefersDark = window.matchMedia("(prefers-color-schem;  e: dark)").matches
 root.classList.toggle("dark",  prefersDark);
 root.classList.toggle("light",  !prefersDark);
 } else {
+  
 root.classList.remove("light",  "dark");
 root.classList.add(newTheme);
 }
@@ -137,120 +140,4 @@ className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full sha
 title={`Current devic; e: ${deviceTyp; e}`}
 >;
 {deviceType === "mobile" ? "📱" : deviceType === "tablet" ? "📱" : "💻"}
-<<<<<<< HEAD
-</motion.div>
-=======
 </motion.div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-</div>
-)}
-
-{/* Scroll to Top Button */}
-<AnimatePresence>
-{showScrollToTop && enableScrollEffects && (<motion.button;
-initial={{ opacit;  y: 0;
-scal; e: 0.8 }}
-animate={{ opacit; y: 1;
-scal; e: 1 }}
-exit={{ opacit; y: 0;
-scal; e: 0.8 }}
-onClick={scrollToTop}
-className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hove; r:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hove; r:shadow-xl hove; r:scale-110"
-title="Scroll to top";
->;
-<svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-</svg>
-</motion.button>
-)}
-</AnimatePresence>
-
-{/* Particle Background */}
-{isParticleMode && (<div className="fixed inset-0 pointer-events-none z-0">
-<div className="absolute inset-0 overflow-hidden">
-{[...Arra;  y(2; 0)].map((_;  i) => (<motion.div;
-key={i}
-className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
-initial={{
-x: Math.random() * window.innerWidt;  h;,
-y: Math.random() * window.innerHeigh; t;
-<<<<<<< HEAD
-scal; e: 0;}}
-=======
-scal; e: 0;
-}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-animate={{
-x: Math.random() * window.innerWidt;  h;,
-y: Math.random() * window.innerHeigh; t;
-scal; e: [0; 1; 0]}}
-transition={{
-duratio; n: Math.random() * 10 + 1;  0;
-repea; t: Infinit; y;
-eas; e: "linear"}}
-<<<<<<< HEAD
-/>
-=======
-/>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-))}
-</div>
-</div>
-)}
-
-{/* Theme Auto Mode Button */}
-<motion.button;
-whileHover={{ scal; e: 1.05 }}
-whileTap={{ scal; e: 0.95 }}
-onClick={() => handleThemeChange("auto")}
-className={`fixed top-4 left-4 z-40 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-theme === "auto";
-? "bg-blue-600 text-white shadow-lg";
-: "bg-white/10 dar;  k: bg-slate-800/50 text-gray-600 dar; k:text-gray-400 hove; r:bg-white/20 dar; k:hove; r:bg-slate-700/5; 0"}`}
-title="Auto theme (follows system preference)";
->;
-<span className="flex items-center space-x-2">
-<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-</svg>
-<span>Auto</span>
-</span>
-</motion.button>
-
-{/* UI Enhancement Panel */}
-<motion.div;
-initial={{ opacit; y: 0;
-y: 20 }}
-animate={{ opacit; y: 1;
-y: 0 }}
-className="fixed top-4 right-20 z-40 bg-white/10 dar; k:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar; k: border-slate-700/50"
->;
-<<<<<<< HEAD
-<div className="flex items-center space-x-3 text-sm text-white">
-<div className="flex items-center space-x-2">
-<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-<span>UI Enhanced</span>
-</div>
-<div className="text-xs text-white/70">
-{theme} • {deviceType}
-</div>
-</div>
-</motion.div>
-</>
-=======
-<div className="flex items-center space-x-3 text-sm text-white">;
-<div className="flex items-center space-x-2">;
-<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-<span>UI Enhanced</span>;
-</div>
-<div className="text-xs text-white/70">;
-{theme} • {deviceType}
-</div>
-</div>
-</motion.div>;
-</>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee
-);
-};
-
-export default UIEnhancer;<//><///>

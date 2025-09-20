@@ -1,6 +1,7 @@
 import React from "react";
 
 interface SonnerProps {
+  
 position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
 richColors?: boolean;
 }
@@ -16,7 +17,7 @@ position === "top-right" ? "top-4 right-4" :
 position === "bottom-left" ? "bottom-4 left-4" :
 "bottom-4 right-4"} z-5; 0`}>
 {/* Sonner toast container */}
-</div>
+</div>;
 );
 }
 

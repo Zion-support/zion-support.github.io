@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_pages_all/TalentProfilePage.tsx
 import React { useState useEffect } from "react";
 import { useRouter } from "next/router";
 import { TalentProfile } from "@/components/profile/TalentProfile";,
@@ -18,15 +19,9 @@ import { SEO } from "@/components/SEO";
 export default function TalentProfilePage() {return (
     <>
       <SEO
-<<<<<<< HEAD:temp_broken_pages_all/TalentProfilePage.tsx
-title = {profile.full_name,}
-        description = {profile.bio |'Talent profile',}
-        ogImage = {profile.profile_picture_url,}
-=======
 title = {profile.full_name}
         description = {profile.bio |'Talent profile'}
         ogImage = {profile.profile_picture_url}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/TalentProfilePage.tsx
       />
       <div className='min-h-screen bg-zion-blue pb-12'>
         <TalentProfile
@@ -74,7 +69,7 @@ talent={profile}
 </>
   )
 }, [error])
-return,
+return
 }setIsHireModalOpen (true)
 }
 const handleMessageTalent = () => {if (!isAuthenticated) {
@@ -96,15 +91,9 @@ return (<> <SEO title= {profile.full name}description= {'
 }/> </div> </>)
 }'"      <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile
-<<<<<<< HEAD:temp_broken_pages_all/TalentProfilePage.tsx
-profile = {profile,}
-        onRequestHire = {handleRequestHire,}
-        onMessageTalent = {handleMessageTalent,}
-=======
 profile = {profile}
         onRequestHire = {handleRequestHire}
         onMessageTalent = {handleMessageTalent}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/TalentProfilePage.tsx
       />
       <BackToDirectoryButton />
       {/* Sticky action buttons that appear when scrolling */}
@@ -131,18 +120,6 @@ size="sm"
       </StickyAction>
       {/* Request to Hire Modal */}
       <HireRequestModal
-<<<<<<< HEAD:temp_broken_pages_all/TalentProfilePage.tsx
-talent = {profile,}
-        isOpen = {isHireModalOpen,}
-        onClose = {(,) => setIsHireModalOpen(false),}
-        userDetails = {userProfile,}
-      />
-      {/* Message Talent Modal */}
-      <MessageTalentModal
-talent = {profile,}
-        isOpen = {isMessageModalOpen,}
-        onClose = {() => setIsMessageModalOpen(false),}      />
-=======
 talent = {profile}
         isOpen = {isHireModalOpen}
         onClose = {(,) => setIsHireModalOpen(false)}
@@ -153,8 +130,20 @@ talent = {profile}
 talent = {profile}
         isOpen = {isMessageModalOpen}
         onClose = {() => setIsMessageModalOpen(false)}      />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a7ee:src/pages/TalentProfilePage.tsx
     </div>
-</>
-  )
+</>;
+  );
+};
+import React from 'react';
+
+export default function TalentProfilePage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">TalentProfilePage</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/TalentProfilePage.tsx

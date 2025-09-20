@@ -1,4 +1,4 @@
-export const INDUSTRY_SOLUTIONS = [
+export const INDUSTRY_SOLUTIONS = [;
     // Healthcare AI Platform;
     {id: "healthcare-ai-platform";
         title: "Healthcare AI & Clinical Decision Support Platform";
