@@ -9,13 +9,12 @@ export interface ComprehensivePricingPlan2028 {
   contactInfo: {,
     phone: string,email: string,website: string
   };
-}
+};
 
 export interface ServiceCategory2028 {
   id: string,name: string,description: string,services: {,
     id: string,name: string,description: string,basePrice: number,marketPrice: string,roi: string,features: string[],benefits: string[]
   }[];
-}
 
 export const COMPREHENSIVE_PRICING_PLANS_2028: ComprehensivePricingPlan2028[] = [
   {
@@ -215,7 +214,7 @@ export const COMPREHENSIVE_PRICING_PLANS_2028: ComprehensivePricingPlan2028[] = 
     contactInfo: {,
       phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
     }
-  }
+  };
 ];
 export const SERVICE_CATEGORIES_2028: ServiceCategory2028[] = [
   {
@@ -321,7 +320,7 @@ export const SERVICE_CATEGORIES_2028: ServiceCategory2028[] = [
         benefits: ["Increase crop yields by 35%", "Reduce water usage by 40%"]
       }
     ]
-  }
+  };
 ],
 
 export const MARKET_ANALYSIS_2028 = {
@@ -345,4 +344,3 @@ export const MARKET_ANALYSIS_2028 = {
     "Strategic partnerships",
     "Customer success focus"
   ]
-};

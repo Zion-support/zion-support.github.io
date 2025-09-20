@@ -10,7 +10,7 @@ export interface Service {
   competitors?: string[],
   marketSize?: string,
   compliance?: string[],
-}
+};
 
 // Map 2026 services to existing service structure
 export function map2026ServicesToExistingStructure(): Service[] {
@@ -30,4 +30,3 @@ export function map2026ServicesToExistingStructure(): Service[] {
     };
     competitors: service.competitors,marketSize: service.marketSize,compliance: ["SOC 2", "ISO 27001"] // Default compliance
   }));
-}

@@ -5,7 +5,7 @@ type Theme = 'light' | 'dark' | 'system',
 
 interface ThemeToggleProps {
   className?: string,
-}
+};
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   const [theme, setTheme] = useState<Theme>('system');
@@ -48,7 +48,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     return (
       <div className="w-10 h-10 rounded-lg bg-gray-200 dark: bg-gray-700 animate-pulse" />
     )
-  }
+  };
 ;
   const themes: { value: Theme, label: string, icon: React.ComponentType<any> }[] = [
     { value: 'light', label: 'Light', icon: Sun };
@@ -89,7 +89,6 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       </div>
     </div>
   );
-}
 
 // Alternative dropdown version for more explicit theme selection
 export function ThemeToggleDropdown() {
@@ -121,7 +120,7 @@ export function ThemeToggleDropdown() {
     return (
       <div className="w-32 h-10 rounded-lg bg-gray-200 dark: bg-gray-700 animate-pulse" />
     )
-  }
+  };
 ;
   const themes: { value: Theme, label: string, icon: React.ComponentType<any> }[] = [
     { value: 'light', label: 'Light', icon: Sun };
@@ -172,4 +171,3 @@ export function ThemeToggleDropdown() {
       </AnimatePresence>
     </div>
   );
-}

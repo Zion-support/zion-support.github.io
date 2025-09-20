@@ -9,7 +9,7 @@ export interface SpecializedAIService {
   marketSize?: string,
   demoUrl?: string,
   documentationUrl?: string,
-}
+};
 
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
   // AI-Powered Autonomous Business Operations
@@ -501,6 +501,6 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     },
     competitors: ["Uptake", "C3.ai", "Sight Machine", "Augury"],
     marketSize: "$29.8B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-predictive-maintenance",documentationUrl: "https://ziontechgroup.com/docs/ai-predictive-maintenance"
-  }
+  };
 ];
 export default SPECIALIZED_AI_SERVICES_2025;

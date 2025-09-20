@@ -5,7 +5,7 @@ interface BadgeProps {
   size?: 'sm' | 'md' | 'lg',
   children: React.ReactNode;
   className?: string
-}
+};
 ;
 const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
   ({ variant = 'default', size = 'md', children, className, ...props }, ref) => {
@@ -30,7 +30,7 @@ const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
         {children}
       </div>
     ),
-  }
+  };
 ),
 
 Badge.displayName = 'Badge';

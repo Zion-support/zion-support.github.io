@@ -372,4 +372,4 @@ export default function AIHRPlatform() {
       </section>
     </div>
   )
-}
+};

@@ -5,18 +5,16 @@ interface SearchResult {
   id: string,title: string,description: string,type: 'service' | 'page' | 'article' | 'ai-suggestion',url: string;
   icon?: React.ComponentType<any>,
   relevance: number
-}
+};
 
 interface SearchSuggestion {
   text: string,type: 'recent' | 'trending' | 'ai'
-}
 
 interface EnhancedSearchProps {
   className?: string;
   placeholder?: string,
   onSearch?: (query: string) => void;
   variant?: 'default' | 'futuristic' | 'minimal'
-}
 
 export function EnhancedSearch({ 
   className = '',
@@ -306,4 +304,3 @@ export function EnhancedSearch({
       </AnimatePresence>
     </div>
   );
-}

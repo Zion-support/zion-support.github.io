@@ -42,7 +42,7 @@ const techSolutions = [
   {
     icon: "📊",title: "Data Analytics",description: "Business intelligence and data-driven insights for strategic decision making",benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],
     color: "from-yellow-500 to-orange-500"
-  }
+  };
 ];
 export function TechSolutionsSection() {
   return (
@@ -140,4 +140,4 @@ export function TechSolutionsSection() {
       </div>
     </section>
   )
-}
+};

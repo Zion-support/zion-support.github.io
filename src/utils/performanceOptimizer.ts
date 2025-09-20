@@ -10,7 +10,7 @@ interface PerformanceMetrics {
   renderTime: number;,
   memoryUsage: number,
   bundleSize: number;
-}
+};
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {,
@@ -24,7 +24,7 @@ class PerformanceOptimizer {
 
   constructor() {
     this.initializeObservers();
-  }
+  };
 
   private initializeObservers(): void {
     // Observe navigation timing
@@ -52,7 +52,7 @@ class PerformanceOptimizer {
       paintObserver.observe({ entryTypes: ['paint'] });
       this.observers.push(paintObserver);
     }
-  }
+  };
 
   // Debounce function for performance optimization
   debounce<T extends (...args: any[]) => any>(,
@@ -64,7 +64,7 @@ class PerformanceOptimizer {
       clearTimeout(timeout);
       timeout = setTimeout(() => func(...args), wait);
     };
-  }
+  };
 
   // Throttle function for performance optimization
   throttle<T extends (...args: any[]) => any>(,
@@ -79,7 +79,7 @@ class PerformanceOptimizer {
         setTimeout(() => (inThrottle = false), limit);
       }
     };
-  }
+  };
 
   // Lazy load images
   lazyLoadImages(): void {
@@ -96,7 +96,7 @@ class PerformanceOptimizer {
     });
 
     images.forEach((img) => imageObserver.observe(img));
-  }
+  };
 
   // Preload critical resources
   preloadResource(href: string, as: string): void {
@@ -105,7 +105,7 @@ class PerformanceOptimizer {
     link.href = href;
     link.as = as;
     document.head.appendChild(link);
-  }
+  };
 
   // Bundle size optimization
   optimizeBundleSize(): void {
@@ -119,7 +119,7 @@ class PerformanceOptimizer {
       // Remove unused code
       console.log('Production mode: Tree shaking enabled');
     }
-  }
+  };
 
   // Memory optimization
   optimizeMemory(): void {
@@ -136,12 +136,12 @@ class PerformanceOptimizer {
     }
 ;
     return cleanup;
-  }
+  };
 
   // Get current metrics
   getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
-  }
+  };
 
   // Performance score calculation
   calculatePerformanceScore(): number {
@@ -150,8 +150,7 @@ class PerformanceOptimizer {
     const memoryScore = Math.max(0, 100 - (this.metrics.memoryUsage / 10000000));
     
     return Math.round((loadScore + renderScore + memoryScore) / 3);
-  }
-}
+  };
 
 // Singleton instance
 export const performanceOptimizer = new PerformanceOptimizer();
@@ -183,6 +182,5 @@ export const usePerformanceMonitor = () => {
   }, []);
 
   return { score, metrics };
-};
 
 export default performanceOptimizer;

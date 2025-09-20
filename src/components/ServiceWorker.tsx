@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Download, Wifi, WifiOff, CheckCircle, AlertCircle } from "lucide-react";
 interface ServiceWorkerState {
   isInstalled: boolean,isOnline: boolean,hasUpdate: boolean,isInstalling: boolean
-}
+};
 
 export function ServiceWorker() {
   const [swState, setSwState] = useState<ServiceWorkerState>({
@@ -104,4 +104,3 @@ export function ServiceWorker() {
       )}
     </AnimatePresence>
   );
-}

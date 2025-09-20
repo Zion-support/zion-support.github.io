@@ -282,4 +282,4 @@ export function HowItWorksSection() {
             </div>
         </section>
     )
-}
+};

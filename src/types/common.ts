@@ -4,14 +4,13 @@ export interface BaseEntity {
   id: string;
   createdAt: string;
   updatedAt: string;
-}
+};
 
 export interface ApiResponse<T> {
   data: T;
   message: string;
   success: boolean;
   timestamp: string;
-}
 
 export interface PaginatedResponse<T> extends ApiResponse<T[]> {
   pagination: {
@@ -22,7 +21,6 @@ export interface PaginatedResponse<T> extends ApiResponse<T[]> {
     hasNext: boolean;
     hasPrev: boolean;
   };
-}
 
 export interface ErrorResponse {
   error: string;
@@ -30,19 +28,16 @@ export interface ErrorResponse {
   statusCode: number;
   timestamp: string;
   path?: string;
-}
 
 export interface LoadingState {
   isLoading: boolean;
   error: string | null;
-}
 
 export interface FormState<T> extends LoadingState {
   data: T;
   errors: Partial<Record<keyof T, string>>;
   isValid: boolean;
   isDirty: boolean;
-}
 
 export interface AnimationVariants {
   hidden: {
@@ -64,7 +59,6 @@ export interface AnimationVariants {
       staggerChildren?: number;
     };
   };
-}
 
 export interface PerformanceMetrics {
   fps: number;
@@ -75,14 +69,12 @@ export interface PerformanceMetrics {
   cacheHitRate: number;
   lighthouseScore: number;
   loadTime: number;
-}
 
 export interface PerformanceAlert {
   id: string;
   type: 'warning' | 'error' | 'info';
   message: string;
   timestamp: Date;
-}
 
 export interface BundleInfo {
   name: string;
@@ -90,14 +82,12 @@ export interface BundleInfo {
   gzipSize: number;
   chunks: string[];
   modules: ModuleInfo[];
-}
 
 export interface ModuleInfo {
   name: string;
   size: number;
   percentage: number;
   chunks: string[];
-}
 
 export interface BundleAnalysis {
   totalSize: number;
@@ -106,14 +96,12 @@ export interface BundleAnalysis {
   largestModules: ModuleInfo[];
   duplicateModules: ModuleInfo[];
   unusedModules: ModuleInfo[];
-}
 
 export interface ThemeConfig {
   mode: 'light' | 'dark' | 'system';
   primaryColor: string;
   secondaryColor: string;
   accentColor: string;
-}
 
 export interface UserPreferences {
   theme: ThemeConfig;
@@ -128,7 +116,6 @@ export interface UserPreferences {
     reducedMotion: boolean;
     fontSize: 'small' | 'medium' | 'large';
   };
-}
 
 export interface NavigationItem {
   label: string;
@@ -137,13 +124,11 @@ export interface NavigationItem {
   children?: NavigationItem[];
   external?: boolean;
   disabled?: boolean;
-}
 
 export interface BreadcrumbItem {
   label: string;
   path?: string;
   current?: boolean;
-}
 
 export interface TableColumn<T> {
   key: keyof T;
@@ -153,7 +138,6 @@ export interface TableColumn<T> {
   render?: (value: any, item: T) => React.ReactNode;
   width?: string | number;
   align?: 'left' | 'center' | 'right';
-}
 
 export interface TableProps<T> {
   data: T[];
@@ -175,14 +159,12 @@ export interface TableProps<T> {
     selected: string[];
     onSelectionChange: (selected: string[]) => void;
   };
-}
 
 export interface ChartDataPoint {
   label: string;
   value: number;
   color?: string;
   metadata?: Record<string, any>;
-}
 
 export interface ChartConfig {
   type: 'line' | 'bar' | 'pie' | 'doughnut' | 'area';
@@ -216,7 +198,6 @@ export interface ChartConfig {
       };
     };
   };
-}
 
 export interface ValidationRule {
   required?: boolean;
@@ -224,11 +205,9 @@ export interface ValidationRule {
   maxLength?: number;
   pattern?: RegExp;
   custom?: (value: any) => string | null;
-}
 
 export interface ValidationSchema {
   [key: string]: ValidationRule;
-}
 
 export interface NotificationConfig {
   id: string;
@@ -241,7 +220,6 @@ export interface NotificationConfig {
     onClick: () => void;
   };
   dismissible?: boolean;
-}
 
 export interface SearchFilters {
   query?: string;
@@ -257,7 +235,6 @@ export interface SearchFilters {
   };
   sortBy?: string;
   sortOrder?: 'asc' | 'desc';
-}
 
 export interface FileUploadConfig {
   accept?: string;
@@ -266,7 +243,6 @@ export interface FileUploadConfig {
   multiple?: boolean;
   onUpload: (files: File[]) => Promise<void>;
   onError?: (error: string) => void;
-}
 
 export interface ModalConfig {
   id: string;
@@ -286,7 +262,6 @@ export interface ModalConfig {
       onClick: () => void;
     };
   };
-}
 
 export interface ToastConfig {
   id: string;
@@ -298,7 +273,6 @@ export interface ToastConfig {
     label: string;
     onClick: () => void;
   };
-}
 
 export interface KeyboardShortcut {
   key: string;
@@ -309,7 +283,6 @@ export interface KeyboardShortcut {
   action: () => void;
   description?: string;
   preventDefault?: boolean;
-}
 
 export interface LocalStorageConfig {
   key: string;
@@ -318,32 +291,27 @@ export interface LocalStorageConfig {
     serialize: (value: any) => string;
     deserialize: (value: string) => any;
   };
-}
 
 export interface DebounceConfig {
   delay: number;
   leading?: boolean;
   trailing?: boolean;
-}
 
 export interface ThrottleConfig {
   limit: number;
   leading?: boolean;
   trailing?: boolean;
-}
 
 export interface RetryConfig {
   maxAttempts: number;
   delay: number;
   backoff?: 'linear' | 'exponential';
   onRetry?: (attempt: number, error: Error) => void;
-}
 
 export interface CacheConfig {
   ttl: number;
   maxSize?: number;
   strategy?: 'lru' | 'lfu' | 'fifo';
-}
 
 export interface LoggerConfig {
   level: 'debug' | 'info' | 'warn' | 'error';
@@ -351,7 +319,6 @@ export interface LoggerConfig {
   enableRemote?: boolean;
   remoteEndpoint?: string;
   context?: Record<string, any>;
-}
 
 export interface AnalyticsConfig {
   enabled: boolean;
@@ -364,7 +331,6 @@ export interface AnalyticsConfig {
     performance?: boolean;
     errors?: boolean;
   };
-}
 
 export interface FeatureFlag {
   key: string;
@@ -373,7 +339,6 @@ export interface FeatureFlag {
   rolloutPercentage?: number;
   targetAudience?: string[];
   expirationDate?: Date;
-}
 
 export interface A11yConfig {
   skipLinks?: boolean;
@@ -382,7 +347,6 @@ export interface A11yConfig {
   keyboardNavigation?: boolean;
   colorContrast?: boolean;
   reducedMotion?: boolean;
-}
 
 export interface I18nConfig {
   defaultLanguage: string;
@@ -392,7 +356,6 @@ export interface I18nConfig {
   interpolation?: {
     escapeValue?: boolean;
   };
-}
 
 export interface SecurityConfig {
   csrfProtection?: boolean;
@@ -402,7 +365,6 @@ export interface SecurityConfig {
     windowMs: number;
     maxRequests: number;
   };
-}
 
 export interface MonitoringConfig {
   performance?: boolean;
@@ -414,7 +376,6 @@ export interface MonitoringConfig {
     thresholds: Record<string, number>;
     channels: string[];
   };
-}
 
 export interface DeploymentConfig {
   environment: 'development' | 'staging' | 'production';
@@ -422,7 +383,6 @@ export interface DeploymentConfig {
   buildNumber: string;
   timestamp: string;
   features: FeatureFlag[];
-}
 
 export interface HealthCheck {
   status: 'healthy' | 'degraded' | 'unhealthy';
@@ -439,4 +399,3 @@ export interface HealthCheck {
     memory: number;
     disk: number;
   };
-}

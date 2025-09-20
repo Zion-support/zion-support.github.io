@@ -596,4 +596,4 @@ export default function QuantumAITradingPlatform() {
       </section>
     </div>
   );
-}
+};

@@ -3,19 +3,16 @@
 
 export interface ServiceContact {
   phone: string,email: string,website: string,address: string
-}
+};
 
 export interface MicroSaasService {
   id: number,name: string,category: string,pricing: string,description: string,price: number,pricingModel: string,userLimit: string,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,competitors: string[],roi: string,setupTime: string,integrations: string[],freeTier: boolean,trialPeriod: string,innovationLevel: string,marketSize: string,growthRate: string
-}
 
 export interface ITService {
   id: number,name: string,category: string,description: string,hourlyRate: number,projectRate: number,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,responseTime: string,sla: string,certifications: string[],deliveryTime: string,support: string,innovationLevel: string,marketSize: string,compliance: string[]
-}
 
 export interface AIService {
   id: number,name: string,category: string,description: string,pricing: string,price: number,pricingModel: string,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,aiModels: string[],accuracy: string,trainingData: string,compliance: string[],aiScore: number,useCases: string[],innovationLevel: string,marketSize: string,ethicalAI: string[]
-}
 
 // Revolutionary Micro SAAS Services 2026
 export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
@@ -392,7 +389,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     competitors: ["Siemens", "Rockwell Automation", "ABB", "Honeywell", "Emerson"],
     roi: "400-700%",setupTime: "10-14 weeks",integrations: ["MES systems", "ERP systems", "SCADA systems", "PLC systems", "Custom APIs"],
     freeTier: false,trialPeriod: "30 days",innovationLevel: "Cutting-Edge",marketSize: "$45.2 billion by 2026",growthRate: "35% annually"
-  }
+  };
 ];
 // Revolutionary IT Infrastructure Services 2026
 export const revolutionaryITInfrastructureServices2026: ITService[] = [
@@ -451,7 +448,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     marketPrice: "$150-300/hour, $30,000-80,000/project",
     responseTime: "4 hours",sla: "99.9% uptime",certifications: ["ISO 27001", "SOC 2", "Edge computing"],
     deliveryTime: "6-10 weeks",support: "16/7 support",innovationLevel: "Advanced",marketSize: "$2.8 billion by 2026",compliance: ["GDPR", "HIPAA", "Industry 4.0"]
-  }
+  };
 ],
 
 // Revolutionary AI Services 2026
@@ -516,7 +513,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     accuracy: "99.8%",trainingData: "Quantum-enhanced datasets",compliance: ["Research ethics", "Quantum standards", "AI safety"],
     aiScore: 99,useCases: ["Drug discovery", "Financial modeling", "Climate prediction", "Materials science"],
     innovationLevel: "Revolutionary",marketSize: "$1.8 billion by 2026",ethicalAI: ["AI safety", "Quantum ethics", "Research integrity", "Beneficial AI"]
-  }
+  };
 ],
 
 // Export all services

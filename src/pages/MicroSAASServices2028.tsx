@@ -285,7 +285,7 @@ const microSAASServices2028 = [
     useCases: ['Business intelligencePerformance monitoring', 'Predictive insightsData visualization', 'Automated reporting'],
     roi: 'Businesses achieve 400% ROI through improved decision-making and operational efficiency.',competitors: ['Traditional BI toolsBasic analytics platforms', 'Manual reporting tools'],
     marketSize: '$7.2B AI analytics market',growthRate: '260% annual growth',rating: 4.6,reviews: 234,customers: 123
-  }
+  };
 ];
 const MicroSAASServices2028: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

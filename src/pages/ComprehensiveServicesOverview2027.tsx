@@ -31,7 +31,7 @@ const MICRO_SAAS_SERVICES = [
   {
     id: 'website-analytics',title: 'Website Analytics',description: 'Comprehensive website performance and user behavior analytics',category: 'Analytics',subcategory: 'Web Analytics',pricingModel: 'monthly',price: 19,rating: 4.9,reviewCount: 234,aiScore: 98,featured: true,createdAt: '2024-01-10',href: '/services/website-analytics',tags: ['AnalyticsWeb', 'Performance'],
     images: ['/images/analytics.jpg']
-  }
+  };
 ];
 const categories = [
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length };
@@ -371,4 +371,4 @@ export default function ComprehensiveServicesOverview2027() {
       </section>
     </div>
   )
-}
+};

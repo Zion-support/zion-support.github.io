@@ -43,18 +43,16 @@ import {
 } from "lucide-react";
 interface Resource {
   id: string,name: string,type: 'human' | 'infrastructure' | 'software' | 'equipment' | 'facility',category: string,status: 'available' | 'allocated' | 'maintenance' | 'unavailable',priority: 'low' | 'medium' | 'high' | 'critical',capacity: number,currentUsage: number,location: string,department: string,cost: number,lastUpdated: string,tags: string[],description: string,manager: string,utilization: number
-}
+};
 
 interface ResourceStats {
   totalResources: number,availableResources: number,allocatedResources: number,maintenanceResources: number,totalCapacity: number,currentUtilization: number,averageCost: number,topDepartments: Array<{ name: string, count: number, percentage: number }>;
-}
 
 interface ResourceManagementSystemProps {
   showStats?: boolean,
   showFilters?: boolean,
   showCharts?: boolean,
   maxResources?: number,
-}
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
   showStats = true;
@@ -562,4 +560,3 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       )}
     </div>
   );
-};

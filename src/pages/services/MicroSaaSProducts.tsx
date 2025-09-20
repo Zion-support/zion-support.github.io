@@ -55,7 +55,7 @@ const products: Product[] = [
     links: [
       { label: 'Market pricing', href: 'https://www.g2.com/categories/ai-writing-assistants' }
     ]
-  }
+  };
 ];
 export default function MicroSaaSProducts() {
   return (
@@ -116,5 +116,4 @@ export default function MicroSaaSProducts() {
       </section>
     </div>
   )
-}
 

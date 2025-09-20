@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 interface FormData {
   name: string,email: string,company: string,service: string,message: string,budget: string
-}
+};
 ;
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -192,6 +192,5 @@ const ContactForm: React.FC = () => {
       </div>
     </div>
   );
-}
 
 export default ContactForm;

@@ -31,7 +31,7 @@ const upcomingEvents = [
   },
   {
     title: 'Security Review',date: 'Friday',time: '3:00 PM',type: 'Review',icon: Shield
-  }
+  };
 ];
 const recentProjects = [
   {
@@ -42,7 +42,7 @@ const recentProjects = [
   },
   {
     name: 'Cybersecurity Enhancement',progress: 90,status: 'Testing',team: 'Security Team'
-  }
+  };
 ];
 export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -249,4 +249,4 @@ export default function Dashboard() {
       </main>
     </div>
   );
-}
+};

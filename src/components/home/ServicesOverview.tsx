@@ -6,11 +6,10 @@ interface Service {
   category: string,icon: React.ComponentType<{ className?: string }>,
   color: string,items: string[];
   description?: string
-}
+};
 
 interface ServicesOverviewProps {
   services: Service[]
-}
 ;
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   return (

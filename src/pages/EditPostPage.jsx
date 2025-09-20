@@ -87,4 +87,3 @@ export default function EditPostPage() {
         
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
       </div>);
-}

@@ -477,7 +477,7 @@ export default function EnhancedServicesLanding() {
       </section>
     </div>
   )
-}
+};
 
 // Settings icon component
 const Settings = ({ className }: { className?: string }) => (

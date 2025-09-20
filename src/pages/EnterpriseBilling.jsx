@@ -24,4 +24,4 @@ export default function EnterpriseBilling() {
       </main>
       
     </ProtectedRoute>);
-}
+};

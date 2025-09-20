@@ -38,5 +38,5 @@ export default function Solutions() {
       <Footer />
     </div>
   );
-}
+};
 

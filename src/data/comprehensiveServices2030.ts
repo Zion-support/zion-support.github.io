@@ -84,15 +84,34 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
 
   // Entertainment AI Solutions
   {
-    id: "ai-content-personalization-engine",title: "AI Content Personalization Engine",description: "Advanced content personalization platform for streaming services and digital media. Uses AI to deliver personalized content recommendations, increasing user engagement by 60% and retention by 40%.",
-    category: "AI & Entertainment",subcategory: "Content Personalization",price: 3500,currency: "$",tags: ["Content Personalization", "Streaming", "Recommendation Engine", "User Engagement", "Retention"],
+    id: "ai-content-personalization-engine",
+    title: "AI Content Personalization Engine",
+    description: "Advanced content personalization platform for streaming services and digital media. Uses AI to deliver personalized content recommendations, increasing user engagement by 60% and retention by 40%.",
+    category: "AI & Entertainment",
+    subcategory: "Content Personalization",
+    price: 3500,
+    currency: "$",
+    tags: ["Content Personalization", "Streaming", "Recommendation Engine", "User Engagement", "Retention"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/ai-content-personalization.jpg"],createdAt: "2024-01-22T10:00:00.000Z",rating: 4.8,reviewCount: 67,featured: true,location: "Global",availability: "2-3 Weeks",aiScore: 96,contactInfo: {
-      phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com/ai-content-personalization",address: "364 E Main St STE 1008 Middletown DE 19709"
+    images: ["https://ziontechgroup.com/images/ai-content-personalization.jpg"],
+    createdAt: "2024-01-22T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 67,
+    featured: true,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-content-personalization",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$3,000-8,000",
     competitors: ["Netflix", "Spotify", "YouTube"],
-    roi: "450% within 10 months",setupTime: "2-3 weeks",integrations: ["Streaming Platforms", "Content Management Systems", "Analytics Tools", "User Databases", "CDN Services"]
+    roi: "450% within 10 months",
+    setupTime: "2-3 weeks",
+    integrations: ["Streaming Platforms", "Content Management Systems", "Analytics Tools", "User Databases", "CDN Services"]
   }
 ]
 

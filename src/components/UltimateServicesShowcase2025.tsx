@@ -4,7 +4,7 @@ import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brai
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 interface ServiceContact {
   mobile: string,email: string,address: string,website: string
-}
+};
 ;
 const UltimateServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');

@@ -38,4 +38,4 @@ export default function CompanyWorkspace() {
       </main>
       <Footer />
     </ProtectedRoute>);
-}
+};

@@ -171,4 +171,4 @@ export default function Enterprise() {
         </div>
       </section>
     </div>)
-}
+};

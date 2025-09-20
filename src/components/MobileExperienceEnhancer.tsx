@@ -29,13 +29,12 @@ import {
 } from "lucide-react";
 interface MobileMetrics {
   screenWidth: number,screenHeight: number,pixelRatio: number,orientation: 'portrait' | 'landscape',touchSupport: boolean,connectionType: string,batteryLevel: number,isCharging: boolean
-}
+};
 
 interface MobileExperienceEnhancerProps {
   enabled?: boolean;
   showControls?: boolean,
   autoOptimize?: boolean,
-}
 
 export function MobileExperienceEnhancer({ 
   enabled = true, 
@@ -550,4 +549,3 @@ export function MobileExperienceEnhancer({
       )}
     </>
   );
-}

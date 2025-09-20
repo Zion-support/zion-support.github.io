@@ -95,7 +95,7 @@ const caseStudies = [
     },
     technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],
     duration: "15 months",roi: "500%",image: "/images/case-study-6.jpg"
-  }
+  };
 ];
 const industries = ['AllTechnology', 'HealthcareFinance', 'BankingManufacturing', 'Retail'],
 const technologies = ['AllAI/ML', 'Cloud ComputingCybersecurity', 'IoTData Analytics', 'DevOps'],
@@ -334,4 +334,4 @@ export default function CaseStudies() {
       </section>
     </div>
   )
-}
+};

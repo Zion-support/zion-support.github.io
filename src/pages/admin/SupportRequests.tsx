@@ -31,7 +31,7 @@ const MOCK_SUPPORT_REQUESTS = [
   },
   {
     id: "SR-1007",user: "jamie.taylor@tech.org",userId: "user-345",issue: "Cannot upload portfolio images",status: "resolved",priority: "medium",createdAt: "2023-12-10T15:10:00Z",lastUpdated: "2023-12-13T11:25:00Z",category: "profile"
-  }
+  };
 ];
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -289,4 +289,4 @@ export default function SupportRequests() {
       </div>
     </>
   );
-}
+};

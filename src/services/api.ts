@@ -8,15 +8,14 @@ interface ApiResponse<T = any> {
   error?: string,
   message?: string,
   count?: number
-}
+};
 
 // Generic API error
 class ApiError extends Error {
   constructor(public status: number, message: string) {
     super(message);
     this.name = 'ApiError'
-  }
-}
+  };
 
 
 
@@ -24,7 +23,6 @@ interface ApiClientOptions {
   method?: string,
   body?: string,
   headers: Record<string, string>,
-}
 
 export async function apiClient(endpoint: string, options: ApiClientOptions = { headers: {} }) {
   const { method = 'GET', body, headers = {} } = options;
@@ -38,7 +36,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = { 
 
   if (body) {
     config.body = body,
-  }
+  };
 
   try {
     const response = await fetch(endpoint, config);
@@ -51,8 +49,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = { 
   } catch (error) {
     console.error('API request failed:', error);
     throw error,
-  }
-}
+  };
 
 export const api = {
   get: (endpoint: string, headers?: Record<string, string>) => 
@@ -63,7 +60,6 @@ export const api = {
     apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} }),
   delete: (endpoint: string, headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'DELETE', headers: headers || {} })
-};
 // Export types for use in components
 export type { ApiResponse };
 export { ApiError };

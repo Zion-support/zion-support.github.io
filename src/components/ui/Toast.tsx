@@ -6,11 +6,10 @@ export interface Toast {
   id: string,type: ToastType,title: string;
   message?: string,
   duration?: number
-}
+};
 
 interface ToastProps {
   toast: Toast,onRemove: (id: string) => void
-}
 ;
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -83,7 +82,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       </div>
     </motion.div>
   )
-};
 export const ToastContainer: React.FC = () => {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
@@ -116,11 +114,9 @@ export const ToastContainer: React.FC = () => {
       </AnimatePresence>
     </div>
   ),
-};
 
 // Utility function to show toasts
 export const showToast = (type: ToastType, title: string, message?: string, duration?: number) => {
   if (typeof window !== 'undefined' && (window as any).showToast) {
     (window as any).showToast({ type, title, message, duration });
-  }
-};
+  };

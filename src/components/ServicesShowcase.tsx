@@ -43,7 +43,7 @@ interface Service {
   icon: React.ComponentType<any>,title: string,description: string,href: string,category: string,color: string,features: string[];
   pricing?: string,
   badge?: string
-}
+};
 
 export function ServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -278,4 +278,3 @@ export function ServicesShowcase() {
       </div>
     </section>
   )
-}

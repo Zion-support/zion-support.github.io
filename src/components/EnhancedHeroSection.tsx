@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 interface HeroSlide {
   title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> }[];
-}
+};
 
 export default function EnhancedHeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -342,4 +342,3 @@ export default function EnhancedHeroSection() {
       </motion.div>
     </section>
   );
-}

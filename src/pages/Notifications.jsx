@@ -43,7 +43,6 @@ const getNotificationTypeBadge = (type) => {
             return <Badge className="bg-yellow-500">System</Badge>;
         default: return <Badge variant="outline">Notification</Badge>
     }
-};
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
     const navigate = useNavigate();
     const handleAction = () => {
@@ -144,4 +143,3 @@ export default function NotificationsPage() {
       </main>
       
     </>);
-}

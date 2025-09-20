@@ -4,11 +4,10 @@ interface User {
   userType?: string,
   displayName?: string,
   avatarUrl?: string
-}
+};
 
 interface AuthState {
   user: User | null,isAuthenticated: boolean,isLoading: boolean
-}
 
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
@@ -91,4 +90,3 @@ export function useAuth() {
     register,
     isAuthenticated: authState.isAuthenticated,isLoading: authState.isLoading,isAdmin: authState.user?.role === 'admin'
   };
-}

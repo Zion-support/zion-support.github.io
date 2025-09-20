@@ -156,4 +156,4 @@ export function ITServiceRequestHero() {
         </div>
       </motion.div>
     </section>);
-}
+};

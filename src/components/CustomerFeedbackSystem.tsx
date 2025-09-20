@@ -19,17 +19,15 @@ import {
 } from "lucide-react";
 interface Feedback {
   id: string,customerName: string,rating: number,comment: string,category: 'service' | 'product' | 'support' | 'overall',sentiment: 'positive' | 'neutral' | 'negative',date: string,helpful: number,unhelpful: number,tags: string[],verified: boolean
-}
+};
 
 interface FeedbackStats {
   totalFeedback: number,averageRating: number,positivePercentage: number,responseRate: number,topCategories: Array<{ category: string, count: number, percentage: number }>;
-}
 
 interface CustomerFeedbackSystemProps {
   showStats?: boolean,
   showFilters?: boolean,
   maxFeedback?: number,
-}
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   showStats = true;
@@ -518,4 +516,3 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       )}
     </div>
   );
-};

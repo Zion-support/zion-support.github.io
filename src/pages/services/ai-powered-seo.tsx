@@ -255,4 +255,4 @@ export default function AIPoweredSEO() {
       </section>
     </div>
   )
-}
+};

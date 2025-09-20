@@ -90,4 +90,4 @@ export function SitemapPage() {
       </div>
     </div>
   );
-}
+};

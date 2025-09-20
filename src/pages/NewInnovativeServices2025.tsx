@@ -472,4 +472,4 @@ export default function NewInnovativeServices2025() {
       </div>
     </div>
   )
-}
+};

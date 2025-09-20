@@ -293,4 +293,4 @@ export default function SpaceTech() {
       </section>
     </div>
   )
-}
+};

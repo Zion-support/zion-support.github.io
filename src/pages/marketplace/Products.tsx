@@ -600,4 +600,4 @@ export default function MarketplaceProducts() {
       </section>
     </div>
   )
-}
+};

@@ -21,7 +21,7 @@ export function generateSearchSuggestions() {
     "Support",
     "Maintenance"
   ];
-}
+};
 
 // Mock marketplace items data
 export const marketplaceItems = [
@@ -48,7 +48,7 @@ export const marketplaceItems = [
     id: 5,title: "IT Infrastructure Management",description: "Comprehensive IT infrastructure monitoring and management solution",category: "IT Infrastructure",price: "$1,500/month",
     rating: 4.5,location: "Global",availability: "Available",tags: ["IT", "Infrastructure", "Monitoring", "Management"],
     images: ["/images/it-infrastructure.jpg"]
-  }
+  };
 ];
 // Marketplace filters configuration
 export const marketplaceFilters = {
@@ -89,4 +89,3 @@ export const marketplaceFilters = {
     "Limited Availability",
     "Custom Quote Required"
   ]
-};
