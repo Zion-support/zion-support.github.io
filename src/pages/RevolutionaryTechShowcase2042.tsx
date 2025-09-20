@@ -112,9 +112,18 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
                   activeDemo === index
                     ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
                     : 'bg-white/10 text-cyan-200 hover:bg-white/20'
+<<<<<<< HEAD
+                  activeTab === key
+                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
+                    : 'text-gray-300 hover:text-white hover:bg-white/20'
+                }`}</button>
+              ></button>
+                {tech.icon} {tech.title}</button>
+=======
                 }`}
               >
                 {tech.icon} {tech.title}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
               </button>
             ))}
           {/* Active Demo Display */}

@@ -80,5 +80,36 @@
     "h1": "2025 Pricing & Services"
   },
   {
+<<<<<<< HEAD
+    "route": "/pricing",
+    "title": "Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing",
+    "h1": ""
+  },
+  {
+    "route": "/quantum-cybersecurity",
+    "title": "Quantum Cybersecurity - Zion Tech Group | Future-Proof Security Solutions",
+    "h1": ""
+  },
+  {
+    "route": "/quantum-financial-trading",
+    "title": "Quantum Financial Trading - Zion Tech Group | Quantum AI Trading Platform",
+    "h1": ""
+  },
+  {
+    "route": "/quantum-neural-networks",
+    "title": "Quantum Neural Networks - Zion Tech Group | Quantum AI & Consciousness",
+    "h1": ""
+  },
+  {
+    "route": "/services",
+    "title": "Services - Zion Tech Group | AI & IT Solutions",
+    "h1": ""
+  },
+  {
+    "route": "/solutions",
+    "title": "Solutions - Zion Tech Group | Industry & Technology Solutions",
+    "h1": ""
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   }
 ]

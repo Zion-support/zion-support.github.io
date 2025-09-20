@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+export default FeatureHighlights;
+=======
 import { motion } from 'framer-motion';
 import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
 const highlights = [
@@ -86,3 +89,4 @@ export function FeatureHighlights() {
       </div>
 
 export default FeatureHighlights;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

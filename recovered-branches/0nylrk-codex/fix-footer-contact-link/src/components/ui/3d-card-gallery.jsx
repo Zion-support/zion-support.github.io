@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default 3d-card-gallery;
+=======
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
@@ -172,3 +176,4 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
       </div>
 
 export default 3d-card-gallery;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

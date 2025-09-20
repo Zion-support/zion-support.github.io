@@ -8,6 +8,11 @@ const posts = [
       'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
   }, 
   {
+<<<<<<< HEAD
+    slug: 'ai-2026-autonomous-workflow-architecture' ,
+    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint' ,
+    summary: 
+=======
     slug: 'ai-2026-sovereign-ai-commerce',
     title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
     summary:
@@ -61,6 +66,7 @@ const posts = [
     slug: 'ai-2026-autonomous-workflow-architecture',
     title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
     summary:
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
   }, 
   {

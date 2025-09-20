@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+=======
 import React from 'react';
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const AdvancedSpaceTech2026: React.FC = () => {
   return (
@@ -30,6 +35,8 @@ const AdvancedSpaceTech2026: React.FC = () => {
                 Mission Overview</button>
               </button>
           </motion.div>
+<<<<<<< HEAD
+=======
         </div>
       </div>
 
@@ -147,11 +154,14 @@ const AdvancedSpaceTech2026: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="flex items-center"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
             >
               <div className="w-1/2 pr-8 text-right">
                 <div className="bg-gradient-to-r from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-lg p-6">
                   <h3 className="text-2xl font-bold mb-2">Q2 2026</h3>
                   <p className="text-blue-100">Mars Rover Mission Launch</p>
+<<<<<<< HEAD
+=======
                 </div>
               </div>
               <div className="w-8 h-8 bg-blue-500 rounded-full border-4 border-white flex-shrink-0"></div>
@@ -193,6 +203,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
         </div>
       </div>
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">

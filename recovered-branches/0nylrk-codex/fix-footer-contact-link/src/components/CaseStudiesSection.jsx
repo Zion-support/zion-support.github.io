@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default CaseStudiesSection;
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield } from 'lucide-react';
@@ -148,3 +152,4 @@ export function CaseStudiesSection() {
       </div>
 
 export default CaseStudiesSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

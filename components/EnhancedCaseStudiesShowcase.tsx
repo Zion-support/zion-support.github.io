@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -250,3 +252,4 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
 };
 
 export default EnhancedCaseStudiesShowcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

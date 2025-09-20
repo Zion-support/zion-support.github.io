@@ -112,8 +112,4 @@ echo "📊 Final Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   📋 Total processed: $PR_COUNT"
-<<<<<<< HEAD
 echo "⏰ Completed at: $(date)"
-=======
-echo "⏰ Completed at: $(date)"
->>>>>>> origin/backup-main-20250918-004015

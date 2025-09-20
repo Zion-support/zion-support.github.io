@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -6,6 +9,7 @@ import {
   ArrowRight, Star, TrendingUp, BookOpen, Download, Play,
   Users, Award, Zap, ArrowUpRight, Brain, Calendar, Clock
 } from 'lucide-react';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const AITrends2025_2030FuturePredictionsBanner: React.FC = () => {,
   return (,

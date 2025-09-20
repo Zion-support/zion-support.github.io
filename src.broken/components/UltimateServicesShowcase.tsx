@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import { Link  } from 'react-router-dom';
- from 'react';
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default function UltimateServicesShowcase(...args[]) :  {
-import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - enterprise - it - infrastructure -services';
-import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions';
-import { motion  } from 'framer-motion';
-import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
-
- from 'lucide - react';
-
-// Import the new services
-
-=======
->>>>>>> main
 interface Service {
   id: string;
   name: string;
@@ -71,7 +49,6 @@ contactInfo: {
   mobile: '+1 302 464 0950','
   email: 'kleber@ziontechgroup.com','
   address: '364 E Main St STE 1008 Middletown DE 19709',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -81,16 +58,6 @@ contactInfo: {
 
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;"
-<<<<<<< HEAD
-    icon: <Code className="w-8 h-8"  />,;
-    color: 'from-green-600 to-emerald-700',;
-    services: innovativeMicroSaasSolutions2025};
-];
-;
-
-  ;
-  ;
-=======
     icon: <Code className="w-8 h-8"  />,;'    color: 'from-green-600 to-emerald-700',;
     services: innovativeMicroSaasSolutions2025};
 ];
@@ -100,7 +67,6 @@ const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700','
   'Breakthrough': 'from-purple-600 to-violet-700','
   'Advanced': 'from-blue-600 to-cyan-700',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   'Emerging': 'from-green-600 to-emerald-700';
@@ -114,42 +80,15 @@ const innovationLevelColors = {
   'Patented': 'from-green-600 to-emerald-700','
   'Patent Pending': 'from-yellow-600 to-orange-700','
   'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   'Open Source': 'from-purple-600 to-violet-700';
 ;
-<<<<<<< HEAD
-
-};
-
-export function UltimateServicesShowcase(...args[]):  {
-
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<any>(null);
-
-    ...ultimateInnovativeServices2025,;
-    ...enterpriseITInfrastructureServices2025,;
-    ...innovativeMicroSaasSolutions2025;
-  ];
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       transition: {
         staggerChildren: 0.1,;
         delayChildren: 0.2}}};
 
-<<<<<<< HEAD
-  const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20
-
-},
-    visible: {
-      opacity: 1,;
-=======
   
->>>>>>> main
       y: 0,;
       transition: {
         duration: 0.6,;"

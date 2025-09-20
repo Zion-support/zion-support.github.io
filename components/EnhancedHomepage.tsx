@@ -507,3 +507,17 @@ const EnhancedHomepage: React.FC = () => {
         </motion.section>
       </UltraFuturisticBackground>
 
+<<<<<<< HEAD
+      {/* Performance Monitor */}
+      <AnimatePresence>
+        {showPerformanceMonitor && (
+          <PerformanceMonitor />
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+export default EnhancedHomepage;
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 'use client';
 
@@ -296,3 +298,4 @@ const NeuralConsensus2026Showcase: React.FC = () => {
 };
 
 export default NeuralConsensus2026Showcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

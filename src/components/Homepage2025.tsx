@@ -75,6 +75,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const latestInsights = [
+<<<<<<< HEAD
+    { title: 'Operational Evidence Hubs (2026)', href: '/blog/operational-evidence-hubs-from-evals-to-decisions', tag: 'New', gradient: 'from-amber-500 to-pink-500' },
+    { title: 'Trusted RAG: Freshness Windows (2026)', href: '/blog/trusted-rag-freshness-windows-that-work', tag: 'RAG', gradient: 'from-purple-500 to-blue-500' },
+    { title: 'Evidence‑Led Operations — Blueprint (2026)', href: '/blog/ai-2026-evidence-led-operations-blueprint', tag: 'Ops', gradient: 'from-fuchsia-500 to-indigo-500' },
+    { title: 'Production Evidence Hub — Blueprint (2026)', href: '/blog/ai-2026-production-evidence-hub-blueprint', tag: 'Blueprint', gradient: 'from-cyan-500 to-blue-600' },
+    { title: 'Real-Time RAG Architectures (2026)', href: '/blog/ai-2026-real-time-rag-architectures', tag: 'RAG', gradient: 'from-emerald-500 to-cyan-500' }
+=======
     {
       title: 'GenAI for Regulated Industries (2025)',
       href: '/blog/genai-2025-practical-compliance-patterns',
@@ -99,6 +106,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       tag: 'Playbook',
       gradient: 'from-cyan-500 to-blue-600'
     }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   ];
 
   const navigationSections = [

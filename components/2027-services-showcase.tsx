@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -429,4 +433,8 @@ export default function ServicesShowcase2027() {
       </footer>
     </UltraFuturisticMatrixBackground2027>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

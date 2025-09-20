@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default TechnologyStackSection;
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code, Cloud, Zap, ArrowRight, Star, TrendingUp, Layers, GitBranch, Terminal, Monitor, Server, Brain } from 'lucide-react';
@@ -300,3 +304,4 @@ export function TechnologyStackSection() {
       </div>
 
 export default TechnologyStackSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

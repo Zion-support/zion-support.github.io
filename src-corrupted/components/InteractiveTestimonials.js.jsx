@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default InteractiveTestimonials.js;
+=======
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2} from 'lucide-react';
@@ -69,3 +73,4 @@ export function InteractiveTestimonials(props: any) {
   // TODO: Add dependencies if needed
 
 export default InteractiveTestimonials.js;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

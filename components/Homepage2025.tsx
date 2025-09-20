@@ -1,5 +1,10 @@
 import React from 'react';
 
+<<<<<<< HEAD
+const Homepage2025: React.FC = () => {
+  // Temporarily simplified to avoid build issues
+  return <div className="sr-only">Homepage2025 temporarily disabled</div>;
+=======
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   ArrowRight,
@@ -877,6 +882,7 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       </footer>
     </UltraFuturisticBackground2026>
   );
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 
 export default Homepage2025;

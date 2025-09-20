@@ -1,4 +1,17 @@
 module.exports = {
+<<<<<<< HEAD
+  extends: ['next/core-web-vitals'],
+  rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    '@next/next/no-html-link-for-pages': 'warn'
+=======
   root: true,
   env: {
     browser: true,
@@ -164,6 +177,7 @@ module.exports = {
     'space-before-function-paren': ['error', 'never'],
     'space-in-parens': ['error', 'never'],
     'spaced-comment': ['error', 'always'],
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   },
   ignorePatterns: [
     'node_modules/',
@@ -176,10 +190,25 @@ module.exports = {
     'scripts/',
     'automation/',
     'netlify/',
+<<<<<<< HEAD
+    'zion-os/',
+    'zion-website/',
+    'zion.app/',
+    'zion_academy/',
+    'recovered/',
+    'pages*/',
+    'temp*/',
+    '*.backup.*',
+    '*.disabled/',
+    '*.broken/',
+    '*.corrupted/',
+    '*.disabled'
+=======
     'apps/',
     'src/components-disabled/**/*',
     'src/utils-disabled/**/*',
     '**/components-disabled/**/*',
     '**/utils-disabled/**/*'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   ]
 };

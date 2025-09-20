@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Settings, FileText, Eye, Zap, Volume2, VolumeX} from 'lucide-react';
@@ -47,6 +50,7 @@ export function AccessibilityMenu(props: any) {
             reducedMotion: false,
   soundEnabled: true
         
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const accessibility-menu.js: React.FC = () => {,
   return (,

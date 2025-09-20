@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default TechSolutionsSection;
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Cloud, Shield, Database, Globe, Smartphone, Cpu, Lock, TrendingUp, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
@@ -199,3 +203,4 @@ export function TechSolutionsSection() {
       </div>
 
 export default TechSolutionsSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

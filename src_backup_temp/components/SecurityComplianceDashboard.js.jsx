@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useCallback} from 'react';';
 import {motion, AnimatePresence} from 'framer-motion';';
 import {Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square} from 'lucide-react';
@@ -140,3 +142,4 @@ export const SecurityComplianceDashboard = (props: any) => {
 ";
 export default Component;
 </div>"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

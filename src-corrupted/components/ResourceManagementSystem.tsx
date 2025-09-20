@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from 'react',
+
+const ResourceManagementSystem: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">ResourceManagementSystem</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
+export default ResourceManagementSystem;
+=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Users, 
@@ -319,3 +331,4 @@ const ResourceManagementSystem: React.FC = () => {
 };
 
 export default ResourceManagementSystem;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

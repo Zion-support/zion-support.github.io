@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import {motion} from 'framer-motion';
 import {Link} from 'react-router-dom';
 import {Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database} from 'lucide-react';
@@ -61,6 +66,7 @@ export {DigitalTransformation}() {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default DigitalTransformation.js;

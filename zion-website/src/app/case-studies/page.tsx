@@ -4,6 +4,12 @@ import React from 'react';
 export default function CaseStudiesPage() {
   return (
     <div className="bg-black min-h-screen">
+<<<<<<< HEAD
+      <h1>Case Studies</h1>
+    </div>
+  );
+}
+=======
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Case Studies</h1>
@@ -31,3 +37,4 @@ export default function CaseStudiesPage() {
     </div>
   )
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

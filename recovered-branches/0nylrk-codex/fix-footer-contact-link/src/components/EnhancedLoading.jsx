@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
 const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '' }) => {
     const sizeClasses = {
@@ -54,5 +56,6 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
           {text}
         </motion.p>)}
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default EnhancedLoading;

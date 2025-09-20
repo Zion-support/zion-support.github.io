@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default FuturisticNavigation;
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown } from 'lucide-react';
@@ -72,3 +76,4 @@ export default function FuturisticNavigation() {
           </motion.div>
 
 export default FuturisticNavigation;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

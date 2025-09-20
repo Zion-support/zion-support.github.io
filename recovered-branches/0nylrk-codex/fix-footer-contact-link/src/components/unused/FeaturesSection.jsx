@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+export default FeaturesSection;
+=======
 import { motion } from 'framer-motion';
 import { CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
 export function FeaturesSection() {
@@ -78,3 +81,4 @@ export function FeaturesSection() {
         </motion.div>
 
 export default FeaturesSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

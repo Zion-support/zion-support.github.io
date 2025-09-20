@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default FloatingActionButton;
+=======
 import React, {useState} from 'react';
 export default FloatingActionButton;
 import {motion, AnimatePresence} from 'framer-motion';
@@ -153,3 +157,4 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
     </div>)}
 
 export default FloatingActionButton;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

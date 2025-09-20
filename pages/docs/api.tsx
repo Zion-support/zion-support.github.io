@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -292,3 +294,4 @@ export default function APIDocumentationPage() {
     </Layout>
   );
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

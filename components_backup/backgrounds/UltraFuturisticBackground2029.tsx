@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const UltraFuturisticBackground2029: React.FC = () => {,
   return (,

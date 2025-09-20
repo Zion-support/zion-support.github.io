@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = true, showGrid = true, showHolograms = true }) => {
@@ -231,5 +233,6 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             }}/>))}
       </div>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default QuantumMatrixBackground;

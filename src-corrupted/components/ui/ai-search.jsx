@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2} from 'lucide-react';
@@ -530,3 +532,4 @@ export function AISearch(props: any) {
 </motion>
 </motion>
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

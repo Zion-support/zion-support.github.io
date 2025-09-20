@@ -1,4 +1,22 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
+
+import subprocess
+import sys
+import os
+import re
+
+def run_command(cmd, check=True):
+    """Run a shell command and return the result"""
+    try:
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=300)
+        if check and result.returncode != 0:
+            print(f"Command failed: {cmd}")
+            print(f"Error: {result.stderr}")
+        return result
+    except subprocess.TimeoutExpired:
+        print(f"Command timed out: {cmd}")
+=======
 """
 Merge Conflict Resolver and PR Merger
 This script will resolve merge conflicts and merge open PRs into main branch
@@ -367,6 +385,7 @@ def main():
         return None
     except Exception as e:
         print(f"💥 Exception: {cmd} - {e}")
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
         return None
 
 def main():
@@ -494,6 +513,9 @@ def main():
     else:
         print("⚠️ Push failed, but changes are ready locally")
     
+<<<<<<< HEAD
+    print("\n🎉 Merge resolution process completed!")
+=======
     # Final verification
     print("\n✅ Final verification...")
     final_status = run_command("git status")
@@ -501,6 +523,7 @@ def main():
         print(f"Final status: {final_status}")
     
     print("\n🎉 Merge resolution complete!")
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 if __name__ == "__main__":
     main()

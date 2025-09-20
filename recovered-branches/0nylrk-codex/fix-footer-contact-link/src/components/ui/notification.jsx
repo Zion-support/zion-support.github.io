@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default notification;
+=======
 import React, { useState, createContext, useContext, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell } from 'lucide-react';
@@ -87,3 +91,4 @@ function NotificationContainer({ position }) {
         </div>)}
 
 export default notification;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

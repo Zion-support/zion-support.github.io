@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
@@ -48,5 +50,6 @@ const FloatingActionButton = ({ className = '' }) => {
         </AnimatePresence>
       </motion.button>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default FloatingActionButton;

@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import {motion} from 'framer-motion';
 import {Link} from 'react-router-dom';
 import {Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch} from 'lucide-react';
@@ -101,6 +106,7 @@ export {AIAutonomousCodeReview}() {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default AIAutonomousCodeReview.js;

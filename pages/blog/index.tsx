@@ -1,6 +1,14 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Card from '../../components/ui/Card';
+=======
 import Head from 'next/head'
 import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const posts = [
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
@@ -11,6 +19,9 @@ const posts = [
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' },
 ];
 
+<<<<<<< HEAD
+export default function BlogIndexPage() {
+=======
 // Newly added posts (Sept 2025)
 posts.unshift(
   { slug: 'ai-2026-low-latency-agent-observability', title: 'Low‑Latency Agent Observability (2026)', excerpt: 'Telemetry patterns that preserve sub‑200ms perceived latency.' },
@@ -72,6 +83,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const Index: NextPage = () => {
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   return (
     <UltraFuturisticBackground  intensity="medium">
       <Head>
@@ -79,8 +91,11 @@ const Index: NextPage = () => {
         <meta name="description" content="Insights on AI, cloud, automation, and platform engineering." />
         <link rel="canonical" href="https://ziontechgroup.com/blog" />
       </Head>
+<<<<<<< HEAD
+=======
 };
 =======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-10">
@@ -91,6 +106,8 @@ const Index: NextPage = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
+=======
           {/* New: Agentic Evidence Graphs */}
           <div key="ai-2026-agentic-evidence-graphs" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
             <h2 className="text-white text-xl font-semibold mb-2">Agentic Evidence Graphs</h2>
@@ -111,6 +128,7 @@ const Index: NextPage = () => {
             <p className="text-gray-400 mb-4">Define and enforce safe change windows tied to SLOs and eval gates.</p>
             <Link href={`/blog/ai-2026-reliable-agent-change-windows`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
           </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
           {posts.map((p) => (
             <div key={p.slug} className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-2">{p.title}</h2>
@@ -121,7 +139,13 @@ const Index: NextPage = () => {
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
+  );
+}
+
+=======
   )
 }
 
 export default Index;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

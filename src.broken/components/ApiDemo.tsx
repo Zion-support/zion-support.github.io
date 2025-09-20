@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { api, ApiResponse } from '@/services / api';
-export default function Page() {
-}}}
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  createdAt?: string;
-
-const ApiDemo: React.FC = (): JSX.Element => {;
-  const [users, setUsers] = useState<any>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<any>(null);
-const [newUser, setNewUser] = useState({ name: '', email: ''});
-  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
-
-  // Check API health on component mount
-  useEffect(() => {
-    checkHealth () ;
-    fetchUsers () }, []) ;
-
-    try {;
-      
-      setHealthStatus(`✅ API Healthy - ${response.data?.environment} mode`) } catch(err) {
-
-      setHealthStatus('❌ API Unhealthy')};
-
-    setLoading(true) ;
-    setError(null) ;
-
-    try {
-      
-      if(response.success && response.data) {
-
-        setUsers(response.data)} catch(err) {
-
-      setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
-
-      setLoading(false)};
-
-    e.preventDefault () ;
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if(!newUser.name.trim() || !newUser.email.trim()) {
 
       setError('Name and email are required');
@@ -88,15 +38,10 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
-<<<<<<< HEAD
-                onChange = { (e) => setNewUser(prev => ({ ...prev,
-  name: e.target.value
-=======
                 onChange = {
 
   (e) => setNewUser(prev => ({ ...prev,
   name: e.target.value 
->>>>>>> main
 
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -106,15 +51,10 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-<<<<<<< HEAD
-                onChange = { (e) => setNewUser(prev => ({ ...prev,
-  email: e.target.value
-=======
                 onChange = {
 
   (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value 
->>>>>>> main
 
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"

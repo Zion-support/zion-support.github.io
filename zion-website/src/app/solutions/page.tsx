@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
+import React from 'react',
+export default function SolutionsPage() {,
+  return (,
+    <div className="bg-black min-h-screen">,
+      <h1>Solutions</h1>,
+    </div>,
+  ),
+}
+,
+=======
 import React from 'react'
 
 export default function SolutionsPage() {
@@ -31,3 +42,4 @@ export default function SolutionsPage() {
     </div>
   )
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

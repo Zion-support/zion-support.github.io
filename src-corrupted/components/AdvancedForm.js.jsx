@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import {useState, useEffect, useCallback} from 'react';'
 import {motion, AnimatePresence} from 'framer-motion';'
 import {Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building} from 'lucide-react';
@@ -14,6 +17,7 @@ const [validation, setValidation] = useState({});
     // Initialize form data and validation
     useEffect(() => {
   // TODO: Add dependencies if needed
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const AdvancedForm.js: React.FC = () => {,
   return (,

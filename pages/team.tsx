@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 import React from "react";
@@ -1056,6 +1058,7 @@ export default function TeamPage() {;
   );
 
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 import SEO from '../components/SEO';
 
@@ -1070,6 +1073,8 @@ export default function TeamPage() {
 		</>
 	);
 }
+<<<<<<< HEAD
+=======
     </Layout>);
 }
 import Head from './next / head';
@@ -1151,3 +1156,4 @@ function TeamPage() {
 
 ;
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

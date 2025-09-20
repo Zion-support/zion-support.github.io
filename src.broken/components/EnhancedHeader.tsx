@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { innovativeServices2025 } from '../data/innovativeServices2025';
-import { motion, AnimatePresence  } from 'framer-motion';
-
- params - Function parameters
- * @returns {*} Function return value
- */
-function EnhancedHeader () {
-=======
->>>>>>> main
 
   Menu,
   X,
@@ -71,7 +61,6 @@ function EnhancedHeader () {
   Link as LinkIcon2} from 'lucide-react';
 
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -311,12 +300,7 @@ export function EnhancedHeader() {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search services..."
-=======
                     type="text""                    placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
                     className="w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"

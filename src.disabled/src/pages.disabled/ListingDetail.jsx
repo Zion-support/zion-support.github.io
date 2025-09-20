@@ -34,6 +34,11 @@ export default function ListingDetail({ }: ListingDetailProps) {,
       <p>This component is currently under development.</p>,
     </div>,
   );
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
+:src.disabled/src/pages.disabled/ListingDetail.jsx,
+=======
 
 
 =======
@@ -44,6 +49,7 @@ export default function ListingDetail({ }: ListingDetailProps) {,
 =======
 
 :src.disabled/src/pages.disabled/ListingDetail.jsx
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 }
 }
 ursor/add-new-services-and-deploy-updates-0462,

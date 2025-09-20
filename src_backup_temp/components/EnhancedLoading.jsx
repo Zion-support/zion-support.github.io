@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import {motion} from 'framer-motion';';
 const EnhancedLoading = ("props": "any) => {"}
     const sizeClasses = {}
@@ -7,6 +9,7 @@ const EnhancedLoading = ("props": "any) => {"}
         "lg": 'w-12 h-12',;
 export {EnhancedLoading};
 ;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 const EnhancedLoading: React.FC = () => {,
   return (,

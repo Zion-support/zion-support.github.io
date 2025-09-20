@@ -34,6 +34,11 @@ export default function ProfilePage({ }: ProfilePageProps) {,
       <p>This component is currently under development.</p>,
     </div>,
   );
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
+:src.disabled/src/pages.disabled/ProfilePage.jsx,
+=======
 
 
 =======
@@ -43,6 +48,7 @@ export default function ProfilePage({ }: ProfilePageProps) {,
 =======
 
 :src.disabled/src/pages.disabled/ProfilePage.jsx
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 }
 }
 ursor/add-new-services-and-deploy-updates-0462,

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -366,3 +370,7 @@ function EnhancedNavigation() {
   );
 };
 
+<<<<<<< HEAD
+export default EnhancedNavigation;
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

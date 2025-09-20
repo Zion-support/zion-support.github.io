@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
@@ -48,3 +51,4 @@ export function InlineLoading({ message = "Loading..." }) {
       <span className="text-sm">{message}</span>
     </div>);
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

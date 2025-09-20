@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 
@@ -812,6 +814,7 @@ export default function CookiesPage() {
           </p>
           <ul className='list-disc list-inside text-gray-300 space-y-1'>
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const cookies: React.FC = () => {,

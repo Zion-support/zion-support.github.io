@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 import React, { useEffect, useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
@@ -475,3 +477,4 @@ const Homepage2044: React.FC = () => {
 };
 
 export default Homepage2044;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

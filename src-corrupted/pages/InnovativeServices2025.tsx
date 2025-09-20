@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import React, { useState, useEffect } from 'react';
 import { Link  } from 'react-router-dom';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -464,6 +469,7 @@ export default function InnovativeServices2025(...args: unknow n[]): unknown {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default InnovativeServices2025;

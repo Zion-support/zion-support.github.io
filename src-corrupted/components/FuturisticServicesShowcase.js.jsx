@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default FuturisticServicesShowcase.js;
+=======
 import React, {useState, useEffect} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';
 import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
@@ -27,3 +31,4 @@ const ServiceCard = (props: any) => {    const [isHovered, setIsHovered] = useSt
           <div className="absolute inset-0 overflow-hidden pointer-events-none">""""            {[...Array(8)].map((_, i) => (<motion .div key="{i}" className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {}
 
 export default FuturisticServicesShowcase.js;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import {useState, useMemo, useCallback} from 'react';'
 import {motion, AnimatePresence} from 'framer-motion';'
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
@@ -19,6 +22,7 @@ export const AdvancedDataTable = (props: any) => {
         // Apply search;
         if (searchQuery.trim()) {}
 result = result.filter(item => columns.some(col => {}
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const AdvancedDataTable.js: React.FC = () => {,
   return (,

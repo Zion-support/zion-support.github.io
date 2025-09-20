@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { notFound } from 'next/navigation'
 import { siteUpdates } from '@/data/updates'
 
@@ -33,3 +35,4 @@ export default async function UpdatePage({ params }: PageProps) {
     </div>
   )
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

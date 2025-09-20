@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 'use client';
 
@@ -396,3 +398,4 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
 };
 
 export default InteractiveAIToolsDemo2027;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

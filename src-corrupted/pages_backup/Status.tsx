@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 interface ServiceStatus {
 
   name: string
@@ -391,6 +393,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false);
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default Status;

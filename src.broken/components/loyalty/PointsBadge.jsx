@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
->>>>>>> main
 import { Gift import { useAuth } from '@/hooks/useAuth';
 export default function Page() {
 , { purchase: 0, post: 0, referral: 0 });

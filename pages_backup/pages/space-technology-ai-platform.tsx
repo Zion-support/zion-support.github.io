@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+const space-technology-ai-platform: React.FC = () => {,
+  return (,
+      </div>,
+    </div>,
+  ),};
+export default space-technology-ai-platform;
+=======
 
 
 
@@ -930,3 +940,4 @@ function SpaceTechnologyAIPlatform() {
 };
 
 export default space-technology-ai-platform;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

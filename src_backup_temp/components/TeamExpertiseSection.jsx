@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -396,6 +398,7 @@ const stats = [";
 </motion>
 </motion>
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 const TeamExpertiseSection: React.FC = () => {,
   return (,

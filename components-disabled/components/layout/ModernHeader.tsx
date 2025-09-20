@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const ModernHeader: React.FC = () => {,
   return (,

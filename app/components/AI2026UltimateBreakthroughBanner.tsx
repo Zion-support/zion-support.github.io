@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -219,3 +221,4 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
 };
 
 export default AI2026UltimateBreakthroughBanner;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

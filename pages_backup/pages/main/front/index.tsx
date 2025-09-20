@@ -1,5 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+    </div>,
+=======
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -926,6 +929,7 @@ export default function FrontLanding(req, res) {
         </section>
       </main>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default index;

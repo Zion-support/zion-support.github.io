@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from 'react',
+
+const FeaturedContentShowcase2026: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">FeaturedContentShowcase2026</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
+export default FeaturedContentShowcase2026;
+=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -55,3 +67,4 @@ const FeaturedContentShowcase2026: React.FC = () => {
 };
 
 export default FeaturedContentShowcase2026;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';'''
 import {motion} from 'framer-motion';'''
 import {Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield} from 'lucide-react';
@@ -58,6 +61,7 @@ const ServiceInnovationHub = (props: any) => {}
             description: 'Neuromorphic computing, edge AI, and model compression technologies','
             trends['Neuromorphic Computing',Edge AI',Model Compression'],;'
             investment: '$80B+'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const ServiceInnovationHub: React.FC = () => {,
   return (,

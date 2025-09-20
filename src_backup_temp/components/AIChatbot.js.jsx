@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useCallback, useEffect, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles} from 'lucide-react';
@@ -343,3 +345,4 @@ const [inputValue, setInputValue] = useState('');
 </motion>
 </motion>
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

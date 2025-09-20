@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -7,6 +11,7 @@ import {
   Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
 } from 'lucide-react';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 // Import all service data
 import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
@@ -442,4 +447,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       </main>
     </Layout>
   );
+<<<<<<< HEAD
+}
+
+export default Comprehensiveservicesshowcase2025;
+=======
   };
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

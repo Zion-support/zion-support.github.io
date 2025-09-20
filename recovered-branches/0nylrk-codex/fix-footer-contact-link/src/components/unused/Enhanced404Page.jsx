@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { HomeIcon, MagnifyingGlassIcon, ArrowLeftIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
@@ -89,5 +91,6 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
         </motion.div>
       </motion.div>
     </div>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default Enhanced404Page;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
@@ -150,3 +152,4 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
       </AnimatePresence>
     </div>);
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

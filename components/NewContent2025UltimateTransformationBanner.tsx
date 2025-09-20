@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from 'next/link';
 ArrowRightStarZapTrendingUpUsersShield
@@ -126,3 +128,4 @@ export default function NewContent2025UltimateTransformationBanner() {
     </div>
   );
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

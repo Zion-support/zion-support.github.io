@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default CategoriesSection;
+=======
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
@@ -116,3 +120,4 @@ export function CategoriesSection({ showTitle = true }) {
       </div>
 
 export default CategoriesSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

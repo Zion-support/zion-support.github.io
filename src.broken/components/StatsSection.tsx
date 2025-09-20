@@ -1,29 +1,11 @@
 export default function StatsSection() {
 
-<<<<<<< HEAD
-  interface Stat {
-    number: string;
-    label: string;
-    icon: LucideIcon;
-    description: string;
-  }
-
-  interface StatsSectionProps extends React.PropsWithChildren<{}> {
-    stats: Stat[];
-  }
-
-  return (<section className="py-16 bg-gray -800">
-      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid - cols - 2 md: anygrid - cols - 4 gap-8">
-          {stats.map ( (stat, index) => (<motion.div
-=======
   return ()
     <section className="py-16 bg-gray-800">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
->>>>>>> main
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

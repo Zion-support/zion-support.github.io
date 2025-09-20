@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -555,3 +557,4 @@ function debounce<T extends (...args: any[]) => any>(
 }
 
 export default EnhancedSearch;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

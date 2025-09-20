@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -202,3 +204,4 @@ const FeaturedContent2025Showcase: React.FC = () => {
 };
 
 export default FeaturedContent2025Showcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

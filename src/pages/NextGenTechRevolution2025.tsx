@@ -18,6 +18,12 @@ const NextGenTechRevolution2025: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Next-Gen Tech Revolution 2025
           </h1>
+<<<<<<< HEAD
+          <p className="text-2xl text-gray-300 mb-12"></p>
+            Experience the most revolutionary technological advancement in human history.</p>
+          </p>
+      </section>
+=======
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Witness the most revolutionary technological advances that will reshape our world in 2025
           </p>
@@ -152,6 +158,7 @@ const NextGenTechRevolution2025: React.FC = () => {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

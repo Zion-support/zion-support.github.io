@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
         </div>
 
         {/* Call to Action */}
@@ -9,6 +11,7 @@
             <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Watch Demo
             </button>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 
 const RevolutionaryTechBanner2025: React.FC = () => {
@@ -154,6 +157,11 @@ const RevolutionaryTechBanner2025: React.FC = () => {
             >
               🧬 Connect Neural Interface →
             </a>
+<<<<<<< HEAD
+          {/* Additional Info */}
+          <div className="mt-8 text-sm text-gray-300">
+            <p>✨ Free access to all revolutionary technologies • 🚀 No setup required • 💫 Experience the future today</p>
+=======
           </div>
         </div>
         
@@ -174,6 +182,7 @@ const RevolutionaryTechBanner2025: React.FC = () => {
           </div>
         </div>
       </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

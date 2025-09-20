@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import Link from 'next/link',
+import React from 'react',
+import { getRecentPosts } from '../../data/blog',
+=======
 import Link from 'next/link'
 import React from 'react'
 import { getRecentPosts } from '../../data/blog'
@@ -585,6 +590,7 @@ export default function BlogPage() {
       </section>
     </div>
   );
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 }
 ,
 export default function BlogIndexPage() {,

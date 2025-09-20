@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from 'react';
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
 
-<<<<<<< HEAD
     const [brokenLinks, setBrokenLinks] = useState([]);
     const [fixedLinks, setFixedLinks] = useState([]);
     const [isScanning, setIsScanning] = useState(false);
     const [scanProgress, setScanProgress] = useState(0);
     const [lastScanTime, setLastScanTime] = useState(null);
-=======
-    const [brokenLinks, setBrokenLinks] = useState([]);
-    const [fixedLinks, setFixedLinks] = useState([]);
-    const [isScanning, setIsScanning] = useState(false);
-    const [scanProgress, setScanProgress] = useState(0);
-    const [lastScanTime, setLastScanTime] = useState(null);
->>>>>>> main
     // Scan all links on the current page
     const scanPageLinks = async () => {
         setIsScanning(true);

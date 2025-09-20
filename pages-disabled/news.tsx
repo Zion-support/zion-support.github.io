@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+    </div>,
+=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -1447,6 +1450,7 @@ export default function News() {
         </div>
       </section>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default news;

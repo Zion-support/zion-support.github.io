@@ -2,6 +2,9 @@
 
 =======
 echo "Resolving all merge conflicts by accepting our version..."
+=======
+# Comprehensive conflict resolution script
+echo "🚀 Starting comprehensive conflict resolution..."
 
 # Step 1: Check current status
 echo "📊 Checking current status..."
@@ -109,9 +112,52 @@ done
 echo "Resolving all merge conflicts by using main branch version..."
 
 # Find all files with merge conflicts
+# Step 7: Push changes
+echo "---"
+echo "🚀 Pushing changes to main..."
+if git push origin main; then
+    echo "✅ Successfully pushed changes"
+else
+    echo "⚠️  Failed to push changes"
+fi
+
+# Step 8: Test build
+echo "---"
+echo "🧪 Testing build..."
+if npm run build:netlify; then
+    echo "✅ Build successful"
+else
+    echo "❌ Build failed"
+fi
+
+# Step 9: Run health checks
+echo "---"
+echo "🏥 Running health checks..."
+if npm run health-check; then
+    echo "✅ Health checks passed"
+else
+    echo "❌ Health checks failed"
+fi
+
 echo "All merge conflicts resolved!"
 =======
 echo "All merge conflicts resolved!"
 =======
 echo "Conflict resolution complete!"
 echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+=======
+# Summary
+echo "---"
+echo "📊 Final Summary:"
+echo "✅ Successful merges: $SUCCESSFUL_MERGES"
+echo "❌ Failed merges: $FAILED_MERGES"
+echo "⏰ Completed at: $(date)"
+
+if [ $FAILED_MERGES -eq 0 ]; then
+    echo "🎉 All PRs merged successfully!"
+else
+    echo "⚠️  Some PRs failed to merge. Check the logs above for details."
+fi
+
+echo "---"
+echo "✅ Script completed!"

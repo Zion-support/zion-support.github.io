@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Atom, Rocket, Target, CheckCircle, Phone, Mail } from 'lucide-react';
@@ -299,3 +301,4 @@ export default function UltraFuturisticHero2029V2() {
     </section>
   );
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

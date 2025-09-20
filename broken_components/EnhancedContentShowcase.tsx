@@ -297,6 +297,46 @@
           </div>,
         </div>,
         {/* Features Section */}
+<<<<<<< HEAD
+        <div className="container mx-auto px-4 py-20">,
+          <div className="text-center mb-16">,
+            <h2 className="text-4xl font-bold text-white mb-4">✨ Enhanced Features</h2>,
+            <p className="text-xl text-purple-200">Experience interactive technology exploration</p>,
+          </div>,
+          <div className="grid md: grid-cols-3 gap-8">,
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">,
+              <div className="text-5xl mb-4 text-center">🎮</div>,
+              <h3 className="text-2xl font-bold mb-4 text-center text-white">Interactive Experience</h3>,
+              <p className="text-purple-200 text-center">,
+                Navigate through revolutionary technologies with intuitive controls and smooth animations,
+              </p>,
+            </div>,
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">,
+              <div className="text-5xl mb-4 text-center">🚀</div>,
+              <h3 className="text-2xl font-bold mb-4 text-center text-white">Real-time Updates</h3>,
+              <p className="text-purple-200 text-center">,
+                Stay current with the latest breakthroughs and technology advancements as they happen,
+              </p>,
+            </div>,
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">,
+              <div className="text-5xl mb-4 text-center">🌟</div>,
+              <h3 className="text-2xl font-bold mb-4 text-center text-white">Immersive Design</h3>,
+              <p className="text-purple-200 text-center">,
+                Experience stunning visual design with gradient backgrounds and smooth transitions,
+              </p>,
+            </div>,
+          </div>,
+        </div>,
+        </div>,
+            <div className="text-4xl mb-3 text-center">{slide.image,}</div>,
+            <h3 className="text-xl font-bold text-white mb-2 text-center">{slide.title}</h3>,
+            <p className="text-gray-200 text-sm text-center mb-4">{slide.description}</p>,
+            <a,
+              href={slide.link}
+              className={`block w-full bg-gradient-to-r ${slide.gradient} text-white py-2 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center text-sm`,}
+      </div>,
+    </div>,
+=======
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">✨ Enhanced Features</h2>
@@ -456,6 +496,7 @@
         </motion.div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default EnhancedContentShowcase;))

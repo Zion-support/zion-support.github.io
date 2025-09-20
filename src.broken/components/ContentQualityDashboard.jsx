@@ -1,9 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
-export default ContentQualityDashboard;
-import ContentQualityAnalyzer from "../utils / contentQualityAnalyzer";
-
-=======
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X  } from 'lucide-react';
 export default function Page() {
 ,;

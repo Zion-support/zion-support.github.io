@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+const FeatureHighlights: React.FC = () => {,
+  return (,};
+export default FeatureHighlights;)
+=======
 
 const FeatureHighlights: React.FC = () => {
   return (
@@ -484,3 +489,4 @@ import { motion  } from 'framer-motion';
 };
 
 export default FeatureHighlights;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

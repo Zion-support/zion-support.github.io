@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
@@ -319,6 +324,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknow n[]): 
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default ComprehensiveServicesShowcase2029;

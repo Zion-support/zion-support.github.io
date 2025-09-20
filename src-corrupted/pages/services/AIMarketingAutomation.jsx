@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+        </div>,
+      </div>,
+    </div>,
+=======
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
 import {Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, BarChart3} from 'lucide-react';
@@ -144,6 +149,7 @@ const AIMarketingAutomation = (props: any) => {
         </div>
       </div>
     </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 export default AIMarketingAutomation;

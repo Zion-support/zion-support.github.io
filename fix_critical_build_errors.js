@@ -19,9 +19,6 @@ const criticalFiles = [
 function fixMergeConflicts(content) {
     // Remove merge conflict markers
     return content
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '')
-        .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> .*/g, '')
-        .replace(/=======[\s\S]*?>>>>>>> .*/g, '');
 }
 
 function fixCommonSyntaxErrors(content) {

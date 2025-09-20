@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from 'react',
+
+const AppHeader: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">AppHeader</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
+export default AppHeader;
+=======
 import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Workflow, Calendar, Database, Network, BarChart3, Wifi, HeartPulse, User, Award, Lightbulb, Handshake, BookOpen as BookOpenIcon, FileText as FileTextIcon, Users as UsersIcon, Code as CodeIcon, HelpCircle as HelpCircleIcon, DollarSign as DollarSignIcon, Users as UsersIcon2, Calendar as CalendarIcon, Shield as ShieldIcon, BookOpen as BookOpenIcon2, Factory } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -440,3 +452,4 @@ const AppHeader: React.FC = () => {
 };
 
 export default AppHeader;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

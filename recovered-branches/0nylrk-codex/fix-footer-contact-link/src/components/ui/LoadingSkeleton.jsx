@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
@@ -50,3 +52,4 @@ export function HeroSkeleton({ className }) {
       </div>
     </div>);
 }
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

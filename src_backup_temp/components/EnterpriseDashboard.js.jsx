@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useEffect, useCallback, useMemo} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
 import React, {useState, useEffect, useCallback, useMemo} from 'react';'''
@@ -1501,3 +1503,4 @@ export default Component;
 </div>;
 </div>
 </div>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

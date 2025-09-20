@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
-
-interface SecurityThreat {
-  id: string;
-  type: 'critical' | 'high' | 'medium' | 'low';
-  severity: number;
-  description: string;
-  source: string;
-  timestamp: Date;
-  status: 'active' | 'resolved' | 'investigating';
-  affectedSystems: string[];
-  recommendations: string[]}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface VulnerabilityAssessment {
   id: string;
   category: 'network' | 'application' | 'infrastructure' | 'data';

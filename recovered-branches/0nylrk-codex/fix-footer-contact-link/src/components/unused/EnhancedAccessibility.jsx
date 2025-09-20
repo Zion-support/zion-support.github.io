@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { AdjustmentsHorizontalIcon, ArrowDownIcon, ArrowUpIcon, SpeakerWaveIcon } from '@heroicons/react/24/outline';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
@@ -260,5 +262,6 @@ const EnhancedAccessibility = () => {
       {/* Backdrop */}
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
     </>);
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default EnhancedAccessibility;

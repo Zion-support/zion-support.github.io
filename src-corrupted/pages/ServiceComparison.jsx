@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';'''
 import {motion} from 'framer-motion';'''
 import {BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap} from 'lucide-react';
@@ -56,6 +59,7 @@ const ServiceComparison = (props: any) => {}
             icon: <Award className="w-6 h-6 text-zion-orange" />,'
             title: 'Expert Insights','
             description: 'Get detailed insights into each service\'s capabilities and target audience'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const ServiceComparison: React.FC = () => {,
   return (,

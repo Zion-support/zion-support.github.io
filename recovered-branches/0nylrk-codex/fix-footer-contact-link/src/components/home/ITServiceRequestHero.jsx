@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default ITServiceRequestHero;
+=======
 import React, { useState } from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -53,3 +57,4 @@ export function ITServiceRequestHero() {
       </div>
 
 export default ITServiceRequestHero;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

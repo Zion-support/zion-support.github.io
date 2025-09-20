@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+    </div>,
+  );
+};
+export default ComprehensiveServicesShowcase;
+=======
 import { motion } from 'framer-motion';
 import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
 import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
@@ -1143,3 +1149,4 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 };
 
 export default ComprehensiveServicesShowcase;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

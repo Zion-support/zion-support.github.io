@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react',;',';';
     ';';';';
 import { Link  } from 'react-router-dom'; import { motion  } from 'framer-motion',;',';';
@@ -66,6 +68,7 @@ import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Git
     ';';';
   https: ''',';';
     ';';';
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 import React from 'react';
 const EnhancedFooter: React.FC = () => {,
   return (,

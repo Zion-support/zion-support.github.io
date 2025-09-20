@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useMemo} from 'react';
 import {motion} from 'framer-motion';
 import {Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone} from 'lucide-react';
@@ -467,3 +469,4 @@ export default AdvancedServiceComparison;
 </motion>
 </motion>
 </motion>
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-export default Sitemap;
-
-=======
 import { Link  } from 'react-router-dom';
 export default function Page() {
 ,

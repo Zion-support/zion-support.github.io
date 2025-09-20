@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default TestimonialCarousel.js;
+=======
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {ChevronLeft, ChevronRight, Star, Quote, ArrowRight} from 'lucide-react';
@@ -60,3 +64,4 @@ export function TestimonialCarousel(props: any) {
   // TODO: Add dependencies if needed
 
 export default TestimonialCarousel.js;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

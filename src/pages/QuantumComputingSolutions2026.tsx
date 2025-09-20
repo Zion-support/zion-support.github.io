@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
+export default function QuantumComputingSolutions2026Page() {
+  return <QuantumComputingSolutions2026 />;
+}
+=======
 const QuantumComputingSolutions2026: React.FC = () => {
   const [selectedSolution, setSelectedSolution] = useState('overview');
 
@@ -454,3 +459,4 @@ const QuantumComputingSolutions2026: React.FC = () => {
 };
 
 export default QuantumComputingSolutions2026;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

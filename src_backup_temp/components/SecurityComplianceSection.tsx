@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+export default SecurityComplianceSection;
+=======
 import {  import { motion  } from 'framer-motion';
 ;
  params - Function parameters;
@@ -64,3 +68,4 @@ function SecurityComplianceSection("props": "any) {];
   "delay": "inde x * 0.1;
 
 export default SecurityComplianceSection;
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

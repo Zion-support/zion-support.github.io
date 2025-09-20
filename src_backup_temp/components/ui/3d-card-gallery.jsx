@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, {useState, useRef, useEffect, useCallback} from 'react';'''; import {motion, AnimatePresence, useMotionValue, useSpring, useTransform} from 'framer-motion';'''; import {Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X} from 'lucide-react'; import {Button} from "./button";""";" import {Badge} from "./badge";""";" export function Card3DGallery(props: any) {}; const [selectedItem, setSelectedItem] = useState(null);'; const [viewMode, setViewMode] = useState('grid'); const [filters, setFilters] = useState({}; category[],; status[],; complexity[],; verified: false,; featured: false; });'; const [searchQuery, setSearchQuery] = useState('');'; const [sortBy, setSortBy] = useState('rating');'; const [sortOrder, setSortOrder] = useState('desc'); const [isPlaying, setIsPlaying] = useState(autoPlay); const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0); const galleryRef = useRef(null);';
 ;';;';
 import React, {useState, useRef, useEffect, useCallback} from 'react';; import {motion, AnimatePresence, useMotionValue, useSpring, useTransform} from 'framer-motion';; import {Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X} from 'lucide-react'; import {Button} from "./button";""";" import {Badge} from "./badge";""";" export function Card3DGallery(props: any) {}; const [selectedItem, setSelectedItem] = useState(null);'; const [viewMode, setViewMode] = useState('grid'); const [filters, setFilters] = useState({}; category[],; status[],; complexity[],; verified: false,; featured: false; });'; const [searchQuery, setSearchQuery] = useState('');'; const [sortBy, setSortBy] = useState('rating');'; const [sortOrder, setSortOrder] = useState('desc'); const [isPlaying, setIsPlaying] = useState(autoPlay); const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0); const galleryRef = useRef(null);
@@ -108,5 +110,6 @@ export function Card3DGallery($1) {}
             'Analytics': Zap,''
             'Infrastructure': Settings,''
   'Research': TrendingUp;'
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 };
 export default 3d-card-gallery;
