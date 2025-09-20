@@ -1,31 +1,31 @@
-
-import React from "react";
-import Link from "next/link";
+import React from 'react';
 
 interface CategoryCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  href: string;
+  category: {
+    id: string;
+    name: string;
+    description: string;
+    icon?: string;
+    count?: number;
+  };
+  onClick?: () => void;
 }
 
-export function CategoryCard({ title, description, icon, href }: CategoryCardProps) {
+export function CategoryCard({ category, onClick }: CategoryCardProps) {
   return (
-    <Link
-      href={href}
-      className="group block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200 hover:border-blue-300"
+    <div 
+      className="bg-white rounded-lg shadow-md p-6 cursor-pointer hover:shadow-lg transition-shadow"
+      onClick={onClick}
     >
-      <div className="flex items-center mb-4">
-        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 group-hover:bg-blue-200 transition-colors duration-200">
-          {icon}
-        </div>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-semibold text-gray-900">{category.name}</h3>
+        {category.count && (
+          <span className="bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded-full">
+            {category.count}
+          </span>
+        )}
       </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
-        {title}
-      </h3>
-      <p className="text-gray-600 text-sm leading-relaxed">
-        {description}
-      </p>
-    </Link>
+      <p className="text-gray-600">{category.description}</p>
+    </div>
   );
 }

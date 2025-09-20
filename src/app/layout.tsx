@@ -73,6 +73,8 @@ return (
 </html>;
 )
 }<//html><///html>;
+<<<<<<< HEAD
+=======
   children: React.ReactNode;
 }) {
   return (
@@ -94,3 +96,4 @@ return (
   );
 }
 
+>>>>>>> origin/main
