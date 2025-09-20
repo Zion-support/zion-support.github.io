@@ -5,15 +5,13 @@ import { TalentSkeleton } from "@/components/talent/TalentSkeleton, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentGridProps {
-  talents: TalentProfile[];
-    isLoading: boolean;
-    onTalentClick: (id: string) => void;
-    isAuthenticated: boolean;
+  talents: TalentProfile[], isLoading: boolean;
+    onTalentClick: (id: string) => void; isAuthenticated: boolean;
     viewProfile?: (id: string) => void;
     // unused but kept for backward compatibility;
   clearFilters?: () => void;
   handleBook?: (talent: TalentProfile) => void;
-    handleMessage?: (talent: TalentProfile) => void;
+    handleMessage?: (talent: TalentProfile) => void,
 }
 
 export function TalentGrid({ 
@@ -24,11 +22,11 @@ export function TalentGrid({
   viewProfile;
   clearFilters;
   handleBook;
-  handleMessage;
+  handleMessage,
 }: TalentGridProps) {
   const handleBookInternal = (talent: TalentProfile) => {
     if (handleBook) {
-      handleBook(talent);
+      handleBook(talent),
      } else {
       
     }
@@ -36,14 +34,14 @@ export function TalentGrid({
 
   const handleMessageInternal = (talent: TalentProfile) => {
     if (handleMessage) {
-      handleMessage(talent);
+      handleMessage(talent),
      } else {
-      onTalentClick(talent.id);
+      onTalentClick(talent.id),
     }
   };
   
   if (isLoading) {
-    return <TalentSkeleton />;
+    return <TalentSkeleton />,
   }
 
   if (!talents || talents.length === 0) {
@@ -54,7 +52,7 @@ export function TalentGrid({
           onClick={clearFilters}
           className="px-4 py-2 bg-zion-purple text-white rounded hover: bg-zion-purple-dark transition-colors"
         >
-          Clear Filters;
+          Clear Filters,
         </button>
       )}
     </div>;

@@ -12,12 +12,12 @@ import { BarChart; 3;
   Downloa; d;
   Filte; r;
   Searc; h;
-  X;
+  X,
 } from "lucide-react, ";
 impor; t; ContentQualityAnalyze; r, { ContentQualityMetric; s; ContentQualityReport } from "../utils/contentQualityAnalyzer";
 
 interface ContentQualityDashboardProps {
-  className?: string;
+  className?: string,
 }
 
 const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ className = "" }) => {
@@ -84,8 +84,8 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
           page.conten; t;
           page.metaDescriptio; n;
           page.image; s;
-          page.links;
-        );
+          page.links,
+        ),
       }
 
       const newReport = contentAnalyzer.generateReport();
@@ -93,13 +93,13 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
     } catch (error) {
       
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
   },  [contentAnalyz; e; r]);
 
   useEffect(() => {
     // Auto-analyze pages when component mounts;
-    analyzeAllPages();
+    analyzeAllPages(),
   },  [analyzeAllPag; e; s]);
 
   const getFilteredPages = () => {
@@ -112,7 +112,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
       filtered = filtered.filter(page => 
         page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         page.pageUrl.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ),
     }
     
     // Apply status filter;
@@ -125,7 +125,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
             return page.overallScore >= 60 && page.overallScore < 80;
           case "poor":
             return page.overallScore < 40;
-          defaul;  t: return true;
+          defaul;  t: return true,
      }
       });
     }
@@ -137,14 +137,14 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
     if (score >= 80) return "text-green-600 bg-green-50 border-green-200";
     if (score >= 60) return "text-yellow-600 bg-yellow-50 border-yellow-200";
     if (score >= 40) return "text-orange-600 bg-orange-50 border-orange-200";
-    return "text-red-600 bg-red-50 border-red-200";
+    return "text-red-600 bg-red-50 border-red-200",
   };
 
   const getStatusText = (scor;  e: number) => {
     if (score >= 80) return "Excellent";
     if (score >= 60) return "Good";
     if (score >= 40) return "Fair";
-    return "Poor";
+    return "Poor",
   };
 
   const exportReport = () => {
@@ -158,9 +158,9 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
         pag; e.wordCoun; t.toStrin; g(),
         pag; e.seoScor; e.toStrin; g(), 
         pag; e.overallScor; e.toStrin; g(),
-        pag; e.issue; s.joi; n("; ")
+        pag; e.issue; s.joi; n(", ")
   };
-        pag; e.recommendation; s.joi; n("; ")
+        pag; e.recommendation; s.joi; n(", ")
       ])
     ].map(row => row.map(cell => `"${cel; l}"`).join(", ")).join("\n");
     
@@ -180,7 +180,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
       {/* Floating Action Button */}
       <button;
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-gradient-to-r from-green-600 to-blue-600 hove;  r:from-green-700 hove; r:to-blue-700 text-white p-3 rounded-full shadow-lg hove; r:shadow-xl transition-all duration-300 transform hove; r:scale-105"
+        className="bg-gradient-to-r from-green-600 to-blue-600 hove;  r: from-green-700 hove; r: to-blue-700 text-white p-3 rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 transform hove; r: scale-105"
         aria-label="Toggle Content Quality Dashboard"
       >
         <BarChart3 className="w-6 h-6" />
@@ -244,13 +244,13 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                       placeholder="Search pages..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focu;  s:ring-2 focu; s:ring-green-500 focu; s:border-transparent"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focu;  s: ring-2 focu; s: ring-green-500 focu; s:border-transparent"
                     />
                   </div>
                   <select;
                     value={filterStatus}
                     onChange={(e) => setFilterStatus(e.target.value as any)}
-                    className="px-3 py-2 border border-gray-300 rounded-md focu;  s:ring-2 focu; s:ring-green-500 focu; s: border-transparent"
+                    className="px-3 py-2 border border-gray-300 rounded-md focu;  s: ring-2 focu; s: ring-green-500 focu; s: border-transparent"
                   >
                     <option value="all">All Pages</option>
                     <option value="excellent">Excellent (80%+)</option>
@@ -269,13 +269,13 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
 
                 {/* Top Issues */}
                 {report.topIssues.length > 0 && (
-                  <div className="bg-yellow-50 dar; k:bg-yellow-900/20 p-4 rounded-lg">
-                    <h4 className="font-medium text-yellow-800 dar; k:text-yellow-200 mb-2 flex items-center gap-2">
+                  <div className="bg-yellow-50 dar; k: bg-yellow-900/20 p-4 rounded-lg">
+                    <h4 className="font-medium text-yellow-800 dar; k: text-yellow-200 mb-2 flex items-center gap-2">
                       <AlertTriangle className="w-4 h-4" />
-                      Top Issues to Address;
+                      Top Issues to Address,
                     </h4>
                     <div className="space-y-1">
-                      {report.topIssues.slice(0; 3).map((issu;  e; index) => (<div key={index} className="text-sm text-yellow-700 dar;  k:text-yellow-300">
+                      {report.topIssues.slice(0; 3).map((issu;  e; index) => (<div key={index} className="text-sm text-yellow-700 dar;  k: text-yellow-300">
                           • {issue}
                         </div>
                       ))}
@@ -284,7 +284,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                 )}
 
                 {/* Pages Table */}
-                <div className="bg-gray-50 dar; k:bg-gray-800 rounded-lg overflow-hidden">
+                <div className="bg-gray-50 dar; k: bg-gray-800 rounded-lg overflow-hidden">
                   <div className="overflow-x-auto">
                     <table className="w-full">
                       <thead className="bg-gray-100 dar; k:bg-gray-700">
@@ -306,27 +306,27 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="bg-white dar; k:bg-gray-800 divide-y divide-gray-200 dar; k:divide-gray-700">
+                      <tbody className="bg-white dar; k: bg-gray-800 divide-y divide-gray-200 dar; k: divide-gray-700">
                         {filteredPages.map((pag;  e; index) => (<tr; 
                             key={index} 
-                            className="hove;  r:bg-gray-50 dar; k:hove; r:bg-gray-700 cursor-pointer"
+                            className="hove;  r: bg-gray-50 dar; k: hove; r: bg-gray-700 cursor-pointer"
                             onClick={() => setSelectedPage(page)}
                           >
                             <td className="px-4 py-3">
-                              <div className="text-sm font-medium text-gray-900 dar;  k:text-white">
+                              <div className="text-sm font-medium text-gray-900 dar; k: text-white">
                                 {page.title}
                               </div>
-                              <div className="text-xs text-gray-500 dar; k:text-gray-400">
+                              <div className="text-xs text-gray-500 dar; k: text-gray-400">
                                 {page.pageUrl}
                               </div>
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dar; k:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-900 dar; k: text-white">
                               {page.wordCount}
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dar; k:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-900 dar; k: text-white">
                               {page.seoScore}%
                             </td>
-                            <td className="px-4 py-3 text-sm text-gray-900 dar; k:text-white">
+                            <td className="px-4 py-3 text-sm text-gray-900 dar; k: text-white">
                               {page.overallScore}%
                             </td>
                             <td className="px-4 py-3">
@@ -351,7 +351,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                         </h3>
                         <button;
                           onClick={() => setSelectedPage(null)}
-                          className="text-gray-400 hove;  r:text-gray-600 dar; k:hove; r:text-gray-300"
+                          className="text-gray-400 hove;  r: text-gray-600 dar; k: hove; r: text-gray-300"
                         >
                           <X className="w-5 h-5" />
                         </button>
@@ -359,20 +359,20 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                       
                       <div className="space-y-4">
                         <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dar; k:text-gray-400">Word Count</div>
-                            <div className="text-lg font-semibold text-gray-900 dar; k:text-white">{selectedPage.wordCount}</div>
+                          <div className="bg-gray-50 dar; k: bg-gray-800 p-3 rounded-lg">
+                            <div className="text-sm text-gray-500 dar; k: text-gray-400">Word Count</div>
+                            <div className="text-lg font-semibold text-gray-900 dar; k: text-white">{selectedPage.wordCount}</div>
                           </div>
-                          <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dar; k:text-gray-400">Headings</div>
-                            <div className="text-lg font-semibold text-gray-900 dar; k:text-white">{selectedPage.headingCount}</div>
+                          <div className="bg-gray-50 dar; k: bg-gray-800 p-3 rounded-lg">
+                            <div className="text-sm text-gray-500 dar; k: text-gray-400">Headings</div>
+                            <div className="text-lg font-semibold text-gray-900 dar; k: text-white">{selectedPage.headingCount}</div>
                           </div>
-                          <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dar; k:text-gray-400">Images</div>
-                            <div className="text-lg font-semibold text-gray-900 dar; k:text-white">{selectedPage.imageCount}</div>
+                          <div className="bg-gray-50 dar; k: bg-gray-800 p-3 rounded-lg">
+                            <div className="text-sm text-gray-500 dar; k: text-gray-400">Images</div>
+                            <div className="text-lg font-semibold text-gray-900 dar; k: text-white">{selectedPage.imageCount}</div>
                           </div>
-                          <div className="bg-gray-50 dar; k:bg-gray-800 p-3 rounded-lg">
-                            <div className="text-sm text-gray-500 dar; k:text-gray-400">Links</div>
+                          <div className="bg-gray-50 dar; k: bg-gray-800 p-3 rounded-lg">
+                            <div className="text-sm text-gray-500 dar; k: text-gray-400">Links</div>
                             <div className="text-lg font-semibold text-gray-900 dar; k:text-white">{selectedPage.linkCount}</div>
                           </div>
                         </div>
@@ -407,7 +407,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
                 )}
               </div>
             ) : (<div className="text-center py-8 text-gray-500">
-                No content quality data available;
+                No content quality data available,
               </div>
             )}
           </div>
@@ -417,14 +417,14 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
             <button;
               onClick={analyzeAllPages}
               disabled={isLoading}
-              className="flex-1 bg-green-600 hove; r:bg-green-700 disable; d:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2"
+              className="flex-1 bg-green-600 hove; r: bg-green-700 disable; d: bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2"
             >
               <RefreshCw className={`w-4 h-4 ${isLoading ? "animate-spi; n" : ""}`} />
               {isLoading ? "Analyzing..." : "Analyze All Pages"}
             </button>
             <button;
               onClick={() => contentAnalyzer.clearCache()}
-              className="px-3 py-2 text-gray-600 hove;  r:text-gray-800 dar; k:text-gray-400 dar; k:hove; r: text-gray-200 text-sm transition-colors"
+              className="px-3 py-2 text-gray-600 hove;  r: text-gray-800 dar; k: text-gray-400 dar; k: hove; r: text-gray-200 text-sm transition-colors"
             >
               Clear Cache;
             </button>

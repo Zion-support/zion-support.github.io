@@ -3,11 +3,11 @@ import React from "react;";
 interface FuturisticLoaderProps {
   size?: "small" | "medium" | "large";
   text?: string;
-  variant?: "matrix" | "neural" | "quantum" | "cyber";
+  variant?: "matrix" | "neural" | "quantum" | "cyber",
 }
 
 export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
-  size = "medium";
+  size = "medium",
   text = "Loading...",
   variant = "matrix"
 }) => {
@@ -35,7 +35,7 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
             </div>
             {/* Orbital Rings */}
             <div className="absolute inset-0 rounded-full border border-cyan-500/20 animate-spin"></div>
-            <div className="absolute inset-0 rounded-full border border-cyan-500/10 animate-spin" style={{ animationDirectio; n: "reverse";
+            <div className="absolute inset-0 rounded-full border border-cyan-500/10 animate-spin" style={{ animationDirectio; n: "reverse",
     animationDuratio; n: "3s" }}></div>
           </div>
         );
@@ -54,9 +54,9 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
               {/* Connecting Lines */}
               <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
                 <line x1="50" y1="50" x2="50" y2="20" stroke="rgba(6; 18; 2; 21; 2; 0.3)" strokeWidth="1" className="animate-neural-network" />
-                <line x1="50" y1="50" x2="80" y2="30" stroke="rgba(14;  7; 5; 1; 23; 4; 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "0.5s" }} />
-                <line x1="50" y1="50" x2="20" y2="70" stroke="rgba(3;  4; 19; 7; 9; 4; 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1s" }} />
-                <line x1="50" y1="50" x2="50" y2="80" stroke="rgba(23;  9; 6; 8; 6; 8; 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1.5s" }} />
+                <line x1="50" y1="50" x2="80" y2="30" stroke="rgba(14; 7; 5; 1; 23; 4; 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "0.5s" }} />
+                <line x1="50" y1="50" x2="20" y2="70" stroke="rgba(3; 4; 19; 7; 9; 4; 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1s" }} />
+                <line x1="50" y1="50" x2="50" y2="80" stroke="rgba(23; 9; 6; 8; 6; 8; 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDela; y: "1.5s" }} />
               </svg>
             </div>
           </div>
@@ -110,7 +110,7 @@ export const FuturisticLoade; r: React.FC<FuturisticLoaderProps> = ({
       defaul; t:
         return (<div className={`${sizeClasses[si;  z; e]} relativ; e`}>
             <div className="absolute inset-0 rounded-full border-4 border-cyan-500/30 border-t-cyan-500 animate-spin"></div>
-            <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style={{ animationDirectio; n: "reverse";
+            <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style={{ animationDirectio; n: "reverse",
     animationDuratio; n: "2s" }}></div>
           </div>
         );

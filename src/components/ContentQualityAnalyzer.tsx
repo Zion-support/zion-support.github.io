@@ -10,7 +10,7 @@ import { FileTex; t;
   Ey; e;
   BarChart; 3;
   TrendingU; p;
-  Zap;
+  Zap,
 } from "lucide-react, ";
 
 interface ContentIssue {
@@ -21,7 +21,7 @@ interface ContentIssue {
     severit; y: "low" | "medium" | "high";
     descriptio; n: string;
     recommendatio; n: string;
-    statu; s: "open" | "in_progress" | "resolved";
+    statu; s: "open" | "in_progress" | "resolved",
 }
 
 interface ContentQualityReport {
@@ -33,7 +33,7 @@ interface ContentQualityReport {
     averageContentLengt; h: number;
     pagesWithImage; s: number;
     pagesWithMetaDescription; s: number;
-    lastUpdate; d: Date;
+    lastUpdate; d: Date,
 }
 
 const ContentQualityAnalyze; r: React.FC = () => {
@@ -91,7 +91,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
 
   useEffect(() => {
     setContentIssues(sampleIssues);
-    generateReport(sampleIssues);
+    generateReport(sampleIssues),
   },  []);
 
   const generateReport = (issue;  s: ContentIssue[]) => {
@@ -119,7 +119,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     setIsAnalyzing(true);
     // Simulate content analysis;
     await new Promise(resolve => setTimeout(resolv;  e; 3000));
-    setIsAnalyzing(false);
+    setIsAnalyzing(false),
   };
 
   const getSeverityIcon = (severit;  y: string) => {
@@ -130,7 +130,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
       case "low":
         return <Info className="w-4 h-4 text-blue-400" />;
-      defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;
+      defaul;  t: return <Info className="w-4 h-4 text-gray-400" />,
      }
   };
 
@@ -142,7 +142,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return "text-yellow-400";
       case "low":
         return "text-blue-400";
-      defaul;  t: return "text-gray-400";
+      defaul;  t: return "text-gray-400",
      }
   };
 
@@ -154,7 +154,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return "text-yellow-400";
       case "open":
         return "text-red-400";
-      defaul;  t: return "text-gray-400";
+      defaul;  t: return "text-gray-400",
      }
   };
 
@@ -162,7 +162,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     const matchesFilter = selectedFilter === "all" || issue.severity === selectedFilter;
     const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          issue.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;
+    return matchesFilter && matchesSearch,
   });
 
   const getIssueTypeLabel = (typ;  e: string) => {
@@ -177,7 +177,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return "Minimal Content";
       case "no_images":
         return "No Images";
-      defaul;  t: return type;
+      defaul;  t: return type,
      }
   };
 
@@ -186,7 +186,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
       {/* Floating Action Button */}
       <motion.button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 transform hove; r:scale-110"
+        className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 transform hove; r: scale-110"
         whileHover={{ scal; e: 1.1 }}
         whileTap={{ scal; e: 0.9 }}
       >
@@ -303,7 +303,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                 <button;
                   onClick={startAnalysis}
                   disabled={isAnalyzing}
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hove; r:from-purple-600 hove; r:to-pink-600 transition-all duration-300 disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center space-x-2"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg font-medium hove; r: from-purple-600 hove; r: to-pink-600 transition-all duration-300 disable; d: opacity-50 disable; d: cursor-not-allowed flex items-center space-x-2"
                 >
                   {isAnalyzing ? (
                     <Zap className="w-4 h-4 animate-spin" />
@@ -321,7 +321,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                   placeholder="Search issues by page title or description..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu;  s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu;  s: outline-none focu; s: ring-2 focu; s: ring-purple-500 focu; s: border-transparent"
                 />
               </div>
 
@@ -370,7 +370,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                                 href={issue.pageUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-purple-400 hove;  r:text-purple-300 transition-colors text-xs truncate block"
+                                className="text-purple-400 hove;  r: text-purple-300 transition-colors text-xs truncate block"
                               >
                                 {issue.pageUrl}
                               </a>
@@ -387,7 +387,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                                 {issue.description}
                               </div>
                               <div className="text-xs text-purple-400">
-                                <strong>Recommendatio; n:</strong> {issue.recommendation}
+                                <strong>Recommendatio; n: </strong> {issue.recommendation}
                               </div>
                             </div>
                           </td>
@@ -398,13 +398,13 @@ const ContentQualityAnalyze; r: React.FC = () => {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex space-x-2">
-                              <button className="p-2 text-blue-400 hove;  r:text-blue-300 transition-colors" title="View Page">
+                              <button className="p-2 text-blue-400 hove;  r: text-blue-300 transition-colors" title="View Page">
                                 <Eye className="w-4 h-4" />
                               </button>
-                              <button className="p-2 text-green-400 hove; r:text-green-300 transition-colors" title="Mark as Resolved">
+                              <button className="p-2 text-green-400 hove; r: text-green-300 transition-colors" title="Mark as Resolved">
                                 <CheckCircle className="w-4 h-4" />
                               </button>
-                              <button className="p-2 text-yellow-400 hove; r:text-yellow-300 transition-colors" title="Edit">
+                              <button className="p-2 text-yellow-400 hove; r: text-yellow-300 transition-colors" title="Edit">
                                 <Edit3 className="w-4 h-4" />
                               </button>
                             </div>
@@ -417,7 +417,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
               </div>
 
               {/* Quick Actions */}
-              <div className="grid grid-cols-1 m; d:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 m; d: grid-cols-3 gap-4">
                 <div className="bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-lg p-4">
                   <h3 className="text-lg font-semibold text-green-400 mb-2 flex items-center">
                     <CheckCircle className="w-5 h-5 mr-2" />

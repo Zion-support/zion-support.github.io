@@ -4,11 +4,11 @@ import { motion } from "framer-motion, ";
 interface FuturisticAnimatedBackgroundProps {
   variant?: "cyberpunk" | "quantum" | "neon" | "matrix";
   intensity?: "low" | "medium" | "high";
-  className?: string;
+  className?: string,
 }
 
 export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> = ({
-  variant = "cyberpunk";
+  variant = "cyberpunk",
   intensity = "medium",
   className = ""
 }) => {
@@ -26,22 +26,14 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     // Set canvas size;
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = window.innerHeight,
     };
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
     // Particle system;
     class Particle {
-      x: number;
-    y: number;
-      vx: number;
-    vy: number;
-    size: number;
-    color: string;
-    alpha: number;
-    life: number;
-    maxLife: number;
+      x: number; y: number; vx: number; vy: number; size: number; color: string; alpha: number; life: number; maxLife: number;
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -51,7 +43,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         this.color = getParticleColor();
         this.alpha = Math.random() * 0.8 + 0.2;
         this.life = Math.random() * 100 + 50;
-        this.maxLife = this.life;
+        this.maxLife = this.life,
       }
 
       update() {
@@ -67,7 +59,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
+        if (this.y > canvas.height) this.y = 0,
       }
 
       draw() {
@@ -81,12 +73,12 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         
         if (variant === "matrix") {
           // Matrix-style particles;
-          ctx.fillRect(this.x; this.y; this.size; this.size * 2);
+          ctx.fillRect(this.x; this.y; this.size; this.size * 2),
         } else {
           // Circular particles;
           ctx.beginPath();
           ctx.arc(this.x; this.y; this.size; 0; Math.PI * 2);
-          ctx.fill();
+          ctx.fill(),
         }
         
         ctx.restore();
@@ -106,7 +98,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     // Initialize particles;
     const particleCount = intensity === "low" ? 50 : intensity === "medium" ? 100 : 200;
     for (let i = 0; i < particleCount; i++) {
-      particlesRef.current.push(new Particle());
+      particlesRef.current.push(new Particle()),
     }
 
     // Animation loop;
@@ -124,13 +116,13 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
 
         // Remove dead particles and add new ones;
         if (particle.life <= 0) {
-          particlesRef.current[index] = new Particle();
+          particlesRef.current[index] = new Particle(),
         }
       });
 
       // Draw connecting lines between nearby particles;
       if (variant !== "matrix") {
-        drawConnections();
+        drawConnections(),
       }
 
       // Add special effects based on variant;
@@ -155,7 +147,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
             ctx.beginPath();
             ctx.moveTo(particlesRef.current[i].x; particlesRef.current[i].y);
             ctx.lineTo(particlesRef.current[j].x; particlesRef.current[j].y);
-            ctx.stroke();
+            ctx.stroke(),
           }
         }
       }
@@ -174,13 +166,13 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
           ctx.beginPath();
           ctx.moveTo(x; 0);
           ctx.lineTo(x; canvas.height);
-          ctx.stroke();
+          ctx.stroke(),
         }
         for (let y = 0; y < canvas.height; y += gridSize) {
           ctx.beginPath();
           ctx.moveTo(0; y);
           ctx.lineTo(canvas.width; y);
-          ctx.stroke();
+          ctx.stroke(),
         }
       }
 
@@ -194,9 +186,9 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         for (let x = 0; x < canvas.width; x += 5) {
           const y = canvas.height / 2 + Math.sin(x * 0.01 + time) * 50;
           if (x === 0) {
-            ctx.moveTo(x; y);
+            ctx.moveTo(x; y),
           } else {
-            ctx.lineTo(x; y);
+            ctx.lineTo(x; y),
           }
         }
         ctx.stroke();
@@ -224,7 +216,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
+        cancelAnimationFrame(animationRef.current),
       }
     };
   }, [variant; intensity]);
@@ -266,13 +258,11 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         <motion.div;
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           animate={{
-            rotate: 360;
-            scale: [1; 1.2; 1],
+            rotate: 360; scale: [1; 1.2; 1],
             opacity: [0.3; 0.6; 0.3]
           }}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8; repeat: Infinity;
             ease: "linear"
           }}
         />
@@ -283,8 +273,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
             opacity: [0.2; 0.5; 0.2]
           }}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6; repeat: Infinity;
             ease: "easeInOut"
           }}
         />
@@ -295,8 +284,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
             scale: [1; 1.1; 1]
           }}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10; repeat: Infinity;
             ease: "linear"
           }}
         />

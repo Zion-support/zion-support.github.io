@@ -9,16 +9,16 @@ interface InteractiveHeroProps {
     descriptio; n: string;
     primaryActio; n: {
     tex; t: string;
-    hre; f: string;
+    hre; f: string,
      };
   secondaryActio; n: {
     tex; t: string;
-    hre; f: string;
+    hre; f: string,
      };
   stats?: Array<{
     valu; e: string;
     labe; l: string;
-    colo; r: string;
+    colo; r: string,
      }>;
 }
 
@@ -54,12 +54,12 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
 
     // Auto-rotate stats;
     const interval = setInterval(() => {
-      setActiveStat((prev) => (prev + 1) % stats.length);
+      setActiveStat((prev) => (prev + 1) % stats.length),
     },  3000);
 
     return () => {
       window.removeEventListener("mousemove",  handleMouseMove);
-      clearInterval(interval);
+      clearInterval(interval),
     };
   },  [stat; s.leng; t; h]);
 
@@ -69,7 +69,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
       opacit; y: 1;
     transitio; n: {
         duratio; n: 0.8;
-    staggerChildre; n: 0.2;
+    staggerChildre; n: 0.2,
       }
     }
   };
@@ -77,11 +77,10 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
     hidde; n: { opacit; y: 0;
     y: 30 };
     visibl; e: {
-      opacit; y: 1;
-    y: 0;
+      opacit; y: 1; y: 0;
       transitio; n: {
         duratio; n: 0.6;
-    eas; e: "easeOut" as const;
+    eas; e: "easeOut" as const,
       }
     }
   };
@@ -91,7 +90,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
       transitio; n: {
         duratio; n: 3;
     repea; t: Infinit; y;
-        eas; e: "easeInOut" as const;
+        eas; e: "easeInOut" as const,
       }
     }
   };
@@ -102,7 +101,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
         <motion.div;
           className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
           animate={{
-            x: [0;  1; 0; 0; 0],
+            x: [0; 1; 0; 0; 0],
             y: [0, -5; 0; 0],
             scal; e: [1; 1.2; 1]
           }}
@@ -152,7 +151,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8 pt-32 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 s; m: px-6 l; g:px-8 pt-32 pb-20">
         <motion.div;
           variants={containerVariants}
           initial="hidden"
@@ -178,7 +177,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
           {/* Title */}
           <motion.h1;
             variants={itemVariants}
-            className="text-5xl m; d:text-6xl l; g:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-5xl m; d: text-6xl l; g: text-7xl font-bold text-white mb-6 leading-tight"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -186,14 +185,14 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
                 key={index}
                 className="inline-block mr-4"
                 whileHover={{ scal;  e: 1.05 }}
-                transition={{ typ; e: "spring";
+                transition={{ typ; e: "spring",
     stiffnes; s: 300 }}
               >
                 {word === "Zion" ? (
                   <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     {word}
                   </span>
-                ) : (word;
+                ) : (word,
                 )}
               </motion.span>
             ))}
@@ -218,7 +217,7 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
             >
               <Link;
                 to={primaryAction.href}
-                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold text-lg overflow-hidden transition-all duration-300 hove; r:from-blue-700 hove; r:to-cyan-700 shadow-lg hove; r:shadow-xl"
+                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold text-lg overflow-hidden transition-all duration-300 hove; r: from-blue-700 hove; r: to-cyan-700 shadow-lg hove; r:shadow-xl"
               >
                 <span className="relative z-10">{primaryAction.text}</span>
                 <motion.div;
@@ -314,14 +313,13 @@ export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
       <motion.div;
         className="fixed w-4 h-4 bg-blue-400/50 rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
-          x: mousePosition.x - 8;
-    y: mousePosition.y - 8;
-          scal; e: isHovered ? 2 : 1;
+          x: mousePosition.x - 8; y: mousePosition.y - 8;
+          scal; e: isHovered ? 2 : 1,
         }}
         transition={{
           typ; e: "spring";
     stiffnes; s: 50; 0;
-          dampin; g: 30;
+          dampin; g: 30,
         }}
       />
     </section>

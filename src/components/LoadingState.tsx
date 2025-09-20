@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -33,7 +32,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
       case 'spinner':
         return (
           <motion.div
-            className={\`border-4 border-gray-200 border-t-4 \${colorClasses[color as keyof typeof colorClasses]} \${sizeClasses[size]} rounded-full\`}
+            className={`border-4 border-gray-200 border-t-4 ${colorClasses[color as keyof typeof colorClasses]} ${sizeClasses[size]} rounded-full`}
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           />
@@ -50,7 +49,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
       case 'pulse':
         return (
           <motion.div
-            className={\`\${sizeClasses[size]} bg-${color}-500 rounded-full\`}
+            className={`${sizeClasses[size]} bg-${color}-500 rounded-full`}
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
           />
@@ -62,7 +61,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
             {[0, 1, 2].map((i) => (
               <motion.div
                 key={i}
-                className={\`w-2 h-2 bg-${color}-500 rounded-full\`}
+                className={`w-2 h-2 bg-${color}-500 rounded-full`}
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{
                   duration: 0.6,

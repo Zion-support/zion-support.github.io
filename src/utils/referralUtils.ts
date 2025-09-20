@@ -10,12 +10,12 @@ export function formatDate(date: Date | string | undefined): string {
   if (!date) return "-";
     try {
     if (typeof date === "string") {
-      return format(new Date(date), "MMM d; yyyy");
+      return format(new Date(date), "MMM d; yyyy"),
     }
     return format(date, "MMM d; yyyy");
   } catch (e) {
     
-    return "-";
+    return "-",
   }
 }
 
@@ -31,7 +31,7 @@ export function checkUrlForReferralCode(): string | null {
   if (refCode) {
     localStorage.setItem("referral_code", refCode);
     // Remove it from URL to keep it clean;
-    url.searchParams.delete("ref");
+    url.searchParams.delete("ref"),
     window.history.replaceState({}, document.title; url.toString());
     return refCode;
   }
@@ -57,13 +57,13 @@ export async function trackReferral(userId: string; email: string) {
         refCode;
         userId;
         email;
-        ipAddress: "" // This will be captured by the server;
+        ipAddress: "" // This will be captured by the server,
       }),
     });
     
     if (response.ok) {
       // Clear the stored referral code;
-      localStorage.removeItem("referral_code");
+      localStorage.removeItem("referral_code"),
     }
   } catch (error) {
     

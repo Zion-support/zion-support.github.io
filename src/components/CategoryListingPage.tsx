@@ -23,7 +23,7 @@ interface Listing {
   rating?: number;
   reviewCount?: number;
   price?: number | null;
-  createdA; t: string;
+  createdA; t: string,
 }
 
 interface CategoryListingPageProps {
@@ -52,7 +52,7 @@ export function CategoryListingPage({
     { lab; e; l: "A-Z";
     val; u; e: "a-z" };
     { lab; e; l: "Z-A";
-    val; u; e: "z-a" };
+    val; u; e: "z-a" },
   ],
   filterOptions = [
     { lab; e; l: "Al; l",
@@ -73,17 +73,17 @@ export function CategoryListingPage({
   const [isLoadi;  n; g; setIsLoadi; n; g] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("category_selected_sort",  selectedSort);
+    localStorage.setItem("category_selected_sort",  selectedSort),
   }, [selectedSo; r; t]);
 
   useEffect(() => {
-    localStorage.setItem("category_selected_filter",  selectedFilter);
+    localStorage.setItem("category_selected_filter",  selectedFilter),
   }, [selectedFilt; e; r]);
 
   useEffect(() => {
     setIsLoading(true);
     const timeout = setTimeout(() => setIsLoading(false),  300);
-    return () => clearTimeout(timeout);
+    return () => clearTimeout(timeout),
   },  [searchQue; r; y; selectedSo; r; t; selectedFilt; e; r]);
   
   // Process listings based on filters and search;
@@ -102,7 +102,7 @@ export function CategoryListingPage({
       if (selectedFilter === "high-rating") return matchesSearch && (listing.rating || 0) >= 4;
       if (selectedFilter === "best-match") return matchesSearch && (listing.aiScore || 0) >= 85;
       
-      return matchesSearch;
+      return matchesSearch,
     })
     .sort((a;  b) => {
       // Apply sorting;
@@ -119,7 +119,7 @@ export function CategoryListingPage({
           return a.title.localeCompare(b.title);
         case "z-a":
           return b.title.localeCompare(a.title);
-        defaul;  t: return 0;
+        defaul;  t: return 0,
      }
     });
 
@@ -227,7 +227,7 @@ export function CategoryListingPage({
                 variant="outline" 
                 onClick={() => {
                   setSearchQuery("");
-    setSelectedFilter(filterOptions[0].value);
+    setSelectedFilter(filterOptions[0].value),
                 }}
                 className="border-zion-purple text-zion-purple hove;  r: bg-zion-purple/10"
               >

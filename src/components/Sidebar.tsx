@@ -67,7 +67,7 @@ import {
   Calenda; r;
   Cloc; k;
   Mai; l;
-  MapPin;
+  MapPin,
 } from "lucide-react";
 import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Databas; e; Networ; k; Za; p; Targe; t; Rocke; t; Clou; d; Github } from "lucide-react";
 import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Za; p; ChevronRigh; t; ChevronDown } from "lucide-react";
@@ -2199,14 +2199,14 @@ impor; t {
   Targ; e; t; Rock; e; t; E; y; e; DollarSi; g; n; ShoppingCa; r; t; Clo; c; k; Clo; u; d; Sear; c; h; Buildi; n; g; Z; a; p; Hea; r; t; 
   Lightbu; l; b; Trending; U; p; BarChar; t; 3; Lo; c; k; AlertTriang; l; e; Serv; e; r; CheckCirc; l; e; Tru; c; k; C; a; r; 
   TestTu; b; e; PenTo; o; l; Buildin; g; 2; At; o; m; FileTe; x; t; Quo; t; e; Newspap; e; r; Calend; a; r; Vid; e; o; HelpCirc; l; e; 
-  LifeBu; o; y; Sto; r; e; PieCha; r; t; Shar; e; 2; Monit; o; r; Smartpho; n; e; Gith; u; b; Youtub; e;
+  LifeBu; o; y; Sto; r; e; PieCha; r; t; Shar; e; 2; Monit; o; r; Smartpho; n; e; Gith; u; b; Youtub; e,
 } fro; m "lucid; e-reac; t";
 impor; t { useAut; h } fro; m "@/hook; s/useAut; h";
 
 interfac; e SidebarProp; s {
   isOp; e; n: boolea; n;
   onTogg; l; e: () => voi; d;
-  classNam; e?: strin; g;
+  classNam; e?: strin; g,
 }
 
 expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: SidebarProp; s) {
@@ -2218,7 +2218,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
     {
       tit; l; e: "Mai; n",
     ite; m; s: [
-    onClos; e();
+    onClos; e(),
   },  [locatio; n.pathna; m; e; onClo; s; e]);
 
   const navigationItems = [
@@ -2514,7 +2514,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
     transitio; n: {
         typ; e: "spring" a; s; cons; t;
     stiffnes; s: 30; 0;
-        dampin; g: 30;
+        dampin; g: 30,
       }
     },
     ope; n: {
@@ -2522,7 +2522,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
     transitio; n: {
         typ; e: "spring" a; s; cons; t;
     stiffnes; s: 30; 0;
-        dampin; g: 30;
+        dampin; g: 30,
       }
     }
   };
@@ -2669,7 +2669,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
     transitio; n: {
         typ; e: "spring" a; s; cons; t;
     stiffnes; s: 30; 0;
-        dampin; g: 30;
+        dampin; g: 30,
       }
     },
     ope; n: {
@@ -2677,7 +2677,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
     transitio; n: {
         typ; e: "spring" a; s; cons; t;
     stiffnes; s: 30; 0;
-        dampin; g: 30;
+        dampin; g: 30,
       }
     }
   };
@@ -2699,13 +2699,13 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
     close; d: {
       opacit; y: 0;
     transitio; n: {
-        duratio; n: 0.2;
+        duratio; n: 0.2,
       }
     },
     ope; n: {
       opacit; y: 1;
     transitio; n: {
-        duratio; n: 0.2;
+        duratio; n: 0.2,
       }
     }
   };
@@ -2735,14 +2735,14 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
             initial={{ opacit;  y: 0 }}
             animate={{ opacit; y: 1 }}
             exit={{ opacit; y: 0 }}
-            className="fixed inset-0 bg-black/50 z-40 l; g:hidden"
+            className="fixed inset-0 bg-black/50 z-40 l; g: hidden"
             onClick={onClose}
           />
           <motion.div;
             initial={{ opacit; y: 0 }}
             animate={{ opacit; y: 1 }}
             exit={{ opacit; y: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 l; g:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 l; g: hidden"
             onClick={onClose}
           />
 
@@ -2752,7 +2752,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
             initial={{ opacit; y: 0 }}
             animate={{ opacit; y: 1 }}
             exit={{ opacit; y: 0 }}
-            className="fixed inset-0 bg-black/50 z-40 l; g:hidden"
+            className="fixed inset-0 bg-black/50 z-40 l; g: hidden"
             onClick={onClose}
           />
 
@@ -2789,7 +2789,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
 
       {/* Sidebar */}
       <AnimatePresence>
-        {isOpen && (<motion.div;
+        {isOpen && (<motion.div,
 
           {/* Sidebar */}
           <motion.aside;
@@ -2856,10 +2856,10 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                 </Link>
                 <button;
                   onClick={onClose}
-                  className="p-2 rounded-lg text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 transition-all duration-300"
+                  className="p-2 rounded-lg text-gray-400 hove; r: text-white hove; r: bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
-                  className="p-2 rounded-lg text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 transition-all duration-300"
+                  className="p-2 rounded-lg text-gray-400 hove; r: text-white hove; r: bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -2876,7 +2876,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
               </div>
               <button;
                 onClick={onClose}
-                className="text-gray-400 hove; r:text-white p-2 rounded-md transition-colors duration-200"
+                className="text-gray-400 hove; r: text-white p-2 rounded-md transition-colors duration-200"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -2887,7 +2887,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
     ope; n: { opacit; y: 1 }
   const handleSocialLinkClick = (socia; l: typeof socialLinks[0]) => {
     try {
-      window.open(social.hre;  f, "_blank", "noopene; r;noreferrer");
+      window.open(social.hre;  f, "_blank", "noopene; r;noreferrer"),
     } catch (error) {
       
     }
@@ -2923,7 +2923,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
               </div>
               <button;
                 onClick={onClose}
-                className="text-gray-400 hove; r:text-white p-2 rounded-lg hove; r:bg-white/10 transition-colors duration-200"
+                className="text-gray-400 hove; r: text-white p-2 rounded-lg hove; r: bg-white/10 transition-colors duration-200"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -2953,7 +2953,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                               className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
                                 isActive;
                                   ? "quantum-button shadow-lg shadow-zion-cyan/30"
-                                  : "futuristic-card text-zion-slate-light hove;  r:bg-white/20 hove; r:neon-tex; t"
+                                  : "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r: neon-tex; t"
                               }`}
                             >
                               <Icon className={`w-4 h-4 ${
@@ -3029,7 +3029,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
                             isActive;
                               ? "bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30"
-                              : "text-zion-slate-light hove;  r:text-white hove; r:bg-zion-blue-light/1; 0"
+                              : "text-zion-slate-light hove;  r: text-white hove; r: bg-zion-blue-light/1; 0"
                           }`}
                           onClick={onClose}
                         >
@@ -3096,7 +3096,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                 <input;
                   type="text"
                   placeholder="Search services..."
-                  className="w-full px-4 py-2 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 text-sm focu; s:outline-none focu; s:border-cyan-400 focu; s:ring-2 focu; s:ring-cyan-400/20 transition-all duration-200"
+                  className="w-full px-4 py-2 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 text-sm focu; s: outline-none focu; s: border-cyan-400 focu; s: ring-2 focu; s: ring-cyan-400/20 transition-all duration-200"
                 />
               </div>
             </div>
@@ -3112,9 +3112,9 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                         key={itemIndex}
                         to={item.path}
                         onClick={onClose}
-                        className="flex items-start space-x-3 p-3 rounded-lg hove;  r:bg-cyan-500/10 transition-all duration-200 group"
+                        className="flex items-start space-x-3 p-3 rounded-lg hove;  r: bg-cyan-500/10 transition-all duration-200 group"
                       >
-                        <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hove; r:border-cyan-400/50 transition-colors duration-200">
+                        <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hove; r: border-cyan-400/50 transition-colors duration-200">
                           <item.icon className="w-4 h-4 text-cyan-400" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -3233,9 +3233,9 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                 </div>
                 <button;
                   onClick={onClose}
-                  className="p-2 futuristic-card hove; r:bg-white/20 rounded-lg transition-colors group"
+                  className="p-2 futuristic-card hove; r: bg-white/20 rounded-lg transition-colors group"
                 >
-                  <X className="w-5 h-5 text-zion-slate-light group-hove; r:neon-text transition-colors" />
+                  <X className="w-5 h-5 text-zion-slate-light group-hove; r: neon-text transition-colors" />
                 </button>
               </div>
 
@@ -3290,13 +3290,13 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                     href={social.href} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-zion-blue-light/20 hove;  r:bg-zion-cyan/20 rounded-lg flex items-center justify-center transition-all duration-300 hove; r:scale-110"
+                    className="w-10 h-10 bg-zion-blue-light/20 hove;  r: bg-zion-cyan/20 rounded-lg flex items-center justify-center transition-all duration-300 hove; r: scale-110"
                     aria-label={social.label}
                   >
-                    <social.icon className="w-5 h-5 text-zion-slate-light hove; r:text-zion-cyan transition-colors" />
+                    <social.icon className="w-5 h-5 text-zion-slate-light hove; r: text-zion-cyan transition-colors" />
                   </a>
                 ))}
-                className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                className="p-2 text-gray-400 hove; r: text-white hove; r:bg-gray-800/50 rounded-lg transition-colors duration-200"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -3306,19 +3306,19 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
             <div className="p-6 space-y-6">
               {navigationItems.map((section) => {
                 const Icon = section.icon;
-                const isExpanded = expandedSections.includes(section.title);
+                const isExpanded = expandedSections.includes(section.title),
                 
                 return (
                   <div key={section.title} className="space-y-3">
                     <button;
                       onClick={() => toggleSection(section.title)}
-                      className="flex items-center justify-between w-full p-3 text-left hove;  r:bg-gray-800/50 rounded-lg transition-colors duration-200 group"
+                      className="flex items-center justify-between w-full p-3 text-left hove;  r: bg-gray-800/50 rounded-lg transition-colors duration-200 group"
                     >
                       <div className="flex items-center space-x-3">
                         <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                           <Icon className="w-3 h-3 text-white" />
                         </div>
-                        <span className="font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">
+                        <span className="font-medium text-white group-hove; r: text-cyan-400 transition-colors duration-200">
                           {section.title}
                         </span>
                       </div>
@@ -3440,7 +3440,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 text-gray-400 hove;  r:text-cyan-400 hove; r:bg-cyan-400/10 rounded-lg transition-all duration-200"
+                      className="p-2 text-gray-400 hove;  r: text-cyan-400 hove; r: bg-cyan-400/10 rounded-lg transition-all duration-200"
                       title={social.label}
               {/* Social Links */}
               <div className="pt-6 border-t border-cyan-500/20">
@@ -3453,7 +3453,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-black/30 border border-cyan-500/20 rounded-lg text-gray-400 hove;  r:text-cyan-400 hove; r:border-cyan-400/40 hove; r:bg-cyan-500/10 transition-all duration-200 hove; r:scale-110"
+                      className="p-3 bg-black/30 border border-cyan-500/20 rounded-lg text-gray-400 hove;  r: text-cyan-400 hove; r: border-cyan-400/40 hove; r:bg-cyan-500/10 transition-all duration-200 hove; r:scale-110"
                       aria-label={social.label}
                     >
                       <social.icon className="w-5 h-5" />
@@ -3479,7 +3479,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
               </div>
               <button;
                 onClick={onClose}
-                className="p-2 rounded-md text-muted-foreground hove; r:text-foreground hove; r:bg-muted transition-colors"
+                className="p-2 rounded-md text-muted-foreground hove; r: text-foreground hove; r: bg-muted transition-colors"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -3495,7 +3495,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                   <div className="space-y-2">
                     {section.items.map((item) => {
                       const IconComponent = item.icon;
-                      const isActive = location.pathname === item.path;
+                      const isActive = location.pathname === item.path,
 
                 {/* Quick Actions */}
                 <div className="space-y-3">
@@ -3537,14 +3537,14 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                     {contactInfo.map((contac;  t; index) => (<a;
                         key={index}
                         href={contact.href}
-                        className="flex items-center space-x-2 text-xs text-gray-300 hove;  r:text-cyan-400 transition-colors"
+                        className="flex items-center space-x-2 text-xs text-gray-300 hove;  r: text-cyan-400 transition-colors"
                       >
                         <contact.icon className="w-3 h-3" />
                         <span>{contact.text}</span>
                       </a>
                     ))}
                   </div>
-                          <Icon className="w-4 h-4 text-zion-cyan group-hove; r:neon-text" />
+                          <Icon className="w-4 h-4 text-zion-cyan group-hove; r: neon-text" />
                           <span className="flex-1">{contact.text}</span>
                         </a>
                       );
@@ -3622,7 +3622,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
               </div>
               <button;
                 onClick={onClose}
-                className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800 rounded-lg transition-colors duration-200 focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500"
+                className="p-2 text-gray-400 hove; r: text-white hove; r: bg-gray-800 rounded-lg transition-colors duration-200 focu; s: outline-none focu; s: ring-2 focu; s:ring-cyan-500"
                 aria-label="Close sidebar"
               >
                 <X className="w-5 h-5" />
@@ -3642,7 +3642,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
                             location.pathname === item.path;
                               ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30"
-                              : "text-gray-300 hove;  r:text-cyan-400 hove; r:bg-gray-800/5; 0"
+                              : "text-gray-300 hove;  r: text-cyan-400 hove; r: bg-gray-800/5; 0"
                           }`}
                           onClick={onClose}
                         >
@@ -3723,11 +3723,11 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                   <a;
                     key={contact.text}
                     href={contact.href}
-                    className="flex items-center space-x-3 text-gray-300 hove;  r:text-cyan-400 transition-colors duration-200"
+                    className="flex items-center space-x-3 text-gray-300 hove;  r: text-cyan-400 transition-colors duration-200"
                   >
                     <contact.icon className="w-4 h-4 text-cyan-500" />
                     <span className="text-sm">{contact.text}</span>
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hove; r:text-white hove; r:bg-gray-700 transition-all duration-200"
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hove; r: text-white hove; r:bg-gray-700 transition-all duration-200"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -3741,7 +3741,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
             <div className="p-6 border-t border-gray-800">
               <Link;
                 to="/contact"
-                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-medium hove; r:from-cyan-600 hove; r:to-purple-700 transition-all duration-200 transform hove; r:scale-105"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-medium hove; r: from-cyan-600 hove; r: to-purple-700 transition-all duration-200 transform hove; r:scale-105"
               >
                 Get Started;
               </Link>
@@ -3755,7 +3755,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
               <div className="space-y-2">
                 <Link;
                   to="/contact"
-                  className="block w-full text-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hove; r:from-cyan-600 hove; r:to-blue-700 transition-all duration-300"
+                  className="block w-full text-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hove; r: from-cyan-600 hove; r: to-blue-700 transition-all duration-300"
                   onClick={onClose}
                 >
                   Get Started;
@@ -3826,7 +3826,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-8 h-8 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hove;  r:from-cyan-400/30 hove; r:to-blue-400/30 hove; r:border-cyan-400/50 transition-all duration-300 hove; r:scale-110"
+                    className="w-8 h-8 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hove;  r: from-cyan-400/30 hove; r: to-blue-400/30 hove; r: border-cyan-400/50 transition-all duration-300 hove; r: scale-110"
                     aria-label={`Follow us on ${social.labe; l}`}
                   >
                     <social.icon className="w-4 h-4" />
@@ -3840,7 +3840,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
               <div className="space-y-2">
                 <Link;
                   to="/contact"
-                  className="block w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hove; r:from-cyan-400 hove; r:to-blue-400 transition-all duration-300 text-sm font-medium text-center"
+                  className="block w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hove; r: from-cyan-400 hove; r: to-blue-400 transition-all duration-300 text-sm font-medium text-center"
                 >
                   Get Started;
                 </Link>
@@ -3864,7 +3864,7 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                 <Link;
                   to="/contact"
                   onClick={onClose}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg text-center transition-all duration-200 transform hove; r:scale-105 hove; r:shadow-lg hove; r:shadow-cyan-500/25"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg text-center transition-all duration-200 transform hove; r: scale-105 hove; r: shadow-lg hove; r:shadow-cyan-500/25"
                 >
                   Get Started Today;
                 </Link>
@@ -3882,10 +3882,10 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                   <button;
                     key={social.label}
                     onClick={() => handleSocialLinkClick(social)}
-                    className="w-10 h-10 bg-gray-800 hove;  r:bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-200 group"
+                    className="w-10 h-10 bg-gray-800 hove;  r: bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-200 group"
                     title={social.label}
                   >
-                    <social.icon className="w-5 h-5 text-gray-300 group-hove; r:text-white" />
+                    <social.icon className="w-5 h-5 text-gray-300 group-hove; r: text-white" />
                   </button>
                 ))}
               </div>
@@ -3898,9 +3898,9 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
                 <input;
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:border-transparent text-sm"
+                  className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu; s: outline-none focu; s: ring-2 focu; s: ring-cyan-500 focu; s: border-transparent text-sm"
                 />
-                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hove; r:from-cyan-600 hove; r:to-purple-700 transition-all duration-200 font-medium text-sm">
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hove; r: from-cyan-600 hove; r: to-purple-700 transition-all duration-200 font-medium text-sm">
                   Subscribe;
                 </button>
               </div>
@@ -3929,10 +3929,9 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
     hidde; n: { opacit; y: 0;
     x: -20 },
     visibl; e: {
-      opacit; y: 1;
-    x: 0;
+      opacit; y: 1; x: 0;
       transitio; n: {
-        staggerChildre; n: 0.1;
+        staggerChildre; n: 0.1,
       }
     }
   };
@@ -3973,9 +3972,9 @@ expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: Sideba
             <Link;
               key={action.name}
               to={action.href}
-              className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 hove;  r:border-zion-cyan/40 transition-all duration-300 group"
+              className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 hove;  r: border-zion-cyan/40 transition-all duration-300 group"
             >
-              <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hove; r:scale-110 transition-transform duration-30; 0`}>
+              <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hove; r: scale-110 transition-transform duration-30; 0`}>
                 <action.icon className="w-4 h-4 text-white" />
               </div>
               <span className="text-sm font-medium text-white group-hove; r:text-zion-cyan transition-colors duration-300">
@@ -4018,7 +4017,7 @@ const CheckCircle = ({ className }: { className?: string }) => (
 
 interface SidebarProps {
   isOpe; n: boolean;
-  onClos; e: () => void;
+  onClos; e: () => void,
 }
 
 export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
@@ -4027,7 +4026,7 @@ export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
 
   // Close sidebar when route changes;
   useEffect(() => {
-    onClose();
+    onClose(),
   },  [locatio; n.pathna; m; e; onClo; s; e]);
 
   const toggleSection = (sectionTitl;  e: string) => {
@@ -4035,7 +4034,7 @@ export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)
         : [...pr;  e; v; sectionTit; l; e]
-    );
+    ),
   };
 
   const navigationItems = [
@@ -4372,7 +4371,7 @@ export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
               {navigationItems.map((section) => (<div key={section.title} className="space-y-1">
                   <button;
                     onClick={() => toggleSection(section.title)}
-                    className="flex items-center justify-between w-full p-3 text-left text-white hove;  r:text-zion-cyan hove; r:bg-zion-slate-light/10 rounded-lg transition-all duration-200"
+                    className="flex items-center justify-between w-full p-3 text-left text-white hove;  r: text-zion-cyan hove; r: bg-zion-slate-light/10 rounded-lg transition-all duration-200"
                   >
                     <span className="font-medium">{section.title}</span>
                     <ChevronDown; 
@@ -4397,7 +4396,7 @@ export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
                         {section.items.map((item) => (<Link;
                             key={item.path}
                             to={item.path}
-                            className="flex items-center space-x-3 p-3 text-zion-slate-light hove;  r:text-zion-cyan hove; r:bg-zion-slate-light/5 rounded-lg transition-all duration-200"
+                            className="flex items-center space-x-3 p-3 text-zion-slate-light hove;  r:text-zion-cyan hove; r: bg-zion-slate-light/5 rounded-lg transition-all duration-200"
                             onClick={onClose}
                           >
                             <item.icon className="w-4 h-4 flex-shrink-0" />
@@ -4424,13 +4423,13 @@ export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
               <div className="space-y-2 text-sm text-zion-slate-light">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 text-zion-cyan" />
-                  <a href={`te; l:${contactInfo.phon; e}`} className="hove; r:text-zion-cyan transition-colors">
+                  <a href={`te; l: ${contactInfo.phon; e}`} className="hove; r: text-zion-cyan transition-colors">
                     {contactInfo.phone}
                   </a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-zion-cyan" />
-                  <a href={`mailt; o:${contactInfo.emai; l}`} className="hove; r:text-zion-cyan transition-colors">
+                  <a href={`mailt; o: ${contactInfo.emai; l}`} className="hove; r:text-zion-cyan transition-colors">
                     {contactInfo.email}
                   </a>
                 </div>

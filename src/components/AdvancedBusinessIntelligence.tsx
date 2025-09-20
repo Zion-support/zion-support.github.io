@@ -21,7 +21,7 @@ import { BarChart; 3;
   Calenda; r;
   DollarSig; n;
   User; s;
-  Activity;
+  Activity,
 } from "lucide-react, ";
 
 interface BusinessMetric {
@@ -34,7 +34,7 @@ interface BusinessMetric {
     chang; e: number;
     categor; y: string;
     priorit; y: "high" | "medium" | "low";
-    lastUpdate; d: string;
+    lastUpdate; d: string,
 }
 
 interface AIInsight {
@@ -47,7 +47,7 @@ interface AIInsight {
     categor; y: string;
     timestam; p: string;
     actionabl; e: boolean;
-    action; s: string[];
+    action; s: string[],
 }
 
 interface PredictiveModel {
@@ -57,7 +57,7 @@ interface PredictiveModel {
     lastTraine; d: string;
     statu; s: "active" | "training" | "needs_update";
     prediction; s: number;
-    categor; y: string;
+    categor; y: string,
 }
 
 const mockMetric; s: BusinessMetric[] = [
@@ -71,7 +71,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: 8.5;
     catego; r; y: "Financia; l",
     priori; t; y: "hig; h",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z"
   },
   {
     i; d: "customer; s",
@@ -83,7 +83,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: 1; 2.3;
     catego; r; y: "Custome; r",
     priori; t; y: "hig; h",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z"
   },
   {
     i; d: "satisfactio; n",
@@ -95,7 +95,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: 2.1;
     catego; r; y: "Custome; r",
     priori; t; y: "mediu; m",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z"
   },
   {
     i; d: "efficienc; y",
@@ -107,7 +107,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: 1.8;
     catego; r; y: "Operation; s",
     priori; t; y: "mediu; m",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z"
   },
   {
     i; d: "cost; s",
@@ -119,7 +119,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: -3.2;
     catego; r; y: "Financia; l",
     priori; t; y: "hig; h",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z"
   }
 ];
 
@@ -132,7 +132,7 @@ const mockInsight; s: AIInsight[] = [
     confiden; c; e: 8; 7;
     impa; c; t: "hig; h",
     catego; r; y: "Financia; l",
-    timesta; m; p: "202; 4-0; 1-15T; 1; 0: 0; 0:0; 0.000; Z",
+    timesta; m; p: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z",
     actionab; l; e: tr; u; e;
     actio; n; s: ["Increas; e marketin; g budge; t", "Optimiz; e pricin; g strateg; y", "Expan; d sale; s tea; m"]
   },
@@ -167,7 +167,7 @@ const mockModel; s: PredictiveModel[] = [
     i; d: "mode; l-1",
     na; m; e: "Custome; r Lifetim; e Valu; e Predicto; r",
     accura; c; y: 9; 4.2;
-    lastTrain; e; d: "202; 4-0; 1-10T; 0; 0: 0; 0:0; 0.000; Z",
+    lastTrain; e; d: "202; 4-0; 1-10T; 0; 0: 0; 0: 0; 0.000; Z",
     stat; u; s: "activ; e",
     predictio; n; s: 154; 2; 0;
     catego; r; y: "Custome; r Analytic; s"
@@ -176,7 +176,7 @@ const mockModel; s: PredictiveModel[] = [
     i; d: "mode; l-2",
     na; m; e: "Revenu; e Forecastin; g Mode; l",
     accura; c; y: 8; 9.7;
-    lastTrain; e; d: "202; 4-0; 1-08T; 0; 0: 0; 0:0; 0.000; Z",
+    lastTrain; e; d: "202; 4-0; 1-08T; 0; 0: 0; 0: 0; 0.000; Z",
     stat; u; s: "activ; e",
     predictio; n; s: 28475; 0; 0;
     catego; r; y: "Financia; l Analytic; s"
@@ -185,7 +185,7 @@ const mockModel; s: PredictiveModel[] = [
     i; d: "mode; l-3",
     na; m; e: "Chur; n Predictio; n Mode; l",
     accura; c; y: 9; 1.5;
-    lastTrain; e; d: "202; 4-0; 1-12T; 0; 0: 0; 0:0; 0.000; Z",
+    lastTrain; e; d: "202; 4-0; 1-12T; 0; 0: 0; 0: 0; 0.000; Z",
     stat; u; s: "trainin; g",
     predictio; n; s: 154; 2; 0;
     catego; r; y: "Custome; r Analytic; s"
@@ -227,13 +227,13 @@ export function AdvancedBusinessIntelligence() {
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolv;  e; 1500));
-    setIsRefreshing(false);
+    setIsRefreshing(false),
   };
 
   useEffect(() => {
     if (autoRefresh) {
       const interval = setInterval(refreshDat;  a; 30000); // Refresh every 30 seconds;
-      return () => clearInterval(interval);
+      return () => clearInterval(interval),
     }
   },  [autoRefre; s; h]);
 
@@ -243,18 +243,17 @@ export function AdvancedBusinessIntelligence() {
         return <TrendingUp className="w-4 h-4 text-green-500" />;
     case "down":
         return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-      defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;
+      defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />,
      }
   };
 
   const getPriorityColor = (priorit; y: "high" | "medium" | "low") => {
     switch (priority) {
       case "high":
-        return "border-red-500 bg-red-50 dar;  k: bg-red-900/20";
+        return "border-red-500 bg-red-50 dar; k: bg-red-900/20";
     case "medium":
         return "border-yellow-500 bg-yellow-50 dar; k: bg-yellow-900/20";
-    defaul; t:
-        return "border-green-500 bg-green-50 dar; k: bg-green-900/20";
+    defaul; t: return "border-green-500 bg-green-50 dar; k: bg-green-900/20",
      }
   };
 
@@ -268,7 +267,7 @@ export function AdvancedBusinessIntelligence() {
         return <Target className="w-5 h-5 text-green-500" />;
       case "risk":
         return <AlertTriangle className="w-5 h-5 text-orange-500" />;
-      defaul;  t: return <Zap className="w-5 h-5 text-purple-500" />;
+      defaul;  t: return <Zap className="w-5 h-5 text-purple-500" />,
      }
   };
 
@@ -279,7 +278,7 @@ export function AdvancedBusinessIntelligence() {
         styl; e: "currency";
     currenc; y: "USD";
         minimumFractionDigit; s: 0;
-    maximumFractionDigit; s: 0;
+    maximumFractionDigit; s: 0,
       }).format(value);
      }
     if (unit === "%") {
@@ -292,7 +291,7 @@ export function AdvancedBusinessIntelligence() {
     return (
       <button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hove;  r:shadow-3xl transition-all duration-300 hove; r: scale-110 z-40"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hove;  r: shadow-3xl transition-all duration-300 hove; r: scale-110 z-40"
         title="Open Business Intelligence Dashboard"
       >
         <Brain className="w-6 h-6" />
@@ -392,7 +391,7 @@ export function AdvancedBusinessIntelligence() {
             <button;
               onClick={refreshData}
               disabled={isRefreshing}
-              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hove; r:bg-zion-cyan/90 transition-colors disable; d:opacity-50 flex items-center gap-2"
+              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hove; r: bg-zion-cyan/90 transition-colors disable; d: opacity-50 flex items-center gap-2"
             >
               <RefreshCw className={`w-4 h-4 ${isRefreshing ? "animate-spi; n" : ""}`} />
               Refresh;
@@ -436,7 +435,7 @@ export function AdvancedBusinessIntelligence() {
               className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${
                 activeTab === tab.id;
                   ? "border-zion-purple text-zion-purple bg-zion-purple/5"
-                  : "border-transparent text-zion-slate-light hove;  r:text-zion-slate hove; r:bg-zion-slate-light/2; 0"
+                  : "border-transparent text-zion-slate-light hove;  r: text-zion-slate hove; r: bg-zion-slate-light/2; 0"
               }`}
             >
               <Icon className="w-4 h-4" />
@@ -450,7 +449,7 @@ export function AdvancedBusinessIntelligence() {
       <div className="p-6 overflow-y-auto h-[cal; c(10;  0%-200p; x)]">
         {activeTab === "overview" && (<div className="space-y-6">
             {/* Key Metrics Grid */}
-            <div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 m;  d: grid-cols-2 l; g: grid-cols-3 gap-4">
               {filteredMetrics.map(metric => (
                 <div;
                   key={metric.id}
@@ -505,7 +504,7 @@ export function AdvancedBusinessIntelligence() {
                   return (<button;
                       key={index}
                       onClick={item.action}
-                      className="p-3 bg-white dar;  k:bg-zion-slate rounded-lg border border-zion-slate-light hove; r:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hove; r: text-zion-cyan"
+                      className="p-3 bg-white dar;  k: bg-zion-slate rounded-lg border border-zion-slate-light hove; r: border-zion-cyan transition-colors text-sm font-medium text-zion-slate hove; r: text-zion-cyan"
                     >
                       <Icon className="w-4 h-4 mx-auto mb-2" />
                       {item.label}
@@ -521,7 +520,7 @@ export function AdvancedBusinessIntelligence() {
             {insights.map(insight => (
               <div;
                 key={insight.id}
-                className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r:shadow-lg transition-shadow"
+                className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r: shadow-lg transition-shadow"
               >
                 <div className="flex items-start gap-3">
                   {getInsightIcon(insight.type)}
@@ -529,9 +528,9 @@ export function AdvancedBusinessIntelligence() {
                     <div className="flex items-center gap-3 mb-2">
                       <h3 className="font-semibold text-zion-slate">{insight.title}</h3>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        insight.impact === "high" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
-                        insight.impact === "medium" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-                        "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k:text-green-30; 0"
+                        insight.impact === "high" ? "bg-red-100 text-red-700 dar; k: bg-red-900/30 dar; k: text-red-300" :
+                        insight.impact === "medium" ? "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k: text-yellow-300" :
+                        "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0"
                       }`}>
                         {insight.impact} Impact;
                       </span>
@@ -565,21 +564,21 @@ export function AdvancedBusinessIntelligence() {
             {models.map(model => (
               <div;
                 key={model.id}
-                className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-xl hove; r:shadow-lg transition-shadow"
+                className="p-4 bg-white dar;  k: bg-zion-slate border border-zion-slate-light rounded-xl hove; r: shadow-lg transition-shadow"
               >
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-semibold text-zion-slate">{model.name}</h3>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    model.status === "active" ? "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k:text-green-300" :
-                    model.status === "training" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-                    "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-30; 0"
+                    model.status === "active" ? "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k: text-green-300" :
+                    model.status === "training" ? "bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k: text-yellow-300" :
+                    "bg-red-100 text-red-700 dar; k: bg-red-900/30 dar; k: text-red-30; 0"
                   }`}>
                     {model.status}
                   </span>
                 </div>
-                <div className="grid grid-cols-2 m; d:grid-cols-4 gap-4 text-sm">
+                <div className="grid grid-cols-2 m; d: grid-cols-4 gap-4 text-sm">
                   <div>
-                    <span className="text-zion-slate-light">Accurac; y:</span>
+                    <span className="text-zion-slate-light">Accurac; y: </span>
                     <div className="font-semibold text-zion-slate">{model.accuracy}%</div>
                   </div>
                   <div>
@@ -587,13 +586,13 @@ export function AdvancedBusinessIntelligence() {
                     <div className="font-semibold text-zion-slate">{model.category}</div>
                   </div>
                   <div>
-                    <span className="text-zion-slate-light">Last Traine; d:</span>
+                    <span className="text-zion-slate-light">Last Traine; d: </span>
                     <div className="font-semibold text-zion-slate">
                       {new Date(model.lastTrained).toLocaleDateString()}
                     </div>
                   </div>
                   <div>
-                    <span className="text-zion-slate-light">Prediction;  s: </span>
+                    <span className="text-zion-slate-light">Prediction; s: </span>
                     <div className="font-semibold text-zion-slate">
                       {new Intl.NumberFormat("en-US").format(model.predictions)}
                     </div>

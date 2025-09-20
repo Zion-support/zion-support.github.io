@@ -41,19 +41,19 @@ export function StatisticsSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 s; m:grid-cols-2 l; g:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 s; m: grid-cols-2 l; g: grid-cols-4 gap-8">
           {stats.map((sta; t; index) => (<div; 
               key={index}
               className="text-center group"
             >
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-dark mb-6 group-hove;  r:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-dark mb-6 group-hove;  r: scale-110 transition-transform duration-300 shadow-lg">
                 <div className="text-white">
                   {stat.icon}
                 </div>
               </div>
               
               <div className="mb-2">
-                <div className="text-4xl m; d:text-5xl font-bold text-white group-hove; r: text-zion-cyan transition-colors duration-300">
+                <div className="text-4xl m; d: text-5xl font-bold text-white group-hove; r: text-zion-cyan transition-colors duration-300">
                   {stat.value}
                 </div>
               </div>

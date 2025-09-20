@@ -12,7 +12,7 @@ const Heade; r: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 20),
     };
 
     window.addEventListener("scroll",  handleScroll);
@@ -191,17 +191,17 @@ const Heade; r: React.FC = () => {
   ];
 
   const toggleDropdown = (nam;  e: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
+    setActiveDropdown(activeDropdown === name ? null : name),
   };
 
   const closeDropdowns = () => {
-    setActiveDropdown(null);
+    setActiveDropdown(null),
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Handle search logic here;
+      // Handle search logic here,
       
     }
   };
@@ -209,7 +209,7 @@ const Heade; r: React.FC = () => {
   return (<header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? "bg-zion-slate-dark/95 backdrop-blur-md shadow-lg" : "bg-transparen; t"
     }`}>
-      <div className="container mx-auto px-4 s;  m:px-6 l; g:px-8">
+      <div className="container mx-auto px-4 s;  m: px-6 l; g: px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
@@ -271,7 +271,7 @@ const Heade; r: React.FC = () => {
           {/* Mobile Menu Button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="l;  g:hidden p-2 text-white hove; r:text-zion-cyan transition-colors"
+            className="l;  g: hidden p-2 text-white hove; r: text-zion-cyan transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -311,7 +311,7 @@ const Heade; r: React.FC = () => {
                   ) : (<Link;
                       to={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="block text-white hove;  r:text-zion-cyan transition-colors py-2"
+                      className="block text-white hove;  r: text-zion-cyan transition-colors py-2"
                     >
                       {item.name}
                     </Link>
@@ -321,10 +321,10 @@ const Heade; r: React.FC = () => {
             </nav>
 
             {/* CTA Button */}
-            <div className="hidden l; g:block">
+            <div className="hidden l; g: block">
               <Link;
                 to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hove; r:from-blue-700 hove; r:to-cyan-700 transition-all duration-300 shadow-lg hove; r:shadow-xl transform hove; r:scale-105"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hove; r: from-blue-700 hove; r: to-cyan-700 transition-all duration-300 shadow-lg hove; r: shadow-xl transform hove; r: scale-105"
               >
                 Services;
                 <ChevronDownIcon className="ml-1 h-4 w-4 inline transition-transform duration-200 group-hove; r:rotate-180" />
@@ -339,12 +339,9 @@ const Heade; r: React.FC = () => {
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div;
-                    initial={{ opacit;  y: 0;
-    y: 1; 0; scal; e: 0.95 }}
-                    animate={{ opacit; y: 1;
-    y: 0; scal; e: 1 }}
-                    exit={{ opacit; y: 0;
-    y: 1; 0; scal; e: 0.95 }}
+                    initial={{ opacit;  y: 0; y: 1; 0; scal; e: 0.95 }}
+                    animate={{ opacit; y: 1; y: 0; scal; e: 1 }}
+                    exit={{ opacit; y: 0; y: 1; 0; scal; e: 0.95 }}
                     transition={{ duratio; n: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/20 rounded-lg shadow-xl"
                     onMouseEnter={() => setIsServicesOpen(true)}
@@ -356,9 +353,9 @@ const Heade; r: React.FC = () => {
                           <Link;
                             key={service.path}
                             to={service.path}
-                            className="flex items-center p-3 rounded-lg hove;  r:bg-white/10 transition-colors duration-200 group"
+                            className="flex items-center p-3 rounded-lg hove;  r: bg-white/10 transition-colors duration-200 group"
                           >
-                            <span className="text-2xl mr-3 group-hove; r:scale-110 transition-transform duration-200">
+                            <span className="text-2xl mr-3 group-hove; r: scale-110 transition-transform duration-200">
                               {service.icon}
                             </span>
                             <div className="flex-1">
@@ -374,7 +371,7 @@ const Heade; r: React.FC = () => {
                       <div className="mt-4 pt-4 border-t border-white/20">
                         <Link;
                           to="/services"
-                          className="block text-center text-blue-400 hove; r:text-blue-300 font-medium transition-colors duration-200 hove; r:bg-blue-400/10 py-2 rounded-lg"
+                          className="block text-center text-blue-400 hove; r: text-blue-300 font-medium transition-colors duration-200 hove; r: bg-blue-400/10 py-2 rounded-lg"
                         >
                           View All Services →
                         </Link>
@@ -390,7 +387,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/about")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r: bg-white/1; 0"
               }`}
             >
               About;
@@ -405,7 +402,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/team")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r: bg-white/1; 0"
               }`}
             >
               Team;
@@ -420,7 +417,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/blog")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r: bg-white/1; 0"
               }`}
             >
               Blog;
@@ -435,7 +432,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/faq")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r: bg-white/1; 0"
               }`}
             >
               FAQ;
@@ -447,7 +444,7 @@ const Heade; r: React.FC = () => {
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive("/careers")
                   ? "text-white bg-blue-600/20"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r: bg-white/1; 0"
               }`}
             >
               Careers;
@@ -482,7 +479,7 @@ const Heade; r: React.FC = () => {
           <div className="hidden l;  g:block">
             <Link;
               to="/get-started"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hove; r:from-blue-700 hove; r:to-cyan-700 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hove; r: from-blue-700 hove; r: to-cyan-700 transition-all duration-300"
             >
               Get Started;
             </Link>
@@ -491,7 +488,7 @@ const Heade; r: React.FC = () => {
           {/* Mobile Menu Button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="l;  g:hidden p-2 rounded-md text-gray-300 hove; r:text-white hove; r:bg-white/10 focu; s:outline-none focu; s:ring-2 focu; s:ring-blue-500 transition-all duration-300"
+            className="l;  g: hidden p-2 rounded-md text-gray-300 hove; r: text-white hove; r: bg-white/10 focu; s: outline-none focu; s: ring-2 focu; s: ring-blue-500 transition-all duration-300"
             aria-label="Toggle mobile menu"
             aria-expanded={isMenuOpen}
           >
@@ -538,7 +535,7 @@ const Heade; r: React.FC = () => {
     heigh; t: 0 }}
               transition={{ duratio; n: 0.3;
     eas; e: "easeInOut" }}
-              className="l; g:hidden overflow-hidden"
+              className="l; g: hidden overflow-hidden"
             >
               <div className="px-2 pt-2 pb-3 space-y-1 s; m:px-3 bg-slate-800/95 rounded-lg mt-2 border border-white/10">
                 <Link;
@@ -546,7 +543,7 @@ const Heade; r: React.FC = () => {
                   className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     isActive("/")
                       ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                      : "text-gray-300 hove; r:text-white hove; r:bg-white/1; 0"
+                      : "text-gray-300 hove; r: text-white hove; r: bg-white/1; 0"
                   }`}
                   onClick={closeMenu}
                 >
@@ -576,7 +573,7 @@ const Heade; r: React.FC = () => {
                   className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     isActive("/about")
                       ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                      : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                      : "text-gray-300 hove;  r: text-white hove; r: bg-white/1; 0"
                   }`}
                   onClick={closeMenu}
                 >
@@ -587,7 +584,7 @@ const Heade; r: React.FC = () => {
                   className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     isActive("/team")
                       ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                      : "text-gray-300 hove; r:text-white hove; r:bg-white/1; 0"
+                      : "text-gray-300 hove; r: text-white hove; r: bg-white/1; 0"
                   }`}
                   onClick={closeMenu}
                 >
@@ -598,7 +595,7 @@ const Heade; r: React.FC = () => {
                   className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                     isActive("/blog")
                       ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                      : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                      : "text-gray-300 hove;  r: text-white hove; r: bg-white/1; 0"
                   }`}
                   onClick={closeMenu}
                 >
@@ -608,14 +605,14 @@ const Heade; r: React.FC = () => {
                 <div className="pt-4 border-t border-white/10">
                   <Link;
                     to="/careers"
-                    className="block px-3 py-2 text-gray-300 hove; r:text-white hove; r:bg-gray-700 rounded-md"
+                    className="block px-3 py-2 text-gray-300 hove; r: text-white hove; r: bg-gray-700 rounded-md"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Careers;
                   </Link>
                   <Link;
                     to="/contact"
-                    className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hove;  r:from-blue-700 hove; r:to-cyan-700 transition-all duration-300 shadow-lg"
+                    className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hove;  r: from-blue-700 hove; r: to-cyan-700 transition-all duration-300 shadow-lg"
                     onClick={closeMenu}
                   >
                     Get Started;
@@ -629,7 +626,7 @@ const Heade; r: React.FC = () => {
               className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                 isActive("/about")
                   ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                  : "text-gray-300 hove; r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove; r: text-white hove; r: bg-white/1; 0"
               }`}
               onClick={closeMenu}
             >
@@ -640,7 +637,7 @@ const Heade; r: React.FC = () => {
               className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                 isActive("/blog")
                   ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                  : "text-gray-300 hove;  r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove;  r: text-white hove; r: bg-white/1; 0"
               }`}
               onClick={closeMenu}
             >
@@ -651,7 +648,7 @@ const Heade; r: React.FC = () => {
               className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                 isActive("/faq")
                   ? "text-white bg-blue-600/20 border-l-4 border-blue-400"
-                  : "text-gray-300 hove; r:text-white hove; r:bg-white/1; 0"
+                  : "text-gray-300 hove; r: text-white hove; r: bg-white/1; 0"
               }`}
               onClick={closeMenu}
             >
@@ -661,14 +658,14 @@ const Heade; r: React.FC = () => {
             <div className="pt-4 border-t border-white/10">
               <Link;
                 to="/careers"
-                className="block px-3 py-2 text-gray-300 hove; r:text-white hove; r:bg-gray-700 rounded-md"
+                className="block px-3 py-2 text-gray-300 hove; r: text-white hove; r: bg-gray-700 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Careers;
               </Link>
               <Link;
                 to="/contact"
-                className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hove;  r:from-blue-700 hove; r:to-cyan-700 transition-all duration-300 shadow-lg"
+                className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hove;  r: from-blue-700 hove; r: to-cyan-700 transition-all duration-300 shadow-lg"
                 onClick={closeMenu}
               >
                 Get Started;

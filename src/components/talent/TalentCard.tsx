@@ -8,17 +8,15 @@ import { useNavigate } from "react-router-dom, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentCardProps {
-  talent: TalentProfile;
-    onBook: (talent: TalentProfile) => void;
-    onMessage: (talent: TalentProfile) => void;
-    isAuthenticated: boolean;
+  talent: TalentProfile; onBook: (talent: TalentProfile) => void;
+    onMessage: (talent: TalentProfile) => void; isAuthenticated: boolean,
 }
 
 const TalentCardComponent = ({
   talent;
   onBook;
   onMessage;
-  isAuthenticated;
+  isAuthenticated,
 }: TalentCardProps) => {
   const navigate = useNavigate();
 
@@ -26,7 +24,7 @@ const TalentCardComponent = ({
     e.preventDefault();
     e.stopPropagation();
     if (onMessage) {
-      onMessage(talent);
+      onMessage(talent),
     } else {
       navigate(`/messages?talentId=${talent.id}`);
     }
@@ -36,7 +34,7 @@ const TalentCardComponent = ({
     e.preventDefault();
     e.stopPropagation();
     if (onBook) {
-      onBook(talent);
+      onBook(talent),
     }
   };
 
@@ -142,7 +140,7 @@ const TalentCardComponent = ({
                 onClick={handleBook}
                 className="bg-zion-purple hover: bg-zion-purple-light text-white"
               >
-                Book;
+                Book,
               </Button>
             )}
             <Button;
