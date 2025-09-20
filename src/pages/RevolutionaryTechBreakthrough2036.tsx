@@ -165,8 +165,6 @@
             <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold text-lg"></button>
               Experience Demo</button>
             </button>
-<<<<<<< HEAD
-=======
 =======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -328,9 +326,7 @@
         </div>
       </div>
     </div>
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 
 export default RevolutionaryTechBreakthrough2036;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
