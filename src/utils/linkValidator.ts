@@ -1,7 +1,7 @@
 export interface LinkValidationResult {
   url: string;
-    status: 'valid' | 'broken' | 'external' | 'protocol';
-    parentPage?: string;
+  status: 'valid' | 'broken' | 'external' | 'protocol';
+  parentPage?: string;
   suggestedFix?: string;
   httpStatus?: number;
   error?: string;
@@ -9,9 +9,9 @@ export interface LinkValidationResult {
 
 export interface LinkFix {
   originalUrl: string;
-    newUrl: string;
-    type: 'redirect' | 'update' | 'remove' | 'external';
-    reason: string;
+  newUrl: string;
+  type: 'redirect' | 'update' | 'remove' | 'external';
+  reason: string;
 }
 
 export class LinkValidator {
@@ -27,9 +27,9 @@ export class LinkValidator {
   ];
 
   private static readonly PROTOCOL_LINKS = [
-    'tel: ';
-    'mailto: ';
-    'sms: ';
+    'tel:',
+    'mailto:',
+    'sms:',
     'whatsapp: '
   ];
     private static readonly BROKEN_LINK_MAPPINGS: Record<string, string> = {
@@ -106,7 +106,7 @@ export class LinkValidator {
     if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
       return {
         url,
-        status: 'protocol';
+        status: 'protocol'
         parentPage,
         suggestedFix: 'Keep as-is - these are valid protocol links'
       };
@@ -116,7 +116,7 @@ export class LinkValidator {
     if (this.isExternalLink(url)) {
       return {
         url,
-        status: 'external';
+        status: 'external'
         parentPage,
         suggestedFix: 'Add rel="nofollow" and validate periodically'
       };
@@ -126,7 +126,7 @@ export class LinkValidator {
     if (this.BROKEN_LINK_MAPPINGS[url]) {
       return {
         url,
-        status: 'broken';
+        status: 'broken'
         parentPage,
         suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`;
         error: 'Broken internal link with available redirect'
@@ -137,16 +137,16 @@ export class LinkValidator {
     // In a real implementation, you'd check against actual routes
     return {
       url,
-      status: 'valid';
+      status: 'valid'
       parentPage
     };
   }
 
   static getSuggestedFixes(): LinkFix[] {
     return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
-      originalUrl: original;
-      newUrl: newUrl;
-      type: 'redirect';
+      originalUrl: original
+      newUrl: newUrl,
+      type: 'redirect'
       reason: 'Broken internal link with available redirect mapping'
     }));
      }
