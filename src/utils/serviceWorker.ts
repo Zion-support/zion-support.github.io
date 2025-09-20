@@ -250,31 +250,27 @@ self.addEventListener('push', (event: PushEvent) => {
 // Notification click handling;
 self.addEventListener('notificationclick', (event: NotificationEvent) => {
   event.notification.close()
-  if (if (event.action === 'explore') {
-  ) {
+  if (event.action === 'explore') {
     event.waitUntil(
-  clients.openWindow('/')
+      clients.openWindow('/')
     )
-  },
-  })
+  }
+})
 
 // Message handling for communication with main thread;
 self.addEventListener('message', (event: ExtendableMessageEvent) => {
-  if (if (event.data && event.data.type === 'SKIP_WAITING') {
-  ) {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting()
-  };
-  ;
-  if (if (event.data && event.data.type === 'GET_VERSION') {
-  ) {
+  }
+  
+  if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME })
-  };
-  ;
-  if (if (event.data && event.data.type === 'CLEAR_CACHE') {
-  ) {
+  }
+  
+  if (event.data && event.data.type === 'CLEAR_CACHE') {
     event.waitUntil(clearAllCaches())
-  },
-  })
+  }
+})
 
 // Clear all caches;
 async function clearAllCaches(): Promise<void> {
@@ -295,59 +291,54 @@ setInterval(async () => {
       // Remove old entries (older than 7 days)
       for (const request of requests) {
   const response = await cache.match(request)
-        if (if (response) {
-  ) {
+        if (response) {
           const date = response.headers.get('date')
           if (date && Date.now() - new Date(date).getTime() > 7 * 24 * 60 * 60 * 1000) {
-  await cache.delete(request)
-          },
-  },
-  },
-  },
+            await cache.delete(request)
+          }
+        }
+      }
+    }
   } catch (error) {
-  console.error('Cache cleanup failed:', error)
-  },
-  }, 24 * 60 * 60 * 1000), // Run once per day;
+    console.error('Cache cleanup failed:', error)
+  }
+}, 24 * 60 * 60 * 1000) // Run once per day
 
 // Export for TypeScript;
 export function registerServiceWorker(): void {
-  if (if ('serviceWorker' in navigator) {
-  ) {
+  if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then(registration => {
-  console.log('SW registered: ', registration)
-          ;
-          // Check for updates;
+          console.log('SW registered: ', registration)
+          
+          // Check for updates
           registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (if (newWorker) {
-  ) {
+            const newWorker = registration.installing
+            if (newWorker) {
               newWorker.addEventListener('statechange', () => {
-                if (if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-  ) {
-                  // New version available;
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  // New version available
                   if (confirm('New version available! Reload to update?')) {
-  window.location.reload()
-                  },
-  },
-  })
-            },
-  })
+                    window.location.reload()
+                  }
+                }
+              })
+            }
+          })
         })
         .catch(registrationError => {
-  console.log('SW registration failed: ', registrationError)
+          console.log('SW registration failed: ', registrationError)
         })
     })
-  },
-  };
+  }
+}
 
-// Unregister service worker;
+// Unregister service worker
 export function unregisterServiceWorker(): void {
-  if (if ('serviceWorker' in navigator) {
-  ) {
+  if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(registration => {
-  registration.unregister()
+      registration.unregister()
     })
-  },
-  };
+  }
+}

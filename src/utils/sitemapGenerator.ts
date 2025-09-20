@@ -9,6 +9,7 @@ interface SitemapConfig {
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
+}
 
 export class SitemapGenerator {
   private config: SitemapConfig;
@@ -170,8 +171,10 @@ export const defaultSitemapConfig: SitemapConfig = {
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config);
   return generator.generateXML();
+}
 
 // Utility function to generate robots.txt
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config);
   return generator.generateRobotsTxt();
+}
