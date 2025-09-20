@@ -32,11 +32,7 @@ import {
   Network,
   Eye,
   Heart,
-  Infinity,
-  Zap as Lightning,
-  Cpu as Processor,
-  Database as Data,
-  Globe as World
+  Infinity
 } from 'lucide-react';
 
 const RevolutionaryTechInsights2026: React.FC = () => {
@@ -303,9 +299,9 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Tech Insights 2026
             </h1>
-            <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed"></p>
-              Discover the revolutionary technology insights that are reshaping our understanding </p>
-              of consciousness, reality, and intelligence in ways never before imagined.</p>
+            <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed">
+              Discover the revolutionary technology insights that are reshaping our understanding 
+              of consciousness, reality, and intelligence in ways never before imagined.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <divbutton

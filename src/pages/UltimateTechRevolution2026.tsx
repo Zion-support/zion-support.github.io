@@ -86,8 +86,10 @@ const UltimateTechRevolution2026: React.FC = () => {
               Schedule Experience
             </button>
           </div>
+>>>>>>> main
         </div>
       </main>
+
       <Footer />
     </div>
   );
