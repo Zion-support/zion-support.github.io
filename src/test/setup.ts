@@ -1,3 +1,5 @@
+// Test setup file for Jest
+import "@testing-library/jest-dom";
 
 // Test setup file for Jest;
 import "@testing-library/jest-dom"
@@ -28,25 +30,32 @@ disconnect() {}
 observe() {}
 unobserve() {}
 }
-// Mock console methods to reduce noise in tests;
-const originalError = console.error;
+// Mock console methods to reduce noise in tests;const originalError = console.error;
 const originalWarn = console.warn;
-beforeAll(() => {console.error = (...args: any[]) => {
-if (
-typeof args[0] === "string" &&
-args[0].includes("Warning: ReactDOM.render is no longer supported")
-) {
-return}
-originalError.call(console, ...args)
-}
-console.warn = (...args: any[]) => {if (
-typeof args[0] === "string" &&
-(args[0].includes("Warning:") |args[0].includes("Deprecated:"))
-) {
-return}
-originalWarn.call(console, ...args)
-}
-})
-afterAll(() => {console.error = originalError;
-console.warn = originalWarn})
 
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+    if (
+      typeof args[0] === "string" &&
+      args[0].includes("Warning: ReactDOM.render is no longer supported")
+    ) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
+
+  console.warn = (...args: any[]) => {
+    if (
+      typeof args[0] === "string" &&
+      (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
+    ) {
+      return;
+    }
+    originalWarn.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalError;
+  console.warn = originalWarn;
+});

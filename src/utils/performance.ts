@@ -22,13 +22,13 @@ export class PerformanceMonitor {
       console.warn(`No start time found for metric: ${name}`)
       return 0
     }
-    
+
     const duration = performance.now() - startTime
     this.metrics.delete(name)
-    
+
     // Log performance metric
     console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`)
-    
+
     return duration
   }
 
@@ -58,7 +58,7 @@ export class PerformanceMonitor {
           })
         }
       })
-      
+
       observer.observe({ entryTypes: ['resource'] })
       this.observers.push(observer)
     }
@@ -84,7 +84,6 @@ export const measureWebVitals = (onPerfEntry?: (metric: any) => void) => {
     })
   }
 }
-
 // Memory usage monitoring
 export const getMemoryUsage = () => {
   if (typeof window !== 'undefined' && 'memory' in performance) {

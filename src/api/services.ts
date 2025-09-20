@@ -20,4 +20,3 @@ export async function getServices(): Promise<Service[]> {
     }
   ];
 }
-

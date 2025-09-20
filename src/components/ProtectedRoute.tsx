@@ -1,3 +1,4 @@
+"use client";
 
 import React from "react";
 interface ProtectedRouteProps {
@@ -6,6 +7,5 @@ interface ProtectedRouteProps {
 
 export function ProtectedRoute({ children }: ProtectedRouteProps) {
   // For now, just render the children without authentication check
-  // In a real implementation, this would check authentication status
-  return <>{children}</>;
+  // In a real implementation, this would check authentication status  return <>{children}</>;
 }

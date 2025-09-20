@@ -5,8 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Clock, MapPin, Building, CheckCircle, XCircle, AlertCircle } from "lucide-react";
 
 interface Application {
-  id: string;  jobTitle: string;
-  company: string;
+  id: string;  jobTitle: string;  company: string;
   location: string;
   appliedDate: string;
   salary?: string;
@@ -103,7 +102,6 @@ export function ApplicationsTracker() {
             </CardContent>
           </Card>
         ))}
-      </div>
-    </div>
+      </div>    </div>
   );
 }

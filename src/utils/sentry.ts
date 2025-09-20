@@ -1,3 +1,4 @@
+let nodeSentry: any = null;
 
 try {// Optional dependency for server-side logging;
 nodeSentry = require("@sentry/node")} catch {nodeSentry = null}
@@ -6,4 +7,3 @@ try {
 nodeSentry = require("@sentry/node")} catch {
 nodeSentry = null}}
 }
-

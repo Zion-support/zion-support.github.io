@@ -19,4 +19,3 @@ localStorage.removeItem("referral_code");
 
 }
 }
-

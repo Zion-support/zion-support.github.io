@@ -102,5 +102,4 @@ These milestones will be added to your contract;
 </Card>;
 )}
 </div>;
-)
-}
+)}

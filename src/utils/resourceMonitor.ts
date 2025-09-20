@@ -1,11 +1,9 @@
 
 interface ResourceError {
-url: string;
-type: "script" | "stylesheet" | "image" | "font" | "other";,
-error: string;,
-timestamp: number;
-}
-}
+  url: string;
+  type: "script" | "stylesheet" | "image" | "font" | "other";
+  error: string;
+  timestamp: number;
 }
 error: string;,
 timestamp: number;}

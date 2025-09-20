@@ -13,53 +13,64 @@ export interface PageInfo {
 path: string; title: string; links: LinkInfo[];,return url}
 
 if (url.startsWith("/")) {
-return `${this.baseUrl}${url}`;
+return `${this.baseUrl}${url}`;}
+
+export interface PageInfo {
+  path: string;
+  title: string;
+  links: LinkInfo[];
+  exists: boolean;
 }
 
-try {
-return `${this.baseUrl}${basePage}/${url}`;
-} catch {return url}
-}
+export class LinkChecker {
+  private baseUrl: string;
+  private visitedUrls: Set<string> = new Set();
+  private brokenLinks: LinkInfo[] = [];
+  private missingPages: string[] = [];
 
-extractLinks(pageContent: string, pagePath: string): LinkInfo[] {const links: LinkInfo[] = [];
-const hrefRegex = /href=[""]([^""]+)[""]/g;
-let match;
+  constructor(baseUrl: string = "https://ziontechgroup.com") {
+    this.baseUrl = baseUrl;
+  }
 
-while ((match = hrefRegex.exec(pageContent)) !== null) {
-const url = match[1];
-const normalizedUrl = this.normalizeUrl(url, pagePath);
+  isInternalLink(url: string): boolean {
+    return url.startsWith("/") ||
+           url.startsWith(this.baseUrl) ||
+           url.startsWith("./") ||
+           url.startsWith("../");
+  }
 
-links.push({,
-url: normalizedUrl, status: "working"
-page: pagePath;,
-anchor: url.startsWith("#") ? url : undefined});
-}
+  normalizeUrl(url: string, basePage: string): string {
+    if (url.startsWith("http")) {
+      return url;
+    }
 
-// Also check for src attributes in images;
-const srcRegex = /src=[""]([^""]+)[""]/g;
-let srcMatch;
+    if (url.startsWith("/")) {
+      return `${this.baseUrl}${url}`;
+    }
 
-while ((srcMatch = srcRegex.exec(pageContent)) !== null) {const url = srcMatch[1];
-const normalizedUrl = this.normalizeUrl(url, pagePath);
+    try {
+      return `${this.baseUrl}${basePage}/${url}`;
+    } catch {
+      return url;
+    }
+  }
 
-links.push({
-url: normalizedUrl;,
-status: "working"
-page: pagePath});
-}
+  extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
+    const links: LinkInfo[] = [];
+    const hrefRegex = /href=[""]([^""]+)[""]/g;
+    let match;
 
-return links;
-}
+    while ((match = hrefRegex.exec(pageContent)) !== null) {
+      const url = match[1];
+      const normalizedUrl = this.normalizeUrl(url, pagePath);
 
-async checkPageExists(url: string): Promise<boolean> {
-try {
-const response = await fetch(url, { method: "HEAD" });
-return response.ok;
-} catch {return false}
-}
-
-async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {const links = this.extractLinks(pageContent, pagePath);
-const checkedLinks: LinkInfo[] = [];
+      links.push({
+        url: normalizedUrl,
+        status: "working",
+        page: pagePath,
+        anchor: url.startsWith("#") ? url : undefined
+      });
+    }
 
 for (const link of links) {
 if (this.isInternalLink(link.url)) {
@@ -70,37 +81,53 @@ this.missingPages.push(link.url)}
 } else {link.status = "external"}
 } else {
 link.status = "external"}}
-
-private extractPageTitle(content: string): string {const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
-return titleMatch ? titleMatch[1].trim() : "Untitled"}
+    return links;
+  }
 
 getSummary() {return {
 totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;,
 missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};}
-
-getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
+  async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {
+    const links = this.extractLinks(pageContent, pagePath);
+    const checkedLinks: LinkInfo[] = [];
 
 getMissingPages(): string[] {return this.missingPages}
 return {
 path: pagePath; title: this.extractPageTitle(pageContent),
 links: checkedLinks; exists: true};
 }
+      checkedLinks.push(link);
+    }
 
-private extractPageTitle(content: string): string {
-const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
-return titleMatch ? titleMatch[1].trim() : "Untitled"}
+    return {
+      path: pagePath,
+      title: this.extractPageTitle(pageContent),
+      links: checkedLinks,
+      exists: true
+    };
+  }
 
-getSummary() {
-return {
-totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;,
-missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
-}
+  private extractPageTitle(content: string): string {
+    const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
+    return titleMatch ? titleMatch[1].trim() : "Untitled";
+  }
 
-getBrokenLinks(): LinkInfo[] {
-return this.brokenLinks}
+  getSummary() {
+    return {
+      totalLinks: this.visitedUrls.size,
+      brokenLinks: this.brokenLinks.length,
+      missingPages: this.missingPages.length,
+      externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length
+    };
+  }
 
-getMissingPages(): string[] {
-return this.missingPages}
+  getBrokenLinks(): LinkInfo[] {
+    return this.brokenLinks;
+  }
+
+  getMissingPages(): string[] {
+    return this.missingPages;
+  }
 }
 
 export default LinkChecker;
