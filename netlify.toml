@@ -1,6 +1,6 @@
 [build]
-  # Netlify installs dependencies automatically; run only the build step
-  command = "npm run build:netlify"
+  # Use npm for dependency installation and build
+  command = "npm ci && npm run build:netlify"
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
@@ -13,7 +13,7 @@
   NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
   NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
-  NPM_FLAGS = "--prefer-offline"
+  NPM_CONFIG_PREFER_OFFLINE = "true"
 
 # Fix MIME type issues
 [[headers]]

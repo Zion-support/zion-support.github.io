@@ -39,7 +39,6 @@ export interface ResearchDevelopmentService2029 {
     address: string;
   };
 }
-
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [
   {
     id: 'advanced-research-automation',

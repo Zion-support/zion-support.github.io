@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string;
   name: string;
@@ -40,15 +39,21 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
   rating: number;
   reviews: number;
 }
-
-export const cuttingEdgeITInfrastructureInnovations2025: CuttingEdgeITInfrastructureInnovation2025[] = [
+export const cuttingEdgeITInfrastructureInnovations2025 = [
+  // Quantum-Safe Cloud Infrastructure Platform
   {
     id: 'quantum-safe-cloud-infrastructure-platform',
     name: 'Quantum-Safe Cloud Infrastructure Platform',
     tagline: 'Future-proof cloud infrastructure resistant to quantum computing attacks',
-    price: '$899',
-    period: '/month',
     description: 'Revolutionary cloud infrastructure platform built with quantum-resistant cryptography and advanced security protocols. Ensures data protection against both current and future quantum computing threats while maintaining exceptional performance.',
+    category: 'IT Infrastructure & Security',
+    type: 'Micro SAAS',
+    pricing: {
+      starter: '$899/month',
+      professional: '$1,999/month',
+      enterprise: '$4,999/month',
+      custom: 'Contact for pricing'
+    },
     features: [
       'Quantum-resistant encryption algorithms',
       'Post-quantum cryptography implementation',
@@ -59,21 +64,20 @@ export const cuttingEdgeITInfrastructureInnovations2025: CuttingEdgeITInfrastruc
       'Real-time security monitoring',
       'Quantum-safe key management',
       'Disaster recovery and backup',
-      'Global edge computing network'
+      'Global edge computing network',
+      'API-first infrastructure',
+      'Enterprise-grade SLA guarantees'
     ],
-    popular: true,
-    icon: '🔒',
-    color: 'from-blue-600 to-indigo-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-safe-cloud-infrastructure-platform',
-    marketPosition: 'First commercial quantum-safe cloud infrastructure with proven quantum resistance',
-    targetAudience: 'Enterprises requiring quantum-safe security, government agencies, financial institutions',
-    trialDays: 30,
-    setupTime: '2-3 weeks',
-    category: 'IT Infrastructure & Security',
-    realService: true,
-    technology: ['Quantum-resistant cryptography', 'Post-quantum algorithms', 'Zero-trust security', 'Multi-cloud orchestration'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform'],
+    benefits: [
+      'Future-proof against quantum threats',
+      'Unprecedented security levels',
+      'Compliance with emerging standards',
+      'Reduced security breach risks',
+      'Competitive security advantage',
+      'Long-term infrastructure investment',
+      'Advanced threat protection',
+      'Global compliance readiness'
+    ],
     useCases: [
       'Financial services and banking',
       'Healthcare and medical data',
@@ -82,31 +86,29 @@ export const cuttingEdgeITInfrastructureInnovations2025: CuttingEdgeITInfrastruc
       'Research and development',
       'Enterprise data centers'
     ],
-    roi: 'Future-proof against quantum threats, unprecedented security levels, compliance with emerging standards',
-    competitors: ['AWS', 'Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud'],
     marketSize: '$14.3B by 2025',
-    growthRate: '35% annual growth',
-    variant: 'quantum-security-advanced',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready quantum-safe cloud infrastructure with proven quantum resistance and advanced security protocols.',
-    launchDate: '2025-01-15',
-    customers: 67,
-    rating: 4.9,
-    reviews: 89
+    targetAudience: 'Enterprises requiring quantum-safe security, government agencies, financial institutions',
+    competitiveAdvantage: 'First commercial quantum-safe cloud infrastructure with proven quantum resistance',
+    contact: 'kleber@ziontechgroup.com',
+    mobile: '+1 302 464 0950',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+    slug: '/quantum-safe-cloud-infrastructure-platform'
   },
+  // Autonomous Edge Computing Network
   {
     id: 'autonomous-edge-computing-network',
     name: 'Autonomous Edge Computing Network',
     tagline: 'Self-managing edge computing infrastructure with AI-driven optimization',
-    price: '$599',
-    period: '/month',
     description: 'Intelligent edge computing network that autonomously manages, optimizes, and scales computing resources at the network edge. Uses AI to predict demand, optimize performance, and ensure seamless user experiences worldwide.',
+    category: 'Edge Computing & AI',
+    type: 'Micro SAAS',
+    pricing: {
+      starter: '$599/month',
+      professional: '$1,299/month',
+      enterprise: '$2,999/month',
+      custom: 'Contact for pricing'
+    },
     features: [
       'AI-powered edge resource management',
       'Autonomous load balancing and scaling',
@@ -117,33 +119,28 @@ export const cuttingEdgeITInfrastructureInnovations2025: CuttingEdgeITInfrastruc
       'Edge AI model deployment',
       'Autonomous fault detection and recovery',
       'Dynamic resource allocation',
-      'Multi-cloud edge orchestration'
+      'Multi-cloud edge orchestration',
+      'Advanced analytics and insights',
+      'Custom edge application deployment'
     ],
-    popular: true,
-    icon: '🌐',
-    color: 'from-green-600 to-teal-600',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/autonomous-edge-computing-network',
-    marketPosition: 'Only autonomous edge computing network with AI-driven optimization',
-    targetAudience: 'CDN providers, IoT companies, mobile app developers, global businesses',
-    trialDays: 21,
-    setupTime: '1-2 weeks',
-    category: 'Edge Computing & AI',
-    realService: true,
-    technology: ['AI/ML', 'Edge computing', 'Load balancing', 'Predictive analytics', 'Multi-cloud orchestration'],
-    integrations: ['Kubernetes', 'Docker', 'AWS', 'Azure', 'Google Cloud', 'CDN platforms'],
+    benefits: [
+      'Reduce latency by 80%',
+      'Improve user experience globally',
+      'Reduce bandwidth costs by 60%',
+      'Enable autonomous edge management',
+      'Scale edge computing automatically',
+      'Optimize performance in real-time',
+      'Reduce operational overhead',
+      'Global edge presence'
+    ],
     useCases: [
       'Content delivery networks',
       'IoT and edge computing',
       'Mobile applications',
       'Gaming and entertainment',
       'E-commerce platforms',
-      'Gaming companies',
-      'SaaS providers',
-      'Enterprise businesses'
+      'Real-time applications'
     ],
-    roi: 'Reduce latency by 80%, improve user experience globally, reduce bandwidth costs by 60%',
-    competitors: ['Cloudflare', 'Akamai', 'Fastly', 'AWS CloudFront', 'Azure CDN'],
     marketSize: '$11.7B by 2025',
     targetAudience: 'CDN providers, IoT companies, mobile app developers, global businesses',
     competitiveAdvantage: 'Only autonomous edge computing network with AI-driven optimization',
@@ -153,7 +150,6 @@ export const cuttingEdgeITInfrastructureInnovations2025: CuttingEdgeITInfrastruc
     website: 'https://ziontechgroup.com',
     slug: '/autonomous-edge-computing-network'
   },
-
   // Neuromorphic Computing Infrastructure
   {
     id: 'neuromorphic-computing-infrastructure',
@@ -209,7 +205,6 @@ export const cuttingEdgeITInfrastructureInnovations2025: CuttingEdgeITInfrastruc
     website: 'https://ziontechgroup.com',
     slug: '/neuromorphic-computing-infrastructure'
   },
-
   // Autonomous Data Center Management Platform
   {
     id: 'autonomous-data-center-management-platform',
@@ -217,6 +212,13 @@ export const cuttingEdgeITInfrastructureInnovations2025: CuttingEdgeITInfrastruc
     tagline: 'Fully autonomous data center operations with AI-driven optimization',
     description: 'Intelligent platform that autonomously manages entire data center operations including power management, cooling optimization, security monitoring, and resource allocation. Ensures maximum efficiency and uptime without human intervention.',
     category: 'Data Center & Automation',
+    type: 'Micro SAAS',
+    pricing: {
+      starter: '$1,499/month',
+      professional: '$3,499/month',
+      enterprise: '$7,999/month',
+      custom: 'Contact for pricing'
+    },
     features: [
       'Autonomous power management',
       'AI-driven cooling optimization',

@@ -14,7 +14,6 @@ export interface Revolutionary2027AiService {
     address: string;
   };
 }
-
 export const revolutionary2027AIServices: Revolutionary2027AiService[] = [
   {
     id: "2027-revolutionary-ai",

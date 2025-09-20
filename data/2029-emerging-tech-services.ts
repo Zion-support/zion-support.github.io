@@ -14,7 +14,6 @@ export interface EmergingTechService2029 {
     address: string;
   };
 }
-
 export const emergingTechServices2029: EmergingTechService2029[] = [
   {
     id: "2029-emerging-tech-service",

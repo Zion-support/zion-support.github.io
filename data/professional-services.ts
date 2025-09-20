@@ -14,7 +14,6 @@ export interface ProfessionalService {
     address: string;
   };
 }
-
 export const professionalServices: ProfessionalService[] = [
   {
     id: "it-consulting",

@@ -38,7 +38,6 @@ export interface SpaceTechService {
   rating: number;
   reviews: number;
 }
-
 export const spaceTechServices: SpaceTechService[] = [
   {
     id: 'space-mission-management-platform',

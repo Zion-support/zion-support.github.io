@@ -14,7 +14,6 @@ export interface QuantumAiService2025 {
     address: string;
   };
 }
-
 export const quantumAIServices2025: QuantumAiService2025[] = [
   {
     id: "quantum-ai-hybrid",

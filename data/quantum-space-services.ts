@@ -14,7 +14,6 @@ export interface QuantumSpaceService {
     address: string;
   };
 }
-
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
     id: "quantum-computing-platform",

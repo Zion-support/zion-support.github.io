@@ -17,7 +17,6 @@ export type Real2036SpecializedService = {
   useCases?: string[];
   technology?: string[];
 };
-
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
   {
@@ -48,7 +47,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Edge AI processing', 'Autonomous systems', 'Cognitive computing', 'Energy-efficient AI'],
     technology: ['Neuromorphic chips', 'Spiking neural networks', 'Analog computing', 'Bio-inspired algorithms']
   },
-
   // Synthetic Biology Platform
   {
     id: 'synthetic-biology-platform',
@@ -78,7 +76,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Drug discovery', 'Biofuel production', 'Environmental remediation', 'Agricultural optimization'],
     technology: ['CRISPR', 'Gene editing', 'DNA synthesis', 'Bioinformatics']
   },
-
   // Quantum Internet Protocol Suite
   {
     id: 'quantum-internet-protocol-suite',
@@ -108,7 +105,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Quantum networks', 'Secure communications', 'Internet infrastructure', 'Government networks'],
     technology: ['Quantum protocols', 'Network standards', 'Security frameworks', 'Interoperability']
   },
-
   // Brain-Computer Interface Platform
   {
     id: 'brain-computer-interface-platform',
@@ -138,7 +134,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Assistive technology', 'Medical research', 'Gaming and entertainment', 'Human augmentation'],
     technology: ['EEG', 'Neural implants', 'Signal processing', 'Machine learning']
   },
-
   // Metaverse Development Studio Pro
   {
     id: 'metaverse-development-studio-pro',
@@ -168,7 +163,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Virtual worlds', 'Digital real estate', 'Educational experiences', 'Social platforms'],
     technology: ['3D graphics', 'Virtual reality', 'Augmented reality', 'Blockchain']
   },
-
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -198,7 +192,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Self-driving cars', 'Autonomous trucks', 'Delivery robots', 'Public transportation'],
     technology: ['Computer vision', 'Machine learning', 'Sensor fusion', 'Control systems']
   },
-
   // Quantum Materials Discovery Platform
   {
     id: 'quantum-materials-discovery-platform',
@@ -228,7 +221,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['New materials', 'Energy storage', 'Electronics', 'Manufacturing'],
     technology: ['Quantum computing', 'Machine learning', 'Materials science', 'Simulation']
   },
-
   // AI-Powered Climate Modeling Platform
   {
     id: 'ai-climate-modeling-platform',
@@ -258,7 +250,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Climate prediction', 'Policy planning', 'Environmental research', 'Risk assessment'],
     technology: ['Machine learning', 'Climate models', 'Data analysis', 'Simulation']
   },
-
   // Quantum Neural Network Platform
   {
     id: 'quantum-neural-network-platform',
@@ -288,7 +279,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Advanced AI', 'Research applications', 'Commercial AI', 'Scientific computing'],
     technology: ['Quantum computing', 'Neural networks', 'Machine learning', 'Optimization']
   },
-
   // Space Tourism Platform
   {
     id: 'space-tourism-platform',

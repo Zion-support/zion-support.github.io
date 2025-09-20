@@ -14,7 +14,6 @@ export interface EmergingTechService2025 {
     address: string;
   };
 }
-
 export const emergingTechServices2025: EmergingTechService2025[] = [
   {
     id: "metaverse-platform",

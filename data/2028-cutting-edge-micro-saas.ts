@@ -14,7 +14,6 @@ export interface CuttingEdgeMicroSaas2028 {
     address: string;
   };
 }
-
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   {
     id: "2028-cutting-edge-micro-saas",

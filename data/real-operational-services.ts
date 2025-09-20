@@ -14,7 +14,6 @@ export interface RealOperationalService {
     address: string;
   };
 }
-
 export const realOperationalServices: RealOperationalService[] = [
   {
     id: "operational-intelligence",

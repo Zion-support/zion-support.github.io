@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface ComprehensiveService {
   id: string;
   name: string;
@@ -40,14 +39,12 @@ export interface ComprehensiveService {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
     id: 'ai-powered-code-review-assistant',
@@ -265,7 +262,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     competitors: ['AWS IoT Greengrass, Azure IoT Edge, Google Edge TPU'],
     marketSize: '$12B edge AI',
     growthRate: '38% YoY',
-    variant: 'ai-manufacturing-enterprise',
+    variant: 'edge-futuristic',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Edge deployment framework with model optimization and device management capabilities.',
@@ -400,7 +397,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     competitors: ['IBM Quantum, Google Quantum, Rigetti'],
     marketSize: '$3B quantum computing',
     growthRate: '55% YoY',
-    variant: 'quantum-ai-enterprise',
+    variant: 'quantum',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',

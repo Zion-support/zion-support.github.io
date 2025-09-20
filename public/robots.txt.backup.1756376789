@@ -1,0 +1,79 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /server/
+Disallow: /temp_working/
+Disallow: /broken_files_backup/
+Disallow: /automation/
+Disallow: /scripts/
+Disallow: /hooks/
+Disallow: /utils/
+Disallow: /types/
+Disallow: /lib/
+Disallow: /context/
+Disallow: /hoc/
+Disallow: /mobile/
+Disallow: /stories/
+Disallow: /__tests__/
+Disallow: /tests/
+Disallow: /tests.disabled/
+Disallow: /components.disabled/
+Disallow: /src.broken/
+Disallow: /styles_backup/
+Disallow: /zion-os.disabled/
+
+# Allow important pages
+Allow: /sitemap
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /site.webmanifest
+
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+<<<<<<< HEAD
+=======
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow important pages
+Allow: /services/
+Allow: /solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+Allow: /careers/
+Allow: /faq/
+Allow: /privacy/
+Allow: /terms/
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b773
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Additional directives for specific bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block archive.org (optional)
+User-agent: ia_archiver
+Disallow: /

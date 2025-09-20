@@ -15,7 +15,6 @@ export interface Service {
   link: string;
   tags: string[];
 }
-
 export const emergingTech2027Services: Service[] = [
   {
     id: 'quantum-machine-learning',

@@ -22,7 +22,6 @@ export type InnovativeMicroSaas = {
 	rating?: number;
 	launchDate?: string;
 };
-
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	{
 		id: 'podcast-transcription-seo-suite',

@@ -38,7 +38,6 @@ export interface NextGenInnovativeService {
   rating: number;
   reviews: number;
 }
-
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
@@ -92,7 +91,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // Space Technology Platform
   {
     id: 'space-technology-platform',
@@ -145,7 +143,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 12
   },
-
   // Biotech AI Platform
   {
     id: 'biotech-ai-platform',
@@ -198,7 +195,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
     reviews: 18
   },
-
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading',
@@ -251,7 +247,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -304,7 +299,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 22
   },
-
   // Quantum Cybersecurity Platform
   {
     id: 'quantum-cybersecurity-platform',
@@ -357,7 +351,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.9,
     reviews: 28
   },
-
   // Metaverse AI Development Platform
   {
     id: 'metaverse-ai-development-platform',
@@ -410,7 +403,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
     reviews: 32
   },
-
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -463,7 +455,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.8,
     reviews: 19
   },
-
   // AI-Powered Legal Contract Analyzer
   {
     id: 'ai-legal-contract-analyzer',
@@ -516,7 +507,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.6,
     reviews: 45
   },
-
   // Quantum IoT Platform
   {
     id: 'quantum-iot-platform',

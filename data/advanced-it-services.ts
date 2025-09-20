@@ -38,7 +38,6 @@ export interface AdvancedITService {
   rating: number;
   reviews: number;
 }
-
 export const advancedITServices: AdvancedITService[] = [
   {
     id: 'quantum-cloud-platform',

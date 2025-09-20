@@ -1,1 +1,1 @@
-export const revolutionary2025MicroSaaS: Array<Record<string, any>> = [],
+export const revolutionary2025MicroSaaS: Array<Record<string, any>> = []

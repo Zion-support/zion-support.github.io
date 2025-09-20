@@ -26,7 +26,7 @@ interface ApiClientOptions {
   headers: Record<string, string>;
 }
 
-export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {
+export async function apiClient(endpoint: string, options: ApiClientOptions = { headers: {} }) {
   const { method = 'GET', body, headers = {} } = options;
   
   const config: RequestInit = {

@@ -14,7 +14,6 @@ export interface Innovative2026AiServiceV3 {
     address: string;
   };
 }
-
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   {
     id: "2026-innovative-ai-v3",
