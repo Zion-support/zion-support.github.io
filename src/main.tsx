@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
 import ErrorBoundary from './components/ErrorBoundary'
 import { ThemeProvider } from './context/ThemeContext'
@@ -18,29 +18,18 @@ if (typeof window !== 'undefined' && 'serviceWorker' in (window as any).navigato
       })
   })
 }
-=======
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { HelmetProvider } from 'react-helmet-async';
-import App from './App.tsx';
-import './index.css';
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
-<<<<<<< HEAD
       <ErrorBoundary>
         <ThemeProvider>
-          <App />
+          <HelmetProvider>
+            <App />
+          </HelmetProvider>
         </ThemeProvider>
       </ErrorBoundary>
-=======
-      <HelmetProvider>
-        <App />
-      </HelmetProvider>
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     </React.StrictMode>
   );
 }

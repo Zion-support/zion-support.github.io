@@ -61,7 +61,7 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-<<<<<<< HEAD
+    "**/*.spec.tsx",
     "automation",
     "server",
     "zion-website",
@@ -104,10 +104,7 @@
     "temp_backup",
     "temp_backup/**",
     "temp_broken_components",
-    "temp_broken_components/**"
-=======
-    "**/*.spec.tsx",
+    "temp_broken_components/**",
     "coverage"
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   ]
 }

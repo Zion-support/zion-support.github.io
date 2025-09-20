@@ -5,7 +5,6 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-<<<<<<< HEAD
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -23,8 +22,6 @@ export default defineConfig({
       '@constants': path.resolve(__dirname, './src/constants'),
     }
   },
-=======
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   build: {
     target: 'es2015',
     minify: 'terser',
@@ -32,7 +29,6 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-<<<<<<< HEAD
       }
     },
     rollupOptions: {
@@ -61,20 +57,6 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000,
     sourcemap: false,
-=======
-      },
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog'],
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   },
   server: {
     port: 3000,
@@ -83,10 +65,5 @@ export default defineConfig({
   preview: {
     port: 4173,
     open: true,
-<<<<<<< HEAD
   }
 });
-=======
-  },
-});
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
