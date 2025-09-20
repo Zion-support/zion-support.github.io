@@ -7,128 +7,139 @@ interface ImportMetaEnv {
 }
 
 interface ImportMeta {
-  readonly env: ImportMetaEnv
+  readonly env: ImportMetaEnv;
 }
 
-// Import React types properly;
+// Import React types properly
 import * as React from "react";
-// Type declarations for modules used in Vite configuration;
+// Type declarations for modules used in Vite configuration
 declare module 'vitest/config' {
-  export { defineConfig } from "vite"
+  export { defineConfig } from "vite";
 }
 
 declare module '@vitejs/plugin-react-swc' {
   import { Plugin } from "vite";
-export default function reactSWC(): Plugin
+  export default function reactSWC(): Plugin;
 }
 
 declare module 'path' {
   export function resolve(...paths: string[]): string;
-export function join(...paths: string[]): string;
-export function dirname(path: string): string
+  export function join(...paths: string[]): string;
+  export function dirname(path: string): string;
 }
 
 declare module 'lovable-tagger' {
   import { Plugin } from "vite";
-export function componentTagger(): Plugin
+  export function componentTagger(): Plugin;
 }
 
-// Add Node.js globals;
+// Add Node.js globals
 declare const __dirname: string;
 declare const process: {
   env: {
-  [key: string]: string | undefined,NODE_ENV: 'development' | 'production' | 'test';
-    PORT?: string
-},
-  }
+    [key: string]: string | undefined;
+    NODE_ENV: 'development' | 'production' | 'test';
+    PORT?: string;
+  };
+};
 
-// Badge component type fixes;
+// Badge component type fixes
 declare module '@/components/ui/badge' {
   export interface BadgeProps {
-  className?: string;
-    variant?:;
-      | "default";
-      | "secondary";
-      | "destructive";
-      | "outline";
-      | "success";
-      | "warning";
+    className?: string;
+    variant?: 
+      | "default"
+      | "secondary"
+      | "destructive"
+      | "outline"
+      | "success"
+      | "warning"
       | "info";
     children?: React.ReactNode;
-    key?: string | number
+    key?: string | number;
+  }
 }
 
-  export const Badge: React.FC<BadgeProps>
+  export const Badge: React.FC<BadgeProps>;
 }
 
-// FeatureCard type fixes;
+// FeatureCard type fixes
 declare module '@/components/FeatureCard' {
   export interface FeatureCardProps {
-  title: string,description: string,icon: React.ReactNode;
+    title: string;
+    description: string;
+    icon: React.ReactNode;
     className?: string;
-    key?: number | string
-},
+    key?: number | string;
   }
 
-// ListingScoreCard type fixes;
+  export const FeatureCard: React.FC<FeatureCardProps>;
+}
+
+// ListingScoreCard type fixes
 declare module '@/components/ListingScoreCard' {
   export interface ListingScoreCardProps {
-  title: string,description: string,category: string;
+    title: string;
+    description: string;
+    category: string;
     image?: string;
-    tags?: string[]
+    tags?: string[];
     author?: string;
     authorImage?: string;
     aiScore?: number;
     rating?: number;
     reviewCount?: number;
     key?: string | number;
-    variant?: string
-}
-
-  export const ListingScoreCard: React.FC<ListingScoreCardProps>
-}
-
-// ChatMessage type fixes;
-declare module '@/components/ChatAssistant/ChatMessage' {
-  export interface ChatMessageProps {
-  role: 'user' | 'assistant',message: string;
-    timestamp?: Date;
-    key?: string | number
-},
+    variant?: string;
   }
 
-// ProductListingCard type fixes;
+  export const ListingScoreCard: React.FC<ListingScoreCardProps>;
+}
+
+// ChatMessage type fixes
+declare module '@/components/ChatAssistant/ChatMessage' {
+  export interface ChatMessageProps {
+    role: 'user' | 'assistant';
+    message: string;
+    timestamp?: Date;
+    key?: string | number;
+  }
+
+  export const ChatMessage: React.FC<ChatMessageProps>;
+}
+
+// ProductListingCard type fixes
 declare module '@/components/ProductListingCard' {
   export interface ProductListingCardProps {
-  listing: any;
-    view?: any,  // Made optional to fix the errors;
+    listing: any;
+    view?: any;  // Made optional to fix the errors
     onRequestQuote?: (listingId: string) => void;
-    key?: string | number
+    key?: string | number;
+  }
+
+  export const ProductListingCard: React.FC<ProductListingCardProps>;
 }
 
-  export const ProductListingCard: React.FC<ProductListingCardProps>
-}
-
-// Removed custom lucide-react stub;
-// Create a replacement stub for LiveKit components;
+// Removed custom lucide-react stub
+// Create a replacement stub for LiveKit components
 declare module '@livekit/components-react' {
   export interface VideoCallProps {
-  room?: string;
+    room?: string;
     token?: string;
     serverUrl?: string;
     onDisconnect?: () => void;
-    className?: string
-}
-  ;
-export const VideoCall: React.FC<VideoCallProps>
-  export const LiveKitRoom: React.FC<any>
+    className?: string;
+  }
+
+  export const VideoCall: React.FC<VideoCallProps>;
+  export const LiveKitRoom: React.FC<any>;
 }
 
 declare module '@livekit/components-styles' {
   // Empty stub for the styles
 }
 
-// Stubs for optional UI libraries used by the project;
+// Stubs for optional UI libraries used by the project
 declare module 'cmdk';
 declare module '@radix-ui/react-context-menu';
 declare module 'vaul';

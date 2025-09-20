@@ -15,13 +15,21 @@ import {
   Settings
 } from "lucide-react";
 interface AccessibilitySettings {
-  fontSize: number,highContrast: boolean,reducedMotion: boolean,soundEnabled: boolean,theme: 'light' | 'dark' | 'auto'
+  fontSize: number;
+  highContrast: boolean;
+  reducedMotion: boolean;
+  soundEnabled: boolean;
+  theme: 'light' | 'dark' | 'auto';
 }
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
 const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
+    fontSize: 16,
+    highContrast: false,
+    reducedMotion: false,
+    soundEnabled: true,
+    theme: 'auto'
   });
   useEffect(() => {
     // Load settings from localStorage
@@ -29,8 +37,8 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
     if (savedSettings) {
       const parsed = JSON.parse(savedSettings);
       setSettings(parsed);
-      applySettings(parsed)
-}
+      applySettings(parsed);
+    }
 
     // Add keyboard shortcuts
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -40,11 +48,11 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
           case '+':
             e.preventDefault();
             increaseFontSize();
-            break,
+            break;
           case '-':
             e.preventDefault();
             decreaseFontSize();
-            break,
+            break;
           case '0':
             e.preventDefault();
             resetSettings();

@@ -34,8 +34,8 @@ const sizeClasses = {
   };
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
-    return <span className={classes}>{children}</span>
-}
+    return <span className={classes}>{children}</span>;
+  }
   return (
     <button
       type={type}
