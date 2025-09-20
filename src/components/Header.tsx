@@ -1,48 +1,51 @@
-import React, { useState, useEffect } from "react";
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-      isScrolled ? "bg-white shadow-md" : "bg-transparent"
-    }`}>
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-8">
-            <a href="/" className="text-2xl font-bold text-gray-900">
-              Zion
-            </a>
-            <div className="hidden md:flex space-x-6">
-              <a href="/" className="text-gray-600 hover:text-gray-900">
-                Home
-              </a>
-              <a href="/blog" className="text-gray-600 hover:text-gray-900">
-                Blog
-              </a>
-              <a href="/contact" className="text-gray-600 hover:text-gray-900">
-                Contact
-              </a>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-              Get Started
-            </button>
-          </div>
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 max-w-screen-2xl items-center">
+        <div className="mr-4 hidden md:flex">
+          <Link className="mr-6 flex items-center space-x-2" href="/">
+            <span className="hidden font-bold sm:inline-block">
+              Zion Tech Group
+            </span>
+          </Link>
+          <nav className="flex items-center space-x-6 text-sm font-medium">
+            <Link
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              href="/services"
+            >
+              Services
+            </Link>
+            <Link
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              href="/about"
+            >
+              About
+            </Link>
+            <Link
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              href="/contact"
+            >
+              Contact
+            </Link>
+          </nav>
         </div>
-      </nav>
+        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+          <div className="w-full flex-1 md:w-auto md:flex-none">
+            <Link className="mr-6 flex items-center space-x-2 md:hidden" href="/">
+              <span className="font-bold">Zion Tech Group</span>
+            </Link>
+          </div>
+          <nav className="flex items-center">
+            <ThemeToggle />
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }
-
-export default Header;
