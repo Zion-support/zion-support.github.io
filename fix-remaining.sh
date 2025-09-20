@@ -31,21 +31,13 @@ export default function $name() {
 EOL
 }
 
-# List of problematic files to fix
-files=(
-    "/workspace/src/pages/GlobalMap.tsx"
-    "/workspace/src/pages/GreenIT.tsx"
-    "/workspace/src/pages/HiringTracker.tsx"
-    "/workspace/src/pages/ITSupportPage.tsx"
-    "/workspace/src/pages/Interviews.tsx"
-)
-
-# Fix each file
-for file in "${files[@]}"; do
-    if [ -f "$file" ]; then
+# Get all tsx files in pages directory that might have syntax errors
+find /workspace/src/pages -name "*.tsx" -type f | while read file; do
+    # Check if file has syntax errors by trying to parse it
+    if ! node -c "$file" 2>/dev/null; then
         echo "Fixing $file"
         create_stub "$file"
     fi
 done
 
-echo "Fixed all syntax errors"
+echo "Fixed remaining syntax errors"

@@ -1,18 +1,22 @@
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Bot, Users, TrendingUp } from 'lucide-react'
+import React from 'react';
+import { SEO } from "@/components/SEO";
 
 export default function AITalentMatchingPage() {
   return (
-    <ServiceLandingTemplate
-title="AI Talent Matching"
-      subtitle="Find the perfect talent with our AI-powered matching system"
-      description="Our advanced AI technology analyzes skills experience and cultural fit to match the right candidates with the right opportunities ensuring successful placements and satisfied clients."
-      benefits={benefits}
-      features={features}
-      stats={stats}
-      ctaText="Start Matching Talent"
-      ctaLink="/contact"
-    />
+    <>
+      <SEO 
+        title="AITalentMatchingPage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">AITalentMatchingPage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
+}

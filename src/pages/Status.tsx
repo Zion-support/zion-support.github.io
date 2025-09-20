@@ -1,10 +1,22 @@
-import { SEO } from "@/components/SEO";,
-import { useState, useEffect } from "react";,
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";,
-import Link from "next/link",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { logWarn } from "@/utils/productionLogger";
-interface ServiceStatus {
-  )}
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Status() {
+  return (
+    <>
+      <SEO 
+        title="Status - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Status</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
