@@ -6,7 +6,6 @@ import { Clock, MapPin, Building, CheckCircle, XCircle, AlertCircle } from "luci
 
 interface Application {
   id: string;
-<<<<<<< HEAD
   jobTitle: string;
   company: string;
   location: string;
@@ -80,49 +79,11 @@ export function ApplicationsTracker({ applications = [] }: { applications?: Appl
             {application.description && (
               <p className="text-sm text-gray-700 mt-3">{application.description}</p>
             )}
-=======
-  company: string;
-  position: string;
-  status: string;
-  appliedDate: string;
-  location: string;
-}
-
-export function ApplicationsList({ applications }: { applications: Application[] }) {
-  return (
-    <div className="space-y-4">
-      {applications.map((app) => (
-        <Card key={app.id}>
-          <CardHeader>
-            <CardTitle>{app.position}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center space-x-2">
-              <Building className="h-4 w-4" />
-              <span>{app.company}</span>
-            </div>
-            <div className="flex items-center space-x-2 mt-2">
-              <MapPin className="h-4 w-4" />
-              <span>{app.location}</span>
-            </div>
-            <div className="flex items-center space-x-2 mt-2">
-              <Clock className="h-4 w-4" />
-              <span>{app.appliedDate}</span>
-            </div>
-            <div className="mt-4">
-              <Badge variant={app.status === 'accepted' ? 'default' : app.status === 'rejected' ? 'destructive' : 'secondary'}>
-                {app.status}
-              </Badge>
-            </div>
->>>>>>> 9c334060803f415d6d017f9e5353d20ebc0b1d26
           </CardContent>
         </Card>
       ))}
     </div>
   );
 }
-<<<<<<< HEAD
 
 export { ApplicationsTracker as ApplicationsList };
-=======
->>>>>>> 9c334060803f415d6d017f9e5353d20ebc0b1d26
