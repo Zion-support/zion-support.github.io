@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     tags: ['AI TransformationManufacturingFortune 10050K ROI', 'Autonomous Operations']
   }
 }
-export default function CaseStudy() {
+export default function CaseStudy() : any {
   return (
     <div>
       {/* Header */}

@@ -1,5 +1,5 @@
 import React from 'react'
-const TranscendentAI2026Banner: React.FC = () => {;
+const TranscendentAI2026Banner: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">TranscendentAI2026Banner</h3>

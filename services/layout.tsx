@@ -11,8 +11,8 @@ class ErrorBoundary extends React.Component {,
   }
 ,
   componentDidCatch(error, errorInfo) {,
-    console.error('Error caught by boundary:', error, errorInfo),
-  }
+    console.error('Error caught by boundary:', error, errorInfo);
+};
 ,
   render() {,
     if (this.state.hasError) {,
@@ -27,6 +27,6 @@ export default function ServicesLayout(): any ({,
   children,
 }: {,
   children: React && React.ReactNode}) {,
-  return <div>{children}</div>,
-}
+  return <div>{children}</div>;
+  }
 ,

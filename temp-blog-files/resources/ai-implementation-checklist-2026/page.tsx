@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     publishedTime: '2025-01-17T00:00:00.000Z',
     authors: ['Zion Tech Group']}
 }
-export default function AIImplementationChecklist() {
+export default function AIImplementationChecklist() : any {
   return (
     <div>
       <article className="prose prose-lg max-w-none">

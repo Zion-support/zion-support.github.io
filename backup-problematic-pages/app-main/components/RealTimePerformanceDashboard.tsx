@@ -1,5 +1,5 @@
 import React from 'react'
-const RealTimePerformanceDashboard: React.FC = () => {;
+const RealTimePerformanceDashboard: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">RealTimePerformanceDashboard</h3>

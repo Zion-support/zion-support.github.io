@@ -96,12 +96,12 @@
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">,
                 View All Tools,
 import React from "react",
-const function AIToolsShowcase2025() { = () => {,
+const function AIToolsShowcase2025() : any { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
       <div className="container mx-auto px-4 py-20">,
         <div className="text-center">,
-          <h1 className="text-5xl font-bold mb-6">function AIToolsShowcase2025() {</h1>,
+          <h1 className="text-5xl font-bold mb-6">function AIToolsShowcase2025() : any {</h1>,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
               </button>,
             </div>,
@@ -111,5 +111,5 @@ const function AIToolsShowcase2025() { = () => {,
     </div>,
   )
 },
-export default function AIToolsShowcase2025() {,
-}
+export default function AIToolsShowcase2025() : any {;
+  }

@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const EventEmitter = require',('events'),
 const axios = require',('axios'),
@@ -62,8 +62,8 @@ class NotificationManager extends EventEmitter {,
       minute: { count: 0, resetTime: Date.now() + 60000 },
       hour: { count: 0, resetTime: Date.now() + 3600000 }
     },
-    this.cooldownTimers = new', Map(),
-  }
+    this.cooldownTimers = new', Map();
+};
 ,
   // Send notification with priority and rate limiting,
   async sendNotification(message, options = {}) {,
@@ -103,18 +103,18 @@ class NotificationManager extends EventEmitter {,
       const promises = [],
       // Send to Slack,
       if (this.config.slack.enabled && this.config.slack.webhookUrl) {,
-        promises.push(this.sendSlackNotification(notification)),
-      }
+        promises.push(this.sendSlackNotification(notification));
+};
 ,
       // Send email,
       if (this.config.email.enabled) {,
-        promises.push(this.sendEmailNotification(notification)),
-      }
+        promises.push(this.sendEmailNotification(notification));
+};
 ,
       // Send webhooks,
       if (this.config.webhooks.enabled && this.config.webhooks.urls.length > 0) {,
-        promises.push(this.sendWebhookNotifications(notification)),
-      }
+        promises.push(this.sendWebhookNotifications(notification));
+};
 ,
       const results = await', Promise.allSettled(promises),
       const successCount = results',.filter(r => r.status === fulfilled').length,
@@ -274,8 +274,8 @@ const timeoutId = setTimeout(() => {,
       // Store in history,
       this.notificationHistory.push(notification),
       if (this.notificationHistory.length > 1000) {,
-        this.notificationHistory = this',.notificationHistory.slice(-1000),
-      }
+        this.notificationHistory = this',.notificationHistory.slice(-1000);
+};
 ,
       this.emit('notificationSent', notification),
       logger.info(`📢 Notification sent (${priority}): ${message.substring(0, 100)}...`),
@@ -410,8 +410,8 @@ const timeoutId = setTimeout(() => {,
         fields.push({,
           title: key.charAt(0).toUpperCase() + key.slice(1),
           value: typeof value === object', ? JSON.stringify(value) : String(value),
-          short: true}),
-      }
+          short: true});
+};
     }),
     return fields,
   }
@@ -423,8 +423,8 @@ const timeoutId = setTimeout(() => {,
       category: 'error',
       taskName,
       data
-    }),
-  }
+    });
+};
 ,
   async notifyWarning(message, taskName, data = {}) {,
     return this.sendNotification(message, {,
@@ -432,8 +432,8 @@ const timeoutId = setTimeout(() => {,
       category: 'warning',
       taskName,
       data
-    }),
-  }
+    });
+};
 ,
   async notifySuccess(message, taskName, data = {}) {,
     return this.sendNotification(message, {,
@@ -441,8 +441,8 @@ const timeoutId = setTimeout(() => {,
       category: 'success',
       taskName,
       data
-    }),
-  }
+    });
+};
 ,
   async notifyInfo(message, taskName, data = {}) {,
     return this.sendNotification(message, {,
@@ -450,8 +450,8 @@ const timeoutId = setTimeout(() => {,
       category: 'info',
       taskName,
       data
-    }),
-  }
+    });
+};
 ,
   async notifySecurity(message, taskName, data = {}) {,
     return this.sendNotification(message, {,
@@ -459,8 +459,8 @@ const timeoutId = setTimeout(() => {,
       category: 'security',
       taskName,
       data
-    }),
-  }
+    });
+};
 ,
   // Get notification statistics,
   getNotificationStats() {,
@@ -498,8 +498,8 @@ const timeoutId = setTimeout(() => {,
   clearHistory() {,
     this.notificationHistory = [],
     logger.info('🗑️ Notification history cleared'),
-    this.emit('historyCleared'),
-  }
+    this.emit('historyCleared');
+};
 ,
   // Get recent notifications,
   getRecentNotifications(limit = 50) {,
@@ -508,7 +508,7 @@ const timeoutId = setTimeout(() => {,
       .reverse(),
       .map(n => ({,
         ...n,
-        timestamp: new Date(n.timestamp).toISOString()})),
+        timestamp: new Date(n.timestamp).toISOString()}));
   }
 }
 ,

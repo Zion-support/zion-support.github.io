@@ -1,7 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeftIcon; CalendarIcon, ClockIcon, UserIcon, DocumentTextIcon, CheckCircleIcon } from '@heroicons/react/24/outline',
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, DocumentTextIcon, CheckCircleIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title: 'AI Revolution Implementation Ultimate Guide 2025-2026: Complete Roadmap to 10,000% ROI',
   description: 'The definitive guide to implementing AI revolution technologies in your organization, with step-by-step instructions, best practices, and proven strategies for achieving 10,000% ROI.',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     tags: ['Implementation GuideAI RevolutionROIStrategy']
   }
 }
-export default function AIRevolutionImplementationGuide() {
+export default function AIRevolutionImplementationGuide() : any {
   return (
     <div>
       {/* Header */}

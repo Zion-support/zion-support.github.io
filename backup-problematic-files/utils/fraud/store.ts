@@ -41,7 +41,7 @@ class FraudStore {,
     return updatedRecord,
   }
   listRecords(): FraudRecord[] {,
-    return Array.from(this.records.values()),
+    return Array.from(this.records.values());
   }
   async generateMonthlyReport(month: string): Promise<MonthlyReport> {,
     const records = this.listRecords(),

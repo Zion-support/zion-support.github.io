@@ -145,4 +145,5 @@ const QuantumComputingBreakthroughs2030Showcase: React.FC = () => {
   )
 },
 
-export default QuantumComputingBreakthroughs2030Showcase,
+export default QuantumComputingBreakthroughs2030Showcase;
+  }

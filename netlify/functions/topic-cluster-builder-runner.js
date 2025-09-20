@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'topic-cluster-builder-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

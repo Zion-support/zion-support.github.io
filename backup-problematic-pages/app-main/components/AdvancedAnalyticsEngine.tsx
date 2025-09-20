@@ -1,5 +1,5 @@
 import React from 'react'
-const AdvancedAnalyticsEngine: React.FC = () => {;
+const AdvancedAnalyticsEngine: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">AdvancedAnalyticsEngine</h3>

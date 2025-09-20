@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Explore the revolutionary fusion of quantum computing and artificial intelligence that\'s reshaping the future of technology and business operations.'
   keywords: ['quantum AIquantum computingartificial intelligencequantum revolution', 'AI 2025quantum algorithms']
 }
-export default function QuantumAIRevolution2025() {
+export default function QuantumAIRevolution2025() : any {
   return (
     <div>
       {/* Hero Section */}
@@ -220,4 +220,4 @@ export default function QuantumAIRevolution2025() {
           </div>
         </div>
       </section>
-    </div>)}
+    </div>)}'

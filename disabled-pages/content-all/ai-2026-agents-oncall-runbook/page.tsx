@@ -7,7 +7,7 @@ export const metadata = {
     'Operational runbook for Agents‑On‑Call: triage, mitigation, escalation, and eval‑gated automation.',
   keywords: ['agents-on-callai opsincident responseevals', 'runbook']
 }
-const AgentsOnCallRunbook2026: React.FC = () => {;
+const AgentsOnCallRunbook2026: React.FC = () => {,
   return (
     <div>
       <SEO
@@ -63,4 +63,4 @@ const AgentsOnCallRunbook2026: React.FC = () => {;
         </footer>
       </article>
     </div>)}
-export default AgentsOnCallRunbook2026;
+export default AgentsOnCallRunbook2026,

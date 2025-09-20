@@ -1,5 +1,5 @@
 import React from 'react'
-const EnterpriseDataManagement: React.FC = () => {;
+const EnterpriseDataManagement: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">EnterpriseDataManagement</h3>

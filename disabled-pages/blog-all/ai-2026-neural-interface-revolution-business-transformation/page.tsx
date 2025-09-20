@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Discover how neural interface technology is revolutionizing business operations in 2026. Learn about brain-computer interfaces, thought-controlled systems, and the future of human-AI collaboration.',
   keywords: ['neural interfacebrain-computer interfaceBCIAI collaboration', 'business transformationneural technology']
 }
-export default function NeuralInterfaceRevolutionBusinessTransformation() {
+export default function NeuralInterfaceRevolutionBusinessTransformation() : any {
   return (
     <div>
       <SEO

@@ -511,11 +511,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
 ],
 
 // Helper functions for service management
-export const getSpecializedServiceById = (id: string) => {
+export const getSpecializedServiceById = (id: string) : any => {
   return specializedInnovativeServices2027.find(service => service.id === id)
 },
 
-export const getSpecializedServicesByCategory = (category: string) => {
+export const getSpecializedServicesByCategory = (category: string) : any => {
   return specializedInnovativeServices2027.filter(service => service.category === category)
 },
 
@@ -523,14 +523,14 @@ export const getSpecializedPopularServices = () => {
   return specializedInnovativeServices2027.filter(service => service.popular),
 },
 
-export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) : any => {
   return specializedInnovativeServices2027.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')),
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });
+  },
 
-export const searchSpecializedServices = (query: string) => {
+export const searchSpecializedServices = (query: string) : any => {
   const lowercaseQuery = query.toLowerCase(),
   return specializedInnovativeServices2027.filter(service => 
     service.name.toLowerCase().includes(lowercaseQuery) ||

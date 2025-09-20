@@ -12,13 +12,13 @@ import {
 import Layout from '../components/layout/Layout';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 
-export default function AIBusinessIntelligenceSuite() {
+export default function AIBusinessIntelligenceSuite() : any {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
     'Real-time data analysis and visualization',
@@ -438,4 +438,4 @@ export default function AIBusinessIntelligenceSuite() {
       </div>
     </Layout>
   );
-}
+  }

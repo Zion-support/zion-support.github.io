@@ -21,10 +21,10 @@ const AdvancedCybersecurityServices: NextPage = () => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
+    return matchesCategory && matchesSearch;
   }),
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((a, b) : any => {
     switch (sortBy) {
       case 'price':
         return a.pricing.monthly - b.pricing.monthly,
@@ -36,31 +36,31 @@ const AdvancedCybersecurityServices: NextPage = () => {
     }
   }),
 
-  const getInnovationColor = (level: string) => {
+  const getInnovationColor = (level: string) : any => {
     switch (level) {
-      case 'Revolutionary': return 'from-red-500 to-pink-600',
-      case 'Breakthrough': return 'from-purple-500 to-indigo-600',
-      case 'Advanced': return 'from-blue-500 to-cyan-600',
+      case 'Revolutionary': return 'from-red-500 to-pink-600';
+      case 'Breakthrough': return 'from-purple-500 to-indigo-600';
+      case 'Advanced': return 'from-blue-500 to-cyan-600';
       default: return 'from-gray-500 to-gray-600'
     }
   },
 
-  const getBadgeColor = (badge: string) => {
+  const getBadgeColor = (badge: string) : any => {
     switch (badge) {
-      case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600',
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600',
-      case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600',
+      case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
+      case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
+      case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'
     }
   },
 
-  const getSecurityIcon = (category: string) => {
+  const getSecurityIcon = (category: string) : any => {
     switch (category) {
-      case 'AI Security': return '🤖',
-      case 'Quantum Security': return '🔐',
-      case 'Network Security': return '🌐',
-      case 'Endpoint Security': return '💻',
-      case 'Cloud Security': return '☁️',
+      case 'AI Security': return '🤖';
+      case 'Quantum Security': return '🔐';
+      case 'Network Security': return '🌐';
+      case 'Endpoint Security': return '💻';
+      case 'Cloud Security': return '☁️';
       default: return '🛡️'
     }
   },

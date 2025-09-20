@@ -74,9 +74,8 @@ export class APIRateLimiterService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to create rate limit rule: ${response.statusText}`),
-      }
-
+        throw new Error(`Failed to create rate limit rule: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       // Mock response for demo
@@ -98,9 +97,8 @@ export class APIRateLimiterService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`),
-      }
-
+        throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       // Mock rules for demo
@@ -153,17 +151,15 @@ export class APIRateLimiterService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to update rate limit rule: ${response.statusText}`),
-      }
-
+        throw new Error(`Failed to update rate limit rule: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       // Mock update for demo
       const existingRule = (await this.getRateLimitRules()).find(r => r.id === id),
       if (!existingRule) {
-        throw new Error('Rule not found'),
-      }
-      
+        throw new Error('Rule not found');
+};
       return {
         ...existingRule,
         ...updates,
@@ -182,8 +178,8 @@ export class APIRateLimiterService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to delete rate limit rule: ${response.statusText}`),
-      }
+        throw new Error(`Failed to delete rate limit rule: ${response.statusText}`);
+};
     } catch (error) {
       console.error('Failed to delete rate limit rule:', error),
       throw error,
@@ -200,9 +196,8 @@ export class APIRateLimiterService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`),
-      }
-
+        throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       // Mock stats for demo
@@ -249,9 +244,8 @@ export class APIRateLimiterService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to create API key: ${response.statusText}`),
-      }
-
+        throw new Error(`Failed to create API key: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       // Mock API key creation for demo
@@ -277,9 +271,8 @@ export class APIRateLimiterService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch API keys: ${response.statusText}`),
-      }
-
+        throw new Error(`Failed to fetch API keys: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       // Mock API keys for demo
@@ -329,9 +322,8 @@ export class APIRateLimiterService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch violations: ${response.statusText}`),
-      }
-
+        throw new Error(`Failed to fetch violations: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       // Mock violations for demo
@@ -387,7 +379,7 @@ export class APIRateLimiterService {
     const totalRequests = stats.reduce((sum, stat) => sum + stat.totalRequests, 0),
     const blockedRequests = stats.reduce((sum, stat) => sum + stat.blockedRequests, 0),
 
-    const violationsByReason = violations.reduce((acc, violation) => {
+    const violationsByReason = violations.reduce((acc, violation) : any => {
       acc[violation.reason] = (acc[violation.reason] || 0) + 1,
       return acc,
     }, {} as Record<string, number>),
@@ -413,7 +405,7 @@ export class APIRateLimiterService {
         byReason: violationsByReason,
         recent: violations.slice(0, 10)
       }
-    },
+    };
   }
 }
 

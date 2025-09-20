@@ -1,6 +1,6 @@
 import ethers from 'hardhat';
 
-async function main() {
+async function main() : any {
   const [deployer] = await ethers.getSigners();
   console.log('Deploying with:', deployer.address);
   const ZION = await ethers.getContractFactory('ZIONToken');
@@ -12,7 +12,7 @@ async function main() {
   console.log('Total supply:', totalSupply.toString());
 }
 
-main().catch((error) => {
+main().catch((error) : any => {
   console.error(error);
   process.exitCode = 1;
 });

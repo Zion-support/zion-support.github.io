@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function MicroCRM() {,
+export default function MicroCRM() : any {,
   return (,
     <>,
       <Head>,

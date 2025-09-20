@@ -1,8 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft; Calendar, User, Download, BookOpen, CheckCircle, Star, Zap, Brain, Target, Shield, TrendingUp } from 'lucide-react'
-export default function AI2025UltimateImplementationMasterGuide() {
+import { ArrowLeft, Calendar, User, Download, BookOpen, CheckCircle, Star, Zap, Brain, Target, Shield, TrendingUp } from 'lucide-react'
+export default function AI2025UltimateImplementationMasterGuide() : any {
   return (
     <div>
       {/* Hero Section */}
@@ -430,4 +430,4 @@ export default function AI2025UltimateImplementationMasterGuide() {
           </div>
         </div>
       </article>
-    </div>)}
+    </div>)}'

@@ -23,8 +23,8 @@ class ProcessRecoverySystem {,
     this.recoveryQueue = [],
     this.isRecovering = false,
     this.initializeDependencyGraph(),
-    this.startHealthMonitoring(),
-  }
+    this.startHealthMonitoring();
+};
 ,
   /**,
    * Initialize process dependency graph,
@@ -32,8 +32,8 @@ class ProcessRecoverySystem {,
   initializeDependencyGraph() {,
     Object.entries(this.config.processDependencies).forEach(([process, dependencies]) => {,
       this.dependencyGraph.set(process, dependencies),
-    }),
-  }
+    });
+};
 ,
   /**,
    * Start health monitoring,
@@ -41,8 +41,8 @@ class ProcessRecoverySystem {,
   startHealthMonitoring() {,
     setInterval(() => {,
       this.checkProcessHealth(),
-    }, this.config.healthCheckInterval),
-  }
+    }, this.config.healthCheckInterval);
+};
 ,
   /**,
    * Check health of all processes,
@@ -54,14 +54,14 @@ class ProcessRecoverySystem {,
         const health = this.assessProcessHealth(process),
         this.processHealth.set(process.name, health),
         if (health.needsRecovery && this.config.autoRecovery) {,
-          this.queueRecovery(process.name, health.issues),
-        }
+          this.queueRecovery(process.name, health.issues);
+};
       }),
       // Process recovery queue,
       this.processRecoveryQueue(),
     } catch (error) {,
-      console.error('Error checking process health:', error),
-    }
+      console.error('Error checking process health:', error);
+};
   }
 ,
   /**,
@@ -161,8 +161,8 @@ class ProcessRecoverySystem {,
     // Sort queue by priority,
     this.recoveryQueue.sort((a, b) => b.priority - a.priority),
     if (this.logRecovery) {,
-      // // // // // // console.log(`🔄 Queued ${processName} for recovery (priority: ${priority})`),
-    }
+      // // // // // // console.log(`🔄 Queued ${processName} for recovery (priority: ${priority})`);
+};
   }
 ,
   /**,
@@ -194,8 +194,8 @@ class ProcessRecoverySystem {,
     const dependents = [],
     this.dependencyGraph.forEach((dependencies, process) => {,
       if (dependencies.includes(processName)) {,
-        dependents.push(process),
-      }
+        dependents.push(process);
+};
     }),
     return dependents,
   }
@@ -222,8 +222,8 @@ class ProcessRecoverySystem {,
         try {,
           await this.attemptRecovery(recoveryItem),
           if (this.logRecovery) {,
-            // // // // // // console.log(`✅ Successfully recovered process ${recoveryItem.processName}`),
-          }
+            // // // // // // console.log(`✅ Successfully recovered process ${recoveryItem.processName}`);
+};
 ,
           this.recordRecoverySuccess(recoveryItem),
         } catch (error) {,
@@ -235,8 +235,8 @@ class ProcessRecoverySystem {,
               this.recoveryQueue.push(recoveryItem),
             }, delay),
           } else {,
-            this.recordRecoveryFailure(recoveryItem),
-          }
+            this.recordRecoveryFailure(recoveryItem);
+};
         }
       }
     } finally {,
@@ -267,8 +267,8 @@ class ProcessRecoverySystem {,
       default: await this.restartProcess(processName)}
 ,
     // Wait for process to stabilize,
-    await this.waitForProcessStability(processName),
-  }
+    await this.waitForProcessStability(processName);
+};
 ,
   /**,
    * Select recovery strategy based on issues,
@@ -305,8 +305,8 @@ class ProcessRecoverySystem {,
     return dependencies.some(dep => {,
       const depHealth = this.processHealth.get(dep),
       return depHealth && depHealth.status === 'stopped',
-    }),
-  }
+    });
+};
 ,
   /**,
    * Restart a process,
@@ -317,11 +317,11 @@ class ProcessRecoverySystem {,
         if (err) {,
           reject(err),
         } else {,
-          resolve(),
-        }
+          resolve();
+};
       }),
-    }),
-  }
+    });
+};
 ,
   /**,
    * Reload a process,
@@ -332,11 +332,11 @@ class ProcessRecoverySystem {,
         if (err) {,
           reject(err),
         } else {,
-          resolve(),
-        }
+          resolve();
+};
       }),
-    }),
-  }
+    });
+};
 ,
   /**,
    * Scale a process,
@@ -347,11 +347,11 @@ class ProcessRecoverySystem {,
         if (err) {,
           reject(err),
         } else {,
-          resolve(),
-        }
+          resolve();
+};
       }),
-    }),
-  }
+    });
+};
 ,
   /**,
    * Check and start dependencies,
@@ -365,8 +365,8 @@ class ProcessRecoverySystem {,
           await this.startProcess(dep),
           await this.waitForProcessStability(dep),
         } catch (error) {,
-          console.error(`Failed to start dependency ${dep}:`, error),
-        }
+          console.error(`Failed to start dependency ${dep}:`, error);
+};
       }
     }
   }
@@ -380,11 +380,11 @@ class ProcessRecoverySystem {,
         if (err) {,
           reject(err),
         } else {,
-          resolve(),
-        }
+          resolve();
+};
       }),
-    }),
-  }
+    });
+};
 ,
   /**,
    * Wait for process to stabilize,
@@ -398,11 +398,11 @@ class ProcessRecoverySystem {,
         return true,
       }
 ,
-      await new Promise(resolve => setTimeout(resolve, 1000)),
-    }
+      await new Promise(resolve => setTimeout(resolve, 1000));
+};
 ,
-    throw new Error(`Process ${processName} failed to stabilize within ${timeout}ms`),
-  }
+    throw new Error(`Process ${processName} failed to stabilize within ${timeout}ms`);
+};
 ,
   /**,
    * Calculate retry delay with exponential backoff,
@@ -413,8 +413,8 @@ class ProcessRecoverySystem {,
     }
 ,
     const delay = this.config.retryDelay * Math.pow(2, attempt - 1),
-    return Math.min(delay, this.config.maxBackoffDelay),
-  }
+    return Math.min(delay, this.config.maxBackoffDelay);
+};
 ,
   /**,
    * Record successful recovery,
@@ -429,11 +429,11 @@ class ProcessRecoverySystem {,
       issues: recoveryItem.issues}),
     // Keep only last 50 recovery attempts,
     if (history.length > 50) {,
-      history.splice(0, history.length - 50),
-    }
+      history.splice(0, history.length - 50);
+};
 ,
-    this.recoveryHistory.set(recoveryItem.processName, history),
-  }
+    this.recoveryHistory.set(recoveryItem.processName, history);
+};
 ,
   /**,
    * Record failed recovery,
@@ -448,11 +448,11 @@ class ProcessRecoverySystem {,
       error: 'Max recovery attempts exceeded'}),
     // Keep only last 50 recovery attempts,
     if (history.length > 50) {,
-      history.splice(0, history.length - 50),
-    }
+      history.splice(0, history.length - 50);
+};
 ,
-    this.recoveryHistory.set(recoveryItem.processName, history),
-  }
+    this.recoveryHistory.set(recoveryItem.processName, history);
+};
 ,
   /**,
    * Get PM2 processes,
@@ -463,11 +463,11 @@ class ProcessRecoverySystem {,
         if (err) {,
           reject(err),
         } else {,
-          resolve(processes),
-        }
+          resolve(processes);
+};
       }),
-    }),
-  }
+    });
+};
 ,
   /**,
    * Get recovery statistics,
@@ -495,12 +495,12 @@ class ProcessRecoverySystem {,
   async manualRecovery(processName) {,
     const health = this.processHealth.get(processName),
     if (!health) {,
-      throw new Error(`Process ${processName} not found in health monitoring`),
-    }
+      throw new Error(`Process ${processName} not found in health monitoring`);
+};
 ,
     if (!health.needsRecovery) {,
-      throw new Error(`Process ${processName} does not need recovery`),
-    }
+      throw new Error(`Process ${processName} does not need recovery`);
+};
 ,
     this.queueRecovery(processName, health.issues),
     return true,
@@ -512,8 +512,8 @@ class ProcessRecoverySystem {,
   updateConfig(newConfig) {,
     this.config = { ...this.config, ...newConfig },
     if (newConfig.processDependencies) {,
-      this.initializeDependencyGraph(),
-    }
+      this.initializeDependencyGraph();
+};
   }
 ,
   /**,
@@ -521,8 +521,8 @@ class ProcessRecoverySystem {,
    */,
   stop() {,
     this.isRecovering = false,
-    this.recoveryQueue.length = 0,
+    this.recoveryQueue.length = 0;
   }
 }
 ,
-module.exports = ProcessRecoverySystem,
+module.exports = ProcessRecoverySystem,'

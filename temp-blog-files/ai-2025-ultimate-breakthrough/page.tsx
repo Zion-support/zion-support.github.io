@@ -1,5 +1,5 @@
 
-export default function AI2025UltimateBreakthroughPage() {
+export default function AI2025UltimateBreakthroughPage() : any {
   return (
     <div>
       <SEO

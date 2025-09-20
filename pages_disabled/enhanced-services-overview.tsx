@@ -15,7 +15,7 @@ import UltraFuturisticBackground2035 from '../components/ui/UltraFuturisticBackg
 import UltraFuturisticNavigation2033 from '../components/layout/UltraFuturisticNavigation2033';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
 
-export default function EnhancedServicesOverview() {
+export default function EnhancedServicesOverview() : any {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -24,7 +24,7 @@ export default function EnhancedServicesOverview() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const serviceCategories = [
     {
@@ -237,7 +237,7 @@ export default function EnhancedServicesOverview() {
       href: '/emerging-tech',
       featured: false
     }
-  ];
+  ],
 
   const filteredCategories = serviceCategories.filter(category =>
     selectedCategory === 'all' || category.id === selectedCategory
@@ -251,7 +251,7 @@ export default function EnhancedServicesOverview() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -262,7 +262,7 @@ export default function EnhancedServicesOverview() {
         duration: 0.6
       }
     }
-  };
+  },
 
   return (
     <>
@@ -619,4 +619,4 @@ export default function EnhancedServicesOverview() {
       </UltraFuturisticBackground2035>
     </>
   );
-}
+  }

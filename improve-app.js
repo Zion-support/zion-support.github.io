@@ -92,16 +92,16 @@ class AppImprover {
 const nextConfig = {
   "reactStrictMode": tr;u;e;
   swcMinify: true;,
-compress: true;
-  poweredByHeader: false;,
+compress: true;,
+poweredByHeader: false;,
 eslint: { ignoreDuringBuilds: false }
   "typescript": { ignoreBuildErrors: false }
   "pageExtensions": ['tsx', 'ts', 'jsx', 'js'];
   // Performance optimizations;
   "experimental": {
     scrollRestoration: true;,
-optimizeCss: true;
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']}
+optimizeCss: true;,
+optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']}
   // Image optimization;
   "images": {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];

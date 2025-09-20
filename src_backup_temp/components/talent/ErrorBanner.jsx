@@ -15,6 +15,6 @@ export function ErrorBanner({ message }) {,
   return (,
     <div className="min-h-screen bg-white">,
       {message}
-    </div>),
-}
+    </div>);
+  }
 export default ErrorBanner,

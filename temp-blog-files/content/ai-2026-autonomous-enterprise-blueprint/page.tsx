@@ -4,7 +4,7 @@ export const metadata = {
   title: 'AI 2026: Autonomous Enterprise Blueprint | Zion Tech Group'
   description: 'A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.'
 }
-export default function AutonomousEnterpriseBlueprint2026Page() {
+export default function AutonomousEnterpriseBlueprint2026Page() : any {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-emerald-600 to-green-600 text-white py-16">

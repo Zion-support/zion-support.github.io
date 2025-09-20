@@ -4,7 +4,7 @@ export const metadata = {
   description:
     'Design resilient AI and agent systems with eval-gated rollouts, chaos drills, and safe-mode fallbacks.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
       <header className="mb-8">

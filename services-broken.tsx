@@ -7,7 +7,7 @@ import {,
 	Cloud,
 	Shield,
 	Code,
-export default function Services() {,
+export default function Services() : any {,
 	const title = \"Services — Zion Tech Group\",
 	const description = \"AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.\",
 	return (
@@ -285,4 +285,4 @@ export default function Services() {,
 		</>
 	)}
 
-}
+}"

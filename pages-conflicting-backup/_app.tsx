@@ -7,5 +7,5 @@ export default function App({ Component, pageProps }: AppProps) {
     <ModernLayout>
       <Component {...pageProps} />
     </ModernLayout>
-  ),
-}
+  );
+  }

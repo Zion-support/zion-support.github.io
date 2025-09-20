@@ -1,6 +1,6 @@
 import Link from 'next/link',
 import Head from 'next/head',
-export default function ApiReference() {,
+export default function ApiReference() : any {,
   return (,
     <>,
       <Head>,
@@ -217,5 +217,5 @@ export default function ApiReference() {,
         </div>,
       </div>,
     </>,
-  ),
-}
+  );
+  }'

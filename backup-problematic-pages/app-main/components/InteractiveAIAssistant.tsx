@@ -1,5 +1,5 @@
 import React from 'react'
-const InteractiveAIAssistant: React.FC = () => {;
+const InteractiveAIAssistant: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">InteractiveAIAssistant</h3>

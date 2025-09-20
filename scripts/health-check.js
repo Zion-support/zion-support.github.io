@@ -24,12 +24,12 @@ class HealthChecker {,
   }
 ,
   log(message, color = 'reset') {,
-    console.log(`${colors[color]}${message}${colors.reset}`),
-  }
+    console.log(`${colors[color]}${message}${colors.reset}`);
+};
 ,
   addCheck(name, checkFn) {,
-    this.checks.push({ name, checkFn }),
-  }
+    this.checks.push({ name, checkFn });
+};
 ,
   async runChecks() {,
     this.log('🏥 Starting health checks...cyan'),
@@ -52,8 +52,8 @@ class HealthChecker {,
       }
     }
 ,
-    this.generateReport(),
-  }
+    this.generateReport();
+};
 ,
   generateReport() {,
     const total = this.results.passed + this.results.failed + this.results.warnings,
@@ -70,8 +70,8 @@ class HealthChecker {,
     } else if (healthScore >= 50) {,
       this.log(`\n⚠️  Health Score: ${healthScore}% - Needs attention`, 'yellow'),
     } else {,
-      this.log(`\n🚨 Health Score: ${healthScore}% - Critical issues found`, 'red'),
-    }
+      this.log(`\n🚨 Health Score: ${healthScore}% - Critical issues found`, 'red');
+};
   }
 ,
   // Health check functions,
@@ -97,8 +97,8 @@ class HealthChecker {,
     const missingFiles = [],
     for (const file of requiredFiles) {,
       if (!existsSync(file)) {,
-        missingFiles.push(file),
-      }
+        missingFiles.push(file);
+};
     }
 ,
     if (missingFiles.length > 0) {,
@@ -223,7 +223,7 @@ class HealthChecker {,
     this.addCheck('Environment files', () => this.checkEnvironmentFiles()),
     this.addCheck('Git repository', () => this.checkGitConfig()),
     this.addCheck('Build scripts', () => this.checkBuildScripts()),
-    await this.runChecks(),
+    await this.runChecks();
   }
 }
 ,

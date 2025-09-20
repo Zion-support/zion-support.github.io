@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
 
 
-export default function Contact() {
+export default function Contact() : any {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
 		company: '',
 		message: ''
-	})
-	const [isSubmitted, setIsSubmitted] = useState(false)
+	});
 
-	const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+	const handleSubmit = (e: React.FormEvent) : any => {
 		e.preventDefault()
 		// Here you would typically send the form data to your backend
 		console.log('Form submitted:', formData)
@@ -24,7 +25,7 @@ export default function Contact() {
 		}, 3000)
 	}
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) : any => {
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value
@@ -209,4 +210,4 @@ export default function Contact() {
 			</section>
 		</>
 	)
-}
+}'

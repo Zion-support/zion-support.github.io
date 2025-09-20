@@ -24,8 +24,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -63,8 +63,8 @@ logger.info('✅ Fixed syntax errors in ai-optimizer.js'),
 ,
   stop() {,
     this.isRunning = false,
-    console.log('Stopping Script...'),
-  }
+    console.log('Stopping Script...');
+};
 }
 ,
 // Start the script,
@@ -73,8 +73,8 @@ if (require.main === module) {,
   script.start().catch(error => {,
     console.error('Failed to start Script:', error),
     process.exit(1),
-  }),
-}
+  });
+};
 ,
 module.exports = Script,
 // Graceful shutdown handling,

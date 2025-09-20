@@ -50,5 +50,5 @@ exports.handler = async () => {,
   step('repo:radar-metrics', () => runNode('automation/repo-radar-metrics.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
-},
-}
+};
+  }

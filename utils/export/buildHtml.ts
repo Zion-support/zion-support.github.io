@@ -7,9 +7,8 @@
     .replace(/'/g, '&#039,'),
   } catch (error) {,
     console.error("Error:", error),
-    return res.status(500).json({ error: "Internal server error" }),
-  }
-
+    return res.status(500).json({ error: "Internal server error" });
+};
 }
 
 }
@@ -111,6 +110,6 @@ export function buildPrintableHtml(project: BookProject): string {,
   ${visualsHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
 </body>,
-</html>`,
-}
-,
+</html>`;
+  }
+,'

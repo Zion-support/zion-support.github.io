@@ -79,6 +79,6 @@ exports.handler = async function(event, context) {
         function: 'docs-index-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

@@ -48,8 +48,8 @@ class CodeCleanup {,
       console.log('✅ Code cleanup completed successfully!'),
     } catch (error) {,
       console.error('❌ Code cleanup failed:', error.message),
-      this.errors.push(error.message),
-    }
+      this.errors.push(error.message);
+};
   }
 ,
   async cleanupBackupFiles() {,
@@ -66,8 +66,8 @@ class CodeCleanup {,
             this.removedFiles.push(file),
             console.log(`   Removed: ${file}`),
           } catch (error) {,
-            this.errors.push(`Failed to remove ${file}: ${error.message}`),
-          }
+            this.errors.push(`Failed to remove ${file}: ${error.message}`);
+};
         }
       }
     }
@@ -77,16 +77,16 @@ class CodeCleanup {,
     console.log('📁 Organizing components...'),
     const componentsDir = path.join(process.cwd(), cleanupConfig.directories.components),
     if (!fs.existsSync(componentsDir)) {,
-      fs.mkdirSync(componentsDir, { recursive: true }),
-    }
+      fs.mkdirSync(componentsDir, { recursive: true });
+};
 ,
     // Create subdirectories for different component types,
     const subdirs = ['uilayoutformscharts', 'navigation'],
     for (const subdir of subdirs) {,
       const subdirPath = path.join(componentsDir, subdir),
       if (!fs.existsSync(subdirPath)) {,
-        fs.mkdirSync(subdirPath, { recursive: true }),
-      }
+        fs.mkdirSync(subdirPath, { recursive: true });
+};
     }
   }
 ,
@@ -94,16 +94,16 @@ class CodeCleanup {,
     console.log('📄 Organizing pages...'),
     const pagesDir = path.join(process.cwd(), cleanupConfig.directories.pages),
     if (!fs.existsSync(pagesDir)) {,
-      fs.mkdirSync(pagesDir, { recursive: true }),
-    }
+      fs.mkdirSync(pagesDir, { recursive: true });
+};
 ,
     // Create subdirectories for different page types,
     const subdirs = ['authdashboardprofilesettings', 'admin'],
     for (const subdir of subdirs) {,
       const subdirPath = path.join(pagesDir, subdir),
       if (!fs.existsSync(subdirPath)) {,
-        fs.mkdirSync(subdirPath, { recursive: true }),
-      }
+        fs.mkdirSync(subdirPath, { recursive: true });
+};
     }
   }
 ,
@@ -111,8 +111,8 @@ class CodeCleanup {,
     console.log('🔧 Organizing utilities...'),
     const utilsDir = path.join(process.cwd(), cleanupConfig.directories.utils),
     if (!fs.existsSync(utilsDir)) {,
-      fs.mkdirSync(utilsDir, { recursive: true }),
-    }
+      fs.mkdirSync(utilsDir, { recursive: true });
+};
 ,
     // Create utility files,
     const utilityFiles = [,
@@ -123,8 +123,8 @@ class CodeCleanup {,
       const filePath = path.join(utilsDir, file),
       if (!fs.existsSync(filePath)) {,
         fs.writeFileSync(filePath, `// ${file}\n// Utility functions\n\n`),
-        console.log(`   Created: ${filePath}`),
-      }
+        console.log(`   Created: ${filePath}`);
+};
     }
   }
 ,
@@ -132,8 +132,8 @@ class CodeCleanup {,
     console.log('🔄 Updating imports...'),
     // This would typically involve updating import statements,
     // to use the new organized structure,
-    console.log('   Import updates would be implemented here'),
-  }
+    console.log('   Import updates would be implemented here');
+};
 ,
   getAllFiles(dir, fileList = []) {,
     const files = fs.readdirSync(dir),
@@ -143,11 +143,11 @@ class CodeCleanup {,
       if (stat.isDirectory()) {,
         // Skip node_modules and other directories,
         if (!['node_modules.gitdistbuild'].includes(file)) {,
-          this.getAllFiles(filePath, fileList),
-        }
+          this.getAllFiles(filePath, fileList);
+};
       } else {,
-        fileList.push(filePath),
-      }
+        fileList.push(filePath);
+};
     }
 ,
     return fileList,
@@ -160,8 +160,8 @@ class CodeCleanup {,
     console.log(`   Errors: ${this.errors.length}`),
     if (this.errors.length > 0) {,
       console.log('\n❌ Errors: '),
-      this.errors.forEach(error => console.log(`   - ${error}`)),
-    }
+      this.errors.forEach(error => console.log(`   - ${error}`));
+};
 ,
     // Save report to file,
     const report = {,
@@ -172,14 +172,14 @@ class CodeCleanup {,
     fs.writeFileSync(,
       path.join(process.cwd(), 'cleanup-report.json'),
       JSON.stringify(report, null, 2),
-    ),
-  }
+    );
+};
 }
 ,
 // Run the cleanup,
 if (import.meta.url === `file: //${process.argv[1]}`) {,
   const cleanup = new CodeCleanup(),
-  cleanup.run().catch(console.error),
-}
+  cleanup.run().catch(console.error);
+  }
 ,
 export default CodeCleanup,

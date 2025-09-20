@@ -10,10 +10,10 @@ import { MetadataOptimizer } from './lib/metadata-advanced';
 import { generateAdvancedSEO } from './lib/seo-advanced';
 
 export class ComprehensiveImprovementsManager {
-  private analytics: AnalyticsManager;
-  private accessibility: AccessibilityManager;
-  private performance: PerformanceMonitor;
-  private metadata: MetadataOptimizer;
+  private analytics: AnalyticsManager,
+  private accessibility: AccessibilityManager,
+  private performance: PerformanceMonitor,
+  private metadata: MetadataOptimizer,
 
   constructor() {
     this.analytics = new AnalyticsManager();
@@ -29,7 +29,8 @@ export class ComprehensiveImprovementsManager {
       ogImage: 'https://zion.app/og-image.svg',
       ogType: 'website',
       twitterCard: 'summary_large_image',
-      author: 'Zion Holdings'});
+      author: 'Zion Holdings',
+    });
   }
 
   public async initializeAllImprovements() {
@@ -70,11 +71,13 @@ export class ComprehensiveImprovementsManager {
           firstContentfulPaint: loadTime,
           largestContentfulPaint: loadTime,
           firstInputDelay: 0,
-          cumulativeLayoutShift: 0});
+          cumulativeLayoutShift: 0,
+        });
         
         this.analytics.trackPerformance({
           pageLoadTime: loadTime,
-          domContentLoaded: performance.getEntriesByType('navigation')[0]?.domContentLoadedEventEnd || 0});
+          domContentLoaded: performance.getEntriesByType('navigation')[0]?.domContentLoadedEventEnd || 0,
+        });
       });
     }
   }
@@ -104,7 +107,7 @@ export class ComprehensiveImprovementsManager {
     // Track performance metrics
     setTimeout(() => {
       const metrics = this.performance.getMetrics();
-      this.analytics.trackPerformance(metrics as Record<string number>);
+      this.analytics.trackPerformance(metrics as Record<string, number>);
     }, 1000);
     
     // Track user engagement
@@ -123,7 +126,8 @@ export class ComprehensiveImprovementsManager {
     // Add breadcrumb structured data for navigation
     const breadcrumbs = [
       { name: 'Home', url: 'https://zion.app' },
-      { name: 'AI Solutions', url: 'https://zion.app/services' }];
+      { name: 'AI Solutions', url: 'https://zion.app/services' },
+    ];
     this.metadata.generateBreadcrumbStructuredData(breadcrumbs);
   }
 
@@ -133,21 +137,25 @@ export class ComprehensiveImprovementsManager {
     const performanceReport = {
       metrics: this.performance.getMetrics(),
       score: this.performance.getPerformanceScore(),
-      recommendations: this.generatePerformanceRecommendations()};
+      recommendations: this.generatePerformanceRecommendations();
+  };
     
     const accessibilityReport = {
       config: this.accessibility.getConfig(),
       score: this.calculateAccessibilityScore(),
-      recommendations: this.generateAccessibilityRecommendations()};
+      recommendations: this.generateAccessibilityRecommendations();
+  };
     
     const analyticsReport = {
       userMetrics: this.analytics.getUserMetrics(),
-      events: this.analytics.getEvents()};
+      events: this.analytics.getEvents();
+  };
     
     const seoReport = {
       metadata: this.metadata.generateOptimizedMetadata(),
       structuredData: this.metadata.generateStructuredDataScript(),
-      metaTags: this.metadata.generateMetaTags()};
+      metaTags: this.metadata.generateMetaTags();
+  };
     
     // Store reports for analysis
     this.storeReports({
@@ -155,7 +163,8 @@ export class ComprehensiveImprovementsManager {
       accessibility: accessibilityReport,
       analytics: analyticsReport,
       seo: seoReport,
-      timestamp: new Date().toISOString()});
+      timestamp: new Date().toISOString(),
+    });
   }
 
   private createSkipLinks() {
@@ -173,24 +182,24 @@ export class ComprehensiveImprovementsManager {
     const style = document.createElement('style');
     style.textContent = `
       .skip-links {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        z-index: 1000;
+        position: absolute,
+        top: -40px,
+        left: 6px,
+        z-index: 1000,
       }
       .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #000;
-        color: #fff;
-        padding: 8px;
-        text-decoration: none;
-        z-index: 1000;
-        border-radius: 4px;
+        position: absolute,
+        top: -40px,
+        left: 6px,
+        background: #000,
+        color: #fff,
+        padding: 8px,
+        text-decoration: none,
+        z-index: 1000,
+        border-radius: 4px,
       }
-      .skip-link:focus {
-        top: 6px;
+      .skip-link: focus {
+        top: 6px,
       }
     `;
     
@@ -223,8 +232,8 @@ export class ComprehensiveImprovementsManager {
     const style = document.createElement('style');
     style.textContent = `
       *:focus {
-        outline: 2px solid #0066cc;
-        outline-offset: 2px;
+        outline: 2px solid #0066cc,
+        outline-offset: 2px,
       }
       .btn:focus,
       button:focus {
@@ -249,7 +258,7 @@ export class ComprehensiveImprovementsManager {
     
     // Track engagement on user interaction
     ['click', 'scroll', 'keydown', 'touchstart'].forEach(event => {
-      document.addEventListener(event, trackEngagement, { once: true });
+      document.addEventListener(event, trackEngagement, { once: true }),
     });
     
     // Track engagement end
@@ -263,7 +272,7 @@ export class ComprehensiveImprovementsManager {
 
   private generatePerformanceRecommendations(): string[] {
     const metrics = this.performance.getMetrics();
-    const recommendations: string[] = [];
+    const recommendations: string[] = [],
     
     if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 1800) {
       recommendations.push('Optimize critical rendering path and reduce server response time');
@@ -314,18 +323,23 @@ export class ComprehensiveImprovementsManager {
     return {
       performance: {
         score: this.performance.getPerformanceScore(),
-        metrics: this.performance.getMetrics()},
+        metrics: this.performance.getMetrics(),
+      },
       accessibility: {
         config: this.accessibility.getConfig(),
-        score: this.calculateAccessibilityScore()},
+        score: this.calculateAccessibilityScore(),
+      },
       analytics: {
         userMetrics: this.analytics.getUserMetrics(),
-        eventCount: this.analytics.getEvents().length},
+        eventCount: this.analytics.getEvents().length,
+      },
       seo: {
         metadata: this.metadata.generateOptimizedMetadata(),
-        hasStructuredData: true},
+        hasStructuredData: true,
+      },
       status: 'All improvements active and functioning',
-      timestamp: new Date().toISOString()};
+      timestamp: new Date().toISOString();
+  };
   }
 
   public cleanup() {

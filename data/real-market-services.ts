@@ -1,44 +1,44 @@
 import { ServiceVariant } from '../types/service-variants';
 
 export interface RealMarketService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string,
   };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
 }
 
 const contact = {
@@ -46,7 +46,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const realMarketServices: RealMarketService[] = [
   {
@@ -72,7 +72,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-gateway',
-    marketPosition: 'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.',
+    marketPosition: 'Comparable to OpenRouter (usage-based) and EdenAI, adds enterprise guardrails and governance.',
     targetAudience: 'Product teams, platform engineering, data/AI teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -115,7 +115,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/api-observability-starter',
-    marketPosition: 'Alternative to building in-house; complements Datadog and Grafana Cloud.',
+    marketPosition: 'Alternative to building in-house, complements Datadog and Grafana Cloud.',
     targetAudience: 'Backend engineers, SREs, platform teams',
     trialDays: 7,
     setupTime: '1 day',
@@ -157,7 +157,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/email-deliverability-monitor',
-    marketPosition: 'Complements ESPs with vendor-agnostic monitoring and playbooks; alternatives include Mailgun, SendGrid add-ons.',
+    marketPosition: 'Complements ESPs with vendor-agnostic monitoring and playbooks, alternatives include Mailgun, SendGrid add-ons.',
     targetAudience: 'Growth, marketing ops, and platform teams',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -204,7 +204,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/affiliate-attribution-hub',
-    marketPosition: 'Lightweight alternative to enterprise affiliate suites; integrates with modern stacks.',
+    marketPosition: 'Lightweight alternative to enterprise affiliate suites, integrates with modern stacks.',
     targetAudience: 'SaaS and eCommerce teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -298,7 +298,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/smb-analytics-starter',
-    marketPosition: 'Lightweight alternative to GA4 for SMBs; faster to value.',
+    marketPosition: 'Lightweight alternative to GA4 for SMBs, faster to value.',
     targetAudience: 'Small businesses and startups',
     trialDays: 7,
     setupTime: '15 minutes',
@@ -307,7 +307,7 @@ export const realMarketServices: RealMarketService[] = [
     technology: ['Next.js, Edge analytics'],
     integrations: ['Google Ads, Meta Ads'],
     useCases: ['Track campaigns, Monitor conversions, Detect anomalies'],
-    roi: 'Save setup time and make faster decisions; reduce tooling complexity.',
+    roi: 'Save setup time and make faster decisions, reduce tooling complexity.',
     competitors: ['Plausible, Fathom, Simple Analytics'],
     marketSize: '$1B SMB analytics',
     growthRate: '14% YoY',
@@ -431,7 +431,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/vector-search-starter',
-    marketPosition: 'Accelerator vs DIY; complements vendor docs with turnkey wiring.',
+    marketPosition: 'Accelerator vs DIY, complements vendor docs with turnkey wiring.',
     targetAudience: 'Data engineers, ML engineers, startups',
     trialDays: 7,
     setupTime: '1–2 days',
@@ -651,7 +651,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/mlops-foundations',
-    marketPosition: 'Comparable to Databricks/Mlflow PS; faster implementation with opinionated templates.',
+    marketPosition: 'Comparable to Databricks/Mlflow PS, faster implementation with opinionated templates.',
     targetAudience: 'Data science, ML platform teams',
     trialDays: 7,
     setupTime: '2–4 weeks',
@@ -696,7 +696,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-teal-600 to-emerald-700',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/feature-store-starter',
-    marketPosition: 'Accelerator vs building from scratch; complements Feast and vendor offerings.',
+    marketPosition: 'Accelerator vs building from scratch, complements Feast and vendor offerings.',
     targetAudience: 'ML platform, data engineering',
     trialDays: 7,
     setupTime: '2–3 weeks',
@@ -741,7 +741,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/experiment-tracking-starter',
-    marketPosition: 'Comparable to W&B lightweight plans; self-hosted or cloud.',
+    marketPosition: 'Comparable to W&B lightweight plans, self-hosted or cloud.',
     targetAudience: 'ML teams, startups',
     trialDays: 14,
     setupTime: '3–5 days',
@@ -786,7 +786,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-rose-600 to-pink-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/llm-evals-guardrails',
-    marketPosition: 'Comparable to Lakera Guard and Security Copilot controls; integrated into build pipelines.',
+    marketPosition: 'Comparable to Lakera Guard and Security Copilot controls, integrated into build pipelines.',
     targetAudience: 'AI platform teams, product owners',
     trialDays: 7,
     setupTime: '1–2 weeks',
@@ -876,7 +876,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-sky-600 to-cyan-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/cloud-migration-factory',
-    marketPosition: 'Comparable to vendor PS; focused on speed and safety for SMB workloads.',
+    marketPosition: 'Comparable to vendor PS, focused on speed and safety for SMB workloads.',
     targetAudience: 'CTOs, platform leaders',
     trialDays: 0,
     setupTime: '3–6 weeks',
@@ -921,7 +921,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/shopify-speed-optimizer',
-    marketPosition: 'Competes with agency retainer models; results-oriented with CWV metrics.',
+    marketPosition: 'Competes with agency retainer models, results-oriented with CWV metrics.',
     targetAudience: 'E-commerce managers, DTC brands',
     trialDays: 0,
     setupTime: '2–3 weeks',
@@ -1063,7 +1063,7 @@ export const realMarketServices: RealMarketService[] = [
     technology: ['Node.js, Airflow/dbt optional, OAuth'],
     integrations: ['Snowflake, BigQuery, Postgres, HubSpot, Salesforce'],
     useCases: ['Activation, Lead scoring, Audiences'],
-    roi: 'Ship activation in days; lift campaign ROI 10–20%',
+    roi: 'Ship activation in days, lift campaign ROI 10–20%',
     competitors: ['Hightouch, Census'],
     marketSize: '$1B reverse ETL',
     growthRate: '30% YoY',
@@ -1100,7 +1100,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/ai-rfp-response-copilot',
-    marketPosition: 'Purpose-built for proposal teams; governance and citations built-in.',
+    marketPosition: 'Purpose-built for proposal teams, governance and citations built-in.',
     targetAudience: 'Sales engineering, proposal teams, compliance',
     trialDays: 14,
     setupTime: '1 day',
@@ -1109,7 +1109,7 @@ export const realMarketServices: RealMarketService[] = [
     technology: ['Embeddings, Vector DB, OpenAI-compatible'],
     integrations: ['SharePoint, Google Drive, Confluence'],
     useCases: ['Faster RFPs, Better consistency, Higher win rate'],
-    roi: 'Cut response time 40–60%; improve win rates',
+    roi: 'Cut response time 40–60%, improve win rates',
     competitors: ['Loopio, RFPIO (assist modules)'],
     marketSize: '$1B RFP tooling',
     growthRate: '20% YoY',
@@ -1367,7 +1367,7 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/soc2-evidence-automation',
-    marketPosition: 'Practical compliance automation; complements Vanta/Drata with deeper evidence collectors.',
+    marketPosition: 'Practical compliance automation, complements Vanta/Drata with deeper evidence collectors.',
     targetAudience: 'Security and compliance teams',
     trialDays: 7,
     setupTime: '1–3 days',
@@ -1635,4 +1635,4 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.5,
     reviews: 12
   }
-];
+],

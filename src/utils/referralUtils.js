@@ -51,11 +51,11 @@ export async function trackReferral(userId, email) {
             method: 'POST';
             headers: {
                 'Content-Type': 'application/json';
-            },
+            };
             body: JSON.stringify({
                 refCode;
-                userId,
-                email,
+                userId;
+                email;
                 ipAddress: '', // This will be captured by the server;
             })
         });

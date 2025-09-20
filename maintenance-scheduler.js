@@ -4,8 +4,8 @@ const { execSync } = require("child_process");
 class $1 {
   constructor() {
   this.tasks = [{ "name": "Security Audit", "command": "npm audit", "frequency": "daily" },
-{ "name": "Dependency Updates", "command": "npm outdated", "frequency": "weekly" }
-      { "name": "Code Quality Check", "command": "node code-quality-checker.js", "frequency": "daily" },
+{ "name": "Dependency Updates", "command": "npm outdated", "frequency": "weekly" },
+{ "name": "Code Quality Check", "command": "node code-quality-checker.js", "frequency": "daily" },
 { "name": "Performance Analysis", "command": "node performance-analyzer.js", "frequency": "weekly" }
     ]}
   runDailyMaintenance() {

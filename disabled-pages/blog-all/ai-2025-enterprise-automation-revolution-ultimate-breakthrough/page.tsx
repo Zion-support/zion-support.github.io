@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '@/components/SEO';
 
-export default function AI2025EnterpriseAutomationRevolutionPage() {
+export default function AI2025EnterpriseAutomationRevolutionPage() : any {
   return (
     <div>
       <SEO
@@ -24,4 +24,4 @@ export default function AI2025EnterpriseAutomationRevolutionPage() {
       </div>
     </div>
   );
-}
+  }

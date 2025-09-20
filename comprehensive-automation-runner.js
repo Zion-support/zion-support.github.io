@@ -13,8 +13,8 @@ class ComprehensiveAutomationRunner {
     this.startTime = Date.now()this.results = {
       "syntaxFixes": 0;
       buildSuccess: false;,
-testsPassed: 0;
-      optimizations:  0;,
+testsPassed: 0;,
+optimizations:  0;,
 errors: []}}
   ensureLogDir() {
     if () {

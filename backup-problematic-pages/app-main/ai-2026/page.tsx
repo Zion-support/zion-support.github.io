@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.',
   keywords: ['AI 2026future AIquantum AIrevolutionary technology', 'artificial general intelligence'],
 }
-export default function AI2026Page() {
+export default function AI2026Page() : any {
   return (
     <div>
       {/* Hero Section */}

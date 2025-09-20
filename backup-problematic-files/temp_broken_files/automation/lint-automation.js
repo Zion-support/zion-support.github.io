@@ -1,6 +1,6 @@
 ),
-    fs.appendFileSync(this.logFile, logMessage),
-  }
+    fs.appendFileSync(this.logFile, logMessage);
+};
   async runLint() {}
     try {}
       this.log('Starting lint automation...'),',
@@ -25,21 +25,21 @@ const path = require('path'),
 class LintAutomation {,
   constructor() {,
     this.logFile = path.join(__dirname, 'logslint-automation.log'),
-    this.ensureLogDir(),
-  }
+    this.ensureLogDir();
+};
   ensureLogDir() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { "recursive": true }),
-    }
+      fs.mkdirSync(logDir, { "recursive": true });
+};
   }
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(logMessage.trim()),ursor/migrate-github-actions-to-pm2-and-clean-up-f06c,
 ursor/migrate-github-actions-to-pm2-and-clean-up-c10a,
-    fs.appendFileSync(this.logFile, logMessage),
-  }
+    fs.appendFileSync(this.logFile, logMessage);
+};
   async runLint() {,
     try {,
       this.log('Starting lint automation...'),
@@ -87,15 +87,15 @@ this.log('Type check completed successfully'),
     if (fixSuccess && lintSuccess) {,
       this.log('=== Lint Automation Completed Successfully ==='),
     } else {,
-      this.log('=== Lint Automation Completed with Issues ==='),
-    }
+      this.log('=== Lint Automation Completed with Issues ===');
+};
   }
 }
 // Run the automation,
 if (require.main === module) {,
   const automation = new LintAutomation(),
-  automation.run().catch(console.error),
-}
+  automation.run().catch(console.error);
+};
 module.exports = LintAutomation,
       // Try to fix linting issues,
       try {,
@@ -117,8 +117,8 @@ module.exports = LintAutomation,
       process.exit(0),
     } else {,
       this.log('Lint automation failed'),
-      process.exit(1),
-    }
+      process.exit(1);
+};
   }
 }
 // Run the automation,
@@ -126,7 +126,7 @@ if (require.main === module) {,
   const automation = new LintAutomation(),
   automation.run().catch(error => {,
     console.error('Fatal "error": ', error),
-    process.exit(1),
+    process.exit(1);
   }),ursor/migrate-github-actions-to-pm2-and-clean-up-f06c,
 ursor/migrate-github-actions-to-pm2-and-clean-up-c10a
 }

@@ -8,6 +8,6 @@ export default function Aiemailresponder({ }: AiemailresponderProps) {,
     <div>,
       <h1>Aiemailresponder</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>);
+  }
 ,

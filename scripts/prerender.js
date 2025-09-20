@@ -25,7 +25,7 @@ async function prerender() {
   });
 
   const text = result.outputFiles[0].text;
-  const mod = await import(`data:text/javascript;base64,${Buffer.from(text).toString('base64')}`);
+  const mod = await import(`data:text/javascript,base64,${Buffer.from(text).toString('base64')}`);
   const Home = mod.default;
   const html = renderToString(React.createElement(Home));
 

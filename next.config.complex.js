@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */;
 const nextConfig = {reactStrictMode: true;,
-compress: true;
-  poweredByHeader: false;,
+compress: true;,
+poweredByHeader: false;,
 eslint: { ignoreDuringBuilds: true },
 typescript: { ignoreBuildErrors: true },
 pageExtensions: ['tsxtsjsxjs'];

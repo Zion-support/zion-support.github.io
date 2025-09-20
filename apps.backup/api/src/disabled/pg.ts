@@ -5,8 +5,8 @@ let pool: typeof Pool | null = null,
 
 export function getPool(): typeof Pool {
   if (!pool) {
-    pool = new Pool({ connectionString: process.env.DATABASE_URL }),
-  }
+    pool = new Pool({ connectionString: process.env.DATABASE_URL });
+};
   return pool,
 }
 
@@ -22,6 +22,6 @@ export async function withUser<T>(userId: string, fn: (client: typeof PoolClient
     await client.query('ROLLBACK'),
     throw err,
   } finally {
-    client.release(),
+    client.release();
   }
 }

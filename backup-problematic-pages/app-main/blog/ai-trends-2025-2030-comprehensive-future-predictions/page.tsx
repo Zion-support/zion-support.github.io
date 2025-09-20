@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Discover the revolutionary AI trends that will reshape business, technology, and society from 2025-2030. Expert predictions, implementation strategies, and ROI insights.'
 }
 
-export default function AITrends2025_2030Page() {
+export default function AITrends2025_2030Page() : any {
   return (
     <div>
       <div className="min-h-screen bg-gray-900 text-white">

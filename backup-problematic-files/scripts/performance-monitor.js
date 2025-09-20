@@ -34,8 +34,8 @@ try {,
     if (sizeInMB < 50) {,
       console && console.log('✅ Build size is within acceptable limits'),
     } else {,
-      console && console.log('⚠️  Build size is large, consider optimization'),
-    }
+      console && console.log('⚠️  Build size is large, consider optimization');
+};
   }
 try {,
   // Bundle analysis,
@@ -53,24 +53,24 @@ try {,
       recommendations.push('Consider code splitting to reduce bundle size'),
     const reportPath = path && path.join(process && process.cwd(), 'performance-report && report.json'),
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
-    console && console.log('Performance report generated:', reportPath),
-  }
-    console && console.log('Performance report generated:', reportPath),
-  }
-    console && console.log('Performance report generated:', reportPath),
-  }
-    console && console.log('Performance report generated:', reportPath),
-  }
+    console && console.log('Performance report generated:', reportPath);
+};
+    console && console.log('Performance report generated:', reportPath);
+};
+    console && console.log('Performance report generated:', reportPath);
+};
+    console && console.log('Performance report generated:', reportPath);
+};
     console && console.log('Performance report "generated": ', reportPath)}
   generateRecommendations() {,
     const recommendations = [],
     if (this && this.metrics.bundleSize > 1000000) {,
-      recommendations && recommendations.push('Consider code splitting to reduce bundle size'),
-    }
+      recommendations && recommendations.push('Consider code splitting to reduce bundle size');
+};
     if (this && this.metrics.memoryUsage > 100) {,
-      recommendations && recommendations.push('High memory usage detected, consider optimization'),
-    }
-    return recommendations,
+      recommendations && recommendations.push('High memory usage detected, consider optimization');
+};
+    return recommendations;
   }
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (this.metrics.memoryUsage > 100) {,
@@ -92,4 +92,4 @@ if (performanceScore < 80) {,
   "score": performanceScore,
   "checks": performanceChecks,
   "recommendations": []},
-if (performanceScore < 80) {,
+if (performanceScore < 80) {,'

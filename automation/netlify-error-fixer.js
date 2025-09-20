@@ -17,8 +17,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  ),
-}
+  );
+};
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -39,8 +39,8 @@ class NetlifyErrorFixer {,
 ,
   log(message, level = 'info') {,
     const timestamp = new Date().toISOString(),
-    logger.info(`[${timestamp}] [${level.toUpperCase()}] ${message}`),
-  }
+    logger.info(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
+};
 ,
   async fixError(errorType) {,
     if (!this.fixStrategies[errorType]) {,
@@ -182,8 +182,8 @@ NODE_ENV=production,
   async applyAllFixes() {,
     const results = {},
     for (const errorType of Object.keys(this.fixStrategies)) {,
-      results[errorType] = await this.fixError(errorType),
-    }
+      results[errorType] = await this.fixError(errorType);
+};
     return results,
   }
 }
@@ -203,8 +203,8 @@ if (require.main === module) {,
       } else {,
         fixer.applyAllFixes().then((results) => {,
           logger.info(JSON.stringify(results, null, 2)),
-        }),
-      }
+        });
+};
       break,
     default: logger.info('Usage: node netlify-error-fixer.js fix [error-type]'),
       logger.info(,
@@ -224,5 +224,5 @@ process.on('SIGINT', () => {,
 process.on('SIGTERM', () => {,
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0),
-}),
+  process.exit(0);
+  }),

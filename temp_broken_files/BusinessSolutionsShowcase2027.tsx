@@ -314,4 +314,4 @@ const BusinessSolutionsShowcase2027 = () => {,
       </div>,
     </div>,
   )},
-export default BusinessSolutionsShowcase2027,
+export default BusinessSolutionsShowcase2027,'

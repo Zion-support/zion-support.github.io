@@ -10,7 +10,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 
-export default function NewsPage() {
+export default function NewsPage() : any {
   const newsArticles = [
     {
       id: 1,
@@ -150,7 +150,7 @@ export default function NewsPage() {
     ? newsArticles 
     : newsArticles.filter(article => article.category === selectedCategory),
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string) : any => {
     const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -168,4 +168,5 @@ const news: React.FC = () => {
   )
 },
 
-export default news,
+export default news;
+  }'

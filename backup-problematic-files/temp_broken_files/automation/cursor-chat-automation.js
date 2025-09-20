@@ -33,16 +33,16 @@ class CursorChatAutomation {,
       sessionsCreated: 0,
       sessionsTerminated: 0,
       startTime: null},
-    this.log('Cursor Chat Automation initialized'),
-  }
+    this.log('Cursor Chat Automation initialized');
+};
       "totalCommands": 0,
       "successfulCommands": 0,
       "failedCommands": 0,
       "sessionsCreated": 0,
       "sessionsTerminated": 0,
       "startTime": null},
-    this.log('Cursor Chat Automation initialized'),
-  }
+    this.log('Cursor Chat Automation initialized');
+};
   /**,
    * Log messages with timestamp,
    */,
@@ -55,8 +55,8 @@ class CursorChatAutomation {,
       fs.appendFileSync(this.config.logFile, logEntry + '\n'),
     } catch (error) {,
       console.error('Failed to write to log file:', error.message),
-      console.error('Failed to write to log "file": ', error.message),
-    }
+      console.error('Failed to write to log "file": ', error.message);
+};
   }
   /**,
    * Create a new Cursor chat session,
@@ -81,8 +81,8 @@ class CursorChatAutomation {,
       this.stats.sessionsCreated++,
       this.log(`Session ${sessionId} "created": ${sessionConfig.name}`),
       if (sessionConfig.autoProceed) {,
-        this.startSessionAutomation(sessionId),
-      }
+        this.startSessionAutomation(sessionId);
+};
       return session,
     } catch (error) {,
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR'),
@@ -123,21 +123,21 @@ class CursorChatAutomation {,
           'ERROR'),
         session.errors++,
         // Continue despite errors,
-        setTimeout(() => runSession(), session.config.interval),
-      }
+        setTimeout(() => runSession(), session.config.interval);
+};
     },
     // Start the automation loop,
     runSession(),
-    this.log(`Automation started for session ${sessionId}`),
-  }
+    this.log(`Automation started for session ${sessionId}`);
+};
   /**,
    * Send "proceed" command to a specific session,
    */,
   async sendProceedCommand(sessionId) {,
     const session = this.sessions.get(sessionId),
     if (!session) {,
-      throw new Error(`Session ${sessionId} not found`),
-    }
+      throw new Error(`Session ${sessionId} not found`);
+};
     try {,
       // Simulate sending "proceed" command to Cursor,
       // This could be enhanced with actual Cursor API integration,
@@ -187,11 +187,11 @@ class CursorChatAutomation {,
           // 5% failure rate,
           reject(new Error('Simulated command failure')),
         } else {,
-          resolve({ "success": true, sessionId, command }),
-        }
+          resolve({ "success": true, sessionId, command });
+};
       }, delay),
-    }),
-  }
+    });
+};
   /**,
    * Start the automation system,
    */,
@@ -206,19 +206,19 @@ class CursorChatAutomation {,
     // Start automation for all active sessions,
     for (const [sessionId, session] of this.sessions) {,
       if (session.status === 'active' && session.config.autoProceed) {,
-        this.startSessionAutomation(sessionId),
-      }
+        this.startSessionAutomation(sessionId);
+};
     }
     // Start health monitoring,
-    this.startHealthMonitoring(),
-  }
+    this.startHealthMonitoring();
+};
   /**,
    * Stop the automation system,
    */,
   stop() {,
     this.isRunning = false,
-    this.log('Cursor Chat Automation system stopped'),
-  }
+    this.log('Cursor Chat Automation system stopped');
+};
   /**,
    * Start health monitoring,
    */,
@@ -237,17 +237,17 @@ class CursorChatAutomation {,
             this.log(,
               `Session ${sessionId} appears stuck, restarting automation`,
               'WARN'),
-            this.startSessionAutomation(sessionId),
-          }
+            this.startSessionAutomation(sessionId);
+};
         }
       }
       // Schedule next health check,
       setTimeout(healthCheck, 60000), // Every minute
     },
-    healthCheck(),
-  }
-    healthCheck(),
-  }
+    healthCheck();
+};
+    healthCheck();
+};
   /**,
    * Get system statistics,
    */,
@@ -303,8 +303,8 @@ class CursorChatAutomation {,
    * Get session information,
    */,
   getSessionInfo(sessionId) {,
-    return this.sessions.get(sessionId),
-  }
+    return this.sessions.get(sessionId);
+};
   /**,
    * List all sessions,
    */,
@@ -322,8 +322,8 @@ class CursorChatAutomation {,
       "commandCount": session.commandCount,
       "errors": session.errors,
       "createdAt": session.createdAt,
-      "lastCommand": session.lastCommand})),
-  }
+      "lastCommand": session.lastCommand}));
+};
 }
 // CLI interface,
 if (require.main === module) {,
@@ -364,7 +364,7 @@ if (require.main === module) {,
     const stats = automation.getStats(),
     console.log(,
       `\n[${new Date().toISOString()}] "Status": ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`,
-    ),
+    );
   }, 60000), // Status update every minute
 }
 module.exports = CursorChatAutomation,

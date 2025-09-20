@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     tags: ['Implementation GuideDigital TransformationROIStrategy']
   }
 }
-export default function AIDigitalTransformationImplementationGuidePage() {
+export default function AIDigitalTransformationImplementationGuidePage() : any {
   return (
     <div>
       {/* Hero Section */}

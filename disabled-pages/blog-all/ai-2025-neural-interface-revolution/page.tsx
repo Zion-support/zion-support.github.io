@@ -2,7 +2,7 @@ import React from 'react';
 import SEO from '@/components/SEO';
 import Link from 'next/link';
 
-export default function AINeuralInterfaceRevolution2025() {
+export default function AINeuralInterfaceRevolution2025() : any {
   return (
     <div>
       <SEO
@@ -19,4 +19,4 @@ export default function AINeuralInterfaceRevolution2025() {
       </div>
     </div>
   );
-}
+  }

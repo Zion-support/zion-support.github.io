@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function ServiceSlugPage(props: { params?: { slug?: string } }) {
-	const slug = props?.params?.slug || 'service';
+	const slug = props?.params?.slug || 'service',
 	const title = slug
 		.replace(/-/g, ' ')
 		.replace(/\b\w/g, (c) => c.toUpperCase());
@@ -12,7 +12,7 @@ export default function ServiceSlugPage(props: { params?: { slug?: string } }) {
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	};
+	},
 
 	return (
 		<>
@@ -47,4 +47,4 @@ export default function ServiceSlugPage(props: { params?: { slug?: string } }) {
 			</div>
 		</>
 	);
-}
+  }

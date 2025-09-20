@@ -1,5 +1,5 @@
 import React from 'react'
-const AutonomousAI2026Showcase: React.FC = () => {;
+const AutonomousAI2026Showcase: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">AutonomousAI2026Showcase</h3>

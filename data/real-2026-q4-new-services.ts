@@ -1,10 +1,10 @@
 =======
 export interface Real2026Q4NewService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  features: string[],
 }
 
 export const real2026Q4NewServices: Real2026Q4NewService[] = [

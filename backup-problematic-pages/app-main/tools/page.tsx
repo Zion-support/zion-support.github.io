@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function ToolsPage() {
+export default function ToolsPage() : any {
   const tools = [
     {
       title: 'AI ROI Calculator',

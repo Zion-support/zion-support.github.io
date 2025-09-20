@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString(),
-}
+  return new Date().toISOString();
+};
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-SECURITY-SCANNER] ${message}`,
-  console.log(line),
-}
+  console.log(line);
+};
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || options.cwd || process.cwd(),
@@ -26,8 +26,8 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr),
-  }
+    if (stderr) console.error(stderr);
+};
   return { status, stdout, stderr },
 }
 ,
@@ -89,8 +89,8 @@ function checkEnvironmentVariables() {,
         envIssues.push({,
           variable: varName,
           issue: "Sensitive variable exposed in environment",
-          severity: "high"}),
-      }
+          severity: "high"});
+};
     }
 ,
     return {,
@@ -124,8 +124,8 @@ function checkFilePermissions() {,
           permissionIssues.push({,
             file,
             issue: "Overly permissive file permissions",
-            severity: "medium"}),
-        }
+            severity: "medium"});
+};
       }
     }
 ,
@@ -157,16 +157,16 @@ function generateSecurityReport(audit, environment, permissions) {,
   },
   // Analyze overall security,
   if (audit.vulnerabilities?.count > 0) {,
-    report.security.summary.issues.push(`${audit.vulnerabilities.count} security vulnerabilities found`),
-  }
+    report.security.summary.issues.push(`${audit.vulnerabilities.count} security vulnerabilities found`);
+};
 ,
   if (environment.environment?.count > 0) {,
-    report.security.summary.issues.push(`${environment.environment.count} environment security issues`),
-  }
+    report.security.summary.issues.push(`${environment.environment.count} environment security issues`);
+};
 ,
   if (permissions.permissions?.count > 0) {,
-    report.security.summary.issues.push(`${permissions.permissions.count} permission issues`),
-  }
+    report.security.summary.issues.push(`${permissions.permissions.count} permission issues`);
+};
 ,
   if (report.security.summary.issues.length > 0) {,
     report.security.summary.overallSecurity = "needs_attention",
@@ -221,11 +221,11 @@ async function commitAndPush() {,
     if (pushResult.status === 0) {,
       log("Changes pushed successfully via redundancy."),
     } else {,
-      log(`Push failed: ${pushResult.stderr}`),
-    }
+      log(`Push failed: ${pushResult.stderr}`);
+};
   } catch (err) {,
-    log(`Commit/push error: ${String(err)}`),
-  }
+    log(`Commit/push error: ${String(err)}`);
+};
 }
 ,
 async function main() {,
@@ -240,12 +240,12 @@ async function main() {,
     process.exit(0),
   } catch (err) {,
     log(`Security scanner redundancy failed: ${String(err)}`),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 if (require.main === module) {,
-  main(),
-}
+  main();
+  }
 ,
 module.exports = { main, runSecurityAudit, checkEnvironmentVariables, checkFilePermissions, generateSecurityReport },

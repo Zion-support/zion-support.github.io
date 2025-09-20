@@ -6,13 +6,13 @@ const path = require("path"),
 const GIT_REMOTE = String(process.env.AUTO_SYNC_REMOTE || "origin"),
 const GIT_BRANCH = String(process.env.AUTO_SYNC_BRANCH || "main"),
 function nowIso() {,
-  return new Date().toISOString(),
-}
+  return new Date().toISOString();
+};
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-SYNC-HEALTH] ${message}`,
-  console.log(line),
-}
+  console.log(line);
+};
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -28,20 +28,20 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr),
-  }
+    if (stderr) console.error(stderr);
+};
   return { status, stdout, stderr },
 }
 ,
 function runGit(args, options = {}) {,
-  return run("git", args, options),
-}
+  return run("git", args, options);
+};
 ,
 function ensureRepoRoot() {,
   const gitDir = path.join(process.cwd(), ".git"),
   if (!fs.existsSync(gitDir)) {,
-    throw new Error(`No .git directory found in ${process.cwd()}`),
-  }
+    throw new Error(`No .git directory found in ${process.cwd()}`);
+};
 }
 ,
 function repairIndexIfNeeded() {,
@@ -52,14 +52,14 @@ function repairIndexIfNeeded() {,
   try {,
     if (fs.existsSync(indexPath)) {,
       fs.renameSync(indexPath, backup),
-      log(`Repaired Git index by moving to ${path.basename(backup)}`),
-    }
+      log(`Repaired Git index by moving to ${path.basename(backup)}`);
+};
   } catch (err) {,
-    log(`Index move failed: ${String(err)}`),
-  }
+    log(`Index move failed: ${String(err)}`);
+};
   runGit(["rebase", "--abort"]),
-  runGit(["reset", "--mixed"], { verbose: true }),
-}
+  runGit(["reset", "--mixed"], { verbose: true });
+};
 ,
 function stashAll() {,
   const message = `redundancy-sync-health stash ${nowIso()}`,
@@ -67,14 +67,14 @@ function stashAll() {,
   if (res.status !== 0) {,
     log(`Stash skipped or failed (status ${res.status}): ${res.stderr}`),
   } else {,
-    log(`Created stash: ${message}`),
-  }
+    log(`Created stash: ${message}`);
+};
 }
 ,
 function fetchOrigin() {,
   const res = runGit(["fetch", "--prune", GIT_REMOTE], { verbose: true }),
-  if (res.status !== 0) throw new Error(`git fetch failed: ${res.stderr}`),
-}
+  if (res.status !== 0) throw new Error(`git fetch failed: ${res.stderr}`);
+};
 ,
 function parseDivergence(output) {,
   const parts = output.trim().split(/\s+/),
@@ -86,8 +86,8 @@ function parseDivergence(output) {,
 function getDivergence() {,
   const res = runGit(["rev-list", "--left-right", "--count", `HEAD...${GIT_REMOTE}/${GIT_BRANCH}`]),
   if (res.status !== 0) throw new Error(`divergence check failed: ${res.stderr}`),
-  return parseDivergence(res.stdout),
-}
+  return parseDivergence(res.stdout);
+};
 ,
 function safeSync() {,
   try {,
@@ -118,8 +118,8 @@ function safeSync() {,
       }
       log("Successfully pushed local changes."),
     } else {,
-      log("Repository is in sync."),
-    }
+      log("Repository is in sync.");
+};
 ,
     return true,
   } catch (err) {,
@@ -178,11 +178,11 @@ async function commitAndPush() {,
     if (pushResult.status === 0) {,
       log("Changes pushed successfully via redundancy."),
     } else {,
-      log(`Push failed: ${pushResult.stderr}`),
-    }
+      log(`Push failed: ${pushResult.stderr}`);
+};
   } catch (err) {,
-    log(`Commit/push error: ${String(err)}`),
-  }
+    log(`Commit/push error: ${String(err)}`);
+};
 }
 ,
 async function main() {,
@@ -201,16 +201,16 @@ async function main() {,
       process.exit(0),
     } else {,
       log("Sync health redundancy completed with warnings."),
-      process.exit(0),
-    }
+      process.exit(0);
+};
   } catch (err) {,
     log(`Sync health redundancy failed: ${String(err)}`),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 if (require.main === module) {,
-  main(),
-}
+  main();
+  }
 ,
-module.exports = { main, safeSync, generateHealthReport },
+module.exports = { main, safeSync, generateHealthReport },'

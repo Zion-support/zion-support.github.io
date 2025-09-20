@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function ContentShowcasePage() {
+export default function ContentShowcasePage() : any {
   const contentCategories = [
     {
       id: 1,
@@ -127,7 +127,7 @@ export default function ContentShowcasePage() {
     }
   ]
 
-  const getColorClasses = (color: string) => {
+  const getColorClasses = (color: string) : any => {
     const colors = {
       purple: "from-purple-500 to-purple-700 bg-purple-50 text-purple-600",
       blue: "from-blue-500 to-blue-700 bg-blue-50 text-blue-600",

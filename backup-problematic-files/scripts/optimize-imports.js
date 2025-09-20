@@ -153,8 +153,8 @@ class ImportOptimizer {,
     this.totalOptimizations = 0}
   async optimizeImports() {,
     console.log(',⚡ Optimizing imports to reduce bundle size...'),
-    const directories = [',pages,components,src'],
-    }
+    const directories = [',pages,components,src'];
+  }
     console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),",
     console.log("📊 Total "optimizations": ${this.totalOptimizations}")}
   async processDirectory(dirPath) {,
@@ -336,4 +336,4 @@ class ImportOptimizer {,
           return hasUsedItems}
       }
       return true}).join(\n')  }
-,
+,"

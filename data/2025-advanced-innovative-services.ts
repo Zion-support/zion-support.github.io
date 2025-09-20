@@ -1,44 +1,44 @@
 import { ServiceVariant } from '../types/service-variants';
 
 export interface AdvancedInnovativeService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string,
   };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
 }
 
 const contact = {
@@ -46,7 +46,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   {
@@ -72,7 +72,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/metaverse-development-platform',
-    marketPosition: 'Comprehensive metaverse platform; competes with Roblox, Unity, Unreal Engine.',
+    marketPosition: 'Comprehensive metaverse platform, competes with Roblox, Unity, Unreal Engine.',
     targetAudience: 'Game developers, Brands, Educational institutions',
     trialDays: 21,
     setupTime: '1-2 weeks',
@@ -117,7 +117,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-bio-computing-platform',
-    marketPosition: 'Specialized quantum bio-computing; addresses pharmaceutical research needs.',
+    marketPosition: 'Specialized quantum bio-computing, addresses pharmaceutical research needs.',
     targetAudience: 'Pharmaceutical companies, Research institutions, Biotech firms',
     trialDays: 45,
     setupTime: '1 month',
@@ -162,7 +162,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-legal-automation-suite',
-    marketPosition: 'AI-enhanced legal automation; competes with LexisNexis, Westlaw, ContractPodAi.',
+    marketPosition: 'AI-enhanced legal automation, competes with LexisNexis, Westlaw, ContractPodAi.',
     targetAudience: 'Law firms, Corporate legal departments, Legal professionals',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -207,7 +207,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-logistics-optimization',
-    marketPosition: 'Quantum-powered logistics; specialized for complex optimization problems.',
+    marketPosition: 'Quantum-powered logistics, specialized for complex optimization problems.',
     targetAudience: 'Logistics companies, E-commerce, Manufacturing',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -252,7 +252,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/autonomous-ai-research-assistant',
-    marketPosition: 'Autonomous research AI; specialized for research and discovery.',
+    marketPosition: 'Autonomous research AI, specialized for research and discovery.',
     targetAudience: 'Researchers, Scientists, Business analysts, Students',
     trialDays: 14,
     setupTime: '1 week',
@@ -297,7 +297,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-energy-optimization',
-    marketPosition: 'Quantum-powered energy optimization; specialized for complex energy systems.',
+    marketPosition: 'Quantum-powered energy optimization, specialized for complex energy systems.',
     targetAudience: 'Utility companies, Energy providers, Smart cities',
     trialDays: 45,
     setupTime: '1 month',
@@ -342,7 +342,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-pink-600 to-purple-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-creative-design-platform',
-    marketPosition: 'AI-enhanced design platform; competes with Canva, Figma, Adobe Creative Suite.',
+    marketPosition: 'AI-enhanced design platform, competes with Canva, Figma, Adobe Creative Suite.',
     targetAudience: 'Designers, Marketing teams, Small businesses',
     trialDays: 7,
     setupTime: '1 day',
@@ -387,7 +387,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/quantum-neural-network-platform',
-    marketPosition: 'Cutting-edge quantum neural networks; specialized for advanced ML applications.',
+    marketPosition: 'Cutting-edge quantum neural networks, specialized for advanced ML applications.',
     targetAudience: 'AI researchers, ML engineers, Research institutions',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -396,7 +396,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     technology: ['Quantum Computing, Neural Networks, Machine Learning'],
     integrations: ['TensorFlow, PyTorch, Scikit-learn, Jupyter'],
     useCases: ['Advanced ML training, Research breakthroughs, Performance optimization'],
-    roi: 'Solve previously intractable ML problems; accelerate AI research and development.',
+    roi: 'Solve previously intractable ML problems, accelerate AI research and development.',
     competitors: ['IBM Quantum, Google Quantum, Rigetti, D-Wave'],
     marketSize: '$4B quantum ML',
     growthRate: '62% YoY',
@@ -432,7 +432,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/intelligent-financial-planning',
-    marketPosition: 'AI-enhanced financial planning; competes with Betterment, Wealthfront, Personal Capital.',
+    marketPosition: 'AI-enhanced financial planning, competes with Betterment, Wealthfront, Personal Capital.',
     targetAudience: 'Individual investors, Financial advisors, Wealth management firms',
     trialDays: 14,
     setupTime: '1 week',
@@ -477,7 +477,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-iot-security-platform',
-    marketPosition: 'Future-proof IoT security; specialized for quantum-resistant protection.',
+    marketPosition: 'Future-proof IoT security, specialized for quantum-resistant protection.',
     targetAudience: 'IoT manufacturers, Smart cities, Industrial IoT',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -486,7 +486,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     technology: ['Quantum Computing, IoT Security, Post-Quantum Cryptography'],
     integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT'],
     useCases: ['Device security, Network protection, Compliance'],
-    roi: 'Future-proof IoT security investment; avoid costly migrations later.',
+    roi: 'Future-proof IoT security investment, avoid costly migrations later.',
     competitors: ['Armis, Palo Alto Networks, Check Point, Fortinet'],
     marketSize: '$12B IoT security',
     growthRate: '38% YoY',
@@ -522,7 +522,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-education-platform',
-    marketPosition: 'AI-enhanced education; competes with Coursera, Udemy, Khan Academy.',
+    marketPosition: 'AI-enhanced education, competes with Coursera, Udemy, Khan Academy.',
     targetAudience: 'Educational institutions, Corporate training, Online learning platforms',
     trialDays: 14,
     setupTime: '1-2 weeks',
@@ -567,7 +567,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-space-technology',
-    marketPosition: 'Cutting-edge quantum space technology; specialized for space applications.',
+    marketPosition: 'Cutting-edge quantum space technology, specialized for space applications.',
     targetAudience: 'Space agencies, Satellite companies, Aerospace firms',
     trialDays: 45,
     setupTime: '1 month',
@@ -612,7 +612,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
-    marketPosition: 'AI-enhanced healthcare diagnostics; competes with IBM Watson Health, Google Health.',
+    marketPosition: 'AI-enhanced healthcare diagnostics, competes with IBM Watson Health, Google Health.',
     targetAudience: 'Hospitals, Medical clinics, Healthcare professionals',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -657,7 +657,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-materials-discovery',
-    marketPosition: 'Quantum-powered materials discovery; specialized for advanced materials research.',
+    marketPosition: 'Quantum-powered materials discovery, specialized for advanced materials research.',
     targetAudience: 'Materials scientists, Research institutions, Manufacturing companies',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -702,7 +702,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/intelligent-automotive-platform',
-    marketPosition: 'AI-enhanced automotive platform; competes with Geotab, Fleet Complete, Samsara.',
+    marketPosition: 'AI-enhanced automotive platform, competes with Geotab, Fleet Complete, Samsara.',
     targetAudience: 'Fleet operators, Automotive companies, Transportation companies',
     trialDays: 14,
     setupTime: '1-2 weeks',
@@ -747,7 +747,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/quantum-climate-modeling',
-    marketPosition: 'Quantum-powered climate modeling; specialized for environmental analysis.',
+    marketPosition: 'Quantum-powered climate modeling, specialized for environmental analysis.',
     targetAudience: 'Environmental agencies, Research institutions, Sustainability companies',
     trialDays: 30,
     setupTime: '2-3 weeks',
@@ -769,4 +769,4 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.8,
     reviews: 26
   }
-];
+],

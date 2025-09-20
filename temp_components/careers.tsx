@@ -10,7 +10,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 
-export default function CareersPage() {
+export default function CareersPage() : any {
   const openPositions = [
     {
       id: 1,
@@ -179,4 +179,5 @@ const careers: React.FC = () => {
   )
 },
 
-export default careers,
+export default careers;
+  }'

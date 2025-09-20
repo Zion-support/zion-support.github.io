@@ -48,7 +48,7 @@ const categories = [
   'Quality & Monitoring',
 ];
 
-export default function ServicesIndexPage() {
+export default function ServicesIndexPage() : any {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
       extraServices as unknown[],
@@ -140,11 +140,12 @@ export default function ServicesIndexPage() {
           <section key={cat} id={anchorMap[cat] || toSlug(cat)}>
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {
-                const service = s as { id?: string; name?: string; link?: string; category?: string; tagline?: string; description?: string; price?: string; period?: string };
-                const slug = service.link ? (() => { try { const u = new URL(service.link); const p = u.pathname.replace(/^\/+|\/+$/g, ''); return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || ''); } catch { return toSlug(service.id || service.name || ''); } })() : toSlug(service.id || service.name || '');
+              {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) : any => {
+                const service = s as { id?: string, name?: string, link?: string, category?: string, tagline?: string, description?: string, price?: string, period?: string };
+                const slug = service.link ? (() => { try { const u = new URL(service.link), const p = u.pathname.replace(/^\/+|\/+$/g, ''), return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || ''), } catch { return toSlug(service.id || service.name || '');
+  } })() : toSlug(service.id || service.name || '');
                 return (
-                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
+                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover: border-cyan-500/50 transition-colors shadow-lg/10">
                     <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
                     <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>
                     <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline || service.description}</p>
@@ -154,14 +155,14 @@ export default function ServicesIndexPage() {
                       <Link href={service.link || `/services/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover:border-cyan-500/70">Learn</Link>
                     </div>
                   </Card>
-                );
+                ),
               })}
             </div>
             {byCategory[cat].length > (shownCounts[cat] ?? 12) && (
               <div className="mt-6 flex justify-center">
                 <button
                   onClick={() => setShownCounts(prev => ({ ...prev, [cat]: (prev[cat] ?? 12) + 12 }))}
-                  className="px-4 py-2 rounded-lg bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50"
+                  className="px-4 py-2 rounded-lg bg-gray-800/60 border border-gray-700/70 hover: border-cyan-500/50"
                 >
                   Show more
                 </button>
@@ -172,4 +173,4 @@ export default function ServicesIndexPage() {
       </div>
     </UltraFuturisticBackground>
   );
-}
+  }

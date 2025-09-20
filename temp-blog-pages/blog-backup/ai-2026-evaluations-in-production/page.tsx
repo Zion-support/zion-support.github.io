@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Operationalize LLM and agent evaluations in production with live metrics, drift detection, and rollback playbooks.'
 }
-export default function EvaluationsInProductionArticle() {
+export default function EvaluationsInProductionArticle() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <p className="text-sm font-semibold text-purple-700 mb-3">Article · 2026</p>

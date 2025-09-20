@@ -4,7 +4,7 @@ export const metadata = {
   description:
     'Practical checklists for red-teaming, reliability, and safety evaluations of agentic systems across the SDLC.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <article className="prose prose-lg">

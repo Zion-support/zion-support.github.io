@@ -29,14 +29,13 @@ exports.handler = async () => {
   try {
     logStep('search:index', () => runNode('scripts/generate-search-index.js')),
   } catch (error) {
-    logs.push(`Search index generation skipped: ${String(error)}`),
-  }
-
+    logs.push(`Search index generation skipped: ${String(error)}`);
+};
   // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs')),
 
   // Commit and push changes
   logStep('git:sync', () => runNode('automation/git-sync.cjs')),
 
-  return { statusCode: 200, body: logs.join('\n') },
-},
+  return { statusCode: 200, body: logs.join('\n') };
+  },

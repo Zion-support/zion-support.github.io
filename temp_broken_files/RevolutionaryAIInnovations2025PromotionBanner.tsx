@@ -40,7 +40,7 @@ const RevolutionaryAIInnovations2025PromotionBanner = () => {,
     return () => clearInterval(interval),
   }[]),
   const handleDismiss = () => {,
-    setIsDismissed(true),
+    setIsDismissed(true);
   },
   if (isDismissed) return null,
   const currentInnovationData = innovations[currentInnovation],

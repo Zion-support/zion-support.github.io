@@ -4,7 +4,7 @@ export const metadata = {
   title: 'AI Governance 2026: Policy, Risk, and Compliance Framework'
   description: 'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.'
 }
-export default function AIGovernance2026Page() {
+export default function AIGovernance2026Page() : any {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">

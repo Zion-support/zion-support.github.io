@@ -31,11 +31,11 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {,
       const interval = setInterval(() => {,
         setCurrentStat(prev => (prev + 1) % stats.length),
       }1500),
-      return () => clearInterval(interval),
-    }
+      return () => clearInterval(interval);
+};
   }[isVisiblestats.length]),
   const handleDismiss = () => {,
-    setIsDismissed(true),
+    setIsDismissed(true);
   },
   if (isDismissed) return null,
   return (,

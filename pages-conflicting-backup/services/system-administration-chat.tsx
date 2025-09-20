@@ -17,6 +17,6 @@ const SystemAdministrationChat: NextPage = () => {
       </main>
     </div>
   );
-};
+  };
 
 export default SystemAdministrationChat;

@@ -6,11 +6,10 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"
 },
 
-serve(async (req) => {
+serve(async (req) : any => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
-  }
-
+    return new Response(null, { headers: corsHeaders });
+};
   try {
     const { productId } = await req.json(),
 
@@ -33,6 +32,6 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: err.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500
-    }),
+    });
   }
 }),

@@ -1,5 +1,5 @@
 import React from 'react'
-const QuantumComputingShowcase2027: React.FC = () => {;
+const QuantumComputingShowcase2027: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">QuantumComputingShowcase2027</h3>

@@ -23,5 +23,5 @@ exports.handler = async () => {
   step('docs:index', () => runNode('automation/docs-pages-indexer.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') },
-},
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') };
+  },

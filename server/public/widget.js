@@ -12,8 +12,8 @@
     document.head.appendChild(link),
     const rootVars = document.createElement('style'),
     rootVars.textContent = `:root{--zion-accent: ${ACCENT}}`,
-    document.head.appendChild(rootVars),
-  }
+    document.head.appendChild(rootVars);
+};
 ,
   function createEl(tag, opts = {}) {,
     const el = document.createElement(tag),
@@ -79,8 +79,8 @@
     function closePanel() {,
       panel.classList.remove('open'),
       isOpen = false,
-      btn.focus(),
-    }
+      btn.focus();
+};
 ,
     btn.addEventListener('click', () => {,
       isOpen ? closePanel() : openPanel(),
@@ -145,16 +145,16 @@
         addAssistantMessage('I hit a snag reaching the server. Please try again in a moment.'),
       } finally {,
         setSending(false),
-        input.focus(),
-      }
+        input.focus();
+};
     }
 ,
     send.addEventListener('click', sendMessage),
     input.addEventListener('keydown', (e) => {,
       if (e.key === 'Enter' && !e.shiftKey) {,
         e.preventDefault(),
-        sendMessage(),
-      }
+        sendMessage();
+};
     }),
     // Expose minimal API,
     window.ZionChat = {,
@@ -174,6 +174,6 @@
   if (document.readyState === 'loading') {,
     document.addEventListener('DOMContentLoaded', makeWidget),
   } else {,
-    makeWidget(),
+    makeWidget();
   }
 })(),

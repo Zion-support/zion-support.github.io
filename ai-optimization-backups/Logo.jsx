@@ -21,4 +21,4 @@ export function Logo({ customLogo, customColor }) {}
         </span>,
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>",
       </div>,
-    </Link>,
+    </Link>,'

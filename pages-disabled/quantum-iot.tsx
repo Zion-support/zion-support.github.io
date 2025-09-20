@@ -5,7 +5,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button',
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
 
-export default function QuantumInternetSecurityPage() {
+export default function QuantumInternetSecurityPage() : any {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform')),
   if (!service) return null,
 
@@ -51,5 +51,5 @@ export default function QuantumInternetSecurityPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  ),
-}
+  );
+  }

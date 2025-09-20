@@ -84,9 +84,8 @@ class QRCodeService {
       size: 300,
       errorCorrectionLevel: 'H',
       format: 'svg'
-    }),
-  }
-
+    });
+};
   async generateWiFiQR(data: {
     ssid: string,
     password: string,
@@ -100,9 +99,8 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
-  }
-
+    });
+};
   async generateEmailQR(data: {
     to: string,
     subject?: string,
@@ -115,9 +113,8 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
-  }
-
+    });
+};
   async generateSMSQR(data: {
     phone: string,
     message?: string
@@ -129,9 +126,8 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
-  }
-
+    });
+};
   async generateGeoLocationQR(data: {
     latitude: number,
     longitude: number,
@@ -145,9 +141,8 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    }),
-  }
-
+    });
+};
   getTemplates(): QRCodeTemplate[] {
     return [
       {
@@ -205,12 +200,11 @@ class QRCodeService {
     }
     
     if (options.size && (options.size < 64 || options.size > 1024)) {
-      throw new Error('Size must be between 64 and 1024 pixels'),
-    }
-    
+      throw new Error('Size must be between 64 and 1024 pixels');
+};
     if (options.margin && (options.margin < 0 || options.margin > 10)) {
-      throw new Error('Margin must be between 0 and 10'),
-    }
+      throw new Error('Margin must be between 0 and 10');
+};
   }
 
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
@@ -327,8 +321,9 @@ class QRCodeService {
 
   saveQRCode(qrCode: QRCodeResult): void {
     // In a real app, this would save to storage
-    console.log('QR Code saved:', qrCode.options.text),
+    console.log('QR Code saved:', qrCode.options.text);
   }
 }
 
 export const qrCodeService = new QRCodeService(),
+'

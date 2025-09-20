@@ -216,7 +216,7 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner = () => {,
         </divsection>,
       )}
     </div>,
-  ),
-},
+  );
+  },
 export default AI2025UltimateContentShowcaseRevolutionaryBanner,
 </div></div></div></div>,

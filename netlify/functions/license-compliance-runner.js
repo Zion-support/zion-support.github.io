@@ -23,5 +23,5 @@ exports.handler = async () => {
   step('license:scanautomation/license-compliance.cjs'),
   step('git:syncautomation/advanced-git-sync.cjs'),
 
-  return { statusCode: 200, body: logs.join('\n') },
-},
+  return { statusCode: 200, body: logs.join('\n') };
+  },

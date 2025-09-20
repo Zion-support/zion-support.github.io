@@ -7,7 +7,7 @@ export const metadata = {
     'Practical operating model for autonomous agents: roles, gates, on-call, and governance.'
   keywords: ['autonomous agentsoperationson-callgovernance', 'eval-gates']
 }
-export default function OperationalBlueprintPage() {
+export default function OperationalBlueprintPage() : any {
   return (
     <main className="min-h-screen bg-white">
       <SEO

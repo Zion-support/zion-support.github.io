@@ -3,40 +3,45 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 interface User {
-  id: string;
-  name: string;
-  avatar: string;
-  status: 'online' | 'away' | 'busy' | 'offline';
-  role: string;
-  lastSeen: string;
+  id: string,
+  name: string,
+  avatar: string,
+  status: 'online' | 'away' | 'busy' | 'offline',
+  role: string,
+  lastSeen: string,
 }
 
 interface Message {
-  id: string;
-  text: string;
-  user: User;
-  timestamp: Date;
-  type: 'message' | 'system' | 'file' | 'code';
-  reactions?: { emoji: string; users: string[] }[];
+  id: string,
+  text: string,
+  user: User,
+  timestamp: Date,
+  type: 'message' | 'system' | 'file' | 'code',
+  reactions?: { emoji: string, users: string[] }[],
 }
 
 interface File {
-  id: string;
-  name: string;
-  type: string;
-  size: number;
-  uploadedBy: User;
-  uploadedAt: Date;
-  url: string;
+  id: string,
+  name: string,
+  type: string,
+  size: number,
+  uploadedBy: User,
+  uploadedAt: Date,
+  url: string,
 }
 
 const RealTimeCollaboration: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
+
   const [messages, setMessages] = useState<Message[]>([]);
+
   const [files, setFiles] = useState<File[]>([]);
+
   const [newMessage, setNewMessage] = useState('');
   const [isTyping, setIsTyping] = useState<string[]>([]);
+
   const [activeUsers, setActiveUsers] = useState<string[]>([]);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -74,9 +79,10 @@ const RealTimeCollaboration: React.FC = () => {
         role: 'UX Designer',
         lastSeen: '2 min ago'
       }
-    ];
+    ]);
 
-    const mockMessages: Message[] = [
+
+  const mockMessages: Message[] = [
       {
         id: '1',
         text: 'Welcome to the AI Solutions workspace! Let\'s collaborate on our latest project.',
@@ -100,7 +106,7 @@ const RealTimeCollaboration: React.FC = () => {
       },
       {
         id: '4',
-        text: '```typescript\ninterface AIService {\n  process(data: any): Promise<AIResult>;\n  train(model: Model): Promise<void>;\n}\n```',
+        text: '```typescript\ninterface AIService {\n  process(data: any): Promise<AIResult>,\n  train(model: Model): Promise<void>,\n}\n```',
         user: mockUsers[0],
         timestamp: new Date(Date.now() - 600000),
         type: 'code'
@@ -112,9 +118,10 @@ const RealTimeCollaboration: React.FC = () => {
         timestamp: new Date(Date.now() - 300000),
         type: 'message'
       }
-    ];
+    ]);
 
-    const mockFiles: File[] = [
+
+  const mockFiles: File[] = [
       {
         id: '1',
         name: 'API_Documentation.pdf',
@@ -142,7 +149,8 @@ const RealTimeCollaboration: React.FC = () => {
         uploadedAt: new Date(Date.now() - 900000),
         url: '#'
       }
-    ];
+    ]);
+
 
     setUsers(mockUsers);
     setMessages(mockMessages);
@@ -211,14 +219,14 @@ const RealTimeCollaboration: React.FC = () => {
     }, 2000);
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (e: React.KeyboardEvent) : any => {
     if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
+      e.preventDefault(),
       handleSendMessage();
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: string) : any => {
     switch (status) {
       case 'online': return 'bg-green-500';
       case 'away': return 'bg-yellow-500';
@@ -228,7 +236,7 @@ const RealTimeCollaboration: React.FC = () => {
     }
   };
 
-  const formatFileSize = (bytes: number) => {
+  const formatFileSize = (bytes: number) : any => {
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     if (bytes === 0) return '0 Bytes';
     const i = Math.floor(Math.log(bytes) / Math.log(1024));
@@ -362,7 +370,7 @@ const RealTimeCollaboration: React.FC = () => {
                     onChange={(e) => setNewMessage(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Type your message..."
-                    className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400"
+                    className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400"
                   />
                   <button
                     onClick={handleSendMessage}
@@ -389,6 +397,6 @@ const RealTimeCollaboration: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default RealTimeCollaboration;

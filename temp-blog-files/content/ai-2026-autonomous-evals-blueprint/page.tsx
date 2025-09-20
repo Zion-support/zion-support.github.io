@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'A practical blueprint to design eval-first, guardrail-driven autonomous AI systems with measurable reliability.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">

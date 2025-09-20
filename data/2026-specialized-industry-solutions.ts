@@ -274,6 +274,6 @@ export const specializedIndustrySolutions2026 = [
     rating: 4.7,
     reviews: 58
   }
-];
+],
 
 export default specializedIndustrySolutions2026;

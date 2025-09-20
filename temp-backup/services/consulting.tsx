@@ -8,6 +8,6 @@ export default function Consulting({ }: ConsultingProps) {,
     <div>,
       <h1>Consulting</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>);
+  }
 ,

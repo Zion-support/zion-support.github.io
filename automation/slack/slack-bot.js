@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 /* eslint-disable @typescript-eslint/no-require-imports */,
 const { App } = require('@slack/bolt'),
@@ -36,8 +36,8 @@ class OptimizationSlackBot {,
     this.isRunning = false,
     this.setupCommands(),
     this.setupEvents(),
-    this.setupWorkflows(),
-  }
+    this.setupWorkflows();
+};
 ,
   setupCommands() {,
     // Main optimization command,
@@ -66,8 +66,8 @@ const options = args.slice(1),
         await respond({,
           response_type: 'ephemeral',
           text: `❌ Error: ${error.message}`
-        }),
-      }
+        });
+};
     }),
     // Status command,
     this.app.command('/status', async ({ command, ack, respond }) => {,
@@ -90,10 +90,10 @@ const options = args.slice(1),
         await respond({,
           response_type: 'ephemeral',
           text: `❌ Error: ${error.message}`
-        }),
-      }
-    }),
-  }
+        });
+};
+    });
+};
 ,
   setupEvents() {,
     this.app.event('performance_alert', async ({ event, say }) => {,
@@ -121,8 +121,8 @@ const options = args.slice(1),
           }
         ]
       }),
-    }),
-  }
+    });
+};
 ,
   setupWorkflows() {,
     // Workflow steps for automation,
@@ -140,10 +140,10 @@ const options = args.slice(1),
         await fail({,
           error: {,
             message: error.message}
-        }),
-      }
-    }),
-  }
+        });
+};
+    });
+};
 ,
   async triggerOptimization(target) {,
     logger.info(`Triggering optimization for: ${target}`),
@@ -373,9 +373,9 @@ const timeoutId = setTimeout(resolve,                                           
       logger.info('🛑 Slack bot stopped'),
     } catch (error) {,
       logger.error('Failed to stop Slack bot:', error),
-      throw error,
-    }
+      throw error;
+  }
   }
 }
 ,
-module.exports = OptimizationSlackBot,
+module.exports = OptimizationSlackBot,'

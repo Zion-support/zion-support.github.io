@@ -134,14 +134,14 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                   </div>,
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mt-4">,
-                    {features.slice(0, 3).map((feature, index) => {,
+                    {features.slice(0, 3).map((feature, index) : any => {,
                       const Icon = feature.icon,
                       return (,
                         <div key={index} className="flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm">,
                           <Icon className="w-4 h-4 mr-2" />,
                           {feature.text}
-                        </div>),
-                    })}
+                        </div>);
+  })}
                   </div>,
                   {/* Action Buttons */}
                   <div className="flex flex-col sm: flex-row gap-3 mt-6">,

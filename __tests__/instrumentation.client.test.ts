@@ -104,3 +104,4 @@ describe('Sentry Initialization', () => {
     }),
   }),
 }),
+'

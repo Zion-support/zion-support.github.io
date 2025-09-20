@@ -10,7 +10,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function TeamPage() {
+export default function TeamPage() : any {
   const leadership = [
     {
       name: "Dr. Kleber Santos",
@@ -32,7 +32,7 @@ export default function TeamPage() {
       twitter: "https://twitter.com/sarahchen",
       github: "https://github.com/sarahchen"
     }
-  ];
+  ],
 
   const executives = [
     {
@@ -75,7 +75,7 @@ export default function TeamPage() {
       twitter: "https://twitter.com/mayapatel",
       github: "https://github.com/mayapatel"
     }
-  ];
+  ],
 
   const advisors = [
     {
@@ -98,14 +98,14 @@ export default function TeamPage() {
       twitter: "https://twitter.com/lisazhang",
       github: "https://github.com/lisazhang"
     }
-  ];
+  ],
 
   const stats = [
     { number: "50+", label: "Team Members", icon: Users },
     { number: "15+", label: "Years Experience", icon: Award },
     { number: "25+", label: "Countries", icon: Globe },
     { number: "100+", label: "Patents", icon: Star }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -441,10 +441,10 @@ export default function TeamPage() {
               Join Our Team
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              We&apos;re always looking for exceptional talent to join our mission of 
+              We&apos,re always looking for exceptional talent to join our mission of 
               transforming the world through technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/careers"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
@@ -465,4 +465,4 @@ export default function TeamPage() {
       <EnhancedFooter />
     </div>
   );
-}
+  }

@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString(),
-}
+  return new Date().toISOString();
+};
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-PERFORMANCE-MONITOR] ${message}`,
-  console.log(line),
-}
+  console.log(line);
+};
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,8 +26,8 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr),
-  }
+    if (stderr) console.error(stderr);
+};
   return { status, stdout, stderr },
 }
 ,
@@ -116,16 +116,16 @@ function generatePerformanceReport(buildPerf, depPerf, fsPerf) {,
   },
   // Analyze overall performance,
   if (buildPerf.buildPerformance?.duration > 30000) {,
-    report.performance.summary.issues.push("Build performance is slow (>30s)"),
-  }
+    report.performance.summary.issues.push("Build performance is slow (>30s)");
+};
 ,
   if (depPerf.dependencyPerformance?.duration > 10000) {,
-    report.performance.summary.issues.push("Dependency check is slow (>10s)"),
-  }
+    report.performance.summary.issues.push("Dependency check is slow (>10s)");
+};
 ,
   if (fsPerf.fileSystemPerformance?.duration > 5000) {,
-    report.performance.summary.issues.push("File system operations are slow (>5s)"),
-  }
+    report.performance.summary.issues.push("File system operations are slow (>5s)");
+};
 ,
   if (report.performance.summary.issues.length > 0) {,
     report.performance.summary.overallPerformance = "needs_optimization",
@@ -181,11 +181,11 @@ async function commitAndPush() {,
     if (pushResult.status === 0) {,
       log("Changes pushed successfully via redundancy."),
     } else {,
-      log(`Push failed: ${pushResult.stderr}`),
-    }
+      log(`Push failed: ${pushResult.stderr}`);
+};
   } catch (err) {,
-    log(`Commit/push error: ${String(err)}`),
-  }
+    log(`Commit/push error: ${String(err)}`);
+};
 }
 ,
 async function main() {,
@@ -200,12 +200,12 @@ async function main() {,
     process.exit(0),
   } catch (err) {,
     log(`Performance monitor redundancy failed: ${String(err)}`),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 if (require.main === module) {,
-  main(),
-}
+  main();
+  }
 ,
 module.exports = { main, checkBuildPerformance, checkDependencyPerformance, checkFileSystemPerformance, generatePerformanceReport },

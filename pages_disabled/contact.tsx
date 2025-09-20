@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-export default function ContactPage() {
+export default function ContactPage() : any {
 	return (
 		<>
 			<Head>
@@ -20,7 +20,7 @@ export default function ContactPage() {
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
-export default function Page(){return null}
+export default function Page(): any {return null}
 =======
 =======
 import React from 'react'
@@ -33,7 +33,7 @@ import Card from '../components/ui/Card'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard'
 
-export default function ContactPage() {
+export default function ContactPage() : any {
   const contactInfo = [
     {
       icon: Mail
@@ -98,7 +98,7 @@ const Contact: NextPage = () => {
     message: ''
     preferredContact: 'email'
     newsletter: false
-  })
+  });
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
@@ -145,7 +145,7 @@ const Contact: NextPage = () => {
     'Flexible'
   ]
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) : any => {
     const { name, value, type } = e.target
     setFormData(prev => ({
       ...prev
@@ -153,7 +153,7 @@ const Contact: NextPage = () => {
     }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) : any => {
     e.preventDefault()
     setIsSubmitting(true)
     
@@ -234,8 +234,8 @@ const Contact: NextPage = () => {
       <main className="container mx-auto px-4 py-16 pt-32">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Let&apos;s Build Something Amazing Together
+          <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
+            Let&apos,s Build Something Amazing Together
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
             Ready to transform your business with cutting-edge technology? 
@@ -567,7 +567,7 @@ const Contact: NextPage = () => {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
+                className="w-full bg-blue-600 hover: bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
 =======
         {/* Call to Action */}
         <section className="text-center">
@@ -576,7 +576,7 @@ const Contact: NextPage = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Don&apos;t wait to transform your business. Contact us today and let&apos;s discuss 
+              Don&apos,t wait to transform your business. Contact us today and let&apos;s discuss 
               how we can help you achieve your technology goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -665,7 +665,7 @@ export default Contact
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Ready to transform your business with cutting-edge AI technology?
-                Let&apos;s discuss how we can help you achieve your goals.
+                Let&apos,s discuss how we can help you achieve your goals.
               </p>
             </motion.div>
           </div>
@@ -713,7 +713,7 @@ export default Contact
                   Send Us a Message
                 </h2>
                 <p className="text-xl text-gray-300">
-                  Fill out the form below and we&apos;ll get back to you within 24 hours
+                  Fill out the form below and we&apos,ll get back to you within 24 hours
                 </p>
               </div>
               <EnhancedContactForm />
@@ -733,7 +733,7 @@ export default Contact
               Contact us today and get your free consultation.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
               <Button
                 href="tel:+13024640950"
                 variant="primary"
@@ -755,7 +755,7 @@ export default Contact
             </div>
             
             <div className="text-sm text-gray-400">
-              <p>✓ Free Consultation • ✓ 24/7 Support • ✓ &lt; 2 Hour Response • ✓ Expert Engineers</p>
+              <p>✓ Free Consultation • ✓ 24/7 Support • ✓ &lt, 2 Hour Response • ✓ Expert Engineers</p>
               <p className="mt-2">✓ Global Infrastructure • ✓ Enterprise Security • ✓ Custom Solutions • ✓ Ongoing Support</p>
             </div>
           </UltraFuturisticCard>
@@ -765,3 +765,4 @@ export default Contact
   )
 }
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+'

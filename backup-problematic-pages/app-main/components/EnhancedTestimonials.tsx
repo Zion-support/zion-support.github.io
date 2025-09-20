@@ -85,7 +85,7 @@ const EnhancedTestimonials: React.FC = () => {
     }, 5000)
 
     return () => clearInterval(interval)
-  }, [isAutoPlaying, testimonials.length])
+  }, [isAutoPlaying, testimonials.length]);
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
@@ -97,7 +97,7 @@ const EnhancedTestimonials: React.FC = () => {
     setIsAutoPlaying(false)
   }
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial = (index: number) : any => {
     setCurrentIndex(index)
     setIsAutoPlaying(false)
   }

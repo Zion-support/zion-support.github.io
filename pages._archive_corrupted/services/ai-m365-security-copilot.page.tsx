@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function AIM365SecurityCopilot() {,
+export default function AIM365SecurityCopilot() : any {,
   return (,
     <>,
       <Head>,

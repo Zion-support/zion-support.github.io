@@ -1,5 +1,5 @@
 import React from 'react'
-const Navigation: React.FC = () => {;
+const Navigation: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">Navigation</h3>

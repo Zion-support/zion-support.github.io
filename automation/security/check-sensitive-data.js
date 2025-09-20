@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -34,23 +34,23 @@ class SecurityChecker {,
     ensureLogDirectory() {,
         const logDir = path.dirname(this.logFile),
         if (!fs.existsSync(logDir)) {,
-            fs.mkdirSync(logDir, { recursive: true }),
-        }
+            fs.mkdirSync(logDir, { recursive: true });
+};
     }
 ,
         try {,
             fs.appendFileSync(this.logFile, logEntry),
         } catch (error) {,
-            console.error('Failed to write to log file:', error.message),
-        }
+            console.error('Failed to write to log file:', error.message);
+};
 ,
         if (level === 'error') {,
             console.error(message),
         } else if (level === 'warn') {,
             console.warn(message),
         } else {,
-            console.log(message),
-        }
+            console.log(message);
+};
     }
 ,
     async checkNpmAudit() {,
@@ -87,8 +87,8 @@ class SecurityChecker {,
                     const stat = fs.statSync(filePath),
                     if (stat.isDirectory()) {,
                         if (!excludedDirs.includes(file)) {,
-                            walkDir(filePath),
-                        }
+                            walkDir(filePath);
+};
                     } else if (stat.isFile()) {,
                         // Check file extensions,
                         const ext = path.extname(file).toLowerCase(),
@@ -102,8 +102,8 @@ class SecurityChecker {,
                                         foundSensitive.push({,
                                             file: filePath,
                                             pattern: pattern,
-                                            matches: matches.length}),
-                                    }
+                                            matches: matches.length});
+};
                                 }
                             } catch (error) {,
                                 // Skip files that can't be read
@@ -147,8 +147,8 @@ class SecurityChecker {,
                             if (key) {,
                                 foundEnvVars.push({,
                                     file: envFile,
-                                    key: key}),
-                            }
+                                    key: key});
+};
                         }
                     }
                 }
@@ -225,17 +225,17 @@ class SecurityChecker {,
                 recommendations: []},
             // Generate recommendations,
             if (!report.npmAudit) {,
-                report.recommendations.push('Run npm audit fix to resolve security vulnerabilities'),
-            }
+                report.recommendations.push('Run npm audit fix to resolve security vulnerabilities');
+};
             if (!report.sensitiveData) {,
-                report.recommendations.push('Review and remove sensitive data from codebase'),
-            }
+                report.recommendations.push('Review and remove sensitive data from codebase');
+};
             if (!report.environmentVariables) {,
-                report.recommendations.push('Review environment variables for sensitive data'),
-            }
+                report.recommendations.push('Review environment variables for sensitive data');
+};
             if (!report.dependencies) {,
-                report.recommendations.push('Update vulnerable dependencies'),
-            }
+                report.recommendations.push('Update vulnerable dependencies');
+};
 ,
             const reportPath = path.join(__dirname, '..reports', `security-${Date.now()}.json`),
             fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
@@ -262,8 +262,8 @@ class SecurityChecker {,
                     this.log('💡 Recommendations: warn'),
                     report.recommendations.forEach(rec => {,
                         this.log(`  - ${rec}`, 'warn'),
-                    }),
-                }
+                    });
+};
 ,
                 return false,
             }
@@ -283,9 +283,9 @@ switch (command) {,
     case 'report':,
         securityChecker.generateSecurityReport().catch(error => {,
             console.error('Failed to generate security report:', error.message),
-            process.exit(1),
-        }),
+            process.exit(1);
+  }),
         break,
     default: ,
         console.log(`,
-🔒 Security Check System)
+🔒 Security Check System)'

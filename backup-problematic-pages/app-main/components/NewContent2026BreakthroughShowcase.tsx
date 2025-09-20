@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-export default function NewContent2026BreakthroughShowcase() {
+export default function NewContent2026BreakthroughShowcase() : any {
   return (
     <section className="py-16 bg-white">
       <div>

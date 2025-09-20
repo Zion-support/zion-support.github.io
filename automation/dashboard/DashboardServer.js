@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const express = require('express'),
 const path = require('path'),
@@ -48,8 +48,8 @@ class DashboardServer extends EventEmitter {,
     this.reportGenerator = null,
     this.setupMiddleware(),
     this.setupRoutes(),
-    this.setupWebSocket(),
-  }
+    this.setupWebSocket();
+};
 ,
   setupMiddleware() {,
     // CORS,
@@ -61,30 +61,30 @@ class DashboardServer extends EventEmitter {,
         if (req.method === 'OPTIONS') {,
           res.sendStatus(200),
         } else {,
-          next(),
-        }
-      }),
-    }
+          next();
+};
+      });
+};
 ,
     // Body parsing,
     this.app.use(express.json()),
     this.app.use(express.urlencoded({ extended: true })),
     // Static files,
     if (fs.existsSync(this.config.staticPath)) {,
-      this.app.use(express.static(this.config.staticPath)),
-    }
+      this.app.use(express.static(this.config.staticPath));
+};
 ,
     // Basic auth,
     if (this.config.auth.enabled && this.config.auth.username && this.config.auth.password) {,
-      this.app.use(this.basicAuth),
-    }
+      this.app.use(this.basicAuth);
+};
 ,
     // Logging,
     this.app.use((req, res, next) => {,
       logger.info(`${new Date().toISOString()} - ${req.method} ${req.path}`),
       next(),
-    }),
-  }
+    });
+};
 ,
   setupRoutes() {,
     const api = this.config.apiPrefix,
@@ -109,8 +109,8 @@ class DashboardServer extends EventEmitter {,
         const result = await this.runTask(taskName),
         res.json(result),
       } catch (error) {,
-        res.status(500).json({ error: error.message }),
-      }
+        res.status(500).json({ error: error.message });
+};
     }),
     this.app.post(`${api}/tasks/:taskName/pause`, (req, res) => {,
       try {,
@@ -118,8 +118,8 @@ class DashboardServer extends EventEmitter {,
         const result = this.pauseTask(taskName),
         res.json(result),
       } catch (error) {,
-        res.status(500).json({ error: error.message }),
-      }
+        res.status(500).json({ error: error.message });
+};
     }),
     this.app.post(`${api}/tasks/:taskName/resume`, (req, res) => {,
       try {,
@@ -127,8 +127,8 @@ class DashboardServer extends EventEmitter {,
         const result = this.resumeTask(taskName),
         res.json(result),
       } catch (error) {,
-        res.status(500).json({ error: error.message }),
-      }
+        res.status(500).json({ error: error.message });
+};
     }),
     // Scheduling,
     this.app.get(`${api}/scheduling`, (req, res) => {,
@@ -139,8 +139,8 @@ class DashboardServer extends EventEmitter {,
         const result = this.recalculateScheduling(),
         res.json(result),
       } catch (error) {,
-        res.status(500).json({ error: error.message }),
-      }
+        res.status(500).json({ error: error.message });
+};
     }),
     // Anomalies,
     this.app.get(`${api}/anomalies`, (req, res) => {,
@@ -155,8 +155,8 @@ class DashboardServer extends EventEmitter {,
         const result = await this.sendTestNotification(),
         res.json(result),
       } catch (error) {,
-        res.status(500).json({ error: error.message }),
-      }
+        res.status(500).json({ error: error.message });
+};
     }),
     // Reports,
     this.app.get(`${api}/reports`, (req, res) => {,
@@ -168,8 +168,8 @@ class DashboardServer extends EventEmitter {,
         const result = await this.generateReport(type),
         res.json(result),
       } catch (error) {,
-        res.status(500).json({ error: error.message }),
-      }
+        res.status(500).json({ error: error.message });
+};
     }),
     // System controls,
     this.app.post(`${api}/system/restart`, (req, res) => {,
@@ -177,16 +177,16 @@ class DashboardServer extends EventEmitter {,
         this.restartSystem(),
         res.json({ message: System restart initiated' }),
       } catch (error) {,
-        res.status(500).json({ error: error.message }),
-      }
+        res.status(500).json({ error: error.message });
+};
     }),
     this.app.post(`${api}/system/shutdown`, (req, res) => {,
       try {,
         this.shutdownSystem(),
         res.json({ message: System shutdown initiated' }),
       } catch (error) {,
-        res.status(500).json({ error: error.message }),
-      }
+        res.status(500).json({ error: error.message });
+};
     }),
     // Configuration,
     this.app.get(`${api}/config`, (req, res) => {,
@@ -197,8 +197,8 @@ class DashboardServer extends EventEmitter {,
         const result = this.updateConfiguration(req.body),
         res.json(result),
       } catch (error) {,
-        res.status(500).json({ error: error.message }),
-      }
+        res.status(500).json({ error: error.message });
+};
     }),
     // Logs,
     this.app.get(`${api}/logs`, (req, res) => {,
@@ -213,14 +213,14 @@ class DashboardServer extends EventEmitter {,
     if (this.config.enableWebSocket) {,
       this.app.get(`${api}/ws`, (req, res) => {,
         res.json({ message: WebSocket endpoint available at /ws' }),
-      }),
-    }
+      });
+};
 ,
     // Catch-all for SPA,
     this.app.get('*', (req, res) => {,
       res.sendFile(path.join(this.config.staticPath, 'index.html')),
-    }),
-  }
+    });
+};
 ,
   setupWebSocket() {,
     if (!this.config.enableWebSocket) return,
@@ -238,15 +238,15 @@ class DashboardServer extends EventEmitter {,
           const data = JSON.parse(message),
           this.handleWebSocketMessage(ws, data),
         } catch (error) {,
-          logger.error('WebSocket message error:', error),
-        }
+          logger.error('WebSocket message error:', error);
+};
       }),
       ws.on('close', () => {,
         logger.info('🔌 WebSocket client disconnected'),
         this.clients.delete(ws),
       }),
-    }),
-  }
+    });
+};
 ,
   handleWebSocketMessage(ws, data) {,
     switch (data.type) {,
@@ -258,8 +258,8 @@ class DashboardServer extends EventEmitter {,
         this.handleCommand(data.command, data.params),
         break,
       default:,
-        logger.info('Unknown WebSocket message type:', data.type),
-    }
+        logger.info('Unknown WebSocket message type:', data.type);
+};
   }
 ,
   broadcastUpdate(type, data) {,
@@ -267,10 +267,10 @@ class DashboardServer extends EventEmitter {,
     const message = JSON.stringify({ type, data }),
     this.clients.forEach(client => {,
       if (client.readyState === 1) { // OPEN,
-        client.send(message),
-      }
-    }),
-  }
+        client.send(message);
+};
+    });
+};
 ,
   // API Methods,
   getSystemStatus() {,
@@ -301,43 +301,43 @@ class DashboardServer extends EventEmitter {,
 ,
   async runTask(taskName) {,
     if (!this.automationManager) {,
-      throw new Error('Automation manager not available'),
-    }
+      throw new Error('Automation manager not available');
+};
 ,
-    return await this.automationManager.runTask(taskName),
-  }
+    return await this.automationManager.runTask(taskName);
+};
 ,
   pauseTask(taskName) {,
     if (!this.automationManager) {,
-      throw new Error('Automation manager not available'),
-    }
+      throw new Error('Automation manager not available');
+};
 ,
-    return this.automationManager.pauseTask(taskName),
-  }
+    return this.automationManager.pauseTask(taskName);
+};
 ,
   resumeTask(taskName) {,
     if (!this.automationManager) {,
-      throw new Error('Automation manager not available'),
-    }
+      throw new Error('Automation manager not available');
+};
 ,
-    return this.automationManager.resumeTask(taskName),
-  }
+    return this.automationManager.resumeTask(taskName);
+};
 ,
   getSchedulingStatus() {,
     if (!this.taskScheduler) {,
       return { error: Task scheduler not available' },
     }
 ,
-    return this.taskScheduler.getSchedulingStats(),
-  }
+    return this.taskScheduler.getSchedulingStats();
+};
 ,
   recalculateScheduling() {,
     if (!this.taskScheduler) {,
-      throw new Error('Task scheduler not available'),
-    }
+      throw new Error('Task scheduler not available');
+};
 ,
-    return this.taskScheduler.recalculateAllIntervals(),
-  }
+    return this.taskScheduler.recalculateAllIntervals();
+};
 ,
   getAnomaliesStatus() {,
     if (!this.anomalyDetector) {,
@@ -362,14 +362,14 @@ class DashboardServer extends EventEmitter {,
 ,
   async sendTestNotification() {,
     if (!this.notificationManager) {,
-      throw new Error('Notification manager not available'),
-    }
+      throw new Error('Notification manager not available');
+};
 ,
     return await this.notificationManager.sendNotification(,
       Test notification from dashboard',
       { priority: 'medium', category: 'info', taskName: 'dashboard' }
-    ),
-  }
+    );
+};
 ,
   getReportsStatus() {,
     if (!this.reportGenerator) {,
@@ -383,21 +383,21 @@ class DashboardServer extends EventEmitter {,
 ,
   async generateReport(type) {,
     if (!this.reportGenerator) {,
-      throw new Error('Report generator not available'),
-    }
+      throw new Error('Report generator not available');
+};
 ,
-    return await this.reportGenerator.generateReport(type),
-  }
+    return await this.reportGenerator.generateReport(type);
+};
 ,
   restartSystem() {,
     this.emit('restart'),
-    logger.info('🔄 System restart initiated'),
-  }
+    logger.info('🔄 System restart initiated');
+};
 ,
   shutdownSystem() {,
     this.emit('shutdown'),
-    logger.info('🛑 System shutdown initiated'),
-  }
+    logger.info('🛑 System shutdown initiated');
+};
 ,
   getConfiguration() {,
     return {,
@@ -442,8 +442,8 @@ class DashboardServer extends EventEmitter {,
     const auth = req.headers.authorization,
     if (!auth) {,
       res.setHeader('WWW-Authenticate', Basic'),
-      return res.status(401).send('Authentication required'),
-    }
+      return res.status(401).send('Authentication required');
+};
 ,
     const credentials = Buffer.from(auth.split('')[1], base64').toString(),
     const [username, password] = credentials.split(':'),
@@ -451,8 +451,8 @@ class DashboardServer extends EventEmitter {,
       next(),
     } else {,
       res.setHeader('WWW-Authenticate', Basic'),
-      res.status(401).send('Invalid credentials'),
-    }
+      res.status(401).send('Invalid credentials');
+};
   }
 ,
   // Lifecycle methods,
@@ -477,14 +477,13 @@ class DashboardServer extends EventEmitter {,
             this.wss.handleUpgrade(request, socket, head, (ws) => {,
               this.wss.emit('connection', ws, request),
             }),
-          }),
-        }
-
+          });
+};
       } catch (error) {,
-        reject(error),
-      }
-    }),
-  }
+        reject(error);
+};
+    });
+};
 ,
   async stop() {,
     return new Promise((resolve) => {,
@@ -494,10 +493,10 @@ class DashboardServer extends EventEmitter {,
           resolve(),
         }),
       } else {,
-        resolve(),
-      }
-    }),
+        resolve();
+};
+    });
   }
 }
 ,
-module.exports = DashboardServer,
+module.exports = DashboardServer,'

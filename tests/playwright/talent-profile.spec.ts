@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test',
 
-test('talent profile name visible', async ({ page }) => {
+test('talent profile name visible', async ({ page }) : any => {
   await page.route('**/talent/123', async route => {
     await route.fulfill({
       status: 200,

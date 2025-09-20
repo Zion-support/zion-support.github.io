@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Discover our comprehensive suite of AI services for 2025, including automation, machine learning, neural networks, and quantum computing solutions that transform businesses.',
   keywords: ['AI services 2025artificial intelligence solutionsAI automationmachine learning', 'neural networksquantum computing']
 }
-export default function AIServices2025Ultimate() {
+export default function AIServices2025Ultimate() : any {
   return (
     <div>
       <SEO

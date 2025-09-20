@@ -4,7 +4,7 @@ export const metadata = {
   description:
     'Catalog common agent failure modes with concrete mitigations, eval suites, and guardrails for production.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
       <header className="mb-8">

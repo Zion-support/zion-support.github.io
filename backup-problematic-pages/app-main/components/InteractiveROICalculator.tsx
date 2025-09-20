@@ -1,5 +1,5 @@
 import React from 'react'
-const InteractiveROICalculator: React.FC = () => {;
+const InteractiveROICalculator: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">InteractiveROICalculator</h3>

@@ -55,6 +55,6 @@ exports.handler = async function(event, context) {
         function: 'front-index-orchestrator',
         status: 'error'
       })
-    },
+    };
   }
 },

@@ -110,11 +110,11 @@ export default function UltraFuturisticBackground2037({,
           quantumState: Math.random() * Math.PI * 2,
           neonIntensity: Math.random() * 0.8 + 0.2,
           hologramOpacity: Math.random() * 0.6 + 0.4
-        }),
-      }
+        });
+};
     }
     // Enhanced rendering functions,
-    const drawQuantumNeonParticle = (particle: any) => {const { x, y, size, color, quantumState, neonIntensity, rotation } = particle,
+    const drawQuantumNeonParticle = (particle: any) : any => {const { x, y, size, color, quantumState, neonIntensity, rotation } = particle,
       // Quantum state visualization,
       ctx.save(),
       ctx.translate(x, y),
@@ -142,10 +142,10 @@ export default function UltraFuturisticBackground2037({,
         ctx.beginPath(),
         ctx.arc(Math.cos(angle) * radius, Math.sin(angle) * radius, size * 0.3, 0, Math.PI * 2),
         ctx.fillStyle = `${color}${Math.floor(neonIntensity * 200).toString(16).padStart(2, '0')}`,
-        ctx.fill(),
-      }
+        ctx.fill();
+};
     }
-    const drawHologramParticle = (particle: any) => {const { x, y, size, color, hologramOpacity, rotation } = particle,
+    const drawHologramParticle = (particle: any) : any => {const { x, y, size, color, hologramOpacity, rotation } = particle,
       ctx.save(),
       ctx.translate(x, y),
       ctx.rotate(rotation),
@@ -158,22 +158,22 @@ export default function UltraFuturisticBackground2037({,
       for (let i = -2, i <= 2, i++) {ctx.beginPath(),
         ctx.moveTo(i * gridSize / 2, -gridSize),
         ctx.lineTo(i * gridSize / 2, gridSize),
-        ctx.stroke(),
-      }
+        ctx.stroke();
+};
       // Horizontal lines,
       for (let i = -2, i <= 2, i++) {ctx.beginPath(),
         ctx.moveTo(-gridSize, i * gridSize / 2),
         ctx.lineTo(gridSize, i * gridSize / 2),
-        ctx.stroke(),
-      }
+        ctx.stroke();
+};
       // Holographic center,
       ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 100).toString(16).padStart(2, '0')}`,
       ctx.beginPath(),
       ctx.arc(0, 0, size * 0.5, 0, Math.PI * 2),
       ctx.fill(),
-      ctx.restore(),
-    }
-    const drawWaveParticle = (particle: any) => {const { x, y, size, color, waveFrequency, waveAmplitude, opacity } = particle,
+      ctx.restore();
+};
+    const drawWaveParticle = (particle: any) : any => {const { x, y, size, color, waveFrequency, waveAmplitude, opacity } = particle,
       ctx.save(),
       ctx.strokeStyle = color,
       ctx.lineWidth = 2,
@@ -184,13 +184,13 @@ export default function UltraFuturisticBackground2037({,
         const waveY = y + Math.sin(i * waveFrequency + Date.now() * 0.01) * waveAmplitude,
         if (i === 0) {,
           ctx.moveTo(waveX, waveY),
-        } else {ctx.lineTo(waveX, waveY),
-        }
+        } else {ctx.lineTo(waveX, waveY);
+};
       }
       ctx.stroke(),
-      ctx.restore(),
-    }
-    const drawNeonParticle = (particle: any) => {const { x, y, size, color, neonIntensity } = particle,
+      ctx.restore();
+};
+    const drawNeonParticle = (particle: any) : any => {const { x, y, size, color, neonIntensity } = particle,
       ctx.save(),
       // Neon glow effect,
       ctx.shadowColor = color,
@@ -207,11 +207,11 @@ export default function UltraFuturisticBackground2037({,
         ctx.arc(x, y, size * (1 + i * 0.5), 0, Math.PI * 2),
         ctx.strokeStyle = color,
         ctx.lineWidth = 1,
-        ctx.stroke(),
-      }
-      ctx.restore(),
-    }
-    const drawQuantumParticle = (particle: any) => {const { x, y, size, color, quantumState } = particle,
+        ctx.stroke();
+};
+      ctx.restore();
+};
+    const drawQuantumParticle = (particle: any) : any => {const { x, y, size, color, quantumState } = particle,
       ctx.save(),
       ctx.translate(x, y),
       // Quantum uncertainty visualization,
@@ -238,13 +238,13 @@ export default function UltraFuturisticBackground2037({,
       ctx.moveTo(Math.cos(spinAngle) * size, Math.sin(spinAngle) * size),
       ctx.lineTo(Math.cos(spinAngle + Math.PI) * size, Math.sin(spinAngle + Math.PI) * size),
       ctx.stroke(),
-      ctx.restore(),
-    }
+      ctx.restore();
+};
     // Main animation loop,
     const animate = () => {if (prefersReducedMotion) return,
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Update and draw particles,
-      particles.forEach((particle, index) => {,
+      particles.forEach((particle, index) : any => {,
         // Update particle properties,
         particle.x += particle.vx,
         particle.y += particle.vy,
@@ -287,12 +287,12 @@ export default function UltraFuturisticBackground2037({,
             ctx.globalAlpha = particle.opacity,
             ctx.beginPath(),
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
-            ctx.fill(),
-        }
+            ctx.fill();
+};
       }),
       // Add quantum entanglement effects,
-      if (theme === 'quantum-neon' |theme === 'quantum') {particles.forEach((particle1, i) => {,
-          particles.slice(i + 1).forEach((particle2) => {,
+      if (theme === 'quantum-neon' |theme === 'quantum') {particles.forEach((particle1, i) : any => {,
+          particles.slice(i + 1).forEach((particle2) : any => {,
             const distance = Math.sqrt(,
               Math.pow(particle1.x - particle2.x, 2) +,
               Math.pow(particle1.y - particle2.y, 2),
@@ -408,11 +408,11 @@ export default function UltraFuturisticBackground2037({,
           quantumState: Math.random() * Math.PI * 2,
           neonIntensity: Math.random() * 0.8 + 0.2,
           hologramOpacity: Math.random() * 0.6 + 0.4
-        }),
-      }
+        });
+};
     }
     // Enhanced rendering functions,
-    const drawQuantumNeonParticle = (particle: any) => {const { x, y, size, color, quantumState, neonIntensity, rotation } = particle,
+    const drawQuantumNeonParticle = (particle: any) : any => {const { x, y, size, color, quantumState, neonIntensity, rotation } = particle,
       // Quantum state visualization,
       ctx.save(),
       ctx.translate(x, y),
@@ -440,10 +440,10 @@ export default function UltraFuturisticBackground2037({,
         ctx.beginPath(),
         ctx.arc(Math.cos(angle) * radius, Math.sin(angle) * radius, size * 0.3, 0, Math.PI * 2),
         ctx.fillStyle = `${color}${Math.floor(neonIntensity * 200).toString(16).padStart(2, '0')}`,
-        ctx.fill(),
-      }
+        ctx.fill();
+};
     }
-    const drawHologramParticle = (particle: any) => {const { x, y, size, color, hologramOpacity, rotation } = particle,
+    const drawHologramParticle = (particle: any) : any => {const { x, y, size, color, hologramOpacity, rotation } = particle,
       ctx.save(),
       ctx.translate(x, y),
       ctx.rotate(rotation),
@@ -456,22 +456,22 @@ export default function UltraFuturisticBackground2037({,
       for (let i = -2, i <= 2, i++) {ctx.beginPath(),
         ctx.moveTo(i * gridSize / 2, -gridSize),
         ctx.lineTo(i * gridSize / 2, gridSize),
-        ctx.stroke(),
-      }
+        ctx.stroke();
+};
       // Horizontal lines,
       for (let i = -2, i <= 2, i++) {ctx.beginPath(),
         ctx.moveTo(-gridSize, i * gridSize / 2),
         ctx.lineTo(gridSize, i * gridSize / 2),
-        ctx.stroke(),
-      }
+        ctx.stroke();
+};
       // Holographic center,
       ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 100).toString(16).padStart(2, '0')}`,
       ctx.beginPath(),
       ctx.arc(0, 0, size * 0.5, 0, Math.PI * 2),
       ctx.fill(),
-      ctx.restore(),
-    }
-    const drawWaveParticle = (particle: any) => {const { x, y, size, color, waveFrequency, waveAmplitude, opacity } = particle,
+      ctx.restore();
+};
+    const drawWaveParticle = (particle: any) : any => {const { x, y, size, color, waveFrequency, waveAmplitude, opacity } = particle,
       ctx.save(),
       ctx.strokeStyle = color,
       ctx.lineWidth = 2,
@@ -482,13 +482,13 @@ export default function UltraFuturisticBackground2037({,
         const waveY = y + Math.sin(i * waveFrequency + Date.now() * 0.01) * waveAmplitude,
         if (i === 0) {,
           ctx.moveTo(waveX, waveY),
-        } else {ctx.lineTo(waveX, waveY),
-        }
+        } else {ctx.lineTo(waveX, waveY);
+};
       }
       ctx.stroke(),
-      ctx.restore(),
-    }
-    const drawNeonParticle = (particle: any) => {const { x, y, size, color, neonIntensity } = particle,
+      ctx.restore();
+};
+    const drawNeonParticle = (particle: any) : any => {const { x, y, size, color, neonIntensity } = particle,
       ctx.save(),
       // Neon glow effect,
       ctx.shadowColor = color,
@@ -505,11 +505,11 @@ export default function UltraFuturisticBackground2037({,
         ctx.arc(x, y, size * (1 + i * 0.5), 0, Math.PI * 2),
         ctx.strokeStyle = color,
         ctx.lineWidth = 1,
-        ctx.stroke(),
-      }
-      ctx.restore(),
-    }
-    const drawQuantumParticle = (particle: any) => {const { x, y, size, color, quantumState } = particle,
+        ctx.stroke();
+};
+      ctx.restore();
+};
+    const drawQuantumParticle = (particle: any) : any => {const { x, y, size, color, quantumState } = particle,
       ctx.save(),
       ctx.translate(x, y),
       // Quantum uncertainty visualization,
@@ -536,13 +536,13 @@ export default function UltraFuturisticBackground2037({,
       ctx.moveTo(Math.cos(spinAngle) * size, Math.sin(spinAngle) * size),
       ctx.lineTo(Math.cos(spinAngle + Math.PI) * size, Math.sin(spinAngle + Math.PI) * size),
       ctx.stroke(),
-      ctx.restore(),
-    }
+      ctx.restore();
+};
     // Main animation loop,
     const animate = () => {if (prefersReducedMotion) return,
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Update and draw particles,
-      particles.forEach((particle, index) => {,
+      particles.forEach((particle, index) : any => {,
         // Update particle properties,
         particle.x += particle.vx,
         particle.y += particle.vy,
@@ -585,12 +585,12 @@ export default function UltraFuturisticBackground2037({,
             ctx.globalAlpha = particle.opacity,
             ctx.beginPath(),
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
-            ctx.fill(),
-        }
+            ctx.fill();
+};
       }),
       // Add quantum entanglement effects,
-      if (theme === 'quantum-neon' |theme === 'quantum') {particles.forEach((particle1, i) => {,
-          particles.slice(i + 1).forEach((particle2) => {,
+      if (theme === 'quantum-neon' |theme === 'quantum') {particles.forEach((particle1, i) : any => {,
+          particles.slice(i + 1).forEach((particle2) : any => {,
             const distance = Math.sqrt(,
               Math.pow(particle1.x - particle2.x, 2) +,
               Math.pow(particle1.y - particle2.y, 2),
@@ -722,7 +722,7 @@ const initParticles = () => {
     },
 
     // Enhanced rendering functions,
-const drawQuantumNeonParticle = (particle: any) => {
+const drawQuantumNeonParticle = (particle: any) : any => {
       const { x, y, size, color, quantumState, neonIntensity, rotation } = particle,      
       // Quantum state visualization,
 ctx.save(),
@@ -759,7 +759,7 @@ for (let i = 0, i < 3, i++) {
       }
     }
 
-    const drawHologramParticle = (particle: any) => {
+    const drawHologramParticle = (particle: any) : any => {
       const { x, y, size, color, hologramOpacity, rotation } = particle,      
       ctx.save(),
       ctx.translate(x, y),
@@ -795,7 +795,7 @@ ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 100).toString(16).padSta
       ctx.restore()
     },
 
-    const drawWaveParticle = (particle: any) => {
+    const drawWaveParticle = (particle: any) : any => {
       const { x, y, size, color, waveFrequency, waveAmplitude, opacity } = particle,      
       ctx.save(),
       ctx.strokeStyle = color,
@@ -818,7 +818,7 @@ ctx.beginPath(),
       ctx.restore()
     },
 
-    const drawNeonParticle = (particle: any) => {
+    const drawNeonParticle = (particle: any) : any => {
       const { x, y, size, color, neonIntensity } = particle,      
       ctx.save(),
       
@@ -845,7 +845,7 @@ for (let i = 1, i <= 3, i++) {
       ctx.restore()
     },
 
-    const drawQuantumParticle = (particle: any) => {
+    const drawQuantumParticle = (particle: any) : any => {
       const { x, y, size, color, quantumState } = particle,      
       ctx.save(),
       ctx.translate(x, y),
@@ -886,7 +886,7 @@ const animate = () => {
       
       ctx.clearRect(0, 0, canvas.width, canvas.height),      
       // Update and draw particles,
-particles.forEach(_(particle, index) => {
+particles.forEach(_(particle, index) : any => {
         // Update particle properties,
 particle.x += particle.vx,
         particle.y += particle.vy,
@@ -939,8 +939,8 @@ ctx.fillStyle = particle.color,
       
       // Add quantum entanglement effects,
 if (theme === 'quantum-neon' || theme === 'quantum') {
-        particles.forEach((particle1, i) => {
-          particles.slice(i + 1).forEach((particle2) => {
+        particles.forEach((particle1, i) : any => {
+          particles.slice(i + 1).forEach((particle2) : any => {
             const distance = Math.sqrt(
               Math.pow(particle1.x - particle2.x, 2) + 
               Math.pow(particle1.y - particle2.y, 2)
@@ -957,23 +957,23 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
 
             }
           }),
-        }),
-      }
-      requestAnimationFrame(animate),
-    }
+        });
+};
+      requestAnimationFrame(animate);
+};
     animate(0),
     const handleResize = () => {if (typeof window !== 'undefined') {,
         canvas.width = window.innerWidth,
         canvas.height = window.innerHeight,
       }
     }
-    if (typeof window !== 'undefined') {window.addEventListener('resize', handleResize),
-    }
+    if (typeof window !== 'undefined') {window.addEventListener('resize', handleResize);
+};
     return () => {if (typeof window !== 'undefined') {,
-        window.removeEventListener('resize', handleResize),
-      }
-      cancelAnimationFrame(animationFrameId),
-    }
+        window.removeEventListener('resize', handleResize);
+};
+      cancelAnimationFrame(animationFrameId);
+};
 }, [])
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -982,4 +982,5 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
     </div>
   ),
 },
-export default UltraFuturisticBackground2037,
+export default UltraFuturisticBackground2037;
+  }}}}}}}}}}}}}}))))))

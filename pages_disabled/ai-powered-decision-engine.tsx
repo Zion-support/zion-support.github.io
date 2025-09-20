@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
-export default function AiPoweredDecisionEngine() {
+export default function AiPoweredDecisionEngine() : any {
 	return (
 		<ServiceLanding
 			title="AI-Powered Decision Engine"
@@ -21,7 +21,7 @@ export default function AiPoweredDecisionEngine() {
 				"Versioned strategies with canary rollouts"
 			]}
 			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
-			canonical="https://ziontechgroup.com/ai-powered-decision-engine"
+			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	);
-}
+  }

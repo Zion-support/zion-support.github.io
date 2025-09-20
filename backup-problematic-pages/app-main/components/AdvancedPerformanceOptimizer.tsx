@@ -1,5 +1,5 @@
 import React from 'react'
-const AdvancedPerformanceOptimizer: React.FC = () => {;
+const AdvancedPerformanceOptimizer: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">AdvancedPerformanceOptimizer</h3>

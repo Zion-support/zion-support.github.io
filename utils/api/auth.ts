@@ -31,5 +31,5 @@ export function requireUser(
     res.status(401).json({ error: 'Unauthorized' }),
     return null,
   }
-  return user,
-}
+  return user;
+  }

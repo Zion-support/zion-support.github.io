@@ -80,7 +80,7 @@ const InteractiveAIDemo2025 = () => {,
       setIsTyping(false),
     }1500),
   },
-  const handleKeyPress = (e: React.KeyboardEvent) => {,
+  const handleKeyPress = (e: React.KeyboardEvent) : any => {,
     if (e.key === 'Enter' && !e.shiftKey) {,
       e.preventDefault(),
       handleSendMessage()
@@ -232,7 +232,7 @@ const InteractiveAIDemo2025 = () => {,
             { icon: Zaptitle: 'Quantum 'AIdescription: '1000x faster processing' },
             { icon: Targetitle: 'Business 'Automationdescription: '90% cost reduction' },
             { icon: TrendingUptitle: 'Future 'Predictionsdescription: '95% accuracy rate' }
-          ].map((featureindex) => {,
+          ].map((featureindex) : any => {,
             const Icon = feature.icon,
             return (,
               <div,
@@ -250,5 +250,5 @@ const InteractiveAIDemo2025 = () => {,
       </div>,
     </div>,
   ),
-export default InteractiveAIDemo2025,
-}
+export default InteractiveAIDemo2025;
+  }'

@@ -509,7 +509,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   }
 ],
 
-export const getServicesByCategory = (category: ZionEmergingTechService2029['category']) => {
+export const getServicesByCategory = (category: ZionEmergingTechService2029['category']) : any => {
   return zionEmergingTechServices2029.filter(service => service.category === category)
 },
 
@@ -518,5 +518,5 @@ export const getPopularServices = () => {
 },
 
 export const getNewServices = () => {
-  return zionEmergingTechServices2029.filter(service => service.isNew),
-},
+  return zionEmergingTechServices2029.filter(service => service.isNew);
+  },

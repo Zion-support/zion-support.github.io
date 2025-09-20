@@ -38,6 +38,6 @@ const UltimateContent2025Showcase: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default UltimateContent2025Showcase;

@@ -5,7 +5,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
-export default function QuantumAIBCIPage() {
+export default function QuantumAIBCIPage() : any {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-brain-computer-interface'));
   if (!service) return null;
 
@@ -52,4 +52,4 @@ export default function QuantumAIBCIPage() {
       </div>
     </Layout>
   );
-}
+  }

@@ -1,4 +1,4 @@
-const AI2026BreakthroughShowcase: React.FC = () => {;
+const AI2026BreakthroughShowcase: React.FC = () => {,
   return (
     <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div>

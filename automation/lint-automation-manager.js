@@ -22,7 +22,7 @@ class LintAutomationManager {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
-    }
+};
   }
 
   log(message) {
@@ -38,13 +38,13 @@ class LintAutomationManager {
       const result = execSync('npm run lint', { 
         encoding: 'utf8',
         stdio: 'pipe'
-      });
+      }),
       this.log('✅ Lint completed successfully');
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
-      this.log(`❌ Lint errors found: ${error.message}`);
+      this.log(`❌ Lint errors found: ${error.message}`),
       return { success: false, output: error.stdout || error.message };
-    }
+  }
   }
 
   async fixLintErrors() {
@@ -53,13 +53,13 @@ class LintAutomationManager {
       const result = execSync('npm run lint -- --fix', { 
         encoding: 'utf8',
         stdio: 'pipe'
-      });
+      }),
       this.log('✅ Lint errors fixed successfully');
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
-      this.log(`❌ Failed to fix lint errors: ${error.message}`);
+      this.log(`❌ Failed to fix lint errors: ${error.message}`),
       return { success: false, output: error.stdout || error.message };
-    }
+  }
   }
 
   startFileWatcher() {
@@ -73,13 +73,13 @@ class LintAutomationManager {
     ], {
       ignored: /(node_modules|\.git|\.next)/,
       persistent: true
-    });
+    }),
 
     let debounceTimer;
     watcher.on('change', (filePath) => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(async () => {
-        this.log(`📝 File changed: ${filePath}`);
+        this.log(`📝 File changed: ${filePath}`),
         await this.handleFileChange(filePath);
       }, 1000);
     });
@@ -89,15 +89,15 @@ class LintAutomationManager {
   }
 
   async handleFileChange(filePath) {
-    this.log(`🔍 Checking file: ${filePath}`);
+    this.log(`🔍 Checking file: ${filePath}`),
     
     // Run lint on the specific file
     try {
       const result = execSync(`npx eslint "${filePath}" --fix`, { 
         encoding: 'utf8',
         stdio: 'pipe'
-      });
-      this.log(`✅ Fixed issues in: ${filePath}`);
+      }),
+      this.log(`✅ Fixed issues in: ${filePath}`),
     } catch (error) {
       this.log(`❌ Issues found in ${filePath}: ${error.stdout || error.message}`);
     }
@@ -143,7 +143,7 @@ class LintAutomationManager {
 
   status() {
     const status = this.isRunning ? 'Running' : 'Stopped';
-    this.log(`📊 Status: ${status}`);
+    this.log(`📊 Status: ${status}`),
     return { running: this.isRunning };
   }
 }
@@ -164,8 +164,7 @@ switch (command) {
     manager.status();
     process.exit(0);
     break;
-  default:
-    console.log('Usage: node lint-automation-manager.js [start|stop|status]');
+  default: console.log('Usage: node lint-automation-manager.js [start|stop|status]'),
     process.exit(1);
 }
 

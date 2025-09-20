@@ -23,5 +23,5 @@ exports.handler = async () => {
   step('perf:auditautomation/performance-audit.cjs'),
   step('git:syncautomation/advanced-git-sync.cjs'),
 
-  return { statusCode: 200, body: logs.join('\n') },
-},
+  return { statusCode: 200, body: logs.join('\n') };
+  },

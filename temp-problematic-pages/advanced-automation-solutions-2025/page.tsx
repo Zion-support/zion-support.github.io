@@ -5,7 +5,7 @@ export const metadata = {,
   title: 'Advanced Automation Solutions 2025 - Revolutionary Business Automation',
   description: 'Discover cutting-edge automation solutions: intelligent process automationautonomous operationsand AI-powered business transformation delivering 2,500-4,000% ROI.',
   keywords: ['Automation Solutions 2025'Intelligent Process Automation'Business Automation'AI Automation'Autonomous Operations'ROI 2500%']},
-export default function AdvancedAutomationSolutions2025() {,
+export default function AdvancedAutomationSolutions2025() : any {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">,
       {/* Hero Section */}
@@ -445,4 +445,4 @@ export default function AdvancedAutomationSolutions2025() {,
           </div>,
         </div>,
       </div>,
-    </div>)}
+    </div>)}'

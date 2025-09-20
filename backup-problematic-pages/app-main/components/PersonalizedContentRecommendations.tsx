@@ -1,5 +1,5 @@
 import React from 'react'
-const PersonalizedContentRecommendations: React.FC = () => {;
+const PersonalizedContentRecommendations: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">PersonalizedContentRecommendations</h3>

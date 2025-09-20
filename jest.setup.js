@@ -4,18 +4,18 @@ jest.mock("next/router", () => ({
   useRouter() {
     return {
       route: "/",
-pathname: "/"
-      query: {},
-asPath: "/"
-      push: jest.fn(),
-pop: jest.fn()
-      reload: jest.fn(),
-back: jest.fn()
-      prefetch: jest.fn().mockResolvedValue(undefined),
-beforePopState: jest.fn()
-      events: {,
-on: jest.fn()
-        off: jest.fn(),
+pathname: "/",
+query: {},
+asPath: "/",
+push: jest.fn(),
+pop: jest.fn(),
+reload: jest.fn(),
+back: jest.fn(),
+prefetch: jest.fn().mockResolvedValue(undefined),
+beforePopState: jest.fn(),
+events: {,
+on: jest.fn(),
+off: jest.fn(),
 emit: jest.fn()
       }
       isFallback: false}
@@ -41,10 +41,10 @@ matches: false,
 media: query,
 onchange: null,
 addListener: jest.fn(),
-removeListener: jest.fn()
-    addEventListener: jest.fn(),
-removeEventListener: jest.fn()
-    dispatchEvent: jest.fn()
+removeListener: jest.fn(),
+addEventListener: jest.fn(),
+removeEventListener: jest.fn(),
+dispatchEvent: jest.fn()
   }))
 });
 // Mock IntersectionObserver,

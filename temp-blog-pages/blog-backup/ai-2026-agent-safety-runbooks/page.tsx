@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Standardized, eval‑gated runbooks for safe autonomous agent operations across scenarios.'
 }
-export default function AgentSafetyRunbooksPage() {
+export default function AgentSafetyRunbooksPage() : any {
   return (
     <main className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <header className="mb-10">

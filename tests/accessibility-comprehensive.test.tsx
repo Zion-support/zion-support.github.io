@@ -141,8 +141,8 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       
       for (let i = 0, i < navLinks.length, i++) {
         await user.tab(),
-        expect(navLinks[i]).toHaveFocus(),
-      }
+        expect(navLinks[i]).toHaveFocus();
+};
     }),
 
     test('Focus indicators are visible', () => {
@@ -192,8 +192,8 @@ describe('Accessibility Comprehensive Tests - Issue #17', () => {
       for (const component of components) {
         const { container } = render(component),
         const results = await axe(container),
-        expect(results).toHaveNoViolations(),
-      }
+        expect(results).toHaveNoViolations();
+};
     }),
 
     test('Color contrast meets standards', () => {

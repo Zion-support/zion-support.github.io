@@ -28,21 +28,21 @@ class FileWatcher {,
       const issues = [],
       // Basic syntax checks,
       if (content.includes('return()') && !content.includes('return ()')) {,
-        issues.push('Merge conflict markers found'),
-      }
+        issues.push('Merge conflict markers found');
+};
 ,
       // Check for unmatched braces (simple check),
       const openBraces = (content.match(/{/g) || []).length,
       const closeBraces = (content.match(/}/g) || []).length,
       if (openBraces !== closeBraces) {,
-        issues.push('Unmatched braces detected'),
-      }
+        issues.push('Unmatched braces detected');
+};
 ,
       // Check for unmatched parentheses,
       const openParens = (content.match(/(/g) || []).length,
       const closeParens = (content.match(/)/g) || []).length,
       if (openParens !== closeParens) {,
-        issues.push('Unmatched parentheses detected'),
-      }
+        issues.push('Unmatched parentheses detected');
+  }
 
 }}}

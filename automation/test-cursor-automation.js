@@ -28,8 +28,8 @@
         console.log(,
           '⚠️  Focus test failed (this is normal if Cursor is not running):',
           error.message,
-        ),
-      }
+        );
+};
 ,
       // Test text input (this will actually try to send text),
       try {,
@@ -39,8 +39,8 @@
         console.log(,
           '⚠️  Text input test failed (this is normal if Cursor is not focused):',
           error.message,
-        ),
-      }
+        );
+};
 ,
       // Test session management,
       console.log('\n🔍 Testing session management...'),
@@ -66,6 +66,6 @@
     } catch (error) {,
       console.error('\n❌ Test failed:', error.message),
       console.error(error.stack),
-      process.exit(1),
-    }
+      process.exit(1);
+};
   },

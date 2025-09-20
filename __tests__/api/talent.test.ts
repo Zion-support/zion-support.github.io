@@ -12,7 +12,7 @@ vi.mock('axios', async () => {
     ...actualAxios,
     get: vi.fn(),
     // Provide a type-safe mock for isAxiosError
-    isAxiosError: (payload: any): payload is AxiosError => {
+    isAxiosError: (payload: any): payload is AxiosError : any => {
       return actualAxios.isAxiosError(payload)
     }
   },
@@ -89,5 +89,5 @@ describe('Talent API functions', () => {
 
       await expect(getTalentBySlug(slug)).rejects.toThrow(errorMessage),
     }),
+  });
   }),
-}),

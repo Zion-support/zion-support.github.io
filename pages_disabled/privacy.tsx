@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Placeholder() {
+export default function Placeholder() : any {
   return (
     <main className="min-h-screen p-8">
       <Head>

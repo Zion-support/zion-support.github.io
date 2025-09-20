@@ -23,7 +23,7 @@ async function handler(req, res) {
   const { productId, userId } = req.body || {};
   if (!productId || !userId) {
     res.statusCode = 400;
-    res.json({ error: 'Missing productId or userId' });
+    res.json({ error: 'Missing productId or userId' }),
     return;
   }
 
@@ -39,7 +39,7 @@ async function handler(req, res) {
       apiVersion: '2023-10-16',
     });
 
-    const session = await stripe.checkout.sessions.create({
+  const session = await stripe.checkout.sessions.create({
       line_items: [{ price: productId, quantity: 1 }],
       mode: 'payment',
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
@@ -48,12 +48,12 @@ async function handler(req, res) {
     });
 
     res.statusCode = 200;
-    res.json({ sessionId: session.id });
+    res.json({ sessionId: session.id }),
   } catch (err) {
     console.error('Create checkout session error:', err);
     res.statusCode = 500;
     res.json({ error: err.message });
-  }
+};
 }
 
 export default withErrorLogging(handler);

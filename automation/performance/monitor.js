@@ -17,8 +17,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  ),
-}
+  );
+};
 ,
 const fs = require('fs').promises,
 const path = require('path'),
@@ -53,8 +53,8 @@ class PerformanceMonitor {,
       await this.collectMetrics(),
     }, this.config.interval),
     // Initial collection,
-    await this.collectMetrics(),
-  }
+    await this.collectMetrics();
+};
 ,
   async stop() {,
     if (!this.isMonitoring) {,
@@ -64,8 +64,8 @@ class PerformanceMonitor {,
 ,
     this.isMonitoring = false,
     clearInterval(this.interval),
-    logger.info('🛑 Performance monitor stopped'),
-  }
+    logger.info('🛑 Performance monitor stopped');
+};
 ,
   async collectMetrics() {,
     try {,
@@ -84,16 +84,16 @@ class PerformanceMonitor {,
           message:,
             'High memory usage detected. Consider optimizing memory usage.',
           action: ,
-            'Review memory-intensive operations and implement memory optimization strategies.'}),
-      }
+            'Review memory-intensive operations and implement memory optimization strategies.'});
+};
 ,
       if (metrics.cpu > this.config.thresholds.cpu) {,
         metrics.alerts.push({,
           type: 'performance',
           priority: 'medium',
           message: 'High CPU usage detected.',
-          action: 'Review CPU-intensive operations and consider optimization.'}),
-      }
+          action: 'Review CPU-intensive operations and consider optimization.'});
+};
 ,
       if (metrics.responseTime > this.config.thresholds.responseTime) {,
         metrics.alerts.push({,
@@ -101,14 +101,14 @@ class PerformanceMonitor {,
           priority: 'high',
           message: 'Slow response time detected.',
           action: ,
-            'Investigate performance bottlenecks and optimize critical paths.'}),
-      }
+            'Investigate performance bottlenecks and optimize critical paths.'});
+};
 ,
       this.history.push(metrics),
       // Keep only last 100 entries,
       if (this.history.length > 100) {,
-        this.history = this.history.slice(-100),
-      }
+        this.history = this.history.slice(-100);
+};
 ,
       // Save to file,
       await this.saveMetrics(metrics),
@@ -117,11 +117,11 @@ class PerformanceMonitor {,
         logger.warn(`Performance alerts: ${metrics.alerts.length} issues detected`),
         metrics.alerts.forEach((alert) => {,
           logger.warn(`${alert.type.toUpperCase()}: ${alert.message}`),
-        }),
-      }
+        });
+};
     } catch (error) {,
-      logger.error('❌ Error collecting metrics:', error),
-    }
+      logger.error('❌ Error collecting metrics:', error);
+};
   }
 ,
   async getMemoryUsage() {,
@@ -192,8 +192,8 @@ class PerformanceMonitor {,
         { flag: 'a' },
       ),
     } catch (error) {,
-      logger.error('Failed to save metrics:', error.message),
-    }
+      logger.error('Failed to save metrics:', error.message);
+};
   }
 ,
   async generateReport() {,
@@ -224,8 +224,8 @@ class PerformanceMonitor {,
       return report,
     } catch (error) {,
       logger.error('Failed to generate report:', error.message),
-      return null,
-    }
+      return null;
+  }
   }
 }
 ,

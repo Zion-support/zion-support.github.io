@@ -1,7 +1,7 @@
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-export default function SolutionsPage() {,
+export default function SolutionsPage() : any {,
 	return (,
 		<>,
 			<Head>,
@@ -337,4 +337,4 @@ export default function SolutionsPage() {,
 					</section>,
 				</div>,
 			</main>,
-		</>)}
+		</>)}'
