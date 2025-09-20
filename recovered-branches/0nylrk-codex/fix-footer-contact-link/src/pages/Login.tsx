@@ -1,8 +1,0 @@
-  return (,
-    <>,
-      <Header />,
-      <LoginContent />,
-      <Footer />,
-    </>),
-}
-,
