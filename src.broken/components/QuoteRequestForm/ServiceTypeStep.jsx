@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useEffect, useState } from 'react';
 export default function Page() {
@@ -128,3 +129,5 @@ export default function Page() {
         </div>)}
     </div>)}
 '"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

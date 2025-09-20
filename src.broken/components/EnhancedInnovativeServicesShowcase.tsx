@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 to - slate -800">
       <div className="max - w-7xl mx - auto px-6">
         <div className="text-center mb-16">
@@ -35,3 +36,12 @@
             <Link to="/services / cybersecurity" className="text-cyan - 400 hover:text-cyan -300">
               Learn More →
             </Link>;
+=======
+
+export 
+          </div>;
+        </div>;
+      </div>;
+    </section>;) };
+export default EnhancedInnovativeServicesShowcase;'"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

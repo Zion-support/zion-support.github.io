@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  from 'lucide-react';
 
@@ -446,3 +447,5 @@ export function AIContentOptimizer({
       </AnimatePresence>
     </>
   )}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

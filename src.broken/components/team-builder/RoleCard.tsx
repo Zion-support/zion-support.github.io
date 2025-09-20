@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 interface RoleCardProps extends React.PropsWithChildren<{}> {
 
@@ -6,3 +7,7 @@ interface RoleCardProps extends React.PropsWithChildren<{}> {
 
 export 
     </Card>;
+=======
+  )};
+'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

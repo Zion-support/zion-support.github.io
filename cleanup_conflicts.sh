@@ -1,17 +1,15 @@
 #!/bin/bash
 
-# Clean up merge conflict markers
-echo "Cleaning up merge conflict markers..."
+echo "Starting cleanup of merge conflict markers and syntax errors..."
 
-# Find all files with conflict markers and clean them
-find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        echo "Cleaning $file..."
-        # Remove conflict markers and keep only the HEAD version (first part)
-        sed -i '/<<<<<<< HEAD/,/=======/!d; /=======/d; />>>>>>>/d' "$file"
-        # Clean up any remaining markers
-        sed -i '/<<<<<<< HEAD/d; /=======/d; />>>>>>>/d' "$file"
-    fi
-done
-
-echo "Cleanup complete!"
+# Function to clean merge conflicts in a file
+clean_file() {
+    local file="$1"
+    echo "Cleaning: $file"
+    
+    if [ -f "$file" ]; then
+        # Remove merge conflict markers
+        sed -i '/^<<<<<<< /d' "$file"
+        sed -i '/^=======/d' "$file"
+        
+        # Remove any remaining conflict markers

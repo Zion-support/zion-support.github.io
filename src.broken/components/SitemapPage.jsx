@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   import { completeSitemap } from '../config / sitemap';
 
 export default function Page() {
@@ -94,3 +95,6 @@ export default function Page() {
   );
 }
 '"
+=======
+import React from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

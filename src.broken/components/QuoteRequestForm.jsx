@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function Page() {
 ,
     { value: 'talent-hiring', label: 'Talent Acquisition & Staffing' },
@@ -413,3 +414,6 @@ export default function Page() {
     </Card>) ;
 };
 '"
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

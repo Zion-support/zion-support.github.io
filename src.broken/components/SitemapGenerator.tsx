@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function Page() {
 , []);
@@ -203,3 +204,5 @@ const Video = () => <MessageCircle className="w-4 h-4"  />;"
 
 export default SitemapGenerator;
 '"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

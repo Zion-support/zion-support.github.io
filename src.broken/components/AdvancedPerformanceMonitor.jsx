@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  from 'lucide-react';
 
 const mockSystemMetrics = [{
@@ -368,3 +369,6 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
     </div>) ;
 }
 '"`
+=======
+import React, { useState, useRef, useEffect } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

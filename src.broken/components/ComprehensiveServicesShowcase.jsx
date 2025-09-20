@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { comprehensiveMicroSaasServices2025 } from '../../data / 2025 - comprehensive - micro - saas -services';
 export default function Page() {
@@ -54,3 +55,5 @@ export default function Page() {
             // Handle special category mappings
             const categoryMappings = {
 '"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

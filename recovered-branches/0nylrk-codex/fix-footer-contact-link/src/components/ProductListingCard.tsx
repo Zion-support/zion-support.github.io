@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -155,6 +156,14 @@ export function ProductListingCard({
           </div>
         </div>
       </div>
+=======
+import React from 'react';
+export function ProductListingCard() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
     </div>
   );
 }
