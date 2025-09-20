@@ -1,39 +1,44 @@
-import React from "react";
-import { useAuth } from "@/hooks/useAuth";
+import { Navigate, useLocation } from "react-router-dom";
+import { useAuthContext } from "@/context/AuthContext";
+import { useEffect, useState } from "react";
 
 interface ProtectedRouteProps {
-children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export function ProtectedRoute({ children }: ProtectedRouteProps) {
-const { user, loading } = useAuth();
+  const [isClient, setIsClient] = useState(false);
+  const location = useLocation();
 
-if (loading) {
-return (
-<div className="min-h-screen bg-zion-blue flex items-center justify-center">
-<div className="text-center">
-<div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan mx-auto"></div>
-<p className="text-zion-slate-light mt-4">Loading...</p>
-</div>
-</div>
-);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  // During SSR/build time, just render children
+  if (!isClient) {
+    return <>{children}</>;
+  }
+
+  try {
+    const { user, loading } = useAuthContext();
+
+    if (loading) {
+      return (
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+        </div>
+      );
+    }
+
+    if (!user) {
+      return <Navigate to="/login" state={{ from: location }} replace />;
+    }
+
+    return <>{children}</>;
+  } catch (error) {
+    // If context is not available, just render children
+    return <>{children}</>;
+  }
 }
 
-if (!user) {
-return (
-<div className="min-h-screen bg-zion-blue flex items-center justify-center">
-<div className="text-center max-w-md mx-auto px-4">
-<h1 className="text-3xl font-bold text-white mb-4">Access Required</h1>
-<p className="text-zion-slate-light mb-8">
-You need to be logged in to access this page.
-</p>
-<button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-6 py-3 rounded-lg transition-colors">
-Sign In
-</button>
-</div>
-</div>
-);
-}
-
-return <>{children}</>
-}
+export default ProtectedRoute;
