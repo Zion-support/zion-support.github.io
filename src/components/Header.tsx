@@ -1,19 +1,12 @@
 "use client";
-<<<<<<< HEAD
-
-import React from "react";
-import Link from "next/link";
-
-=======
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface Service {
   id: string;
   name: string;
 }
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 export default function Header() {
   return (
     <header className="bg-white shadow-sm border-b">

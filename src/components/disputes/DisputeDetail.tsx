@@ -167,7 +167,7 @@ export function DisputeDetail() {
         <div className="flex gap-2">
           <Button
             onClick={() => router.push('/dashboard/disputes')}
-            variant="outline"
+            
           >
             Back to Disputes
           </Button>
@@ -260,7 +260,7 @@ export function DisputeDetail() {
                   <CardContent>
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     <div className="mt-4">
-                      <Badge variant="outline">
+                      <Badge >
                         {dispute.resolution_type?.replace('_', ' ')}
                       </Badge>
                     </div>
@@ -411,7 +411,7 @@ export function DisputeDetail() {
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Status:</span>
-                <Badge variant={getStatusBadgeVariant(dispute.status)}>
+                <Badge>
                   {dispute.status.replace('_', ' ')}
                 </Badge>
               </div>

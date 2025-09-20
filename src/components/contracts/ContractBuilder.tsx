@@ -70,7 +70,7 @@ export function ContractBuilder({
             </TabsList>
             <div className="flex gap-2">
               <Button
-                variant="outline"
+                
                 size="sm"
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1"
@@ -79,7 +79,7 @@ export function ContractBuilder({
                 Templates
               </Button>
               <Button
-                variant="secondary"
+                
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
               >

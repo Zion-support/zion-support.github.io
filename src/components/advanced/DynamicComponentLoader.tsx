@@ -83,7 +83,7 @@ const ErrorFallback: React.FC<{ error: Error; retry: () => void }> = ({ error, r
             {error.message || 'An unexpected error occurred'}
           </p>
         </div>
-        <Button onClick={retry} variant="outline" size="sm">
+        <Button onClick={retry}  size="sm">
           <RefreshCw className="h-4 w-4 mr-2" />
           Try Again
         </Button>

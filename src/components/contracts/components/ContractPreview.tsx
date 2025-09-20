@@ -40,7 +40,7 @@ export function ContractPreview({
       </div>
       
       <div className="flex gap-2 justify-end">
-        <Button variant="outline" onClick={handleDownload}>
+        <Button  onClick={handleDownload}>
           <Download className="h-4 w-4 mr-2" />
           Download
         </Button>
@@ -48,7 +48,7 @@ export function ContractPreview({
           <Send className="h-4 w-4 mr-2" />
           {status === "sending" ? "Sending..." : "Send Contract"}
         </Button>
-        <Button variant="secondary" onClick={onClose}>
+        <Button  onClick={onClose}>
           Close
         </Button>
       </div>

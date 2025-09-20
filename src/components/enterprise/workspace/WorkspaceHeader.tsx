@@ -37,13 +37,13 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="icon" aria-label="Notifications">
+          <Button  size="icon" aria-label="Notifications">
             <Bell className="h-4 w-4" />
           </Button>
-          <Button variant="outline" size="icon" aria-label="Team members">
+          <Button  size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
           </Button>
-          <Button variant="outline" size="icon" aria-label="Workspace settings">
+          <Button  size="icon" aria-label="Workspace settings">
             <Settings className="h-4 w-4" />
           </Button>
         </div>

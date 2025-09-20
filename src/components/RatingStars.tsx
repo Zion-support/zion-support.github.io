@@ -7,11 +7,7 @@ interface RatingStarsProps {
   count?: number;
 }
 
-<<<<<<< HEAD
-export function RatingStars({ value, total = 5, count }: RatingStarsProps) {
-=======
 export function RatingStars({ value, total = 5, count }: RatingStarsProps): JSX.Element {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
   const filled = Math.floor(value);
   const half = value % 1 >= 0.5;
 

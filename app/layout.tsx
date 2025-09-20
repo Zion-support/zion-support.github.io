@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-import React from "react";
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
-<<<<<<< HEAD
-import Footer from "@/components/Footer";
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as SonnerToaster } from "@/components/ui/sonner";
-import "./globals.css";
-
-=======
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
+import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

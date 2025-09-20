@@ -96,7 +96,7 @@ export function TemplateManager({
                   <p className="text-sm text-gray-500">${template.budget} • {template.timeline}</p>
                 </div>
                 <Button
-                  variant="outline"
+                  
                   size="sm"
                   onClick={() => {
                     onSelectTemplate(template);

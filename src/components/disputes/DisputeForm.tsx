@@ -131,7 +131,7 @@ export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: Disp
                       </span>
                       <Button
                         type="button"
-                        variant="ghost"
+                        
                         size="sm"
                         onClick={() => removeFile(index)}
                       >
@@ -147,7 +147,7 @@ export function DisputeForm({ projectId, milestoneId, onSubmit, onCancel }: Disp
 
         <div className="flex justify-end space-x-2">
           {onCancel && (
-            <Button type="button" variant="outline" onClick={onCancel}>
+            <Button type="button"  onClick={onCancel}>
               Cancel
             </Button>
           )}

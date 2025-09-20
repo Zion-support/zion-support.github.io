@@ -75,7 +75,7 @@ export function ProductListingCard({
                     {listing.description}
                   </p>
                   <div className="flex items-center mt-2 space-x-2">
-                    <Badge variant="secondary">{listing.category}</Badge>
+                    <Badge >{listing.category}</Badge>
                     {listing.rating && (
                       <div className="flex items-center">
                         <Star className="h-4 w-4 text-yellow-400 fill-current" />
@@ -100,7 +100,7 @@ export function ProductListingCard({
               <div className="flex justify-between items-center mt-4">
                 <div className="flex flex-wrap gap-2">
                   {listing.tags.slice(0, 3).map((tag, index) => (
-                    <Badge key={index} variant="outline" className="text-xs">
+                    <Badge key={index}  className="text-xs">
                       {tag}
                     </Badge>
                   ))}
@@ -109,7 +109,7 @@ export function ProductListingCard({
                   <Button
                     onClick={handleViewDetails}
                     disabled={isLoading}
-                    variant="outline"
+                    
                     size="sm"
                   >
                     <Eye className="h-4 w-4 mr-2" />
@@ -118,7 +118,7 @@ export function ProductListingCard({
                   {onRequestQuote && (
                     <Button
                       onClick={handleRequestQuote}
-                      variant="default"
+                      
                       size="sm"
                     >
                       Request Quote
@@ -150,7 +150,7 @@ export function ProductListingCard({
           {listing.description}
         </p>
         <div className="flex items-center justify-between mb-4">
-          <Badge variant="secondary">{listing.category}</Badge>
+          <Badge >{listing.category}</Badge>
           {listing.rating && (
             <div className="flex items-center">
               <Star className="h-4 w-4 text-yellow-400 fill-current" />
@@ -162,7 +162,7 @@ export function ProductListingCard({
         </div>
         <div className="flex flex-wrap gap-2 mb-4">
           {listing.tags.slice(0, 3).map((tag, index) => (
-            <Badge key={index} variant="outline" className="text-xs">
+            <Badge key={index}  className="text-xs">
               {tag}
             </Badge>
           ))}
@@ -182,7 +182,7 @@ export function ProductListingCard({
             <Button
               onClick={handleViewDetails}
               disabled={isLoading}
-              variant="outline"
+              
               size="sm"
             >
               <Eye className="h-4 w-4 mr-2" />
@@ -191,7 +191,7 @@ export function ProductListingCard({
             {onRequestQuote && (
               <Button
                 onClick={handleRequestQuote}
-                variant="default"
+                
                 size="sm"
               >
                 Quote

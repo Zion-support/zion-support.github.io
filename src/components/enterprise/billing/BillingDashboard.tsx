@@ -36,7 +36,7 @@ export function BillingDashboard() {
             <p className="text-xs text-muted-foreground">
               ${currentPlan.price}/{currentPlan.billing}
             </p>
-            <Badge variant="default" className="mt-2">
+            <Badge  className="mt-2">
               {currentPlan.status}
             </Badge>
           </CardContent>

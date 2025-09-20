@@ -66,7 +66,7 @@ export function ApiDocumentation({ endpoints }: ApiDocumentationProps) {
                 <div className="p-4">
                   <div className="flex items-center">
                     <Badge
-                      variant="outline"
+                      
                       className={`${getMethodColor(endpoint.method)} font-mono`}
                     >
                       {endpoint.method}

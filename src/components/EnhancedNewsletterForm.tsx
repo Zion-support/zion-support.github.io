@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-"use client";
-
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Mail } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
-
-export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Success!",
-        description: "You've been subscribed to our newsletter.",
-      });
-      
-      setIsSubmitted(true);
-      setEmail('');
-=======
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -54,22 +23,11 @@ export function EnhancedNewsletterForm() {
         title: "Success!",
         description: "You've been subscribed to our newsletter.",
       })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to subscribe. Please try again.",
         variant: "destructive",
-<<<<<<< HEAD
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  return (
-    <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>
-=======
       })
     } finally {
       setIsSubmitting(false)
@@ -78,19 +36,13 @@ export function EnhancedNewsletterForm() {
 
   return (
     <div className='w-full max-w-lg mx-auto bg-blue-50 border border-blue-200 rounded-lg p-6'>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
       <div className='flex items-center mb-4'>
         <div className='p-2 bg-blue-100 rounded-full text-blue-600 mr-3'>
           <Mail className='h-6 w-6' />
         </div>
         <div>
-<<<<<<< HEAD
-          <h3 className='text-lg font-bold text-white'>Stay Updated</h3>
-          <p className='text-zion-slate-light text-sm'>
-=======
           <h3 className='text-lg font-bold text-gray-900'>Stay Updated</h3>
           <p className='text-gray-600 text-sm'>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
             Get exclusive offers, trending AI news and early access to best deals
           </p>
         </div>
@@ -126,11 +78,7 @@ export function EnhancedNewsletterForm() {
           <Button
             type='submit'
             disabled={isSubmitting}
-<<<<<<< HEAD
-            className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'
-=======
             className='bg-blue-600 hover:bg-blue-700 text-white'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
           >
             {isSubmitting ? 'Subscribing...' : 'Subscribe'}
           </Button>
@@ -141,11 +89,7 @@ export function EnhancedNewsletterForm() {
           {[...Array(3)].map((_, i) => (
             <div
               key={i}
-<<<<<<< HEAD
-              className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'
-=======
               className='h-5 w-5 rounded-full border border-gray-300 bg-white flex items-center justify-center text-blue-600'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
             >
               {String.fromCharCode(65 + i)}
             </div>
@@ -154,9 +98,5 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-=======
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-4b9a
 }

@@ -55,7 +55,7 @@ export function SocialLogin() {
       <div className='mt-6 grid grid-cols-4 gap-3'>
         <Button
           type='button'
-          variant='outline'
+          
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={handleGoogle}
           disabled={isLoading}
@@ -91,7 +91,7 @@ export function SocialLogin() {
         </Button>
         <Button
           type='button'
-          variant='outline'
+          
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={handleFacebook}
           disabled={isLoading}
@@ -101,7 +101,7 @@ export function SocialLogin() {
         </Button>
         <Button
           type='button'
-          variant='outline'
+          
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={handleTwitter}
           disabled={isLoading}

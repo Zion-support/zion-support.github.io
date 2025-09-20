@@ -82,7 +82,7 @@ export function SocialShareButtons({ title, url, description }: SocialShareButto
       {buttons.map(btn => (
         <Button
           key={btn.label}
-          variant='outline'
+          
           size='sm'
           onClick={btn.onClick}
           aria-label={btn.label}

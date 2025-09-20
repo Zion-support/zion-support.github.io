@@ -27,7 +27,7 @@ export function CodeBlock({ code, language = 'bash', className }: CodeBlockProps
       <div className="flex justify-between items-center p-2 bg-gray-800 border-b border-gray-700 rounded-t-md">
         <span className="text-sm text-gray-400 font-mono">{language}</span>
         <Button
-          variant="ghost"
+          
           size="sm"
           onClick={handleCopy}
           className="h-8 w-8 p-0 text-gray-400 hover:text-white"

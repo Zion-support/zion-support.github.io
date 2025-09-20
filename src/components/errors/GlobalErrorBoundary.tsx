@@ -167,11 +167,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                     Try Again ({retryCount}/{maxRetries})
                   </Button>
                 )}
-                <Button onClick={this.handleRefresh} variant="outline" className="flex-1">
+                <Button onClick={this.handleRefresh}  className="flex-1">
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Refresh Page
                 </Button>
-                <Button onClick={this.handleGoHome} variant="outline" className="flex-1">
+                <Button onClick={this.handleGoHome}  className="flex-1">
                   <Home className="h-4 w-4 mr-2" />
                   Go Home
                 </Button>
@@ -181,7 +181,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 <div className="mt-6">
                   <Button
                     onClick={this.toggleDetails}
-                    variant="outline"
+                    
                     size="sm"
                     className="mb-3"
                   >

@@ -32,7 +32,7 @@ export function ContractTypeCards({
           </ul>
         </CardContent>
         <CardFooter>
-          <Button variant='outline' onClick={onStandardClick}>
+          <Button  onClick={onStandardClick}>
             Create Standard Contract
           </Button>
         </CardFooter>

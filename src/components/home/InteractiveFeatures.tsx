@@ -47,7 +47,7 @@ export function InteractiveFeatures() {
                 <CardDescription>{feature.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="w-full">
+                <Button  className="w-full">
                   {feature.action}
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>

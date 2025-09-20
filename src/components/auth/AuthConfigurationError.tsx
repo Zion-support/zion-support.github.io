@@ -40,7 +40,7 @@ export function AuthConfigurationError({
             <Button 
               onClick={onRetry} 
               className="w-full"
-              variant="outline"
+              
             >
               <RefreshCw className="h-4 w-4 mr-2" />
               Retry Configuration
@@ -58,7 +58,7 @@ export function AuthConfigurationError({
           )}
 
           <Button 
-            variant="ghost" 
+             
             className="w-full"
             onClick={() => window.open('https://docs.ziontechgroup.com/auth-setup', '_blank')}
           >

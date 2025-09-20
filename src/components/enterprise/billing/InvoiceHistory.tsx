@@ -61,13 +61,13 @@ export function InvoiceHistory() {
               <TableCell>{invoice.description}</TableCell>
               <TableCell>${invoice.amount.toFixed(2)}</TableCell>
               <TableCell>
-                <Badge variant={invoice.status === 'paid' ? 'default' : 'secondary'}>
+                <Badge >
                   {invoice.status}
                 </Badge>
               </TableCell>
               <TableCell>
                 <Button
-                  variant="outline"
+                  
                   size="sm"
                   onClick={() => handleDownload(invoice.id)}
                 >

@@ -112,7 +112,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </div>
 
       <div className="flex justify-end space-x-2 mt-4">
-        <Button variant="outline" onClick={handleReset}>
+        <Button  onClick={handleReset}>
           Reset Filters
         </Button>
         <Button onClick={() => onFilterChange(filters)}>

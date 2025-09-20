@@ -31,7 +31,7 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {
 
   return (
     <Badge 
-      variant="outline" 
+       
       className={`${getScoreColor(score)} border`}
     >
       {score}% - {getScoreLabel(score)}

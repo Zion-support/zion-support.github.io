@@ -90,7 +90,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="h-8 w-8 p-0">
+                <Button  className="h-8 w-8 p-0">
                   <MoreVertical className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -160,13 +160,13 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
           {/* Action Buttons */}
           <div className="flex justify-between mt-2 gap-1">
-            <Button variant="outline" size="sm" className="flex-1" asChild>
+            <Button  size="sm" className="flex-1" asChild>
               <Link href={`/messages?talentId=${application.talent_id}`}>
                 <MessageSquare className="h-3 w-3 mr-1" /> Message
               </Link>
             </Button>
 
-            <Button variant="outline" size="sm" className="flex-1" asChild>
+            <Button  size="sm" className="flex-1" asChild>
               {application.resume?.file_url ? (
                 <a 
                   href={application.resume.file_url} 
@@ -183,7 +183,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
             </Button>
 
             <Button
-              variant="default"
+              
               size="sm"
               className="flex-1"
               onClick={() => setShowHireModal(true)}

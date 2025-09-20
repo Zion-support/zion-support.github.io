@@ -60,11 +60,11 @@ export function PaymentMethods() {
             </div>
             <div className="flex gap-2">
               {!method.isDefault && (
-                <Button size="sm" variant="ghost">
+                <Button size="sm" >
                   Set Default
                 </Button>
               )}
-              <Button size="sm" variant="ghost" className="text-destructive">
+              <Button size="sm"  className="text-destructive">
                 <Trash className="h-4 w-4" />
               </Button>
             </div>

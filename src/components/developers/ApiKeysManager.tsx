@@ -194,7 +194,7 @@ export function ApiKeysManager() {
           </p>
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
-              <Button variant='default'>Create New API Key</Button>
+              <Button >Create New API Key</Button>
             </DialogTrigger>
             <DialogContent className='bg-zinc-900 border-zinc-800 text-white'>
               <DialogHeader>
@@ -239,7 +239,7 @@ export function ApiKeysManager() {
                 </div>
               </div>
               <DialogFooter>
-                <Button variant='outline' onClick={handleDialogClose}>
+                <Button  onClick={handleDialogClose}>
                   Cancel
                 </Button>
                 <Button
@@ -261,7 +261,7 @@ export function ApiKeysManager() {
                 <Check size={16} className='mr-2 text-green-500' /> New API Key Generated
               </span>
               <Button
-                variant='ghost'
+                
                 size='icon'
                 className='h-6 w-6'
                 onClick={clearNewApiKey}
@@ -311,7 +311,7 @@ export function ApiKeysManager() {
                           </Badge>
                         ) : (
                           <Badge
-                            variant='secondary'
+                            
                             className='bg-red-900 text-white border-red-800'
                           >
                             Revoked
@@ -323,7 +323,7 @@ export function ApiKeysManager() {
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
-                        variant='ghost'
+                        
                         size='icon'
                         aria-label='More options'
                       >
@@ -355,7 +355,7 @@ export function ApiKeysManager() {
                   {key.scopes.map(scope => (
                     <Badge
                       key={scope}
-                      variant='secondary'
+                      
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'
                     >
                       {scope}
@@ -401,7 +401,7 @@ export function ApiKeysManager() {
         <div className='text-xs text-zinc-500'>
           Keep your API keys secure. They have the same permissions as your account.
         </div>
-        <Button variant='outline' size='sm' onClick={fetchApiKeys}>
+        <Button  size='sm' onClick={fetchApiKeys}>
           Refresh
         </Button>
       </CardFooter>

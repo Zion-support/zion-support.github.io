@@ -223,7 +223,7 @@ export function WebhookManager() {
                   ))}
                 </SelectContent>
               </Select>
-              <Button type="button" onClick={handleAddEvent} variant="outline">
+              <Button type="button" onClick={handleAddEvent} >
                 <PlusCircle className="h-4 w-4 mr-2" /> Add
               </Button>
             </div>
@@ -280,7 +280,7 @@ export function WebhookManager() {
                       </div>
                       <div className="flex-shrink-0">
                         <Button
-                          variant="outline"
+                          
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -311,7 +311,7 @@ export function WebhookManager() {
                 </CardContent>
                 <CardFooter className="flex justify-between pt-2">
                   <Button
-                    variant="outline"
+                    
                     size="sm"
                     onClick={() => deleteWebhook(webhook.id)}
                   >

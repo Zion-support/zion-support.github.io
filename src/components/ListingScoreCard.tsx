@@ -46,14 +46,14 @@ export function ListingScoreCard({ listing, isSelected = false, onSelect }: List
                 by {listing.provider.name}
               </span>
               {listing.provider.verified && (
-                <Badge variant="secondary" className="text-xs">
+                <Badge  className="text-xs">
                   Verified
                 </Badge>
               )}
             </div>
             <div className="flex flex-wrap gap-2">
               {listing.tags.slice(0, 3).map((tag, index) => (
-                <Badge key={index} variant="outline" className="text-xs">
+                <Badge key={index}  className="text-xs">
                   {tag}
                 </Badge>
               ))}
@@ -66,7 +66,7 @@ export function ListingScoreCard({ listing, isSelected = false, onSelect }: List
               </div>
             )}
             <Button
-              variant={isSelected ? "default" : "outline"}
+              
               size="sm"
               className="mt-2"
               onClick={(e) => {

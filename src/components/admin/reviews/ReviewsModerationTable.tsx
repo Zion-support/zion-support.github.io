@@ -168,13 +168,13 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                 {format(new Date(review.created_at), 'MMM d yyyy')}
               </TableCell>
               <TableCell>
-                <Badge variant='outline'>
+                <Badge >
                   {review.status.charAt(0).toUpperCase() + review.status.slice(1)}
                 </Badge>
               </TableCell>
               <TableCell>
                 {review.report_count > 0 ? (
-                  <Badge variant='destructive'>{review.report_count}</Badge>
+                  <Badge >{review.report_count}</Badge>
                 ) : (
                   'None'
                 )}
@@ -185,7 +185,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                     <>
                       <Button
                         size='sm'
-                        variant='outline'
+                        
                         className='h-8 w-8 p-0'
                         onClick={() => handleApprove(review.id)}
                         disabled={updateReviewStatus.isPending}
@@ -194,7 +194,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                       </Button>
                       <Button
                         size='sm'
-                        variant='outline'
+                        
                         className='h-8 w-8 p-0'
                         onClick={() => handleReject(review.id)}
                         disabled={updateReviewStatus.isPending}
@@ -205,7 +205,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                   )}
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant='ghost' size='sm' className='h-8 w-8 p-0'>
+                      <Button  size='sm' className='h-8 w-8 p-0'>
                         <MoreHorizontal className='h-4 w-4' />
                       </Button>
                     </DropdownMenuTrigger>
@@ -280,7 +280,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                         ? 'Anonymous'
                         : selectedReview.reviewer_profile?.display_name || 'User'}
                     </div>
-                    <Badge variant='outline'>{selectedReview.status}</Badge>
+                    <Badge >{selectedReview.status}</Badge>
                   </div>
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
@@ -294,26 +294,22 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
                 <h4 className='text-sm font-medium'>Additional Ratings</h4>
                 <div className='flex flex-wrap gap-2'>
                   {selectedReview.communication_rating && (
-                    <Badge variant='outline'>
+                    <Badge >
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
                   )}
                   {selectedReview.quality_rating && (
-                    <Badge variant='outline'>
+                    <Badge >
                       Quality: {selectedReview.quality_rating}/5
                     </Badge>
                   )}
                   {selectedReview.timeliness_rating && (
-                    <Badge variant='outline'>
+                    <Badge >
                       Timeliness: {selectedReview.timeliness_rating}/5
                     </Badge>
                   )}
                   {selectedReview.would_work_again !== undefined && (
-                    <Badge
-                      variant={
-                        selectedReview.would_work_again ? 'default' : 'secondary'
-                      }
-                    >
+                    <Badge>
                       {selectedReview.would_work_again
                         ? 'Would work again'
                         : 'Would not work again'}
@@ -336,7 +332,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
               {selectedReview.status === 'pending' && (
                 <>
                   <Button
-                    variant='destructive'
+                    
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={updateReviewStatus.isPending}
                   >
@@ -352,7 +348,7 @@ export const ReviewsModerationTable: React.FC<ReviewsModerationTableProps> = ({
               )}
               {selectedReview.status === 'approved' && (
                 <Button
-                  variant='destructive'
+                  
                   onClick={() =>
                     updateReviewStatus.mutate({
                       reviewId: selectedReview.id,

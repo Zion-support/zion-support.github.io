@@ -84,7 +84,7 @@ export function ApiLogs() {
             <span className="text-sm text-zinc-400">per page</span>
           </div>
           
-          <Button variant="outline" size="sm" onClick={handleRefresh}>
+          <Button  size="sm" onClick={handleRefresh}>
             <RefreshCw size={14} className="mr-1" /> Refresh
           </Button>
         </div>
@@ -136,7 +136,7 @@ export function ApiLogs() {
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
                       <Badge
-                        variant="outline"
+                        
                         className={
                           log.method === 'GET' 
                             ? "border-green-500 text-green-400" 
@@ -175,7 +175,7 @@ export function ApiLogs() {
             </div>
             <div className="flex space-x-2">
               <Button
-                variant="outline"
+                
                 size="sm"
                 disabled={!hasPrevPage}
                 onClick={() => setCurrentPage(currentPage - 1)}
@@ -183,7 +183,7 @@ export function ApiLogs() {
                 Previous
               </Button>
               <Button
-                variant="outline"
+                
                 size="sm"
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}

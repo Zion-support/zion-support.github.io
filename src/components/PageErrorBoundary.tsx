@@ -20,11 +20,11 @@ function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
             We're sorry, but something unexpected happened. Please try again.
           </p>
           <div className="flex space-x-2">
-            <Button onClick={resetErrorBoundary} variant="default">
+            <Button onClick={resetErrorBoundary} >
               <RefreshCw className="h-4 w-4 mr-2" />
               Try again
             </Button>
-            <Button asChild variant="outline">
+            <Button asChild >
               <Link href="/">
                 <Home className="h-4 w-4 mr-2" />
                 Go home

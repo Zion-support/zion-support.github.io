@@ -119,7 +119,7 @@ const LoginForm: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">Login</h3>
       
       {form.formState.errors.root && (
-        <Alert variant="destructive" className="mb-4">
+        <Alert  className="mb-4">
           <AlertDescription>
             {form.formState.errors.root.message}
           </AlertDescription>
@@ -165,7 +165,7 @@ const LoginForm: React.FC = () => {
             <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
             <Button
               type="button"
-              variant="ghost"
+              
               size="sm"
               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
               onClick={() => setShowPassword(!showPassword)}
@@ -228,7 +228,7 @@ const LoginForm: React.FC = () => {
         <div className="flex justify-between mt-4">
           <Button
             type="button"
-            variant="secondary"
+            
             className="w-1/2 mr-2"
             onClick={handleResendEmail}
             disabled={isResending}
@@ -237,7 +237,7 @@ const LoginForm: React.FC = () => {
           </Button>
           <Button
             type="button"
-            variant="outline"
+            
             className="w-1/2 ml-2"
             onClick={handleCheckStatus}
           >

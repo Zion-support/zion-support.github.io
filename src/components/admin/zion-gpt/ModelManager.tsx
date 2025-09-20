@@ -125,7 +125,7 @@ export function ModelManager() {
             Manage fine-tuned AI models for different platform features
           </CardDescription>
         </div>
-        <Button onClick={fetchModels} variant="outline" size="sm">
+        <Button onClick={fetchModels}  size="sm">
           <RefreshCw className="h-4 w-4 mr-2" /> Refresh
         </Button>
       </CardHeader>
@@ -170,7 +170,7 @@ export function ModelManager() {
                   <TableCell className="text-right">
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
-                        variant="ghost"
+                        
                         size="sm"
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
@@ -184,7 +184,7 @@ export function ModelManager() {
                       </Button>
                     ) : model.trainingStatus === 'succeeded' ? (
                       <Button
-                        variant={model.active ? "outline" : "default"}
+                        
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
                       >
@@ -200,7 +200,7 @@ export function ModelManager() {
                       </Button>
                     ) : (
                       <Button
-                        variant="ghost"
+                        
                         size="sm"
                         className="text-red-500"
                         title={model.errorMessage || "Training failed"}

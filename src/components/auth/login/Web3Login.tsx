@@ -31,7 +31,7 @@ export function Web3Login() {
   return (
     <Button
       type='button'
-      variant='outline'
+      
       className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
       onClick={handleWeb3Login}
       disabled={isLoading}

@@ -70,7 +70,7 @@ export function BillingSettings() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button variant="outline" className="w-full">
+            <Button  className="w-full">
               <CreditCard className="h-4 w-4 mr-2" />
               Manage Payment Methods
             </Button>
@@ -88,7 +88,7 @@ export function BillingSettings() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button variant="outline" className="w-full">
+            <Button  className="w-full">
               <FileText className="h-4 w-4 mr-2" />
               View Invoices
             </Button>

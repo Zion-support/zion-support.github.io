@@ -102,7 +102,7 @@ export default function GuestCheckoutModal({ open, onOpenChange, total }: GuestC
           <DialogFooter className='space-x-2'>
             <Button
               type='button'
-              variant='outline'
+              
               onClick={() => onOpenChange(false)}
               className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'
             >

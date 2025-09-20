@@ -25,7 +25,7 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           Achievements
-          <Badge variant="secondary">
+          <Badge >
             {achievedCount}/{totalCount}
           </Badge>
         </CardTitle>
@@ -49,7 +49,7 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
               <div className="flex items-center gap-2 mb-1">
                 <p className="font-medium text-gray-900">{achievement.title}</p>
                 {achievement.points && (
-                  <Badge variant="outline" className="text-xs">
+                  <Badge  className="text-xs">
                     +{achievement.points} pts
                   </Badge>
                 )}
@@ -58,7 +58,7 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
                 {achievement.description}
               </p>
               {achievement.category && (
-                <Badge variant="secondary" className="mt-2 text-xs">
+                <Badge  className="mt-2 text-xs">
                   {achievement.category}
                 </Badge>
               )}

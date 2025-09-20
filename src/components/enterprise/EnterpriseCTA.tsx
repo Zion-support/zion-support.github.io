@@ -21,7 +21,7 @@ export function EnterpriseCTA() {
                     <Calendar className="h-5 w-5" />
                     Schedule a Demo
                   </Button>
-                  <Button size="lg" variant="outline" className="gap-2">
+                  <Button size="lg"  className="gap-2">
                     Contact Sales
                     <ArrowRight className="h-5 w-5" />
                   </Button>

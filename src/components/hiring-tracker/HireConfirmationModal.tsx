@@ -84,7 +84,7 @@ export function HireConfirmationModal({
         </div>
         
         <DialogFooter>
-          <Button variant="outline" onClick={onClose}>
+          <Button  onClick={onClose}>
             Cancel
           </Button>
           <Button onClick={handleConfirm}>

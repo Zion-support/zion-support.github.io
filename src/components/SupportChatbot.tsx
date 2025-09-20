@@ -76,7 +76,7 @@ export function SupportChatbot() {
       <Button
         onClick={() => setOpen(true)}
         size='icon'
-        variant='outline'
+        
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
         aria-label='Open help chat'
       >
@@ -90,7 +90,7 @@ export function SupportChatbot() {
       <div className='bg-zion-blue-dark p-2 flex justify-between items-center'>
         <span className='text-white font-medium'>Help Bot</span>
         <Button
-          variant='ghost'
+          
           size='icon'
           className='text-white'
           onClick={() => setOpen(false)}

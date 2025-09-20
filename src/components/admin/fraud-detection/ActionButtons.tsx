@@ -15,7 +15,7 @@ export function ActionButtons({ onView, onInfo, onFlag, onBan, disabled = false 
     <div className="flex space-x-2">
       {onView && (
         <Button
-          variant="outline"
+          
           size="sm"
           onClick={onView}
           disabled={disabled}
@@ -27,7 +27,7 @@ export function ActionButtons({ onView, onInfo, onFlag, onBan, disabled = false 
       )}
       {onInfo && (
         <Button
-          variant="outline"
+          
           size="sm"
           onClick={onInfo}
           disabled={disabled}
@@ -39,7 +39,7 @@ export function ActionButtons({ onView, onInfo, onFlag, onBan, disabled = false 
       )}
       {onFlag && (
         <Button
-          variant="outline"
+          
           size="sm"
           onClick={onFlag}
           disabled={disabled}
@@ -51,7 +51,7 @@ export function ActionButtons({ onView, onInfo, onFlag, onBan, disabled = false 
       )}
       {onBan && (
         <Button
-          variant="outline"
+          
           size="sm"
           onClick={onBan}
           disabled={disabled}

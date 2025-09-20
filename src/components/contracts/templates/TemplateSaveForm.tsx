@@ -87,7 +87,7 @@ export function TemplateSaveForm({ template, onCancel, onSuccess }: TemplateSave
       </div>
       
       <div className='flex gap-2 justify-end'>
-        <Button type='button' variant='outline' onClick={onCancel}>
+        <Button type='button'  onClick={onCancel}>
           Cancel
         </Button>
         <Button type='submit' disabled={saving}>

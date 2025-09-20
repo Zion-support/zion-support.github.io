@@ -81,7 +81,7 @@ export function TemplateList({
               </div>
               <div className="flex items-center gap-2">
                 <Button
-                  variant="ghost"
+                  
                   size="icon"
                   onClick={() => onEdit(template)}
                   aria-label="Edit template"
@@ -93,7 +93,7 @@ export function TemplateList({
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Button
-                          variant="ghost"
+                          
                           size="icon"
                           onClick={() => handleSetDefault(template.id)}
                           aria-label="Set as default"
@@ -109,12 +109,12 @@ export function TemplateList({
                     </Tooltip>
                   </TooltipProvider>
                 ) : (
-                  <Button variant="ghost" size="icon" disabled aria-label="Default template">
+                  <Button  size="icon" disabled aria-label="Default template">
                     <StarOff className="h-4 w-4" />
                   </Button>
                 )}
                 <Button
-                  variant="ghost"
+                  
                   size="icon"
                   onClick={() => handleDeleteClick(template.id)}
                   aria-label="Delete template"
@@ -126,7 +126,7 @@ export function TemplateList({
             <Separator className="my-3" />
             <Button
               onClick={() => onSelect(template)}
-              variant="outline"
+              
               className="w-full"
             >
               Use This Template
