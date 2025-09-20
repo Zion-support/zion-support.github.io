@@ -2,7 +2,26 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps {
-  
+  children: React.ReactNode;
+  variant?: "default" | "outline" | "ghost" | "link";
+  size?: "sm" | "md" | "lg" | "icon";
+  asChild?: boolean;
+  className?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+}
+
+export function Button({ 
+  children,
+  variant = "default",
+  size = "md",
+  asChild = false,
+  className = "",
+  onClick,
+  type = "button",
+  disabled = false,
+}: ButtonProps) {
   const baseStyles = "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
 
   const variantStyles = {
@@ -24,4 +43,11 @@ interface ButtonProps {
   return (
     <Component
       className={cn(baseStyles, variantStyles[variant], sizeStyles[size], className)}
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
+    >
+      {children}
     </Component>
+  );
+}
