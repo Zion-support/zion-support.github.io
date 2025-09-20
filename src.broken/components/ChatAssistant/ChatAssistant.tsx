@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+  ;
+
+};
+  ;
+  ;
+
+};
+      setMessages(prev => [...prev, aiMessage]);
+    }, 1000);
+=======
 import React from 'react';
 export function ErrorBoundary() {
   return (
@@ -127,3 +138,4 @@ export function ChatAssistant({
     </div>;
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

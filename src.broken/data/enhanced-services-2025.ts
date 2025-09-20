@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+};
+
+      'Automated security vulnerability detection',Code quality scoring and metrics',Best practice recommendations',Integration with GitHub/GitLab/Bitbucket',Custom rule configuration',Team performance analytics',Automated PR comments',Compliance checking(SOC2, HIPAA),Performance impact analysis',Multi-language support'
+      'AI-powered threat detection',Automated incident response workflows',Real-time alerting and notifications',Incident timeline tracking',Post-mortem analysis tools',Integration with security tools',Compliance reporting',Team collaboration features',Knowledge base management',Performance metrics dashboard'
+      'OCR invoice processing',Automated approval workflows',Payment integration',Analytics dashboard',Multi-currency support',Vendor management',Compliance checking',Mobile app access',API integration',Custom reporting'
+      'Automated onboarding workflows',Predictive churn analysis',Support ticket routing',Success metrics tracking',Customer health scoring',Automated outreach campaigns',Integration with CRM systems',Performance analytics',Custom dashboards',API access'
+      'Real-time data visualization',Custom dashboard builder',Predictive analytics',Data integration tools',Automated reporting',Mobile app access',API access',Custom alerts',Data export capabilities',Team collaboration'
+      '24/7 network monitoring',Real-time threat detection',Incident response support',Compliance reporting',Vulnerability assessment',Security consulting',Penetration testing',Security awareness training',Incident post-mortem',Continuous improvement'
+      'Automated backup scheduling',Cloud storage integration',Disaster recovery planning',Recovery testing',RTO optimization',Data encryption',Compliance support',24/7 support',Recovery documentation',Business continuity planning'
+      'Asset discovery and tracking',License management',Depreciation tracking',Maintenance scheduling',Cost optimization',Compliance reporting',Vendor management',Contract tracking',Mobile app access',API integration'
+      'Natural language processing',Multi-language support',Integration APIs',Analytics dashboard',Custom training',Voice recognition',Sentiment analysis',Escalation handling',Knowledge base integration',Performance monitoring'
+      'Data modeling and analysis',Forecasting algorithms',Visualization tools',API integration',Custom model training',Real-time predictions',Performance monitoring',Automated insights',Scenario planning',Risk assessment'
+      'Object detection and recognition',Image classification',Video analysis',Custom model training',Real-time processing',Quality control automation',Process monitoring',Analytics dashboard',API access',Mobile integration'
+      'Quantum algorithm development',Optimization problem solving',Cryptography services',Scientific simulations',Quantum consulting',Training and education',Research collaboration',Performance benchmarking',Custom development',Ongoing support'
+      'Smart contract development',DeFi application building',NFT platform development',Blockchain infrastructure',Web3 consulting',Security auditing',Token economics',Governance systems',Cross-chain solutions',Mobile integration'
+=======
 export interface EnhancedService {
   id: string;
   name: string;
@@ -1059,3 +1076,4 @@ export const enhancedServices2025: EnhancedService[] = [{
 ];
 
 export default enhancedServices2025}}'"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

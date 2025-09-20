@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+                        console.error("Error fetching user profile:", error);
+=======
 import React, { useEffect } from "react";"
 import { supabase, getFromProfiles } from '../../integrations/supabase/client';"
 import { useAuthOperations } from '../../hooks/useAuthOperations';"
@@ -178,3 +181,4 @@ export default function Page() {
       {children}
     </AuthContext.Provider>)};
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

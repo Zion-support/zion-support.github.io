@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+
+      description: "Get exclusive access to tech trends and analysis";
+    },;
+            <p className="text-gray-300 text-lg mb-6">
+              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,
+=======
       description: "Get exclusive access to tech trends and analysis"},;
     {;
       icon: Zap,;"
@@ -189,3 +196,4 @@
     </section>;) };
 
 export default NewsletterSection}}}'"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

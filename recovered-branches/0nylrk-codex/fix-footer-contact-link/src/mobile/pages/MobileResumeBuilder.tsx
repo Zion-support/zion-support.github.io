@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+import { MobileHeader } from "../components/common/MobileHeader";
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import {
+  MobileResumeBuilder,
+  as,
+  ResumeBuilderComponent,
+} from "../components/resume/MobileResumeBuilder";
+export function MobileResumeBuilder() {
+
+
+
+
+
+      <main className="py-4">
+        <ResumeBuilderComponent />
+      </main>
+
+      <BottomNavigation />
+    </div>
+  );
+=======
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -83,3 +105,4 @@ export function MobileResumeBuilder() {;
 ;
 }
 ;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

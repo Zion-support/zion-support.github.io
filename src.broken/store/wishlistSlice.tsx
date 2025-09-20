@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+  ;
+  ;
+
+};
+const wishlistSlice:  createSlice({;
+=======
 :src/store/wishlistSlice.tsx
 
 interface WishlistState {
@@ -49,3 +56,4 @@ const wishlistSlice:  createSlice({;
 export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
 export { wishlistSlice };
 export default wishlistSlice.reducer;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

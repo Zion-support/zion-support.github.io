@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+ from 'lucide-react';
+
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  fullScreen?: boolean}
+
+export function LoadingSpinner({
+
+  size = 'md',
+  text = 'Loading...',
+  fullScreen = false}: LoadingSpinnerProps) {
+
+  ;
+  { duration: 1, repeat: Infinity,
+  ease: "linear"
+  { duration: 3,
+  ease: "easeInOut"
+=======
   ;
   ;
   ;
@@ -282,3 +303,4 @@ export function SkeletonLoader(...args[]):  {
   {
 
             background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+export function AdvancedSecurityDashboard () {
+
+=======
 import React, { useState, useRef, useEffect } from 'react';
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug  } from 'lucide-react';
 ,
@@ -385,3 +389,4 @@ export function AdvancedSecurityDashboard() {
       </div>
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

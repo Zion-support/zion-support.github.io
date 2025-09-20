@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+}>
+            <div className="relative">
+              <item.icon className="h-5 w-5 mb-1"/>
+=======
 import React from "react";"
 import { Link, useLocation  } from 'react-router-dom';"
 import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart import { useCart } from '@/context/CartContext';"
@@ -78,3 +83,4 @@ export default function Page() {
       </div>
     </nav>)}
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

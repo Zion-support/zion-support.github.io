@@ -1,4 +1,12 @@
 
+<<<<<<< HEAD
+export default function Page() {
+      },
+      { threshold: 0.1 }
+    );
+
+    if(element) {
+=======
       observer.observe(element)}
 
     return () => observer.disconnect()}, []);
@@ -328,3 +336,4 @@
       </div>;
     </section>;) };
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

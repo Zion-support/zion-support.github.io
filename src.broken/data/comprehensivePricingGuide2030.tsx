@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+// Pricing Analysis and Insights
+export const PRICING_ANALYSIS_2030 = {
+  averagePrice: Math.round(COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) /
+    COMPREHENSIVE_PRICING_GUIDE_2030.length
+  ),
+  priceRange: {
+    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
+  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
+  ;
+;
+
+;
+
+=======
 // Comprehensive Pricing Guide 2030 - Zion Tech Group
 // Complete pricing information for all innovative services
 
@@ -390,3 +405,4 @@ export
   responseTime: "Within 24 hours for pricing inquiries";
 };
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

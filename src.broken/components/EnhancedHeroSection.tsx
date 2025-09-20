@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import { Link  } from 'react-router-dom';
+
+export default function Page() {
+=======
   icon: React.ComponentType<any>;
   stats: { label: string; value: string; icon: React.ComponentType<any> }[];
   badge?: string}
@@ -395,3 +400,4 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 }) ;
 export default EnhancedHeroSection;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

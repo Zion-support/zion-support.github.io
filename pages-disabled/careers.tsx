@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+const Page = () => {
+=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
@@ -373,3 +377,4 @@ export default function CareersPage() {;
           </div>;
 }
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

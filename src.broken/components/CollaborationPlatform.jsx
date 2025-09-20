@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React, { useState, useRef, useEffect } from 'react';
 import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff const mockParticipants = [;
     { id: '1', name: 'John Smith', isVideoOn: true, isAudioOn: true, isScreenSharing: false, isSpeaking: true, avatar: '👨‍💼' },
@@ -208,3 +211,4 @@ export function CollaborationPlatform() {
       </div>
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

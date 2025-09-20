@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [import { motion  } from 'framer-motion';
+
+    { value: '500+', label: 'Happy Clients', color: 'text-blue - 400' },
+    { value: '1000+', label: 'Projects Delivered', color: 'text-green - 400' },
+    { value: '99.9%', label: 'Uptime SLA', color: 'text-purple - 400' },
+    { value: '24 / 7', label: 'Support Available', color: 'text-cyan - 400' }
+=======
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -49,3 +57,4 @@ export default function Page() {
     };
     const floatingVariants = {
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import { ArrowUp import { useEffect, useState } from 'react';
+import { useTranslation } from 'react -i18next';
+ from 'react';
+export function BackToTopButton () {
+
+    const [visible, setVisible] = useState(false);
+    const { t } = useTranslation () ;
+    useEffect(() => {
+=======
 import { ArrowUp import { useEffect, useState } from 'react';"
 import { useTranslation } from 'react-i18next';
  = useTranslation();
@@ -11,3 +21,4 @@ import { useTranslation } from 'react-i18next';
       <ArrowUp aria-hidden="true" className="h-5 w-5"/>
     </button>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

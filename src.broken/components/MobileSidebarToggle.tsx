@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
       newExpanded.delete(section)} else {
 
       newExpanded.add(section)}
@@ -281,3 +284,4 @@
     </>
   )};
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

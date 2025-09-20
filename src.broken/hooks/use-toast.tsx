@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 :src/hooks/use-toast.tsx
 
 interface Toast {
@@ -55,3 +57,4 @@ export
 export 
   // In a real implementation, this would dispatch to a global toast system;
   console.log('Toast:', { title, description, variant, duration })};
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

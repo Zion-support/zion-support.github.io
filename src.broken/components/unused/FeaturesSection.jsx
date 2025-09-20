@@ -1,32 +1,13 @@
-import { motion  } from 'framer-motion';
-export default function Page() {
-,
-        {
-
-            icon: RocketLaunchIcon,"
-            title: "Scalable Solutions","
-            description: "Architected for growth with cloud-native and microservices approaches","
-            color: "text-zion-cyan"
-        },
-        {
-
-            icon: CogIcon,"
-            title: "24/7 Support","
-            description: "Round-the-clock technical support and maintenance services","
-            color: "text-zion-purple"
-
-    ];
-    const containerVariants = {
-
-        hidden: { opacity: 0 },
-        visible: {
-
-            opacity: 1,
-            transition: {
-
-                staggerChildren: 0.1
-
     };
+<<<<<<< HEAD
+  y: 0
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+  delay: 0.5
+
+}} className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
+=======
     const itemVariants = {
 
   hidden: { y: 20,
@@ -129,3 +110,4 @@ export default function Page() {
       </div>
     </section>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

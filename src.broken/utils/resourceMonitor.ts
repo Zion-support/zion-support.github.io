@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+
+      if(!contentType) {
+
+        this.handleResourceError(url,other',No content-type header');
+        return}
+      this.handleResourceError(url,other', `Fetch error: ${error}`)}
+  }
+    ); // Exponential backoff
+  }
+
+    }
+  }
+
+=======
 interface ResourceError {
   url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
@@ -251,3 +266,4 @@ class ResourceMonitor {
 
 export default resourceMonitor;
 '`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

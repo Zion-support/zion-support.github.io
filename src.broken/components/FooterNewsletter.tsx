@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+      // // // // // // // console.error('Newsletter subscription failed:', error) ;
+    } finally {
+      setIsSubmitting(false) ;
+=======
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -67,3 +72,4 @@ import {logErrorToProduction} from '@/utils/productionLogger';
       </div>;
     </div>;) };
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

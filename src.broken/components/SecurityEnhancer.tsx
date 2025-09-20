@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+ params - Function parameters
+ * @returns {*} Function return value
+ */
+function SecurityEnhancer () {
+=======
   Shield,
   Lock,
   Eye,
@@ -507,3 +513,4 @@ export function SecurityEnhancer() {
     </>
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

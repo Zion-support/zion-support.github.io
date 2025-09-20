@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+// Stub offworld IPFS utility - placeholder for missing functionality
+export const uploadToIPFS = async (data: any) => {
+  // Placeholder implementation
+  return { hash: 'placeholder-hash', success: true };
+};
+
+export const getFromIPFS = async (hash: string) => {
+  // Placeholder implementation
+  return { data: 'placeholder-data', success: true };
+=======
 import fs from 'fs';
 import path from 'path';
 import { Readable } from 'stream';
@@ -168,3 +179,4 @@ export const OFFWORLD_TOPICS = {
   chat: 'zion.chat.messages',
   votes: 'zion.dao.votes',
 };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

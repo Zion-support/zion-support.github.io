@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+interface Stat {
+  number: string;
+  label: string;
+  description: string;
+  avatar: string;
+icon: React.ComponentType<{ className?: string
+}>;
+  color: string}
+
+interface StatsSectionProps extends React.PropsWithChildren<{}> {
+
+  stats: Stat[]}
+
+const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
+
+  const [counts, setCounts] = useState<any>({});
+=======
   useEffect(() => {
     if(isInView) {
 
@@ -124,3 +142,4 @@
   )};
 
 export default StatsSection}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

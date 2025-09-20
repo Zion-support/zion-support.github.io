@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+export default ContentOptimizer;
+
+    // Check for internal links
+    const internalLinks = content.match(/href="/[^"]*"/g) || [];
+=======
 export class ContentOptimizer {
   static MIN_WORD_COUNT = 300;
   static MIN_HEADING_COUNT = 2;
@@ -222,3 +228,4 @@ export class ContentOptimizer {
 
 export default ContentOptimizer;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

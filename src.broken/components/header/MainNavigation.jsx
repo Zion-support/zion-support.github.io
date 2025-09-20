@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import { Link  } from 'react-router-dom';
+
+export default function Page() {
+=======
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -337,3 +342,4 @@ export function MainNavigation({ className }) {
     </nav>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

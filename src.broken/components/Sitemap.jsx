@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+export default Sitemap;
+
+=======
 import React from 'react';
 import { Link  } from 'react-router-dom';
 export default function Page() {
@@ -167,3 +171,4 @@ export default function Page() {
     </div>)};
 export default Sitemap;
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

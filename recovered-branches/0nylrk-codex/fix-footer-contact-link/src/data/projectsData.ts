@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+
+
+    job: {
+      title: 'AI Dashboard Development'
+      description: 'Develop dashboards using React and integrate ML models'
+
+
+;
+    }
+  }
+];
+    }
+  }
+];
+      professional_title: "Senior AI Engineer";
+    }
+  }
+];
+;
+=======
 job: {
       title: "title",
     description: 'Develop dashboards using React and integrate ML models'
@@ -85,3 +106,4 @@ export const PROJECTS: Project[] = [;
     }
   }
 ];
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

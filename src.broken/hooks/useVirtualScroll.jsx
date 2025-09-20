@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 export default function Page() {
@@ -276,3 +278,4 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         state
     }};
 '`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

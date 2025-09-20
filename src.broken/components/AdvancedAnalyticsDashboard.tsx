@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+ from 'lucide-react';
+
+interface AnalyticsData {
+
+  id: string;
+  metric: string;
+  value: number;
+  change: number;
+  trend: 'up' | 'down' | 'stable';
+  category: string;
+  timestamp: Date;
+  target?: number;
+  unit?: string}
+
+=======
 interface ChartData {
 
   labels: string[];
@@ -494,3 +510,4 @@ export function AdvancedAnalyticsDashboard({
     </>
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

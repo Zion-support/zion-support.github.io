@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+export default function Page() {
+, [location.pathname]);
+  
+=======
   useEffect(() => {
     setActiveDropdown(null)}, [location.pathname]);
   
@@ -328,3 +333,4 @@
     </>
   )};
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

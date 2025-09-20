@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+ from 'lucide-react';
+
+interface SecurityThreat {
+  id: string;
+  type: 'critical' | 'high' | 'medium' | 'low';
+  severity: number;
+  description: string;
+  source: string;
+  timestamp: Date;
+  status: 'active' | 'resolved' | 'investigating';
+  affectedSystems: string[];
+  recommendations: string[]}
+
+=======
 interface VulnerabilityAssessment {
   id: string;
   category: 'network' | 'application' | 'infrastructure' | 'data';
@@ -619,3 +634,4 @@ export function SecurityMonitoringSystem({
     </>
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

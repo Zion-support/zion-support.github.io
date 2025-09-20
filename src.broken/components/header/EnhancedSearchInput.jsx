@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+}
+=======
 import React, { useState, useRef, useEffect } from 'react';
 import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export const EnhancedSearchInput = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -245,3 +248,4 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     </div>
   )};
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

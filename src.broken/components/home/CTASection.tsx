@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+  y: 30 ;
+
+}}
+  y: 0 ;
+
+}}
+  delay: 0.6 ;
+
+}}
+  y: 30 ;
+
+}}
+  y: 0 ;
+
+}}
+  delay: 0.8 ;
+
+}}
+  delay: 1 ;
+
+}}
+=======
 ;
 const CTASection: React.FC = (): JSX.Element => {
 
@@ -199,3 +222,4 @@ const CTASection: React.FC = (): JSX.Element => {
   )};
 
 export default CTASection}}'"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

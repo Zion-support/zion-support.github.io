@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+
+    if(lastDot === -1) return '';
+    return filename.substring(lastDot).toLowerCase()}
+
+      script.src = url;
+      script.async = true;
+      script.type = 'text/javascript';
+      return script} else {
+
+      link.rel = 'stylesheet';
+      link.href = url;
+=======
 interface MimeTypeMapping {
   [key: string]: string}
 class MimeTypeFallback {
@@ -169,3 +182,4 @@ class MimeTypeFallback {
 
 export default mimeTypeFallback;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

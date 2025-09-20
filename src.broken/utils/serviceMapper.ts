@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+    // Interface for the existing service structure
+    id: string;
+    title: string;
+    description: string;
+    category: string;
+    subcategory: string;
+    price: number;
+    currency: string;
+    pricingModel: string;
+    features: string[];
+    benefits: string[];
+    useCases: string[];
+    targetAudience: string[];
+    tags: string[];
+    estimatedDelivery: string;
+    supportLevel: string;
+    marketPrice: string;
+    roi: string;
+    innovationLevel: string;
+    contactInfo: {
+      phone: string;
+      email: string;
+      website: string;
+    };
+    technicalSpecs?: {
+      technology: string[];
+      integrations: string[];
+      apiEndpoints: number;
+      uptime: string;
+      security: string[];
+    };
+    competitors?: string[];
+    marketSize?: string;
+    compliance?: string[];
+  }
+=======
 // Interface for the existing service structure
 export interface Service {
   id: string;
@@ -75,3 +112,4 @@ export function map2026ServicesToExistingStructure(): Service[] {
     compliance: ['SOC 2',ISO 27001'], // Default compliance
   }))}
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

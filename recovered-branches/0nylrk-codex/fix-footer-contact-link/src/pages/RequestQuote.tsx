@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+  );
+  );
+=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
@@ -53,3 +57,4 @@ function RequestQuote() {
   );
 }
 ;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+};
+
+// Comprehensive AI Services 2030
+=======
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
 ;
@@ -652,3 +657,4 @@ export const comprehensiveAIServices2030: AIService[] = [{
 ];
 
 export default comprehensiveAIServices2030}}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

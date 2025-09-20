@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from "react";
+import Skeleton from "@/components/ui/skeleton";
+=======
 import React from "react";"
 import { BadgeDollarSign import { useWallet } from '@/hooks/useWallet';"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
@@ -29,3 +33,4 @@ export function TokenDisplay() {
       </CardContent>
     </Card>)}
 "
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

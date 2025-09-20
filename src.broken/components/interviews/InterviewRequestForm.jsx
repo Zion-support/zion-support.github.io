@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+}>
+                        {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
+=======
 import React, { useState } from "react";"
 import { Button } from '@/components/ui/button';"
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';"
@@ -224,3 +228,4 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
       </form>
     </Form>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

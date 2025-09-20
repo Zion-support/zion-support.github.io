@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
 import { Gift import { useAuth } from '@/hooks/useAuth';
 export default function Page() {
 , { purchase: 0, post: 0, referral: 0 });
@@ -41,3 +44,4 @@ export default function Page() {
       </DropdownMenuContent>
     </DropdownMenu>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

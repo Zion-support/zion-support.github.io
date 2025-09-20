@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
 import { useState, useEffect } from 'react';
 import { DragDropContext } from '@hello-pangea/dnd';
 import { useJobApplications } from '@/hooks/useJobApplications';
@@ -145,3 +148,4 @@ export function KanbanBoard({ jobId }) {
   );
 }
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

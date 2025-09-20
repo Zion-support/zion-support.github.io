@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function EvalDrivenRolloutsToolkit2026() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -27,35 +26,3 @@ export default function EvalDrivenRolloutsToolkit2026() {,
     </div>,
   ),}
 ,
-=======
-export default function EvalDrivenRolloutsToolkit2026() {
-  return (
-    <div className="min-h-screen bg-white">
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Toolkit: Eval-Driven Rollouts for Agent Features (2026)</h1>
-          <p className="text-gray-600 mb-8">A repeatable workflow to gate new agent tools and prompts behind live evaluations.</p>
-          <div className="prose prose-gray max-w-none">
-            <h2>What’s Inside</h2>
-            <ul>
-              <li>Templates for defining objective evals per feature</li>
-              <li>CI/CD integration patterns for pre-deploy gates</li>
-              <li>Runtime canarying with safety and cost budgets</li>
-              <li>Automated rollback and evidence capture</li>
-            </ul>
-            <h3>Quick Start</h3>
-            <ol>
-              <li>Define success metrics and thresholds</li>
-              <li>Hook eval suites into your pipeline</li>
-              <li>Enable canary with telemetry and alerts</li>
-              <li>Promote when thresholds are sustainably met</li>
-            </ol>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-
-
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

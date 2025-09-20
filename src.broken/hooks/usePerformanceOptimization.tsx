@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+    
+        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
+=======
 :src/hooks/usePerformanceOptimization.tsx
 
 interface PerformanceMetrics {
@@ -222,3 +226,4 @@ declare global {
     gtag?: (...args[])  => void}
 }
 '`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

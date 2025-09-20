@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+  // Placeholder;
+    ;
+
+};
+
+    announcement.setAttribute('aria-live', priority);
+    announcement.setAttribute('aria-atomic',true');
+
+=======
 :src/hooks/useAccessibility.tsx
 
 interface UseAccessibilityOptions {
@@ -317,3 +327,4 @@ activeElements.forEach(element:  > {;
     navigateHorizontal
   }};
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

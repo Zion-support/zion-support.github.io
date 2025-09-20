@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+};
+
+=======
 // Specialized Healthcare AI Services 2025 - Zion Tech Group
 // Advanced AI-powered healthcare technology solutions
 ;
@@ -297,3 +302,4 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
 ];
 
 export default specializedHealthcareAIServices2025}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

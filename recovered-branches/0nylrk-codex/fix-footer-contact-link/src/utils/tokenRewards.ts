@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+
+
+export async function rewardOnboarding(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+
+
+
+;
+
+
+
+=======
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
     method: "method",
@@ -119,3 +134,4 @@ function rewardFiveStarReview() {
     body: JSON.stringify ({ user_id, amount: 10, reason: '5 - star review' })});
 }
 ;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

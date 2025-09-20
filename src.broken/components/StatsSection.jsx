@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+  const stats = [{
+
+  return ()
+    <section className="py-16 bg-white">"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+        <div className="text-center mb-12">"
+=======
 import React from 'react';
 
 export function StatsSection() {
@@ -109,3 +117,4 @@ export function StatsSection() {
 }
 
 export default StatsSection;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

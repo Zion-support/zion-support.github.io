@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react';
+export default PerformanceOptimizer;
+=======
 
 export default function Page() {
 ,
@@ -258,3 +262,4 @@ const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true 
 };
 
 export default PerformanceOptimizer;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

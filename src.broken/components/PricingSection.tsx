@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+ * PricingSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function PricingSection () {
+
+      icon: Shield;
+    };
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
+        <motion.div
+          className="text-center mb-16"
+        <motion.div
+          className="mt-16 text-center"
+=======
 import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
 
       icon: Shield};
@@ -172,3 +188,4 @@ export function PricingSection() {
 export default PricingSection;
 export default PricingSection;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

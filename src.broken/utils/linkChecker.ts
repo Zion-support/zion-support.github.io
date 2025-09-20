@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+          link.status = 'missing';
+          this.missingPages.push(link.url)}
+=======
 export interface LinkInfo {
   url: string;
   status: 'working' | 'broken' | 'missing' | 'external';
@@ -152,3 +157,4 @@ export class LinkChecker {
 
 export default LinkChecker;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

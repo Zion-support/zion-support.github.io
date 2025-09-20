@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+      router.push(`/search/${slugify(query)}`);
+      setQuery('');
+
+
+                <div className="pt-4 border-t border-white/10 space-y-2">
+                  <Link
+                  <Link
+                  <Link
+                  <Link
+=======
 import { useState } from 'react';
 import { logDev, logError } from '@/utils/productionLogger';
 import Link from 'next/link';
@@ -248,3 +259,4 @@ import { LoginModal } from '@/components/auth/LoginModal';
     </header>;
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

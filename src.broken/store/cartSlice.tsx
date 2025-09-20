@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+  ;
+  ;
+
+};
+const cartSlice:  createSlice({;
+=======
 :src/store/cartSlice.tsx
 
 interface CartState {
@@ -76,3 +83,4 @@ const cartSlice:  createSlice({;
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

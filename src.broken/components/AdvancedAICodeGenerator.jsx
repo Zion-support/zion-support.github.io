@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+  .animate - float {
+    animation: float 3s ease - in - out infinite}
+
+  .animate - glow {
+    animation: glow 2s ease - in - out infinite alternate}
+
+  .animate - shimmer {
+    background: linear - gradient(90deg,
+=======
 import React, { useState, useRef } from 'react';
 export function AdvancedAICodeGenerator () {
 export function useApi < T> ({ url, method = 'GET', body, headers }: UseApiOptions < T>) {
@@ -672,3 +682,4 @@ export function AdvancedAICodeGenerator() {
       </div>
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

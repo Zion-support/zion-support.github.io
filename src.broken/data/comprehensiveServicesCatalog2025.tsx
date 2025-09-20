@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 :src/data/comprehensiveServicesCatalog2025.tsx
 ;
 
@@ -127,10 +129,19 @@ export const SUPPORT_LEVELS = [;'
 ];
 
 // Calculate counts for each category;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 export 
 export 
   { id: 'standard', name: 'Standard', count: 0 },;
   { id: 'premium', name: 'Premium', count: 0 },;
+<<<<<<< HEAD
+        return false;
+
+}).length
+    .sort((a, b) => {;
+
+
+=======
   { id: 'enterprise', name: 'Enterprise', count: 0 };
 ];
 
@@ -300,3 +311,4 @@ export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}'"
     return bScore - aScore})};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+export function Notification({ id, type, title, message, duration = 5000, onClose }) {
+export function NotificationContainer({ notifications, onClose }) {
+
+=======
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
 ,
@@ -61,3 +66,4 @@ export function NotificationContainer({ notifications, onClose }) {
       {notifications.map((notification) => (<Notification key={notification.id} {...notification} onClose={onClose}/>))}
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

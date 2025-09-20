@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+;
+export interface ServiceListing extends Listing {
+
+=======
 export interface Listing {
   id: string;
   title: string;
@@ -72,3 +77,4 @@ export interface Listing {
   listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

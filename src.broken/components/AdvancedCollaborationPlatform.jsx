@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+export function AdvancedCollaborationPlatform () {
+
+=======
 import React, { useState, useRef } from 'react';
 import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus  } from 'lucide-react';
  : p))};
@@ -20,3 +24,4 @@ import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, 
                 message: chatMessage,
                 timestamp: new Date().toISOString(),
                 type: 'text',
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

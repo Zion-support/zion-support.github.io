@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+
+const ComprehensiveServicesShowcase2030: React.FC = () => {;
+  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const getFilteredServices = () => {;
+    let services: any[] = [];
+
+
+    if(selectedCategory !== 'all') {
+  const getCategories = () => {;
+    let services: any[] = [];
+
+=======
   
     let services: unknown[] = [];
     
@@ -535,3 +551,4 @@
   )};
 
 export default ComprehensiveServicesShowcase2030}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

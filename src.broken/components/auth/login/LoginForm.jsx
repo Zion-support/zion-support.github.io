@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
 import { useState } from 'react';
 export default function Page() {
 );
@@ -152,3 +155,4 @@ export default function Page() {
 export { LoginForm };
 export default LoginForm;
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,35 +1,12 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
-export default function Page() {
-,
-        {
-
-            icon: RocketLaunchIcon,"
-            title: "Micro SaaS Solutions","
-            description: "Custom SaaS platforms for specific business needs","
-            color: "from-zion-blue to-zion-cyan","
-            href: "/micro-saas"
-        },
-        {
-
-            icon: ChartBarIcon,"
-            title: "Business Intelligence","
-            description: "Data analytics and insights for informed decision-making","
-            color: "from-zion-purple to-zion-blue","
-            href: "/business-intelligence"
-
-    ];
-    const containerVariants = {
-
-        hidden: { opacity: 0 },
-        visible: {
-
-            opacity: 1,
-            transition: {
-
-                staggerChildren: 0.1
-
     };
+<<<<<<< HEAD
+  y: 0
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+  delay: 0.5
+
+}} className="text-center mt-16">
+=======
     const itemVariants = {
 
   hidden: { y: 20,
@@ -132,3 +109,4 @@ export default function Page() {
       </div>
     </section>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

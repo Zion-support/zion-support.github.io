@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import { motion, AnimatePresence  } from 'framer-motion';
+
+ params - Function parameters
+ * @returns {*} Function return value
+ */
+function EnhancedHeader () {
+                    type="text"
+                    placeholder="Search services..."
+=======
 
   Menu,
   X,
@@ -444,3 +454,4 @@ export function EnhancedHeader() {
     </>) }
 export default EnhancedHeader;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

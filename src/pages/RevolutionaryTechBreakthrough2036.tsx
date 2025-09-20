@@ -1,8 +1,3 @@
-import React from 'react';
-
-const RevolutionaryTechBreakthrough2036: React.FC = () => {
-  return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -331,7 +326,6 @@ const RevolutionaryTechBreakthrough2036: React.FC = () => {
         </div>
       </div>
     </div>
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   );
 };
 

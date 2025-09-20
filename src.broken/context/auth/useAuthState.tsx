@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 :src/context/auth/useAuthState.tsx
 
 interface User {
@@ -84,3 +86,4 @@ export function useAuthState() {
     setOnboardingStep
   };
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -213,20 +213,19 @@ export function AppHeader() {
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle mobile menu"
               >
-                  {mobileMenuOpen ? (
-                    <divdiv
-                      key="close"
-                    >
-                      <X className="w-6 h-6" />
-                    </divdiv>
-                  ) : (
-                    <divdiv
-                      key="menu"
-                    >
-                      <Menu className="w-6 h-6" />
-                    </divdiv>
-                  )}
-                </div>
+                {mobileMenuOpen ? (
+                  <div
+                    key="close"
+                  >
+                    <X className="w-6 h-6" />
+                  </div>
+                ) : (
+                  <div
+                    key="menu"
+                  >
+                    <Menu className="w-6 h-6" />
+                  </div>
+                )}
               </button>
             </div>
           </div>
@@ -234,7 +233,7 @@ export function AppHeader() {
           {/* Mobile Navigation */}
           <div>
             {mobileMenuOpen && (
-              <divdiv 
+              <div 
                 className="lg:hidden"
               >
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-zion-slate-dark/95 border-t border-zion-cyan/20 backdrop-blur-md">
@@ -299,7 +298,7 @@ export function AppHeader() {
                     </Link>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             )}
           </div>
         </div>

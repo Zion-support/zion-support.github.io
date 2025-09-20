@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+export default LoadingSpinner;
+
+=======
 const LoadingSpinner = ({
 
   size = 'md',
@@ -44,3 +49,4 @@ const LoadingSpinner = ({
 };
 export default LoadingSpinner;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

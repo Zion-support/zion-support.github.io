@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+      id: 'quantum-neural-network-platform',
+=======
 export interface InnovativeMicroSaasService2027 {
   id: string;
   title: string;
@@ -830,3 +834,4 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
   ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2027;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

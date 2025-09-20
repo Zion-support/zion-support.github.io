@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Sparkles, Filter, TrendingUp, Clock, Star const mockSuggestions = [;
     { id: '1', text: 'AI Development Services', type: 'service', relevance: 95, category: 'AI & ML' },
@@ -152,3 +155,4 @@ export function AdvancedSearch() {
         </div>)}
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

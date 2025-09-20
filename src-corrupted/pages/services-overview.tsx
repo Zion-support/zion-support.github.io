@@ -1,5 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
 const services-overview: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
@@ -16,66 +14,3 @@ const services-overview: React.FC = () => {,
     </div>,
   ),};
 export default services-overview;
-=======
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Server, 
-  Building2,
-  FileText, 
-  BarChart3, 
-  Workflow,
-  Mic,
-  Users,
-  Calendar,
-  PieChart,
-  Package,
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Sparkles,
-  Cpu,
-  Eye,
-  Factory,
-  Heart,
-  ShoppingCart,
-  DollarSign,
-  Wifi,
-  Link as LinkIcon
-} from 'lucide-react';
-
-const ServicesOverview = (props: any) => {
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-const services-overview: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>services-overview | Zion Tech Group</title>
-        <meta name="description" content="services-overview - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">services-overview</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default services-overview;
->>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

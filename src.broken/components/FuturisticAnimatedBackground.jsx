@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+    const canvasRef = useRef(null) ;
+    const animationRef = useRef () ;
+    useEffect(() => {
+=======
 import React, { useEffect, useRef } from 'react';
 export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medium', colorScheme = 'multi' }) => {
 
@@ -151,3 +156,4 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>)};
 export default FuturisticAnimatedBackground;
 }}}}}}}}}}}'`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

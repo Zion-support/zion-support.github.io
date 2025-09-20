@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { AuthContext } from "@/context/auth/AuthContext";
@@ -69,3 +71,4 @@ export function useAuth(...args: unknown[]): unknown {
 '
     updateProfile,
   }}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

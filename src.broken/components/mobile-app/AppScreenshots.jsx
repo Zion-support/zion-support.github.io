@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+          <div ref={scrollContainerRef} className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory" style = {
+  { scrollbarWidth: "none",
+  msOverflowStyle: "none"
+=======
 import React, { useRef } from "react";"
 import { ChevronLeft, ChevronRight import { Button } from '@/components/ui/button';
 export default function Page() {
@@ -43,3 +49,4 @@ export const AppScreenshots = () => {
       </div>
     </section>)};
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

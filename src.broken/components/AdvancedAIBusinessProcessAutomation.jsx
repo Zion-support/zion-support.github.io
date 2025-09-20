@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+export function AdvancedAIBusinessProcessAutomation () {
+
+=======
 import React, { useState, useRef } from 'react';
 import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader  } from 'lucide-react';
 ,;
@@ -661,3 +665,4 @@ export function AdvancedAIBusinessProcessAutomation() {
       </div>
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

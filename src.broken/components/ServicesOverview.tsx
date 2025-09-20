@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+ from 'lucide-react';
+
+export function ServicesOverview(...args[]):  {
+
+      icon: Heart,;
+      color: 'from-zion-pink to-zion-purple',;
+      description: 'Healthcare artificial intelligence solutions',;
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
+  ];
+=======
 
   return ()
     <div className="py-20 bg-futuristic relative overflow-hidden">
@@ -261,3 +272,4 @@
       </div>;
     </div>;) }
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

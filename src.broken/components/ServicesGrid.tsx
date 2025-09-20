@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+export default function ServicesGrid() {
+  return (<div className="grid grid - cols - 1 md: anygrid - cols - 2 gap-8">
+      {services.map ( (service, index) => (<motion.div
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
@@ -73,3 +78,4 @@ export function ServicesGrid({ services }: ServicesGridProps) {
 }
 
 export default ServicesGrid;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

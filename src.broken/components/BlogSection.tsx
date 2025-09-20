@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+  const blogPosts = [{
+      id: '1',
+      title: 'The Future of AI in Technology',
+      excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...',
+      date: '2024 - 01 - 15',
+      readTime: '8 min read'
+    },
+    {;
+=======
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
@@ -86,3 +96,4 @@ export function BlogSection() {
     </section>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

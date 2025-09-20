@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 ,
         {
@@ -182,3 +184,4 @@ import React from 'react';
       </div>
     </section>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

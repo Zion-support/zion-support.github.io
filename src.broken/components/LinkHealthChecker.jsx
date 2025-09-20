@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+    const [linkStatuses, setLinkStatuses] = useState([]);
+    const [isChecking, setIsChecking] = useState(false);
+=======
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ({ links, className = '' }) => {
 
@@ -185,3 +189,4 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
     </div>)};
 export default LinkHealthChecker;
 }}}}}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+    
+    fontLink.rel = 'preload';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+    fontLink.as = 'style';
+    
+    buttons.forEach((button) => {
+
+    
+    cards.forEach((card) => {
+
+=======
 export const ModernUIEnhancer: React.FC < ModernUIEnhancerProps> = ({
 
 interface ModernUIEnhancerProps {
@@ -137,3 +149,4 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   // Don't render anything - this is a utility component
   return null};
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+};
+
+=======
 // Innovative AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions for modern businesses
 ;
@@ -525,3 +529,4 @@ const zionContact = {
 ];
 
 export default innovativeAIServices2030}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

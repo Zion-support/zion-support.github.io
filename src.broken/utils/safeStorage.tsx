@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+export const safeStorage = {
+export default safeStorage;
+
+// In - memory storage for fallback with optimizations
+
+      // console.warn('Failed to get key from localStorage:', error);
+      return null;
+
+      // console.warn('Failed to get localStorage length:', error);
+      return 0;
+=======
 // In-memory storage for fallback with optimizations
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
@@ -116,3 +128,4 @@ export const safeStorage = {
   }};
 
 export default safeStorage;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

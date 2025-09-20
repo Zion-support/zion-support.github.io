@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+export default ContentQualityDashboard;
+import ContentQualityAnalyzer from "../utils / contentQualityAnalyzer";
+
+=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X  } from 'lucide-react';
 export default function Page() {
@@ -311,3 +316,4 @@ export default function Page() {
     </div>)};
 export default ContentQualityDashboard;
 }}}}}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

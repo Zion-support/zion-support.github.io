@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+
+const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<any> (null) ;
+
+        {
+
+                      <div  className="space - y-2">
+                        {category.services.map((service, serviceIndex) => (<motion.div
+=======
 "
           title: "Code Review & Security","
           url: "/services/ai-code-review-security","
@@ -325,3 +336,4 @@
   )};
 
 export default EnhancedServicesNavigation;'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
