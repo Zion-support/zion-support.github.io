@@ -5,11 +5,11 @@ import { Briefcase, Inbox } from 'lucide-react';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { useIsMobile } from '@/hooks/useIsMobile';
 function ApplicationStatusTrackerContent() {
-  const isMobile = null;
+  const isMobile = useIsMobile();
   return (
     <>
       <SEO
-title='Application Status Tracker | Zion AI Marketplace'
+        title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
       />
       <div className='container mx-auto px-4 py-8'>
