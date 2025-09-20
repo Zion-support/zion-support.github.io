@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from 'react';
+import { TrendingUp, Eye, EyeOff } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -21,127 +22,135 @@ export default function PerformanceMonitor() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Measure page load time
+    // Measure initial load time
     const loadTime = performance.now();
+    
+    // Measure render time
+    const renderStart = performance.now();
+    const renderTime = performance.now() - renderStart;
     
     // Measure memory usage
     const memoryInfo = (performance as any).memory;
-    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
-
-    // Measure render time
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const renderTime = navigationEntry?.loadEventEnd || 0;
-
+    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize : 0;
+    
     // Measure network latency (simplified)
-    const networkLatency = performance.getEntriesByType('resource')
-      .reduce((acc, entry) => acc + entry.duration, 0) / 10;
-
-    // Calculate FPS (simplified)
-    let fps = 60;
-    let lastTime = performance.now();
+    const networkStart = performance.now();
+    fetch('/api/ping').then(() => {
+      const networkLatency = performance.now() - networkStart;
+      setMetrics(prev => ({
+        ...prev,
+        networkLatency
+      }));
+    }).catch(() => {
+      // Fallback for when API is not available
+      setMetrics(prev => ({
+        ...prev,
+        networkLatency: 0
+      }));
+    });
+    
+    // Measure FPS (simplified)
     let frameCount = 0;
+    const fpsStart = performance.now();
     const measureFPS = () => {
       frameCount++;
-      const currentTime = performance.now();
-      if (currentTime - lastTime >= 1000) {
-        fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-        frameCount = 0;
-        lastTime = currentTime;
+      if (performance.now() - fpsStart < 1000) {
+        requestAnimationFrame(measureFPS);
+      } else {
+        const fps = frameCount;
+        setMetrics(prev => ({
+          ...prev,
+          fps
+        }));
       }
-      requestAnimationFrame(measureFPS);
     };
     measureFPS();
-
+    
     // Calculate Lighthouse score (simplified)
-    const lighthouseScore = Math.max(0, Math.min(100, 
-      100 - (loadTime / 10) - (memoryUsage * 2) - (networkLatency / 10)
-    ));
-
+    const lighthouseScore = Math.max(0, 100 - loadTime / 10);
+    
     setMetrics({
       loadTime: Math.round(loadTime),
-      renderTime: Math.round(renderTime),
+      renderTime: Math.round(renderTime), 
       memoryUsage: Math.round(memoryUsage * 100) / 100,
-      networkLatency: Math.round(networkLatency),
-      fps,
+      networkLatency: Math.round(metrics.networkLatency), 
+      fps: metrics.fps,
       lighthouseScore: Math.round(lighthouseScore)
     });
+  }, []);
 
-    // Show performance monitor on Ctrl+Shift+P
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        setIsVisible(!isVisible);
-      }
-    };
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [isVisible]);
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'text-green-500';
+    if (score >= 50) return 'text-yellow-500';
+    return 'text-red-500';
+  };
 
-  if (!isVisible) return null;
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+        title="Show Performance Monitor"
+      >
+        <TrendingUp className="w-5 h-5" />
+      </button>
+    );
+  }
 
   return (
-    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 text-xs font-mono z-50 min-w-[280px]">
+    <div className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg max-w-sm">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-blue-400 font-bold">Performance Monitor</h3>
+        <h3 className="text-lg font-semibold">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-blue-400 hover:text-white transition-colors"
+          className="text-gray-400 hover:text-white"
         >
-          ×
+          <EyeOff className="w-4 h-4" />
         </button>
       </div>
       
-      <div className="space-y-2">
+      <div className="space-y-2 text-sm">
         <div className="flex justify-between">
-          <span className="text-gray-400">Load Time:</span>
-          <span className={metrics.loadTime < 1000 ? 'text-green-400' : 'text-red-400'}>
+          <span>Load Time:</span>
+          <span className={getScoreColor(100 - metrics.loadTime / 10)}>
             {metrics.loadTime}ms
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">Memory:</span>
-          <span className={metrics.memoryUsage < 50 ? 'text-green-400' : 'text-yellow-400'}>
-            {metrics.memoryUsage}MB
+          <span>Render Time:</span>
+          <span className={getScoreColor(100 - metrics.renderTime / 10)}>
+            {metrics.renderTime}ms
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">FPS:</span>
-          <span className={metrics.fps >= 60 ? 'text-green-400' : metrics.fps >= 30 ? 'text-yellow-400' : 'text-red-400'}>
+          <span>Memory Usage:</span>
+          <span className={getScoreColor(100 - metrics.memoryUsage * 100)}>
+            {Math.round(metrics.memoryUsage * 100)}%
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>Network Latency:</span>
+          <span className={getScoreColor(100 - metrics.networkLatency / 10)}>
+            {metrics.networkLatency}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>FPS:</span>
+          <span className={getScoreColor(metrics.fps)}>
             {metrics.fps}
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">Network:</span>
-          <span className={metrics.networkLatency < 100 ? 'text-green-400' : 'text-red-400'}>
-            {metrics.networkLatency}ms
+          <span>Lighthouse Score:</span>
+          <span className={getScoreColor(metrics.lighthouseScore)}>
+            {metrics.lighthouseScore}/100
           </span>
         </div>
-        
-        <div className="flex justify-between items-center">
-          <span className="text-gray-400">Score:</span>
-          <div className="flex items-center">
-            <div className="w-16 h-2 bg-gray-700 rounded-full mr-2">
-              <div 
-                className={`h-full rounded-full transition-all duration-500 ${
-                  metrics.lighthouseScore >= 90 ? 'bg-green-400' :
-                  metrics.lighthouseScore >= 70 ? 'bg-yellow-400' :
-                  'bg-red-400'
-                }`}
-                style={{ width: `${metrics.lighthouseScore}%` }}
-              />
-            </div>
-            <span className={metrics.lighthouseScore >= 90 ? 'text-green-400' : 
-                            metrics.lighthouseScore >= 70 ? 'text-yellow-400' : 'text-red-400'}>
-              {metrics.lighthouseScore}
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-gray-700 text-center">
-        <span className="text-gray-500 text-xs">Press Ctrl+Shift+P to toggle</span>
       </div>
     </div>
   );

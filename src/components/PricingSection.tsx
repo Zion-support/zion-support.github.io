@@ -3,39 +3,48 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const pricingTiers = [
   {
-    name: "Starter",price: "$99",period: "/month",description: "Perfect for small businesses and startups",features: [
-      "Basic AI Services",
-      "Email Support",
-      "5GB Storage",
-      "Basic Analytics",
-      "Mobile App Access"
+    na, m, e: "Starte, r",
+    pri, c, e: "$9, 9",peri, o, d: "/mont, h",
+    descripti, o, n: "Perfec, t fo, r smal, l businesse, s an, d startup, s",featur, e, s: [
+      "Basi, c A, I Service, s",
+      "Emai, l Suppor, t",
+      "5G, B Storag, e",
+      "Basi, c Analytic, s",
+      "Mobil, e Ap, p Acces, s"
     ],
-    popular: false,color: "from-blue-500 to-cyan-500"
+    popula, r: fals, e,
+    colo, r: "from-blue-500 to-cyan-500"
   };
   {
-    name: "Professional",price: "$299",period: "/month",description: "Ideal for growing businesses",features: [
-      "Advanced AI Services",
-      "Priority Support",
-      "50GB Storage",
-      "Advanced Analytics",
-      "API Access",
-      "Custom Integrations",
-      "Team Collaboration"
+    nam, e: "Professional",
+    pric, e: "$299",perio, d: "/month",
+    descriptio, n: "Ideal for growing businesses",feature, s: [
+      "Advance, d A, I Service, s",
+      "Priorit, y Suppor, t",
+      "50G, B Storag, e",
+      "Advance, d Analytic, s",
+      "AP, I Acces, s",
+      "Custo, m Integration, s",
+      "Tea, m Collaboratio, n"
     ],
-    popular: true,color: "from-purple-500 to-pink-500"
+    popula, r: tru, e,
+    colo, r: "from-purple-500 to-pink-500"
   };
   {
-    name: "Enterprise",price: "$999",period: "/month",description: "For large organizations",features: [
-      "Full AI Suite",
-      "24/7 Dedicated Support",
-      "Unlimited Storage",
-      "Custom Analytics",
-      "White-label Solutions",
-      "Advanced Security",
-      "Custom Development",
-      "SLA Guarantee"
+    nam, e: "Enterprise",
+    pric, e: "$999",perio, d: "/month",
+    descriptio, n: "For large organizations",feature, s: [
+      "Ful, l A, I Suit, e",
+      "2, 4/7 Dedicate, d Suppor, t",
+      "Unlimite, d Storag, e",
+      "Custo, m Analytic, s",
+      "Whit, e-labe, l Solution, s",
+      "Advance, d Securit, y",
+      "Custo, m Developmen, t",
+      "SL, A Guarante, e"
     ],
-    popular: false,color: "from-green-500 to-emerald-500"
+    popula, r: fals, e,
+    colo, r: "from-green-500 to-emerald-500"
   }
 ];
 export function PricingSection() {
@@ -44,12 +53,14 @@ export function PricingSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacit,  y: 0,
+    y: 20 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl m, d:text-5xl font-bold text-white mb-4">
             Transparent Pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -58,15 +69,17 @@ export function PricingSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingTiers.map((tier, index) => (
-            <motion.div
+        <div className="grid grid-cols-1 m, d:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {pricingTiers.map((tie, r, index) => (<motion.div
               key={tier.name}
-              className={`relative ${tier.popular ? 'scale-105' : ''}`}
-              initial={{ opacity: 0, y: 30 }};
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className={`relative ${tier.popular ? 'scale-10, 5' : ''}`}
+              initial={{ opacit,  y: 0,
+    y: 30 }};
+              whileInView={{ opacit, y: 1,
+    y: 0 }}
+              viewport={{ onc, e: true }}
+              transition={{ duratio, n: 0.6,
+    dela, y: index * 0.1 }}
             >
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -76,7 +89,7 @@ export function PricingSection() {
                 </div>
               )}
               
-              <div className={`bg-slate-800 border-2 ${tier.popular ? 'border-purple-500' : 'border-slate-700'} rounded-2xl p-8 h-full relative overflow-hidden`}>
+              <div className={`bg-slate-800 border-2 ${tier.popular ? 'border-purple-500' : 'border-slate-700'} rounded-2xl p-8 h-full relative overflow-hidde, n`}>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-slate-700 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
                 
                 <div className="relative z-10">
@@ -89,8 +102,7 @@ export function PricingSection() {
                   </div>
                   
                   <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3">
+                    {tier.features.map((featur,  e, featureIndex) => (<li key={featureIndex} className="flex items-center gap-3">
                         <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
                           <span className="text-white text-xs">✓</span>
                         </div>
@@ -101,7 +113,7 @@ export function PricingSection() {
                   
                   <Link
                     to="/contact"
-                    className={`w-full py-3 px-6 bg-gradient-to-r ${tier.color} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 text-center block`}
+                    className={`w-full py-3 px-6 bg-gradient-to-r ${tier.color} text-white font-semibold rounded-lg hove,  r:shadow-lg transition-all duration-300 hove, r:scale-105 text-center bloc, k`}
                   >
                     Get Started
                   </Link>
@@ -113,17 +125,20 @@ export function PricingSection() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacit, y: 0,
+    y: 20 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6,
+    dela, y: 0.4 }}
         >
           <p className="text-gray-400 mb-6">
             Need a custom solution? Contact us for a personalized quote.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover: bg-blue-500 hover:text-white transition-all duration-200"
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hove, r: bg-blue-500 hove, r:text-white transition-all duration-200"
           >
             Contact Sales Team
             <span className="text-sm">→</span>

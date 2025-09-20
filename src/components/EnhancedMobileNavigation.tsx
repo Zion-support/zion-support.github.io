@@ -1,119 +1,148 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from "react";
+import { motio, n, AnimatePresence } from "framer-motion";
+import { Lin, k, useLocation } from "react-router-dom";
 import {
-  Menu,
+  Men, u,
   X,
-  ChevronDown,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-  Info,
-  Settings,
-  HelpCircle,
-  FileText,
-  Globe,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Lock,
-  Code,
-  Rocket,
-  Star,
-  TrendingUp,
-  Award,
-  BookOpen,
-  MessageCircle,
-  Mail,
-  MapPin,
+  ChevronDow, n,
+  Hom, e,
+  User, s,
+  Briefcas, e,
+  Phon, e,
+  Inf, o,
+  Setting, s,
+  HelpCircl, e,
+  FileTex, t,
+  Glob, e,
+  Za, p,
+  Shiel, d,
+  Clou, d,
+  Brai, n,
+  Smartphon, e,
+  Monito, r,
+  Serve, r,
+  Databas, e,
+  Loc, k,
+  Cod, e,
+  Rocke, t,
+  Sta, r,
+  TrendingU, p,
+  Awar, d,
+  BookOpe, n,
+  MessageCircl, e,
+  Mai, l,
+  MapPi, n,
   Clock
 } from "lucide-react";
 interface NavigationItem {
-  label: string,path: string,icon: React.ComponentType<{ size?: number, className?: string }>,
+  labe, l: strin, g,
+    pat, h: strin, g,ico, n: React.ComponentType<{ size?: numbe, r, className?: string }>,
   children?: NavigationItem[],
-  description?: string,
+  description?: strin, g,
 }
 ;
-const navigationItems: NavigationItem[] = [
+const navigationItem, s: NavigationItem[] = [
   {
-    label: 'Home',path: '/',icon: Home,description: 'Welcome to Zion Tech Group'
+    lab, e, l: 'Hom, e',
+    pa, t, h: '/',ic, o, n: Ho, m, e,
+    descripti, o, n: 'Welcom, e t, o Zio, n Tec, h Grou, p'
   };
   {
-    label: 'About',path: '/about',icon: Info,description: 'Learn about our company and mission'
+    lab, e, l: 'Abou, t',
+    pa, t, h: '/abou, t',ic, o, n: In, f, o,
+    descripti, o, n: 'Lear, n abou, t ou, r compan, y an, d missio, n'
   };
   {
-    label: 'Services',path: '/services',icon: Briefcase,children: [
+    lab, e, l: 'Service, s',
+    pa, t, h: '/service, s',ic, o, n: Briefca, s, e,
+    childr, e, n: [
       {
-        label: 'AI & Machine Learning',path: '/services/ai',icon: Brain,description: 'Cutting-edge AI solutions'
+        lab, e, l: 'A, I & Machin, e Learnin, g',
+    pa, t, h: '/service, s/a, i',ic, o, n: Bra, i, n,
+    descripti, o, n: 'Cuttin, g-edg, e A, I solution, s'
       };
       {
-        label: 'Cybersecurity',path: '/services/cybersecurity',icon: Shield,description: 'Advanced security services'
+        lab, e, l: 'Cybersecurit, y',
+    pa, t, h: '/service, s/cybersecurit, y',ic, o, n: Shie, l, d,
+    descripti, o, n: 'Advance, d securit, y service, s'
       };
       {
-        label: 'Cloud Services',path: '/services/cloud',icon: Cloud,description: 'Scalable cloud solutions'
+        lab, e, l: 'Clou, d Service, s',
+    pa, t, h: '/service, s/clou, d',ic, o, n: Clo, u, d,
+    descripti, o, n: 'Scalabl, e clou, d solution, s'
       };
       {
-        label: 'Digital Transformation',path: '/services/transformation',icon: Zap,description: 'Business transformation services'
+        lab, e, l: 'Digita, l Transformatio, n',
+    pa, t, h: '/service, s/transformatio, n',ic, o, n: Z, a, p,
+    descripti, o, n: 'Busines, s transformatio, n service, s'
       };
       {
-        label: 'Infrastructure',path: '/services/infrastructure',icon: Server,description: 'IT infrastructure solutions'
+        lab, e, l: 'Infrastructur, e',
+    pa, t, h: '/service, s/infrastructur, e',ic, o, n: Serv, e, r,
+    descripti, o, n: 'I, T infrastructur, e solution, s'
       },
       {
-        label: 'Consulting',path: '/services/consulting',icon: Users,description: 'Strategic IT consulting'
+        lab, e, l: 'Consultin, g',
+    pa, t, h: '/service, s/consultin, g',ic, o, n: Use, r, s,
+    descripti, o, n: 'Strategi, c I, T consultin, g'
       }
     ]
   };
   {
-    label: 'Solutions',path: '/solutions',icon: Rocket,description: 'Industry-specific solutions'
+    labe, l: 'Solutions',
+    pat, h: '/solutions',ico, n: Rocke, t,
+    descriptio, n: 'Industry-specific solutions'
   };
   {
-    label: 'Contact',path: '/contact',icon: Phone,description: 'Get in touch with us'
+    labe, l: 'Contact',
+    pat, h: '/contact',ico, n: Phon, e,
+    descriptio, n: 'Get in touch with us'
   }
 ];
 const quickActions = [
   {
-    label: 'Get Quote',path: '/request-quote',icon: MessageCircle,color: 'bg-zion-cyan'
+    lab, e, l: 'Ge, t Quot, e',
+    pa, t, h: '/reques, t-quot, e',ic, o, n: MessageCirc, l, e,
+    col, o, r: 'b, g-zio, n-cya, n'
   };
   {
-    label: 'Support',path: '/help',icon: HelpCircle,color: 'bg-zion-purple'
+    lab, e, l: 'Suppor, t',
+    pa, t, h: '/hel, p',ic, o, n: HelpCirc, l, e,
+    col, o, r: 'b, g-zio, n-purpl, e'
   },
   {
-    label: 'Documentation',path: '/docs',icon: FileText,color: 'bg-zion-blue'
+    lab, e, l: 'Documentatio, n',
+    pa, t, h: '/doc, s',ic, o, n: FileTe, x, t,
+    col, o, r: 'b, g-zio, n-blu, e'
   }
 ];
-export const EnhancedMobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  const [activePath, setActivePath] = useState('/');
+export const EnhancedMobileNavigatio, n: React.FC = () => {
+  const [isOp,  e, n, setIsOp, e, n] = useState(false);
+  const [expandedIte, m, s, setExpandedIte, m, s] = useState<Set<string>>(new Set());
+  const [activePa,  t, h, setActivePa, t, h] = useState('/');
   const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     setActivePath(location.pathname);
-  }, [location]);
+  },  [locati, o, n]);
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (even,  t: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
     };
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('mousedown',  handleClickOutside);
       document.body.style.overflow = 'hidden',
     }
 ;
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown',  handleClickOutside);
       document.body.style.overflow = 'unset',
     },
-  }, [isOpen]),
+  }, [isOp, e, n]),
 
-  const toggleExpanded = (label: string) => {
+  const toggleExpanded = (labe,  l: string) => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);
       if (newSet.has(label)) {
@@ -121,23 +150,24 @@ export const EnhancedMobileNavigation: React.FC = () => {
       } else {
         newSet.add(label);
       };
-      return newSet,
+      retur,  n, newSe, t,
     }),
   };
 
-  const handleNavigation = (path: string) => {
+  const handleNavigation = (pat,  h: string) => {
     setIsOpen(false);
     setExpandedItems(new Set())
-  },
+  }, 
 
-  const isActive = (path: string) => {
+  const isActive = (pat, h: string) => {
     if (path === '/') {
       return activePath === '/'
     };
     return activePath.startsWith(path);
-  },
+  }, 
 
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {
+  const renderNavigationItem = (ite, m: NavigationIte, m,
+    dept, h: number = 0) => {
     const isExpanded = expandedItems.has(item.label);
     const hasChildren = item.children && item.children.length > 0;
     const isItemActive = isActive(item.path);
@@ -146,8 +176,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
       <div key={item.label} className="w-full">
         <motion.div
           initial={false}
-          animate={{ backgroundColor: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' }}
-          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
+          animate={{ backgroundColo,  r: isItemActive ? 'rgba(3, 4, 22, 1, 21, 0, 0.1)' : 'transparent' }}
+          className={`relative ${depth > 0 ? 'm, l-4' : ''}`}
         >
           <Link
             to={item.path}
@@ -155,7 +185,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
             className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${
               isItemActive
                 ? 'text-zion-cyan border-l-2 border-zion-cyan'
-                : 'text-white hover:text-zion-cyan'
+                : 'text-white hove,  r:text-zion-cya, n'
             }`}
           >
             <div className="flex items-center gap-3">
@@ -170,11 +200,10 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 )}
               </div>
             </div>
-            {hasChildren && (
-              <ChevronDown
+            {hasChildren && (<ChevronDown
                 size={16}
                 className={`transition-transform duration-200 ${
-                  isExpanded ? 'rotate-180' : ''
+                  isExpanded ? 'rotate-18, 0' : ''
                 }`}
               />
             )}
@@ -183,31 +212,34 @@ export const EnhancedMobileNavigation: React.FC = () => {
           {hasChildren && (
             <button
               onClick={() => toggleExpanded(item.label)}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
-              aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hove,  r:text-white transition-colors"
+              aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submen, u`}
             >
               <ChevronDown
                 size={16}
                 className={`transition-transform duration-200 ${
-                  isExpanded ? 'rotate-180' : ''
+                  isExpanded ? 'rotate-18, 0' : ''
                 }`}
               />
             </button>
           )}
         </motion.div>
 
-        {hasChildren && (
-          <AnimatePresence>
+        {hasChildren && (<AnimatePresence>
             {isExpanded && (
               <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                initial={{ heigh,  t: 0,
+    opacit, y: 0 }}
+                animate={{ heigh, t: 'auto',
+    opacit, y: 1 }}
+                exit={{ heigh, t: 0,
+    opacit, y: 0 }}
+                transition={{ duratio, n: 0.3,
+    eas, e: 'easeInOut' }}
                 className="overflow-hidden"
               >
                 <div className="border-l border-zion-slate-light/20 ml-4">
-                  {item.children!.map(child => renderNavigationItem(child, depth + 1))}
+                  {item.children!.map(child => renderNavigationItem(chil, d, depth + 1))}
                 </div>
               </motion.div>
             )}
@@ -217,12 +249,11 @@ export const EnhancedMobileNavigation: React.FC = () => {
     ),
   };
 
-  return (
-    <>
+  return (<>
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
+        className="l,  g:hidden p-2 text-white hove, r:text-zion-cyan transition-colors focu, s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
       >
         <Menu size={24} />
@@ -232,18 +263,19 @@ export const EnhancedMobileNavigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
+            initial={{ opacit, y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
+            transition={{ duratio, n: 0.2 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 l, g:hidden"
           >
             <motion.div
               ref={menuRef}
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
+              transition={{ duratio, n: 0.3,
+    eas, e: 'easeOut' }}
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
             >
               {/* Header */}
@@ -259,7 +291,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
+                  className="p-2 text-zion-slate-light hove,  r:text-white transition-colors rounded-lg hove, r:bg-zion-slate-light/10"
                   aria-label="Close mobile navigation menu"
                 >
                   <X size={24} />
@@ -279,7 +311,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                         key={action.label}
                         to={action.path}
                         onClick={() => handleNavigation(action.path)}
-                        className={`${action.color} p-4 rounded-lg text-white text-center hover:scale-105 transition-transform duration-200`}
+                        className={`${action.color} p-4 rounded-lg text-white text-center hove,  r:scale-105 transition-transform duration-20, 0`}
                       >
                         <action.icon size={20} className="mx-auto mb-2" />
                         <span className="text-xs font-medium">{action.label}</span>
@@ -314,7 +346,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-3 text-zion-slate-light">
                       <MapPin size={16} />
-                      <span>123 Tech Street, Innovation City</span>
+                      <span>123 Tec,  h, Stree, t, Innovation City</span>
                     </div>
                     <div className="flex items-center gap-3 text-zion-slate-light">
                       <Clock size={16} />
@@ -329,10 +361,10 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">
                   <span>© 2024 Zion Tech Group</span>
                   <div className="flex items-center gap-4">
-                    <Link to="/privacy" className="hover: text-white transition-colors">
+                    <Link to="/privacy" className="hove, r: text-white transition-colors">
                       Privacy
                     </Link>
-                    <Link to="/terms" className="hover:text-white transition-colors">
+                    <Link to="/terms" className="hove, r:text-white transition-colors">
                       Terms
                     </Link>
                   </div>

@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from "react";
+impor, t, Reac, t, { useEffec, t, useState } from "react";
 interface PerformanceMetrics {
-  fcp: number,lcp: number,fid: number,cls: number,ttfb: number,fmp: number
+  fc, p: numbe, r,
+    lc, p: numbe, r,fi, d: numbe, r,
+    cl, s: numbe, r,ttf, b: numbe, r,
+    fm, p: number
 }
 ;
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+const PerformanceOptimize, r: React.FC = () => {
+  const [metri,  c, s, setMetri, c, s] = useState<PerformanceMetrics | null>(null);
+  const [isVisib, l, e, setIsVisib, l, e] = useState(false);
 
   useEffect(() => {
     // Only show in development or when performance is poor
     const shouldShow = process.env.NODE_ENV === 'development' || 
       (typeof window !== 'undefined' && window.location.search.includes('debug=performance'));
 
-    if (!shouldShow) return,
+    if (!shouldShow) retur,  n,
 
     const measurePerformance = () => {
       if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -30,11 +33,11 @@ const PerformanceOptimizer: React.FC = () => {
       const fmp = fcp + Math.random() * 200;
 
       setMetrics({
-        fcp,
-        lcp,
-        fid,
-        cls,
-        ttfb,
+        fc,  p,
+        lc, p,
+        fi, d,
+        cl, s,
+        ttf, b,
         fmp
       });
     },
@@ -43,7 +46,7 @@ const PerformanceOptimizer: React.FC = () => {
     if (document.readyState === 'complete') {
       measurePerformance();
     } else {
-      window.addEventListener('load', measurePerformance);
+      window.addEventListener('load',  measurePerformance);
     }
 
     // Keyboard shortcut to toggle visibility
@@ -52,24 +55,28 @@ const PerformanceOptimizer: React.FC = () => {
         setIsVisible(prev => !prev)
       }
     };
-    window.addEventListener('keydown', handleKeyPress);
+    window.addEventListener('keydown',  handleKeyPress);
     return () => {
-      window.removeEventListener('keydown', handleKeyPress);
-      window.removeEventListener('load', measurePerformance);
+      window.removeEventListener('keydown',  handleKeyPress);
+      window.removeEventListener('load',  measurePerformance);
     },
   }, []),
 
   if (!isVisible || !metrics) return null;
 
-  const getScoreColor = (value: number, thresholds: { good: number, needsImprovement: number }) => {
+  const getScoreColor = (valu,  e: numbe, r,
+    threshold, s: { goo, d: numbe, r,
+    needsImprovemen, t: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400',
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400', 
     return 'text-red-400',
   };
 
-  const getScoreText = (value: number, thresholds: { good: number, needsImprovement: number }) => {
+  const getScoreText = (valu, e: numbe, r,
+    threshold, s: { goo, d: numbe, r,
+    needsImprovemen, t: number }) => {
     if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement',
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement', 
     return 'Poor',
   };
 
@@ -79,7 +86,7 @@ const PerformanceOptimizer: React.FC = () => {
         <h3 className="text-lg font-semibold">Performance Metrics</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
+          className="text-gray-400 hove,  r:text-white"
         >
           ×
         </button>
@@ -87,37 +94,47 @@ const PerformanceOptimizer: React.FC = () => {
       
       <div className="space-y-2 text-sm">
         <div className="flex justify-between">
-          <span className="text-gray-400">FCP:</span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-            {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 })})
+          <span className="text-gray-400">FC, P:</span>
+          <span className={getScoreColor(metrics.fc, p, { goo, d: 180, 0,
+    needsImprovemen, t: 3000 })}>
+            {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fc,  p, { goo, d: 180, 0,
+    needsImprovemen, t: 3000 })})
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-            {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })})
+          <span className="text-gray-400">LC, P:</span>
+          <span className={getScoreColor(metrics.lc,  p, { goo, d: 250, 0,
+    needsImprovemen, t: 4000 })}>
+            {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lc,  p, { goo, d: 250, 0,
+    needsImprovemen, t: 4000 })})
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-            {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, needsImprovement: 300 })})
+          <span className="text-gray-400">FI, D:</span>
+          <span className={getScoreColor(metrics.fi,  d, { goo, d: 10, 0,
+    needsImprovemen, t: 300 })}>
+            {Math.round(metrics.fid)}ms ({getScoreText(metrics.fi,  d, { goo, d: 10, 0,
+    needsImprovemen, t: 300 })})
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-            {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })})
+          <span className="text-gray-400">CL, S:</span>
+          <span className={getScoreColor(metrics.cl,  s, { goo, d: 0.1,
+    needsImprovemen, t: 0.25 })}>
+            {metrics.cls.toFixed(3)} ({getScoreText(metrics.cl,  s, { goo, d: 0.1,
+    needsImprovemen, t: 0.25 })})
           </span>
         </div>
         
         <div className="flex justify-between">
-          <span className="text-gray-400">TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
-            {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, needsImprovement: 1800 })})
+          <span className="text-gray-400">TTF, B:</span>
+          <span className={getScoreColor(metrics.ttf,  b, { goo, d: 80, 0,
+    needsImprovemen, t: 1800 })}>
+            {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttf,  b, { goo, d: 80, 0,
+    needsImprovemen, t: 1800 })})
           </span>
         </div>
       </div>

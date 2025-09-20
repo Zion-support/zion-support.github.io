@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+impor, t, Reac, t, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap } from "lucide-react";
-const NewsletterSection: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+import { Mai, l, CheckCircl, e, ArrowRigh, t, Bel, l, TrendingU, p, Zap } from "lucide-react";
+const NewsletterSectio, n: React.FC = () => {
+  const [ema,  i, l, setEma, i, l] = useState('');
+  const [isSubscrib, e, d, setIsSubscrib, e, d] = useState(false);
+  const [isLoadi,  n, g, setIsLoadi, n, g] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return,
+    if (!email) retur,  n,
 
     setIsLoading(true);
 
@@ -17,18 +17,21 @@ const NewsletterSection: React.FC = () => {
       setIsSubscribed(true);
       setIsLoading(false);
       setEmail('')
-    }, 1500),
+    },  1500),
   },
 
   const benefits = [
     {
-      icon: Bell,title: "Latest Updates",description: "Stay informed about new services and features"
+      ic, o, n: Be, l, l,
+    tit, l, e: "Lates, t Update, s",descripti, o, n: "Sta, y informe, d abou, t ne, w service, s an, d feature, s"
     };
     {
-      icon: TrendingUp,title: "Industry Insights",description: "Get exclusive access to tech trends and analysis"
+      ic, o, n: Trending, U, p,
+    tit, l, e: "Industr, y Insight, s",descripti, o, n: "Ge, t exclusiv, e acces, s t, o tec, h trend, s an, d analysi, s"
     },
     {
-      icon: Zap,title: "Early Access",description: "Be the first to know about beta programs and launches"
+      ic, o, n: Z, a, p,
+    tit, l, e: "Earl, y Acces, s",descripti, o, n: "B, e th, e firs, t t, o kno, w abou, t bet, a program, s an, d launche, s"
     }
   ];
   if (isSubscribed) {
@@ -36,9 +39,11 @@ const NewsletterSection: React.FC = () => {
       <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacit,  y: 0,
+    scal, e: 0.8 }}
+            animate={{ opacit, y: 1,
+    scal, e: 1 }}
+            transition={{ duratio, n: 0.5 }}
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-6">
@@ -47,11 +52,11 @@ const NewsletterSection: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>
             <p className="text-gray-300 text-lg mb-6">
               You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights;
-              service announcements, and exclusive content.
+              servic, e, announcement, s, and exclusive content.
             </p>
             <button
               onClick={() => setIsSubscribed(false)}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hove,  r: from-cyan-600 hove, r:to-blue-700 transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-cyan-500/25"
             >
               Subscribe Another Email
             </button>
@@ -61,31 +66,34 @@ const NewsletterSection: React.FC = () => {
     )
   }
 ;
-  return (
-    <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
+  return (<section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 l,  g:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }};
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacit, y: 0,
+    x: -30 }};
+            whileInView={{ opacit, y: 1,
+    x: 0 }}
+            transition={{ duratio, n: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl m, d:text-5xl font-bold text-white mb-6">
               Stay Ahead with Zion Tech Group
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Get exclusive access to the latest technology insights, service updates, and industry trends.
+              Get exclusive access to the latest technolog, y, insight, s, servic, e, update, s, and industry trends.
               Join thousands of professionals who trust us to keep them informed.
             </p>
 
             <div className="space-y-4 mb-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
+              {benefits.map((benefi, t, index) => (<motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }};
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial={{ opacit,  y: 0,
+    x: -20 }};
+                  whileInView={{ opacit, y: 1,
+    x: 0 }}
+                  transition={{ duratio, n: 0.5,
+    dela, y: index * 0.1 }}
                   className="flex items-start"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">
@@ -101,15 +109,18 @@ const NewsletterSection: React.FC = () => {
 
             <div className="flex items-center text-sm text-gray-400">
               <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-              <span>No spam, unsubscribe at any time</span>
+              <span>N, o, spa, m, unsubscribe at any time</span>
             </div>
           </motion.div>
 
           {/* Right Column - Newsletter Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }};
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacit, y: 0,
+    x: 30 }};
+            whileInView={{ opacit, y: 1,
+    x: 0 }}
+            transition={{ duratio, n: 0.6,
+    dela, y: 0.2 }}
           >
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">
               <div className="text-center mb-6">
@@ -131,7 +142,7 @@ const NewsletterSection: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email address"
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 focu,  s:outline-none focu, s:ring-2 focu, s:ring-cyan-500 focu, s:border-transparent transition-all duration-300"
                     required
                   />
                 </div>
@@ -139,15 +150,14 @@ const NewsletterSection: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isLoading || !email}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hove, r:from-cyan-600 hove, r:to-blue-700 disable, d:opacity-50 disable, d:cursor-not-allowed transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-lg hove, r:shadow-cyan-500/25 flex items-center justify-center"
                 >
                   {isLoading ? (
                     <div className="flex items-center">
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
                       Subscribing...
                     </div>
-                  ) : (
-                    <>
+                  ) : (<>
                       Subscribe Now
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </>
@@ -157,12 +167,12 @@ const NewsletterSection: React.FC = () => {
 
               <div className="mt-6 text-center">
                 <p className="text-xs text-gray-400">
-                  By subscribing, you agree to our{' '}
-                  <a href="/privacy" className="text-cyan-400 hover: text-cyan-300 underline">
+                  B,  y, subscribin, g, you agree to our{' '}
+                  <a href="/privacy" className="text-cyan-400 hove, r: text-cyan-300 underline">
                     Privacy Policy
                   </a>{' '}
                   and{' '}
-                  <a href="/terms" className="text-cyan-400 hover: text-cyan-300 underline">
+                  <a href="/terms" className="text-cyan-400 hove, r: text-cyan-300 underline">
                     Terms of Service
                   </a>
                 </p>

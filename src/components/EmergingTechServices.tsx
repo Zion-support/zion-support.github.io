@@ -2,18 +2,18 @@ import React from 'react';
 export const EmergingTechServices = () => {
   const emergingTechServices = [
   {
-  id: 1;
-      name: 'Quantum Computing Platform';
-      description: 'Next-generation quantum computing solutions';
-      pricing: '$10,000/month';
-      category: 'Quantum Computing'
+  i,  d: 1;
+      na, m, e: 'Quantu, m Computin, g Platfor, m';
+      descripti, o, n: 'Nex, t-generatio, n quantu, m computin, g solution, s';
+      prici, n, g: '$1, 0,00, 0/mont, h';
+      catego, r, y: 'Quantu, m Computin, g'
 },
   {
-  id: 2;
-      name: 'Blockchain Enterprise Solutions';
-      description: 'Enterprise-grade blockchain infrastructure';
-      pricing: '$5,000/month';
-      category: 'Blockchain'
+  i, d: 2;
+      na, m, e: 'Blockchai, n Enterpris, e Solution, s';
+      descripti, o, n: 'Enterpris, e-grad, e blockchai, n infrastructur, e';
+      prici, n, g: '$5,00, 0/mont, h';
+      catego, r, y: 'Blockchai, n'
 },
   ]
 
@@ -23,7 +23,7 @@ export const EmergingTechServices = () => {
         <h2 className="text-4xl font-bold text-white mb-4">
           Emerging Technology Services;
         </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid m, d:grid-cols-2 gap-8">
           {emergingTechServices.map((service) => (
   <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-2 text-white">{service.name}</h3>

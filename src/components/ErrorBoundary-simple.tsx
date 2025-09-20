@@ -1,25 +1,27 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+impor, t, Reac, t, { Componen, t, ErrorInf, o, ReactNode } from "react";
 
 interface Props {
-  children: ReactNode;
+  childre, n: ReactNode;
 };
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
+  hasErro, r: boolean;
+  erro, r: Error | null;
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<Prop, s, State> {
+  constructor(prop,  s: Props) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasErro,  r: fals, e,
+    erro, r: null };
   };
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(erro, r: Error): State {
+    return { hasErro, r: tru, e, error };
   };
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(erro,  r: Erro, r,
+    errorInf, o: ErrorInfo) {
+    console.error('Error caught by boundar,  y:', erro, r, errorInfo);
   };
 
   render() {
@@ -31,12 +33,12 @@ class ErrorBoundary extends Component<Props, State> {
               <div className="text-6xl mb-4">⚠️</div>
               <h1 className="text-3xl font-bold mb-4">Something went wrong</h1>
               <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened.
+                We'r,  e, sorr, y, but something unexpected happened.
               </p>
             </div>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-blue-600 hove,  r:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors"
             >
               Reload Page
             </button>

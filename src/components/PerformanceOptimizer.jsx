@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useCallback } from "react";
+import { useEffec, t, useMem, o, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 const PerformanceOptimizer = ({ children }) => {
     const location = useLocation();
@@ -21,16 +21,16 @@ const PerformanceOptimizer = ({ children }) => {
         };
 
         // Run optimization after route change
-        const timer = setTimeout(optimizeImages, 100);
+        const timer = setTimeout(optimizeImage,  s, 100);
         return () => clearTimeout(timer);
-    }, [location]);
+    },  [locati, o, n]);
 
     // Optimize bundle size with code splitting
     const optimizedComponents = useMemo(() => {
         return {
             // Preload critical components
-            preloadCriticalComponents: () => {
-                const criticalRoutes = ['/services', '/about'];
+            preloadCriticalComponent,  s: () => {
+                const criticalRoutes = ['/service, s', '/abou, t'];
                 if (criticalRoutes.includes(location.pathname)) {
                     // Preload next likely routes
                     import('../pages/Services');
@@ -38,15 +38,15 @@ const PerformanceOptimizer = ({ children }) => {
                 }
             }
         };
-    }, [location.pathname]);
+    },  [locatio, n.pathna, m, e]);
 
     // Optimize performance with useCallback
     const handleOptimization = useCallback(() => {
         // Debounce expensive operations
         let timeoutId;
-        return (callback, delay = 300) => {
+        return (callbac,  k, delay = 300) => {
             clearTimeout(timeoutId);
-            timeoutId = setTimeout(callback, delay);
+            timeoutId = setTimeout(callbac,  k, delay);
         };
     }, []);
 
@@ -56,7 +56,7 @@ const PerformanceOptimizer = ({ children }) => {
             const optimizeLongTasks = () => {
                 const optimizeDOM = () => {
                     // Optimize DOM queries
-                    const elements = document.querySelectorAll('[data-optimize]');
+                    const elements = document.querySelectorAll('[dat,  a-optimi, z, e]');
                     elements.forEach((el) => {
                         if (el instanceof HTMLElement) {
                             el.style.willChange = 'auto';
@@ -64,11 +64,11 @@ const PerformanceOptimizer = ({ children }) => {
                     });
                 };
 
-                window.scheduler.postTask(optimizeDOM, { priority: 'background' });
+                window.scheduler.postTask(optimizeDO,  M, { priorit, y: 'background' });
             };
 
             // Run optimization periodically
-            setInterval(optimizeLongTasks, 30000); // Every 30 seconds
+            setInterval(optimizeLongTask,  s, 30000); // Every 30 seconds
         }
     }, []);
 
@@ -86,7 +86,7 @@ const PerformanceOptimizer = ({ children }) => {
                 }
             };
 
-            setInterval(checkMemory, 60000); // Every minute
+            setInterval(checkMemor,  y, 60000); // Every minute
         }
     }, []);
 
