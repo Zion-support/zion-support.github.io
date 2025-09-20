@@ -1,4 +1,11 @@
+import React from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, XCircle, Clock, AlertCircle, Building, MapPin } from "lucide-react";
 
+interface Application {
+  id: string;
   jobTitle: string;
   company: string;
   location: string;
@@ -92,7 +99,7 @@ export function ApplicationsTracker() {
           <CardContent>
             <div className="flex items-center text-sm text-gray-500">
               <Clock className="h-4 w-4 mr-1" />
-              Applied on {new Date(application.applicationDate).toLocaleDateString()}
+              Applied on {new Date(application.appliedDate).toLocaleDateString()}
             </div>
             {application.notes && (
               <p className="mt-2 text-sm text-gray-600">{application.notes}</p>
@@ -104,5 +111,10 @@ export function ApplicationsTracker() {
               <Button variant="outline" size="sm">
                 Withdraw
               </Button>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
 }
-

@@ -1,19 +1,29 @@
-
-price?: number;
+export interface ServiceItem {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price?: number;
+  rating?: number;
+  image?: string;
 }
-rating?: number;}
-image?: string}
+
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
 
 export async function fetchServices(category?: string, q?: string): Promise<ServiceItem[]> {
-const params = new URLSearchParams();
-if (category) params.append("category", category);
-if (q) params.append("q", q),
-const url = `${BASE_URL}/services?${params.toString()}`;
-const res = await fetch(url, {;
-mode: "cors";
-headers: { "Content-Type": "application/json" };
-});
-if (!res.ok) {throw new Error("Failed to fetch services")}
-return res.json();
+  const params = new URLSearchParams();
+  if (category) params.append("category", category);
+  if (q) params.append("q", q);
+  
+  const url = `${BASE_URL}/services?${params.toString()}`;
+  const res = await fetch(url, {
+    mode: "cors",
+    headers: { "Content-Type": "application/json" }
+  });
+  
+  if (!res.ok) {
+    throw new Error("Failed to fetch services");
+  }
+  
+  return res.json();
 }
-
