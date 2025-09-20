@@ -2,15 +2,9 @@ import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata = {
-<<<<<<< HEAD
-  title: 'Advanced Automation 2025 - AI-Powered Business Automation | Zion Tech Group'
-  description: 'Transform your business with intelligent automation solutions. Reduce costs by 60% while increasing productivity by 300% with our AI-powered automation.'
-  keywords: ['automation', 'business automation', 'AI automation', 'process automation', 'intelligent automation']
-=======
   title: 'Advanced Automation 2025 - AI-Powered Business Automation | Zion Tech Group',
   description: 'Transform your business with intelligent automation solutions. Reduce costs by 60% while increasing productivity by 300% with our AI-powered automation.',
-  keywords: ['automationbusiness automationAI automationprocess automation', 'intelligent automation']
->>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
+  keywords: ['automation', 'business automation', 'AI automation', 'process automation', 'intelligent automation']
 }
 export default function AutomationPage() {
   return (
