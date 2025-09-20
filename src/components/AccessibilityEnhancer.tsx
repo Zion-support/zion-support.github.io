@@ -1,137 +1,237 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  focusVisible: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isLargeText, setIsLargeText] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [focusVisible, setFocusVisible] = useState(false);
+export default function AccessibilityEnhancer({ children }: { children: React.ReactNode }) {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    focusVisible: false,
+    screenReader: false,
+    keyboardNavigation: false
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
+  const [announcements, setAnnouncements] = useState<string[]>([]);
 
   useEffect(() => {
-    // Check for user preferences
-    if (typeof window !== 'undefined') {
-      // High contrast detection
-      const highContrastMedia = window.matchMedia('(prefers-contrast: high)');
-      setIsHighContrast(highContrastMedia.matches);
-      
-      // Reduced motion detection
-      const reducedMotionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
-      setIsReducedMotion(reducedMotionMedia.matches);
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    
+    setSettings(prev => ({
+      ...prev,
+      reducedMotion: prefersReducedMotion,
+      highContrast: prefersHighContrast
+    }));
 
-      // Listen for changes
-      const handleHighContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
-      const handleReducedMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-
-      highContrastMedia.addEventListener('change', handleHighContrastChange);
-      reducedMotionMedia.addEventListener('change', handleReducedMotionChange);
-
-      // Keyboard navigation detection
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
-          setFocusVisible(true);
-        }
-      };
-
-      const handleMouseDown = () => {
-        setFocusVisible(false);
-      };
-
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('mousedown', handleMouseDown);
-
-      return () => {
-        highContrastMedia.removeEventListener('change', handleHighContrastChange);
-        reducedMotionMedia.removeEventListener('change', handleReducedMotionChange);
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    // Apply accessibility styles
+    // Apply accessibility settings to document
     const root = document.documentElement;
     
-    if (isHighContrast) {
-      root.style.setProperty('--color-primary', '#000000');
-      root.style.setProperty('--color-secondary', '#ffffff');
-      root.style.setProperty('--color-background', '#ffffff');
-      root.style.setProperty('--color-text', '#000000');
+    if (settings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    if (isLargeText) {
-      root.style.setProperty('--font-size-base', '18px');
-      root.style.setProperty('--font-size-sm', '16px');
+    if (settings.largeText) {
       root.classList.add('large-text');
+      root.style.fontSize = '1.2em';
     } else {
       root.classList.remove('large-text');
+      root.style.fontSize = '';
     }
 
-    if (isReducedMotion) {
-      root.style.setProperty('--animation-duration', '0s');
-      root.style.setProperty('--transition-duration', '0s');
+    if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
+      root.style.setProperty('--animation-duration', '0.01ms');
+      root.style.setProperty('--animation-iteration-count', '1');
     } else {
       root.classList.remove('reduced-motion');
+      root.style.removeProperty('--animation-duration');
+      root.style.removeProperty('--animation-iteration-count');
     }
 
-    if (focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-  }, [isHighContrast, isLargeText, isReducedMotion, focusVisible]);
+    // Show accessibility panel on Ctrl+Shift+A
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'A') {
+        setIsVisible(!isVisible);
+        announce('Accessibility panel toggled');
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [settings, isVisible]);
+
+  const announce = (message: string) => {
+    setAnnouncements(prev => [...prev.slice(-2), message]);
+    
+    // Create live region for screen readers
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  };
+
+  const toggleSetting = (setting: keyof AccessibilitySettings) => {
+    const newValue = !settings[setting];
+    setSettings(prev => ({ ...prev, [setting]: newValue }));
+    
+    const settingNames = {
+      highContrast: 'High contrast mode',
+      largeText: 'Large text',
+      reducedMotion: 'Reduced motion',
+      focusVisible: 'Focus indicators',
+      screenReader: 'Screen reader mode',
+      keyboardNavigation: 'Keyboard navigation'
+    };
+    
+    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
+  };
+
+  const resetSettings = () => {
+    setSettings({
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      focusVisible: false,
+      screenReader: false,
+      keyboardNavigation: false
+    });
+    announce('Accessibility settings reset');
+  };
 
   return (
-    <div className="accessibility-enhanced">
-      {children}
-      
-      {/* Accessibility Controls */}
-      <div className="fixed top-4 left-4 z-50 bg-white shadow-lg rounded-lg p-2 space-y-2">
-        <button
-          onClick={() => setIsLargeText(!isLargeText)}
-          className={`block w-full px-3 py-1 text-xs rounded ${
-            isLargeText ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
-          }`}
-          aria-label={`${isLargeText ? 'Disable' : 'Enable'} large text`}
-        >
-          {isLargeText ? 'Large Text: On' : 'Large Text: Off'}
-        </button>
-        
-        <button
-          onClick={() => setIsHighContrast(!isHighContrast)}
-          className={`block w-full px-3 py-1 text-xs rounded ${
-            isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
-          }`}
-          aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast`}
-        >
-          {isHighContrast ? 'High Contrast: On' : 'High Contrast: Off'}
-        </button>
+    <>
+      {/* Screen reader announcements */}
+      <div aria-live="polite" aria-atomic="true" className="sr-only">
+        {announcements[announcements.length - 1]}
       </div>
 
-      {/* Skip to main content link */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-1/2 focus:transform focus:-translate-x-1/2 bg-blue-600 text-white px-4 py-2 rounded-lg z-50 font-semibold"
-        onClick={(e) => {
-          e.preventDefault();
-          const main = document.getElementById('main-content');
-          if (main) {
-            main.focus();
-            main.scrollIntoView();
-          }
-        }}
-      >
-        Skip to main content
-      </a>
-    </div>
-  );
-};
+      {/* Accessibility Panel */}
+      {isVisible && (
+        <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320px]">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-blue-400 font-bold text-lg">♿ Accessibility</h3>
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-blue-400 hover:text-white transition-colors p-1"
+              aria-label="Close accessibility panel"
+            >
+              ×
+            </button>
+          </div>
+          
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <label htmlFor="high-contrast" className="text-gray-300">
+                High Contrast
+              </label>
+              <button
+                id="high-contrast"
+                onClick={() => toggleSetting('highContrast')}
+                className={`w-12 h-6 rounded-full transition-colors ${
+                  settings.highContrast ? 'bg-blue-400' : 'bg-gray-600'
+                }`}
+                aria-pressed={settings.highContrast}
+                aria-label={`Toggle high contrast mode. Currently ${settings.highContrast ? 'on' : 'off'}`}
+              >
+                <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
+                  settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
+                }`} />
+              </button>
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <label htmlFor="large-text" className="text-gray-300">
+                Large Text
+              </label>
+              <button
+                id="large-text"
+                onClick={() => toggleSetting('largeText')}
+                className={`w-12 h-6 rounded-full transition-colors ${
+                  settings.largeText ? 'bg-blue-400' : 'bg-gray-600'
+                }`}
+                aria-pressed={settings.largeText}
+                aria-label={`Toggle large text. Currently ${settings.largeText ? 'on' : 'off'}`}
+              >
+                <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
+                  settings.largeText ? 'translate-x-6' : 'translate-x-0.5'
+                }`} />
+              </button>
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <label htmlFor="reduced-motion" className="text-gray-300">
+                Reduced Motion
+              </label>
+              <button
+                id="reduced-motion"
+                onClick={() => toggleSetting('reducedMotion')}
+                className={`w-12 h-6 rounded-full transition-colors ${
+                  settings.reducedMotion ? 'bg-blue-400' : 'bg-gray-600'
+                }`}
+                aria-pressed={settings.reducedMotion}
+                aria-label={`Toggle reduced motion. Currently ${settings.reducedMotion ? 'on' : 'off'}`}
+              >
+                <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
+                  settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
+                }`} />
+              </button>
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <label htmlFor="focus-visible" className="text-gray-300">
+                Focus Indicators
+              </label>
+              <button
+                id="focus-visible"
+                onClick={() => toggleSetting('focusVisible')}
+                className={`w-12 h-6 rounded-full transition-colors ${
+                  settings.focusVisible ? 'bg-blue-400' : 'bg-gray-600'
+                }`}
+                aria-pressed={settings.focusVisible}
+                aria-label={`Toggle focus indicators. Currently ${settings.focusVisible ? 'on' : 'off'}`}
+              >
+                <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
+                  settings.focusVisible ? 'translate-x-6' : 'translate-x-0.5'
+                }`} />
+              </button>
+            </div>
+          </div>
+          
+          <div className="mt-4 pt-3 border-t border-gray-700">
+            <button
+              onClick={resetSettings}
+              className="w-full bg-blue-400/20 hover:bg-blue-400/30 text-blue-400 py-2 px-4 rounded transition-colors"
+              aria-label="Reset all accessibility settings"
+            >
+              Reset Settings
+            </button>
+          </div>
+          
+          <div className="mt-3 pt-2 border-t border-gray-700 text-center">
+            <span className="text-gray-500 text-xs">Press Ctrl+Shift+A to toggle</span>
+          </div>
+        </div>
+      )}
 
-export default AccessibilityEnhancer;
+      {children}
+    </>
+  );
+}

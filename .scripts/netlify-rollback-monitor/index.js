@@ -5,6 +5,7 @@ module.exports = {
     const monitorMinutes = String(inputs.monitorMinutes || process.env.MONITOR_MINUTES || 20);
     const intervalSeconds = String(inputs.intervalSeconds || process.env.CHECK_INTERVAL_SECONDS || 60);
 
+    // eslint-disable-next-line no-console
     console.log('[netlify-plugin] launching deployment monitor...');
     await new Promise((resolve, reject) => {
       const child = spawn('node', ['automation/deployment-monitor.cjs'], {

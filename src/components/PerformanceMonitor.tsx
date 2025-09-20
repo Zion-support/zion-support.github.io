@@ -1,126 +1,150 @@
-import React, { useState, useEffect } from 'react';
-import { usePerformance } from '../hooks/usePerformance';
+import { useEffect, useState } from 'react';
 
-interface PerformanceMonitorProps {
-  show?: boolean;
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatency: number;
+  fps: number;
+  lighthouseScore: number;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  show = false, 
-  position = 'bottom-right' 
-}) => {
-  const [isVisible, setIsVisible] = useState(show);
-  const metrics = usePerformance();
+export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    networkLatency: 0,
+    fps: 0,
+    lighthouseScore: 0
+  });
 
-  const positionClasses = {
-    'top-left': 'top-4 left-4',
-    'top-right': 'top-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'bottom-right': 'bottom-4 right-4',
-  };
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Show performance monitor in development
-    if (process.env.NODE_ENV === 'development') {
-      setIsVisible(true);
-    }
-  }, []);
+    // Measure page load time
+    const loadTime = performance.now();
+    
+    // Measure memory usage
+    const memoryInfo = (performance as any).memory;
+    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0;
+
+    // Measure render time
+    const renderTime = performance.getEntriesByType('navigation')[0]?.loadEventEnd || 0;
+
+    // Measure network latency (simplified)
+    const networkLatency = performance.getEntriesByType('resource')
+      .reduce((acc, entry) => acc + entry.duration, 0) / 10;
+
+    // Calculate FPS (simplified)
+    let fps = 60;
+    let lastTime = performance.now();
+    let frameCount = 0;
+
+    const measureFPS = () => {
+      frameCount++;
+      const currentTime = performance.now();
+      if (currentTime - lastTime >= 1000) {
+        fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        frameCount = 0;
+        lastTime = currentTime;
+      }
+      requestAnimationFrame(measureFPS);
+    };
+    measureFPS();
+
+    // Calculate Lighthouse score (simplified)
+    const lighthouseScore = Math.max(0, Math.min(100, 
+      100 - (loadTime / 10) - (memoryUsage * 2) - (networkLatency / 10)
+    ));
+
+    setMetrics({
+      loadTime: Math.round(loadTime),
+      renderTime: Math.round(renderTime),
+      memoryUsage: Math.round(memoryUsage * 100) / 100,
+      networkLatency: Math.round(networkLatency),
+      fps,
+      lighthouseScore: Math.round(lighthouseScore)
+    });
+
+    // Show performance monitor on Ctrl+Shift+P
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        setIsVisible(!isVisible);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [isVisible]);
 
   if (!isVisible) return null;
 
-  const getPerformanceStatus = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'good';
-    if (value <= thresholds.needsImprovement) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'good': return 'text-green-400';
-      case 'needs-improvement': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
-  };
-
   return (
-    <div className={`fixed ${positionClasses[position]} z-50`}>
-      <div className="bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono max-w-sm">
-        <div className="flex justify-between items-center mb-3">
-          <span className="font-semibold text-sm">Performance Monitor</span>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-white text-lg leading-none"
-          >
-            ×
-          </button>
+    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 text-xs font-mono z-50 min-w-[280px]">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-blue-400 font-bold">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-blue-400 hover:text-white transition-colors"
+        >
+          ×
+        </button>
+      </div>
+      
+      <div className="space-y-2">
+        <div className="flex justify-between">
+          <span className="text-gray-400">Load Time:</span>
+          <span className={metrics.loadTime < 1000 ? 'text-green-400' : 'text-red-400'}>
+            {metrics.loadTime}ms
+          </span>
         </div>
         
-        <div className="space-y-2">
-          <div className="flex justify-between">
-            <span>FPS:</span>
-            <span className={metrics.fps >= 50 ? 'text-green-400' : metrics.fps >= 30 ? 'text-yellow-400' : 'text-red-400'}>
-              {metrics.fps}
-            </span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span>Memory:</span>
-            <span className={metrics.memoryUsage < 50 ? 'text-green-400' : metrics.memoryUsage < 100 ? 'text-yellow-400' : 'text-red-400'}>
-              {metrics.memoryUsage}MB
-            </span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span>Connection:</span>
-            <span className="text-blue-400">{metrics.connectionSpeed}</span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span>Load Time:</span>
-            <span className={metrics.loadTime < 2000 ? 'text-green-400' : metrics.loadTime < 4000 ? 'text-yellow-400' : 'text-red-400'}>
-              {metrics.loadTime.toFixed(0)}ms
-            </span>
-          </div>
-
-          {metrics.coreWebVitals.lcp && (
-            <div className="flex justify-between">
-              <span>LCP:</span>
-              <span className={getStatusColor(getPerformanceStatus(metrics.coreWebVitals.lcp, { good: 2500, needsImprovement: 4000 }))}>
-                {metrics.coreWebVitals.lcp.toFixed(0)}ms
-              </span>
+        <div className="flex justify-between">
+          <span className="text-gray-400">Memory:</span>
+          <span className={metrics.memoryUsage < 50 ? 'text-green-400' : 'text-yellow-400'}>
+            {metrics.memoryUsage}MB
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-400">FPS:</span>
+          <span className={metrics.fps >= 60 ? 'text-green-400' : metrics.fps >= 30 ? 'text-yellow-400' : 'text-red-400'}>
+            {metrics.fps}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-400">Network:</span>
+          <span className={metrics.networkLatency < 100 ? 'text-green-400' : 'text-red-400'}>
+            {metrics.networkLatency}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between items-center">
+          <span className="text-gray-400">Score:</span>
+          <div className="flex items-center">
+            <div className="w-16 h-2 bg-gray-700 rounded-full mr-2">
+              <div 
+                className={`h-full rounded-full transition-all duration-500 ${
+                  metrics.lighthouseScore >= 90 ? 'bg-green-400' :
+                  metrics.lighthouseScore >= 70 ? 'bg-yellow-400' :
+                  'bg-red-400'
+                }`}
+                style={{ width: `${metrics.lighthouseScore}%` }}
+              />
             </div>
-          )}
-
-          {metrics.coreWebVitals.fid && (
-            <div className="flex justify-between">
-              <span>FID:</span>
-              <span className={getStatusColor(getPerformanceStatus(metrics.coreWebVitals.fid, { good: 100, needsImprovement: 300 }))}>
-                {metrics.coreWebVitals.fid.toFixed(1)}ms
-              </span>
-            </div>
-          )}
-
-          {metrics.coreWebVitals.cls && (
-            <div className="flex justify-between">
-              <span>CLS:</span>
-              <span className={getStatusColor(getPerformanceStatus(metrics.coreWebVitals.cls, { good: 0.1, needsImprovement: 0.25 }))}>
-                {metrics.coreWebVitals.cls.toFixed(3)}
-              </span>
-            </div>
-          )}
-
-          <div className="flex justify-between">
-            <span>Visible:</span>
-            <span className={metrics.isVisible ? 'text-green-400' : 'text-red-400'}>
-              {metrics.isVisible ? 'Yes' : 'No'}
+            <span className={metrics.lighthouseScore >= 90 ? 'text-green-400' : 
+                            metrics.lighthouseScore >= 70 ? 'text-yellow-400' : 'text-red-400'}>
+              {metrics.lighthouseScore}
             </span>
           </div>
         </div>
       </div>
+      
+      <div className="mt-3 pt-2 border-t border-gray-700 text-center">
+        <span className="text-gray-500 text-xs">Press Ctrl+Shift+P to toggle</span>
+      </div>
     </div>
   );
-};
-
-export default PerformanceMonitor;
+}

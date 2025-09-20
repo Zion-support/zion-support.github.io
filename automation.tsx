@@ -13,10 +13,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de,
 class ErrorBoundary extends React.Component {,
   constructor(props) {,
     super(props);
-    this.state = { hasError: false ,};
+    this.state = { hasError: false };
   }
   static getDerivedStateFromError(error) {,
-    return { hasError: true ,};
+    return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {,
     console.error('Error caught by boundary:', error, errorInfo);

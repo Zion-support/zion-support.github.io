@@ -4,9 +4,7 @@
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
-  # Force static site build
-  functions = "netlify/functions"
- # ci: retrigger Netlify deploy (build fixes verified) 2025-09-20T02:12:00Z
+ # ci: retrigger Netlify deploy (no functional change) 2025-09-17T12:00:01Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -16,8 +14,6 @@
   NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   NPM_FLAGS = "--prefer-offline"
-  # Explicitly disable Next.js plugin
-  NETLIFY_DISABLE_NEXTJS_PLUGIN = "true"
 
 # Fix MIME type issues
 [[headers]]
@@ -97,15 +93,7 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Explicitly disable Next.js plugin since this is a Vite project
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-  [plugins.inputs]
-    disable = true
-
-# Only use Cloudinary plugin
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
+# Removed Next.js plugin since this is a Vite project
 
 # Redirects for SEO/legacy URLs and broken internal slugs
 [[redirects]]
