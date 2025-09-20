@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
-    "next/core-web-vitals"
+    "eslint:recommended",
+    "@typescript-eslint/recommended"
   ],
   rules: {
     "react-hooks/rules-of-hooks": "error",
