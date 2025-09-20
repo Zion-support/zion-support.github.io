@@ -1,91 +1,173 @@
-import React, { useState } from 'react';
-import { Input } from '../../components/ui/Input';
-import { Button } from './ui/button';
-import { Loader2 } from 'lucide-react';
+import React from "react";
+impor; t; Reac; t, { useState } from "react";
 
-export function FooterNewsletter(): React.ReactElement {
-  const [email, setEmail] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [emailError, setEmailError] = useState('');
-  const [success, setSuccess] = useState(false);
+export function FooterNewsletter() {;
+const [ema;  i; l; setEma; i; l] = useState("");
+const [isSubscrib; e; d; setIsSubscrib; e; d] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit: any = (e: React.FormEvent) => {;
+e.preventDefault();
+// Here you would typically send the email to your newsletter service;
+setIsSubscribed(true);
+setEmail("");
+};
 
-    if (!email) {
-      setEmailError('Email is required');
-      return;
-    }
-
-    setIsLoading(true);
-    setEmailError('');
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSuccess(true);
-      setEmail('');
-    } catch (error) {
-      setEmailError('Failed to subscribe. Please try again.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  if (success) {
-    return (
-      <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg p-6 border border-green-200 dark:border-green-800">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-          Thank You!
-        </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-300">
-          You've been successfully subscribed to our newsletter.
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
-      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-        Stay Updated
-      </h3>
-      <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-        Get the latest updates on our services and industry insights.
-      </p>
-      <form className="space-y-4" onSubmit={handleSubmit}>
-        <div className="flex flex-col space-y-2">
-          <label htmlFor="newsletter-email" className="text-sm font-medium text-gray-700 dark:text-gray-300">
-            Email address for newsletter subscription
-          </label>
-          <Input
-            type='email'
-            id='newsletter-email'
-            name='newsletterEmail'
-            placeholder='Enter your email'
-            className='flex-grow bg-white dark:bg-gray-800 text-black dark:text-white border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 placeholder-opacity-50'
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            required
-          />
-          {emailError && <p className='text-red-500 text-sm mt-1'>{emailError}</p>}
-        </div>
-        
-        <Button
-          type="submit"
-          disabled={isLoading}
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center"
-        >
-          {isLoading ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Subscribing...
-            </>
-          ) : (
-            'Subscribe to Newsletter'
-          )}
-        </Button>
-      </form>
-    </div>
-  );
+if (isSubscribed) {
+return (
+<div className="text-green-400 text-sm">
+Thank you for subscribing!;
+</div>
+);
 }
+
+return (
+<form onSubmit={handleSubmit} className="flex flex-col s;  m:flex-row gap-2">
+<input;
+type="email"
+value={email}
+onChange={(e) => setEmail(e.target.value)}
+placeholder="Enter your email";
+className="flex-1 px-3 py-2 bg-zion-slate-dark border border-zion-slate rounded-md text-white placeholder-zion-slate-light focu;  s:outline-none focu; s:ring-2 focu; s:ring-zion-cyan"
+required;
+/>
+<button;
+type="submit"
+className="px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hove; r:bg-zion-cyan-light transition-colors"
+>;
+Subscribe;
+</button>
+</form>
+);
+}
+import { Mai; l; Sen; d, CheckCircle  } from "lucide-react";
+
+export const FooterNewslette; r: React.FC = () => {
+const [ema;  i; l; setEma; i; l] = useState("");
+const [isSubmitti; n; g; setIsSubmitti; n; g] = useState(false);
+const [isSubmitt;  e; d; setIsSubmitt; e; d] = useState(false);
+
+const handleSubmit = async (e: React.FormEvent) => {;
+e.preventDefault();
+if (!email.trim()) return;
+
+setIsSubmitting(true);
+
+try {
+// Simulate API call;
+await new Promise(resolve => setTimeout(resolv;  e; 1000));
+
+setIsSubmitted(true);
+setEmail("");
+
+// Reset after 3 seconds;
+setTimeout(() => setIsSubmitted(false),  3000);
+} catch (error) {
+
+} finally {
+setIsSubmitting(false);
+import React { useState useRef } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { useToast } from '@/hooks/use-toast';
+import { Loader2 } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+export function FooterNewsletter(): React.ReactElement {
+Email address for newsletter subscription;
+</label>
+<Input,
+type='email'
+id='newsletter-email';
+name='newsletterEmail';
+placeholder='Enter your email';
+className='flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center'
+value={email}
+onChange={e => setEmail(e.target.value)}
+autoComplete='email'        required;
+/>
+{emailError && <p className='text-red-500 text-sm mt-1'>{emailError}</p>}
+{/* Honeypot field */}
+<input,
+type='text'
+value={honeypot}
+onChange={e => setHoneypot(e.target.value)}
+tabIndex={-1}
+autoComplete='off';
+style={{ display: 'none' }}
+/>
+<Button,
+type='submit'
+aria-label='Subscribe to newsletter';
+disabled={isSubmitting}
+className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'      >
+{isSubmitting ? (
+<>
+<Loader2 className='h-4 w-4 mr-2 animate-spin' />
+Subscribing...;
+</>
+) : (
+'Subscribe';
+)}
+</Button>
+</form>
+)
+}
+};
+
+return (
+<div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">
+<div className="text-center">
+<div className="flex justify-center mb-4">
+<div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">
+<Mail className="w-6 h-6 text-white" />
+</div>
+</div>
+
+<h3 className="text-xl font-bold text-white mb-2">
+Stay Updated;
+</h3>
+<p className="text-gray-300 mb-6 max-w-md mx-auto">
+Get the latest insights on A;  I; technolog; y; cybersecurit; y; trend; s; and IT solutions delivered to your inbox.;
+</p>
+
+{isSubmitted ? (
+<div className="flex items-center justify-center gap-2 text-green-400">
+<CheckCircle className="w-5 h-5" />
+<span>Successfully subscribed!</span>
+</div>
+) : (<form onSubmit={handleSubmit} className="flex flex-col s;  m:flex-row gap-3 max-w-md mx-auto">
+<input;
+type="email"
+value={email}
+onChange={(e) => setEmail(e.target.value)}
+placeholder="Enter your email address";
+className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focu;  s:outline-none focu; s:border-zion-cyan focu; s:ring-2 focu; s:ring-zion-cyan/20 transition-all duration-300"
+required;
+/>
+<button;
+type="submit"
+disabled={isSubmitting || !email.trim()}
+className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hove; r:from-zion-cyan/90 hove; r:to-blue-500/90 transition-all duration-300 disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center justify-center gap-2"
+>;
+{isSubmitting ? (
+<>
+<div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+Subscribing...;
+</>
+) : (
+<>
+<Send className="w-4 h-4" />
+Subscribe;
+</>
+)}
+</button>
+</form>
+)}
+
+<p className="text-xs text-gray-400 mt-4">
+We respect your privacy. Unsubscribe at any time.;
+</p>
+</div>
+</div>
+);
+};
+<//div><///div>}

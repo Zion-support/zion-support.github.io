@@ -6,7 +6,7 @@ import { Alert,, AlertDescription,, AlertTitle,, ,  } from '@/components/ui/aler
 import { RefreshCw,, WifiOff,  } from 'lucide-react'
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ApiErrorBoundaryProps {
-  children: ReactNode;
-  queryClient?: QueryClient;
-  fallback?: ReactNode,
+children: ReactNode;
+queryClient?: QueryClient;
+fallback?: ReactNode,
 }

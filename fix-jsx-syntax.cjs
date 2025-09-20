@@ -1,67 +1,50 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-function fixJSXSyntax(filePath) {
+// Pattern to match JSX tags with missing opening bracket
+const jsxPattern = /<([a-zA-Z][a-zA-Z0-9]*),\s*$/gm;
+
+function fixJsxSyntax(content) {
+  return content.replace(jsxPattern, '<$1');
+}
+
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix semicolons in JSX;
-    content = content.replace(/<(\w+)([^>]*);>/g, '<$1$2>');
-    content = content.replace(/<\/(\w+)>/g, '</$1>');
-
-    // Fix semicolons in JSX attributes;
-    content = content.replace(/(\w+)=\{([^}]+)\};/g, '$1={$2}');
-    content = content.replace(/(\w+)="([^"]*)";/g, '$1="$2"');
-
-    // Fix semicolons in JSX expressions;
-    content = content.replace(/\{([^}]+)\};/g, '{$1}');
-
-    // Fix semicolons in return statements;
-    content = content.replace(/return\s*\(;/g, 'return (');
-
-    // Fix semicolons in JSX closing tags;
-    content = content.replace(/<\/(\w+)>;/g, '</$1>');
-
-    // Fix semicolons in JSX self-closing tags;
-    content = content.replace(/<(\w+)([^>]*)\s*\/>;/g, '<$1$2 />');
-
-    // Fix semicolons in JSX text content;
-    content = content.replace(/>([^<]+);</g, '>$1<');
-
-    // Fix semicolons in JSX comments;
-    content = content.replace(/{\/\*([^*]+)\*\/};/g, '{/*$1*/}');
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      modified = true;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixJsxSyntax(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-
-    return modified;
+    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath} `, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
+function main() {
+  const srcFiles = glob.sync('src/**/*.{tsx,jsx}', { cwd: process.cwd() });
   let fixedCount = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-      if (fixJSXSyntax(filePath)) fixedCount++;
+  
+  console.log(`Found ${srcFiles.length} files to check...`);
+  
+  for (const file of srcFiles) {
+    if (fixFile(file)) {
+      fixedCount++;
     }
   }
-
-  return fixedCount;
+  
+  console.log(`\nFixed ${fixedCount} files`);
 }
 
-console.log('Starting JSX syntax fixes...');
-const fixedCount = processDirectory('./pages');
-console.log(`Fixed ${fixedCount} files`);
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixJsxSyntax, fixFile };

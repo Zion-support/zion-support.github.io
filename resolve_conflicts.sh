@@ -1,35 +1,56 @@
 #!/bin/bash
+set -e
 
-# Script to resolve merge conflicts systematically
-# Keep our PM2 automation improvements, accept main branch for others
-
-echo "Resolving merge conflicts..."
-
-# Keep our PM2 automation files
-git checkout --ours ecosystem.config.js
-git checkout --ours pm2-automation.sh
-git checkout --ours eslint.config.cjs
-
-# For most other files, accept the main branch version
-git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
-    file=$(echo "$line" | cut -c4-)
-    
-    # Skip our important files
-    if [[ "$file" == "ecosystem.config.js" || "$file" == "pm2-automation.sh" || "$file" == "eslint.config.cjs" ]]; then
-        echo "Keeping our version of $file"
-        continue
+        /^>>>>>>>/ { in_other = 0; next }
+        in_head { print; next }
+        !in_other { print }
+        ' "$file" > "$temp_file"
+        
+        # Replace the original file
+        mv "$temp_file" "$file"
     fi
-    
-    # Accept main branch version for most files
-    echo "Accepting main branch version of $file"
-    git checkout --theirs "$file"
 done
 
-echo "Adding resolved files..."
-git add .
+echo "Merge conflicts resolved!"
+=======
+echo "Resolving merge conflicts..."
+=======
+echo "Resolving merge conflicts automatically..."
 
-echo "Committing merge resolution..."
-git commit -m "Resolve merge conflicts - keep PM2 automation improvements"
+# Function to resolve conflicts by choosing HEAD version
+resolve_conflicts() {
+    local file="$1"
+    if [ -f "$file" ]; then
+        echo "Resolving conflicts in $file"
+        # Use git checkout to choose HEAD version for conflicted files
+        git checkout --ours "$file" 2>/dev/null || true
+        git add "$file" 2>/dev/null || true
+    fi
+}
 
-echo "Pushing resolved changes..."
-git push origin HEAD
+# Get list of conflicted files
+conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+
+if [ -n "$conflicted_files" ]; then
+    echo "Found conflicted files:"
+    echo "$conflicted_files"
+    
+    # Resolve each conflicted file
+    while IFS= read -r file; do
+        if [ -n "$file" ]; then
+            resolve_conflicts "$file"
+        fi
+    done <<< "$conflicted_files"
+    
+    sed -i '/^=======/,/^>>>>>>>/d' "$file"
+    sed -i '/^>>>>>>>/d' "$file"
+    
+    echo "Resolved: $file"
+done
+
+echo "All merge conflicts resolved!"
+=======
+    echo "All conflicts resolved automatically"
+else
+    echo "No conflicts found"
+fi

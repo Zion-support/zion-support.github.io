@@ -1,15 +1,28 @@
-#!/usr/bin/env node/usr/bin/env node;/ No-op Netlify functions manifest generator placeholder;/ Writes a minimal manifest file if functions dir exists;const fs = require("$1");"const path = require("$1");"const outDir = path.resolve(process.cwd(), "automation");"const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {;" fs.mkdirSync(outDir, { recursive: true }),} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() }try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify: manifest] wrote", manifestPath),} catch (e) {;" console.log("[netlify: manifest] skipped (write failed)"),}process.exit(0);"const fs = require("$1");"const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try { fs.mkdirSync(outDir, { recursive: true }),"} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() };";try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify:manifest] wrote", manifestPath)} catch (e) { console.log("[netlify:manifest] skipped (write failed)")}";process.exit(0)""#!/usr/bin/env node
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
-const outDir = path.join(__dirname, '..', 'automation');
-const outFile = path.join(outDir, 'netlify-functions-manifest.json');
+const manifestPath = path.join(process.cwd(), 'automation', 'netlify-functions-manifest.json');
+const functions = [
+	{
+		name: 'osv_dependency_audit',
+		path: '/.netlify/functions/osv_dependency_audit'
+	},
+	{
+		name: 'external_link_audit',
+		path: '/.netlify/functions/external_link_audit'
+	},
+	{
+		name: 'automation_summary',
+		path: '/.netlify/functions/automation_summary'
+	},
+	{
+		name: 'readme_badges_updater',
+		path: '/.netlify/functions/readme_badges_updater'
+	}
+];
 
-const manifest = {
-	generatedAt: new Date().toISOString(),
-	functions: []
-};
-
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
-console.log('[netlify:manifest] wrote', outFile);
+const payload = { generatedAt: new Date().toISOString(), functions };
+fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
+fs.writeFileSync(manifestPath, JSON.stringify(payload, null, 2));
+console.log('[netlify:manifest] Wrote', manifestPath);

@@ -1,2 +1,10 @@
+import React from "react";
+
+interface Service {
+id: string;,
+name: string;
+}
+
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
+)

@@ -1,11 +1,11 @@
-'use client'
+'use client';
 import React {
-  Suspense,
-lazy,
+Suspense,
+lazy;
 useState,
-useEffect,
+useEffect;
 ComponentType,
-} from 'react'
+} from 'react';
 import { motion,, AnimatePresence,  } from 'framer-motion'
 import { Loader2,, AlertTriangle,, Wifi,, WifiOff,, RefreshCw,  } from 'lucide-react'
 import { Button,  } from '@/components/ui/button'
@@ -13,26 +13,26 @@ import { Card,, CardContent,  } from '@/components/ui/card'
 import { cn,  } from '@/lib/utils'
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {
-  isLoading: boolean,
+isLoading: boolean,
 error: Error | null,
 retryCount: number,
 isOnline: boolean,
 interface DynamicLoaderProps {
-  importFn: () => Promise<{ default: ComponentType<any> }>
-  fallback?: React.ReactNode,
+importFn: () => Promise<{ default: ComponentType<any> }>
+fallback?: React.ReactNode,
 errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
-  loadingComponent?: React.ComponentType,
+loadingComponent?: React.ComponentType,
 enableRetry?: boolean,
 maxRetries?: number,
 prefetch?: boolean,
 className?: string,
-children?: React.ReactNode
-  [key: string]: any
+children?: React.ReactNode;
+[key: string]: any;
 // Enhanced Loading Component,
 const EnhancedLoading: React.FC<{
-  progress?: number,
+progress?: number,
 message?: string,
-showProgress?: boolean
+showProgress?: boolean;
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -41,4 +41,4 @@ showProgress?: boolean
 //     )
 //   }
 // )
-export default DynamicComponentLoader; export default DynamicComponentLoader
+export default DynamicComponentLoader; export default DynamicComponentLoader}}}

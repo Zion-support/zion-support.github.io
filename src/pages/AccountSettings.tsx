@@ -1,13 +1,35 @@
 
-import { useState,, ,  } from 'react';
-import { useLocalStorage,, ,  } from '@/hooks';
-import { Header,, ,  } from '@/components/Header';
-import { SEO,, ,  } from '@/components/SEO';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { Button,, ,  } from '@/components/ui/button';
-import { Input,, ,  } from '@/components/ui/input';
-import { Wallet,, Database,, Save,  } from 'lucide-react'
-return (
+import React, { useState } from 'react';
+import { useLocalStorage } from '@/hooks';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Wallet, Database, Save } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Label } from '@/components/ui/label';
+import { Switch } from '@/components/ui/switch';
+import { Separator } from '@/components/ui/separator';
+
+export default function AccountSettings() {
+  const [didHandle, setDidHandle] = useState('');
+  const [displayWeb3, setDisplayWeb3] = useState(false);
+  const [enableBackup, setEnableBackup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth();
+
+  const handleConnectWallet = () => {
+    // Wallet connection logic
+  };
+
+  const handleSave = async () => {
+    setIsSubmitting(true);
+    // Save logic
+    setIsSubmitting(false);
+  };
+
+  return (
     <>
       <SEO title='Account Settings' description='Manage your account' />
       <Header />
@@ -24,22 +46,23 @@ return (
             <CardContent className='space-y-6'>
               <div className='space-y-2'>
                 <Label htmlFor='email'>Email Address</Label>
-                <Input,
-id='email'
-                  value={user?.email |''}                  disabled,
-className='bg-gray-100'
+                <Input
+                  id='email'
+                  value={user?.email || ''}
+                  disabled
+                  className='bg-gray-100'
                 />
               </div>
               <div className='space-y-2'>
                 <Label htmlFor='didHandle'>Web3 Identity Handle</Label>
                 <div className='flex gap-2'>
-                  <Input,
+                  <Input
 id='didHandle'
                     value={didHandle}
                     onChange={e => setDidHandle(e.target.value)}
                     placeholder='ENS / Lens / Ceramic / Farcaster'
                   />
-                  <Button,
+                  <Button
 variant='outline'
                     onClick={handleConnectWallet}
                     type='button'
@@ -59,7 +82,7 @@ variant='outline'
                     Show your Web3 handle instead of email
                   </p>
                 </div>
-                <Switch,
+                <Switch
 id='displayWeb3'
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}                />
@@ -75,7 +98,7 @@ id='displayWeb3'
                     Backup your profile data to IPFS/Arweave
                   </p>
                 </div>
-                <Switch,
+                <Switch
 id='backup'
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}                />
@@ -86,7 +109,7 @@ id='backup'
 is in beta.
                 </div>
               )}
-              <Button,
+              <Button
 onClick={handleSave}
                 disabled={isSubmitting}
                 className='w-full'              >
@@ -107,7 +130,7 @@ onClick={handleSave}
                 <h3 className='font-medium'>Connected Wallet</h3>
                 {didHandle ? (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
-                    <svg,
+                    <svg
 xmlns='http://www.w3.org/2000/svg'
                       width='20'
                       height='20'
@@ -126,7 +149,7 @@ xmlns='http://www.w3.org/2000/svg'
                   </div>
                 ) : (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
-                    <svg,
+                    <svg
 xmlns='http://www.w3.org/2000/svg'
                       width='20'
                       height='20'
@@ -176,7 +199,7 @@ xmlns='http://www.w3.org/2000/svg'
               </div>
               <div>
                 <h3 className='font-medium mb-2'>Recovery Options</h3>
-                <Button,
+                <Button
 variant='outline'
                   className='w-full'
                   disabled={!enableBackup}                >

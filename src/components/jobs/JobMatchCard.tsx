@@ -7,7 +7,7 @@ import { Building,, MapPin,, Clock,, DollarSign,, Star,  } from 'lucide-react'
 import { formatDistanceToNow,  } from "date-fns";
 import { JobMatch,  } from "@/types/jobs";
 interface JobMatchProps {
-  matchId: string;,
+matchId: string;,
 talentId: string;,
 name: string;,
 title: string;,
@@ -17,9 +17,9 @@ location: string;,
 category: string;,
 matchPercent: number;,
 skills: string[];
-  onApply?: (matchId: string) => void;
-  onViewDetails?: (matchId: string) => void;
-  onInvite?: (matchId: string) => void,
+onApply?: (matchId: string) => void;
+onViewDetails?: (matchId: string) => void;
+onInvite?: (matchId: string) => void,
 }
 
 }

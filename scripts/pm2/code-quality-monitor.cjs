@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node,"}),"
 ,"}),"
 const fs = require(,"}),"
@@ -32,5 +33,4 @@ const fs = require(,"}),"
                 "type"
                 "severity"
         "type"
-        "message"        "message"
-        "message"        "message"
+

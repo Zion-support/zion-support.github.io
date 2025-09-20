@@ -7,11 +7,12 @@ import { FormField;
 , , FormControl;
 , , FormDescription;
 , , FormMessage,
- } from "@/components/ui/form",
+} from "@/components/ui/form",
 import { Input,  } from "@/components/ui/input",
 import { TalentRateRecommender,  } from "@/components/pricing/TalentRateRecommender";
 import { Card,, CardContent,  } from "@/components/ui/card";
 interface RateOptimizationSectionProps {
-rateType: "hourly" | "fixed"
+rateType: "hourly" | "fixed";
 }
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+})

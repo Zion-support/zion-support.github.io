@@ -1,13 +1,12 @@
+
 #!/usr/bin/env node;
 /**
  * PM2 Documentation Generator Service;
  * Automatically generates and updates documentation;
  */
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
 class DocsGenerator {}
   constructor() {}
     this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator';
@@ -27,6 +26,7 @@ class DocsGenerator {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -38,8 +38,6 @@ class DocsGenerator {}
     };
     try {}
       this.log('Generating API documentation...');
-      
-      
       // Check if JSDoc is available;
       try {}
         execSync('npx jsdoc --version', { "stdio": 'pipe' }
@@ -59,8 +57,6 @@ class DocsGenerator {}
       const jsdocCommand = `npx jsdoc -c jsdoc.conf.json -d ${docsDir} -r src/ lib/ scripts/`;`
       execSync(jsdocCommand, { "stdio": 'pipe' }
 });
-
-
       this.log('API documentation generated successfully');
       return { "generated": true, "outputDir": docsDir };
     } catch (error) {}
@@ -75,18 +71,14 @@ class DocsGenerator {}
     };
     try {}
       this.log('Generating component documentation...');
-      
       // Look for React/Vue/Svelte components;
       const componentFiles = this.findComponentFiles();
-      
       if (componentFiles.length === 0) {}
         this.log('No component files found');
         return { "generated": false, "reason": 'No components found' };
       };
       // Generate component documentation;
       const componentDocs = this.generateComponentMarkdown(componentFiles);
-      
-      
       const docsDir = 'docs/components';
       if (!fs.existsSync(docsDir)) {}
         fs.mkdirSync(docsDir, { "recursive": true }
@@ -94,8 +86,6 @@ class DocsGenerator {}
       };
       const docsFile = path.join(docsDir, 'components.md');
       fs.writeFileSync(docsFile, componentDocs);
-
-
       this.log(`Component documentation "generated": ${docsFile}`);
       return { "generated": true, "outputFile": docsFile, "componentCount": componentFiles.length };
     } catch (error) {}
@@ -106,16 +96,12 @@ class DocsGenerator {}
   findComponentFiles() {}
     const extensions = ['.jsx', '.tsx', '.vue', '.svelte'];
     const componentFiles = [];
-
-
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-          
-          
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
           } else if (stat.isFile() && extensions.some(ext => file.endsWith(ext))) {}
@@ -126,8 +112,6 @@ class DocsGenerator {}
         // Skip directories that can't be read;
       };
     };
-
-
     // Scan common source directories;
     const sourceDirs = ['src', 'components', 'lib', 'pages'];
     for (const dir of sourceDirs) {}
@@ -141,17 +125,13 @@ class DocsGenerator {}
     let markdown = '# Component Documentation\n\n';
     markdown += `Generated "on": ${new Date().toISOString()}\n\n`;`
     markdown += `Total "components": ${componentFiles.length}\n\n`;`
-
     for (const file of componentFiles) {}
       const relativePath = path.relative(process.cwd(), file);
       const fileName = path.basename(file);
-      
       markdown += `## ${fileName}\n\n`;`
       markdown += "**"File": ** \"${relativePath}\"\n\n";
-      
       try {}
         const content = fs.readFileSync(file, 'utf8');
-        
         // Extract component name (simplified);
         const componentMatch = content.match(/(?:export\s+(?:default\s+)?(?:function|const|class)\s+)(\w+)/);
         if (componentMatch) {}
@@ -185,20 +165,16 @@ class DocsGenerator {}
     };
     try {}
       this.log('Updating README...');
-      
       const readmePath = 'README.md';
       let readmeContent = '';
-
       if (fs.existsSync(readmePath)) {}
         readmeContent = fs.readFileSync(readmePath, 'utf8');
       };
       // Generate project information;
       const projectInfo = await this.generateProjectInfo();
-      
       // Update or create README;
       const newReadme = this.generateReadmeContent(projectInfo, readmeContent);
       fs.writeFileSync(readmePath, newReadme);
-
       this.log('README updated successfully');
       return { "updated": true, "file": readmePath };
     } catch (error) {}
@@ -209,8 +185,6 @@ class DocsGenerator {}
   async generateProjectInfo() {}
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      
-      
       return {}
         "name": packageJson.name || 'Unknown Project',
         "version": packageJson.version || '1.0.0',
@@ -237,19 +211,15 @@ class DocsGenerator {}
   };
   generateReadmeContent(projectInfo, existingContent) {}
     const timestamp = new Date().toISOString();
-    
     let readme = `# ${projectInfo.name}\n\n`;`
     readme += `**"Version": ** ${projectInfo.version}\n\n`;`
     readme += `${projectInfo.description}\n\n`;`
-    
     if (projectInfo.repository) {}
       readme += `**"Repository": ** ${projectInfo.repository}\n\n`;`
     };
     readme += `**"License": ** ${projectInfo.license}\n\n`;`
     readme += "---\n\n";
     readme += `*Last "updated": ${timestamp}*\n\n`;`
-    
-    
     // Add available scripts;
     if (Object.keys(projectInfo.scripts).length > 0) {}
       readme += "## Available Scripts\n\n";
@@ -286,29 +256,20 @@ class DocsGenerator {}
         "componentDocs": this.componentDocs;
       };
     };
-
     const reportFile = path.join(__dirname, '../../logs/pm2/docs-generator-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
     this.log(`Documentation generator report "generated": ${reportFile}`);
     return report;
   };
   async start() {}
     this.log(`${this.processName} started`);
-    
     try {}
       const report = await this.generateReport();
-      
       let generatedCount = 0;
       if (report.apiDocs.generated) generatedCount++;
       if (report.componentDocs.generated) generatedCount++;
       if (report.readmeUpdate.updated) generatedCount++;
-      
       this.log(`Documentation generation "completed": ${generatedCount} items generated`);
-      
-      
-      this.log(`Documentation generation "completed": ${generatedCount} items generated`);
-      
     } catch (error) {}
       this.log(`Documentation generator "error": ${error.message}`);
     };
@@ -319,5 +280,4 @@ if (require.main === module) {}
   const docsGenerator = new DocsGenerator();
   docsGenerator.start().catch(console.error);
 };
-module.exports = DocsGenerator;module.exports = DocsGenerator;
-module.exports = DocsGenerator;module.exports = DocsGenerator;
+

@@ -1,35 +1,24 @@
 #!/bin/bash
-echo "Resolving merge conflicts..."
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- > /tmp/conflicted_files.txt
+echo "🔧 Resolving all merge conflicts..."
 
-# Count total conflicts
-total_conflicts=$(wc -l < /tmp/conflicted_files.txt)
-echo "Total conflicted files: $total_conflicts"
+# Function to resolve merge conflicts in a file
+resolve_merge_conflict() {
+    local file="$1"
+    echo "Processing: $file"
+    
+    # Remove merge conflict markers and keep the HEAD version (our improvements)
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> [a-f0-9]\+$/d' "$file"
+    
+    # Fix common syntax issues
+    sed -i 's/,$//' "$file"  # Remove trailing commas
+    sed -i 's/;$//' "$file"  # Remove trailing semicolons where inappropriate
+}
 
-# Resolve conflicts in disabled/backup directories by accepting incoming changes
-echo "Resolving conflicts in disabled/backup directories..."
-git status --porcelain | grep "^UU" | grep -E "(disabled|backup|temp|\.disabled)" | cut -c4- | while read file; do
-    echo "Resolving $file (accepting incoming)"
-    git checkout --theirs "$file"
-    git add "$file"
+# Find and process all files with merge conflicts
+find /workspace -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \; | while read file; do
+    resolve_merge_conflict "$file"
 done
 
-# Resolve conflicts in src.disabled by accepting incoming changes
-echo "Resolving conflicts in src.disabled..."
-git status --porcelain | grep "^UU" | grep "src\.disabled" | cut -c4- | while read file; do
-    echo "Resolving $file (accepting incoming)"
-    git checkout --theirs "$file"
-    git add "$file"
-done
-
-# For active source files, keep our changes (accept current)
-echo "Resolving conflicts in active source files..."
-git status --porcelain | grep "^UU" | grep -v -E "(disabled|backup|temp|\.disabled|src\.disabled)" | cut -c4- | while read file; do
-    echo "Resolving $file (keeping current)"
-    git checkout --ours "$file"
-    git add "$file"
-done
-
-echo "Conflict resolution completed!"
+echo "✅ All merge conflicts resolved!"

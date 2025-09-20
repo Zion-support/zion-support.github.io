@@ -1,3 +1,4 @@
+console.log("MCP client integration placeholder");
 #!/usr/bin/env node
 /**
  * MCP Client Integration

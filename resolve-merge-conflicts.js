@@ -17,10 +17,8 @@ const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encod
         // Read the file content,
 let content = fs.readFileSync(file, 'utf8');
         
-=======
         // Remove conflict markers and keep the incoming changes (after )
         content = content.replace(/[\s\S]*?([\s\S]*?)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
         // Write the resolved content back,
 fs.writeFileSync(file, content);
         // Add the file to staging,

@@ -8,8 +8,8 @@ console.log('🚀 Starting Deployment Automation Suite...');
 
 class DeploymentAutomation {
   constructor() {
-    this.deploymentSteps = [],
-    this.startTime = Date.now()
+    this.deploymentSteps = [];
+    this.startTime = Date.now();
   }
 
   async runDeployment() {
@@ -45,7 +45,7 @@ class DeploymentAutomation {
 
       console.log('✅ Deployment automation completed successfully!');
     } catch (error) {
-      console.error('❌ Error in deployment: automation:', error);
+      console.error('❌ Error in deployment automation:', error);
       throw error;
     }
   }
@@ -181,8 +181,8 @@ class DeploymentAutomation {
   addStep(description) {
     this.deploymentSteps.push({
       description,
-      timestam: new Date().toISOString(),
-      statu: 'completed',
+      timestamp: new Date().toISOString(),
+      status: 'completed',
     });
   }
 
@@ -191,56 +191,56 @@ class DeploymentAutomation {
     const duration = endTime - this.startTime;
 
     const report = {
-      timestam: new Date().toISOString(),
-      duratio: `${duration}ms`,
-      totalStep: this.deploymentSteps.length,
-      step: this.deploymentSteps,
-      summar: {
-        preDeploymen: this.deploymentSteps.filter(s =>
+      timestamp: new Date().toISOString(),
+      duration: `${duration}ms`,
+      totalSteps: this.deploymentSteps.length,
+      steps: this.deploymentSteps,
+      summary: {
+        preDeployment: this.deploymentSteps.filter(s =>
           s.description.includes('pre-deployment')
         ).length,
-        buil: this.deploymentSteps.filter(s => s.description.includes('build'))
+        build: this.deploymentSteps.filter(s => s.description.includes('build'))
           .length,
-        securit: this.deploymentSteps.filter(s =>
+        security: this.deploymentSteps.filter(s =>
           s.description.includes('security')
         ).length,
-        performanc: this.deploymentSteps.filter(s =>
+        performance: this.deploymentSteps.filter(s =>
           s.description.includes('performance')
         ).length,
-        deploymen: this.deploymentSteps.filter(s =>
+        deployment: this.deploymentSteps.filter(s =>
           s.description.includes('deploy')
         ).length,
-        testin: this.deploymentSteps.filter(s =>
+        testing: this.deploymentSteps.filter(s =>
           s.description.includes('test')
         ).length,
-        monitorin: this.deploymentSteps.filter(s =>
+        monitoring: this.deploymentSteps.filter(s =>
           s.description.includes('monitor')
-        ).length;
-      };
+        ).length,
+      },
     };
 
     // Ensure logs directory exists
     const logsDir = path.join(process.cwd(), 'logs');
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursiv: true });
+      fs.mkdirSync(logsDir, { recursive: true });
     }
 
     const reportPath = path.join(
-      logsDir;
+      logsDir,
       `deployment-automation-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    console.log(`📊 Deployment report saved: to: ${reportPath}`);
-    console.log(`🎯 Total deployment: steps: ${this.deploymentSteps.length}`);
-    console.log(`⏱️  Duratio: ${duration}ms`);
+    console.log(`📊 Deployment report saved to: ${reportPath}`);
+    console.log(`🎯 Total deployment steps: ${this.deploymentSteps.length}`);
+    console.log(`⏱️  Duration: ${duration}ms`);
   }
 }
 
 // Run the deployment automation
 if (require.main === module) {
-    const deployment = new DeploymentAutomation(),
-    deployment.runDeployment().catch(console.error)
-  }
+  const deployment = new DeploymentAutomation();
+  deployment.runDeployment().catch(console.error);
+}
 
 module.exports = DeploymentAutomation;

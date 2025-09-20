@@ -2,114 +2,97 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const glob = require('glob');
 
-function findFilesWithSyntaxErrors() {
-  const files = [];
+// Comprehensive syntax error patterns to fix
+const fixes = [
+  // Fix double arrow functions and parentheses
+  { pattern: /=\s*\(\)\s*\(\)\s*=>/g, replacement: '= () =>' },
+  { pattern: /=\s*\(\)\s*\(\)\s*{/g, replacement: '= () => {' },
+  { pattern: /\(\)\s*\(\)\s*=>/g, replacement: '() =>' },
+  { pattern: /\(\)\s*\(\)\s*{/g, replacement: '() => {' },
   
-  function walkDir(dir) {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other directories
-        if (!['node_modules', '.next', '.git', 'dist', 'out'].includes(item)) {
-          walkDir(fullPath);
-        }
-      } else if (item.match(/\.(ts|tsx|js|jsx)$/)) {
-        files.push(fullPath);
-      }
-    }
-  }
+  // Fix function parameter syntax errors
+  { pattern: /\)\s*\(\)\s*=>/g, replacement: ') =>' },
+  { pattern: /\)\s*\(\)\s*{/g, replacement: ') => {' },
   
-  walkDir('/workspace');
-  return files;
-}
+  // Fix object destructuring with default values
+  { pattern: /{\s*([^}]+)\s*}\s*\(\)\s*=>/g, replacement: '({ $1 }) =>' },
+  { pattern: /{\s*([^}]+)\s*}\s*\(\)\s*{/g, replacement: '({ $1 }) => {' },
+  
+  // Fix useEffect and other hooks
+  { pattern: /useEffect\(\(\)\s*\(\)\s*=>/g, replacement: 'useEffect(() =>' },
+  { pattern: /useState\(\(\)\s*\(\)\s*=>/g, replacement: 'useState(() =>' },
+  { pattern: /useCallback\(\(\)\s*\(\)\s*=>/g, replacement: 'useCallback(() =>' },
+  { pattern: /useMemo\(\(\)\s*\(\)\s*=>/g, replacement: 'useMemo(() =>' },
+  
+  // Fix arrow function declarations
+  { pattern: /const\s+(\w+)\s*=\s*\(\)\s*\(\)\s*=>/g, replacement: 'const $1 = () =>' },
+  { pattern: /const\s+(\w+)\s*=\s*\(\)\s*\(\)\s*{/g, replacement: 'const $1 = () => {' },
+  
+  // Fix class method declarations
+  { pattern: /(\w+)\s*=\s*\(\)\s*\(\)\s*=>/g, replacement: '$1 = () =>' },
+  { pattern: /(\w+)\s*=\s*\(\)\s*\(\)\s*{/g, replacement: '$1 = () => {' },
+  
+  // Fix semicolons in wrong places
+  { pattern: /;\s*$/gm, replacement: '' },
+  { pattern: /{\s*;/g, replacement: '{' },
+  { pattern: /;\s*}/g, replacement: '}' },
+  { pattern: /;\s*,/g, replacement: ',' },
+  { pattern: /,\s*;/g, replacement: ',' },
+  
+  // Fix double braces
+  { pattern: /{{/g, replacement: '{' },
+  { pattern: /}}/g, replacement: '}' },
+  
+  // Fix missing commas in object literals
+  { pattern: /}\s*{/g, replacement: '}, {' },
+  { pattern: /}\s*queries:/g, replacement: '}, queries:' },
+  { pattern: /}\s*mutations:/g, replacement: '}, mutations:' },
+  
+  // Fix function declarations
+  { pattern: /function\s*{/g, replacement: 'function() {' },
+  { pattern: /=>\s*{/g, replacement: '() => {' },
+  
+  // Fix interface declarations
+  { pattern: /interface\s+\w+\s*{;/g, replacement: 'interface $1 {' },
+  
+  // Fix missing commas in interface properties
+  { pattern: /(\w+):\s*([^,}]+)\s*(\w+):/g, replacement: '$1: $2,\n  $3:' },
+  
+  // Fix missing commas in type definitions
+  { pattern: /(\w+)\s*(\w+)\s*(\w+):/g, replacement: '$1,\n  $2: $3:' },
+];
 
-function fixSyntaxErrorsInFile(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix import statements with trailing commas
-    const importFix = content.replace(/import\s+([^;]+),\s*$/gm, 'import $1;');
-    if (importFix !== content) {
-      content = importFix;
-      modified = true;
-    }
-    
-    // Fix export statements with trailing commas
-    const exportFix = content.replace(/export\s+([^;]+),\s*$/gm, 'export $1;');
-    if (exportFix !== content) {
-      content = exportFix;
-      modified = true;
-    }
-    
-    // Fix type definitions with missing commas
-    const typeFix = content.replace(/export type (\w+) = \{/g, 'export type $1 = {');
-    if (typeFix !== content) {
-      content = typeFix;
-      modified = true;
-    }
-    
-    // Fix missing semicolons after statements
-    const semicolonFix = content.replace(/([^;}])\s*$/gm, '$1;');
-    if (semicolonFix !== content) {
-      content = semicolonFix;
-      modified = true;
-    }
-    
-    // Fix specific syntax errors
-    const fixes = [
-      // Fix missing comma in type definitions
-      { pattern: /Omit<Toast 'id'>/g, replacement: "Omit<Toast, 'id'>" },
-      // Fix missing semicolons in imports
-      { pattern: /import\s+([^;]+),\s*$/gm, replacement: 'import $1;' },
-      // Fix missing semicolons in exports
-      { pattern: /export\s+([^;]+),\s*$/gm, replacement: 'export $1;' },
-      // Fix missing semicolons after statements
-      { pattern: /(\w+)\s*$/gm, replacement: '$1;' },
-    ];
+    let originalContent = content;
     
     fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
+      content = content.replace(fix.pattern, fix.replacement);
     });
     
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed ${filePath}`);
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function main() {
-  console.log('🔧 Starting comprehensive syntax error fix...');
-  
-  const files = findFilesWithSyntaxErrors();
-  console.log(`Found ${files.length} files to check`);
-  
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    if (fixSyntaxErrorsInFile(file)) {
-      fixedCount++;
-    }
-  }
-  
-  console.log(`🎉 Fixed syntax errors in ${fixedCount} files`);
-}
+// Find all TypeScript/JavaScript files in src directory
+const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
 
-main();
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);

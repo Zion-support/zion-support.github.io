@@ -1,338 +1,252 @@
-<<<<<<< HEAD
-export const real2036AIServices = null;
-=======
 export const real2036AIServices = [
   {
-    id: 'ai-emotion-intelligence-platform'
-    name: 'AI Emotion Intelligence Platform'
-    tagline: 'Advanced emotional AI understanding'
-    description:
-      'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.'
-    price: '$3,999'
-    period: 'month'
-      'Emotion recognition'
-      'Sentiment analysis'
-      'Emotional response generation'
-      'Emotional intelligence training'
-      'Multi-modal emotion detection'
-      'Emotional pattern analysis'
-    ]
-    popular: true
-    category: 'Emotional AI'
-    icon: '😊🤖'
-    marketPrice: '$5,000-8,000/month'
-    benefits: [
-      'Enhanced customer experience'
-      'Better emotional understanding'
-      'Improved human-AI interaction'
-      'Emotional intelligence development'
-    ]
-    useCases: [
-      'Customer service'
-      'Mental health support'
-      'Education technology'
-      'Human resources'
-    ]
-  }
-  {
-    id: 'ai-creativity-orchestrator'
-    name: 'AI Creativity Orchestrator'
-    tagline: 'Intelligent creative collaboration'
-    description:
-      'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.'
-    price: '$2,999'
-    period: 'month'
+    id: 'ai-emotion-intelligence-platform',
+    name: 'AI Emotion Intelligence Platform',
+    tagline: 'Advanced emotional AI understanding',
+    description: 'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
+    price: '$3,999',
+    period: 'month',
     features: [
-      'Creative idea generation'
-      'Workflow orchestration'
-      'Artistic collaboration tools'
-      'Creative process optimization'
-      'Innovation management'
-      'Creative analytics'
-    ]
-    popular: true
-    category: 'Creative AI'
-    icon: '🎨🤖'
-    marketPrice: '$4,000-7,000/month'
+      'Emotion recognitionSentiment analysis',
+      'Emotional response generationEmotional intelligence training',
+      'Multi-modal emotion detectionEmotional pattern analysis'
+    ],
+    popular: true,
+    category: 'Emotional AI',
+    icon: '😊🤖',
+    marketPrice: '$5,000-8,000/month',
     benefits: [
-      'Enhanced creativity'
-      'Faster innovation cycles'
-      'Better collaboration'
-      'Creative process optimization'
-    ]
+      'Enhanced customer experienceBetter emotional understanding',
+      'Improved human-AI interactionEmotional intelligence development'
+    ],
     useCases: [
-      'Marketing campaigns'
-      'Product design'
-      'Content creation'
-      'Research and development'
+      'Customer serviceMental health support',
+      'Education technologyHuman resources'
     ]
-  }
+  },
   {
-    id: 'ai-dream-interpreter-platform'
-    name: 'AI Dream Interpreter Platform'
-    tagline: 'Intelligent dream analysis'
-    description:
-      'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.'
-    price: '$1,999'
-    period: 'month'
+    id: 'ai-creativity-orchestrator',
+    name: 'AI Creativity Orchestrator',
+    tagline: 'Intelligent creative collaboration',
+    description: 'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.',
+    price: '$2,999',
+    period: 'month',
     features: [
-      'Dream pattern analysis'
-      'Psychological interpretation'
-      'Symbolic analysis'
-      'Dream journaling'
-      'Pattern recognition'
-      'Psychological insights'
-    ]
-    popular: false
-    category: 'Psychological AI'
-    icon: '💭🤖'
-    marketPrice: '$3,000-5,000/month'
+      'Creative idea generationWorkflow orchestration',
+      'Artistic collaboration toolsCreative process optimization',
+      'Innovation managementCreative analytics'
+    ],
+    popular: true,
+    category: 'Creative AI',
+    icon: '🎨🤖',
+    marketPrice: '$4,000-7,000/month',
     benefits: [
-      'Dream understanding'
-      'Psychological insights'
-      'Self-reflection tools'
-      'Mental health awareness'
-    ]
+      'Enhanced creativityFaster innovation cycles',
+      'Better collaborationCreative process optimization'
+    ],
     useCases: [
-      'Mental health support'
-      'Psychological research'
-      'Personal development'
-      'Therapeutic applications'
+      'Marketing campaignsProduct design',
+      'Content creationResearch and development'
     ]
-  }
+  },
   {
-    id: 'ai-content-factory-pro'
-    name: 'AI Content Factory Pro'
-    tagline: 'Professional content generation'
-    description:
-      'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.'
-    price: '$4,999'
-    period: 'month'
+    id: 'ai-dream-interpreter-platform',
+    name: 'AI Dream Interpreter Platform',
+    tagline: 'Intelligent dream analysis',
+    description: 'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.',
+    price: '$1,999',
+    period: 'month',
     features: [
-      'Multi-format content creation'
-      'Brand voice consistency'
-      'Content optimization'
-      'SEO integration'
-      'Content analytics'
-      'Automated publishing'
-    ]
-    popular: true
-    category: 'Content AI'
-    icon: '📝🤖'
-    marketPrice: '$6,000-10,000/month'
+      'Dream pattern analysisPsychological interpretation',
+      'Symbolic analysisDream journaling',
+      'Pattern recognitionPsychological insights'
+    ],
+    popular: false,
+    category: 'Psychological AI',
+    icon: '💭🤖',
+    marketPrice: '$3,000-5,000/month',
     benefits: [
-      '10x faster content creation'
-      'Consistent brand voice'
-      'SEO-optimized content'
-      'Scalable content production'
-    ]
+      'Dream understandingPsychological insights',
+      'Self-reflection toolsMental health awareness'
+    ],
     useCases: [
-      'Marketing content'
-      'Blog writing'
-      'Social media content'
-      'Product descriptions'
+      'Mental health supportPsychological research',
+      'Personal developmentTherapeutic applications'
     ]
-  }
+  },
   {
-    id: 'ai-customer-intelligence-platform'
-    name: 'AI Customer Intelligence Platform'
-    tagline: 'Deep customer understanding'
-    description:
-      'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.'
-    price: '$5,999'
-    period: 'month'
+    id: 'ai-content-factory-pro',
+    name: 'AI Content Factory Pro',
+    tagline: 'Professional content generation',
+    description: 'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.',
+    price: '$4,999',
+    period: 'month',
     features: [
-      'Customer journey mapping'
-      'Predictive analytics'
-      'Personalized recommendations'
-      'Behavior analysis'
-      'Customer segmentation'
-      'Predictive modeling'
-    ]
-    popular: true
-    category: 'Customer AI'
-    icon: '👥🤖'
-    marketPrice: '$7,000-12,000/month'
+      'Multi-format content creationBrand voice consistency',
+      'Content optimizationSEO integration',
+      'Content analyticsAutomated publishing'
+    ],
+    popular: true,
+    category: 'Content AI',
+    icon: '📝🤖',
+    marketPrice: '$6,000-10,000/month',
     benefits: [
-      'Deep customer insights'
-      'Predictive customer behavior'
-      'Personalized experiences'
-      'Improved customer retention'
-    ]
+      '10x faster content creationConsistent brand voice',
+      'SEO-optimized contentScalable content production'
+    ],
     useCases: [
-      'E-commerce optimization'
-      'Customer service'
-      'Marketing campaigns'
-      'Product development'
+      'Marketing contentBlog writing',
+      'Social media contentProduct descriptions'
     ]
-  }
+  },
   {
-    id: 'ai-autonomous-marketing-platform'
-    name: 'AI Autonomous Marketing Platform'
-    tagline: 'Self-optimizing marketing'
-    description:
-      'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.'
-    price: '$6,999'
-    period: 'month'
+    id: 'ai-customer-intelligence-platform',
+    name: 'AI Customer Intelligence Platform',
+    tagline: 'Deep customer understanding',
+    description: 'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.',
+    price: '$5,999',
+    period: 'month',
     features: [
-      'Autonomous campaign management'
-      'Real-time optimization'
-      'Predictive marketing strategies'
-      'Performance maximization'
-      'Automated A/B testing'
-      'ROI optimization'
-    ]
-    popular: true
-    category: 'Marketing AI'
-    icon: '📈🤖'
-    marketPrice: '$8,000-15,000/month'
+      'Customer journey mappingPredictive analytics',
+      'Personalized recommendationsBehavior analysis',
+      'Customer segmentationPredictive modeling'
+    ],
+    popular: true,
+    category: 'Customer AI',
+    icon: '👥🤖',
+    marketPrice: '$7,000-12,000/month',
     benefits: [
-      'Autonomous marketing operations'
-      'Maximum ROI optimization'
-      'Real-time performance improvement'
-      'Scalable marketing automation'
-    ]
+      'Deep customer insightsPredictive customer behavior',
+      'Personalized experiencesImproved customer retention'
+    ],
     useCases: [
-      'Digital advertising'
-      'Email marketing'
-      'Social media marketing'
-      'Content marketing'
+      'E-commerce optimizationCustomer service',
+      'Marketing campaignsProduct development'
     ]
-  }
+  },
   {
-    id: 'ai-autonomous-research-assistant'
-    name: 'AI Autonomous Research Assistant'
-    tagline: 'Intelligent research automation'
-    description:
-      'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.'
-    price: '$3,499'
-    period: 'month'
+    id: 'ai-autonomous-marketing-platform',
+    name: 'AI Autonomous Marketing Platform',
+    tagline: 'Self-optimizing marketing',
+    description: 'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.',
+    price: '$6,999',
+    period: 'month',
     features: [
-      'Automated research workflows'
-      'Data analysis'
-      'Insight generation'
-      'Research automation'
-      'Data synthesis'
-      'Report generation'
-    ]
-    popular: true
-    category: 'Research AI'
-    icon: '🔬🤖'
-    marketPrice: '$4,500-7,000/month'
+      'Autonomous campaign managementReal-time optimization',
+      'Predictive marketing strategiesPerformance maximization',
+      'Automated A/B testingROI optimization'
+    ],
+    popular: true,
+    category: 'Marketing AI',
+    icon: '📈🤖',
+    marketPrice: '$8,000-15,000/month',
     benefits: [
-      'Automated research processes'
-      'Faster insight generation'
-      'Comprehensive data analysis'
-      'Scalable research operations'
-    ]
+      'Autonomous marketing operationsMaximum ROI optimization',
+      'Real-time performance improvementScalable marketing automation'
+    ],
     useCases: [
-      'Market research'
-      'Academic research'
-      'Business intelligence'
-      'Competitive analysis'
+      'Digital advertisingEmail marketing',
+      'Social media marketingContent marketing'
     ]
-  }
+  },
   {
-    id: 'ai-autonomous-decision-engine'
-    name: 'AI Autonomous Decision Engine'
-    tagline: 'Intelligent decision automation'
-    description:
-      'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.'
-    price: '$7,999'
-    period: 'month'
+    id: 'ai-autonomous-research-assistant',
+    name: 'AI Autonomous Research Assistant',
+    tagline: 'Intelligent research automation',
+    description: 'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.',
+    price: '$3,499',
+    period: 'month',
     features: [
-      'Decision automation'
-      'Risk assessment'
-      'Outcome prediction'
-      'Business rule engine'
-      'Predictive modeling'
-      'Decision analytics'
-    ]
-    popular: true
-    category: 'Decision AI'
-    icon: '🎯🤖'
-    marketPrice: '$10,000-18,000/month'
+      'Automated research workflowsData analysis',
+      'Insight generationResearch automation',
+      'Data synthesisReport generation'
+    ],
+    popular: true,
+    category: 'Research AI',
+    icon: '🔬🤖',
+    marketPrice: '$4,500-7,000/month',
     benefits: [
-      'Automated decision making'
-      'Risk reduction'
-      'Faster decision cycles'
-      'Data-driven decisions'
-    ]
+      'Automated research processesFaster insight generation',
+      'Comprehensive data analysisScalable research operations'
+    ],
     useCases: [
-      'Financial decisions'
-      'Operational decisions'
-      'Strategic planning'
-      'Risk management'
+      'Market researchAcademic research',
+      'Business intelligenceCompetitive analysis'
     ]
-  }
+  },
   {
-    id: 'ai-autonomous-ecosystem-manager'
-    name: 'AI Autonomous Ecosystem Manager'
-    tagline: 'Intelligent ecosystem orchestration'
-    description:
-      'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.'
-    price: '$8,999'
-    period: 'month'
+    id: 'ai-autonomous-decision-engine',
+    name: 'AI Autonomous Decision Engine',
+    tagline: 'Intelligent decision automation',
+    description: 'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.',
+    price: '$7,999',
+    period: 'month',
     features: [
-      'Ecosystem mapping'
-      'Relationship management'
-      'Autonomous optimization'
-      'Partnership orchestration'
-      'Integration management'
-      'Ecosystem analytics'
-    ]
-    popular: false
-    category: 'Ecosystem AI'
-    icon: '🌐🤖'
-    marketPrice: '$12,000-20,000/month'
+      'Decision automationRisk assessment',
+      'Outcome predictionBusiness rule engine',
+      'Predictive modelingDecision analytics'
+    ],
+    popular: true,
+    category: 'Decision AI',
+    icon: '🎯🤖',
+    marketPrice: '$10,000-18,000/month',
     benefits: [
-      'Ecosystem optimization'
-      'Partnership maximization'
-      'Integration efficiency'
-      'Scalable ecosystem management'
-    ]
+      'Automated decision makingRisk reduction',
+      'Faster decision cyclesData-driven decisions'
+    ],
     useCases: [
-      'Business partnerships'
-      'Platform ecosystems'
-      'Supply chain management'
-      'Digital transformation'
+      'Financial decisionsOperational decisions',
+      'Strategic planningRisk management'
     ]
-  }
+  },
   {
-    id: 'ai-autonomous-vehicle-ai'
-    name: 'AI Autonomous Vehicle AI'
-    tagline: 'Next-generation vehicle intelligence'
-    description:
-      'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.'
-    price: '$9,999'
-    period: 'month'
+    id: 'ai-autonomous-ecosystem-manager',
+    name: 'AI Autonomous Ecosystem Manager',
+    tagline: 'Intelligent ecosystem orchestration',
+    description: 'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.',
+    price: '$8,999',
+    period: 'month',
     features: [
-      'Autonomous navigation'
-      'Safety monitoring'
-      'Traffic management'
-      'Vehicle optimization'
-      'Predictive maintenance'
-      'Safety systems'
-    ]
-    popular: true
-    category: 'Vehicle AI'
-    icon: '🚗🤖'
-    marketPrice: '$15,000-25,000/month'
+      'Ecosystem mappingRelationship management',
+      'Autonomous optimizationPartnership orchestration',
+      'Integration managementEcosystem analytics'
+    ],
+    popular: false,
+    category: 'Ecosystem AI',
+    icon: '🌐🤖',
+    marketPrice: '$12,000-20,000/month',
     benefits: [
-      'Enhanced vehicle safety'
-      'Autonomous operation'
-      'Traffic optimization'
-      'Predictive maintenance'
-    ]
+      'Ecosystem optimizationPartnership maximization',
+      'Integration efficiencyScalable ecosystem management'
+    ],
     useCases: [
-      'Autonomous vehicles'
-      'Fleet management'
-      'Traffic optimization'
-      'Safety systems'
+      'Business partnershipsPlatform ecosystems',
+      'Supply chain managementDigital transformation'
+    ]
+  },
+  {
+    id: 'ai-autonomous-vehicle-ai',
+    name: 'AI Autonomous Vehicle AI',
+    tagline: 'Next-generation vehicle intelligence',
+    description: 'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.',
+    price: '$9,999',
+    period: 'month',
+    features: [
+      'Autonomous navigationSafety monitoring',
+      'Traffic managementVehicle optimization',
+      'Predictive maintenanceSafety systems'
+    ],
+    popular: true,
+    category: 'Vehicle AI',
+    icon: '🚗🤖',
+    marketPrice: '$15,000-25,000/month',
+    benefits: [
+      'Enhanced vehicle safetyAutonomous operation',
+      'Traffic optimizationPredictive maintenance'
+    ],
+    useCases: [
+      'Autonomous vehiclesFleet management',
+      'Traffic optimizationSafety systems'
     ]
   }
-];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
-    ]
-  }
-];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+],

@@ -1,7 +1,14 @@
-// Accessibility checker utilities,
-export const checkAccessibility = () => {
-  console.log('Checking accessibility...');
+import React from "react";
+
+interface Service {
+id: string;,
+name: string;
 }
-export const validateAriaLabels = () => {
-  console.log('Validating ARIA labels...');
+
+// Accessibility checker utilities,
+export const checkAccessibility: any = () => {;
+console.log('Checking accessibility...');
+}
+export const validateAriaLabels: any = () => {;
+console.log('Validating ARIA labels...');
 }
