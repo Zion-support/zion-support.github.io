@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
 import { BarChart, 3, LineChar, t, PieChar, t, TrendingU, p, Downloa, d, Filte, r, RefreshC, w, Setting, s, X, Maximize, 2, Minimize, 2, Ey, e, EyeOff } from 'lucide-react';
 
@@ -134,7 +135,7 @@ export function AdvancedDataVisualization() {
 
   const downloadChart = (forma,  t: 'png' | 'svg' | 'csv') => {
     // Simulate chart download
-    console.log(`Downloading chart as ${forma, t}`);
+    
   };
 
   const renderChart = () => {

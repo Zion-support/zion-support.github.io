@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
 import { motio, n, useInView } from 'framer-motion';
 import { EnhancedLoading } from './EnhancedLoading';

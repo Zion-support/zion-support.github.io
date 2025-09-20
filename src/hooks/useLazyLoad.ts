@@ -93,7 +93,7 @@ export const useLazyComponent = <T extends any>(
           setComponent(() => module.default);
         })
         .catch((error) => {
-          console.error('Failed to load lazy component:', error);
+          
         })
         .finally(() => {
           setIsLoading(false);

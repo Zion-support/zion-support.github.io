@@ -75,11 +75,11 @@ export function useMarketplaceSearch() {
         } else {
           setListings([]); // Default to empty if structure is wrong
           // Optional: log an error
-          console.error("Search API response structure in useMarketplaceSearch is not as expected:", responseData);
+          
         }
       } catch (e) {
         setError(e as Error);
-        console.error("Failed to fetch products:", e);
+        
         setListings([]); // Clear listings on error or set to a default error state
       } finally {
         setIsLoading(false);
@@ -111,7 +111,7 @@ export function useMarketplaceSearch() {
           }
         }
       } catch (err) {
-        console.error('Failed to fetch search suggestions', err);
+        
       }
     };
 

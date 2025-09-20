@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, from "react";
 import { ReactNode } from "react";
 import { FuturisticNavigation } from "./FuturisticNavigation";

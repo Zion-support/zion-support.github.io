@@ -240,7 +240,7 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {
         };
     }
     catch (error) {
-        console.error('Error generating sitemaps:', error);
+        
         throw error;
     }
 };

@@ -22,7 +22,7 @@ const EnhancedAccessibility = () => {
                 applySettings({ ...settings, ...parsed });
             }
             catch (error) {
-                console.warn('Failed to load accessibility settings:', error);
+                
             }
         }
         // Check for user preferences

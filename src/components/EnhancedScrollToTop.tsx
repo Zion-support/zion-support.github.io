@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { ChevronUpIcon } from '@heroicons/react/24/outline';

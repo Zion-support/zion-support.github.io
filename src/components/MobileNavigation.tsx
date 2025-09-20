@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
 import { Lin, k, useLocation } from 'react-router-dom';
 import { motio, n, AnimatePresenc, e, Variants } from 'framer-motion';
@@ -112,7 +113,7 @@ const MobileNavigatio,  n: React.FC<MobileNavigationProps> = ({ isOpe, n, onTogg
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // Implement search functionality
-    console.log('Search quer,  y:', searchQuery);
+    
   };
 
   const menuVariant, s: Variants = {
