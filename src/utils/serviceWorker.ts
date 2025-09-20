@@ -8,48 +8,60 @@ const API_CACHE = 'zion-api-v2.0.0';
 
 // Cache strategies
 const CACHE_STRATEGIES = {
-  STATIC: 'cache-first',DYNAMIC: 'stale-while-revalidate',API: 'network-first',IMAGES: 'cache-first',FONTS: 'cache-first'
+  STATIC: 'cache-first',
+  DYNAMIC: 'stale-while-revalidate',
+  API: 'network-first',
+  IMAGES: 'cache-first',
+  FONTS: 'cache-first'
 };
 // Static assets to cache
 const STATIC_ASSETS = [
-  '//index.html',
-  '/static/js/bundle.js/static/css/main.css',
-  '/manifest.json/favicon.ico',
-  '/logo192.png/logo512.png'
-],
+  '/index.html',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json',
+  '/favicon.ico',
+  '/logo192.png',
+  '/logo512.png'
+];
 
 // Dynamic routes to cache
 const DYNAMIC_ROUTES = [
-  '/about/services',
-  '/contact/ai-services',
-  '/it-services/micro-saas',
-  '/blog/careers'
-],
+  '/about',
+  '/services',
+  '/contact',
+  '/ai-services',
+  '/it-services',
+  '/micro-saas',
+  '/blog',
+  '/careers'
+];
 
 // API endpoints to cache
 const API_ENDPOINTS = [
-  '/api/services/api/contact',
-  '/api/blog/api/careers'
-],
+  '/api/services',
+  '/api/contact',
+  '/api/blog',
+  '/api/careers'
+];
 
 // Install event - cache static assets
 self.addEventListener('install', (event: ExtendableEvent) => {
   event.waitUntil(
     Promise.all([
       caches.open(STATIC_CACHE).then(cache => {
-
-        return cache.addAll(STATIC_ASSETS)
-      });
+        return cache.addAll(STATIC_ASSETS);
+      }),
       caches.open(DYNAMIC_CACHE).then(cache => {
-        console.log('Caching dynamic routes'),
+        console.log('Caching dynamic routes');
         return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`));
       })
     ]).then(() => {
       console.log('Service Worker installed successfully');
       return self.skipWaiting();
     })
-  ),
-}),
+  );
+});
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event: ExtendableEvent) => {
@@ -69,8 +81,8 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
       console.log('Service Worker activated');
       return self.clients.claim();
     })
-  ),
-}),
+  );
+});
 
 // Fetch event - implement caching strategies
 self.addEventListener('fetch', (event: FetchEvent) => {
@@ -79,24 +91,24 @@ self.addEventListener('fetch', (event: FetchEvent) => {
 
   // Skip non-GET requests
   if (request.method !== 'GET') {
-    return,
+    return;
   }
 
   // Handle different types of requests
   if (isStaticAsset(request)) {
-    event.respondWith(cacheFirst(request, STATIC_CACHE)),
+    event.respondWith(cacheFirst(request, STATIC_CACHE));
   } else if (isDynamicRoute(request)) {
-    event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE)),
+    event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE));
   } else if (isAPIRequest(request)) {
-    event.respondWith(networkFirst(request, API_CACHE)),
+    event.respondWith(networkFirst(request, API_CACHE));
   } else if (isImage(request)) {
-    event.respondWith(cacheFirst(request, DYNAMIC_CACHE)),
+    event.respondWith(cacheFirst(request, DYNAMIC_CACHE));
   } else if (isFont(request)) {
-    event.respondWith(cacheFirst(request, STATIC_CACHE)),
+    event.respondWith(cacheFirst(request, STATIC_CACHE));
   } else {
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE)),
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
   }
-}),
+});
 
 // Cache First Strategy
 async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
@@ -245,8 +257,8 @@ self.addEventListener('push', (event: PushEvent) => {
   };
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
-  ),
-}),
+  );
+});
 
 // Notification click handling
 self.addEventListener('notificationclick', (event: NotificationEvent) => {
