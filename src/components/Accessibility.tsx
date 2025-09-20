@@ -108,8 +108,12 @@ export function Accessibility() {
   },
 
   const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {,
-      fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
+    const defaultSettings: AccessibilitySettings = {
+      fontSize: 16,
+      highContrast: false,
+      reducedMotion: false,
+      soundEnabled: true,
+      theme: 'auto'
     };
     setSettings(defaultSettings);
     applySettings(defaultSettings);

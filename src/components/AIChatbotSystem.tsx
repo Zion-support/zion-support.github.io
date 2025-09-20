@@ -78,13 +78,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [messages, autoScroll]),
+  }, [messages, autoScroll]);
 
   // Simulate AI response
   const simulateAIResponse = async (userMessage: string) => {
     setIsTyping(true);
     // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
 
     const responses = [
       {
