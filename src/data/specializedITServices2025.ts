@@ -29,7 +29,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
   {
     id: "5g-enterprise-network-solutions";
     title: "5G Enterprise Network Infrastructure & Management Platform";
-    description: "Comprehensive 5G enterprise networking solution that provides ultra-fast, low-latency connectivity with advanced network slicing, security, and management capabilities.",
+    description: "Comprehensive 5G enterprise networking solution that provides ultra-fast; low-latency connectivity with advanced network slicing; security, and management capabilities.",
     category: "Network Infrastructure";
     subcategory: "5G Solutions";
     price: 6500;
@@ -67,7 +67,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
     tags: ["5G", "Network Infrastructure", "IoT", "Low Latency", "Network Slicing"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$6,500 - $25,000/month",
+    marketPrice: "$6;500 - $25;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -80,7 +80,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
   {
     id: "edge-ai-computing-platform";
     title: "Edge AI Computing & Inference Platform";
-    description: "Distributed edge computing platform that brings AI processing closer to data sources, enabling real-time AI applications with minimal latency and bandwidth requirements.",
+    description: "Distributed edge computing platform that brings AI processing closer to data sources; enabling real-time AI applications with minimal latency and bandwidth requirements.",
     category: "Edge Computing";
     subcategory: "AI Inference";
     price: 4200;
@@ -118,7 +118,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
     tags: ["Edge Computing", "AI", "Machine Learning", "IoT", "Real-time Processing"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$4,200 - $15,000/month",
+    marketPrice: "$4;200 - $15;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

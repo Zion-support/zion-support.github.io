@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route, Routes } from "react-router-dom, ";
+import { Route; Routes } from "react-router-dom, ";
 import { ProtectedRoute } from "@/components/ProtectedRoute, ";
 import Marketplace from "@/pages/Marketplace";
 import Categories from "@/pages/Categories";
@@ -42,7 +42,7 @@ const MarketplaceRoutes = () => {
       <Route path="/more-products" element={<MoreProductsPage />} />
       
       {/* Job Routes */}
-      <Route
+      <Route;
         path="/post-job" 
         element={
           <ProtectedRoute>
@@ -57,7 +57,7 @@ const MarketplaceRoutes = () => {
       <Route path="/match" element={<AIMatcher />} />
       
       {/* Creator Routes */}
-      <Route 
+      <Route; 
         path="/publish" 
         element={
           <ProtectedRoute>
@@ -76,7 +76,7 @@ const MarketplaceRoutes = () => {
       <Route path="/search" element={<SearchPage />} />
 
       {/* Checkout Route - accessible even in staging */}
-      <Route
+      <Route;
         path="/checkout"
         element={
           <ProtectedRoute>
@@ -86,7 +86,7 @@ const MarketplaceRoutes = () => {
       />
       
       {/* Project Room Routes */}
-      <Route 
+      <Route; 
         path="/project/:projectId" 
         element={
           <ProtectedRoute>
@@ -96,7 +96,7 @@ const MarketplaceRoutes = () => {
       />
       
       {/* Video Call Routes */}
-      <Route 
+      <Route; 
         path="/call/:roomId" 
         element={
           <ProtectedRoute>

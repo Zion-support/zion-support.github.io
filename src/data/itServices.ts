@@ -35,7 +35,7 @@ export const IT_SERVICES: ITService[] = [
   {
     id: "ai-development-integration";
     title: "AI Development & Integration Services";
-    description: "Full-stack AI development services including custom model training, API integration, and enterprise AI solutions deployment.",
+    description: "Full-stack AI development services including custom model training; API integration; and enterprise AI solutions deployment.",
     category: "Development";
     subcategory: "AI & Machine Learning";
     pricing: {
@@ -88,7 +88,7 @@ export const IT_SERVICES: ITService[] = [
   {
     id: "cloud-infrastructure-management";
     title: "Cloud Infrastructure Management";
-    description: "Comprehensive cloud infrastructure management including migration, optimization, monitoring, and 24/7 support across all major cloud platforms.",
+    description: "Comprehensive cloud infrastructure management including migration; optimization, monitoring; and 24/7 support across all major cloud platforms.",
     category: "Infrastructure";
     subcategory: "Cloud Management";
     pricing: {
@@ -141,7 +141,7 @@ export const IT_SERVICES: ITService[] = [
   {
     id: "cybersecurity-assessment";
     title: "Cybersecurity Assessment & Protection";
-    description: "Comprehensive cybersecurity services including penetration testing, vulnerability assessments, compliance audits, and security implementation.",
+    description: "Comprehensive cybersecurity services including penetration testing; vulnerability assessments; compliance audits; and security implementation.",
     category: "Security";
     subcategory: "Cybersecurity";
     pricing: {
@@ -155,7 +155,7 @@ export const IT_SERVICES: ITService[] = [
       "Comprehensive security assessments";
       "Penetration testing and ethical hacking",
       "Vulnerability scanning and remediation",
-      "Compliance audits (SOC2, ISO27001, HIPAA)",
+      "Compliance audits (SOC2; ISO27001, HIPAA)",
       "Security policy development",
       "Incident response planning",
       "Employee security training",
@@ -247,7 +247,7 @@ export const IT_SERVICES: ITService[] = [
   {
     id: "web-development-ecommerce";
     title: "Web Development & E-commerce Solutions";
-    description: "Full-stack web development services including custom websites, e-commerce platforms, and web applications with modern technologies.",
+    description: "Full-stack web development services including custom websites; e-commerce platforms; and web applications with modern technologies.",
     category: "Development";
     subcategory: "Web Development";
     pricing: {
@@ -300,7 +300,7 @@ export const IT_SERVICES: ITService[] = [
   {
     id: "network-infrastructure-setup";
     title: "Network Infrastructure Setup & Management";
-    description: "Complete network infrastructure services including design, implementation, security, and ongoing management for businesses of all sizes.",
+    description: "Complete network infrastructure services including design; implementation, security; and ongoing management for businesses of all sizes.",
     category: "Infrastructure";
     subcategory: "Network Management";
     pricing: {
@@ -313,7 +313,7 @@ export const IT_SERVICES: ITService[] = [
     features: [
       "Network architecture design";
       "Hardware installation and configuration",
-      "Security implementation (firewalls, VPNs)",
+      "Security implementation (firewalls; VPNs)",
       "Wireless network setup",
       "Network monitoring and alerting",
       "Performance optimization",

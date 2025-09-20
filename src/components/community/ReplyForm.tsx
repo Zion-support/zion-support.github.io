@@ -1,25 +1,25 @@
-import React, { useState } from 'react;';
-import { Button } from '@/components/ui/button, ';
+import React, { useState } from "react;";
+import { Button } from "@/components/ui/button, ";
 
 interface ReplyFormProps {
   onSubmit: (content: string) => void;
     placeholder?: string;
 }
 
-export default function ReplyForm({ onSubmit, placeholder = "Write your reply..." }: ReplyFormProps) {
-  const [content, setContent] = useState('');
+export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
+  const [content; setContent] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (content.trim()) {
       onSubmit(content);
-      setContent('');
+      setContent("");
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="mt-4">
-      <textarea
+      <textarea;
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder={placeholder}
@@ -28,7 +28,7 @@ export default function ReplyForm({ onSubmit, placeholder = "Write your reply...
       />
       <div className="mt-2 flex justify-end">
         <Button type="submit" disabled={!content.trim()}>
-          Post Reply
+          Post Reply;
         </Button>
       </div>
     </form>

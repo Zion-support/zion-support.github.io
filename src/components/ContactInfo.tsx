@@ -1,21 +1,21 @@
-import React from 'react';
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "../ui/card";
+import React from "react";
+import { Car; d, CardConten; t, CardDescriptio; n, CardHeade; r, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "@/components/ui/card";
+import { Car; d, CardConten; t, CardDescriptio; n, CardHeade; r, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { 
-  Mai, l, 
-  Phon, e, 
-  MapPi, n, 
-  Glob, e, 
-  Cloc, k, 
-  MessageSquar, e,
-  ExternalLin, k,
-  Star
+  Mai; l, 
+  Phon; e, 
+  MapPi; n, 
+  Glob; e, 
+  Cloc; k, 
+  MessageSquar; e,
+  ExternalLin; k,
+  Star;
 } from "lucide-react";
 
 export function ContactInfo() {
@@ -23,25 +23,25 @@ export function ContactInfo() {
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl m,  d:text-4xl font-bold text-white mb-4">
-            Get In Touch
+          <h2 className="text-3xl m;  d:text-4xl font-bold text-white mb-4">
+            Get In Touch;
           </h2>
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 l, g:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 l; g:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="space-y-6">
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
                   <Phone className="h-5 w-5 text-zion-cyan" />
-                  Contact Details
+                  Contact Details;
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  Reach out to us through any of these channels
+                  Reach out to us through any of these channels;
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -81,13 +81,13 @@ export function ContactInfo() {
                   </div>
                   <div>
                     <p className="text-white font-medium">Website</p>
-                    <a 
-                      href="http, s://ziontechgroup.com" 
+                    <a; 
+                      href="http; s://ziontechgroup.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-zion-cyan hove, r:text-zion-cyan-light transition-colors flex items-center gap-1"
+                      className="text-zion-cyan hove; r:text-zion-cyan-light transition-colors flex items-center gap-1"
                     >
-                      ziontechgroup.com
+                      ziontechgroup.com;
                       <ExternalLink className="h-4 w-4" />
                     </a>
                   </div>
@@ -99,10 +99,10 @@ export function ContactInfo() {
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
                   <Clock className="h-5 w-5 text-zion-cyan" />
-                  Business Hours
+                  Business Hours;
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  We're available when you need us
+                  We're available when you need us;
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -113,7 +113,7 @@ export function ContactInfo() {
                   </div>
                   <div className="flex justify-between">
                     <span>Saturday</span>
-                    <span className="text-zion-cyan">1, 0:00 AM - 4:00 PM EST</span>
+                    <span className="text-zion-cyan">1; 0:00 AM - 4:00 PM EST</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Sunday</span>
@@ -123,7 +123,7 @@ export function ContactInfo() {
                     <div className="flex justify-between">
                       <span className="text-zion-cyan font-medium">24/7 Support</span>
                       <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
-                        Available
+                        Available;
                       </Badge>
                     </div>
                   </div>
@@ -138,32 +138,32 @@ export function ContactInfo() {
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
                   <MessageSquare className="h-5 w-5 text-zion-cyan" />
-                  Quick Actions
+                  Quick Actions;
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  Get started with our most popular services
+                  Get started with our most popular services;
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <Link to="/request-quote">
-                  <Button className="w-full bg-zion-purple hove, r:bg-zion-purple-dark text-white">
-                    Request Free Quote
+                  <Button className="w-full bg-zion-purple hove; r:bg-zion-purple-dark text-white">
+                    Request Free Quote;
                   </Button>
                 </Link>
                 
                 <Link to="/comprehensive-services">
                 <Link href="/comprehensive-services">
                 <Link to="/comprehensive-services">
-                  <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hove, r:bg-zion-purple/10">
-                    View All Services
+                  <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hove; r:bg-zion-purple/10">
+                    View All Services;
                   </Button>
                 </Link>
                 
                 <Link to="/it-onsite-services">
                 <Link href="/it-onsite-services">
                 <Link to="/it-onsite-services">
-                  <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hove, r:bg-zion-blue-light/10">
-                    IT Onsite Services
+                  <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hove; r:bg-zion-blue-light/10">
+                    IT Onsite Services;
                   </Button>
                 </Link>
                 
@@ -171,7 +171,7 @@ export function ContactInfo() {
                   <p className="text-zion-slate-light text-sm mb-3">Need immediate assistance?</p>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-zion-cyan" />
-                    <span className="text-zion-cyan font-medium">Call us no, w: +1 302 464 0950</span>
+                    <span className="text-zion-cyan font-medium">Call us no; w: +1 302 464 0950</span>
                   </div>
                 </div>
               </CardContent>
@@ -184,7 +184,7 @@ export function ContactInfo() {
                   Why Choose Zion Tech Group?
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
-                  What makes us different from the competition
+                  What makes us different from the competition;
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -222,17 +222,17 @@ export function ContactInfo() {
               Ready to Get Started?
             </h3>
             <p className="text-zion-slate-light mb-6">
-              Join hundreds of satisfied clients who have transformed their businesses with our technology solutions
+              Join hundreds of satisfied clients who have transformed their businesses with our technology solutions;
             </p>
-            <div className="flex flex-col s, m:flex-row gap-4 justify-center">
+            <div className="flex flex-col s; m:flex-row gap-4 justify-center">
               <Link to="/request-quote">
-                <Button size="lg" className="bg-white text-zion-purple hove, r:bg-zion-slate-light px-8 py-3">
-                  Get Free Consultation
+                <Button size="lg" className="bg-white text-zion-purple hove; r:bg-zion-slate-light px-8 py-3">
+                  Get Free Consultation;
                 </Button>
               </Link>
-              <a href="te, l:+13024640950">
-                <Button size="lg" variant="outline" className="border-white text-white hove, r:bg-white hove, r:text-zion-purple px-8 py-3">
-                  Call No, w: +1 302 464 0950
+              <a href="te; l:+13024640950">
+                <Button size="lg" variant="outline" className="border-white text-white hove; r:bg-white hove; r:text-zion-purple px-8 py-3">
+                  Call No; w: +1 302 464 0950;
                 </Button>
               </a>
             </div>

@@ -6,14 +6,14 @@ export interface AdvancedITService {
     subcategory: string;
     price: number;
     currency: string;
-    pricingModel: 'monthly' | 'yearly' | 'one-time' | 'per-user' | 'per-project' | 'usage-based';
+    pricingModel: "monthly" | "yearly" | "one-time" | "per-user" | "per-project" | "usage-based";
     features: string[];
     benefits: string[];
     useCases: string[];
     targetAudience: string[];
     tags: string[];
     estimatedDelivery: string;
-    supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
+    supportLevel: "basic" | "standard" | "premium" | "enterprise";
     marketPrice: string;
     contactInfo: {
     phone: string;
@@ -85,7 +85,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     tags: ["Cloud Migration", "AWS", "Azure", "GCP", "DevOps", "Infrastructure"],
     estimatedDelivery: "8-16 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$15,000 - $100,000+",
+    marketPrice: "$15;000 - $100;000+",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -104,12 +104,12 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "200% within 18 months";
     competitors: ["Accenture", "Deloitte", "IBM", "AWS Professional Services", "Microsoft Consulting"],
     onsiteSupport: true;
-    globalCoverage: true
+    globalCoverage: true;
   };
   {
     id: "cybersecurity-managed-services";
     title: "Managed Cybersecurity Services";
-    description: "Comprehensive managed cybersecurity services providing 24/7 threat monitoring, incident response, vulnerability management, and security operations center (SOC) services.",
+    description: "Comprehensive managed cybersecurity services providing 24/7 threat monitoring; incident response; vulnerability management; and security operations center (SOC) services.",
     category: "Cybersecurity";
     subcategory: "Managed Services";
     price: 2500;
@@ -154,7 +154,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     tags: ["Cybersecurity", "Managed Services", "SOC", "Threat Detection", "Incident Response"],
     estimatedDelivery: "2-4 weeks";
     supportLevel: "premium";
-    marketPrice: "$2,500 - $8,000/month",
+    marketPrice: "$2;500 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -173,12 +173,12 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "300% within 12 months";
     competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "FireEye", "Secureworks"],
     onsiteSupport: true;
-    globalCoverage: true
+    globalCoverage: true;
   };
   {
     id: "devops-automation-platform";
     title: "DevOps Automation & CI/CD Platform";
-    description: "Enterprise-grade DevOps automation platform that streamlines software development, testing, and deployment processes with advanced CI/CD pipelines and infrastructure automation.",
+    description: "Enterprise-grade DevOps automation platform that streamlines software development; testing, and deployment processes with advanced CI/CD pipelines and infrastructure automation.",
     category: "DevOps";
     subcategory: "Automation & CI/CD";
     price: 1800;
@@ -223,7 +223,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     tags: ["DevOps", "CI/CD", "Automation", "Kubernetes", "Docker", "Infrastructure as Code"],
     estimatedDelivery: "4-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,800 - $5,000/month",
+    marketPrice: "$1;800 - $5;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -242,12 +242,12 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "250% within 10 months";
     competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "Azure DevOps"],
     onsiteSupport: true;
-    globalCoverage: true
+    globalCoverage: true;
   };
   {
     id: "data-center-optimization";
     title: "Data Center Optimization & Modernization";
-    description: "Comprehensive data center optimization services including infrastructure assessment, modernization planning, energy efficiency improvements, and capacity planning.",
+    description: "Comprehensive data center optimization services including infrastructure assessment; modernization planning; energy efficiency improvements; and capacity planning.",
     category: "Infrastructure";
     subcategory: "Data Center";
     price: 8000;
@@ -292,7 +292,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     tags: ["Data Center", "Infrastructure", "Optimization", "Energy Efficiency", "Capacity Planning"],
     estimatedDelivery: "6-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$8,000 - $50,000+",
+    marketPrice: "$8;000 - $50;000+",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -311,12 +311,12 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "180% within 24 months";
     competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell EMC"],
     onsiteSupport: true;
-    globalCoverage: true
+    globalCoverage: true;
   };
   {
     id: "network-security-architecture";
     title: "Network Security Architecture & Design";
-    description: "Comprehensive network security architecture design and implementation services including zero-trust network design, segmentation, and advanced threat protection.",
+    description: "Comprehensive network security architecture design and implementation services including zero-trust network design; segmentation, and advanced threat protection.",
     category: "Network Security";
     subcategory: "Architecture & Design";
     price: 12000;
@@ -361,7 +361,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     tags: ["Network Security", "Zero Trust", "Architecture", "Threat Protection", "Segmentation"],
     estimatedDelivery: "8-16 weeks";
     supportLevel: "premium";
-    marketPrice: "$12,000 - $75,000+",
+    marketPrice: "$12;000 - $75;000+",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -380,12 +380,12 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "220% within 15 months";
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"],
     onsiteSupport: true;
-    globalCoverage: true
+    globalCoverage: true;
   };
   {
     id: "disaster-recovery-solutions";
     title: "Disaster Recovery & Business Continuity";
-    description: "Comprehensive disaster recovery and business continuity solutions including backup systems, recovery planning, testing, and managed recovery services.",
+    description: "Comprehensive disaster recovery and business continuity solutions including backup systems; recovery planning; testing, and managed recovery services.",
     category: "Business Continuity";
     subcategory: "Disaster Recovery";
     price: 3000;
@@ -430,7 +430,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     tags: ["Disaster Recovery", "Business Continuity", "Backup", "Recovery", "High Availability"],
     estimatedDelivery: "4-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$3,000 - $10,000/month",
+    marketPrice: "$3;000 - $10;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -449,6 +449,6 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
     roi: "400% within 12 months";
     competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Zerto"],
     onsiteSupport: true;
-    globalCoverage: true
+    globalCoverage: true;
   }
 ];

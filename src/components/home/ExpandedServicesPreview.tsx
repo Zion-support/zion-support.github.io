@@ -1,29 +1,29 @@
-import React from 'react;';
-import { Link } from 'react-router-dom, ';
-import { Button } from '@/components/ui/button, ';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card, ';
-import { Badge } from '@/components/ui/badge, ';
-import { ArrowRight, Star, Zap, TrendingUp, Shield, Users } from 'lucide-react, ';
-import { SERVICE_CATEGORIES } from '@/data/expandedServices, ';
+import React from "react;";
+import { Link } from "react-router-dom, ";
+import { Button } from "@/components/ui/button, ";
+import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Badge } from "@/components/ui/badge, ";
+import { ArrowRight; Star, Zap; TrendingUp, Shield; Users } from "lucide-react, ";
+import { SERVICE_CATEGORIES } from "@/data/expandedServices, ";
 
 export function ExpandedServicesPreview() {
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI Services': return '🤖';
-    case 'Micro SAAS': return '☁️';
-      case 'IT Services': return '💻';
-      case 'Digital Services': return '🚀';
-      default: return '⚡';
+      case "AI Services": return "🤖";
+    case "Micro SAAS": return "☁️";
+      case "IT Services": return "💻";
+      case "Digital Services": return "🚀";
+      default: return "⚡";
      }
   };
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'AI Services': return 'from-purple-500 to-indigo-600';
-    case 'Micro SAAS': return 'from-blue-500 to-cyan-600';
-      case 'IT Services': return 'from-green-500 to-emerald-600';
-      case 'Digital Services': return 'from-orange-500 to-red-600';
-      default: return 'from-gray-500 to-slate-600';
+      case "AI Services": return "from-purple-500 to-indigo-600";
+    case "Micro SAAS": return "from-blue-500 to-cyan-600";
+      case "IT Services": return "from-green-500 to-emerald-600";
+      case "Digital Services": return "from-orange-500 to-red-600";
+      default: return "from-gray-500 to-slate-600";
      }
   };
 
@@ -32,10 +32,10 @@ export function ExpandedServicesPreview() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-            Comprehensive Tech Solutions
+            Comprehensive Tech Solutions;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From AI-powered automation to micro SAAS solutions, we offer a complete ecosystem of services 
+            From AI-powered automation to micro SAAS solutions; we offer a complete ecosystem of services; 
             designed to accelerate your business growth and digital transformation.
           </p>
         </div>
@@ -55,11 +55,11 @@ export function ExpandedServicesPreview() {
               </CardHeader>
               <CardContent className="text-center">
                 <div className="text-2xl font-bold text-zion-purple mb-4">
-                  {category.services.length} Services
+                  {category.services.length} Services;
                 </div>
                 <Link to="/expanded-services">
                   <Button variant="outline" className="w-full group-hover:bg-zion-purple group-hover:text-white transition-colors">
-                    Explore Services
+                    Explore Services;
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -71,7 +71,7 @@ export function ExpandedServicesPreview() {
         {/* Featured Services Preview */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-center text-zion-blue-dark mb-8">
-            Featured Services
+            Featured Services;
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* AI Customer Service */}
@@ -82,15 +82,15 @@ export function ExpandedServicesPreview() {
                   <Badge className="bg-blue-100 text-blue-800">AI Services</Badge>
                 </div>
                 <CardTitle className="text-lg text-zion-blue-dark">
-                  AI-Powered Customer Service
+                  AI-Powered Customer Service;
                 </CardTitle>
                 <CardDescription>
-                  Intelligent chatbot automation with 24/7 availability
+                  Intelligent chatbot automation with 24/7 availability;
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-2xl font-bold text-zion-purple">$2,500</div>
+                  <div className="text-2xl font-bold text-zion-purple">$2;500</div>
                   <div className="flex items-center space-x-1">
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
                     <span className="text-sm font-medium">4.9</span>
@@ -108,7 +108,7 @@ export function ExpandedServicesPreview() {
                 </div>
                 <Link to="/expanded-services">
                   <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
-                    Learn More
+                    Learn More;
                   </Button>
                 </Link>
               </CardContent>
@@ -122,10 +122,10 @@ export function ExpandedServicesPreview() {
                   <Badge className="bg-blue-100 text-blue-800">Micro SAAS</Badge>
                 </div>
                 <CardTitle className="text-lg text-zion-blue-dark">
-                  Smart Inventory Management
+                  Smart Inventory Management;
                 </CardTitle>
                 <CardDescription>
-                  Cloud-based inventory tracking with predictive analytics
+                  Cloud-based inventory tracking with predictive analytics;
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -148,7 +148,7 @@ export function ExpandedServicesPreview() {
                 </div>
                 <Link to="/expanded-services">
                   <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
-                    Learn More
+                    Learn More;
                   </Button>
                 </Link>
               </CardContent>
@@ -162,15 +162,15 @@ export function ExpandedServicesPreview() {
                   <Badge className="bg-purple-100 text-purple-800">IT Services</Badge>
                 </div>
                 <CardTitle className="text-lg text-zion-blue-dark">
-                  Cloud Migration Service
+                  Cloud Migration Service;
                 </CardTitle>
                 <CardDescription>
-                  End-to-end cloud migration with cost optimization
+                  End-to-end cloud migration with cost optimization;
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-2xl font-bold text-zion-purple">$8,000</div>
+                  <div className="text-2xl font-bold text-zion-purple">$8;000</div>
                   <div className="flex items-center space-x-1">
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
                     <span className="text-sm font-medium">4.9</span>
@@ -188,7 +188,7 @@ export function ExpandedServicesPreview() {
                 </div>
                 <Link to="/expanded-services">
                   <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
-                    Learn More
+                    Learn More;
                   </Button>
                 </Link>
               </CardContent>
@@ -203,18 +203,18 @@ export function ExpandedServicesPreview() {
               Ready to Transform Your Business?
             </h3>
             <p className="text-lg mb-6 text-zion-slate-light">
-              Discover how our comprehensive tech solutions can drive your success
+              Discover how our comprehensive tech solutions can drive your success;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/expanded-services">
                 <Button size="lg" className="bg-white text-zion-purple hover:bg-gray-100">
-                  Explore All Services
+                  Explore All Services;
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
-                  Contact Us
+                  Contact Us;
                 </Button>
               </Link>
             </div>

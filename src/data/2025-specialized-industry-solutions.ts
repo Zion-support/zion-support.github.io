@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface SpecializedIndustryService {
   id: number;
     name: string;
@@ -33,13 +33,13 @@ export interface SpecializedIndustryService {
 }
 
 export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
-  // Healthcare & Biotech Solutions
+  // Healthcare & Biotech Solutions;
   {
     id: 1;
     name: "MedTech AI Platform";
     category: "Healthcare";
     industry: "Biotechnology";
-    description: "Comprehensive AI-powered medical technology platform for diagnostics, drug discovery, and personalized medicine with FDA compliance",
+    description: "Comprehensive AI-powered medical technology platform for diagnostics; drug discovery; and personalized medicine with FDA compliance",
     pricing: "Enterprise";
     price: 899;
     pricingModel: "monthly";
@@ -87,7 +87,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     name: "FinTech Compliance Suite";
     category: "Financial Services";
     industry: "Banking & Finance";
-    description: "Comprehensive financial technology compliance platform with AI-powered risk assessment, regulatory reporting, and fraud detection",
+    description: "Comprehensive financial technology compliance platform with AI-powered risk assessment; regulatory reporting; and fraud detection",
     pricing: "Tiered";
     price: 599;
     pricingModel: "monthly";
@@ -131,13 +131,13 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     industryStandards: ["ISO 20022", "SWIFT", "ACH", "SEPA"]
   },
 
-  // Manufacturing & Industry 4.0
+  // Manufacturing & Industry 4.0;
   {
     id: 3;
     name: "Smart Factory Hub";
     category: "Manufacturing";
     industry: "Industry 4.0";
-    description: "Intelligent manufacturing platform with IoT sensors, predictive maintenance, and AI-powered quality control for Industry 4.0 transformation",
+    description: "Intelligent manufacturing platform with IoT sensors; predictive maintenance; and AI-powered quality control for Industry 4.0 transformation",
     pricing: "Usage-based";
     price: 0.10;
     pricingModel: "per device per day";
@@ -181,13 +181,13 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     industryStandards: ["OPC UA", "MQTT", "Modbus", "Ethernet/IP"]
   },
 
-  // Retail & E-commerce Solutions
+  // Retail & E-commerce Solutions;
   {
     id: 4;
     name: "OmniChannel Retail AI";
     category: "Retail";
     industry: "E-commerce";
-    description: "AI-powered omnichannel retail platform with personalized recommendations, inventory optimization, and seamless customer experience across all channels",
+    description: "AI-powered omnichannel retail platform with personalized recommendations; inventory optimization; and seamless customer experience across all channels",
     pricing: "Revenue-based";
     price: 2.5;
     pricingModel: "percentage of revenue";
@@ -231,13 +231,13 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     industryStandards: ["REST APIs", "GraphQL", "OAuth 2.0", "Webhooks"]
   },
 
-  // Education & EdTech
+  // Education & EdTech;
   {
     id: 5;
     name: "Adaptive Learning Platform";
     category: "Education";
     industry: "EdTech";
-    description: "AI-powered adaptive learning platform with personalized curriculum, real-time assessment, and intelligent tutoring for K-12 and higher education",
+    description: "AI-powered adaptive learning platform with personalized curriculum; real-time assessment; and intelligent tutoring for K-12 and higher education",
     pricing: "Per student";
     price: 15;
     pricingModel: "monthly per student";
@@ -281,13 +281,13 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     industryStandards: ["LTI", "SCORM", "xAPI", "Common Core"]
   },
 
-  // Transportation & Logistics
+  // Transportation & Logistics;
   {
     id: 6;
     name: "Logistics Optimization AI";
     category: "Transportation";
     industry: "Logistics";
-    description: "Intelligent logistics platform with route optimization, demand forecasting, and real-time tracking for supply chain and transportation management",
+    description: "Intelligent logistics platform with route optimization; demand forecasting; and real-time tracking for supply chain and transportation management",
     pricing: "Tiered";
     price: 399;
     pricingModel: "monthly";
@@ -331,13 +331,13 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     industryStandards: ["EDI", "API standards", "GPS protocols", "IoT standards"]
   },
 
-  // Energy & Sustainability
+  // Energy & Sustainability;
   {
     id: 7;
     name: "Green Energy Management";
     category: "Energy";
     industry: "Renewable Energy";
-    description: "AI-powered energy management platform for renewable energy optimization, grid management, and sustainability monitoring",
+    description: "AI-powered energy management platform for renewable energy optimization; grid management; and sustainability monitoring",
     pricing: "Usage-based";
     price: 0.02;
     pricingModel: "per kWh managed";
@@ -381,13 +381,13 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     industryStandards: ["IEC 61850", "DNP3", "Modbus", "OPC UA"]
   },
 
-  // Real Estate & PropTech
+  // Real Estate & PropTech;
   {
     id: 8;
     name: "PropTech Intelligence Suite";
     category: "Real Estate";
     industry: "PropTech";
-    description: "Comprehensive property technology platform with AI-powered market analysis, property valuation, and investment insights",
+    description: "Comprehensive property technology platform with AI-powered market analysis; property valuation; and investment insights",
     pricing: "Tiered";
     price: 299;
     pricingModel: "monthly";
@@ -431,13 +431,13 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     industryStandards: ["RESO", "RETS", "Open Real Estate", "Financial data standards"]
   },
 
-  // Legal & Compliance
+  // Legal & Compliance;
   {
     id: 9;
     name: "LegalTech AI Platform";
     category: "Legal Services";
     industry: "Legal Technology";
-    description: "AI-powered legal technology platform with contract analysis, legal research automation, and compliance monitoring for law firms and legal departments",
+    description: "AI-powered legal technology platform with contract analysis; legal research automation; and compliance monitoring for law firms and legal departments",
     pricing: "Per attorney";
     price: 199;
     pricingModel: "monthly per attorney";
@@ -481,13 +481,13 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     industryStandards: ["Legal XML", "Case law standards", "Document formats", "API standards"]
   },
 
-  // Agriculture & AgTech
+  // Agriculture & AgTech;
   {
     id: 10;
     name: "Precision Agriculture AI";
     category: "Agriculture";
     industry: "AgTech";
-    description: "Intelligent precision agriculture platform with drone monitoring, crop analysis, and AI-powered farming recommendations",
+    description: "Intelligent precision agriculture platform with drone monitoring; crop analysis; and AI-powered farming recommendations",
     pricing: "Per acre";
     price: 2.50;
     pricingModel: "monthly per acre";
@@ -532,7 +532,7 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
   }
 ];
 
-// Utility functions for specialized industry services
+// Utility functions for specialized industry services;
 export const getServicesByIndustry = (industry: string): SpecializedIndustryService[] => {
   return specializedIndustrySolutions2025.filter(service => service.industry === industry);
 };
@@ -554,9 +554,9 @@ export const getServicesByTechnology = (technology: string): SpecializedIndustry
 };
 
 export const getPopularIndustryServices = (limit: number = 6): SpecializedIndustryService[] => {
-  return specializedIndustrySolutions2025.slice(0, limit);
+  return specializedIndustrySolutions2025.slice(0; limit);
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number): SpecializedIndustryService[] => {
+export const getServicesByPriceRange = (minPrice: number; maxPrice: number): SpecializedIndustryService[] => {
   return specializedIndustrySolutions2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };

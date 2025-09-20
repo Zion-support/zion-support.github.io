@@ -6,7 +6,7 @@ export function Toaster() {
   return (
     <HotToaster position="top-right" />
   );
-import React from 'react';
+import React from "react";
 
 export function Toaster() {
   return <div id="toaster" />;

@@ -40,11 +40,11 @@ export interface EmergingTechnologyService2025 {
 }
 
 export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] = [
-  // Quantum Computing as a Service
+  // Quantum Computing as a Service;
   {
     id: "quantum-computing-as-a-service-2025";
     title: "Quantum Computing as a Service (QCaaS)";
-    description: "Enterprise-grade quantum computing platform providing access to quantum processors, quantum algorithms, and hybrid classical-quantum computing solutions for complex optimization problems.",
+    description: "Enterprise-grade quantum computing platform providing access to quantum processors; quantum algorithms; and hybrid classical-quantum computing solutions for complex optimization problems.",
     category: "Quantum Technology";
     subcategory: "Computing Services";
     price: 25000;
@@ -89,7 +89,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     tags: ["Quantum Computing", "Research", "Optimization", "Simulation", "Innovation", "Breakthrough Technology"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$25,000 - $100,000/month",
+    marketPrice: "$25;000 - $100;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -111,13 +111,13 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     trainingIncluded: true;
     maintenanceIncluded: true;
     researchPartnerships: true;
-    pilotPrograms: true
+    pilotPrograms: true;
   };
-  // AI-Powered Autonomous Systems Platform
+  // AI-Powered Autonomous Systems Platform;
   {
     id: "ai-autonomous-systems-platform-2025";
     title: "AI-Powered Autonomous Systems Platform";
-    description: "Next-generation autonomous systems platform that enables businesses to deploy AI-powered autonomous agents for complex decision-making, process automation, and operational optimization.",
+    description: "Next-generation autonomous systems platform that enables businesses to deploy AI-powered autonomous agents for complex decision-making; process automation; and operational optimization.",
     category: "Artificial Intelligence";
     subcategory: "Autonomous Systems";
     price: 8999;
@@ -162,7 +162,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     tags: ["Artificial Intelligence", "Autonomous Systems", "Automation", "Decision Making", "Process Optimization"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$8,999 - $25,000/month",
+    marketPrice: "$8;999 - $25;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -184,13 +184,13 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     trainingIncluded: true;
     maintenanceIncluded: true;
     researchPartnerships: true;
-    pilotPrograms: true
+    pilotPrograms: true;
   };
-  // Blockchain-Based Supply Chain Platform
+  // Blockchain-Based Supply Chain Platform;
   {
     id: "blockchain-supply-chain-platform-2025";
     title: "Blockchain-Based Supply Chain Platform";
-    description: "Revolutionary supply chain platform leveraging blockchain technology for transparent, secure, and efficient supply chain management with real-time tracking and smart contracts.",
+    description: "Revolutionary supply chain platform leveraging blockchain technology for transparent; secure, and efficient supply chain management with real-time tracking and smart contracts.",
     category: "Blockchain & Web3";
     subcategory: "Supply Chain";
     price: 5999;
@@ -235,7 +235,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     tags: ["Blockchain", "Supply Chain", "Smart Contracts", "Transparency", "Traceability", "Compliance"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$5,999 - $18,000/month",
+    marketPrice: "$5;999 - $18;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -257,13 +257,13 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     trainingIncluded: true;
     maintenanceIncluded: true;
     researchPartnerships: true;
-    pilotPrograms: true
+    pilotPrograms: true;
   };
-  // Edge Computing & IoT Platform
+  // Edge Computing & IoT Platform;
   {
     id: "edge-computing-iot-platform-2025";
     title: "Edge Computing & IoT Platform";
-    description: "Advanced edge computing platform that processes data at the source, enabling real-time analytics, autonomous decision-making, and reduced latency for IoT applications.",
+    description: "Advanced edge computing platform that processes data at the source; enabling real-time analytics; autonomous decision-making; and reduced latency for IoT applications.",
     category: "Edge Computing & IoT";
     subcategory: "Platform Services";
     price: 3999;
@@ -308,7 +308,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     tags: ["Edge Computing", "IoT", "Real-time Processing", "AI Inference", "Device Management", "Analytics"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$3,999 - $12,000/month",
+    marketPrice: "$3;999 - $12;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -330,13 +330,13 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     trainingIncluded: true;
     maintenanceIncluded: true;
     researchPartnerships: true;
-    pilotPrograms: true
+    pilotPrograms: true;
   };
-  // AI-Powered Cybersecurity Platform
+  // AI-Powered Cybersecurity Platform;
   {
     id: "ai-cybersecurity-platform-2025";
     title: "AI-Powered Cybersecurity Platform";
-    description: "Next-generation cybersecurity platform that uses artificial intelligence and machine learning to detect, prevent, and respond to cyber threats in real-time with autonomous defense capabilities.",
+    description: "Next-generation cybersecurity platform that uses artificial intelligence and machine learning to detect; prevent, and respond to cyber threats in real-time with autonomous defense capabilities.",
     category: "Cybersecurity";
     subcategory: "AI-Powered Security";
     price: 7999;
@@ -381,7 +381,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     tags: ["Cybersecurity", "Artificial Intelligence", "Threat Detection", "Incident Response", "Compliance"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$7,999 - $25,000/month",
+    marketPrice: "$7;999 - $25;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -403,9 +403,9 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     trainingIncluded: true;
     maintenanceIncluded: true;
     researchPartnerships: true;
-    pilotPrograms: true
+    pilotPrograms: true;
   };
-  // Quantum-Safe Cryptography Platform
+  // Quantum-Safe Cryptography Platform;
   {
     id: "quantum-safe-cryptography-platform-2025";
     title: "Quantum-Safe Cryptography Platform";
@@ -454,7 +454,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     tags: ["Quantum Technology", "Cryptography", "Post-Quantum", "Security", "Compliance", "Future-Proof"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$12,999 - $35,000/month",
+    marketPrice: "$12;999 - $35;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -476,13 +476,13 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     trainingIncluded: true;
     maintenanceIncluded: true;
     researchPartnerships: true;
-    pilotPrograms: true
+    pilotPrograms: true;
   };
-  // AI-Powered Drug Discovery Platform
+  // AI-Powered Drug Discovery Platform;
   {
     id: "ai-drug-discovery-platform-2025";
     title: "AI-Powered Drug Discovery Platform";
-    description: "Revolutionary drug discovery platform that uses artificial intelligence and machine learning to accelerate the identification, design, and optimization of new pharmaceutical compounds.",
+    description: "Revolutionary drug discovery platform that uses artificial intelligence and machine learning to accelerate the identification; design, and optimization of new pharmaceutical compounds.",
     category: "Healthcare Technology";
     subcategory: "Drug Discovery";
     price: 19999;
@@ -527,7 +527,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     tags: ["Healthcare Technology", "Artificial Intelligence", "Drug Discovery", "Pharmaceuticals", "Research", "Innovation"],
     estimatedDelivery: "12-16 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$19,999 - $50,000/month",
+    marketPrice: "$19;999 - $50;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -549,13 +549,13 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     trainingIncluded: true;
     maintenanceIncluded: true;
     researchPartnerships: true;
-    pilotPrograms: true
+    pilotPrograms: true;
   };
-  // Autonomous Vehicle Technology Platform
+  // Autonomous Vehicle Technology Platform;
   {
     id: "autonomous-vehicle-technology-platform-2025";
     title: "Autonomous Vehicle Technology Platform";
-    description: "Advanced autonomous vehicle technology platform that provides the software, sensors, and AI algorithms needed to develop and deploy autonomous vehicles for various applications.",
+    description: "Advanced autonomous vehicle technology platform that provides the software; sensors, and AI algorithms needed to develop and deploy autonomous vehicles for various applications.",
     category: "Autonomous Vehicles";
     subcategory: "Technology Platform";
     price: 15999;
@@ -600,7 +600,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     tags: ["Autonomous Vehicles", "Computer Vision", "Machine Learning", "Robotics", "Transportation", "Innovation"],
     estimatedDelivery: "12-16 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$15,999 - $45,000/month",
+    marketPrice: "$15;999 - $45;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -622,6 +622,6 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
     trainingIncluded: true;
     maintenanceIncluded: true;
     researchPartnerships: true;
-    pilotPrograms: true
+    pilotPrograms: true;
   }
 ];

@@ -1,8 +1,8 @@
 
-import React from 'react;';
+import React from "react;";
 import { Button } from "@/components/ui/button, ";
 import { Card } from "@/components/ui/card, ";
-import { MapPin, Clock, CheckCircle2 } from "lucide-react, ";
+import { MapPin; Clock, CheckCircle2 } from "lucide-react, ";
 import { FavoriteButton } from "@/components/FavoriteButton, ";
 import { useNavigate } from "react-router-dom, ";
 import { TalentProfile } from "@/types/talent, ";
@@ -15,10 +15,10 @@ export interface TalentCardProps {
 }
 
 const TalentCardComponent = ({
-  talent,
+  talent;
   onBook,
-  onMessage,
-  isAuthenticated
+  onMessage;
+  isAuthenticated;
 }: TalentCardProps) => {
   const navigate = useNavigate();
 
@@ -41,11 +41,11 @@ const TalentCardComponent = ({
   };
 
 
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [];
+  // Extract skills - limit to 5 for display;
+  const skills = talent.skills?.slice(0; 5) || [];
 
   return (
-    <Card
+    <Card;
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
       onClick={handleViewProfile}
       tabIndex={0}
@@ -104,8 +104,8 @@ const TalentCardComponent = ({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
-                <span 
+              {skills.map((skill; index) => (
+                <span; 
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
@@ -114,7 +114,7 @@ const TalentCardComponent = ({
               ))}
               {(talent.skills?.length || 0) > 5 && (
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length || 0) - 5} more
+                  +{(talent.skills?.length || 0) - 5} more;
                 </span>
               )}
             </div>
@@ -136,22 +136,22 @@ const TalentCardComponent = ({
           
           <div className="flex items-center gap-2">
             {isAuthenticated && (
-              <Button
+              <Button;
                 size="sm"
                 variant="secondary"
                 onClick={handleBook}
                 className="bg-zion-purple hover: bg-zion-purple-light text-white"
               >
-                Book
+                Book;
               </Button>
             )}
-            <Button
+            <Button;
               size="sm"
               variant="ghost"
               onClick={handleMessage}
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
             >
-              Message
+              Message;
             </Button>
           </div>
         </div>
@@ -161,4 +161,4 @@ const TalentCardComponent = ({
 };
 
 export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
+TalentCard.displayName = "TalentCard";

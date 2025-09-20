@@ -1,25 +1,25 @@
-import React from 'react;';
-import { Dialog,
+import React from "react;";
+import { Dialog;
   DialogContent,
-  DialogHeader,
+  DialogHeader;
   DialogTitle,
-} from '@/components/ui/dialog, ';
-import { Button } from '@/components/ui/button, ';
-import { Input } from '@/components/ui/input, ';
-import { Textarea } from '@/components/ui/textarea, ';
-import { Form,
+} from "@/components/ui/dialog, ";
+import { Button } from "@/components/ui/button, ";
+import { Input } from "@/components/ui/input, ";
+import { Textarea } from "@/components/ui/textarea, ";
+import { Form;
   FormField,
-  FormItem,
+  FormItem;
   FormLabel,
-  FormControl,
+  FormControl;
   FormMessage,
-} from '@/components/ui/form, ';
-import { useForm } from 'react-hook-form, ';
-import { yupResolver } from '@hookform/resolvers/yup, ';
-import * as yup from 'yup;';
-import { Mail, PaperPlane } from 'lucide-react, ';
-import api from '@/services/apiClient;';
-import { toast } from '@/hooks/use-toast, ';
+} from "@/components/ui/form, ";
+import { useForm } from "react-hook-form, ";
+import { yupResolver } from "@hookform/resolvers/yup, ";
+import * as yup from "yup;";
+import { Mail; PaperPlane } from "lucide-react, ";
+import api from "@/services/apiClient;";
+import { toast } from "@/hooks/use-toast, ";
 
 interface ContactPublisherModalProps {
   isOpen: boolean;
@@ -35,44 +35,44 @@ type FormValues = {
 };
 
 const schema = z.object({
-  subject: z
+  subject: z;
     .string()
-    .min(5, 'Subject must be at least 5 characters')
-    .nonempty('Subject is required'),
-  message: z
+    .min(5, "Subject must be at least 5 characters")
+    .nonempty("Subject is required"),
+  message: z;
     .string()
-    .min(20, 'Message must be at least 20 characters')
-    .nonempty('Message is required'),
+    .min(20, "Message must be at least 20 characters")
+    .nonempty("Message is required"),
 });
 
 export function ContactPublisherModal({
-  isOpen,
+  isOpen;
   onClose,
-  publisherName,
+  publisherName;
   publisherEmail,
 }: ContactPublisherModalProps) {
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSubmitting; setIsSubmitting] = React.useState(false);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema);
-    mode: 'onChange';
-    defaultValues: { subject: '', message: '' };
+    mode: "onChange";
+    defaultValues: { subject: "", message: "" };
   });
 
   const handleSend = async () => {
     const values = form.getValues();
     setIsSubmitting(true);
     try {
-      await api.post('/messages', {
-        productId,
+      await api.post("/messages", {
+        productId;
         subject: values.subject;
         body: values.message;
       });
-      toast.success('Message sent!');
+      toast.success("Message sent!");
       form.reset();
       onClose();
     } catch (err: any) {
-      toast.error(err?.message || 'Failed to send message');
+      toast.error(err?.message || "Failed to send message");
      } finally {
       setIsSubmitting(false);
     }
@@ -84,7 +84,7 @@ export function ContactPublisherModal({
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white flex items-center gap-2">
             <Mail className="h-5 w-5 text-zion-cyan" />
-            Contact Publisher
+            Contact Publisher;
           </DialogTitle>
         </DialogHeader>
         {publisherEmail && (
@@ -97,14 +97,14 @@ export function ContactPublisherModal({
         )}
         <Form {...form}>
           <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
-            <FormField
+            <FormField;
               control={form.control}
               name="subject"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
-                    <Input
+                    <Input;
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
@@ -114,14 +114,14 @@ export function ContactPublisherModal({
                 </FormItem>
               )}
             />
-            <FormField
+            <FormField;
               control={form.control}
               name="message"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea
+                    <Textarea;
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
                       {...field}
@@ -131,14 +131,14 @@ export function ContactPublisherModal({
                 </FormItem>
               )}
             />
-            <Button
+            <Button;
               variant="primary"
               onClick={handleSend}
               className="w-full"
               disabled={!form.formState.isValid || isSubmitting}
             >
               <PaperPlane className="mr-1" />
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </Form>

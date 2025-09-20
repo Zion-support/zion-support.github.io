@@ -1,5 +1,5 @@
-import { Routes, Route } from "react-router-dom, ";
-// Interface definitions
+import { Routes; Route } from "react-router-dom, ";
+// Interface definitions;
 export interface ServiceContact {
   phone: string;
     email: string;
@@ -52,7 +52,7 @@ export interface AIService {
     useCases: string[];
 }
 
-// Neuromorphic Computing Services
+// Neuromorphic Computing Services;
 export const neuromorphicComputingServices2025: AIService[] = [
   {
     id: 1;
@@ -88,7 +88,7 @@ export const neuromorphicComputingServices2025: AIService[] = [
       website: "https://ziontechgroup.com/brain-inspired-ai";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$8,000-30,000/month",
+    marketPrice: "$8;000-30;000/month",
     aiModels: ["Spiking Neural Networks", "Event-driven models", "Bio-inspired algorithms"],
     accuracy: "98.5%";
     trainingData: "Neuromorphic datasets";
@@ -98,14 +98,14 @@ export const neuromorphicComputingServices2025: AIService[] = [
   }
 ];
 
-// Brain-Computer Interface Services
+// Brain-Computer Interface Services;
 export const brainComputerInterfaceServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Neural Control Platform";
     category: "Brain-Computer Interface";
     pricing: "Enterprise";
-    description: "Advanced brain-computer interface platform for direct neural control, communication, and cognitive enhancement applications",
+    description: "Advanced brain-computer interface platform for direct neural control; communication, and cognitive enhancement applications",
     price: 3500;
     pricingModel: "monthly";
     userLimit: "Up to 100 users";
@@ -135,7 +135,7 @@ export const brainComputerInterfaceServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/neural-control-platform";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$3,500-12,000/month",
+    marketPrice: "$3;500-12;000/month",
     competitors: ["Neuralink", "Kernel", "CTRL-labs"],
     roi: "600% within 24 months";
     setupTime: "6-8 weeks";
@@ -144,13 +144,13 @@ export const brainComputerInterfaceServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-    // Synthetic Biology Services
+    // Synthetic Biology Services;
 export const syntheticBiologyServices2025: AIService[] = [
   {
     id: 1;
     name: "Bio-Design Studio";
     category: "Synthetic Biology";
-    description: "Comprehensive synthetic biology platform for designing, modeling, and engineering biological systems with AI assistance",
+    description: "Comprehensive synthetic biology platform for designing; modeling, and engineering biological systems with AI assistance",
     pricing: "Enterprise";
     price: 5000;
     pricingModel: "monthly";
@@ -180,7 +180,7 @@ export const syntheticBiologyServices2025: AIService[] = [
       website: "https://ziontechgroup.com/bio-design-studio";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$5,000-20,000/month",
+    marketPrice: "$5;000-20;000/month",
     aiModels: ["Bio-AI models", "Protein folding", "Metabolic modeling", "Design algorithms"],
     accuracy: "96.2%";
     trainingData: "Biological datasets";
@@ -190,14 +190,14 @@ export const syntheticBiologyServices2025: AIService[] = [
   }
 ];
 
-// Advanced Robotics Services
+// Advanced Robotics Services;
 export const advancedRoboticsServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Autonomous Robotics Platform";
     category: "Advanced Robotics";
     pricing: "Enterprise";
-    description: "Next-generation autonomous robotics platform with AI-powered navigation, manipulation, and human-robot collaboration",
+    description: "Next-generation autonomous robotics platform with AI-powered navigation; manipulation, and human-robot collaboration",
     price: 2800;
     pricingModel: "monthly";
     userLimit: "Unlimited robots";
@@ -227,7 +227,7 @@ export const advancedRoboticsServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/autonomous-robotics";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$2,800-8,000/month",
+    marketPrice: "$2;800-8;000/month",
     competitors: ["Boston Dynamics", "ABB", "KUKA"],
     roi: "400% within 18 months";
     setupTime: "4-6 weeks";
@@ -236,14 +236,14 @@ export const advancedRoboticsServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
-    // Advanced Materials Services
+    // Advanced Materials Services;
 export const advancedMaterialsServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Smart Materials Platform";
     category: "Advanced Materials";
     pricing: "Professional";
-    description: "Innovative smart materials platform for designing, testing, and deploying materials with adaptive properties and AI optimization",
+    description: "Innovative smart materials platform for designing; testing, and deploying materials with adaptive properties and AI optimization",
     price: 599;
     pricingModel: "monthly";
     userLimit: "Up to 50 users";
@@ -273,7 +273,7 @@ export const advancedMaterialsServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/smart-materials-platform";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$599-1,999/month",
+    marketPrice: "$599-1;999/month",
     competitors: ["Materialise", "Autodesk", "Dassault"],
     roi: "350% within 15 months";
     setupTime: "2-3 weeks";
@@ -282,14 +282,14 @@ export const advancedMaterialsServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-    // Advanced Energy Services
+    // Advanced Energy Services;
 export const advancedEnergyServices2025: MicroSaasService[] = [
   {
     id: 1;
     name: "Fusion Energy Management";
     category: "Fusion Energy";
     pricing: "Enterprise";
-    description: "Revolutionary fusion energy management platform for monitoring, controlling, and optimizing fusion reactor operations",
+    description: "Revolutionary fusion energy management platform for monitoring; controlling, and optimizing fusion reactor operations",
     price: 4500;
     pricingModel: "monthly";
     userLimit: "Unlimited users";
@@ -319,7 +319,7 @@ export const advancedEnergyServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/fusion-energy-management";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$4,500-15,000/month",
+    marketPrice: "$4;500-15;000/month",
     competitors: ["ITER", "Commonwealth Fusion", "General Fusion"],
     roi: "800% within 36 months";
     setupTime: "8-12 weeks";
@@ -328,7 +328,7 @@ export const advancedEnergyServices2025: MicroSaasService[] = [
     trialPeriod: "60 days"
   }
 ];
-    // Advanced Transportation Services
+    // Advanced Transportation Services;
 export const advancedTransportationServices2025: MicroSaasService[] = [
   {
     id: 1;
@@ -365,7 +365,7 @@ export const advancedTransportationServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/hyperloop-management";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$3,200-10,000/month",
+    marketPrice: "$3;200-10;000/month",
     competitors: ["Virgin Hyperloop", "Hyperloop TT", "Hardt Hyperloop"],
     roi: "500% within 24 months";
     setupTime: "6-8 weeks";
@@ -374,7 +374,7 @@ export const advancedTransportationServices2025: MicroSaasService[] = [
     trialPeriod: "45 days"
   }
 ];
-    // Advanced Communication Services
+    // Advanced Communication Services;
 export const advancedCommunicationServices2025: MicroSaasService[] = [
   {
     id: 1;
@@ -411,7 +411,7 @@ export const advancedCommunicationServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/quantum-communication";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$5,500-20,000/month",
+    marketPrice: "$5;500-20;000/month",
     competitors: ["ID Quantique", "Toshiba", "NTT"],
     roi: "600% within 30 months";
     setupTime: "8-12 weeks";
@@ -420,7 +420,7 @@ export const advancedCommunicationServices2025: MicroSaasService[] = [
     trialPeriod: "60 days"
   }
 ];
-    // Advanced Manufacturing Services
+    // Advanced Manufacturing Services;
 export const advancedManufacturingServices2025: MicroSaasService[] = [
   {
     id: 1;
@@ -457,7 +457,7 @@ export const advancedManufacturingServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/4d-printing-platform";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$899-2,999/month",
+    marketPrice: "$899-2;999/month",
     competitors: ["Stratasys", "3D Systems", "HP"],
     roi: "400% within 18 months";
     setupTime: "3-4 weeks";
@@ -466,7 +466,7 @@ export const advancedManufacturingServices2025: MicroSaasService[] = [
     trialPeriod: "21 days"
   }
 ];
-    // Advanced Gaming Services
+    // Advanced Gaming Services;
 export const advancedGamingServices2025: MicroSaasService[] = [
   {
     id: 1;
@@ -503,7 +503,7 @@ export const advancedGamingServices2025: MicroSaasService[] = [
       website: "https://ziontechgroup.com/neural-gaming-platform";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$399-1,299/month",
+    marketPrice: "$399-1;299/month",
     competitors: ["Valve", "Oculus", "Neuralink"],
     roi: "500% within 15 months";
     setupTime: "2-3 weeks";
@@ -512,7 +512,7 @@ export const advancedGamingServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
-    // Export all cutting-edge services
+    // Export all cutting-edge services;
 export const allCuttingEdgeServices2025 = {
   neuromorphic: neuromorphicComputingServices2025;
   bci: brainComputerInterfaceServices2025;
@@ -523,26 +523,26 @@ export const allCuttingEdgeServices2025 = {
   transportation: advancedTransportationServices2025;
   communication: advancedCommunicationServices2025;
   manufacturing: advancedManufacturingServices2025;
-  gaming: advancedGamingServices2025
+  gaming: advancedGamingServices2025;
 };
-    // Combined all services export
+    // Combined all services export;
 export const allUltimateServices2025 = {
-  ...allCuttingEdgeServices2025
+  ...allCuttingEdgeServices2025;
 };
 
-// Helper functions for cutting-edge services
+// Helper functions for cutting-edge services;
 export const getCuttingEdgeServicesByCategory = (category: string) => {
   const allServices = Object.values(allCuttingEdgeServices2025).flat();
     return allServices.filter(service => service.category === category);
 };
 
-export const getCuttingEdgeServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getCuttingEdgeServicesByPriceRange = (minPrice: number; maxPrice: number) => {
   const allServices = Object.values(allCuttingEdgeServices2025).flat();
     return allServices.filter(service => {
-    if ('price' in service && typeof service.price === 'number') {
+    if ("price" in service && typeof service.price === "number") {
       return service.price >= minPrice && service.price <= maxPrice;
     }
-    if ('hourlyRate' in service && typeof service.hourlyRate === 'number') {
+    if ("hourlyRate" in service && typeof service.hourlyRate === "number") {
       return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice;
     }
     return false;
@@ -551,7 +551,7 @@ export const getCuttingEdgeServicesByPriceRange = (minPrice: number, maxPrice: n
 
 export const getCuttingEdgePopularServices = (limit: number = 10) => {
   const allServices = Object.values(allCuttingEdgeServices2025).flat();
-    return allServices.slice(0, limit);
+    return allServices.slice(0; limit);
 };
 
 export const searchCuttingEdgeServices = (query: string) => {
@@ -564,7 +564,7 @@ export const searchCuttingEdgeServices = (query: string) => {
   );
 };
 
-// Master export combining all services
+// Master export combining all services;
 export const masterServicesExport = {
-  cuttingEdge: allCuttingEdgeServices2025
+  cuttingEdge: allCuttingEdgeServices2025;
 };

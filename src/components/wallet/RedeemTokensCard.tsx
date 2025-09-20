@@ -1,14 +1,14 @@
 
 import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet, ";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
-import { Gift, ArrowRight, ExternalLink } from "lucide-react, ";
-import { Dialog,
+import { Gift; ArrowRight, ExternalLink } from "lucide-react, ";
+import { Dialog;
   DialogContent,
-  DialogDescription,
+  DialogDescription;
   DialogHeader,
-  DialogTitle,
+  DialogTitle;
   DialogTrigger,
 } from "@/components/ui/dialog, ";
 
@@ -17,35 +17,35 @@ type RewardOption = {
     title: string;
     description: string;
     cost: number;
-    type: 'credit' | 'feature' | 'course';
+    type: "credit" | "feature" | "course";
 };
 
 const REWARD_OPTIONS: RewardOption[] = [
   {
-    id: 'premium-week';
-    title: 'Premium Week';
-    description: '7 days of premium features including top placement in search results';
+    id: "premium-week";
+    title: "Premium Week";
+    description: "7 days of premium features including top placement in search results";
     cost: 100;
-    type: 'feature'
+    type: "feature"
   };
   {
-    id: 'resume-review';
-    title: 'AI Resume Review';
-    description: 'Get your resume analyzed and optimized by our AI';
+    id: "resume-review";
+    title: "AI Resume Review";
+    description: "Get your resume analyzed and optimized by our AI";
     cost: 50;
-    type: 'feature'
+    type: "feature"
   };
   {
-    id: 'platform-credit';
-    title: '$5 Platform Credit';
-    description: 'Get $5 credit to use on any paid service';
+    id: "platform-credit";
+    title: "$5 Platform Credit";
+    description: "Get $5 credit to use on any paid service";
     cost: 100;
-    type: 'credit'
+    type: "credit"
   }
 ];
     export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet();
-  const [open, setOpen] = useState(false);
+  const { wallet; spendTokens } = useWallet();
+  const [open; setOpen] = useState(false);
 
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet || wallet.balance < option.cost) return;
@@ -57,7 +57,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Gift aria-hidden="true" className="h-5 w-5" /> Redeem Rewards
+          <Gift aria-hidden="true" className="h-5 w-5" /> Redeem Rewards;
         </CardTitle>
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
       </CardHeader>
@@ -82,7 +82,7 @@ const REWARD_OPTIONS: RewardOption[] = [
                   </div>
                   <div className="flex flex-col items-end gap-1">
                     <span className="text-sm font-bold">{option.cost} ZION$</span>
-                    <Button 
+                    <Button; 
                       size="sm" 
                       variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
                       disabled={!wallet || wallet.balance < option.cost}

@@ -41,13 +41,13 @@ export interface IoTEdgeComputingService {
     predictiveAnalytics: boolean;
 }
 
-// IoT & Edge Computing Services for 2025
+// IoT & Edge Computing Services for 2025;
 export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
   {
     id: 1;
     name: "Smart City IoT Platform";
     category: "Smart Cities";
-    description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated response systems",
+    description: "Comprehensive IoT platform for smart city management with real-time monitoring; predictive analytics; and automated response systems",
     pricing: "Enterprise";
     price: 2500;
     pricingModel: "monthly";
@@ -77,7 +77,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
       website: "https://ziontechgroup.com/smart-city-iot-platform";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$2,500-15,000/month",
+    marketPrice: "$2;500-15;000/month",
     competitors: ["Cisco Smart Cities", "Siemens City Performance", "IBM Smarter Cities", "Microsoft Azure IoT"],
     iotScore: 98;
     useCases: ["Traffic Management", "Environmental Monitoring", "Public Safety", "Energy Management", "Waste Management", "Water Systems"],
@@ -97,13 +97,13 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     industrySpecific: true;
     edgeNative: true;
     aiIntegration: true;
-    predictiveAnalytics: true
+    predictiveAnalytics: true;
   };
   {
     id: 2;
     name: "Industrial IoT Edge AI";
     category: "Industrial IoT";
-    description: "Advanced edge AI platform for industrial IoT with real-time processing, predictive maintenance, and autonomous decision-making",
+    description: "Advanced edge AI platform for industrial IoT with real-time processing; predictive maintenance; and autonomous decision-making",
     pricing: "Enterprise";
     price: 1800;
     pricingModel: "monthly";
@@ -133,7 +133,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
       website: "https://ziontechgroup.com/industrial-iot-edge-ai";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,800-8,000/month",
+    marketPrice: "$1;800-8;000/month",
     competitors: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "Rockwell Automation"],
     iotScore: 97;
     useCases: ["Predictive Maintenance", "Quality Control", "Energy Management", "Asset Management", "Safety Monitoring", "Performance Optimization"],
@@ -153,13 +153,13 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     industrySpecific: true;
     edgeNative: true;
     aiIntegration: true;
-    predictiveAnalytics: true
+    predictiveAnalytics: true;
   };
   {
     id: 3;
     name: "Healthcare IoT Monitor";
     category: "Healthcare IoT";
-    description: "Comprehensive healthcare IoT monitoring platform with patient tracking, medical device management, and health analytics",
+    description: "Comprehensive healthcare IoT monitoring platform with patient tracking; medical device management; and health analytics",
     pricing: "Professional";
     price: 1200;
     pricingModel: "monthly";
@@ -189,7 +189,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
       website: "https://ziontechgroup.com/healthcare-iot-monitor";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,200-6,000/month",
+    marketPrice: "$1;200-6;000/month",
     competitors: ["Philips Healthcare", "GE Healthcare", "Siemens Healthineers", "Medtronic"],
     iotScore: 96;
     useCases: ["Patient Monitoring", "Remote Care", "Medical Device Management", "Health Analytics", "Chronic Disease Management", "Emergency Response"],
@@ -209,13 +209,13 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     industrySpecific: true;
     edgeNative: true;
     aiIntegration: true;
-    predictiveAnalytics: true
+    predictiveAnalytics: true;
   };
   {
     id: 4;
     name: "Retail IoT Analytics";
     category: "Retail IoT";
-    description: "Advanced retail IoT platform with customer behavior analysis, inventory management, and personalized shopping experiences",
+    description: "Advanced retail IoT platform with customer behavior analysis; inventory management; and personalized shopping experiences",
     pricing: "Professional";
     price: 800;
     pricingModel: "monthly";
@@ -245,7 +245,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
       website: "https://ziontechgroup.com/retail-iot-analytics";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$800-4,000/month",
+    marketPrice: "$800-4;000/month",
     competitors: ["Sensormatic", "RetailNext", "ShopperTrak", "Brickstream"],
     iotScore: 95;
     useCases: ["Customer Analytics", "Inventory Management", "Loss Prevention", "Marketing Optimization", "Store Performance", "Customer Experience"],
@@ -265,13 +265,13 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     industrySpecific: true;
     edgeNative: true;
     aiIntegration: true;
-    predictiveAnalytics: true
+    predictiveAnalytics: true;
   };
   {
     id: 5;
     name: "Agricultural IoT Suite";
     category: "Agricultural IoT";
-    description: "Comprehensive agricultural IoT platform with precision farming, crop monitoring, and automated irrigation systems",
+    description: "Comprehensive agricultural IoT platform with precision farming; crop monitoring; and automated irrigation systems",
     pricing: "Professional";
     price: 600;
     pricingModel: "monthly";
@@ -301,7 +301,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
       website: "https://ziontechgroup.com/agricultural-iot-suite";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$600-3,000/month",
+    marketPrice: "$600-3;000/month",
     competitors: ["John Deere", "Climate Corporation", "FarmLogs", "Granular"],
     iotScore: 94;
     useCases: ["Precision Farming", "Crop Monitoring", "Irrigation Management", "Weather Analysis", "Yield Prediction", "Supply Chain"],
@@ -321,13 +321,13 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     industrySpecific: true;
     edgeNative: true;
     aiIntegration: true;
-    predictiveAnalytics: true
+    predictiveAnalytics: true;
   };
   {
     id: 6;
     name: "Energy IoT Grid";
     category: "Energy IoT";
-    description: "Advanced energy IoT platform with smart grid management, renewable energy integration, and demand response optimization",
+    description: "Advanced energy IoT platform with smart grid management; renewable energy integration; and demand response optimization",
     pricing: "Enterprise";
     price: 1500;
     pricingModel: "monthly";
@@ -357,7 +357,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
       website: "https://ziontechgroup.com/energy-iot-grid";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     };
-    marketPrice: "$1,500-8,000/month",
+    marketPrice: "$1;500-8;000/month",
     competitors: ["Schneider Electric", "Siemens Energy", "ABB", "GE Grid Solutions"],
     iotScore: 96;
     useCases: ["Smart Grid Management", "Renewable Integration", "Demand Response", "Grid Monitoring", "Energy Storage", "Customer Engagement"],
@@ -377,7 +377,7 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     industrySpecific: true;
     edgeNative: true;
     aiIntegration: true;
-    predictiveAnalytics: true
+    predictiveAnalytics: true;
   }
 ];
     export default iotEdgeComputingServices2025;

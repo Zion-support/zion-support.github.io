@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const FeaturedListingsSection = () => {
   return (
@@ -12,7 +12,7 @@ export const FeaturedListingsSection = () => {
           <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
             <div className="mb-4">
               <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                AI Services
+                AI Services;
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">AI-Powered Business Intelligence</h3>
@@ -22,16 +22,16 @@ export const FeaturedListingsSection = () => {
                 <span className="text-yellow-400">⭐</span>
                 <span className="text-sm font-medium">4.9</span>
               </div>
-              <div className="text-lg font-bold text-blue-600">$15,000</div>
+              <div className="text-lg font-bold text-blue-600">$15;000</div>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
-              Learn More
+              Learn More;
             </button>
           </div>
           <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
             <div className="mb-4">
               <span className="inline-block bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                Cloud Solutions
+                Cloud Solutions;
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Cloud Infrastructure Setup</h3>
@@ -41,16 +41,16 @@ export const FeaturedListingsSection = () => {
                 <span className="text-yellow-400">⭐</span>
                 <span className="text-sm font-medium">4.8</span>
               </div>
-              <div className="text-lg font-bold text-blue-600">$8,000</div>
+              <div className="text-lg font-bold text-blue-600">$8;000</div>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
-              Learn More
+              Learn More;
             </button>
           </div>
           <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
             <div className="mb-4">
               <span className="inline-block bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                Security
+                Security;
               </span>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Cybersecurity Assessment</h3>
@@ -60,10 +60,10 @@ export const FeaturedListingsSection = () => {
                 <span className="text-yellow-400">⭐</span>
                 <span className="text-sm font-medium">4.9</span>
               </div>
-              <div className="text-lg font-bold text-blue-600">$5,000</div>
+              <div className="text-lg font-bold text-blue-600">$5;000</div>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
-              Learn More
+              Learn More;
             </button>
           </div>
         </div>

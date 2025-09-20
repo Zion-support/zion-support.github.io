@@ -1,6 +1,6 @@
 interface ResourceError {
   url: string;
-  type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
+  type: "script" | "stylesheet" | "image" | "font" | "other";
   error: string;
   timestamp: number;
 }
@@ -8,7 +8,7 @@ interface ResourceError {
 class ResourceMonitor {
   private errors: ResourceError[] = [];
   private isMonitoring = false;
-  private retryAttempts = new Map<string, number>();
+  private retryAttempts = new Map<string; number>();
   private maxRetries = 3;
 
   start() {
@@ -24,36 +24,36 @@ class ResourceMonitor {
   }
 
   private setupErrorListeners() {
-    window.addEventListener('error', (event) => {
+    window.addEventListener("error", (event) => {
       if (event.target && event.target !== window) {
-        this.handleResourceError(event.target as HTMLElement, event.message);
+        this.handleResourceError(event.target as HTMLElement; event.message);
       }
     });
 
-    window.addEventListener('unhandledrejection', (event) => {
-      this.handleResourceError(window, event.reason);
+    window.addEventListener("unhandledrejection", (event) => {
+      this.handleResourceError(window; event.reason);
     });
   }
 
   private setupResourceObservers() {
-    if ('PerformanceObserver' in window) {
+    if ("PerformanceObserver" in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'resource' && entry.duration > 5000) {
+          if (entry.entryType === "resource" && entry.duration > 5000) {
             this.handleSlowResource(entry as PerformanceResourceTiming);
           }
         });
       });
-      observer.observe({ entryTypes: ['resource'] });
+      observer.observe({ entryTypes: ["resource"] });
     }
   }
 
   private monitorCriticalResources() {
     const criticalSelectors = [
-      'script[src]',
-      'link[rel="stylesheet"]',
-      'img[src]',
-      'link[rel="preload"]'
+      "script[src]",
+      "link[rel="stylesheet"]",
+      "img[src]",
+      "link[rel="preload"]"
     ];
 
     criticalSelectors.forEach(selector => {
@@ -70,18 +70,18 @@ class ResourceMonitor {
 
     const resourceType = this.getResourceType(element);
     
-    // Check if resource loads successfully
-    if (element.tagName === 'IMG') {
+    // Check if resource loads successfully;
+    if (element.tagName === "IMG") {
       (element as HTMLImageElement).onerror = () => {
-        this.handleResourceError(element, 'Failed to load image');
+        this.handleResourceError(element, "Failed to load image");
       };
-    } else if (element.tagName === 'SCRIPT') {
+    } else if (element.tagName === "SCRIPT") {
       (element as HTMLScriptElement).onerror = () => {
-        this.handleResourceError(element, 'Failed to load script');
+        this.handleResourceError(element, "Failed to load script");
       };
-    } else if (element.tagName === 'LINK') {
+    } else if (element.tagName === "LINK") {
       (element as HTMLLinkElement).onerror = () => {
-        this.handleResourceError(element, 'Failed to load stylesheet');
+        this.handleResourceError(element, "Failed to load stylesheet");
       };
     }
   }
@@ -93,21 +93,21 @@ class ResourceMonitor {
     return null;
   }
 
-  private getResourceType(element: HTMLElement): ResourceError['type'] {
-    if (element.tagName === 'SCRIPT') return 'script';
-    if (element.tagName === 'LINK' && (element as HTMLLinkElement).rel === 'stylesheet') return 'stylesheet';
-    if (element.tagName === 'IMG') return 'image';
-    if (element.tagName === 'LINK' && (element as HTMLLinkElement).rel === 'preload') return 'font';
-    return 'other';
+  private getResourceType(element: HTMLElement): ResourceError["type"] {
+    if (element.tagName === "SCRIPT") return "script";
+    if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "stylesheet") return "stylesheet";
+    if (element.tagName === "IMG") return "image";
+    if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "preload") return "font";
+    return "other";
   }
 
-  private handleResourceError(element: HTMLElement, error: string) {
-    const url = this.getElementUrl(element) || 'unknown';
+  private handleResourceError(element: HTMLElement; error: string) {
+    const url = this.getElementUrl(element) || "unknown";
     const resourceType = this.getResourceType(element);
     
     const resourceError: ResourceError = {
-      url,
-      type: resourceType,
+      url;
+      type: resourceType;
       error,
       timestamp: Date.now()
     };
@@ -118,7 +118,7 @@ class ResourceMonitor {
 
   private handleSlowResource(entry: PerformanceResourceTiming) {
     const resourceError: ResourceError = {
-      url: entry.name,
+      url: entry.name;
       type: this.getResourceTypeFromUrl(entry.name),
       error: `Slow resource: ${entry.duration}ms`,
       timestamp: Date.now()
@@ -127,19 +127,19 @@ class ResourceMonitor {
     this.errors.push(resourceError);
   }
 
-  private getResourceTypeFromUrl(url: string): ResourceError['type'] {
-    if (url.includes('.js')) return 'script';
-    if (url.includes('.css')) return 'stylesheet';
-    if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) return 'image';
-    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return 'font';
-    return 'other';
+  private getResourceTypeFromUrl(url: string): ResourceError["type"] {
+    if (url.includes(".js")) return "script";
+    if (url.includes(".css")) return "stylesheet";
+    if (url.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) return "image";
+    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return "font";
+    return "other";
   }
 
   private handleRetry(url: string) {
     const attempts = this.retryAttempts.get(url) || 0;
     if (attempts < this.maxRetries) {
-      this.retryAttempts.set(url, attempts + 1);
-      // Implement retry logic here if needed
+      this.retryAttempts.set(url; attempts + 1);
+      // Implement retry logic here if needed;
     }
   }
 
@@ -154,9 +154,9 @@ class ResourceMonitor {
 
   getErrorSummary() {
     const summary = {
-      total: this.errors.length,
-      byType: {} as Record<string, number>,
-      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute
+      total: this.errors.length;
+      byType: {} as Record<string; number>,
+      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
     };
     
     this.errors.forEach(error => {
@@ -167,6 +167,6 @@ class ResourceMonitor {
   }
 }
 
-// Create singleton instance
+// Create singleton instance;
 const resourceMonitor = new ResourceMonitor();
 export default resourceMonitor;

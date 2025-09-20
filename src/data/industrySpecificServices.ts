@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom, ";
+import { Routes; Route } from "react-router-dom, ";
 export interface IndustrySpecificService {
   id: string;
     title: string;
@@ -31,11 +31,11 @@ export interface IndustrySpecificService {
 }
 
 export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
-  // Healthcare Industry Services
+  // Healthcare Industry Services;
   {
     id: "healthcare-ai-diagnostic-suite";
     title: "Healthcare AI Diagnostic Suite";
-    description: "Comprehensive AI-powered diagnostic platform designed specifically for healthcare providers, offering medical image analysis, patient data analytics, and clinical decision support.",
+    description: "Comprehensive AI-powered diagnostic platform designed specifically for healthcare providers; offering medical image analysis; patient data analytics; and clinical decision support.",
     category: "Healthcare Technology";
     subcategory: "Medical Diagnostics";
     price: 4200;
@@ -77,7 +77,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     tags: ["Healthcare", "AI Diagnostics", "Medical Imaging", "Clinical Decision Support", "HIPAA Compliance"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$4,200 - $12,000/month",
+    marketPrice: "$4;200 - $12;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -90,11 +90,11 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     caseStudies: ["Major Hospital Network", "Radiology Practice", "Primary Care Group"]
   },
 
-  // Financial Services Industry
+  // Financial Services Industry;
   {
     id: "financial-ai-risk-management";
     title: "Financial AI Risk Management Platform";
-    description: "Advanced AI-powered risk management platform designed for financial institutions, offering real-time risk assessment, fraud detection, and regulatory compliance monitoring.",
+    description: "Advanced AI-powered risk management platform designed for financial institutions; offering real-time risk assessment; fraud detection; and regulatory compliance monitoring.",
     category: "Financial Technology";
     subcategory: "Risk Management";
     price: 3800;
@@ -136,7 +136,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     tags: ["Financial Technology", "Risk Management", "Fraud Detection", "Compliance", "AI Analytics"],
     estimatedDelivery: "6-10 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$3,800 - $10,000/month",
+    marketPrice: "$3;800 - $10;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -149,11 +149,11 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     caseStudies: ["Major Bank", "Investment Firm", "Insurance Company"]
   },
 
-  // Manufacturing Industry Services
+  // Manufacturing Industry Services;
   {
     id: "manufacturing-ai-optimization";
     title: "Manufacturing AI Optimization Platform";
-    description: "Intelligent manufacturing optimization platform that uses AI to improve production efficiency, quality control, and predictive maintenance for manufacturing operations.",
+    description: "Intelligent manufacturing optimization platform that uses AI to improve production efficiency; quality control; and predictive maintenance for manufacturing operations.",
     category: "Manufacturing Technology";
     subcategory: "Production Optimization";
     price: 2800;
@@ -195,7 +195,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     tags: ["Manufacturing", "AI Optimization", "Predictive Maintenance", "Quality Control", "Production Efficiency"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$2,800 - $7,500/month",
+    marketPrice: "$2;800 - $7;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -208,11 +208,11 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     caseStudies: ["Automotive Manufacturer", "Electronics Producer", "Chemical Plant"]
   },
 
-  // Retail Industry Services
+  // Retail Industry Services;
   {
     id: "retail-ai-customer-intelligence";
     title: "Retail AI Customer Intelligence Platform";
-    description: "Comprehensive AI-powered customer intelligence platform designed for retail businesses, offering personalized marketing, inventory optimization, and customer behavior analytics.",
+    description: "Comprehensive AI-powered customer intelligence platform designed for retail businesses; offering personalized marketing; inventory optimization; and customer behavior analytics.",
     category: "Retail Technology";
     subcategory: "Customer Intelligence";
     price: 1800;
@@ -254,7 +254,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     tags: ["Retail Technology", "Customer Intelligence", "Marketing Automation", "Inventory Optimization", "Personalization"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,800 - $4,500/month",
+    marketPrice: "$1;800 - $4;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -267,11 +267,11 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     caseStudies: ["E-commerce Platform", "Fashion Retailer", "Electronics Store"]
   },
 
-  // Education Industry Services
+  // Education Industry Services;
   {
     id: "education-ai-learning-platform";
     title: "Education AI Learning Platform";
-    description: "Intelligent AI-powered learning platform designed for educational institutions, offering personalized learning experiences, adaptive assessments, and student performance analytics.",
+    description: "Intelligent AI-powered learning platform designed for educational institutions; offering personalized learning experiences; adaptive assessments; and student performance analytics.",
     category: "Education Technology";
     subcategory: "AI Learning";
     price: 2200;
@@ -313,7 +313,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     tags: ["Education Technology", "AI Learning", "Personalized Education", "Student Analytics", "Adaptive Learning"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$2,200 - $6,000/month",
+    marketPrice: "$2;200 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -326,11 +326,11 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     caseStudies: ["University System", "K-12 District", "Corporate Training"]
   },
 
-  // Transportation & Logistics Services
+  // Transportation & Logistics Services;
   {
     id: "transportation-ai-logistics-optimization";
     title: "Transportation AI Logistics Optimization Platform";
-    description: "Advanced AI-powered logistics optimization platform designed for transportation and logistics companies, offering route optimization, fleet management, and supply chain analytics.",
+    description: "Advanced AI-powered logistics optimization platform designed for transportation and logistics companies; offering route optimization; fleet management; and supply chain analytics.",
     category: "Transportation Technology";
     subcategory: "Logistics Optimization";
     price: 3200;
@@ -372,7 +372,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     tags: ["Transportation", "Logistics", "Route Optimization", "Fleet Management", "Supply Chain"],
     estimatedDelivery: "6-10 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$3,200 - $8,500/month",
+    marketPrice: "$3;200 - $8;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -385,11 +385,11 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     caseStudies: ["Major Trucking Company", "E-commerce Logistics", "Warehouse Operator"]
   },
 
-  // Energy Industry Services
+  // Energy Industry Services;
   {
     id: "energy-ai-grid-optimization";
     title: "Energy AI Grid Optimization Platform";
-    description: "Intelligent AI-powered energy grid optimization platform designed for utility companies, offering smart grid management, renewable energy integration, and demand response optimization.",
+    description: "Intelligent AI-powered energy grid optimization platform designed for utility companies; offering smart grid management; renewable energy integration; and demand response optimization.",
     category: "Energy Technology";
     subcategory: "Grid Optimization";
     price: 4500;
@@ -431,7 +431,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     tags: ["Energy Technology", "Grid Optimization", "Renewable Energy", "Smart Grid", "Energy Analytics"],
     estimatedDelivery: "8-12 weeks";
     supportLevel: "enterprise";
-    marketPrice: "$4,500 - $12,000/month",
+    marketPrice: "$4;500 - $12;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -444,11 +444,11 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     caseStudies: ["Major Utility", "Grid Operator", "Renewable Energy Provider"]
   },
 
-  // Real Estate Industry Services
+  // Real Estate Industry Services;
   {
     id: "real-estate-ai-market-intelligence";
     title: "Real Estate AI Market Intelligence Platform";
-    description: "Advanced AI-powered market intelligence platform designed for real estate professionals, offering market analysis, property valuation, and investment opportunity identification.",
+    description: "Advanced AI-powered market intelligence platform designed for real estate professionals; offering market analysis; property valuation; and investment opportunity identification.",
     category: "Real Estate Technology";
     subcategory: "Market Intelligence";
     price: 1600;
@@ -490,7 +490,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     tags: ["Real Estate", "Market Intelligence", "Property Valuation", "Investment Analysis", "Market Analytics"],
     estimatedDelivery: "4-6 weeks";
     supportLevel: "premium";
-    marketPrice: "$1,600 - $4,000/month",
+    marketPrice: "$1;600 - $4;000/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
@@ -503,11 +503,11 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     caseStudies: ["Real Estate Investment Firm", "Property Developer", "Real Estate Agency"]
   },
 
-  // Agriculture Industry Services
+  // Agriculture Industry Services;
   {
     id: "agriculture-ai-precision-farming";
     title: "Agriculture AI Precision Farming Platform";
-    description: "Intelligent AI-powered precision farming platform designed for agricultural operations, offering crop monitoring, yield optimization, and sustainable farming practices.",
+    description: "Intelligent AI-powered precision farming platform designed for agricultural operations; offering crop monitoring; yield optimization; and sustainable farming practices.",
     category: "Agriculture Technology";
     subcategory: "Precision Farming";
     price: 2400;
@@ -549,7 +549,7 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     tags: ["Agriculture Technology", "Precision Farming", "Crop Monitoring", "Yield Optimization", "Sustainable Agriculture"],
     estimatedDelivery: "6-8 weeks";
     supportLevel: "premium";
-    marketPrice: "$2,400 - $6,500/month",
+    marketPrice: "$2;400 - $6;500/month",
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

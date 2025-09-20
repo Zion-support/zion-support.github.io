@@ -25,13 +25,13 @@ export interface ITService {
     support: string;
 }
 
-// Innovative IT Services for 2025
+// Innovative IT Services for 2025;
 export const innovativeITServices2025: ITService[] = [
   {
     id: 1;
     name: "Zero-Trust Network Architecture";
     category: "Cybersecurity";
-    description: "Implementation of zero-trust security architecture with continuous verification, micro-segmentation, and adaptive access controls",
+    description: "Implementation of zero-trust security architecture with continuous verification; micro-segmentation; and adaptive access controls",
     hourlyRate: 150;
     projectRate: 25000;
     features: [
@@ -111,7 +111,7 @@ export const innovativeITServices2025: ITService[] = [
     id: 3;
     name: "AI-Powered DevOps Automation";
     category: "DevOps";
-    description: "Intelligent DevOps automation platform with AI-driven deployment, monitoring, and optimization capabilities",
+    description: "Intelligent DevOps automation platform with AI-driven deployment; monitoring, and optimization capabilities",
     hourlyRate: 125;
     projectRate: 30000;
     features: [
@@ -191,7 +191,7 @@ export const innovativeITServices2025: ITService[] = [
     id: 5;
     name: "Blockchain Infrastructure Services";
     category: "Blockchain";
-    description: "Enterprise blockchain infrastructure design, deployment, and management for secure decentralized applications",
+    description: "Enterprise blockchain infrastructure design; deployment, and management for secure decentralized applications",
     hourlyRate: 175;
     projectRate: 45000;
     features: [
@@ -271,7 +271,7 @@ export const innovativeITServices2025: ITService[] = [
     id: 7;
     name: "AI Infrastructure Optimization";
     category: "AI Infrastructure";
-    description: "Specialized infrastructure optimization for AI workloads, including GPU clusters, distributed training, and inference optimization",
+    description: "Specialized infrastructure optimization for AI workloads; including GPU clusters; distributed training; and inference optimization",
     hourlyRate: 180;
     projectRate: 55000;
     features: [

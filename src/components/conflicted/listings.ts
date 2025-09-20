@@ -5,15 +5,15 @@ export interface ProductListing {
     category: string;
     price: number;
     currency: string;
-    pricingModel: 'one-time' | 'subscription' | 'usage-based' | 'custom';
+    pricingModel: "one-time" | "subscription" | "usage-based" | "custom";
     features: string[];
     tags: string[];
     images?: string[];
   rating?: number;
   reviewCount?: number;
-  availability: 'immediate' | 'within-week' | 'within-month' | 'custom';
+  availability: "immediate" | "within-week" | "within-month" | "custom";
     deliveryTime?: string;
-  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
+  supportLevel: "basic" | "standard" | "premium" | "enterprise";
     compliance?: string[];
   integrations?: string[];
   documentation?: string;

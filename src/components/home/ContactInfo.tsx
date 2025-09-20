@@ -1,18 +1,18 @@
-import React from 'react;';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
+import React from "react;";
+import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Link } from "react-router-dom, ";
-import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground, ";
-import { Phone, 
+import { FuturisticCard; NeonText } from "@/components/ui/FuturisticBackground, ";
+import { Phone; 
   Mail, 
-  MapPin, 
+  MapPin; 
   Globe, 
-  Clock, 
+  Clock; 
   Users, 
-  Shield, 
+  Shield; 
   Zap,
-  ExternalLink
+  ExternalLink;
 } from "lucide-react, ";
 
 export function ContactInfo() {
@@ -39,7 +39,7 @@ export function ContactInfo() {
       title: "Office Location";
       description: "Visit our headquarters for in-person meetings";
       icon: <MapPin className="h-8 w-8 text-zion-cyan" />;
-      value: "364 E Main St STE 1008, Middletown DE 19709",
+      value: "364 E Main St STE 1008; Middletown DE 19709",
       action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
       badge: "Open Mon-Fri";
       color: "#00ffff"
@@ -86,7 +86,7 @@ export function ContactInfo() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight mb-4">
             <NeonText color="#00ffff" glowIntensity="high">
-              Get In Touch
+              Get In Touch;
             </NeonText>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -96,8 +96,8 @@ export function ContactInfo() {
 
         {/* Contact Methods Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {contactMethods.map((method, index) => (
-            <FuturisticCard 
+          {contactMethods.map((method; index) => (
+            <FuturisticCard; 
               key={index} 
               glowColor={method.color}
               intensity="medium"
@@ -129,7 +129,7 @@ export function ContactInfo() {
                 
                 <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <a href={method.action} target="_blank" rel="noopener noreferrer">
-                    <span>Contact via {method.title.split(' ')[0]}</span>
+                    <span>Contact via {method.title.split(" ")[0]}</span>
                     <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </Button>
@@ -146,12 +146,12 @@ export function ContactInfo() {
             </NeonText>
           </h3>
           <p className="text-muted-foreground">
-            Proven track record of delivering exceptional results
+            Proven track record of delivering exceptional results;
           </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {companyStats.map((stat, index) => (
+          {companyStats.map((stat; index) => (
             <Card key={index} className="text-center group hover: shadow-lg hover:border-primary/50 transition-all duration-300">
               <CardContent className="pt-6">
                 <div className="flex justify-center mb-3">
@@ -183,12 +183,12 @@ export function ContactInfo() {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                 <Link to="/request-quote">
-                  Request Free Quote
+                  Request Free Quote;
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                 <Link to="/contact">
-                  Schedule Consultation
+                  Schedule Consultation;
                 </Link>
               </Button>
             </div>
@@ -196,22 +196,22 @@ export function ContactInfo() {
             {/* Additional contact options */}
             <div className="mt-6 pt-6 border-t border-zion-purple/20">
               <p className="text-sm text-muted-foreground mb-3">
-                Prefer to call? We're available 24/7 for urgent matters
+                Prefer to call? We're available 24/7 for urgent matters;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-                <a 
+                <a; 
                   href="tel:+13024640950" 
                   className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  +1 302 464 0950
+                  +1 302 464 0950;
                 </a>
-                <a 
+                <a; 
                   href="mailto:kleber@ziontechgroup.com" 
                   className="flex items-center justify-center gap-2 text-zion-purple hover:text-zion-purple-light transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  kleber@ziontechgroup.com
+                  kleber@ziontechgroup.com;
                 </a>
               </div>
             </div>
