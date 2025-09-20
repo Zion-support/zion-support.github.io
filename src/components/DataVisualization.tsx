@@ -40,8 +40,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   showCharts = true,
   showActions = true
 }) => {
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d'),
-  const [isLoading, setIsLoading] = useState(false),
+  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
+  const [isLoading, setIsLoading] = useState(false);
   const [activeChart, setActiveChart] = useState<'bar' | 'pie' | 'line'>('bar'),
 
   // Sample data - in a real app, this would come from an API
@@ -70,7 +70,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   ]);
   // Simulate data refresh
   const refreshData = async () => {
-    setIsLoading(true),
+    setIsLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000)),
 
@@ -78,7 +78,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     setChartData(prev => ({
       ...prev,
       datasets: [{
-        ...prev.datasets[0];
+        ...prev.datasets[0],
         data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20)
       }]
     }));
@@ -90,7 +90,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         (Math.random() * 15 - 7.5),changeType: Math.random() > 0.6 ? 'increase' :
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
-    setIsLoading(false),
+    setIsLoading(false);
   },
 
   // Get change icon and color
@@ -100,8 +100,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                  <Minus className="w-4 h-4" />;
     const color = changeType === 'increase' ? 'text-green-400' :
                   changeType === 'decrease' ? 'text-red-400' :
-                  'text-zinc-400',
-
+                  'text-zinc-400';
     return { icon, color },
   },
 
@@ -186,7 +185,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       {showMetrics && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {metrics.map((metric, index) => {
-            const { icon, color } = getChangeDisplay(metric.change, metric.changeType),
+            const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
               <motion.div
                 key={metric.title}
@@ -291,18 +290,16 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                       <svg className="w-full h-full transform -rotate-90">
                         {pieChartData.datasets[0].data.map((value, index) => {
                           const percentage = value / pieChartData.datasets[0].data.reduce((a, b) => a + b, 0),
-                          const angle = percentage * 360,
+                          const angle = percentage * 360;
                           const startAngle = pieChartData.datasets[0].data
                             .slice(0, index)
                             .reduce((a, b) => a + (b / pieChartData.datasets[0].data.reduce((c, d) => c + d, 0)) * 360, 0),
 
-                          const x1 = 128 + 100 * Math.cos(startAngle * Math.PI / 180),
-                          const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180),
-                          const x2 = 128 + 100 * Math.cos((startAngle + angle) * Math.PI / 180),
-                          const y2 = 128 + 100 * Math.sin((startAngle + angle) * Math.PI / 180),
-
-                          const largeArcFlag = angle > 180 ? 1 : 0,
-
+                          const x1 = 128 + 100 * Math.cos(startAngle * Math.PI / 180);
+                          const y1 = 128 + 100 * Math.sin(startAngle * Math.PI / 180);
+                          const x2 = 128 + 100 * Math.cos((startAngle + angle) * Math.PI / 180);
+                          const y2 = 128 + 100 * Math.sin((startAngle + angle) * Math.PI / 180);
+                          const largeArcFlag = angle > 180 ? 1 : 0;
                           return (
                             <path
                               key={index}
@@ -311,7 +308,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                               stroke={pieChartData.datasets[0].borderColor[index]}
                               strokeWidth="2"
                             />
-                          ),
+                          );
                         })}
                       </svg>
 

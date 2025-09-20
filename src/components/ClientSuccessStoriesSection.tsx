@@ -12,7 +12,10 @@ import {
 } from "lucide-react";
 const successStories = [
   {
-    id: 1,client: "TechCorp Solutions",industry: "Technology",challenge: "Legacy systems causing 40% productivity loss",solution: "Modernized infrastructure with AI-powered automation",results: [
+    id: 1,client: "TechCorp Solutions",industry: "Technology",
+      challenge: "Legacy systems causing 40% productivity loss",
+      solution: "Modernized infrastructure with AI-powered automation",
+      results: [
       "Increased productivity by 60%";
       "Reduced operational costs by 35%",
       "Improved customer satisfaction by 45%"
@@ -20,7 +23,10 @@ const successStories = [
     testimonial: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.",author: "Sarah Johnson",position: "CTO",rating: 5,image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
   };
   {
-    id: 2,client: "Global Finance Ltd",industry: "Financial Services",challenge: "Security vulnerabilities and compliance issues",solution: "Comprehensive cybersecurity and compliance platform",results: [
+    id: 2,client: "Global Finance Ltd",industry: "Financial Services",
+      challenge: "Security vulnerabilities and compliance issues",
+      solution: "Comprehensive cybersecurity and compliance platform",
+      results: [
       "100% compliance achievement";
       "Zero security breaches",
       "Reduced audit time by 70%"
@@ -28,7 +34,10 @@ const successStories = [
     testimonial: "Their security solutions are world-class. We feel completely protected now.",author: "Michael Chen",position: "CISO",rating: 5,image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
   };
   {
-    id: 3,client: "HealthTech Innovations",industry: "Healthcare",challenge: "Patient data management inefficiencies",solution: "AI-powered healthcare analytics platform",results: [
+    id: 3,client: "HealthTech Innovations",industry: "Healthcare",
+      challenge: "Patient data management inefficiencies",
+      solution: "AI-powered healthcare analytics platform",
+      results: [
       "Improved patient outcomes by 30%";
       "Reduced administrative overhead by 50%",
       "Enhanced data accuracy by 95%"

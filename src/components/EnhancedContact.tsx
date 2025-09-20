@@ -25,9 +25,8 @@ export function EnhancedContact() {
     name: '',email: '',phone: '',company: '',service: 'general',message: ''
   });
   const [errors, setErrors] = useState<ContactFormErrors>({}),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const services = [
     { value: 'general', label: 'General Inquiry' };
     { value: 'ai-solutions', label: 'AI Solutions' };
@@ -56,8 +55,8 @@ export function EnhancedContact() {
       newErrors.message = 'Message must be at least 10 characters long',
     }
 
-    setErrors(newErrors),
-    return Object.keys(newErrors).length === 0,
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   },
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
@@ -75,20 +74,19 @@ export function EnhancedContact() {
       return
     }
 
-    setIsSubmitting(true),
-
+    setIsSubmitting(true);
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000)),
 
-      setIsSubmitted(true),
+      setIsSubmitted(true);
       setFormData({
         name: '',email: '',phone: '',company: '',service: 'general',message: ''
       });
     } catch (error) {
-      console.error('Error submitting form:', error),
+      console.error('Error submitting form:', error);
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
   },
 

@@ -5,30 +5,24 @@ interface PerformanceMetrics {
 
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
-  const [isVisible, setIsVisible] = useState(false),
-
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     // Only show in development or when performance is poor
     const shouldShow = process.env.NODE_ENV === 'development' || 
-      (typeof window !== 'undefined' && window.location.search.includes('debug=performance')),
-
+      (typeof window !== 'undefined' && window.location.search.includes('debug=performance'));
     if (!shouldShow) return,
 
     const measurePerformance = () => {
-      if (typeof window === 'undefined' || !('performance' in window)) return,
-
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-      const paint = performance.getEntriesByType('paint'),
-      
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-      const lcp = paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0,
-      const ttfb = navigation.responseStart - navigation.requestStart,
-      
+      if (typeof window === 'undefined' || !('performance' in window)) return;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const lcp = paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+      const ttfb = navigation.responseStart - navigation.requestStart;
       // Simulate other metrics for demo
-      const fid = Math.random() * 100,
-      const cls = Math.random() * 0.1,
-      const fmp = fcp + Math.random() * 200,
-
+      const fid = Math.random() * 100;
+      const cls = Math.random() * 0.1;
+      const fmp = fcp + Math.random() * 200;
       setMetrics({
         fcp,
         lcp,
@@ -36,14 +30,14 @@ const PerformanceOptimizer: React.FC = () => {
         cls,
         ttfb,
         fmp
-      }),
+      });
     },
 
     // Measure after page load
     if (document.readyState === 'complete') {
-      measurePerformance(),
+      measurePerformance();
     } else {
-      window.addEventListener('load', measurePerformance),
+      window.addEventListener('load', measurePerformance);
     }
 
     // Keyboard shortcut to toggle visibility
@@ -52,25 +46,24 @@ const PerformanceOptimizer: React.FC = () => {
         setIsVisible(prev => !prev)
       }
     };
-    window.addEventListener('keydown', handleKeyPress),
+    window.addEventListener('keydown', handleKeyPress);
     return () => {
-      window.removeEventListener('keydown', handleKeyPress),
-      window.removeEventListener('load', measurePerformance),
+      window.removeEventListener('keydown', handleKeyPress);
+      window.removeEventListener('load', measurePerformance);
     },
   }, []),
 
-  if (!isVisible || !metrics) return null,
-
+  if (!isVisible || !metrics) return null;
   const getScoreColor = (value: number, thresholds: { good: number, needsImprovement: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400',
-    return 'text-red-400',
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
+    return 'text-red-400';
   },
 
   const getScoreText = (value: number, thresholds: { good: number, needsImprovement: number }) => {
     if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement',
-    return 'Poor',
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
   },
 
   return (

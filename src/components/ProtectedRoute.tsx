@@ -23,7 +23,7 @@ export function ProtectedRoute({ children, requireAuth = true, roles = [] }: Pro
   }
 
   if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {
-    return <Navigate to="/unauthorized" replace />,
+    return <Navigate to="/unauthorized" replace />;
   }
 
   return <>{children}</>;

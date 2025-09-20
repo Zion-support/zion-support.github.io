@@ -2,20 +2,18 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap } from "lucide-react";
 const NewsletterSection: React.FC = () => {
-  const [email, setEmail] = useState(''),
-  const [isSubscribed, setIsSubscribed] = useState(false),
-  const [isLoading, setIsLoading] = useState(false),
-
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return,
 
-    setIsLoading(true),
-
+    setIsLoading(true);
     // Simulate API call
     setTimeout(() => {
-      setIsSubscribed(true),
-      setIsLoading(false),
+      setIsSubscribed(true);
+      setIsLoading(false);
       setEmail('')
     }, 1500),
   },

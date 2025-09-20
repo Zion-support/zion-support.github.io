@@ -13,27 +13,26 @@ interface ToastProps {
 }
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
-  const [isVisible, setIsVisible] = useState(true),
-
+  const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(false),
+      setIsVisible(false);
       setTimeout(() => onRemove(toast.id), 300),
     }, toast.duration || 5000),
 
-    return () => clearTimeout(timer),
+    return () => clearTimeout(timer);
   }, [toast.id, toast.duration, onRemove]),
 
   const getIcon = () => {
     switch (toast.type) {
       case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-500" />,
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'error':
-        return <XCircle className="w-5 h-5 text-red-500" />,
+        return <XCircle className="w-5 h-5 text-red-500" />;
       case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />,
+        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
       case 'info':
-        return <Info className="w-5 h-5 text-blue-500" />,
+        return <Info className="w-5 h-5 text-blue-500" />;
       default: return <Info className="w-5 h-5 text-blue-500" />
     }
   };
@@ -88,7 +87,7 @@ export const ToastContainer: React.FC = () => {
   const [toasts, setToasts] = useState<Toast[]>([]),
 
   const addToast = (toast: Omit<Toast, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9),
+    const id = Math.random().toString(36).substr(2, 9);
     const newToast = { ...toast, id };
     setToasts(prev => [...prev, newToast]);
   };
@@ -99,7 +98,7 @@ export const ToastContainer: React.FC = () => {
   useEffect(() => {
     (window as any).showToast = addToast,
     return () => {
-      delete (window as any).showToast,
+      delete (window as any).showToast;
     },
   }, []),
 
@@ -115,7 +114,7 @@ export const ToastContainer: React.FC = () => {
         ))}
       </AnimatePresence>
     </div>
-  ),
+  );
 },
 
 // Utility function to show toasts

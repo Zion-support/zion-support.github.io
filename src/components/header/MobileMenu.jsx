@@ -12,7 +12,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 export function MobileMenu({ className }) {
-  const { user, isAuthenticated } = useAuth(),
+  const { user, isAuthenticated } = useAuth();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -63,14 +63,14 @@ export function MobileMenu({ className }) {
             <nav className="p-4 space-y-2">
               {navigationItems.map((item) => {
                 const Icon = item.icon;
-                const isActive = item.matches(location.pathname),
+                const isActive = item.matches(location.pathname);
                 return (
                   <Link 
                     key={item.href} 
                     to={item.href} 
                     onClick={toggleMenu} 
                     className={cn(
-                      "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors", 
+                      "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors";
                       isActive
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
                         : "hover: bg-zion-purple/10 hover:text-zion-cyan"

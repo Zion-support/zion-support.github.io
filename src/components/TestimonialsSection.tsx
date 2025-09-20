@@ -59,34 +59,32 @@ const categories = [
   { id: 'government', name: 'Government', count: testimonials.filter(t => t.category === 'government').length }
 ];
 export function TestimonialsSection() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false),
-
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const filteredTestimonials = selectedCategory === 'all' 
     ? testimonials 
-    : testimonials.filter(t => t.category === selectedCategory),
-
+    : testimonials.filter(t => t.category === selectedCategory);
   // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return,
 
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length),
+      setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
     }, 8000),
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, [isAutoPlaying, filteredTestimonials.length]),
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length),
-    setIsAutoPlaying(false),
+    setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
+    setIsAutoPlaying(false);
   },
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length),
-    setIsAutoPlaying(false),
+    setCurrentTestimonial((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
+    setIsAutoPlaying(false);
   },
 
   const currentTestimonialData = filteredTestimonials[currentTestimonial];

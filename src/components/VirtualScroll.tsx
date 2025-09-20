@@ -16,29 +16,26 @@ export function VirtualScroll<T>({
   className = '',
   onScroll
 }: VirtualScrollProps<T>) {
-  const [scrollTop, setScrollTop] = useState(0),
-  const containerRef = useRef<HTMLDivElement>(null),
-
+  const [scrollTop, setScrollTop] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
   // Calculate visible range
   const visibleRange = useMemo(() => {
-    const start = Math.floor(scrollTop / itemHeight),
-    const visibleCount = Math.ceil(height / itemHeight),
-    const end = start + visibleCount + overscan,
-    
+    const start = Math.floor(scrollTop / itemHeight);
+    const visibleCount = Math.ceil(height / itemHeight);
+    const end = start + visibleCount + overscan;
     return {
-      start: Math.max(0, start - overscan),
+      start: Math.max(0, start - overscan);
       end: Math.min(items.length, end)
     },
   }, [scrollTop, itemHeight, height, overscan, items.length]),
 
   // Calculate total height and transform
-  const totalHeight = items.length * itemHeight,
-  const transform = `translateY(${visibleRange.start * itemHeight}px)`,
-
+  const totalHeight = items.length * itemHeight;
+  const transform = `translateY(${visibleRange.start * itemHeight}px)`;
   // Handle scroll
   const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {
     const newScrollTop = event.currentTarget.scrollTop;
-    setScrollTop(newScrollTop),
+    setScrollTop(newScrollTop);
     onScroll?.(newScrollTop)
   }, [onScroll]),
 
@@ -52,7 +49,7 @@ export function VirtualScroll<T>({
 
   // Scroll to top
   const scrollToTop = useCallback(() => {
-    scrollToItem(0),
+    scrollToItem(0);
   }, [scrollToItem]),
 
   // Auto-scroll to specific item on mount if needed
