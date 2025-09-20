@@ -1,11 +1,13 @@
+import React from 'react';
 import { SEO } from '@/components/SEO';
 import { ApplicationsTracker } from '@/components/jobs/applications';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Briefcase, Inbox } from 'lucide-react';
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
+
 function ApplicationStatusTrackerContent() {
-  const isMobile = null;
+  const isMobile = useIsMobile();
   return (
     <>
       <SEO

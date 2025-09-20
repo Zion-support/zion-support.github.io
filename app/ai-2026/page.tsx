@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import SEO from '../../components/SEO'
+// import SEO from '../../components/SEO'
 export const metadata = {
   title: 'AI 2026 - Future AI Technologies | Zion Tech Group',
   description: 'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.',
@@ -9,12 +9,6 @@ export const metadata = {
 export default function AI2026Page() {
   return (
     <div>
-      <SEO
-        title="AI 2026 - Future AI Technologies"
-        description="Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions"
-        keywords="AI 2026, future AI, quantum AI, revolutionary technology, artificial general intelligence"
-        url="/ai-2026"
-      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white py-20">
         <div>

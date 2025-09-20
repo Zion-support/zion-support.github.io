@@ -32,13 +32,6 @@ const nextConfig = {
       };
     }
     
-    // Exclude apps directory from compilation
-    config.module.rules.push({
-      test: /\.(ts|tsx|js|jsx)$/,
-      include: /apps\//,
-      use: "ignore-loader"
-    });
-    
     if (!dev && !isServer) {
       // Optimize bundle size
       config.optimization.splitChunks = {
