@@ -1,10 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
 
 @layer base {
-=======
 /* Custom animations for enhanced content */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -594,7 +592,6 @@
 
 /* High contrast mode */
 @media (prefers-contrast: high) {
->>>>>>> 7994ab0e2a72248b03cf4ff4d4e6dd38a0672cd7
   :root {
     --background: 0 0% 100%;
     --foreground: 224 71% 4%;
@@ -672,8 +669,8 @@
     background: hsl(var(--foreground));
   }
 }
+}
 
-<<<<<<< HEAD
 @layer components {
   .glass {
     background: rgba(255, 255, 255, 0.1);
@@ -702,8 +699,6 @@
     }
   }
 
-=======
->>>>>>> 7994ab0e2a72248b03cf4ff4d4e6dd38a0672cd7
   @media (max-width: 768px) {
     .container {
       @apply px-4;
@@ -717,7 +712,6 @@
     text-align: center;
   }
 }
-<<<<<<< HEAD
 
 /* LiveKit UI overrides */
 [data-lk-theme='default'] {
@@ -727,5 +721,3 @@
   --lk-bg1: #0B1120;
   --lk-bg2: #0F172A;
 }
-=======
->>>>>>> 7994ab0e2a72248b03cf4ff4d4e6dd38a0672cd7

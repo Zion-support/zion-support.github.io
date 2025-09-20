@@ -115,7 +115,7 @@
     "react-datepicker": "^8.4.0",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
-    "react-helmet-async": "^2.0.4",
+    "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.62.0",
     "react-hot-toast": "^2.6.0",
     "react-i18next": "^14.1.3",
