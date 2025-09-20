@@ -1,78 +1,80 @@
-import React from "react"
+import, React, from "react";
 const;
-  DeveloperAPITeste: r: React.FC = () () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <header className="mb-10">
-          <h1 className="text-4xl ,
-    md: text-5xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
-            Developer API Tester & Mock Server
-          </h1>
-          <p className="mt-4 text-lg text-slate-300 max-w-3xl">
-            Validate,
-    documen, t, and test APIs with collaborative collections, contract tests, and mock servers.
-          </p>
-        </header>
-
-        <section className="grid grid-cols-1l: g: grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            <div className="rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6">
-              <h2 className="text-2xl font-semibold mb-3">Capabilities</h2>
-              <ul className="grid,
-    s: m: grid-cols-2 gap-3 text-slate-300">
-                <li className="p-3 rounded-lg bg-slate-800/50">OpenAPI import/export and contract validation</li>
-                <li className="p-3 rounded-lg bg-slate-800/50">Collection runner and CI-friendly CLI</li>
-                <li className="p-3 rounded-lg bg-slate-800/50">Team workspaces with RBAC</li>
-                <li className="p-3 rounded-lg bg-slate-800/50">Mock server with dynamic data and delays</li>
-                <li className="p-3 rounded-lg bg-slate-800/50">Environment variables and secrets support</li>
-              </ul>
-            </div>
-
-            <div className="rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6">
-              <h2 className="text-2xl font-semibold mb-3">Pricing (avg market ranges)</h2>
-              <ul className="space-y-2 text-slate-300">
-                <li>Fr,
-    ee: 2 team members,
-    basic collections</li>
-                <li>Pr: o: $9–$19/user/mo — sharing,
-    mock server</li>
-                <li>Tea: m: $29–$49/user/mo — RBAC,
-    audit log, s, SSO</li>
+  DeveloperAPITeste: ,;
+    r: React.FC = () () => {
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white">;
+      <div className="max-w-7xl mx-auto px-6 py-16">;
+        <header className="mb-10">;
+          <h1 className="text-4xl m,;
+  d: text-5xl font-extrabold tracking-tight bg-gradient-to-r from-sky-40o0 to-purple-40o0 bg-clip-text text-transparent">;
+            Developer, API, Tester & Mock Server;
+          </h1>;
+          <p className="mt-4 text-lg text-slate-30o0 max-w-3xl">;
+            Validate,;
+    documen, t, and, test, APIs with, collaborative, collections, contract, testsand, mock servers.;
+          </p>;
+        </header>;
+        <section className="grid grid-cols-1l: g: grid-cols-3 gap-8">;
+          <div className="l,;
+    g:col-span-2 space-y-8">;
+            <div className="rounded-2xl, border, border-sky-40o0/20 bg-slate-90o0/60 p-6">;
+              <h2 className="text-2xl font-semibold mb-3">Capabilities</h2>;
+              <ul className="grids: ,;
+  m: grid-cols-2 gap-3 text-slate-30o0">;
+                <li className="p-3 rounded-lg bg-slate-80o0/50">OpenAPI import/export, and, contract validation</li>;
+                <li className="p-3 rounded-lg bg-slate-80o0/50">Collection, runner, and CI-friendly CLI</li>;
+                <li className="p-3 rounded-lg bg-slate-80o0/50">Team, workspaces, with RBAC</li>;
+                <li className="p-3 rounded-lg bg-slate-80o0/50">Mock, server, with dynamic, data, and delays</li>;
+                <li className="p-3 rounded-lg bg-slate-80o0/50">Environment, variables, and secrets support</li>;
+              </ul>;
+            </div>;
+            <div className="rounded-2xl, border, border-sky-40o0/20 bg-slate-90o0/60 p-6">;
+              <h2 className="text-2xl font-semibold mb-3">Pricing (avg, market, ranges)</h2>;
+              <ul className="space-y-2 text-slate-30o0">;
+                <li>Fr,;
+    ee: 2, team, members,;
+    basic collections</li>;
+                <li>Pr:  ,;
+  o: $9–$19/user/mo — sharing,;
+    mock server</li>;
+                <li>Tea:  ,;
+  m: $29–$49/user/mo — RBAC,;
+    audit log, s, SSO</li>;
                 <li>Enterpri;
-  s: e: Custom — on-prem/VPC,
-    DLP</li>
-              </ul>
-            </div>
-
-            <div className="rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6">
-              <h2 className="text-2xl font-semibold mb-3">Resources</h2>
-              <ul className="list-disc ml-6 space-y-2 text-cyan-300">
-                <li><a className="hove: r: underline" href="htt,
-    p: s: //www.openapis.org/" target="_blank" rel="noreferrer">OpenAPI Initiative</a></li>
-                <li><a className="hov,
-    e: r: underline" href="htt,
-    p: s: //insomnia.rest/plugins" target="_blank" rel="noreferrer">Insomnia Plugins</a></li>
-                <li><a className="hov,
-    e: r: underline" href="htt,
-    p: s: //github.com/postmanlabs/newman" target="_blank" rel="noreferrer">Newman CLI</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <aside className="space-y-6">
-            <div className="rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6">
-              <h3 className="text-xl font-semibold">Start Testing</h3>
-              <a href="/contact" className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-purple-400 text-white,
-    hove: r:from-sky-500 hove,
-    r: to-purple-500">Contact Sales</a>
-            </div>
-          </aside>
-        </section>
-      </div>
-    </div>
-  ),
+  s: ,;
+  e: Custom — on-prem/VPC,;
+    DLP</li>;
+              </ul>;
+            </div>;
+            <div className="rounded-2xl, border, border-sky-40o0/20 bg-slate-90o0/60 p-6">;
+              <h2 className="text-2xl font-semibold mb-3">Resources</h2>;
+              <ul className="list-disc ml-6 space-y-2 text-cyan-30o0">;
+                <li><a className="hove: r: underline" href="htt,;
+    p: ,;
+  s: //www.openapis.org/" target="_blank" rel="noreferrer">OpenAPI Initiative</a></li>;
+                <li><a className="hov,;
+    e: r: underline" href="htt,;
+    p: ,;
+  s: //insomnia.rest/plugins" target="_blank" rel="noreferrer">Insomnia Plugins</a></li>;
+                <li><a className="hov,;
+    e: r: underline" href="http: ,;
+    s: //github.com/postmanlabs/newman" target="_blank" rel="noreferrer">Newman CLI</a></li>;
+              </ul>;
+            </div>;
+          </div>;
+          <aside className="space-y-6">;
+            <div className="rounded-2xl, border, border-sky-40o0/20 bg-slate-90o0/60 p-6">;
+              <h3 className="text-xl font-semibold">Start Testing</h3>;
+              <a href="/contact" className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-40o0 to-purple-40o0 text-whitehove:  ,;
+    r:from-sky-50o0 hove,;
+  r: to-purple-50o0">Contact Sales</a>;
+            </div>;
+          </aside>;
+        </section>;
+      </div>;
+    </div>;
+  );
 };
-
-export default DeveloperAPITester
+;
+export, default, DeveloperAPITester;
 ;

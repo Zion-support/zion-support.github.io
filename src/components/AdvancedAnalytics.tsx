@@ -1,551 +1,517 @@
-import { AnimatePresenc, e, motion } from "framer-motion";
+import { AnimatePresencemotion } from "framer-motion";
 import {
-    BarChart, 3,
-    Cloc, k,
-    Ey, e,
-    Monito, r,
-    RefreshC, w,
-    Smartphon, e,
-    Table, t,
-    Targe, t,
-    User, s,
-    X,
-    Zap
+    BarChart, 3,;
+    Cloc, k,;
+    Ey, e,;
+    Monito, r,;
+    RefreshC, w,;
+    Smartphon, e,;
+    Table, t,;
+    Targe, t,;
+    User, sXZap;
 } from "lucide-react";
-import { useCallbac, k, useEffec, t, useRe, f, useState } from "react";
+import { useCallbac, k, useEffec, t, useRefuseState } from "react";
 interface AnalyticsData {
-  pageView, s: numbe, r,
-    uniqueVisitor, s: numbe, r,sessionDuratio, n: numbe, r,
-    bounceRat, e: numbe, r,conversionRat, e: numbe, r,
-    topPage, s: Array<{ pat, h: strin, g,
-    view, s: number }>,
-  userAgent, s: Array<{ devic, e: strin, g,
-    coun, t: number }>,
-  location, s: Array<{ countr, y: strin, g,
-    coun, t: number }>,
-  performanc, e: {,
-    loadTim, e: numbe, r,firstPain, t: numbe, r,
-    firstContentfulPain, t: numbe, r,largestContentfulPain, t: number
-  },
-  interaction, s: {,
-    click, s: numbe, r,scroll, s: numbe, r,
-    formSubmission, s: numbe, r,error, s: number
+  pageView, s: numbe, r,;
+    uniqueVisitor, s: numbe, r,sessionDuratio, n: numbe, r,;
+    bounceRat, e: numbe, r,conversionRat, e: numbe, r,;
+    topPage, s: Array<{ pat, h: stringview,;
+  s: number }>,;
+  userAgent, s: Array<{ devic, e: stringcoun,;
+  t: number }>,;
+  location, s: Array<{ countr, y: stringcoun,;
+  t: number }>,;
+  performanc, e: {,;
+    loadTim, e: numbe, r,firstPain, t: numbe, r,;
+    firstContentfulPain, t: numbe, rlargestContentfulPaint: number;
+  },;
+  interaction, s: {,;
+    click, s: numbe, r,scroll, s: numbe, r,;
+    formSubmission, s: numbe, rerrors: number;
   };
 };
-
+;
 interface AdvancedAnalyticsProps {
   enable, d: boolean;
-  trackingId?: strin, g,
-  enableHeatmap?: boolea, n,
-  enableSessionRecording?: boolea, n,
-  enableAITesting?: boolean
-
-export function AdvancedAnalytics({ 
-  enable,  d, 
-  trackingI, d,
-  enableHeatmap = false;
+  trackingId?: strin, g,;
+  enableHeatmap?: boolea, n,;
+  enableSessionRecording?: boolea, n,;
+  enableAITesting?: boolean;
+export, function, AdvancedAnalytics({ ;
+  enable,  dtrackingIdenableHeatmap = false;
   enableSessionRecording = false;
-  enableAITesting = false
+  enableAITesting = false;
 }: AdvancedAnalyticsProps) {
-  const [isOp, e, n, setIsOp, e, n] = useState(false);
-  const [analyticsDa,  t, a, setAnalyticsDa, t, a] = useState<AnalyticsData>({
-    pageView, s: 0,
-    uniqueVisitor, s: 0,sessionDuratio, n: 0,
-    bounceRat, e: 0,conversionRat, e: 0,
-    topPage, s: [],userAgent, s: [],
-    location, s: [],performanc, e: {,
-    loadTim, e: 0,firstPain, t: 0,
-    firstContentfulPain, t: 0,largestContentfulPain, t: 0
-    },
+  const [isOp, e, n, setIsOp,, en] = useState(false);
+  const [analyticsDa,  t, a, setAnalyticsDa,, ta] = useState<AnalyticsData>({
+    pageView, s: 0,;
+    uniqueVisitor, s: 0,sessionDuratio, n: 0,;
+    bounceRat, e: 0,conversionRat, e: 0,;
+    topPage, s: [],userAgent, s: [],;
+    location, s: [],performanc, e: {,;
+    loadTim, e: 0,firstPain, t: 0,;
+    firstContentfulPain, t: 0largestContentfulPain,;
+  t: 0;
+    },;
     interaction, s: {;
-      click, s: 0,
-    scroll, s: 0,formSubmission, s: 0,
-    error, s: 0
+      click, s: 0,;
+    scroll, s: 0,formSubmission, s: 0error,;
+  s: 0;
     }
   });
-  const [isTracki, n, g, setIsTracki, n, g] = useState(false);
-  const [sessionSta,  r, t, setSessionSta, r, t] = useState<number>(Date.now());
-  const [currentPa, g, e, setCurrentPa, g, e] = useState<string>(window.location.pathname);
-  const [userSessi,  o, n, setUserSessi, o, n] = useState<string>('');
-  const [heatmapDa, t, a, setHeatmapDa, t, a] = useState<Array<{ x: numbe, r,
-    y: numbe, r, typ, e: 'click' | 'scroll' | 'hover' }>>([]);
+  const [isTracki, n, g, setIsTracki,, ng] = useState(false);
+  const [sessionSta,  r, t, setSessionSta,, rt] = useState<number>(Date.now());
+  const [currentPa, g, e, setCurrentPa,, ge] = useState<string>(window.location.pathname);
+  const [userSessi,  o, n, setUserSessi,, on] = useState<string>('');
+  const [heatmapDa, t, a, setHeatmapDa,, ta] = useState<Array<{ x: numbe, r,;
+    y: numbertyp,;
+  e: 'click' | 'scroll' | 'hover' }>>([]);
   const trackingRef = useRef<{
-    pageView,  s: numbe, r,
-    click, s: numbe, r,scroll, s: numbe, r,
-    formSubmission, s: numbe, r,error, s: numbe, r,
-    startTim, e: number
+    pageView,  s: numbe, r,;
+    click, s: numbe, r,scroll, s: numbe, r,;
+    formSubmission, s: numbe, r,error, s: numberstartTim,;
+  e: number;
   }>({
-    pageView, s: 1,
-    click, s: 0,scroll, s: 0,
-    formSubmission, s: 0,error, s: 0,
-    startTim, e: Date.now()
+    pageView, s: 1,;
+    click, s: 0,scroll, s: 0,;
+    formSubmission, s: 0,error, s: 0startTim,;
+  e: Date.now();
   });
-  // Generate unique session ID
+  // Generate, unique, session ID;
   useEffect(() => {
-    const sessionId = `session_${Date.now()}_${Math.random().toString(36).subst, r(2,  9)}`,
+    const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(29)}`,;
     setUserSession(sessionId);
-    localStorage.setItem('analytics_session_id',  sessionId);
-  }, []),
-
-  // Track page views
-  const trackPageView = useCallback((pat,  h: string) => {
+    localStorage.setItem('analytics_session_id'sessionId);
+  }, []),;
+  // Track, page, views;
+  const trackPageView = useCallback((path: string) => {;
     if (!enabled) return;
     setCurrentPage(path);
-    trackingRef.current.pageViews++, 
-    
-    const pageViewData = {
+    trackingRef.current.pageViews++,;
+    const pageViewData = {;
       sessionI, d: userSession;
-      pat, h,
-      timestam, p: new Date().toISOString(), 
-    referre, r: document.referre, r,userAgen, t: navigator.userAgen, t,
-    screenResolutio, n: `${screen.width}x${screen.heigh, t}`,
-      viewpor, t: `${window.innerWidth}x${window.innerHeigh, t}`,
-      languag, e: navigator.languag, e,
-    timezon, e: Intl.DateTimeFormat().resolvedOptions().timeZone
+      pat, h,;
+      timestam, p: new Date().toISOString(),;
+    referre, r: document.referre, r,userAgen, t: navigator.userAgen, tscreenResolution: `${screen.width}x${screen.height}`,;
+      viewpor, t: `${window.innerWidth}x${window.innerHeight}`,;
+      languag, e: navigator.languag, e,;
+    timezon, e: Intl.DateTimeFormat().resolvedOptions().timeZone;
     };
-    // Send to analytics service
-    this.sendAnalyticsData('pageview',  pageViewData);
-    
-    // Update local state
+    // Send, to, analytics service;
+    this.sendAnalyticsData('pageview'pageViewData);
+;
+    // Update, local, state;
     setAnalyticsData(prev => ({
-      ...pre,  v,
-      pageView, s: prev.pageViews + 1
+      ...prevpageViews: prev.pageViews + 1;
     }));
-  }, [enabl, e, d, userSessi, o, n]),
-
-  // Track user interactions
-  const trackInteraction = useCallback((typ,  e: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
-    if (!enabled) retur,  n,
-
-    const interactionData = {
+  }, [enabl, e, d, userSessi,, on]),;
+  // Track, user, interactions;
+  const trackInteraction = useCallback((typ,  e: 'click' | 'scroll' | 'form' | 'error'data?: any) => {
+    if (!enabled) retur,  n,;
+;
+    const interactionData = {;
       sessionI, d: userSession;
-      typ, e,
-      timestam, p: new Date().toISOString(), 
+      typ, e,;
+      timestam, p: new Date().toISOString(), ;
     pag, e: currentPage;
-      dat, a,
-      elemen, t: data?.target?.tagName || 'unknown',
-    positio, n: data?.position || null
+      dat, a,;
+      elemen, t: data?.target?.tagName || 'unknown'positio,;
+  n: data?.position || null;
     };
-    // Update tracking ref
-    switch (type) {
-      case 'click':
-        trackingRef.current.clicks++,
-        brea, k,
-      case 'scroll':
-        trackingRef.current.scrolls++,
-        brea, k,
-      case 'form':
-        trackingRef.current.formSubmissions++,
-        brea, k,
-      case 'error':
-        trackingRef.current.errors++,
-        brea, k,
-    }
-
-    // Send to analytics service
-    this.sendAnalyticsData('interaction',  interactionData);
-
-    // Update local state
+    // Update, tracking, ref;
+    switch() {
+      case 'click': trackingRef.current.clicks++,;
+        brea, k,;
+      case 'scroll':;
+        trackingRef.current.scrolls++,;
+        brea, k,;
+      case 'form':;
+        trackingRef.current.formSubmissions++,;
+        brea, k,;
+      case 'error':;
+        trackingRef.current.errors++,;
+        break };
+    // Send, to, analytics service;
+    this.sendAnalyticsData('interaction'interactionData);
+;
+    // Update, local, state;
     setAnalyticsData(prev => ({
-      ...pre,  v,
-      interaction, s: {
+      ...pre,  v,;
+      interaction, s: {;
         ...prev.interactions;
-        [typ, e === 'for, m' ? 'formSubmission, s' : typ, e === 'erro, r' ? 'error, s' : `${ty, p, e}s`]: 
-          prev.interactions[typ, e === 'for, m' ? 'formSubmission, s' : typ, e === 'erro, r' ? 'error, s' : `${ty, p, e}s`] + 1
+        [typ, e === 'for, m' ? 'formSubmission, s' : typ, e === 'erro, r' ? 'errors' :, `${type}s`]:;
+          prev.interactions[typ, e === 'for, m' ? 'formSubmission, s' : typ, e === 'error' ? 'errors' :, `${type}s`] + 1;
       }
-    })),
-  }, [enabl, e, d, userSessi, o, n, currentPa, g, e]),
-
-  // Track performance metrics
-  const trackPerformance = useCallback(() => {
+    })),;
+  }, [enabl, e, d, userSessi, o, n, currentPa,, ge]),;
+  // Track, performance, metrics;
+  const trackPerformance = useCallback(() => {;
     if (!enabled) return;
-
-    // Use Performance API to get metrics
+;
+    // Use, Performance, API to, get, metrics;
     if ('performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
-      
+;
       const performanceData = {
-        sessionI,  d: userSessio, n,
-    loadTim, e: navigation.loadEventEnd - navigation.loadEventStar, t,firstPain, t: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-    firstContentfulPain, t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0, largestContentfulPain, t: 0, // Will be updated by observer
-        timestam, p: new Date().toISOString()
+        sessionI,  d: userSessio, n,;
+    loadTim, e: navigation.loadEventEnd - navigation.loadEventStar, t,firstPain, t: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,;
+    firstContentfulPain, t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0, largestContentfulPain, t: 0// Will, be, updated by observer;
+        timestam,;
+  p: new Date().toISOString();
       };
-      // Update local state
+      // Update, local, state;
       setAnalyticsData(prev => ({
-        ...pre,  v,
-        performanc, e: {,
-    loadTim, e: performanceData.loadTim, e,firstPain, t: performanceData.firstPain, t,
-    firstContentfulPain, t: performanceData.firstContentfulPain, t,largestContentfulPain, t: performanceData.largestContentfulPaint
+        ...pre,  v,;
+        performanc, e: {,;
+    loadTim, e: performanceData.loadTim, e,firstPain, t: performanceData.firstPain, t,;
+    firstContentfulPain, t: performanceData.firstContentfulPaintlargestContentfulPain,;
+  t: performanceData.largestContentfulPaint;
         }
       }));
-      // Send to analytics service
-      this.sendAnalyticsData('performance',  performanceData);
+      // Send, to, analytics service;
+      this.sendAnalyticsData('performance'performanceData);
     }
-  }, [enabl, e, d, userSessi, o, n]),
-
-  // Setup event listeners
+  }, [enabl, e, d, userSessi,, on]),;
+  // Setup, event, listeners;
   useEffect(() => {
-    if (!enabled) retur,  n,
-
+    if (!enabled) retur,  n,;
     setIsTracking(true);
-
-    // Track initial page view
+;
+    // Track, initial, page view;
     trackPageView(window.location.pathname);
-
-    // Track performance metrics
+;
+    // Track, performance, metrics;
     trackPerformance();
-
-    // Setup click tracking
-    const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const position = { x: e.client,  X,
-    y: e.clientY };
-      trackInteraction('click', { targe, t, position });
-      
-      // Add to heatmap data
+;
+    // Setup, click, tracking;
+    const handleClick = (e: MouseEvent) => {;
+      const target = e.target, as, HTMLElement;
+      const position = { x: e.clientX,;
+  y: e.clientY };
+      trackInteraction('click'{ targetposition });
+;
+      // Add, to, heatmap data;
       if (enableHeatmap) {
-        setHeatmapData(prev => [...pr,  e, v, { x: positio, n.x,
-    y: positio, n.y, ty, p, e: 'clic, k' }]);
+        setHeatmapData(prev => [...pr,  e, v, { x: positio, n.x,;
+    y: positio, n.ytype: 'click', }]);
       }
-    },
-
-    // Setup scroll tracking
+    },;
+    // Setup, scroll, tracking;
     let scrollTimeou, t: NodeJS.Timeout;
-    const handleScroll = () => {
+    const handleScroll = () => {;
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
-        trackInteraction('scroll',  { 
-          scroll, Y: window.scroll, Y,
-    scrollHeigh, t: document.documentElement.scrollHeight 
+        trackInteraction('scroll',  { ;
+          scroll, Y: window.scrollYscrollHeigh,;
+  t: document.documentElement.scrollHeight;
         });
-      }, 100),
-    },
-
-    // Setup form submission tracking
-    const handleFormSubmit = (e: Event) => {
-      const form = e.target as HTMLFormElement;
-      trackInteraction('form',  { 
-        formI, d: form.id || form.classNam, e,
-    formActio, n: form.actio, n,formMetho, d: form.method
+      }, 10o0),;
+    },;
+    // Setup, form, submission tracking;
+    const handleFormSubmit = (e: Event) => {;
+      const form = e.target, as, HTMLFormElement;
+      trackInteraction('form',  { ;
+        formI, d: form.id || form.classNam, e,;
+    formActio, n: form.actionformMetho,;
+  d: form.method;
       });
-    },
-
-    // Setup error tracking
+    },;
+    // Setup, error, tracking;
     const handleError = (e: ErrorEvent) => {
       trackInteraction('error',  {
-        messag, e: e.messag, e,
-    filenam, e: e.filenam, e,linen, o: e.linen, o,
-    coln, o: e.coln, o,erro, r: e.error?.stack
+        messag, e: e.messag, e,;
+    filenam, e: e.filenam, e,linen, o: e.linen, o,;
+    coln, o: e.colnoerro,;
+  r: e.error?.stack;
       });
-    },
-
-    // Setup unhandled promise rejection tracking
+    },;
+    // Setup, unhandled, promise rejection tracking;
     const handleUnhandledRejection = (e: PromiseRejectionEvent) => {
-      trackInteraction('error',  {
-        messag, e: e.reason?.message || 'Unhandled Promise Rejection',
-    reaso, n: e.reason
+      trackInteraction('error',  {;
+        message: e.reason?.message || 'Unhandled, Promise, Rejection'reaso,;
+  n: e.reason;
       });
-    },
-
-    // Add event listeners
-    document.addEventListener('click',  handleClick);
-    document.addEventListener('scroll',  handleScroll);
-    document.addEventListener('submit',  handleFormSubmit);
-    window.addEventListener('error',  handleError);
-    window.addEventListener('unhandledrejection',  handleUnhandledRejection);
-
-    // Track page visibility changes
+    },;
+    // Add, event, listeners;
+    document.addEventListener('click'handleClick);
+    document.addEventListener('scroll'handleScroll);
+    document.addEventListener('submit'handleFormSubmit);
+    window.addEventListener('error'handleError);
+    window.addEventListener('unhandledrejection'handleUnhandledRejection);
+;
+    // Track, page, visibility changes;
     const handleVisibilityChange = () => {
-      if (document.hidden) {
-        // Page hidden - track session end
+      if (document.hidden) {;
+        // Page hidden - track, session, end;
         const sessionDuration = Date.now() - sessionStart;
         setAnalyticsData(prev => ({
-          ...pre,  v,
-          sessionDuratio, n: sessionDuration / 1000 // Convert to seconds
+          ...prevsessionDuration: sessionDuration / 10o00 // Convert, to, seconds;
         }));
       } else {
-        // Page visible - track session resume
-        setSessionStart(Date.now()), 
-      }
-    },
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('click',  handleClick);
-      document.removeEventListener('scroll',  handleScroll);
-      document.removeEventListener('submit',  handleFormSubmit);
-      window.removeEventListener('error',  handleError);
-      window.removeEventListener('unhandledrejection',  handleUnhandledRejection);
-      document.removeEventListener('visibilitychange',  handleVisibilityChange);
+        // Page visible - track, session, resume;
+        setSessionStart(Date.now()) };
+    },;
+    document.addEventListener('visibilitychange'handleVisibilityChange);
+;
+    // Cleanup;
+    return () => {;
+      document.removeEventListener('click'handleClick);
+      document.removeEventListener('scroll'handleScroll);
+      document.removeEventListener('submit'handleFormSubmit);
+      window.removeEventListener('error'handleError);
+      window.removeEventListener('unhandledrejection'handleUnhandledRejection);
+      document.removeEventListener('visibilitychange'handleVisibilityChange);
       clearTimeout(scrollTimeout);
-    }, 
-  }, [enabl, e, d, trackPageVi, e, w, trackPerforman, c, e, trackInteracti, o, n, sessionSta, r, t, enableHeatm, a, p]),
-
-  // Setup performance observer for LCP
+    },;
+  }, [enabl, e, d, trackPageVi, e, w, trackPerforman, c, e, trackInteracti, o, n, sessionSta, r, t, enableHeatm,, ap]),;
+  // Setup, performance, observer for LCP;
   useEffect(() => {
-    if (!enabled || !('PerformanceObserver' in window)) retur,  n,
-
+    if (!enabled || !('PerformanceObserver' in window)) retur,  n,;
     try {
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
-        const lastEntry = entries[entrie,  s.lengt, h - 1];
-        if (lastEntry) {
+        const lastEntry = entries[entrie,  s.length -, 1];
+        if() {
           setAnalyticsData(prev => ({
-            ...pre,  v,
+            ...pre,  v,;
             performanc, e: {
-              ...prev.performanc, e,
-              largestContentfulPain, t: lastEntry.startTime
-            }
+              ...prev.performancelargestContentfulPain,;
+  t: lastEntry.startTime;
+            };
           }));
         }
-      }),
-
-      lcpObserver.observe({ entryType,  s: ['larges, t-contentfu, l-pain, t'] });
+      }),;
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       return () => lcpObserver.disconnect();
-    } catch (error) {
-      console.warn('PerformanceObserver not supporte,  d:', error);
-    }
-  }, [enabl, e, d]),
-
-  // Send analytics data to service
-  const sendAnalyticsData = useCallback(async (eventTyp,  e: strin, g,
-    dat, a: any) => {
+    } catch() {
+      console.warn('PerformanceObserver, not, supported: 'error);
+    };
+  }, [enabl,, ed]),;
+  // Send, analytics, data to service;
+  const sendAnalyticsData = useCallback(async (eventTyp,  e: strin, g,;
+    data: any) => {;
     if (!trackingId) return;
     try {
       const analyticsPayload = {
-        trackingI,  d,
-        eventTyp, e,
-        dat, a,
-        timestam, p: new Date().toISOString(), 
-    sessionI, d: userSession
+        trackingI,  d,;
+        eventTyp, e,;
+        dat, a,;
+        timestam, p: new Date().toISOString()sessionI,;
+  d: userSession;
       };
-      // Store analytics data locally instead of sending to non-existent API
+      // Store, analytics, data locally, instead, of sending, to, non-existent API;
       try {
         const storedAnalytics = localStorage.getItem('analytics-data') || '[]';
         const analytics = JSON.parse(storedAnalytics);
         analytics.push(analyticsPayload);
-        
-        // Keep only last 100 analytics records
-        if (analytics.length > 100) {
-          analytics.splice(0,  analytics.length - 100);
-        }
-        
-        localStorage.setItem('analytics-data',  JSON.stringify(analytics)),
-        
-        // Log analytics for debugging (remove in production)
-        if (process.env['NODE_EN,  V'] === 'development') {
-          console.log('Analytics data stored locall,  y:', analyticsPayload);
-        }
-      } catch (error) {
-        console.warn('Failed to store analytics data locall,  y:', error);
-      }
-    } catch (error) {
-      console.warn('Failed to send analytics dat,  a:', error);
-    }
-  }, [tracking, I, d, userSessi, o, n]),
-
-  // Generate mock data for demonstration
+;
+        // Keep, only, last 10o0, analytics, records;
+        if() {
+          analytics.splice(0analytics.length - 10o0);
+        };
+        localStorage.setItem('analytics-data'JSON.stringify(analytics)),;
+        // Log, analytics, for debugging (remove, in, production);
+        if() {
+          console.log('Analytics, data, stored locally: 'analyticsPayload);
+        };
+      } catch() {
+        console.warn('Failed, to, store analytics, data, locally: 'error);
+      };
+    } catch() {
+      console.warn('Failed, to, send analytics data: 'error);
+    };
+  }, [tracking, I, d, userSessi,, on]),;
+  // Generate, mock, data for demonstration;
   useEffect(() => {
-    if (!enabled) retur,  n,
-
-    // Simulate data collection
-    const mockDat, a: AnalyticsData = {,
-    pageView, s: Math.floor(Math.random() * 1000) + 50, 0,uniqueVisitor, s: Math.floor(Math.random() * 500) + 20,  0,
-    sessionDuratio, n: Math.floor(Math.random() * 300) + 12, 0,bounceRat, e: Math.random() * 40 + 2,  0,
-    conversionRat, e: Math.random() * 5 + 1,topPage, s: [
-        { pa, t, h: '/',
-    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 50, 0) + 20, 0 };
-        { pa, t, h: '/service, s',
-    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 30, 0) + 15, 0 };
-        { pa, t, h: '/abou, t',
-    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 20, 0) + 10, 0 },
-        { pa, t, h: '/contac, t',
-    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 15, 0) + 8, 0 }
-      ],
-      userAgent, s: [
-        { devi, c, e: 'Deskto, p',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 40, 0) + 20, 0 };
-        { devi, c, e: 'Mobil, e',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 30, 0) + 15, 0 },
-        { devi, c, e: 'Table, t',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 10, 0) + 5, 0 }
-      ],
-      location, s: [
-        { count, r, y: 'Unite, d State, s',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 30, 0) + 15, 0 };
-        { count, r, y: 'Unite, d Kingdo, m',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 15, 0) + 8, 0 };
-        { count, r, y: 'Canad, a',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 10, 0) + 5, 0 },
-        { count, r, y: 'German, y',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 8, 0) + 4, 0 }
-      ],
-      performanc, e: {,
-    loadTim, e: Math.random() * 2000 + 50,  0,firstPain, t: Math.random() * 1000 + 20, 0,
-    firstContentfulPain, t: Math.random() * 1500 + 30,  0,largestContentfulPain, t: Math.random() * 2000 + 500
-      },
-      interaction, s: {,
-    click, s: Math.floor(Math.random() * 500) + 20,  0,scroll, s: Math.floor(Math.random() * 1000) + 50, 0,
-    formSubmission, s: Math.floor(Math.random() * 50) + 2,  0,error, s: Math.floor(Math.random() * 10) + 2
+    if (!enabled) retur,  n,;
+    // Simulate, data, collection;
+    const mockDat, a: AnalyticsData = {,;
+    pageView, s: Math.floor(Math.random() * 10o00) + 50, 0,uniqueVisitor, s: Math.floor(Math.random() * 50o0) + 20,  0,;
+    sessionDuratio, n: Math.floor(Math.random() * 30o0) + 12, 0,bounceRat, e: Math.random() * 40 + 2,  0,;
+    conversionRat, e: Math.random() * 5 + 1,topPage, s: [;
+        { pa, t, h: '/',;
+    vie, w, s: Mat, h.floo, r(Mat,  h.random() * 50o0) + 20o0 };
+        { pa, t, h: '/service, s',;
+    vie, w, s: Mat, h.floo, r(Mat,  h.random() * 30o0) + 150 };
+        { pa, t, h: '/abou, t',;
+    vie, w, s: Mat, h.floo, r(Mat,  h.random() * 20o0) + 10o0 },;
+        { pa, t, h: '/contac, t',;
+    vie, w, s: Mat, h.floo, r(Math.random() * 150) + 80 }
+    ,  ],;
+      userAgent, s: [;
+        { devi, c, e: 'Deskto, p',;
+    cou, n, t: Mat, h.floo, r(Mat,  h.random() * 40o0) + 20o0 };
+        { devi, c, e: 'Mobil, e',;
+    cou, n, t: Mat, h.floo, r(Mat,  h.random() * 30o0) + 150 },;
+        { devi, c, e: 'Table, t',;
+    cou, n, t: Mat, h.floo, r(Math.random() * 10o0) + 50 }
+    ,  ],;
+      location, s: [;
+        { count, r, y: 'Unite, d State, s',;
+    cou, n, t: Mat, h.floo, r(Mat,  h.random() * 30o0) + 150 };
+        { count, r, y: 'Unite, d Kingdo, m',;
+    cou, n, t: Mat, h.floo, r(Mat,  h.random() * 150) + 80 };
+        { count, r, y: 'Canad, a',;
+    cou, n, t: Mat, h.floo, r(Mat,  h.random() * 10o0) + 50 },;
+        { count, r, y: 'German, y',;
+    cou, n, t: Mat, h.floo, r(Math.random() * 80) + 40 }
+    ,  ],;
+      performanc, e: {,;
+    loadTim, e: Math.random() * 20o00 + 50,  0,firstPain, t: Math.random() * 10o00 + 20, 0,;
+    firstContentfulPain, t: Math.random() * 150o0 + 30,  0largestContentfulPaint: Math.random() * 20o00 + 50o0;
+      },;
+      interaction, s: {,;
+    click, s: Math.floor(Math.random() * 50o0) + 20,  0,scroll, s: Math.floor(Math.random() * 10o00) + 50, 0,;
+    formSubmission, s: Math.floor(Math.random() * 50) + 2,  0errors: Math.floor(Math.random() * 10) + 2;
       }
     };
     setAnalyticsData(mockData);
-  },  [enabl, e, d]),
-
+  },  [enabl,, ed]),;
   if (!enabled) return null;
-
-  return (
-    <>
-      {/* Analytics Toggle Button */}
-      <motion.button
+;
+  return (;
+    <>;
+      {/* Analytics, Toggle, Button */};
+      <motion.button;
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-20 left-4 z-50 p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg hove,  r:shadow-xl transition-all duration-300 text-white"
-        whileHover={{ scal, e: 1.1 }};
-        whileTap={{ scal, e: 0.9 }}
-        aria-label="Analytics Dashboard"
+        className="fixed bottom-20 left-4 z-50 p-3 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-full shadow-lg hove,  r: shadow-xl transition-all duration-30o0 text-white";
+        whileHover={{ scal,;
+  e: 1.1 }};
+        whileTap={{ scale: 0.9 }}
+        aria-label="Analytics Dashboard";
         aria-expanded={isOpen}
-        aria-controls="analytics-panel"
-      >
-        <BarChart3 className="w-6 h-6" />
-      </motion.button>
-
+        aria-controls="analytics-panel";
+      >;
+        <BarChart3 className="w-6 h-6" />;
+      </motion.button>;
       {/* Analytics Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacit, y: 0,
-    x: -100 }}
-            animate={{ opacit, y: 1,
-    x: 0 }}
-            exit={{ opacit, y: 0,
-    x: -100 }}
-            className="fixed left-4 bottom-32 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[80, v, h] overflow-y-auto"
-            id="analytics-panel"
-            role="dialog"
-            aria-labelledby="analytics-title"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h2 id="analytics-title" className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-                <BarChart3 className="w-5 h-5 text-blue-500" />
-                Analytics Dashboard
-              </h2>
-              <button
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion.div;
+            initial={{ opacity: 0,;
+  x: -10o0 }}
+            animate={{ opacity: 1,;
+  x: 0 }}
+            exit={{ opacity: 0,;
+  x: -10o0 }}
+            className="fixed left-4 bottom-32 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl, border, border-gray-20o0/50 p-6 max-h-[80vh] overflow-y-auto";
+            id="analytics-panel";
+            role="dialog";
+            aria-labelledby="analytics-title";
+          >;
+            <div className="flex items-center justify-between mb-4">;
+              <h2 id="analytics-title" className="text-lg font-semibold text-gray-80o0, flex, items-center gap-2">;
+                <BarChart3 className="w-5 h-5 text-blue-50o0" />;
+                Analytics Dashboard;
+              </h2>;
+              <button;
                 onClick={() => setIsOpen(false)}
-                className="text-gray-400 hove,  r:text-gray-600 transition-colors"
-                aria-label="Close analytics dashboard"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
+                className="text-gray-40o0 hove,  r: text-gray-60o0 transition-colors";
+                aria-label="Close, analytics, dashboard";
+              >;
+                <X className="w-5 h-5" />;
+              </button>;
+            </div>;
             {/* Key Metrics */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Eye className="w-4 h-4 text-blue-500" />
-                  <span className="text-xs text-blue-600">Page Views</span>
-                </div>
-                <div className="text-lg font-bold text-blue-700">{analyticsData.pageViews.toLocaleString()}</div>
-              </div>
-              
-              <div className="bg-green-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Users className="w-4 h-4 text-green-500" />
-                  <span className="text-xs text-green-600">Visitors</span>
-                </div>
-                <div className="text-lg font-bold text-green-700">{analyticsData.uniqueVisitors.toLocaleString()}</div>
-              </div>
-              
-              <div className="bg-purple-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Clock className="w-4 h-4 text-purple-500" />
-                  <span className="text-xs text-purple-600">Session</span>
-                </div>
-                <div className="text-lg font-bold text-purple-700">{Math.round(analyticsData.sessionDuration)}s</div>
-              </div>
-              
-              <div className="bg-orange-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Target className="w-4 h-4 text-orange-500" />
-                  <span className="text-xs text-orange-600">Conversion</span>
-                </div>
-                <div className="text-lg font-bold text-orange-700">{analyticsData.conversionRate.toFixed(1)}%</div>
-              </div>
-            </div>
-
+            <div className="grid grid-cols-2 gap-4 mb-6">;
+              <div className="bg-blue-50 p-3 rounded-lg">;
+                <div className="flex items-center gap-2 mb-1">;
+                  <Eye className="w-4 h-4 text-blue-50o0" />;
+                  <span className="text-xs text-blue-60o0">Page Views</span>;
+                </div>;
+                <div className="text-lg font-bold text-blue-70o0">{analyticsData.pageViews.toLocaleString()}</div>;
+              </div>;
+              <div className="bg-green-50 p-3 rounded-lg">;
+                <div className="flex items-center gap-2 mb-1">;
+                  <Users className="w-4 h-4 text-green-50o0" />;
+                  <span className="text-xs text-green-60o0">Visitors</span>;
+                </div>;
+                <div className="text-lg font-bold text-green-70o0">{analyticsData.uniqueVisitors.toLocaleString()}</div>;
+              </div>;
+              <div className="bg-purple-50 p-3 rounded-lg">;
+                <div className="flex items-center gap-2 mb-1">;
+                  <Clock className="w-4 h-4 text-purple-50o0" />;
+                  <span className="text-xs text-purple-60o0">Session</span>;
+                </div>;
+                <div className="text-lg font-bold text-purple-70o0">{Math.round(analyticsData.sessionDuration)}s</div>;
+              </div>;
+              <div className="bg-orange-50 p-3 rounded-lg">;
+                <div className="flex items-center gap-2 mb-1">;
+                  <Target className="w-4 h-4 text-orange-50o0" />;
+                  <span className="text-xs text-orange-60o0">Conversion</span>;
+                </div>;
+                <div className="text-lg font-bold text-orange-70o0">{analyticsData.conversionRate.toFixed(1)}%</div>;
+              </div>;
+            </div>;
             {/* Performance Metrics */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
-                <Zap className="w-4 h-4 text-yellow-500" />
-                Performance
-              </h3>
-              <div className="space-y-2 text-xs">
-                <div className="flex justify-between">
-                  <span>Load Tim,  e:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.loadTime)}ms</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>First Pain, t:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstPaint)}ms</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>FC,  P:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstContentfulPaint)}ms</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>LC, P:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.largestContentfulPaint)}ms</span>
-                </div>
-              </div>
-            </div>
-
+            <div className="mb-6">;
+              <h3 className="text-sm font-medium text-gray-70o0 mb-3, flex, items-center gap-2">;
+                <Zap className="w-4 h-4 text-yellow-50o0" />;
+                Performance;
+              </h3>;
+              <div className="space-y-2 text-xs">;
+                <div className="flex justify-between">;
+                  <span>Load Tim,  e: </span>;
+                  <span className="font-mono">{Math.round(analyticsData.performance.loadTime)}ms</span>;
+                </div>;
+                <div className="flex justify-between">;
+                  <span>First Pain, t:</span>;
+                  <span className="font-mono">{Math.round(analyticsData.performance.firstPaint)}ms</span>;
+                </div>;
+                <div className="flex justify-between">;
+                  <span>FC,  P:</span>;
+                  <span className="font-mono">{Math.round(analyticsData.performance.firstContentfulPaint)}ms</span>;
+                </div>;
+                <div className="flex justify-between">;
+                  <span>LC, P:</span>;
+                  <span className="font-mono">{Math.round(analyticsData.performance.largestContentfulPaint)}ms</span>;
+                </div>;
+              </div>;
+            </div>;
             {/* Top Pages */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages</h3>
-              <div className="space-y-2">
-                {analyticsData.topPages.map((pag,  e, index) => (<div key={index} className="flex justify-between items-center text-xs">
-                    <span className="truncate flex-1">{page.path}</span>
-                    <span className="font-mono text-gray-600">{page.views}</span>
-                  </div>
+            <div className="mb-6">;
+              <h3 className="text-sm font-medium text-gray-70o0 mb-3">Top Pages</h3>;
+              <div className="space-y-2">;
+                {analyticsData.topPages.map((pageindex) => (<div key={index} className="flex justify-between items-center text-xs">;
+                    <span className="truncate flex-1">{page.path}</span>;
+                    <span className="font-mono text-gray-60o0">{page.views}</span>;
+                  </div>;
                 ))}
-              </div>
-            </div>
-
+              </div>;
+            </div>;
             {/* Device Distribution */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution</h3>
-              <div className="space-y-2">
-                {analyticsData.userAgents.map((devic,  e, index) => (<div key={index} className="flex items-center gap-2 text-xs">
-                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500" />}
-                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500" />}
-                    {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-500" />}
-                    <span className="flex-1">{device.device}</span>
-                    <span className="font-mono text-gray-600">{device.count}</span>
-                  </div>
+            <div className="mb-6">;
+              <h3 className="text-sm font-medium text-gray-70o0 mb-3">Device Distribution</h3>;
+              <div className="space-y-2">;
+                {analyticsData.userAgents.map((deviceindex) => (<div key={index} className="flex items-center gap-2 text-xs">;
+                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-50o0" />}
+                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-50o0" />}
+                    {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-50o0" />}
+                    <span className="flex-1">{device.device}</span>;
+                    <span className="font-mono text-gray-60o0">{device.count}</span>;
+                  </div>;
                 ))}
-              </div>
-            </div>
-
+              </div>;
+            </div>;
             {/* Status Indicators */}
-            <div className="pt-4 border-t border-gray-200">
-              <div className="flex items-center justify-between text-xs text-gray-500">
-                <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-50, 0'}`} />
-                  <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>
-                </div>
-                <button
+            <div className="pt-4 border-t border-gray-20o0">;
+              <div className="flex items-center justify-between text-xs text-gray-50o0">;
+                <div className="flex items-center gap-2">;
+                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-50o0' : 'bg-red-50o0'}`} />;
+                  <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>;
+                </div>;
+                <button;
                   onClick={() => window.location.reload()}
-                  className="text-blue-500 hove,  r:text-blue-600"
-                >
-                  <RefreshCw className="w-3 h-3" />
-                </button>
-              </div>
-            </div>
-          </motion.div>
+                  className="text-blue-50o0 hove,  r: text-blue-60o0";
+                >;
+                  <RefreshCw className="w-3 h-3" />;
+                </button>;
+              </div>;
+            </div>;
+          </motion.div>;
         )}
-      </AnimatePresence>
-    </>
+      </AnimatePresence>;
+    </>;
   );
+;

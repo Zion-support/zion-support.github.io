@@ -11,13 +11,13 @@ import EnhancedAccessibility from "./components/EnhancedAccessibility";
 import EnhancedSEO from "./components/EnhancedSEO";
 import ErrorBoundary from "./components/ErrorBoundary";
 import SecurityMonitor from "./components/SecurityMonitor";
+
 // Lazy load components for better performance
 const LazyHome = React.lazy(() => import('./components/Home'));
 const LazyServices = React.lazy(() => import('./components/Services'));
 const LazyAbout = React.lazy(() => import('./components/About'));
 const LazyContact = React.lazy(() => import('./components/Contact'));
 const LazyDashboard = React.lazy(() => import('./components/InteractiveDashboard'));
-
 const App: React.FC = () => {
   return (
     <ErrorBoundary>

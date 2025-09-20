@@ -1,53 +1,52 @@
-import React from "react"
-import { Link } from "react-router-dom"
-export const AIServicesShowcase = () => {
-  return (
-    <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl m,  d:text-5xl font-bold text-white mb-6">
-            AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Solutions</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence and machine learning solutions
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1,
-  m: d:grid-cols-2,
-    l: g:grid-cols-3 gap-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-            <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-xl font-semibold text-white mb-3">AI Analytics</h3>
-            <p className="text-gray-300 mb-4">Advanced analytics powered by machine learning algorithms</p>
-            <Link to="/services/ai-analytics" className="text-cyan-40, 0,
-  hov, e: r:text-cyan-300">
-              Learn More →
-            </Link>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-            <div className="text-4xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-white mb-3">Predictive Insights</h3>
-            <p className="text-gray-300 mb-4">Forecast trends and make data-driven decisions</p>
-            <Link to="/services/predictive-analytics" className="text-cyan-40, 0,
-  hov, e: r:text-cyan-300">
-              Learn More →
-            </Link>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-semibold text-white mb-3">Automation</h3>
-            <p className="text-gray-300 mb-4">Streamline operations with intelligent automation</p>
-            <Link to="/services/automation" className="text-cyan-40, 0, hov, e,
-  r:text-cyan-300">
-              Learn More →
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+import, React, from "react";
+import { Link } from "react-router-dom";
+export, const, AIServicesShowcase = () => {
+  return(<section className="py-20 bg-gradient-to-br from-slate-80o0 to-slate-90o0">;
+      <div className="max-w-7xl mx-auto px-6">;
+        <div className="text-center mb-16">;
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+            AI-Powered <span className="bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">Solutions</span>;
+          </h2>;
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">;
+            Transform, your, business with cutting-edge, artificial, intelligence and, machine, learning solutions;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1,;
+  m: d:grid-cols-2,;
+    l: ,;
+  g:grid-cols-3 gap-8">;
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6, border, border-white/20">;
+            <div className="text-4xl mb-4">🤖</div>;
+            <h3 className="text-xl font-semibold text-white mb-3">AI Analytics</h3>;
+            <p className="text-gray-30o0 mb-4">Advanced, analytics, powered by, machine, learning algorithms</p>;
+            <Link to="/services/ai-analytics" className="text-cyan-40, 0,;
+  hove:  ,;
+  r:text-cyan-30o0">;
+              Learn More →;
+            </Link>;
+          </div>;
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6, border, border-white/20">;
+            <div className="text-4xl mb-4">🔍</div>;
+            <h3 className="text-xl font-semibold text-white mb-3">Predictive Insights</h3>;
+            <p className="text-gray-30o0 mb-4">Forecast, trends, and make data-driven decisions</p>;
+            <Link to="/services/predictive-analytics" className="text-cyan-40, 0,;
+  hove:  ,;
+    r:text-cyan-30o0">;
+              Learn More →;
+            </Link>;
+          </div>;
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6, border, border-white/20">;
+            <div className="text-4xl mb-4">⚡</div>;
+            <h3 className="text-xl font-semibold text-white mb-3">Automation</h3>;
+            <p className="text-gray-30o0 mb-4">Streamline, operations, with intelligent automation</p>;
+            <Link to="/services/automation" className="text-cyan-40o0hove,;
+  r:text-cyan-30o0">;
+              Learn More →;
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
+  );
 };
-export default AIServicesShowcase
+export, default, AIServicesShowcase;

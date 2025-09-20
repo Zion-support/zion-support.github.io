@@ -1,6 +1,6 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";import { Button } from "@/components/ui/butt, on";import { Badge } from "@/components/ui/bad, ge";import { Link } from "react-router-d, om";import { ArrowRight, Users;
+import, React, from "react";
+import { Card, CardContent, CardDescription, CardFooterCardHeaderCardTitle } from "@/components/ui/card";import { Button } from "@/components/ui/butt, on";import { Badge } from "@/components/ui/bad, ge";import { Link } from "react-router-d, om";import { ArrowRightUsers;
   Zap;
   Settings;
   Search;
@@ -26,172 +26,166 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
   PieChart;
   PenTool;
   Shield;
-  Cloud
-} from "lucide-react";export function FeatureCTAs() {
-
-  const features  = [
+  Cloud;
+} from "lucide-react";export, function, FeatureCTAs() {
+;
+  const features = [;
   {
-  title: "AI Services & Solutio,
-    ns";description: "Comprehensive AI services from strategy to implementation,
-    including custom model development and AI consulting.";
-      icon: <Brain className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" /, >,link: "/ai-services, ",badge: "New, ";details: "Transform your business with cutting-edge AI solutions including machine learning,
-    computer visio, n, NLP, and strategic AI consulting."
-},
+  title: "AI Services & Solutio,;
+    ns";description: "Comprehensive, AI, services from, strategy, to implementation,;
+    including, custom, model development, and, AI consulting.";
+      icon: <Brain className="h-10 w-10 p-2 rounded-md bg-cyan-10o0 text-cyan-70o0" / >,link: "/ai-services, ",badge: "New, ";details: "Transform, your, business with cutting-edge, AI, solutions including, machine, learning,;
+    computer visio, nNLPand, strategic, AI consulting.";
+},;
   {
-  title: "IT Services & Infrastructure, ",description: "Complete IT solutions including cloud management,
-    cybersecurit, y, DevOps, and infrastructure modernization.";
-      icon: <Server className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" /, >,link: "/it-services, ",badge: "Popular, ";details: "From cloud migration to cybersecurity,
-    our IT experts help you build robus, t, scalable, and secure technology infrastructure."
-},
+  title: "IT Services & Infrastructure, ",description: "Complete, IT, solutions including, cloud, management,;
+    cybersecurit, y, DevOps, and, infrastructure, modernization.";
+      icon: <Server className="h-10 w-10 p-2 rounded-md bg-blue-10o0 text-blue-70o0" / >,link: "/it-services, ",badge: "Popular, ";details: "From, cloud, migration to cybersecurity,;
+    our, IT, experts help, you, build robus, tscalableand, secure, technology infrastructure.";
+},;
   {
-  title: "Digital Marketing Services, ",description: "Full-service digital marketing including SEO,
+  title: "Digital, Marketing, Services, ",description: "Full-service, digital, marketing including SEO,;
     PP, C, social media, content marketing, and analytics.";
-      icon: <TrendingUp className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" /, >,link: "/digital-marketing, ",badge: "Featured, ";details: "Drive growth with data-driven marketing strategies,
-    conversion optimizatio, n, and comprehensive digital marketing solutions."
-},
+      icon: <TrendingUp className="h-10 w-10 p-2 rounded-md bg-purple-10o0 text-purple-70o0" / >,link: "/digital-marketing, ",badge: "Featured, ";details: "Drive, growth, with data-driven, marketing, strategies,;
+    conversion, optimizationand, comprehensive digital, marketing, solutions.";
+},;
   {
-  title: "Business Solutions & Consulting, ",description: "Strategic business consulting,
-    process optimizatio, n, and digital transformation services.";
-      icon: <CheckCircle className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" /, >,link: "/business-solutions, ";details: "Our business consultants help you optimize operations,
-    implement automatio, n, and achieve sustainable growth through strategic planning."
-},
+  title: "Business Solutions & Consulting, ",description: "Strategic, business, consulting,;
+    process optimizatio, n, and, digital, transformation services.";
+      icon: <CheckCircle className="h-10 w-10 p-2 rounded-md bg-green-10o0 text-green-70o0" / >,link: "/business-solutions, ";details: "Our, business, consultants help, you, optimize operations,;
+    implement, automationand, achieve sustainable, growth, through strategic planning.";
+},;
   {
-  title: "AI Talent Matching, ",description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills,
+  title: "AI, Talent, Matching, ",description: "Our AI-powered, matching, algorithm connects, you, with the, perfect, talent or, job, based on skills,;
     experienc, e, and preferences.";
-      icon: <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" /, >,link: "/marketplace, ",badge: "Popular, ";details: "Leveraging advanced machine learning,
-    our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.", 
-},
+      icon: <Search className="h-10 w-10 p-2 rounded-md bg-indigo-10o0 text-indigo-70o0" / >,link: "/marketplace, ",badge: "Popular, ";details: "Leveraging, advanced, machine learningour, matching, system analyzes, over, 10o0+ data, points, to create, perfect, connections between, talents, and opportunities.";
+},;
   {
-  title: "Talent Directory, ",description: "Browse our extensive database of verified AI and tech specialists,
-    filtered by expertise and availability.";
-      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" /, >,link: "/talent, ";details: "Every talent in our directory undergoes a rigorous verification process to ensure quality,
-    authenticit, y, and reliability."
-},
+  title: "Talent Directory, ",description: "Browse, our, extensive database, of, verified AI, and, tech specialists,;
+    filtered, by, expertise and availability.";
+      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-10o0 text-purple-70o0" / >,link: "/talent, ";details: "Every, talent, in our, directory, undergoes a, rigorous, verification process, to, ensure quality,;
+    authenticityand reliability.";
+},;
   {
-  title: "AI Services Hub, ",description: "Cutting-edge AI solutions including chatbots,
-    image generatio, n, video editing, and data analytics.";
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" /, >,link: "/ai-services, ",badge: "New, ";details: "From AI chatbots to advanced analytics,
-    our AI services help businesses leverage artificial intelligence for competitive advantage.", 
-},
+  title: "AI, Services, Hub, ",description: "Cutting-edge, AI, solutions including chatbots,;
+    image generatio, n, video editing, and, data, analytics.";
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-10o0 text-cyan-70o0" / >,link: "/ai-services, ",badge: "New, ";details: "From, AI, chatbots to, advanced, analyticsour AI, services, help businesses, leverage, artificial intelligence, for, competitive advantage.";
+},;
+  {;
+  title: "Equipment Catalog, ",description: "Find, specialized, hardware and, tech, equipment for, AI, development and research., ",icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-10o0 text-amber-70o0" / >,link: "/equipment, ";details: "Access cutting-edge, technology, with flexible, options, to buy,;
+    rentor, lease, specialized equipment, for, your tech projects.";
+},;
   {
-  title: "Equipment Catalog, ",description: "Find specialized hardware and tech equipment for AI development and research., ",icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" /, >,link: "/equipment, ";details: "Access cutting-edge technology with flexible options to buy,
-    ren, t, or lease specialized equipment for your tech projects."
-},
+  title: "Community Hub, ",description: "Connect, with, like-minded professionals,;
+    share insight, s, and, stay, updated with, industry, trends.";
+      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-10o0 text-emerald-70o0" / >,link: "/community, ";details: "Join, thousands, of tech, professionals, in discussions,;
+    AMAs, with, industry leadersand, exclusive, community events.";
+},;
   {
-  title: "Community Hub, ",description: "Connect with like-minded professionals,
-    share insight, s, and stay updated with industry trends.";
-      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" /, >,link: "/community, ";details: "Join thousands of tech professionals in discussions,
-    AMAs with industry leader, s, and exclusive community events."
-},
+  title: "Enterprise Solutions, ",description: "Custom-branded, hiring, portal,;
+    dedicated, talent, poo, l, and, powerful, admin controls, for, your organization.";
+      icon: <Building className="h-10 w-10 p-2 rounded-md bg-red-10o0 text-red-70o0" / >,link: "/enterprise, ";details: "Scale, your, talent acquisition, with, white-labeled solutions,;
+    analytics, dashboardsand, dedicated account managers.";
+},;
+  {;
+  title: "Mobile Experience, ",description: "Take, Zion, with you, on, the go, with, our mobile, app, for iOS, and, Android devices., ",icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-10o0 text-indigo-70o0" / >,link: "/mobile-launch, ",badge: "Featured, ";details: "Manage, your, projects,;
+    communicate, with, clients or, talentsand, receive real-time, updates, wherever you are.";
+},;
   {
-  title: "Enterprise Solutions, ",description: "Custom-branded hiring portal,
-    dedicated talent poo, l, and powerful admin controls for your organization.";
-      icon: <Building className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" /, >,link: "/enterprise, ";details: "Scale your talent acquisition with white-labeled solutions,
-    analytics dashboard, s, and dedicated account managers."
-},
-  {
-  title: "Mobile Experience, ",description: "Take Zion with you on the go with our mobile app for iOS and Android devices., ",icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" /, >,link: "/mobile-launch, ",badge: "Featured, ";details: "Manage your projects,
-    communicate with clients or talent, s, and receive real-time updates wherever you are."
-},
-  {
-  title: "IT Services Hub, ",description: "Comprehensive IT solutions including cloud migration,
+  title: "IT, Services, Hub, ",description: "Comprehensive, IT, solutions including, cloud, migration,;
     cybersecurit, y, network infrastructure, and 24/7 support.";
-      icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" /, >,link: "/it-services, ";details: "From cloud migration to cybersecurity audits,
-    our IT services help businesses modernize their infrastructure and enhance security.", 
-},
+      icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-10o0 text-pink-70o0" / >,link: "/it-services, ";details: "From, cloud, migration to, cybersecurity, auditsour IT, services, help businesses, modernize, their infrastructure, and, enhance security.";
+},;
   {
-  title: "Developer Tools, ",description: "Access our API documentation,
-    SDK, s, and integration guides to build on top of the Zion platform.";
-      icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" /, >,link: "/developers, ";details: "Leverage our robust API with comprehensive documentation,
-    code example, s, and developer support."
-},
+  title: "Developer Tools, ",description: "Access, our, API documentation,;
+    SDK, s, and, integration, guides to, build, on top, of, the Zion platform.";
+      icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-10o0 text-gray-70o0" / >,link: "/developers, ";details: "Leverage, our, robust API, with, comprehensive documentation,;
+    code, examplesand, developer support.";
+},;
   {
-  title: "Learning Resources, ",description: "Access tutorials,
-    course, s, and documentation to enhance your skills in AI and tech.";
-      icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" /, >,link: "/blog, ";details: "From beginner guides to advanced technical content,
-    our learning resources help you stay at the cutting edge of technology.", 
-},
+  title: "Learning Resources, ",description: "Access tutorials,;
+    course, s, and, documentation, to enhance, your, skills in, AI, and tech.";
+      icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-10o0 text-teal-70o0" / >,link: "/blog, ";details: "From, beginner, guides to, advanced, technical contentour, learning, resources help, you, stay at, the, cutting edge, of, technology.";
+},;
   {
-  title: "Project Management, ",description: "Streamlined tools to manage projects,
-    track milestone, s, and ensure successful delivery.";
-      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" /, >,link: "/dashboard/projects, ";details: "Our intuitive project management tools help you track progress,
-    manage deliverable, s, and ensure timely completion."
-},
+  title: "Project Management, ",description: "Streamlined, tools, to manage projects,;
+    track milestone, s, and, ensure, successful delivery.";
+      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-10o0 text-red-70o0" / >,link: "/dashboard/projects, ";details: "Our, intuitive, project management, tools, help you, track, progress,;
+    manage, deliverablesand, ensure timely completion.";
+},;
   {
-  title: "Micro SAAS Hub, ",description: "Affordable software solutions for growing businesses including CRM,
-    project managemen, t, and marketing tools.";
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" /, >,link: "/micro-saas, ",badge: "New, ";details: "Discover powerful,
-    affordable software solutions designed to help your business scale without breaking the bank.", 
-},
-  ]
-  return (
-    <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Explore Our Comprehensive Solution,
-    s</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From AI services to IT infrastructurediscover the tools and expertise you need to transform your business</p>
-        </div>
-
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {features.map((feature,
-    index) => (
-  <Card key={inde, x} className="bg-slate-800/50 border-white/10 hover: border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
-              <CardHeader className="pb-4">
-                <div className="flex items-center justify-between mb-2">
-                  {{feature.ico, n},
-  },
-  {feature.badge && (
-  <Badge variant="secondary" className="bg-blue-100 text-blue-800 hover: bg-blue-200">
-                      {{feature.badg, e}}</Badge>
+  title: "Micro, SAAS, Hub, ",description: "Affordable, software, solutions for, growing, businesses including CRM,;
+    project managemen, t, and, marketing, tools.";
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-10o0 text-violet-70o0" / >,link: "/micro-saas, ",badge: "New, ";details: "Discover, powerfulaffordable, software solutions, designed, to help, your, business scale, without, breaking the bank.", } ];
+  return(<section className="py-20 bg-gradient-to-b from-slate-90o0 to-slate-80o0">;
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;
+        <div className="text-center mb-16">;
+          <h2 className="text-3xl m,;
+    d:text-4xl font-bold text-white mb-4">;
+            Explore, Our, Comprehensive Solutions</h2>;
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">;
+            From, AI, services to, IT, infrastructurediscover the, tools, and expertise, you, need to, transform, your business</p>;
+        </div>;
+        <div className="grid grid-cols-1 md: grid-cols-2 l,;
+  g:grid-cols-3 gap-6 mb-12">;
+          {features.map((featureindex) => (;
+  <Card key={index} className="bg-slate-80o0/50 border-white/10 hover: border-blue-50o0/50 transition-all duration-30o0 hove,;
+    r:shadow-lg hove,;
+  r:shadow-blue-50o0/25">;
+              <CardHeader className="pb-4">;
+                <div className="flex items-center justify-between mb-2">;
+                  {{feature.icon},;
+  },;
+  {feature.badge && (;
+  <Badge variant="secondary" className="bg-blue-10o0 text-blue-80o0 hover: bg-blue-20o0">;
+                      {{feature.badge}}</Badge>;
                   )}
-                </div>
-                <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
-                <CardDescription className="text-gray-400">
-                  {{feature.description}}</CardDescription>
-              </CardHeader>
-
-              <CardContent className="pb-4">
-                <p className="text-sm text-gray-300 leading-relaxed">
-                  {{feature.details}}</p>
-              </CardContent>
-
-              <CardFooter>
-                <Link to={feature.link} className="w-full">
-                  <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover: from-blue-700 hover:to-cyan-700 text-white">
-                    Learn More,
-    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
+                </div>;
+                <CardTitle className="text-lg text-white">{feature.title}</CardTitle>;
+                <CardDescription className="text-gray-40o0">;
+                  {{feature.description}}</CardDescription>;
+              </CardHeader>;
+              <CardContent className="pb-4">;
+                <p className="text-sm text-gray-30o0 leading-relaxed">;
+                  {{feature.details}}</p>;
+              </CardContent>;
+              <CardFooter>;
+                <Link to={feature.link} className="w-full">;
+                  <Button className="w-full bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover: from-blue-70o0 hove,;
+  r:to-cyan-70o0 text-white">;
+                    Learn More,;
+    <ArrowRight className="w-4 h-4 ml-2" />;
+                  </Button>;
+                </Link>;
+              </CardFooter>;
+            </Card>;
           ))}
-        </div>
-
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 border border-blue-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Get Started?</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Contact our team to discuss your specific needs and discover how our solutions can help your business grow</p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3">
-                  Contact Us,
-    <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </Link>
-              <Link to="/services">
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover: bg-white/10 px-8 py-3">
-                  View All Services,
-    </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  ), 
+        </div>;
+        <div className="text-center">;
+          <div className="bg-gradient-to-r from-blue-60o0/10 to-cyan-60o0/10, border, border-blue-50o0/20 rounded-2xl p-8 max-w-4xl mx-auto">;
+            <h3 className="text-2xl font-bold text-white mb-4">;
+              Ready, to, Get Started?</h3>;
+            <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">;
+              Contact, our, team to, discuss, your specific, needs, and discover, how, our solutions, can, help your, business, grow</p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <Link to="/contact">;
+                <Button size="lg" className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hove,;
+    r:from-blue-70o0 hove,;
+  r:to-cyan-70o0 text-white px-8 py-3">;
+                  Contact Us,;
+    <ArrowRight className="w-4 h-4 ml-2" />;
+                </Button>;
+              </Link>;
+              <Link to="/services">;
+                <Button size="lg" variant="outline" className="border-white/20 text-white hover: bg-white/10 px-8 py-3">;
+                  View, All, Services,;
+    </Button>;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
+  ), ;
 };
+;

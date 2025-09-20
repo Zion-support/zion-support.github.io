@@ -1,25 +1,42 @@
-export type PricingTier = {
-  id: string,name: string,priceLabel: string,features: string[]
+export, type, PricingTier = {;
+  id: string,name: stringpriceLabe,;
+    l: stringfeature,;
+  s: string[];
 };
-export const PRICING_TIERS: PricingTier[] = [
-  { id: 'basic', name: 'Basic', priceLabel: '$', features: ['Email supportStandard SLA'] };
-  { id: 'pro', name: 'Pro', priceLabel: '$$', features: ['Priority supportEnhanced SLA'] };
-  { id: 'enterprise', name: 'Enterprise', priceLabel: '$$$', features: ['Dedicated managerCustom SLA'] }
+export, const, PRICING_TIERS: PricingTier[] = [;
+  { id: 'basic'name: 'Basic'priceLabe,;
+    l: '$'feature,;
+  s: ['Email, supportStandard,, SLA'] };
+  { id: 'pro', name: 'Pro'priceLabe,;
+    l: '$$'feature,;
+  s: ['Priority, supportEnhanced,, SLA'] };
+  { id: 'enterprise', name: 'Enterprise'priceLabe,;
+    l: '$$$'feature,;
+  s: ['Dedicated, managerCustom,, SLA'] };
 ];
-export type AdvancedService = {
-  id: string,title: string,category: string,pricingTier: PricingTier['id'],description: string;
-  link?: string
-},
-
-export const ADVANCED_SERVICES: AdvancedService[] = [
+export, type, AdvancedService = {;
+  id: string,title: string,category: stringpricingTie,;
+    r: PricingTier['id']descriptio,;
+  n: string;
+  link?: string;
+},;
+export, const, ADVANCED_SERVICES: AdvancedService[] = [;
   {
-    id: 'ai-business-intelligence',title: 'AI Business Intelligence',category: 'AI Services',pricingTier: 'pro',description: 'On-brand AI content and analytics to empower decision-making.',link: '/services/ai-business-intelligence'
+    i,;
+  d: 'ai-business-intelligence',title: 'AI, Business, Intelligence',category: 'AI Services',pricingTier: 'pro'descriptio,;
+    n: 'On-brand, AI, content and, analytics, to empower decision-making.'lin,;
+  k: '/services/ai-business-intelligence';
   };
   {
-    id: 'cloud-devops',title: 'Cloud & DevOps',category: 'IT Services',pricingTier: 'enterprise',description: 'Infrastructure automation and cloud strategy for scale and reliability.',link: '/services/cloud-devops'
-  },
+    id: 'cloud-devops',title: 'Cloud & DevOps',category: 'IT Services',pricingTier: 'enterprise'descriptio,;
+    n: 'Infrastructure, automation, and cloud, strategy, for scale, and, reliability.'lin,;
+  k: '/services/cloud-devops';
+  },;
   {
-    id: 'ai-compliance-copilot',title: 'AI Compliance Copilot',category: 'Security',pricingTier: 'enterprise',description: 'SOC2/ISO evidence automation and compliance workflows.',link: '/services/ai-compliance-copilot'
-  };
+    id: 'ai-compliance-copilot',title: 'AI, Compliance, Copilot',category: 'Security'pricingTier: 'enterprise'descriptio,;
+    n: 'SOC2/ISO, evidence, automation and, compliance, workflows.'lin,;
+  k: '/services/ai-compliance-copilot';
+ , };
 ];
-export const SERVICE_CATEGORIES = ['AI ServicesIT Services', 'Security'];
+export, const, SERVICE_CATEGORIES = ['AI, ServicesIT,, Services''Security'];
+;

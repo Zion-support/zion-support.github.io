@@ -1,588 +1,577 @@
-impor, t, Reac, t, { useStat, e, useEffect } from "react";
+impor, t, Reac, t, { useStateuseEffect } from "react";
 import { Link } from "react-router-dom";
-import { 
-  FileTex, t,
-  Downloa, d, 
-  Glob, e, 
-  Za, p, 
-  Brai, n, 
-  Shiel, d, 
-  Clou, d, 
-  User, s, 
-  ShoppingCar, t, 
-  BookOpe, n, 
-  MessageCircl, e, 
-  HelpCircl, e, 
-  Sta, r,
-  Ato, m,
-  Networ, k,
-  Ey, e,
-  PenToo, l,
-  TrendingU, p,
-  Rocke, t,
-  Hear, t,
-  Crow, n,
-  Sparkle, s,
-  Flam, e,
-  DollarSig, n,
-  Workflo, w,
-  Setting, s,
-  Loc, k,
-  BarChart, 3,
-  Cp, u,
-  Buildin, g,
-  Serve, r,
-  Activit, y,
-  GraduationCa, p,
-  Newspape, r,
-  Targe, t,
-  Briefcas, e,
-  Phon, e,
-  MapPi, n,
-  Mail
+import { ;
+  FileTex, t,;
+  Downloa, d,;
+  Glob, e,;
+  Za, p,;
+  Brai, n,;
+  Shiel, d,;
+  Clou, d,;
+  User, s,;
+  ShoppingCar, t,;
+  BookOpe, n,;
+  MessageCircl, e,;
+  HelpCircl, e,;
+  Sta, r,;
+  Ato, m,;
+  Networ, k,;
+  Ey, e,;
+  PenToo, l,;
+  TrendingU, p,;
+  Rocke, t,;
+  Hear, t,;
+  Crow, n,;
+  Sparkle, s,;
+  Flam, e,;
+  DollarSig, n,;
+  Workflo, w,;
+  Setting, s,;
+  Loc, k,;
+  BarChart, 3,;
+  Cp, u,;
+  Buildin, g,;
+  Serve, r,;
+  Activit, y,;
+  GraduationCa, p,;
+  Newspape, r,;
+  Targe, t,;
+  Briefcas, e,;
+  Phon, e,;
+  MapPinMail;
 } from "lucide-react";
 interface SitemapSection {
-  titl, e: strin, g,
-    ico, n: React.ComponentType<any>,descriptio, n: strin, g,
-    route, s: SitemapRoute[];
-  featured?: boolean
-}
-
+  titl, e: strin, g,;
+    ico, n: React.ComponentType<any>,descriptio, n: strin, groutes: SitemapRoute[];
+  featured?: boolean;
+};
 interface SitemapRoute {
-  pat, h: strin, g,
-    nam, e: strin, g,descriptio, n: strin, g,
+  pat, h: strin, g,;
+    nam, e: strin, g,descriptio, n: strin, g,;
     ico, n: React.ComponentType<any>,categor, y: string;
-  featured?: boolea, n,
-  external?: boolean
-}
-
-export const SitemapGenerato, r: React.FC = () => {
-  const [sitemapDa,  t, a, setSitemapDa, t, a] = useState<SitemapSection[]>([]);
-  const [searchQue, r, y, setSearchQue, r, y] = useState('');
-  const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState<string>('all');
+  featured?: booleanexternal?: boolean;
+};
+export, const, SitemapGenerato, r: React.FC = () => {;
+  const [sitemapDa,  t, a, setSitemapDa,, ta] = useState<SitemapSection[]>([]);
+  const [searchQue, r, y, setSearchQue,, ry] = useState('');
+  const [selectedCatego,  r,, ysetSelectedCategory] = useState<string>('all');
   useEffect(() => {
     generateSitemap();
   },  []);
   const generateSitemap = () => {
-    const sitema,  p: SitemapSection[] = [
+    const sitema,  p: SitemapSection[] = [;
       {
-        tit, l, e: 'Mai, n Page, s',
-    ic, o, n: Glo, b, e,descripti, o, n: 'Cor, e websit, e page, s an, d navigatio, n',
-    rout, e, s: [
-          { pa, t, h: '/',
-    na, m, e: 'Hom, e', descripti, o, n: 'Mai, n landin, g pag, e',
-    ic, o, n: Ho, m, e, catego, r, y: 'Mai, n' };
-          { pa, t, h: '/abou, t',
-    na, m, e: 'Abou, t U, s', descripti, o, n: 'Compan, y informatio, n an, d missio, n',
-    ic, o, n: Use, r, s, catego, r, y: 'Mai, n' };
-          { pa, t, h: '/contac, t',
-    na, m, e: 'Contac, t', descripti, o, n: 'Ge, t i, n touc, h wit, h ou, r tea, m',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'Mai, n' };
-          { pa, t, h: '/career, s',
-    na, m, e: 'Career, s', descripti, o, n: 'Jo, b opportunitie, s an, d caree, r informatio, n',
-    ic, o, n: Briefca, s, e, catego, r, y: 'Mai, n' };
-          { pa, t, h: '/partner, s',
-    na, m, e: 'Partner, s', descripti, o, n: 'Strategi, c partnership, s an, d collaboration, s',
-    ic, o, n: Use, r, s, catego, r, y: 'Mai, n' };
-          { pa, t, h: '/blo, g',
-    na, m, e: 'Blo, g', descripti, o, n: 'Lates, t new, s an, d insight, s',
-    ic, o, n: Newspap, e, r, catego, r, y: 'Mai, n' };
-          { pa, t, h: '/new, s',
-    na, m, e: 'New, s', descripti, o, n: 'Compan, y new, s an, d announcement, s',
-    ic, o, n: Newspap, e, r, catego, r, y: 'Mai, n' },
-          { pa, t, h: '/event, s',
-    na, m, e: 'Event, s', descripti, o, n: 'Upcomin, g event, s an, d webinar, s',
-    ic, o, n: Calend, a, r, catego, r, y: 'Mai, n' }
-        ]
+        tit, l, e: 'Mai, n Page, s',;
+    ic, o, n: Glo, b, e,descripti, o, n: 'Cor, e websit, e page, s an, d navigatio, n',;
+    rout, e, s: [;
+          { pa, t, h: '/',;
+    na, m, e: 'Hom, e', descripti, o, n: 'Mai, n landin, g pag, e',;
+    ic, o, n: Ho, m, e, catego, ry: 'Main' };
+          { pa, t, h: '/abou, t',;
+    na, m, e: 'Abou, t U, s', descripti, o, n: 'Compan, y informatio, n an, d missio, n',;
+    ic, o, n: Use, r, s, catego, ry: 'Main' };
+          { pa, t, h: '/contac, t',;
+    na, m, e: 'Contac, t', descripti, o, n: 'Ge, t i, n touc, h wit, h ou, r tea, m',;
+    ic, o, n: MessageCirc, l, e, catego, ry: 'Main' };
+          { pa, t, h: '/career, s',;
+    na, m, e: 'Career, s', descripti, o, n: 'Jo, b opportunitie, s an, d caree, r informatio, n',;
+    ic, o, n: Briefca, s, e, catego, ry: 'Main' };
+          { pa, t, h: '/partner, s',;
+    na, m, e: 'Partner, s', descripti, o, n: 'Strategi, c partnership, s an, d collaboration, s',;
+    ic, o, n: Use, r, s, catego, ry: 'Main' };
+          { pa, t, h: '/blo, g',;
+    na, m, e: 'Blo, g', descripti, o, n: 'Lates, t new, s an, d insight, s',;
+    ic, o, n: Newspap, e, r, catego, ry: 'Main' };
+          { pa, t, h: '/new, s',;
+    na, m, e: 'New, s', descripti, o, n: 'Compan, y new, s an, d announcement, s',;
+    ic, o, n: Newspap, e, r, catego, ry: 'Main' },;
+          { pa, t, h: '/event, s',;
+    na, m, e: 'Event, s', descripti, o, n: 'Upcomin, g event, s an, d webinar, s',;
+    ic, o, n: Calend, a, r, category: 'Main' }
+      ,  ];
       };
       {
-        titl, e: 'Featured Services 2026-2027',
-    ico, n: Sta, r,descriptio, n: 'Latest and most innovative service offerings',
-    feature, d: tru, e,route, s: [
-          { pa, t, h: '/services202, 6',
-    na, m, e: '202, 6 Service, s Overvie, w', descripti, o, n: 'Revolutionar, y A, I & Quantu, m Solution, s',
-    ic, o, n: St, a, r, catego, r, y: 'Feature, d',
-    featur, e, d: tru, e };
-          { pa, t, h: '/services202, 7',
-    na, m, e: '202, 7 Service, s Overvie, w', descripti, o, n: 'Cuttin, g-edg, e Innovatio, n & Emergin, g Tec, h',
-    ic, o, n: St, a, r, catego, r, y: 'Feature, d',
-    featur, e, d: tru, e };
-          { pa, t, h: '/ultimat, e-service, s-showcas, e-202, 6',
-    na, m, e: 'Ultimat, e Service, s 202, 6', descripti, o, n: 'Comprehensiv, e servic, e portfoli, o',
-    ic, o, n: Cro, w, n, catego, r, y: 'Feature, d',
-    featur, e, d: tru, e },
-          { pa, t, h: '/comprehensiv, e-service, s-showcas, e-202, 5',
-    na, m, e: 'Comprehensiv, e Service, s 202, 5', descripti, o, n: 'Ful, l servic, e catalo, g overvie, w',
-    ic, o, n: Glo, b, e, catego, r, y: 'Feature, d',
-    featur, e, d: tru, e }
-        ]
+        titl, e: 'Featured, Services, 20o26-20o27',;
+    ico, n: Sta, r,descriptio, n: 'Latest, and, most innovative, service, offerings',;
+    feature, d: tru, e,route, s: [;
+          { pa, t, h: '/services20o2, 6',;
+    na, m, e: '20o2, 6 Service, s Overvie, w', descripti, o, n: 'Revolutionar, y A, I & Quantu, m Solution, s',;
+    ic, o, n: St, a, r, catego, r, y: 'Feature, d',;
+    featur, ed: true };
+          { pa, t, h: '/services20o2, 7',;
+    na, m, e: '20o2, 7 Service, s Overvie, w', descripti, o, n: 'Cuttin, g-edg, e Innovatio, n & Emergin, g Tec, h',;
+    ic, o, n: St, a, r, catego, r, y: 'Feature, d',;
+    featur, ed: true };
+          { pa, t, h: '/ultimat, e-service, s-showcas, e-20o2, 6',;
+    na, m, e: 'Ultimat, e Service, s 20o2, 6', descripti, o, n: 'Comprehensiv, e servic, e portfoli, o',;
+    ic, o, n: Cro, w, n, catego, r, y: 'Feature, d',;
+    featur, ed: true },;
+          { pa, t, h: '/comprehensiv, e-service, s-showcas, e-20o2, 5',;
+    na, m, e: 'Comprehensiv, e Service, s 20o2, 5', descripti, o, n: 'Ful, l servic, e catalo, g overvie, w',;
+    ic, o, n: Glo, b, e, catego, r, y: 'Feature, d',;
+    featured: true }
+      ,  ];
       };
       {
-        titl, e: 'AI & Machine Learning Services',
-    ico, n: Brai, n,descriptio, n: 'Advanced artificial intelligence and machine learning solutions',
-    route, s: [
-          { pa, t, h: '/service, s/a, i-busines, s-intelligenc, e',
-    na, m, e: 'A, I Busines, s Intelligenc, e', descripti, o, n: 'Advance, d analytic, s & M, L insight, s',
-    ic, o, n: BarChar, t, 3, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-complianc, e-assistan, t',
-    na, m, e: 'A, I Complianc, e Assistan, t', descripti, o, n: 'Automate, d regulator, y complianc, e',
-    ic, o, n: Shie, l, d, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-sale, s-copilo, t',
-    na, m, e: 'A, I Sale, s Copilo, t', descripti, o, n: 'Intelligen, t sale, s optimizatio, n',
-    ic, o, n: Use, r, s, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-se, o',
-    na, m, e: 'A, I-Powere, d SE, O', descripti, o, n: 'Machin, e learnin, g SE, O optimizatio, n',
-    ic, o, n: Trending, U, p, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/intervie, w-assessmen, t',
-    na, m, e: 'Intervie, w Assessmen, t A, I', descripti, o, n: 'A, I-powere, d candidat, e evaluatio, n',
-    ic, o, n: Use, r, s, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-conten, t-marketin, g-suit, e',
-    na, m, e: 'A, I Conten, t Marketin, g Suit, e', descripti, o, n: 'Automate, d conten, t creatio, n an, d marketin, g',
-    ic, o, n: PenTo, o, l, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-suppl, y-chai, n-optimizatio, n',
-    na, m, e: 'A, I Suppl, y Chai, n Optimizatio, n', descripti, o, n: 'Intelligen, t suppl, y chai, n managemen, t',
-    ic, o, n: Trending, U, p, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-healthcar, e-platfor, m',
-    na, m, e: 'A, I Healthcar, e Platfor, m', descripti, o, n: 'Healthcar, e technolog, y solution, s',
-    ic, o, n: Hea, r, t, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-cybersecurit, y-platfor, m',
-    na, m, e: 'A, I Cybersecurit, y Platfor, m', descripti, o, n: 'Advance, d securit, y wit, h A, I',
-    ic, o, n: Shie, l, d, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-quantu, m-hybri, d-platfor, m',
-    na, m, e: 'A, I Quantu, m Hybri, d Platfor, m', descripti, o, n: 'Quantu, m-A, I hybri, d solution, s',
-    ic, o, n: At, o, m, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-autonomou, s-researc, h-assistan, t',
-    na, m, e: 'A, I Autonomou, s Researc, h Assistan, t', descripti, o, n: 'Automate, d researc, h an, d analysi, s',
-    ic, o, n: Bra, i, n, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-projec, t-managemen, t',
-    na, m, e: 'A, I Projec, t Managemen, t', descripti, o, n: 'Intelligen, t projec, t coordinatio, n',
-    ic, o, n: Targ, e, t, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-custome, r-suppor, t-automatio, n',
-    na, m, e: 'A, I Custome, r Suppor, t Automatio, n', descripti, o, n: 'Automate, d custome, r servic, e',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'A, I & M, L' };
-          { pa, t, h: '/service, s/a, i-financia, l-analytic, s',
-    na, m, e: 'A, I Financia, l Analytic, s', descripti, o, n: 'Financia, l dat, a analysi, s an, d insight, s',
-    ic, o, n: DollarSi, g, n, catego, r, y: 'A, I & M, L' },
-          { pa, t, h: '/service, s/a, i-marketin, g-automatio, n',
-    na, m, e: 'A, I Marketin, g Automatio, n', descripti, o, n: 'Intelligen, t marketin, g workflow, s',
-    ic, o, n: Trending, U, p, catego, r, y: 'A, I & M, L' }
-        ]
+        titl, e: 'AI & Machine, Learning, Services',;
+    ico, n: Brai, n,descriptio, n: 'Advanced, artificial, intelligence and, machine, learning solutions',;
+    route, s: [;
+          { pa, t, h: '/service, s/a, i-busines, s-intelligenc, e',;
+    na, m, e: 'A, I Busines, s Intelligenc, e', descripti, o, n: 'Advance, d analytic, s & M, L insight, s',;
+    ic, o, n: BarChar, t, 3, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-complianc, e-assistan, t',;
+    na, m, e: 'A, I Complianc, e Assistan, t', descripti, o, n: 'Automate, d regulator, y complianc, e',;
+    ic, o, n: Shie, l, d, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-sale, s-copilo, t',;
+    na, m, e: 'A, I Sale, s Copilo, t', descripti, o, n: 'Intelligen, t sale, s optimizatio, n',;
+    ic, o, n: Use, r, s, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-se, o',;
+    na, m, e: 'A, I-Powere, d SE, O', descripti, o, n: 'Machin, e learnin, g SE, O optimizatio, n',;
+    ic, o, n: Trending, U, p, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/intervie, w-assessmen, t',;
+    na, m, e: 'Intervie, w Assessmen, t A, I', descripti, o, n: 'A, I-powere, d candidat, e evaluatio, n',;
+    ic, o, n: Use, r, s, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-conten, t-marketin, g-suit, e',;
+    na, m, e: 'A, I Conten, t Marketin, g Suit, e', descripti, o, n: 'Automate, d conten, t creatio, n an, d marketin, g',;
+    ic, o, n: PenTo, o, l, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-suppl, y-chai, n-optimizatio, n',;
+    na, m, e: 'A, I Suppl, y Chai, n Optimizatio, n', descripti, o, n: 'Intelligen, t suppl, y chai, n managemen, t',;
+    ic, o, n: Trending, U, p, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-healthcar, e-platfor, m',;
+    na, m, e: 'A, I Healthcar, e Platfor, m', descripti, o, n: 'Healthcar, e technolog, y solution, s',;
+    ic, o, n: Hea, r, t, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-cybersecurit, y-platfor, m',;
+    na, m, e: 'A, I Cybersecurit, y Platfor, m', descripti, o, n: 'Advance, d securit, y wit, h A, I',;
+    ic, o, n: Shie, l, d, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-quantu, m-hybri, d-platfor, m',;
+    na, m, e: 'A, I Quantu, m Hybri, d Platfor, m', descripti, o, n: 'Quantu, m-A, I hybri, d solution, s',;
+    ic, o, n: At, o, m, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-autonomou, s-researc, h-assistan, t',;
+    na, m, e: 'A, I Autonomou, s Researc, h Assistan, t', descripti, o, n: 'Automate, d researc, h an, d analysi, s',;
+    ic, o, n: Bra, i, n, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-projec, t-managemen, t',;
+    na, m, e: 'A, I Projec, t Managemen, t', descripti, o, n: 'Intelligen, t projec, t coordinatio, n',;
+    ic, o, n: Targ, e, t, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-custome, r-suppor, t-automatio, n',;
+    na, m, e: 'A, I Custome, r Suppor, t Automatio, n', descripti, o, n: 'Automate, d custome, r servic, e',;
+    ic, o, n: MessageCirc, l, e, catego, r, y: 'AI & ML' };
+          { pa, t, h: '/service, s/a, i-financia, l-analytic, s',;
+    na, m, e: 'A, I Financia, l Analytic, s', descripti, o, n: 'Financia, l dat, a analysi, s an, d insight, s',;
+    ic, o, n: DollarSi, g, n, catego, r, y: 'AI & ML' },;
+          { pa, t, h: '/service, s/a, i-marketin, g-automatio, n',;
+    na, m, e: 'A, I Marketin, g Automatio, n', descripti, o, n: 'Intelligen, t marketin, g workflow, s',;
+    ic, o, n: Trending, U, p, catego, ry: 'AI & ML' }
+      ,  ];
       };
       {
-        titl, e: 'Cloud & DevOps Services',
-    ico, n: Clou, d,descriptio, n: 'Cloud infrastructure and development operations solutions',
-    route, s: [
-          { pa, t, h: '/service, s/clou, d-devop, s',
-    na, m, e: 'Clou, d DevOp, s', descripti, o, n: 'Infrastructur, e automatio, n & scalin, g',
-    ic, o, n: Clo, u, d, catego, r, y: 'Clou, d & DevOp, s' };
-          { pa, t, h: '/service, s/i, t-infrastructur, e',
-    na, m, e: 'I, T Infrastructur, e', descripti, o, n: 'Enterpris, e infrastructur, e solution, s',
-    ic, o, n: Serv, e, r, catego, r, y: 'Clou, d & DevOp, s' };
-          { pa, t, h: '/service, s/finop, s-adviso, r',
-    na, m, e: 'FinOp, s Adviso, r', descripti, o, n: 'Clou, d cos, t optimizatio, n',
-    ic, o, n: DollarSi, g, n, catego, r, y: 'Clou, d & DevOp, s' };
-          { pa, t, h: '/service, s/clou, d-finop, s-optimize, r',
-    na, m, e: 'Clou, d FinOp, s Optimize, r', descripti, o, n: 'Financia, l operation, s automatio, n',
-    ic, o, n: BarChar, t, 3, catego, r, y: 'Clou, d & DevOp, s' };
-          { pa, t, h: '/service, s/digita, l-transformatio, n',
-    na, m, e: 'Digita, l Transformatio, n', descripti, o, n: 'Strategi, c technolog, y consultin, g',
-    ic, o, n: Z, a, p, catego, r, y: 'Clou, d & DevOp, s' },
-          { pa, t, h: '/service, s/digita, l-twi, n',
-    na, m, e: 'Digita, l Twi, n', descripti, o, n: 'Virtua, l syste, m replica, s',
-    ic, o, n: E, y, e, catego, r, y: 'Clou, d & DevOp, s' }
-        ]
+        titl, e: 'Cloud & DevOps Services',;
+    ico, n: Clou, d,descriptio, n: 'Cloud, infrastructure, and development, operations, solutions',;
+    route, s: [;
+          { pa, t, h: '/service, s/clou, d-devop, s',;
+    na, m, e: 'Clou, d DevOp, s', descripti, o, n: 'Infrastructur, e automatio, n & scalin, g',;
+    ic, o, n: Clo, u, d, catego, r, y: 'Cloud & DevOps' };
+          { pa, t, h: '/service, s/i, t-infrastructur, e',;
+    na, m, e: 'I, T Infrastructur, e', descripti, o, n: 'Enterpris, e infrastructur, e solution, s',;
+    ic, o, n: Serv, e, r, catego, r, y: 'Cloud & DevOps' };
+          { pa, t, h: '/service, s/finop, s-adviso, r',;
+    na, m, e: 'FinOp, s Adviso, r', descripti, o, n: 'Clou, d cos, t optimizatio, n',;
+    ic, o, n: DollarSi, g, n, catego, r, y: 'Cloud & DevOps' };
+          { pa, t, h: '/service, s/clou, d-finop, s-optimize, r',;
+    na, m, e: 'Clou, d FinOp, s Optimize, r', descripti, o, n: 'Financia, l operation, s automatio, n',;
+    ic, o, n: BarChar, t, 3, catego, r, y: 'Cloud & DevOps' };
+          { pa, t, h: '/service, s/digita, l-transformatio, n',;
+    na, m, e: 'Digita, l Transformatio, n', descripti, o, n: 'Strategi, c technolog, y consultin, g',;
+    ic, o, n: Z, a, p, catego, r, y: 'Cloud & DevOps' },;
+          { pa, t, h: '/service, s/digita, l-twi, n',;
+    na, m, e: 'Digita, l Twi, n', descripti, o, n: 'Virtua, l syste, m replica, s',;
+    ic, o, n: E, y, e, catego, ry: 'Cloud & DevOps' }
+      ,  ];
       };
       {
-        titl, e: 'Cybersecurity & Privacy',
-    ico, n: Shiel, d,descriptio, n: 'Security solutions and privacy protection services',
-    route, s: [
-          { pa, t, h: '/service, s/securit, y-header, s-cs, p',
-    na, m, e: 'Securit, y Header, s & CS, P', descripti, o, n: 'We, b securit, y hardenin, g',
-    ic, o, n: Lo, c, k, catego, r, y: 'Cybersecurit, y' };
-          { pa, t, h: '/service, s/ds, r-porta, l',
-    na, m, e: 'DS, R Privac, y Porta, l', descripti, o, n: 'GDP, R/CCP, A complianc, e',
-    ic, o, n: Shie, l, d, catego, r, y: 'Cybersecurit, y' };
-          { pa, t, h: '/service, s/zer, o-trus, t-networ, k-acces, s',
-    na, m, e: 'Zer, o Trus, t Networ, k Acces, s', descripti, o, n: 'Advance, d networ, k securit, y',
-    ic, o, n: Lo, c, k, catego, r, y: 'Cybersecurit, y' };
-          { pa, t, h: '/privac, y',
-    na, m, e: 'Privac, y Polic, y', descripti, o, n: 'Dat, a protectio, n an, d privac, y',
-    ic, o, n: Shie, l, d, catego, r, y: 'Cybersecurit, y' },
-          { pa, t, h: '/securit, y',
-    na, m, e: 'Securit, y', descripti, o, n: 'Securit, y informatio, n an, d policie, s',
-    ic, o, n: Shie, l, d, catego, r, y: 'Cybersecurit, y' }
-        ]
+        titl, e: 'Cybersecurity & Privacy',;
+    ico, n: Shiel, d,descriptio, n: 'Security, solutions, and privacy, protection, services',;
+    route, s: [;
+          { pa, t, h: '/service, s/securit, y-header, s-cs, p',;
+    na, m, e: 'Securit, y Header, s & CS, P', descripti, o, n: 'We, b securit, y hardenin, g',;
+    ic, o, n: Lo, c, k, catego, ry: 'Cybersecurity' };
+          { pa, t, h: '/service, s/ds, r-porta, l',;
+    na, m, e: 'DS, R Privac, y Porta, l', descripti, o, n: 'GDP, R/CCP, A complianc, e',;
+    ic, o, n: Shie, l, d, catego, ry: 'Cybersecurity' };
+          { pa, t, h: '/service, s/zer, o-trus, t-networ, k-acces, s',;
+    na, m, e: 'Zer, o Trus, t Networ, k Acces, s', descripti, o, n: 'Advance, d networ, k securit, y',;
+    ic, o, n: Lo, c, k, catego, ry: 'Cybersecurity' };
+          { pa, t, h: '/privac, y',;
+    na, m, e: 'Privac, y Polic, y', descripti, o, n: 'Dat, a protectio, n an, d privac, y',;
+    ic, o, n: Shie, l, d, catego, ry: 'Cybersecurity' },;
+          { pa, t, h: '/securit, y',;
+    na, m, e: 'Securit, y', descripti, o, n: 'Securit, y informatio, n an, d policie, s',;
+    ic, o, n: Shie, l, d, category: 'Cybersecurity' }
+      ,  ];
       };
       {
-        titl, e: 'Emerging Technologies',
-    ico, n: Ato, m,descriptio, n: 'Cutting-edge and next-generation technology solutions',
-    route, s: [
-          { pa, t, h: '/service, s/quantu, m-computin, g',
-    na, m, e: 'Quantu, m Computin, g', descripti, o, n: 'Nex, t-ge, n computationa, l powe, r',
-    ic, o, n: At, o, m, catego, r, y: 'Emergin, g Tec, h' };
-          { pa, t, h: '/service, s/io, t-edg, e-computin, g',
-    na, m, e: 'Io, T Edg, e Computin, g', descripti, o, n: 'Smar, t devic, e network, s',
-    ic, o, n: Netwo, r, k, catego, r, y: 'Emergin, g Tec, h' };
-          { pa, t, h: '/service, s/a, i-conten, t-creatio, n',
-    na, m, e: 'A, I Conten, t Creatio, n', descripti, o, n: 'Automate, d conten, t generatio, n',
-    ic, o, n: PenTo, o, l, catego, r, y: 'Emergin, g Tec, h' };
-          { pa, t, h: '/service, s/a, i-h, r-platfor, m',
-    na, m, e: 'A, I H, R Platfor, m', descripti, o, n: 'Huma, n resource, s automatio, n',
-    ic, o, n: Use, r, s, catego, r, y: 'Emergin, g Tec, h' };
-          { pa, t, h: '/service, s/sustainabl, e-technolog, y',
-    na, m, e: 'Sustainabl, e Technolog, y', descripti, o, n: 'Gree, n an, d ec, o-friendl, y solution, s',
-    ic, o, n: Glo, b, e, catego, r, y: 'Emergin, g Tec, h' };
-          { pa, t, h: '/service, s/a, i-predictiv, e-maintenanc, e',
-    na, m, e: 'A, I Predictiv, e Maintenanc, e', descripti, o, n: 'Predictiv, e analytic, s fo, r maintenanc, e',
-    ic, o, n: Trending, U, p, catego, r, y: 'Emergin, g Tec, h' },
-          { pa, t, h: '/service, s/quantu, m-machin, e-learnin, g',
-    na, m, e: 'Quantu, m Machin, e Learnin, g', descripti, o, n: 'Quantu, m-enhance, d M, L algorithm, s',
-    ic, o, n: Bra, i, n, catego, r, y: 'Emergin, g Tec, h' }
-        ]
+        titl, e: 'Emerging Technologies',;
+    ico, n: Ato, m,descriptio, n: 'Cutting-edge, and, next-generation, technology, solutions',;
+    route, s: [;
+          { pa, t, h: '/service, s/quantu, m-computin, g',;
+    na, m, e: 'Quantu, m Computin, g', descripti, o, n: 'Nex, t-ge, n computationa, l powe, r',;
+    ic, o, n: At, o, m, catego, r, y: 'Emerging Tech' };
+          { pa, t, h: '/service, s/io, t-edg, e-computin, g',;
+    na, m, e: 'Io, T Edg, e Computin, g', descripti, o, n: 'Smar, t devic, e network, s',;
+    ic, o, n: Netwo, r, k, catego, r, y: 'Emerging Tech' };
+          { pa, t, h: '/service, s/a, i-conten, t-creatio, n',;
+    na, m, e: 'A, I Conten, t Creatio, n', descripti, o, n: 'Automate, d conten, t generatio, n',;
+    ic, o, n: PenTo, o, l, catego, r, y: 'Emerging Tech' };
+          { pa, t, h: '/service, s/a, i-h, r-platfor, m',;
+    na, m, e: 'A, I H, R Platfor, m', descripti, o, n: 'Huma, n resource, s automatio, n',;
+    ic, o, n: Use, r, s, catego, r, y: 'Emerging Tech' };
+          { pa, t, h: '/service, s/sustainabl, e-technolog, y',;
+    na, m, e: 'Sustainabl, e Technolog, y', descripti, o, n: 'Gree, n an, d ec, o-friendl, y solution, s',;
+    ic, o, n: Glo, b, e, catego, r, y: 'Emerging Tech' };
+          { pa, t, h: '/service, s/a, i-predictiv, e-maintenanc, e',;
+    na, m, e: 'A, I Predictiv, e Maintenanc, e', descripti, o, n: 'Predictiv, e analytic, s fo, r maintenanc, e',;
+    ic, o, n: Trending, U, p, catego, r, y: 'Emerging Tech' },;
+          { pa, t, h: '/service, s/quantu, m-machin, e-learnin, g',;
+    na, m, e: 'Quantu, m Machin, e Learnin, g', descripti, o, n: 'Quantu, m-enhance, d M, L algorithm, s',;
+    ic, o, n: Bra, i, n, catego, ry: 'Emerging Tech' }
+      ,  ];
       };
       {
-        titl, e: 'Data & Analytics',
-    ico, n: BarChart, 3,descriptio, n: 'Business intelligence and data analysis services',
-    route, s: [
-          { pa, t, h: '/service, s/dat, a-analytic, s',
-    na, m, e: 'Dat, a Analytic, s', descripti, o, n: 'Busines, s intelligenc, e & insight, s',
-    ic, o, n: BarChar, t, 3, catego, r, y: 'Dat, a & Analytic, s' };
-          { pa, t, h: '/service, s/websit, e-analytic, s',
-    na, m, e: 'Websit, e Analytic, s', descripti, o, n: 'We, b performanc, e an, d use, r behavio, r',
-    ic, o, n: BarChar, t, 3, catego, r, y: 'Dat, a & Analytic, s' };
-          { pa, t, h: '/service, s/affiliat, e-trackin, g',
-    na, m, e: 'Affiliat, e Trackin, g', descripti, o, n: 'Affiliat, e progra, m managemen, t',
-    ic, o, n: Trending, U, p, catego, r, y: 'Dat, a & Analytic, s' },
-          { pa, t, h: '/analytic, s',
-    na, m, e: 'Analytic, s Dashboar, d', descripti, o, n: 'Performanc, e metric, s an, d reportin, g',
-    ic, o, n: BarChar, t, 3, catego, r, y: 'Dat, a & Analytic, s' }
-        ]
+        titl, e: 'Data & Analytics',;
+    ico, n: BarChart, 3,descriptio, n: 'Business, intelligence, and data, analysis, services',;
+    route, s: [;
+          { pa, t, h: '/service, s/dat, a-analytic, s',;
+    na, m, e: 'Dat, a Analytic, s', descripti, o, n: 'Busines, s intelligenc, e & insight, s',;
+    ic, o, n: BarChar, t, 3, catego, r, y: 'Data & Analytics' };
+          { pa, t, h: '/service, s/websit, e-analytic, s',;
+    na, m, e: 'Websit, e Analytic, s', descripti, o, n: 'We, b performanc, e an, d use, r behavio, r',;
+    ic, o, n: BarChar, t, 3, catego, r, y: 'Data & Analytics' };
+          { pa, t, h: '/service, s/affiliat, e-trackin, g',;
+    na, m, e: 'Affiliat, e Trackin, g', descripti, o, n: 'Affiliat, e progra, m managemen, t',;
+    ic, o, n: Trending, U, p, catego, r, y: 'Data & Analytics' },;
+          { pa, t, h: '/analytic, s',;
+    na, m, e: 'Analytic, s Dashboar, d', descripti, o, n: 'Performanc, e metric, s an, d reportin, g',;
+    ic, o, n: BarChar, t, 3, catego, ry: 'Data & Analytics' }
+      ,  ];
       };
       {
-        titl, e: 'Micro SaaS Solutions',
-    ico, n: Za, p,descriptio, n: 'Specialized software-as-a-service applications',
-    route, s: [
-          { pa, t, h: '/service, s/micr, o-saa, s-solution, s',
-    na, m, e: 'Micr, o Saa, S Platfor, m', descripti, o, n: 'Nich, e softwar, e solution, s',
-    ic, o, n: ShoppingCa, r, t, catego, r, y: 'Micr, o Saa, S' };
-          { pa, t, h: '/service, s/micr, o-cr, m',
-    na, m, e: 'Micr, o CR, M', descripti, o, n: 'Custome, r relationshi, p managemen, t',
-    ic, o, n: Use, r, s, catego, r, y: 'Micr, o Saa, S' };
-          { pa, t, h: '/service, s/helpdes, k',
-    na, m, e: 'Helpdes, k Platfor, m', descripti, o, n: 'Custome, r suppor, t syste, m',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micr, o Saa, S' };
-          { pa, t, h: '/service, s/a, i-aut, o-emai, l-responde, r',
-    na, m, e: 'A, I Aut, o Emai, l Responde, r', descripti, o, n: 'Automate, d emai, l managemen, t',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micr, o Saa, S' };
-          { pa, t, h: '/service, s/custome, r-feedbac, k-survey, s',
-    na, m, e: 'Custome, r Feedbac, k Survey, s', descripti, o, n: 'Feedbac, k collectio, n an, d analysi, s',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micr, o Saa, S' };
-          { pa, t, h: '/service, s/a, i-complianc, e-copilo, t',
-    na, m, e: 'A, I Complianc, e Copilo, t', descripti, o, n: 'Complianc, e assistanc, e an, d monitorin, g',
-    ic, o, n: Shie, l, d, catego, r, y: 'Micr, o Saa, S' };
-          { pa, t, h: '/service, s/ll, m-conten, t-studi, o',
-    na, m, e: 'LL, M Conten, t Studi, o', descripti, o, n: 'Larg, e languag, e mode, l conten, t creatio, n',
-    ic, o, n: PenTo, o, l, catego, r, y: 'Micr, o Saa, S' };
-          { pa, t, h: '/service, s/return, s-managemen, t',
-    na, m, e: 'Return, s Managemen, t', descripti, o, n: 'Produc, t return, s processin, g',
-    ic, o, n: ShoppingCa, r, t, catego, r, y: 'Micr, o Saa, S' };
-          { pa, t, h: '/service, s/emai, l-sequence, r',
-    na, m, e: 'Emai, l Sequence, r', descripti, o, n: 'Automate, d emai, l sequence, s',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micr, o Saa, S' };
-          { pa, t, h: '/service, s/podcas, t-transcriptio, n',
-    na, m, e: 'Podcas, t Transcriptio, n', descripti, o, n: 'Audi, o conten, t transcriptio, n',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micr, o Saa, S' },
-          { pa, t, h: '/service, s/mobil, e-surve, y',
-    na, m, e: 'Mobil, e Surve, y', descripti, o, n: 'Mobil, e surve, y solution, s',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micr, o Saa, S' }
-        ]
+        titl, e: 'Micro, SaaS, Solutions',;
+    ico, n: Za, p,descriptio, n: 'Specialized software-as-a-service applications',;
+    route, s: [;
+          { pa, t, h: '/service, s/micr, o-saa, s-solution, s',;
+    na, m, e: 'Micr, o Saa, S Platfor, m', descripti, o, n: 'Nich, e softwar, e solution, s',;
+    ic, o, n: ShoppingCa, r, t, catego, r, y: 'Micro SaaS' };
+          { pa, t, h: '/service, s/micr, o-cr, m',;
+    na, m, e: 'Micr, o CR, M', descripti, o, n: 'Custome, r relationshi, p managemen, t',;
+    ic, o, n: Use, r, s, catego, r, y: 'Micro SaaS' };
+          { pa, t, h: '/service, s/helpdes, k',;
+    na, m, e: 'Helpdes, k Platfor, m', descripti, o, n: 'Custome, r suppor, t syste, m',;
+    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micro SaaS' };
+          { pa, t, h: '/service, s/a, i-aut, o-emai, l-responde, r',;
+    na, m, e: 'A, I Aut, o Emai, l Responde, r', descripti, o, n: 'Automate, d emai, l managemen, t',;
+    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micro SaaS' };
+          { pa, t, h: '/service, s/custome, r-feedbac, k-survey, s',;
+    na, m, e: 'Custome, r Feedbac, k Survey, s', descripti, o, n: 'Feedbac, k collectio, n an, d analysi, s',;
+    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micro SaaS' };
+          { pa, t, h: '/service, s/a, i-complianc, e-copilo, t',;
+    na, m, e: 'A, I Complianc, e Copilo, t', descripti, o, n: 'Complianc, e assistanc, e an, d monitorin, g',;
+    ic, o, n: Shie, l, d, catego, r, y: 'Micro SaaS' };
+          { pa, t, h: '/service, s/ll, m-conten, t-studi, o',;
+    na, m, e: 'LL, M Conten, t Studi, o', descripti, o, n: 'Larg, e languag, e mode, l conten, t creatio, n',;
+    ic, o, n: PenTo, o, l, catego, r, y: 'Micro SaaS' };
+          { pa, t, h: '/service, s/return, s-managemen, t',;
+    na, m, e: 'Return, s Managemen, t', descripti, o, n: 'Produc, t return, s processin, g',;
+    ic, o, n: ShoppingCa, r, t, catego, r, y: 'Micro SaaS' };
+          { pa, t, h: '/service, s/emai, l-sequence, r',;
+    na, m, e: 'Emai, l Sequence, r', descripti, o, n: 'Automate, d emai, l sequence, s',;
+    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micro SaaS' };
+          { pa, t, h: '/service, s/podcas, t-transcriptio, n',;
+    na, m, e: 'Podcas, t Transcriptio, n', descripti, o, n: 'Audi, o conten, t transcriptio, n',;
+    ic, o, n: MessageCirc, l, e, catego, r, y: 'Micro SaaS' },;
+          { pa, t, h: '/service, s/mobil, e-surve, y',;
+    na, m, e: 'Mobil, e Surve, y', descripti, o, n: 'Mobil, e surve, y solution, s',;
+    ic, o, n: MessageCirc, l, e, catego, ry: 'Micro SaaS' }
+      ,  ];
       };
       {
-        titl, e: 'Business & Support',
-    ico, n: Buildin, g,descriptio, n: 'Business solutions and customer support services',
-    route, s: [
-          { pa, t, h: '/marketplac, e',
-    na, m, e: 'Marketplac, e', descripti, o, n: 'Produc, t an, d servic, e marketplac, e',
-    ic, o, n: ShoppingCa, r, t, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/talen, t',
-    na, m, e: 'Talen, t Solution, s', descripti, o, n: 'Huma, n resource, s an, d recruitmen, t',
-    ic, o, n: Use, r, s, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/equipmen, t',
-    na, m, e: 'Equipmen, t Service, s', descripti, o, n: 'Hardwar, e an, d equipmen, t solution, s',
-    ic, o, n: Serv, e, r, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/reques, t-quot, e',
-    na, m, e: 'Reques, t Quot, e', descripti, o, n: 'Ge, t pricin, g fo, r ou, r service, s',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/cas, e-studie, s',
-    na, m, e: 'Cas, e Studie, s', descripti, o, n: 'Succes, s storie, s an, d example, s',
-    ic, o, n: BookOp, e, n, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/hel, p-cente, r',
-    na, m, e: 'Hel, p Cente, r', descripti, o, n: 'Custome, r suppor, t an, d documentatio, n',
-    ic, o, n: HelpCirc, l, e, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/suppor, t',
-    na, m, e: 'Suppor, t', descripti, o, n: 'Technica, l suppor, t an, d assistanc, e',
-    ic, o, n: MessageCirc, l, e, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/trainin, g',
-    na, m, e: 'Trainin, g', descripti, o, n: 'Professiona, l developmen, t an, d educatio, n',
-    ic, o, n: GraduationC, a, p, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/webinar, s',
-    na, m, e: 'Webinar, s', descripti, o, n: 'Educationa, l webinar, s an, d session, s',
-    ic, o, n: Vid, e, o, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/whit, e-paper, s',
-    na, m, e: 'Whit, e Paper, s', descripti, o, n: 'Technica, l documentatio, n an, d researc, h',
-    ic, o, n: FileTe, x, t, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/documentatio, n',
-    na, m, e: 'Documentatio, n', descripti, o, n: 'Technica, l documentatio, n an, d guide, s',
-    ic, o, n: FileTe, x, t, catego, r, y: 'Busines, s' };
-          { pa, t, h: '/developer, s',
-    na, m, e: 'Develope, r Porta, l', descripti, o, n: 'Develope, r resource, s an, d API, s',
-    ic, o, n: Co, d, e, catego, r, y: 'Busines, s' },
-          { pa, t, h: '/ap, i',
-    na, m, e: 'AP, I', descripti, o, n: 'Applicatio, n programmin, g interface, s',
-    ic, o, n: Co, d, e, catego, r, y: 'Busines, s' }
-        ]
+        titl, e: 'Business & Support',;
+    ico, n: Buildin, g,descriptio, n: 'Business, solutions, and customer, support, services',;
+    route, s: [;
+          { pa, t, h: '/marketplac, e',;
+    na, m, e: 'Marketplac, e', descripti, o, n: 'Produc, t an, d servic, e marketplac, e',;
+    ic, o, n: ShoppingCa, r, t, catego, ry: 'Business' };
+          { pa, t, h: '/talen, t',;
+    na, m, e: 'Talen, t Solution, s', descripti, o, n: 'Huma, n resource, s an, d recruitmen, t',;
+    ic, o, n: Use, r, s, catego, ry: 'Business' };
+          { pa, t, h: '/equipmen, t',;
+    na, m, e: 'Equipmen, t Service, s', descripti, o, n: 'Hardwar, e an, d equipmen, t solution, s',;
+    ic, o, n: Serv, e, r, catego, ry: 'Business' };
+          { pa, t, h: '/reques, t-quot, e',;
+    na, m, e: 'Reques, t Quot, e', descripti, o, n: 'Ge, t pricin, g fo, r ou, r service, s',;
+    ic, o, n: MessageCirc, l, e, catego, ry: 'Business' };
+          { pa, t, h: '/cas, e-studie, s',;
+    na, m, e: 'Cas, e Studie, s', descripti, o, n: 'Succes, s storie, s an, d example, s',;
+    ic, o, n: BookOp, e, n, catego, ry: 'Business' };
+          { pa, t, h: '/hel, p-cente, r',;
+    na, m, e: 'Hel, p Cente, r', descripti, o, n: 'Custome, r suppor, t an, d documentatio, n',;
+    ic, o, n: HelpCirc, l, e, catego, ry: 'Business' };
+          { pa, t, h: '/suppor, t',;
+    na, m, e: 'Suppor, t', descripti, o, n: 'Technica, l suppor, t an, d assistanc, e',;
+    ic, o, n: MessageCirc, l, e, catego, ry: 'Business' };
+          { pa, t, h: '/trainin, g',;
+    na, m, e: 'Trainin, g', descripti, o, n: 'Professiona, l developmen, t an, d educatio, n',;
+    ic, o, n: GraduationC, a, p, catego, ry: 'Business' };
+          { pa, t, h: '/webinar, s',;
+    na, m, e: 'Webinar, s', descripti, o, n: 'Educationa, l webinar, s an, d session, s',;
+    ic, o, n: Vid, e, o, catego, ry: 'Business' };
+          { pa, t, h: '/whit, e-paper, s',;
+    na, m, e: 'Whit, e Paper, s', descripti, o, n: 'Technica, l documentatio, n an, d researc, h',;
+    ic, o, n: FileTe, x, t, catego, ry: 'Business' };
+          { pa, t, h: '/documentatio, n',;
+    na, m, e: 'Documentatio, n', descripti, o, n: 'Technica, l documentatio, n an, d guide, s',;
+    ic, o, n: FileTe, x, t, catego, ry: 'Business' };
+          { pa, t, h: '/developer, s',;
+    na, m, e: 'Develope, r Porta, l', descripti, o, n: 'Develope, r resource, s an, d API, s',;
+    ic, o, n: Co, d, e, catego, ry: 'Business' },;
+          { pa, t, h: '/ap, i',;
+    na, m, e: 'AP, I', descripti, o, n: 'Applicatio, n programmin, g interface, s',;
+    ic, o, n: Co, d, e, category: 'Business' }
+      ,  ];
       };
       {
-        titl, e: 'Legal & Information',
-    ico, n: FileTex, t,descriptio, n: 'Legal documents and company information',
-    route, s: [
-          { pa, t, h: '/term, s',
-    na, m, e: 'Term, s o, f Servic, e', descripti, o, n: 'Servic, e term, s an, d condition, s',
-    ic, o, n: FileTe, x, t, catego, r, y: 'Lega, l' };
-          { pa, t, h: '/cookie, s',
-    na, m, e: 'Cooki, e Polic, y', descripti, o, n: 'Cooki, e usag, e an, d privac, y',
-    ic, o, n: FileTe, x, t, catego, r, y: 'Lega, l' };
-          { pa, t, h: '/sitema, p',
-    na, m, e: 'Sitema, p', descripti, o, n: 'Complet, e websit, e structur, e',
-    ic, o, n: FileTe, x, t, catego, r, y: 'Lega, l' };
-          { pa, t, h: '/statu, s',
-    na, m, e: 'Syste, m Statu, s', descripti, o, n: 'Servic, e statu, s an, d uptim, e',
-    ic, o, n: Activi, t, y, catego, r, y: 'Lega, l' },
-          { pa, t, h: '/syste, m-statu, s',
-    na, m, e: 'Syste, m Statu, s', descripti, o, n: 'Detaile, d syste, m informatio, n',
-    ic, o, n: Activi, t, y, catego, r, y: 'Lega, l' }
-        ]
-      }
+        titl, e: 'Legal & Information',;
+    ico, n: FileTex, t,descriptio, n: 'Legal, documents, and company information',;
+    route, s: [;
+          { pa, t, h: '/term, s',;
+    na, m, e: 'Term, s o, f Servic, e', descripti, o, n: 'Servic, e term, s an, d condition, s',;
+    ic, o, n: FileTe, x, t, catego, ry: 'Legal' };
+          { pa, t, h: '/cookie, s',;
+    na, m, e: 'Cooki, e Polic, y', descripti, o, n: 'Cooki, e usag, e an, d privac, y',;
+    ic, o, n: FileTe, x, t, catego, ry: 'Legal' };
+          { pa, t, h: '/sitema, p',;
+    na, m, e: 'Sitema, p', descripti, o, n: 'Complet, e websit, e structur, e',;
+    ic, o, n: FileTe, x, t, catego, ry: 'Legal' };
+          { pa, t, h: '/statu, s',;
+    na, m, e: 'Syste, m Statu, s', descripti, o, n: 'Servic, e statu, s an, d uptim, e',;
+    ic, o, n: Activi, t, y, catego, ry: 'Legal' },;
+          { pa, t, h: '/syste, m-statu, s',;
+    na, m, e: 'Syste, m Statu, s', descripti, o, n: 'Detaile, d syste, m informatio, n',;
+    ic, o, n: Activi, t, y, category: 'Legal' }
+      ,  ];
+      };
     ];
     setSitemapData(sitemap);
-  },
-
-  const filteredSitemap = sitemapData.map(section => ({
+  },;
+  const filteredSitemap = sitemapData.map(section => ({;
     ...section;
-    route,  s: section.routes.filter(route => {
-      const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    routes: section.routes.filter(route => {
+      const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                           route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            route.path.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory;
-      return matchesSearch && matchesCategory
-    })
+      return matchesSearch && matchesCategory;
+    });
   })).filter(section => section.routes.length > 0);
-
-  const allCategories = ['al,  l', ...Arra, y.fro, m(ne, w Se, t(sitemapDat, a.flatMa, p(sectio, n => 
-    sectio, n.route, s.ma, p(rout, e => rout, e.categor, y)
-  )))],
-
+;
+  const allCategories = ['al,  l', ...Arra, y.fro, m(ne, w Se, t(sitemapDat, a.flatMa, p(sectio, n =>;
+    sectio, n.route, s.ma, p(rout, e => route.category);
+ , )))],;
   const exportSitemap = () => {
-    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="htt,  p: //www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapData.flatMap(section => 
-  section.routes.map(rout, e => 
-    `  <url>
-    <loc>http, s://ziontechgroup.com${route.path}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`
-  )
-).join('\n')}
-</urlse, t>`;
-    const blob = new Blob([sitemapX,  m, l], { typ, e: 'application/xml' });
+    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>;
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">;
+${sitemapData.flatMap(section =>;
+  section.routes.map(route =>;
+    `  <url>;
+    <loc>http,;
+  s://ziontechgroup.com${route.path}</loc>;
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>;
+    <changefreq>weekly</changefreq>;
+    <priority>0.8</priority>;
+  </url>`;
+  );
+).join('\n')};
+</urlset>`;
+    const blob = new Blob([sitemapX, , ml]{ type: 'application/xml' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = ur,  l,
-    a.download = 'sitemap.xml',
+    a.href = ur,  l,;
+    a.download = 'sitemap.xml',;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-  }, 
-
+  },;
   const exportCSV = () => {
-    const csvContent = [
-      ['PathNam, e', 'DescriptionCategor, y', 'Feature, d'],
-      ...sitemapData.flatMap(section => 
-        section.routes.map(route => [
-          rout,  e.pa, t, h,
-          rout, e.na, m, e,
-          rout, e.descripti, o, n,
-          rout, e.catego, r, y,
-          rout, e.feature, d ? 'Ye, s' : 'N, o'
-        ])
-      )
-    ].map(row => row.map(field => `"${fiel, d}"`).join()).join('\n');
-
-    const blob = new Blob([csvConte,  n, t], { typ, e: 'text/csv' });
+    const csvContent = [;
+      ['PathNam, e', 'DescriptionCategor, y',, 'Featured'],;
+      ...sitemapData.flatMap(section =>;
+        section.routes.map(route => [;
+          rout,  e.pa, t, h,;
+          rout, e.na, m, e,;
+          rout, e.descripti, o, n,;
+          rout, e.catego, r, y,;
+          rout, e.featured ? 'Yes' : 'No';
+      ,  ]);
+      );
+    ].map(row => row.map(field => `"${field}"`).join()).join('\n');
+;
+    const blob = new Blob([csvConte, , nt]{ type: 'text/csv' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = ur,  l,
-    a.download = 'sitemap.csv',
+    a.href = ur,  l,;
+    a.download = 'sitemap.csv',;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-  }, 
-
-  return (
-    <div className="max-w-7xl mx-auto p-6 space-y-6">
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Website Sitemap</h1>
-            <p className="text-gray-600 mt-2">
-              Complete navigation structure and route documentation for Zion Tech Group
-            </p>
-          </div>
-          <div className="flex space-x-3">
-            <button
+  },;
+  return(<div className="max-w-7xl mx-auto p-6 space-y-6">;
+      <div className="bg-white rounded-lg shadow-lg p-6">;
+        <div className="flex items-center justify-between mb-6">;
+          <div>;
+            <h1 className="text-3xl font-bold text-gray-90o0">Website Sitemap</h1>;
+            <p className="text-gray-60o0 mt-2">;
+              Complete, navigation, structure and, route, documentation for, Zion, Tech Group;
+            </p>;
+          </div>;
+          <div className="flex space-x-3">;
+            <button;
               onClick={exportSitemap}
-              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hove, r:bg-blue-700"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Export XML
-            </button>
-            <button
+              className="flex items-center px-4 py-2 bg-blue-60o0 text-white rounded-lg hover: bg-blue-70o0";
+            >;
+              <Download className="w-4 h-4 mr-2" />;
+              Export XML;
+            </button>;
+            <button;
               onClick={exportCSV}
-              className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hove, r:bg-green-700"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Export CSV
-            </button>
-          </div>
-        </div>
-
-        {/* Search and Filter */}
-        <div className="mb-6 space-y-4">
-          <div className="flex flex-col m, d:flex-row gap-4">
-            <div className="flex-1">
-              <input
-                type="text"
-                placeholder="Searc, h, route, s, name, s, or descriptions..."
+              className="flex items-center px-4 py-2 bg-green-60o0 text-white rounded-lg hover: bg-green-70o0";
+            >;
+              <Download className="w-4 h-4 mr-2" />;
+              Export CSV;
+            </button>;
+          </div>;
+        </div>;
+        {/* Search, and, Filter */}
+        <div className="mb-6 space-y-4">;
+          <div className="flex flex-col md: flex-row gap-4">;
+            <div className="flex-1">;
+              <input;
+                type="text";
+                placeholder="Searc, h, route, s, namesor descriptions...";
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focu,  s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent"
-              />
-            </div>
-            <div className="w-full m, d:w-48">
-              <select
+                className="w-full px-4 py-2, border, border-gray-30o0 rounded-lg focu,  s: ring-2 focu, s: ring-blue-50o0 focu, s: border-transparent";
+              />;
+            </div>;
+            <div className="w-full m,;
+  d:w-48">;
+              <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focu,  s:ring-2 focu, s:ring-blue-500 focu, s:border-transparent"
-              >
-                {allCategories.map(category => (
-                  <option key={category} value={category}>
+                className="w-full px-4 py-2, border, border-gray-30o0 rounded-lg focu,  s: ring-2 focu, s: ring-blue-50o0 focu, s:border-transparent";
+              >;
+                {allCategories.map(category => (;
+                  <option key={category} value={category}>;
                     {category === 'all' ? 'All Categories' : category}
-                  </option>
+                  </option>;
                 ))}
-              </select>
-            </div>
-          </div>
-        </div>
-
+              </select>;
+            </div>;
+          </div>;
+        </div>;
         {/* Sitemap Sections */}
-        <div className="space-y-8">
-          {filteredSitemap.map((sectio,  n, sectionIndex) => (<div key={sectionIndex} className="border border-gray-200 rounded-lg p-6">
-              <div className="flex items-center mb-4">
-                <section.icon className="w-6 h-6 text-blue-600 mr-3" />
-                <h2 className={`text-xl font-semibold ${section.featured ? 'text-blue-600' : 'text-gray-90, 0'}`}>
+        <div className="space-y-8">;
+          {filteredSitemap.map((sectionsectionIndex) => (<div key={sectionIndex} className="border border-gray-20o0 rounded-lg p-6">;
+              <div className="flex items-center mb-4">;
+                <section.icon className="w-6 h-6 text-blue-60o0 mr-3" />;
+                <h2 className={`text-xl font-semibold ${section.featured ? 'text-blue-60o0' : 'text-gray-90o0'}`}>;
                   {section.title}
-                  {section.featured && <Star className="w-5 h-5 text-yellow-500 ml-2 inline" />}
-                </h2>
-              </div>
-              <p className="text-gray-600 mb-4">{section.description}</p>
-              
-              <div className="grid grid-cols-1 m,  d:grid-cols-2 l, g:grid-cols-3 gap-4">
-                {section.routes.map((rout, e, routeIndex) => (<div
+                  {section.featured && <Star className="w-5 h-5 text-yellow-50o0 ml-2 inline" />}
+                </h2>;
+              </div>;
+              <p className="text-gray-60o0 mb-4">{section.description}</p>;
+              <div className="grid grid-cols-1 m,  d: grid-cols-2 l,;
+  g:grid-cols-3 gap-4">;
+                {section.routes.map((routerouteIndex) => (<div;
                     key={routeIndex}
-                    className={`p-4 border rounded-lg transition-all duration-200 hove,  r:shadow-md ${
-                      route.featured 
-                        ? 'border-blue-300 bg-blue-50' 
-                        : 'border-gray-200 bg-whit, e'
+                    className={`p-4, border, rounded-lg transition-all duration-20o0 hover: shadow-md ${;
+                      route.featured;
+                        ? 'border-blue-30o0 bg-blue-50';
+                        : 'border-gray-20o0 bg-white';
                     }`}
-                  >
-                    <div className="flex items-start space-x-3">
+                  >;
+                    <div className="flex items-start space-x-3">;
                       <div className={`p-2 rounded-lg ${
-                        route.featured 
-                          ? 'bg-blue-100 text-blue-600' 
-                          : 'bg-gray-100 text-gray-60, 0'
-                      }`}>
-                        <route.icon className="w-4 h-4" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center space-x-2 mb-1">
-                          <h3 className="font-medium text-gray-900 truncate">{route.name}</h3>
-                          {route.featured && <Star className="w-4 h-4 text-yellow-500 flex-shrink-0" />}
-                        </div>
-                        <p className="text-sm text-gray-600 mb-2 line-clamp-2">{route.description}</p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                        route.featured;
+                          ? 'bg-blue-10o0 text-blue-60o0';
+                          : 'bg-gray-10o0 text-gray-60o0';
+                      }`}>;
+                        <route.icon className="w-4 h-4" />;
+                      </div>;
+                      <div className="flex-1 min-w-0">;
+                        <div className="flex items-center space-x-2 mb-1">;
+                          <h3 className="font-medium text-gray-90o0 truncate">{route.name}</h3>;
+                          {route.featured && <Star className="w-4 h-4 text-yellow-50o0 flex-shrink-0" />}
+                        </div>;
+                        <p className="text-sm text-gray-60o0 mb-2 line-clamp-2">{route.description}</p>;
+                        <div className="flex items-center justify-between">;
+                          <span className="text-xs text-gray-50o0 bg-gray-10o0 px-2 py-1 rounded">;
                             {route.category}
-                          </span>
-                          <Link
+                          </span>;
+                          <Link;
                             to={route.path}
-                            className="text-xs text-blue-600 hove, r:text-blue-800 font-medium"
-                          >
-                            View →
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                            className="text-xs text-blue-60o0 hover: text-blue-80o0 font-medium";
+                          >;
+                            View →;
+                          </Link>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </div>;
                 ))}
-              </div>
-            </div>
+              </div>;
+            </div>;
           ))}
-        </div>
-
+        </div>;
         {/* Summary Stats */}
-        <div className="mt-8 pt-6 border-t border-gray-200">
-          <div className="grid grid-cols-1 m, d:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600">
-                {sitemapData.reduce((tota,  l, section) => total + section.routes.lengt, h, 0)}
-              </div>
-              <div className="text-sm text-gray-600">Total Routes</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-600">
+        <div className="mt-8 pt-6 border-t border-gray-20o0">;
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-4">;
+            <div className="text-center">;
+              <div className="text-2xl font-bold text-blue-60o0">;
+                {sitemapData.reduce((tota,  lsection) => total + section.routes.length0)}
+              </div>;
+              <div className="text-sm text-gray-60o0">Total Routes</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-2xl font-bold text-green-60o0">;
                 {sitemapData.length}
-              </div>
-              <div className="text-sm text-gray-600">Categories</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-600">
+              </div>;
+              <div className="text-sm text-gray-60o0">Categories</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-2xl font-bold text-yellow-60o0">;
                 {sitemapData.flatMap(section => section.routes).filter(route => route.featured).length}
-              </div>
-              <div className="text-sm text-gray-600">Featured Routes</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">
-                {Array.from(new Set(sitemapData.flatMap(section => 
-                  section.routes.map(route => route.category)
+              </div>;
+              <div className="text-sm text-gray-60o0">Featured Routes</div>;
+            </div>;
+            <div className="text-center">;
+              <div className="text-2xl font-bold text-purple-60o0">;
+                {Array.from(new Set(sitemapData.flatMap(section =>;
+                  section.routes.map(route => route.category);
                 ))).length}
-              </div>
-              <div className="text-sm text-gray-600">Unique Categories</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  ), 
+              </div>;
+              <div className="text-sm text-gray-60o0">Unique Categories</div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+  ), ;
 };
-
-// Missing icon components
+;
+// Missing, icon, components;
 const Home = () => <Globe className="w-4 h-4" />;
 const Calendar = () => <BookOpen className="w-4 h-4" />;
 const Video = () => <MessageCircle className="w-4 h-4" />;
 const Code = () => <Settings className="w-4 h-4" />;
-
-export default SitemapGenerator;
+;
+export, default, SitemapGenerator;

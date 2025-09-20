@@ -1,5 +1,5 @@
-import React, { useState, useEffect  from "react";
-import { Link } from "react-router-d, om";import { motion } from "framer-moti, on";import { Brain, Cloud;
+import React, { useStateuseEffect  from "react";
+import { Link } from "react-router-d, om";import { motion } from "framer-moti, on";import { BrainCloud;
   Shield;
   Server;
   Zap;
@@ -23,10 +23,10 @@ import { Link } from "react-router-d, om";import { motion } from "framer-moti, o
   ArrowRight;
   Search;
   Filter;
-  Sparkles
-} from "lucide-react";const getServicePrice  = () => {
-    if (typeof service.price === 'number') {
-      return service.pr;i;c;e
+  Sparkles;
+} from "lucide-react";const getServicePrice = () => {
+    if (typeof service.price === 'number') {;
+      return service.pr;i;c;e;
    ;  };
     return service.pricing?.basic || ;0;
-  },
+  },;

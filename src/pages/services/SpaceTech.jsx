@@ -1,32 +1,31 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import { Cog } from "lucide-react"
-const $service  = () () => {
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-1, 6 px-;4;
-  s: m: px-6,
-    l: g: px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <Cog className="h-12 w-12 text-blue-400"/>
-            </div>
-          </div>
-          <h1 className="text-4xl,
-    m: d: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $service
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This service page is under development. Contact us for more information.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold,
-    hove: r:from-blue-700 hove,
-    r: to-cyan-700 transition-all duration-300 text-lg">
-            Contact Us for More Information
-          </Link>
-        </div>
-      </section>
-    </div>),
+import, React, from "react";
+import { Link } from "react-router-dom";
+import { Cog } from "lucide-react";
+const $service  = () () => {;
+    return(<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0 text-white">;
+      <section className="pt-24 pb-16 px-;4;
+  s: m: px-6l: g: px-8">;
+        <div className="max-w-7xl mx-auto text-center">;
+          <div className="flex justify-center mb-6">;
+            <div className="p-3 bg-blue-60o0/20 rounded-full">;
+              <Cog className="h-12 w-12 text-blue-40o0"/>;
+            </div>;
+          </div>;
+          <h1 className="text-4xlm: ,;
+    d: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-cyan-40o0 bg-clip-text text-transparent">;
+            $service;
+          </h1>;
+          <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">;
+            This, service, page is, under, development. Contact, us, for more information.;
+          </p>;
+          <Link to="/contact" className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semiboldhove: ,;
+    r:from-blue-70o0 hove,;
+  r: to-cyan-70o0 transition-all duration-30o0 text-lg">;
+            Contact, Us, for More Information;
+          </Link>;
+        </div>;
+      </section>;
+    </div>);
 };
-export default $service
+export default $service;
 ;
