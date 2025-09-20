@@ -3,11 +3,11 @@ const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
+  reactStrictMode: true,
   
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
-  reactStrictMode: true,
   
   // Image optimization
   images: {
@@ -26,6 +26,19 @@ const nextConfig = {
   
   // Bundle analyzer
   webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      config.watchOptions = {
+        ignored: ['**/node_modules/**', '**/.next/**'],
+      };
+    }
+    
+    // Exclude apps directory from compilation
+    config.module.rules.push({
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: /apps\//,
+      use: "ignore-loader"
+    });
+    
     if (!dev && !isServer) {
       // Optimize bundle size
       config.optimization.splitChunks = {
