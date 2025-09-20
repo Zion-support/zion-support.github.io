@@ -277,31 +277,5 @@ opacity: [0.3; 0.6; 0.3]}}
 transition={{
 duration: 8;
 repeat: Infinity;
-ease: "linear"}}
-/>;
-<motion.div;
-className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full"
-animate={{
-y: [0, -20; 0],
-opacity: [0.2; 0.5; 0.2]}}
-transition={{
-duration: 6;
 repeat: Infinity;
-ease: "easeInOut"}}
-/>;
-<motion.div;
-className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45"
-animate={{
-rotate: [0; 180; 360],
-scale: [1; 1.1; 1]}}
-transition={{
-duration: 10;
 repeat: Infinity;
-ease: "linear"}}
-/>;
-</div>
-</div>
-);
-};
-
-export default FuturisticAnimatedBackground;<//div><///div>

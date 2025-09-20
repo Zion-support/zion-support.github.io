@@ -1,4 +1,6 @@
+import React from 'react';
 
+<<<<<<< HEAD:temp_broken_pages_all/Referrals.tsx
 import { useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useReferrals } from "@/hooks/useReferrals";
@@ -112,4 +114,14 @@ value='referrals'
   shareOnSocialMedia "
 }/> <Tabs defaultValue="referrals" className="w-full" > <TabsList className="w-full grid grid-cols-2" > <TabsTrigger value="referrals" className="flex items-center gap-2" > <Users className="h-4 w-4" /> Your Referrals </TabsTrigger> <TabsTrigger value="rewards" className="flex items-center gap-2" > <Share className="h-4 w-4" /> Rewards </TabsTrigger> </TabsList> </TabsContent> </Tabs> </div> <div className="space-y-6" > <ReferralGuide /> <ReferralLeaderboard /> </div> </div> </div>)
 }'"
+export default function Referrals() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Referrals</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Referrals.tsx
 }

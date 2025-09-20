@@ -6,6 +6,3 @@ import { Download } from "lucide-react";
 import { AppPlatform, AppMetadataValues } from "./MetadataManager";,
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
-interface ExportPanelProps {
-  
-}

@@ -8,11 +8,6 @@ interface Service {
   id: string;
   name: string;
 }
-
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
@@ -118,9 +113,6 @@ const Header: React.FC = () => {
                 <Link
                   href={item.href}
                   className="text-white hover:text-blue-400 transition-colors text-lg"
-                >
-                  {item.name}
-                </Link>
               )}
             </div>
           ))}
@@ -200,8 +192,3 @@ const Header: React.FC = () => {
           </Link>
         </nav>
       </div>
-    </header>
-  );
-};
-
-export default Header;

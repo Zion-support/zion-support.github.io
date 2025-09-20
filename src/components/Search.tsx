@@ -3,7 +3,3 @@ className?: string; placeholder?: string; onSearch?: (query: string) => void; sh
 </any>,;
 </string>,;
 </any>,;
-</SearchResult>,;
-</any>;
-</any>;
-}<//any><///any>;

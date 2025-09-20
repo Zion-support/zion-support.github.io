@@ -6,34 +6,3 @@ import { AIEnhancementButton } from "@/components/resume-builder/forms/AIEnhance
 // Define schema for form validation
 } else {
   
-                    onBack()
-                  }
-                }}
-              >
-                {editingId ? 'Cancel' : 'Back'}
-              </Button>
-              <div className='flex gap-2'>
-                <Button type='submit' disabled={isLoading}>
-                  {isLoading && (
-                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
-                  )}
-                  {editingId ? 'Update' : 'Add'} Experience
-                </Button>
-                {!editingId && workExperiences.length > 0 && (
-                  <Button type='button' onClick={onComplete}>
-                    Next
-                  </Button>
-                )}
-              </div>
-            </div>
-          </form>
-        </Form>
-      </div>
-    </div>
-  )
-}> {'
-  editingId ? 'Cancel': 'Back'
-}</Button> Next </Button>)
-}</div> </div> </form> </Form> </div> </div>)
-}'"  )
-}

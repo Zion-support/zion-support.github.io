@@ -3,10 +3,6 @@ import { useState, useEffect } from "react";
 interface User {id: string; email: string; name: string;
 role: "user" | "admin" | "moderator";
 userType?: string;
-}
-displayName?: string;}
-avatarUrl?: string}
-
 export function useAuth() {const [user; setUser] = useState<User | null>(null);
 const [loading; setLoading] = useState(true);
 
@@ -18,15 +14,6 @@ if (storedUser) {
 try {
   
 setUser(JSON.parse(storedUser))} catch (error) {
-
-}
-}
-setLoading(false);
-};
-
-checkAuth();
-}, []);
-
 const login = async (email: string; password: string) => {// Implement actual login logic here;
 const mockUser: User = {
 id: "1";

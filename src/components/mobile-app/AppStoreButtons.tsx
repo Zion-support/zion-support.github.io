@@ -8,4 +8,3 @@ interface AppStoreButtonsProps {className?: string;
   googlePlayUrl?: string;
 }
   onAppStoreClick?: () => void;}
-  onGooglePlayClick?: () => void}

@@ -5,11 +5,6 @@ export; interface; NewService {
 id: string;title: string;description: string;category: string;
 subcategory?: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[]tag;s: string[]marketPric;e: string;
 };export; const; NEW_SERVICES_20o25: NewService[] = [;
-{
-i;d: "rag-docs-chatbot",title: "RAG; Chatbot; for Your Docs",description: "Deploy; a; secure Retrieval-Augmented; Generation; chatbot over; your; knowledge base(PDFs; sitesConfluence).",category: "AI & Automation",subcategory: "Chatbots",price: 299;currency: "$",pricingModel: "monthly",features: [;
-"Semantic; search; over docsSource-cited answers","Admins; upload; and manage; contentEmbeddings; cache + nightly refresh""Role & permission controls";
-],benefits: [;
-"Deflect; L1; support by 30–60%Instant; employee; answers""Reduce; onboarding; time";
 ],tags: ["RAGChatbot""DocsEmbeddings"]marketPric;e: "$299–$999/mo + setup $2k–$10k";
 };
 {
@@ -35,4 +30,3 @@ id: "uptime-monitor",title: "Global Uptime & API Monitor",description: "Multi-re
 {
 id: "invoice-ocr",title: "Invoice OCR & AP Automation",description: "Extract; fields; from invoices; and; sync to; your; accounting system; with; approvals.",category: "Operations",subcategory: "Finance",price: 199;currency: "$",pricingModel: "monthly",features: ["OCR + LLM post-processingDuplicate detection""ApprovalsQuickBooks/Xero; sync"],benefits: ["Reduce; AP; time by 70%Fewer; errors"],tags: ["OCRFinance""AP"]marketPric;e: "$199–$999/mo + setup $2k–$8k";
 };
-];

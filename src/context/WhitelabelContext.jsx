@@ -13,16 +13,3 @@ const defaultConfig = {;
     address: '364 E Main St STE 1008 Middletown DE 19709';
   }
 };
-
-const WhitelabelContext = createContext(defaultConfig);
-
-export const useWhitelabel = () => useContext(WhitelabelContext);
-
-export const WhitelabelProvider = ({ children, config = {} }) => {;
-  const mergedConfig = { ...defaultConfig, ...config };
-  return (
-    <WhitelabelContext.Provider value={mergedConfig}>
-      {children}
-    </WhitelabelContext.Provider>
-  );
-};<//WhitelabelContext.Provider><///WhitelabelContext.Provider>

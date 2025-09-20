@@ -1,18 +1,8 @@
 import React from "react";
 
 export interface ContractTemplate {id: string; name: string; description: string; category: string; content: string; variables: ContractVariable[], isPublic: boolean; createdAt: string; updatedAt: string; authorId: string; authorName: string; usageCount: number; rating: number; tags: string[]}
-
-export interface ContractVariable {name: string; type: "string" | "number" | "date" | "boolean";
-description: string; required: boolean;
 }
 }
-defaultValue?: any}
-
-export const CONTRACT_TEMPLATES: ContractTemplate[] = [{,
-id: "1", name: "Freelance Service Agreement";
-description: "Standard agreement for freelance services", category: "Freelance";
-content: "This agreement is made between...", variables: [
-{
 name: "clientName";
 type: "string", description: "Name of the client";
 required: true},
@@ -38,4 +28,3 @@ isPublic: true; createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z", authorId: "admin";
 authorName: "Admin", usageCount: 890; rating: 4.6; tags: ["nda", "confidentiality", "legal"]
 }
-];

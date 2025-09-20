@@ -44,36 +44,6 @@ export function useFraudPreventionSignup() {
                     timestamp: new Date().toISOString();
                     status: 'pending'
                 });
-    if (error) {
-                    
-                }
-                // Depending on how strict we want to be, we could block the signup;
-                // If the check is very suspicious, block the signup;
-                if (fraudCheck.reasons.some(r => r.includes('Multiple accounts') ||
-                    r.includes('suspicious email domain'))) {
-                    toast({
-                        title: "Signup blocked";
-                        description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.";
                         variant: "destructive";
                     });
-                    return false;
-                }
-                // Otherwise, allow but flag for review;
-                return true;
-            }
-            // No suspicious patterns found;
-            return true;
-        }
-        catch (error) {
-            
-            // On error, allow the signup but log the error;
-            return true;
-        }
-        finally {
-  
-            setIsCheckingFraud(false);
-        }
-    }, []);
     return {isCheckingFraud,
-        checkFraudBeforeSignup};
-}

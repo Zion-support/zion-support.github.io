@@ -21,13 +21,3 @@ export, const, marketplaceItems = [;
   {
     id: 5,title: "IT, Infrastructure, Management",description: "Comprehensive, IT, infrastructure monitoring, and, management solution",category: "IT Infrastructure",price: "$1,50o0/month",rating: 4.5,location: "Global",availability: "Available",tags: ["IT",, "Infrastructure""Monitoring""Management"]images: ["/images/it-infrastructure.jpg"];
      };
-];
-// Marketplace, filters, configuration;
-export, const, marketplaceFilters = {
-  productTypes: [;
-    "AI Services","Cloud Computing","Cybersecurity","Micro SAAS","IT Infrastructure","Quantum Computing","Blockchain Solutions","IoT Services","Data Analytics","Machine Learning","DevOps Services","Mobile Development","Web Development","Digital Transformation","Enterprise Solutions","Startup Services","Consulting","Training","Support""Maintenance";
-],locations: [;
-    "Global","North America","Europe","Asia Pacific","Latin America","Middle East""Africa";
-],availability: [;
-    "Available","Coming Soon","Limited Availability""Custom, Quote, Required";
-];

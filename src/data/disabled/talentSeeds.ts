@@ -17,5 +17,3 @@ availability_type: "part_time"};
 full_name: "Carla Gomez", professional_title: "DevOps Engineer";
 profile_picture_url: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&h=200", skills: ["AWS", "Docker", "Kubernetes"],
 hourly_rate: 140;
-availability_type: "project"}
-];

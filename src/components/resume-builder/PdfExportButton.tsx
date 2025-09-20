@@ -16,9 +16,3 @@ import { Resume } from "@/types/resume";
 import { exportResumeToPDF, ExportOptions } from "@/utils/pdfExport";
 import { toast } from "@/hooks/use-toast";
 import { FontFamily } from "@/utils/pdf/fontConfig";
-interface PdfExportButtonProps {
-  
-  resume: Resume;
-}
-}
-}

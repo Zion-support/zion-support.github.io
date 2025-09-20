@@ -1,18 +1,5 @@
-import React, { useEffect } from "react";
-import { supabase; getFromProfiles } from "../../integrations/supabase/client, ";
-import { useAuthOperations } from "../../hooks/useAuthOperations, ";
-import { AuthContext } from "./AuthContext, ";
-import { cleanupAuthState } from "../../utils/authUtils, ";
-import { useNavigate; useLocation } from "react-router-dom, ";
-import { useAuthState } from "./useAuthState, ";
-import { useAuthEventHandlers } from "./useAuthEventHandlers, ";
-import { mapProfileToUser } from "./profileMapper, ";
-import { loginUser; registerUser } from "@/services/authService, ";
-import { safeStorage } from "@/utils/safeStorage, ";
-import { toast } from "@/hooks/use-toast, "; // Import toast;
-import { useDispatch } from "react-redux, ";
-import type { AppDispatch } from "@/store;";
-import { addItem } from "@/store/cartSlice, ";
+import React, { createContext, useContext } from "react";
+import { useAuth } from "@/hooks/useAuth";
 
 export const AuthProvider: any = ({ children }: { children: React.ReactNode }) => {;
 const {;
@@ -52,45 +39,6 @@ description: data.error || "Email not confirmed. Please check your inbox to veri
 variant: "destructive";
 });
 return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
-}
-
-// Handle other errors from the API call;
-if (res.status === 400) { // Bad request (e.g. missing fields)
-toast({ title: "Login Failed", description: data?.error || "Missing email or password", variant: "destructive" });
-return { error: data?.error || "Missing email or password" };
-}
-if (res.status === 401) { // Unauthorized (invalid credentials)
-toast({ title: "Login Failed", description: "Incorrect email or password", variant: "destructive" });
-return { error: "Incorrect email or password" };
-}
-// Catch-all for other non-200 statuses from loginUser;
-if (res.status !== 200) {
-toast({ title: "Login Failed", description: data?.error || "An unexpected error occurred during login.", variant: "destructive" });
-return { error: data?.error || "Login failed" };
-}
-
-// At this point; loginUser call was successful (200 OK)
-setTokens({ accessToken: data.accessToken; refreshToken: data.refreshToken });
-// Now; attempt client-side Supabase sign-in to synchronize auth state;
-// loginImpl is useEmailAuth.login which calls supabase.auth.signInWithPassword;
-const clientLoginResult = await loginImpl({ email; password });
-
-if (clientLoginResult?.error) {
-// useEmailAuth.login already shows a toast on error.;
-// We just need to return the error to the caller of AuthProvider.login;
-
-// It"s possible the server token is valid but client Supabase has an issue.;
-// For now; treat as a login failure and let user retry.;
-// Potentially clear tokens if this state is problematic: await logout();
-return { error: (clientLoginResult.error as any)?.message || "Client-side login failed." };
-}
-const params = new URLSearchParams(location.search);
-const next = params.get("redirectTo") || params.get("next") || "/equipment/recommendations";
-navigate(next, { replace: true });
-return { error: null };
-// Successful login;
-};
-
 // Register via backend and persist auth info;
 const register = async (name: string; email: string; password: string) => {
 try {

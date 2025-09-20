@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_pages_all/EquipmentRecommendations.tsx
 import { Loader2 } from "lucide-react";
 import Link from 'next/link';
 import { ErrorState } from "@/components/jobs/applications";
@@ -58,7 +59,16 @@ asChild
           <div key={listing.id} className="break-inside-avoid mb-4">
           </div>
         ))}
+import React from 'react';
+
+export default function EquipmentRecommendations() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Equipment Recommendations</h1>
+        <p className="text-lg text-gray-600">Get personalized equipment recommendations...</p>
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/EquipmentRecommendations.tsx
       </div>
     </div>
-  )
+  );
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_pages_all/ReviewsModeration.tsx
 import { SEO } from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -101,3 +102,16 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
   return (
   return (
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
+import React from 'react';
+
+export default function ReviewsModeration() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Reviews Moderation</h1>
+        <p className="text-lg text-gray-600">Moderate user reviews...</p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/admin/ReviewsModeration.tsx

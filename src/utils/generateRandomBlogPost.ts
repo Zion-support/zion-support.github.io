@@ -111,10 +111,3 @@ tags: [topic, "Technology", "Innovation", "Guide"],
 image: "/images/blog-placeholder.jpg",
 readTime: Math.floor(Math.random() * 10) + 5
 };
-}
-
-export function generateMultipleBlogPosts(count: number): BlogPost[] {const posts: BlogPost[] = [];
-for (let i = 0; i < count; i++) {
-posts.push(generateRandomBlogPost())}
-return posts;
-}

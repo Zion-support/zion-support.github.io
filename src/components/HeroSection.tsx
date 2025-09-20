@@ -31,5 +31,3 @@ Watch Demo,
 </div>
 </div>
 </div>
-)};
-<//div><///div>;

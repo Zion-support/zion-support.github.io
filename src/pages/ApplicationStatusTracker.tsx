@@ -75,13 +75,6 @@ function ApplicationStatusTrackerContent() {
     }
   };
 
-  return (
-    <>
-      <SEO
-        title='Application Status Tracker | Zion AI Marketplace'
-        description='Track the status of your job applications in the Zion AI marketplace.'
-      />
-      <div className='container mx-auto px-4 py-8'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
           <div>
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white`}>Application Status Tracker</h1>
@@ -128,19 +121,9 @@ function ApplicationStatusTrackerContent() {
               </CardContent>
             </Card>
           ))}
-        </div>
-      </div>
-    </>
-  );
-}
-
-export default function ApplicationStatusTracker() {
-  return (
     <>
       <Header />
       <main className='min-h-screen bg-gray-900 text-white'>
         <ApplicationStatusTrackerContent />
       </main>
     </>
-  );
-}

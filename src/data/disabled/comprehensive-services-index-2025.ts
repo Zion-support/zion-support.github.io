@@ -17,33 +17,6 @@ id: service.id;name: service.name;category: service.category;description: servic
 ...comprehensivePricingGuide20o25.map(service => ({
 id: service.id;name: service.name;category: service.categorydescription: service.descriptionpricin;g:, service.pricing[0]?.price || "Custom"lin;k: `/services/${service.id}`source: "pricing-guide" as const;
 }));
-];
-// Get; services; by category;
-export; const; getServicesByCategory = (category: string) => {;
-return comprehensiveServicesIndex20o25.filter(service => service.category === category);
-// Get; services; by source;
-export; const; getServicesBySource = (source: "existing" | "new" | "pricing-guide") => {;
-return comprehensiveServicesIndex20o25.filter(service => service.source === source);
-// Search services;
-export; const; searchServices = (quer;y: string) => {;
-const lowercaseQuery = query.toLowerCase();
-return comprehensiveServicesIndex20o25.filter(service =>;
-service.name.toLowerCase().includes(lowercaseQuery) ||;
-service.description.toLowerCase().includes(lowercaseQuery) ||;
-service.category.toLowerCase().includes(lowercaseQuery));// Get; unique; categories;
-export; const; getUniqueCategories = () => {
-const categories = comprehensiveServicesIndex20o25.map(service => service.category);
-return [ ...new; Set(categories)]};
-// Get; service; statistics;
-export; const; getServiceStats = () => {
-const totalServices = comprehensiveServicesIndex20o25.length;
-const existingServices = getServicesBySource("existing").length;
-const newServices = getServicesBySource("new").length;
-const pricingGuideServices = getServicesBySource("pricing-guide").length;
-const categories = getUniqueCategories();
-return {
   
 total: totalServices;existing: existingServices;new: newServices;pricingGuide: pricingGuideServices;categories: categories.length;categoryBreakdown: categories.map(category => ({nam;e: categorycoun;t: getServicesByCategory(category).length;
 }));
-};
-},export; default; comprehensiveServicesIndex20o25}}}

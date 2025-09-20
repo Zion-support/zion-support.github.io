@@ -21,10 +21,3 @@ author?: {,
 name: string; id: string;
 }
 avatarUrl?: string;}
-email?: string};
-createdAt: string; updatedAt: string;
-featured?: boolean;
-popular?: boolean;
-new?: boolean;
-aiScore?: number;
-}

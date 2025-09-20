@@ -199,32 +199,3 @@ export const PerformanceOptimizer = ({ children }) => {;
                     }
                 });
             },  {rootMargi, n: '50px',
-    threshol, d: 0.1});
-            // Observe all images with data-src;
-            const lazyImages = document.querySelectorAll('img[dat,  a-s, r, c]');
-            lazyImages.forEach((img) => observer.observe(img));
-            return () => observer.disconnect();
-        }
-    },  [locatio, n.pathna, m, e]);
-    return <>{optimizedChildren}</>;
-};
-// Add global performance optimizations;
-if (typeof window !== 'undefined') {
-    // Optimize long tasks;
-    if ('scheduler' in window && 'postTask' in window.scheduler) {
-        window.scheduler.postTask(() => {
-            // Run non-critical tasks during idle time;
-        },  { priorit, y: 'background' });
-    }
-    // Optimize memory usage;
-    if ('memory' in performance) {
-        const memoryThreshold = 50 * 1024 * 1024; // 50MB;
-        if (performance.memory.usedJSHeapSize > memoryThreshold) {
-            // Trigger garbage collection if available;
-            if ('gc' in window) {
-                window.gc();
-            }
-        }
-    }
-}
-export default PerformanceOptimizer;

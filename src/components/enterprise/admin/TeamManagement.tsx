@@ -133,12 +133,3 @@ variant='ghost'
   member.id "
 }> <TableCell> .join ("")
 }</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {member.role}</TableCell> <TableCell> <Badge > {member.status}</Badge> </TableCell> <TableCell> {
-  member.lastActive "
-}</TableCell> <TableCell className="text-right"> onClick={
-  () => handleResendInvite (member.email) "
-}> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={
-  () => handleRemoveMember (member.id) "
-}> <Trash className="h-4 w-4" /> </Button>)
-}</div> </TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>)
-}'"}

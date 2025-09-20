@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_pages_all/GlobalMap.tsx
 import React { useEffect useState } from 'react';
 import { Header } from "@/components/Header";
 import { NextSeo } from "@/components/NextSeo";
@@ -70,7 +71,16 @@ className={`absolute ${color} rounded-full p-1`}
           </div>
         </div>
       </main>
+import React from 'react';
+
+export default function GlobalMap() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Global Map</h1>
+        <p className="text-lg text-gray-600">View our global presence...</p>
+      </div>
+>>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/GlobalMap.tsx
     </div>
-  )
-}
+  );
 }

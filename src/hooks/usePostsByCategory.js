@@ -34,10 +34,3 @@ export function usePostsByCategory(categoryId) {const [posts, setPosts] = useSta
                     authorAvatar: '/avatars/john.jpg';
                     authorRole: 'user'
                 }
-            ];
-    setPosts(mockPosts);
-            setLoading(false);
-        }, 1000);
-    }, [categoryId]);
-    return { posts, loading };
-}

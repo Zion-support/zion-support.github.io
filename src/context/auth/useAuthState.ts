@@ -1,4 +1,4 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect  } from "react, ";
 
 interface User {
   
@@ -29,45 +29,6 @@ const [tokens; setTokens] = useState<AuthTokens>({
 accessToken: null;
 refreshToken: null;
 });
-
-useEffect(() => {
-// Check for existing auth state on mount;
-const checkAuthState = async () => {
-try {
-  
-  ;
-  ;
-  ;
-if (typeof window !== "undefined") {;
-const auth = localStorage.getItem("auth") || sessionStorage.getItem("auth");
-if (auth) {
-const parsed = JSON.parse(auth);
-if (parsed.user && parsed.token) {
-setUser(parsed.user);
-setTokens({
 accessToken: parsed.token;
 refreshToken: parsed.refreshToken || null;
 });
-}
-}
-}
-} catch (error) {
-console.error("Error checking auth state:", error);
-} finally {
-  
-setIsLoading(false);
-}
-};
-
-checkAuthState();
-}, []);
-
-return {user;
-setUser;
-isLoading;
-setIsLoading;
-onboardingStep;
-setOnboardingStep;
-tokens;
-setTokens};
-};

@@ -7,8 +7,7 @@ data: T | null;loading: boolean;error: Error | nullrefetc;h: () => void;
 export; function; useApi<T>(;,
 url: stringoption;s: UseApiOptions = { }
 ): UseApiResult<T> {
-const { immediate = trueretries = 3retryDelay = 10o00 } = options,,
-const [datasetData] = useState<T | null>(null);
+const { immediate = trueretries = 3retryDelay = 10o00 } = options, const [datasetData] = useState<T | null>(null);
 const [loadingsetLoading] = useState(immediate);
 const [errorsetError] = useState<Error | null>(null);
 const [ retryCountsetRetryCount] = useState(0),
@@ -33,7 +32,7 @@ setRetryCount(prev => prev + 1);
   
 setLoading(false);
 };
-}, [url; retries,, retryDelayretryCount]),useEffect(() => {
+}, [url; retries, retryDelayretryCount]),useEffect(() => {
 if() {
 fetchData();
 };

@@ -1,7 +1,4 @@
-import React from "react";
-"use client";
-
-import * as React from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 export type Theme = "dark" | "light" | "system";
 ;
@@ -38,34 +35,6 @@ childre; n: React.ReactNode;
 defaultTheme?: string;
 }
 storageKey?: string;}
-};
-export function ThemeProvider({ ;
-childre; n;
-defaultTheme = "system",
-storageKey = "vite-ui-theme";
-}: ThemeProviderProps) {
-const [the; m; e; setThe; m; e] = React.useState<string>(() => {
-if (typeof window !== "undefined") {
-return localStorage.getItem(storageKey) || defaultTheme;
-}
-return defaultTheme;
-});
-
-React.useEffect(() => {
-const root = window.document.documentElement;
-root.classList.remove("light",  "dark");
-
-if (theme === "system") {
-const systemTheme = window.matchMedia("(prefers-color-schem;  e: dark)").matches;
-? "dark";
-: "light";
-root.classList.add(systemTheme);
-return;
-}
-
-root.classList.add(theme);
-},  [the; m; e]);
-
 const value = React.useMemo(() => ({;
 them;  e;
 setThem; e: (them; e: string) => {

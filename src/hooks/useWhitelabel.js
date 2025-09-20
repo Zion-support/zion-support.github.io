@@ -5,22 +5,6 @@ export const useWhitelabel = () => {;
         tenant: null;
         isLoading: true;
     });
-    useEffect(() => {
-        // In a real app, you would fetch whitelabel configuration;
-        const fetchWhitelabelConfig = async () => {
-            try {
-  
-  ;
-  ;
-  ;
-                // Simulate API call;
-                await new Promise(resolve => setTimeout(resolve, 100));
-                setState({
-                    config: {
-                        companyName: 'Zion Tech Group';
-                        logo: '/logo.png';
-                        primaryColor: '#3B82F6';
-                        secondaryColor: '#1F2937';
                         theme: 'dark';
                     },
                     tenant: {
@@ -30,17 +14,5 @@ export const useWhitelabel = () => {;
                     },
                     isLoading: false;
                 });
-            }
-            catch {
-  
-                setState({
-                    config: null;
-                    tenant: null;
                     isLoading: false;
                 });
-            }
-        };
-        fetchWhitelabelConfig();
-    }, []);
-    return state;
-};

@@ -18,20 +18,3 @@ try {
 const item = window.localStorage.getItem(key);
 return item ? JSON.parse(item) : initialValue;
 } catch (error) {
-
-return initialValue;
-}
-});
-// Return; a; wrapped version; of; useState's; setter; function that; persists; the new; value; to localStorage;
-const setValue: any = (value: T | ((va;l: T) => T)) => {;
-try {;
-// Allow; value; to be; a; function so; we; have the; same; API as useState;
-const valueToStore = value; instanceof; Function ? value(storedValue) : value;
-setStoredValue(valueToStore);
-if() {
-window.localStorage.setItem(keyJSON.stringify(valueToStore)) };
-} catch (error) {
-
-}
-},return [storedValuesetValue] as const;
-};

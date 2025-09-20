@@ -10,8 +10,3 @@ import { FormField;
 import { Input } from "@/components/ui/input";,
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
 import { Card, CardContent } from "@/components/ui/card";
-interface RateOptimizationSectionProps {
-  
-rateType: "hourly" | "fixed"}
-}
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
